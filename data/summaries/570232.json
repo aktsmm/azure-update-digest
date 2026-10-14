@@ -2,6 +2,7 @@
   "schema": 1,
   "canonicalKey": "570232",
   "sourceFingerprint": "7a51c24da789e633b0d84f5a9edbd81ce26df84914cd69714c2204cedb79b23d",
+  "titleJa": "AKS Pod プラットフォームメトリックの Pod name ディメンションが 2027年9月に廃止",
   "summaryJa": "2027年9月30日以降、AKS の Azure Monitor プラットフォーム メトリック kube_pod_status_phase と kube_pod_status_ready で、Pod 名ディメンションのサポートが終了し、集計 Pod カウンターへ移行します。Pod 名でフィルターやアラートを使っている場合は、期限までにダッシュボードや自動化を更新してください。",
   "generatedBy": "gh-aw:summarize",
   "generatedAt": "2026-10-14T12:00:00Z"
