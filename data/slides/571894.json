@@ -1,0 +1,157 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571894"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T20:21:32Z"
+  },
+  "slides": [
+    {
+      "key": "571894",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "SQL Server on Azure VM の性能監視がパブリック プレビューに",
+        "subtitleJa": "SQL IaaS Agent 拡張機能が性能データを収集し、ダッシュボードや KQL で分析できます",
+        "en": "Public Preview: SQL performance monitoring for SQL Server on Azure Virtual Machines "
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "modifiedJst": "2026-10-01",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["SQL Server on Azure Virtual Machines"],
+        "categories": ["compute", "databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Azure VM 上の SQL Server** を運用している DBA・インフラ担当の方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "独自の収集スクリプトなしで、性能の傾向やボトルネックを確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "プレビュー期間中は仕様が変わる可能性があるため、検証環境での評価向け",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "Note", "retrievedAt": "2026-10-14T20:25:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "before": { "text": "独自の収集スクリプトや、分断されたツール間のテレメトリの突き合わせが必要だった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "拡張機能が収集したデータを、リソース単位・全体のダッシュボードで確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "SQL IaaS Agent 拡張機能が収集し、Microsoft 管理のパイプラインで処理・保存する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "パフォーマンスモニタリングの仕組み", "retrievedAt": "2026-10-14T20:25:00Z" }]
+            },
+            {
+              "text": "可視化: リソース利用状況・ストレージ性能・アクティブ セッション・待機統計",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "冒頭", "retrievedAt": "2026-10-14T20:25:00Z" }]
+            },
+            {
+              "text": "閲覧は Fabric Database Hub、詳細分析は Azure Data Explorer エンドポイントで KQL",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "パフォーマンスデータの閲覧およびクエリ", "retrievedAt": "2026-10-14T20:25:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・制約", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "SQL Server 2016 以降。Enterprise / Standard が対象（Developer 等は接続データのみ）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "サポートされている構成", "retrievedAt": "2026-10-14T20:25:00Z" }]
+            },
+            {
+              "text": "拡張機能 2.0.229.0 以降（フル管理モード）、システム割り当てマネージド ID が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "前提条件", "retrievedAt": "2026-10-14T20:25:00Z" }]
+            },
+            {
+              "text": "Microsoft.AzureArcData の登録と、テレメトリ先への 443 ポート送信が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "前提条件", "retrievedAt": "2026-10-14T20:25:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-enable", "heading": "有効化の方法", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "拡張機能の設定に DatabaseWatcheronAzureVM フラグを追加（VM ごとに設定）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "パフォーマンスモニタリングの仕組み", "retrievedAt": "2026-10-14T20:25:00Z" }]
+            },
+            {
+              "text": "拡張機能の設定は累積されないため、更新時は既存の設定も含める",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "Important", "retrievedAt": "2026-10-14T20:25:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "access", "heading": "閲覧に必要な権限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ダッシュボードとクエリは Azure RBAC を適用。サブスクリプションの閲覧者以上が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "パフォーマンスデータの閲覧およびクエリ", "retrievedAt": "2026-10-14T20:25:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure SQL Database・SQL Managed Instance・Azure 外の SQL Server は対象外",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "プラットフォームのサポート", "retrievedAt": "2026-10-14T20:25:00Z" }]
+            },
+            { "text": "対象 VM のバージョン・エディションと拡張機能の版を確認し、検証用 VM で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "sql-server-on-vm", "term": "SQL Server on Azure VM", "type": "product",
+          "oneLine": { "text": "Azure の仮想マシン上で動作する SQL Server。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "冒頭", "retrievedAt": "2026-10-14T20:25:00Z" }] }
+        },
+        {
+          "termKey": "sql-iaas-agent", "term": "SQL IaaS Agent 拡張機能", "type": "feature",
+          "oneLine": { "text": "SQL Server インスタンスから性能データを収集し、Azure に送信する拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "パフォーマンスモニタリングの仕組み", "retrievedAt": "2026-10-14T20:25:00Z" }] }
+        },
+        {
+          "termKey": "fabric-database-hub", "term": "Fabric Database Hub", "type": "product",
+          "oneLine": { "text": "SQL Server の性能を一か所で見られる、組み込みダッシュボード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "Fabricデータベースハブでパフォーマンスデータを閲覧", "retrievedAt": "2026-10-14T20:25:00Z" }] }
+        },
+        {
+          "termKey": "kql", "term": "KQL", "type": "term",
+          "oneLine": { "text": "Kusto クエリ言語。収集したデータを直接クエリするために使う。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locator": "冒頭", "retrievedAt": "2026-10-14T20:25:00Z" }] }
+        },
+        {
+          "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label",
+          "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T20:25:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571894",
+        "learn": [
+          { "title": "Azure VMs (preview)でSQL Serverのパフォーマンス監視を有効にしてください", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/enable-performance-monitoring-sql-vm", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
