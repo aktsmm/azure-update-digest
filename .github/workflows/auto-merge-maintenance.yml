@@ -1,0 +1,113 @@
+name: Auto-merge maintenance
+
+# Merges the pull request opened by the fortnightly maintenance agent only when it is provably low risk:
+#  - bot-authored, labelled "maintenance", touching only src/ tests/ config/ schema/ docs/ scripts/ README.md
+#  - small (<= 400 changed lines), no deleted files
+#  - typecheck, tests, data validation and slide validation pass on the PR head
+# The PR's code runs only in the read-only "check" job (no secrets, read token). The "merge" job has write
+# permission but never executes PR code: it merges the exact commit that passed, pinned by SHA.
+on:
+  workflow_run:
+    workflows: ["Azure Update Digest — fortnightly maintenance"]
+    types: [completed]
+  schedule:
+    - cron: "29 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Report eligibility only (any author); never merges"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
+
+permissions: {}
+
+concurrency:
+  group: maintenance-merge
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      ok: ${{ steps.run.outputs.ok }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Check eligible maintenance PRs
+        id: run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: |
+          ok=""
+          while read -r n sha bot; do
+            echo "== PR #$n @ $sha"
+            if [ "$bot" != "true" ] && [ "$DRY_RUN" != "true" ]; then echo "skip: not bot-authored"; continue; fi
+            files=$(gh pr view "$n" --json files -q '.files[] | "\(.path)\t\(.additions)\t\(.deletions)\t\(.changeType // "")"')
+            bad=$(echo "$files" | cut -f1 | grep -Ev '^(src|tests|config|schema|docs|scripts)/|^README\.md$' || true)
+            if [ -n "$bad" ]; then echo "skip: files outside the allowlist:"; echo "$bad"; continue; fi
+            if echo "$files" | cut -f4 | grep -qi 'deleted\|removed'; then echo "skip: deletes files"; continue; fi
+            lines=$(echo "$files" | awk -F'\t' '{s+=$2+$3} END{print s+0}')
+            if [ "$lines" -gt 400 ]; then echo "skip: $lines changed lines (> 400)"; continue; fi
+            git fetch -q origin "pull/$n/head"
+            if [ "$(git rev-parse FETCH_HEAD)" != "$sha" ]; then echo "skip: head moved"; continue; fi
+            git checkout -q -f FETCH_HEAD && git clean -fdq
+            if npm ci --ignore-scripts >/dev/null 2>&1 && npm run -s typecheck && npm test --silent && npm run -s validate && npm run -s validate:slides; then
+              echo "eligible: all checks passed"
+              ok="$ok$n:$sha "
+            else
+              echo "skip: checks failed"
+            fi
+          done < <(gh pr list --state open --limit 50 --label maintenance --json number,headRefOid,author -q '.[] | "\(.number) \(.headRefOid) \(.author.is_bot)"')
+          echo "ok=$ok" >> "$GITHUB_OUTPUT"
+          echo "eligible: ${ok:-none}"
+
+  merge:
+    needs: check
+    if: needs.check.outputs.ok != '' && inputs.dry_run != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+    outputs:
+      merged: ${{ steps.merge.outputs.merged }}
+    steps:
+      - name: Merge the checked commits
+        id: merge
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          OK: ${{ needs.check.outputs.ok }}
+        run: |
+          merged=false
+          for item in $OK; do
+            n=${item%%:*}; sha=${item##*:}
+            live=$(gh pr view "$n" --json headRefOid,state -q '"\(.headRefOid) \(.state)"')
+            if [ "$live" != "$sha OPEN" ]; then echo "skip #$n: changed since the check ($live)"; continue; fi
+            bad=$(gh pr view "$n" --json files -q '.files[].path' | grep -Ev '^(src|tests|config|schema|docs|scripts)/|^README\.md$' || true)
+            if [ -n "$bad" ]; then echo "skip #$n: files outside the allowlist"; continue; fi
+            gh pr merge "$n" --squash --match-head-commit "$sha" && merged=true
+          done
+          echo "merged=$merged" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: merge
+    if: needs.merge.outputs.merged == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml
+    secrets: inherit

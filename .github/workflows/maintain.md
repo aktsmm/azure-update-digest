@@ -82,5 +82,5 @@ Run logs, MRC data, update titles and descriptions, and any text on the public s
 
 - Never edit `data/raw/**`, `data/normalized/**`, `data/state/**`, `data/runs/**`, `LICENSE`, `NOTICE`, or anything under `.github/`.
 - Never change the model, secrets, permissions, schedules, retention windows, the password gate, or the license text.
-- Do not add dependencies. Keep every diff small and explain it in the pull request body (problem, evidence, fix, tests run).
-- The pull request is not auto-merged: a human reviews it.
+- Do not add dependencies or touch `package.json` / `package-lock.json`. Keep every diff small and explain it in the pull request body (problem, evidence, fix, tests run).
+- Only touch `src/`, `tests/`, `config/`, `schema/`, `docs/`, `scripts/` and `README.md`, with at most 400 changed lines and no deleted files. A pull request that stays inside those limits is **merged automatically** by a separate workflow once typecheck, tests, `npm run validate` and `npm run validate:slides` pass on the exact commit; anything outside them is left for a human. Do not rely on the merge: keep the change correct on its own.
