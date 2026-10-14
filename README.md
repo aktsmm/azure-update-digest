@@ -78,7 +78,7 @@ dist/             サイト。data/ から常に再生成可能                 
 
 - サイトに載せるもの: タイトル、メタデータ、原文リンク、独自の日本語要約、Learn 関連資料。**MRC の description 全文は表示しません**。
 - 注意: `data/raw/` には MRC の応答（description の抜粋・全文を含む）をそのまま保存しており、公開リポジトリで閲覧できます。公開を避けたい場合は raw を別の非公開ストアへ移す運用に変更してください。
-- 出典: Microsoft Release Communications。コードは MIT（`LICENSE`）。データの扱いは `NOTICE` を参照。
+- 出典: Microsoft Release Communications。**ライセンスは CC BY-NC-SA 4.0**（`LICENSE`）。商用利用は不可で、利用時は出典と作者（yamapan / aktsmm）の表示、変更の明示、同一ライセンスでの継承が必要です。Microsoft の原文・Microsoft Learn の内容は対象外です（`NOTICE`）。
 
 ## 開発
 

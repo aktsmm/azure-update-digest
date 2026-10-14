@@ -45,6 +45,7 @@ export function buildApi(items: DigestItem[], meta: SiteMeta, slides: Map<string
       itemCount: sorted.length,
       slideCount: slides.size,
       attribution: meta.attribution,
+      license: { name: "CC BY-NC-SA 4.0", spdx: "CC-BY-NC-SA-4.0", url: "https://creativecommons.org/licenses/by-nc-sa/4.0/", author: "yamapan (aktsmm)", commercialUse: false, excludes: "Microsoft Release Communications and Microsoft Learn content remain Microsoft's" },
       notes: [
         "Static JSON files; there is no query endpoint. Filter on the client side.",
         "Original announcement text is not republished. Summaries and slides are written in Japanese from Microsoft Release Communications metadata and Microsoft Learn; each slide claim carries its evidence URLs.",

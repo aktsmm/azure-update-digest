@@ -216,7 +216,7 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 | サイトに載せない | MRC の `description` 全文 |
 | リポジトリ内 | `data/raw/` に MRC 応答（description を含む）を保存。公開リポジトリで閲覧可能 |
 | 出典 | Microsoft Release Communications（フッターに明記） |
-| ライセンス | コードは MIT（`LICENSE`）。データの扱いは `NOTICE` |
+| ライセンス | **CC BY-NC-SA 4.0**（`LICENSE`）。コード、独自の要約、スライド JSON / PDF、サイト、API の整形データが対象。商用利用不可。Microsoft の原文・Learn は対象外（`NOTICE`） |
 
 `data/raw/` の公開を避けたい場合は、raw を別の非公開ストアへ移す運用に変更してください（要約・サイトの再生成には raw が必要です）。**現時点の方針は、raw を公開リポジトリに置いたまま**です（出典明記。サイトには description 全文を出さない）。
 
