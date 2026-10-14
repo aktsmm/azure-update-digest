@@ -6,6 +6,7 @@ Azure の更新情報（[Microsoft Release Communications](https://www.microsoft
 - 対象外: PowerPoint・PDF 生成、月次ジョブ、M365 Roadmap（MRC が使えない場合は失敗として明示し、別ソースへ置換しません）
 - 公開サイト: https://aktsmm.github.io/azure-update-digest/
 - 設計・方式の詳細: **[docs/design.md](docs/design.md)**（データ層、取得方式、期間・日付、分類・重要度、要約・関連資料、権限、受け入れ条件、運用上の注意）
+- スライド JSON スキーマ（1 更新 = 1 枚）: **[docs/slide-schema.md](docs/slide-schema.md)**（[schema](schema/slide-deck.schema.json) / [サンプル](examples/slide-deck.sample.json)）
 
 ## 構成（4 層）
 
