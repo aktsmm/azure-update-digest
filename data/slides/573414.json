@@ -1,0 +1,90 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573414"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T20:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "573414",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "NVv3 シリーズ VM が 2026-09-30 に廃止（残存 VM は割り当て解除）",
+        "subtitleJa": "残っている VM は停止し、SLA・サポート対象外に。NVadsA10_v5 などへの移行が必要",
+        "en": "Retirement: NVv3-series Azure Virtual Machines"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "availability": [{ "rawRing": "Retirement", "year": 2026, "month": "September" }],
+        "status": null,
+        "products": ["Virtual Machines"],
+        "categories": ["compute"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Azure で **NVv3 シリーズ VM**（NV12s_v3 など）を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "残っている VM は割り当て解除され、動作せず課金もなくなる。SLA・サポートも対象外", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "NVadsA10_v5 などのサポートされる VM シリーズへ移行する（UAE North は 2027-01-31 まで）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2026-09-30", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "RI 購入終了", "when": { "date": "2025-11-02", "precision": "day" } },
+        { "label": "廃止", "when": { "date": "2026-09-30", "precision": "day" } },
+        { "label": "発表", "when": { "date": "2026-10-01", "precision": "day" } },
+        { "label": "UAE North の延長期限", "when": { "date": "2027-01-31", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象は NV12s_v3 / NV12hs_v3 / NV24s_v3 / NV24ms_v3 / NV32ms_v3 / NV48s_v3", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "冒頭", "retrievedAt": "2026-10-14T20:30:00Z" }] },
+            { "text": "2026-09-30 以降、残りの NVv3 VM は割り当て解除状態になり機能が停止する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "どのような影響を受けますか", "retrievedAt": "2026-10-14T20:30:00Z" }] },
+            { "text": "影響は NVIDIA Tesla M60 搭載の NVv3 のみ。NVadsA10_v5 等は対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "Note", "retrievedAt": "2026-10-14T20:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "推奨: NVadsA10_v5（グラフィックス、仮想デスクトップ、可視化、小規模 AI）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "移行先の推奨 SKU", "retrievedAt": "2026-10-14T20:30:00Z" }] },
+            { "text": "同用途は NC_RTXPRO6000BSE_v6 も候補。オフライン推論は NCasT4_v3", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "移行先の推奨 SKU", "retrievedAt": "2026-10-14T20:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "移行の手順", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "移行先を選び、新しい VM のクォータを要求してからサイズ変更する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "VM サイズを変更する手順", "retrievedAt": "2026-10-14T20:30:00Z" }] },
+            { "text": "NVv3 の 1 年・3 年 RI 購入は 2025-11-02 に終了済み", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "Note", "retrievedAt": "2026-10-14T20:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "exception", "heading": "UAE North の延長", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "UAE North は 2027-01-31 まで継続利用可。それまでに移行が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "Note", "retrievedAt": "2026-10-14T20:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "nvv3", "term": "NVv3 シリーズ", "type": "product", "oneLine": { "text": "NVIDIA Tesla M60 GPU を搭載した Azure 仮想マシンのサイズ シリーズ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "Note", "retrievedAt": "2026-10-14T20:30:00Z" }] } },
+        { "termKey": "deallocated", "term": "割り当て解除", "type": "term", "oneLine": { "text": "VM が機能せず、課金も発生しなくなる状態。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "どのような影響を受けますか", "retrievedAt": "2026-10-14T20:30:00Z" }] } },
+        { "termKey": "nvadsa10v5", "term": "NVadsA10_v5", "type": "product", "oneLine": { "text": "NVIDIA A10 GPU と AMD EPYC プロセッサを搭載し、部分的な GPU を使える VM シリーズ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "移行の概要", "retrievedAt": "2026-10-14T20:30:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573414",
+        "learn": [
+          { "title": "NVv3 シリーズ VM 2026 年 9 月 30 日に廃止", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
