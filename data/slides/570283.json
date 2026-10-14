@@ -1,0 +1,90 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570283"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T23:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "570283",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Azure Arc 対応 SCVMM が 2029-09-30 に廃止",
+        "subtitleJa": "既存利用は 2029 年 9 月まで可能。用途に応じて Arc 対応サーバーへ移行",
+        "en": "Retirement: Azure Arc enabled System Center Virtual Machine Manager will be retired September 30, 2029"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "Retirement", "year": 2029, "month": "September" }],
+        "status": null,
+        "products": [],
+        "categories": ["other"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Azure Arc 対応 SCVMM を使っている方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "既存のお客様は 2029 年 9 月まで現在の機能を利用可能。新規オンボードは 2026 年 10 月で終了", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/system-center-virtual-machine-manager/transition-guidance", "locator": "Important", "retrievedAt": "2026-10-14T23:00:00Z" }] },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "現在の利用状況を確認し、用途に合う移行先を選んで移行を計画する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2029-09-30", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-09-30", "precision": "day" } },
+        { "label": "新規オンボード終了", "when": { "month": "2026-10", "precision": "month" } },
+        { "label": "廃止", "when": { "date": "2029-09-30", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "廃止対象は Azure Arc 対応 SCVMM のみ。オンプレミスの SCVMM 自体は引き続き利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/system-center-virtual-machine-manager/transition-guidance", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-14T23:00:00Z" }] },
+            { "text": "廃止までに新機能は追加されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/system-center-virtual-machine-manager/transition-guidance", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-14T23:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "監視・セキュリティ・更新などの管理のみ → Azure Arc 対応サーバー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/system-center-virtual-machine-manager/transition-guidance", "locator": "どの移行パスを選択する必要がありますか?", "retrievedAt": "2026-10-14T23:00:00Z" }] },
+            { "text": "VM ライフサイクル操作を利用 → arc-vmm-feedback@microsoft.com へ連絡", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/system-center-virtual-machine-manager/transition-guidance", "locator": "どの移行パスを選択する必要がありますか?", "retrievedAt": "2026-10-14T23:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Arc 対応サーバーは VM のライフサイクル操作を提供しない点に注意", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/system-center-virtual-machine-manager/transition-guidance", "locator": "Azure Arc対応サーバーへの移行", "retrievedAt": "2026-10-14T23:00:00Z" }] },
+            { "text": "移行後は SCVMM リソースを Azure から削除（デボード）する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/system-center-virtual-machine-manager/remove-scvmm-from-azure-arc", "locator": "冒頭", "retrievedAt": "2026-10-14T23:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-arc-scvmm", "term": "Azure Arc 対応 SCVMM", "type": "product", "oneLine": { "text": "SCVMM で管理する VM に Azure の管理機能を拡張するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/system-center-virtual-machine-manager/transition-guidance", "locator": "冒頭", "retrievedAt": "2026-10-14T23:00:00Z" }] } },
+        { "termKey": "azure-arc-servers", "term": "Azure Arc 対応サーバー", "type": "product", "oneLine": { "text": "仮想化基盤を問わず、ゲスト OS を Azure の管理サービスで扱えるようにする。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/system-center-virtual-machine-manager/transition-guidance", "locator": "Azure Arc対応サーバーへの移行", "retrievedAt": "2026-10-14T23:00:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止（Retirement）", "type": "label", "oneLine": { "text": "機能が利用できなくなり、サポートや更新も提供されなくなる最終段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Retirement", "retrievedAt": "2026-10-14T23:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "サービス全体の廃止（リージョン別ではない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/system-center-virtual-machine-manager/transition-guidance", "locator": "Important", "retrievedAt": "2026-10-14T23:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570283",
+        "learn": [
+          { "title": "Azure Arc 対応 SCVMM の廃止（移行ガイダンス）", "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/system-center-virtual-machine-manager/transition-guidance", "locale": "ja-jp" },
+          { "title": "Azure Arc から SCVMM 環境を削除する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/system-center-virtual-machine-manager/remove-scvmm-from-azure-arc", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
