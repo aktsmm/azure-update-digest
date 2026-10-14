@@ -109,7 +109,8 @@ export function slideHtml(s: Slide, o: SlideOptions): string {
   const corePanels = mainPanels.filter((p) => p.priority === "core");
   const detailPanels = mainPanels.filter((p) => p.priority !== "core");
   const detailRow = detailPanels.length ? `<div class="row2">${detailPanels.map(panelCard).join("")}</div>` : "";
-  const mainHtml = `${ba}${corePanels.map(panelCard).join("")}${detailRow}`;
+  const detailsOnlyPage = !!o.continuation;
+  const mainHtml = detailsOnlyPage ? `<div class="row2">${detailPanels.map(panelCard).join("")}</div>` : `${ba}${corePanels.map(panelCard).join("")}${detailRow}`;
   const tl = s.timeline?.length ? `<div class="tl">${s.timeline.map((t, i, a) => `<div class="pt"${i === a.length - 1 ? ' style="color:#c62828"' : ""}><b>${esc(when(t.when))}</b>${esc(t.label)}</div>${i < a.length - 1 ? '<div class="ln"></div>' : ""}`).join("")}</div>` : "";
   const glossary = (s.glossary ?? []).length
     ? `<div class="card gl"><h3>用語ミニ解説</h3>${(s.glossary ?? []).map((g) => `<div class="term"><b>${esc(g.term)}</b><span class="k">${esc(TYPE_JA[g.type] ?? g.type)}</span><br>${esc(g.oneLine.text)}</div>`).join("")}</div>`
@@ -121,9 +122,9 @@ export function slideHtml(s: Slide, o: SlideOptions): string {
   const meta2 = [s.meta.categories.length ? `分類: ${esc(s.meta.categories.map((c) => CATEGORY_JA[c] ?? c).join("・"))}` : "", `ID ${esc(s.key)}`].filter(Boolean).join(" ｜ ");
   return `<section class="page slide" data-key="${esc(s.key)}" style="--fs:${o.fs}px">
   <div class="hd"><div><div class="t">${esc(s.title.ja)}${s.title.subtitleJa ? `<small>― ${esc(s.title.subtitleJa)}</small>` : ""}${o.continuation ? "<small>（続き）</small>" : ""}</div><div class="en">${esc(s.title.en)}<span class="dt">${esc(dateLine)}</span></div></div><span class="badge k-${s.kind}">${esc(s.label || KIND_LABEL[s.kind])}</span></div>
-  <div class="imp"><div class="c who"><b class="l">誰に関係するか</b>${esc(s.audience.who.text)}</div><div class="c"><b class="l">${s.audience.changeNature === "benefit" ? "嬉しい点" : s.audience.changeNature === "breaking" ? "変わること（嬉しくない変更）" : "変わること"}</b>${esc(s.audience.change.text)}</div><div class="c act-${esc(s.action.required)}"><b class="l">対応の要否</b><b>${ACT_LABEL[s.action.required] ?? ""}</b>　${esc(s.action.summary.text)}${deadline}</div></div>
-  ${tl}
-  <div class="cols"><div class="main">${mainHtml}</div><div class="side">${glossary}${sug}</div></div>
+  ${detailsOnlyPage ? "" : `<div class="imp"><div class="c who"><b class="l">誰に関係するか</b>${rich(s.audience.who.text)}</div><div class="c"><b class="l">${s.audience.changeNature === "benefit" ? "嬉しい点" : s.audience.changeNature === "breaking" ? "変わること（嬉しくない変更）" : "変わること"}</b>${esc(s.audience.change.text)}</div><div class="c act-${esc(s.action.required)}"><b class="l">対応の要否</b><b>${ACT_LABEL[s.action.required] ?? ""}</b>　${esc(s.action.summary.text)}  ${deadline}</div></div>`}
+    ${detailsOnlyPage ? "" : tl}
+  <div class="cols"><div class="main">${mainHtml}</div><div class="side">${detailsOnlyPage ? "" : glossary + sug}</div></div>
   <div class="ft"><div class="lk"><div><b class="fl">発表</b> ${link(s.references.announcement, "Azure Updates")}</div>${learn ? `<div><b class="fl">詳細</b> ${learn}</div>` : ""}<div>${meta2}</div></div>${stamp}</div>
 </section>`;
 }

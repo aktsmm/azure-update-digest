@@ -105,6 +105,10 @@ Create `data/slides/<id>.json` for exactly one Azure update: a one-slide deck th
 - Links: `references.announcement` is `https://azure.microsoft.com/updates?id=<id>`. `references.learn` holds 1–3 official pages that actually help the reader (feature docs, prerequisites, overview). **Prefer the `ja-jp` page when it exists** (check by fetching `/ja-jp/`); use `en-us` only when no Japanese page exists, with the matching `locale`. Never pad with unrelated product landing pages. The footer renders these as clickable links.
 - Panels follow `panelTemplate` for the kind; set `availability` to non-`present` for panels you cannot support so they are not drawn. Keep core panels short; put limits, comparisons, and usage notes in detail panels like the sample.
 - Concise, natural Japanese. Fill the slide's area with useful verified content rather than leaving it sparse, but do not pad.
+- **Length budget (the page is fixed size, 1280×720)**: each panel bullet ≤ 60 Japanese characters; main panels ≤ 3 bullets; the three detail panels ≤ 2 bullets each. Cut wording instead of adding text; overflow produces an ugly continuation page.
+- **Region stamp**: always try to verify. Fetch `https://learn.microsoft.com/azure/reliability/regions-nonregional-services` (global services such as Front Door), the product's reliability / availability page (foundational services such as Application Gateway are available in all regions), and `https://learn.microsoft.com/azure/reliability/regions-list` for Japan East / Japan West. If a Learn statement confirms scope, set `region` with `basis` and evidence; omit only when nothing confirms it.
+- **Glossary**: choose 4–6 terms — every product name in the title, the key feature, the unfamiliar jargon, and the GA/Preview label (definition from `https://learn.microsoft.com/lifecycle/faq/azure-infrastructure`).
+- **Bold**: wrap the audience target in `**...**` only inside `audience.who.text`; do not use `**` elsewhere unless the sample does.
 
 ## Finish
 
