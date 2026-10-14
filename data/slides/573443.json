@@ -1,0 +1,102 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573443"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T19:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "573443",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "SQL Server on Linux で bulkadmin ロールが一般提供（GA）に",
+        "subtitleJa": "sysadmin なしで BULK INSERT / OPENROWSET(BULK...) を実行でき、最小権限で運用できます",
+        "en": "Generally Available: Enabling the Bulk admin role for SQL Server on Linux"
+      },
+      "meta": {
+        "publishedJst": "2026-10-08",
+        "modifiedJst": "2026-10-08",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["SQL Server on Linux"],
+        "categories": ["other"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**SQL Server on Linux** でデータ一括ロードを行う DBA・運用担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "sysadmin を付与せずに一括インポート権限だけを渡せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "sysadmin で一括ロードしている場合に見直しを検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "Linux 上では sysadmin 固定サーバー ロールのメンバーだけが BULK INSERT / OPENROWSET(BULK...) を実行できた",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "冒頭", "retrievedAt": "2026-10-14T19:30:00Z" }]
+        },
+        "after": {
+          "text": "bulkadmin ロールまたは ADMINISTER BULK OPERATIONS 権限で実行できる（SQL Server 2025 CU9 / 2022 CU27 以降）",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "冒頭", "retrievedAt": "2026-10-14T19:30:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "bulkadmin ロールまたは ADMINISTER BULK OPERATIONS 権限で一括インポートを実行", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "冒頭", "retrievedAt": "2026-10-14T19:30:00Z" }] },
+            { "text": "Windows より厳しいファイルシステム／パス検証が一括操作に適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "冒頭", "retrievedAt": "2026-10-14T19:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "mssql サービス アカウントにデータ ファイルの読み取り権限を付与（setfacl など）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "Linux ファイル システムを構成する", "retrievedAt": "2026-10-14T19:30:00Z" }] },
+            { "text": "mssql-conf の bulkadmin.allowedpathslist で読み取り元ディレクトリを承認（再起動不要）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "mssql-conf を使用して許可されるパスを構成する", "retrievedAt": "2026-10-14T19:30:00Z" }] },
+            { "text": "ログインを bulkadmin に追加、または権限を GRANT し、対象テーブルの INSERT/SELECT を付与", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "SQL Server のアクセス許可を設定する", "retrievedAt": "2026-10-14T19:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "SQL Server 2022 CU27 以降、または 2025 CU9 以降。Linux ホストとインスタンスの管理アクセスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "前提条件", "retrievedAt": "2026-10-14T19:30:00Z" }] },
+            { "text": "パスは絶対パス・4,096 文字以下。ルート、シンボリック リンク、/var/opt/mssql は不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "パスの制限 / 禁止されている経路", "retrievedAt": "2026-10-14T19:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する操作", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "BULK INSERT と INSERT ... SELECT FROM OPENROWSET(BULK...) に同じ手順が適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "一括インポートを実行する", "retrievedAt": "2026-10-14T19:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "データ ロード専用ユーザーに、sysadmin ではなく bulkadmin のみを付与する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "オンプレミス、Azure VM 上、コンテナーの SQL Server on Linux が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sql-server-on-linux", "term": "SQL Server on Linux", "type": "product", "oneLine": { "text": "Linux 上で動作する SQL Server。オンプレミス、Azure VM、コンテナーで利用される。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "bulkadmin", "term": "bulkadmin", "type": "feature", "oneLine": { "text": "一括データ インポート操作を実行できる固定サーバー ロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "冒頭", "retrievedAt": "2026-10-14T19:30:00Z" }] } },
+        { "termKey": "sysadmin", "term": "sysadmin", "type": "term", "oneLine": { "text": "Linux 版では従来、一括インポートに必要だった強力な固定サーバー ロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "冒頭", "retrievedAt": "2026-10-14T19:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T19:30:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573443",
+        "learn": [{ "title": "Linux上でSQL Server on Linuxの一括インポート操作を設定する", "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
