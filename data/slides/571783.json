@@ -1,0 +1,142 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571783"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T22:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "571783",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "PostgreSQL フレキシブル サーバーがクロステナント CMK に対応（GA）",
+        "subtitleJa": "別の Entra テナントにある Key Vault / Managed HSM のキーでデータを暗号化できます",
+        "en": "Generally Available: Azure Database for PostgreSQL Flexible Server supports cross-tenant customer-managed keys (CMK)"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**SaaS プロバイダー / ISV** と、鍵を自社テナントで管理したい顧客", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "鍵の所有とデータベース運用を別テナントに分離したまま暗号化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "テナントをまたぐ鍵管理が必要な場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "DB は ISV テナント、暗号化キーは顧客テナントの Key Vault / Managed HSM に置く",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/security/security-data-encryption", "locator": "クロステナントのカスタマー マネージド キー (CMK)", "retrievedAt": "2026-10-14T22:20:00Z" }]
+            },
+            {
+              "text": "ISV 側のマルチテナント アプリとユーザー割り当てマネージド ID でキーへアクセスする",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/security/security-data-encryption", "locator": "クロステナントのカスタマー マネージド キー (CMK)", "retrievedAt": "2026-10-14T22:20:00Z" }]
+            },
+            { "text": "キーのローテーションと失効を顧客が自分で管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "顧客テナントでアプリをインストールし、キーの権限を付与してキー識別子を控える",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/security/security-data-encryption", "locator": "セットアップ", "retrievedAt": "2026-10-14T22:20:00Z" }]
+            },
+            {
+              "text": "サーバー作成の [セキュリティ] タブで CMK を選び、ID・アプリ・キー識別子を指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/security/security-data-encryption", "locator": "クロステナントのカスタマー マネージド キーを構成する", "retrievedAt": "2026-10-14T22:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "CMK は新規サーバー作成時のみ設定可。Key Vault はサーバーと同じリージョンに置く",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/security/security-data-encryption", "locator": "カスタマー マネージド キー (CMK) の制限事項", "retrievedAt": "2026-10-14T22:20:00Z" }]
+            },
+            {
+              "text": "クロステナントでは長期保有 (LTR) バックアップ未対応、Azure PowerShell も未対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/security/security-data-encryption", "locator": "Cross-tenant customer-managed keys only", "retrievedAt": "2026-10-14T22:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "単一テナント CMK は Key Vault とサーバーが同じ Entra テナント。クロステナントは別テナント",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/security/security-data-encryption", "locator": "Encryption at rest with SMK or CMK", "retrievedAt": "2026-10-14T22:20:00Z" }]
+            },
+            {
+              "text": "サービスマネージド キー (SMK) が既定で、保存データは常に暗号化される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/security/security-data-encryption", "locator": "冒頭", "retrievedAt": "2026-10-14T22:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "アプリと DB は提供者のテナント、鍵の所有は顧客という SaaS 構成",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            },
+            {
+              "text": "CMK 設定後はシステム マネージド キーに戻せず、戻すには新サーバーへ復元が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/security/security-data-encryption", "locator": "カスタマー マネージド キー (CMK) の制限事項", "retrievedAt": "2026-10-14T22:20:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-database-for-postgresql", "term": "Azure Database for PostgreSQL", "type": "product", "oneLine": { "text": "PostgreSQL をフル マネージドで提供するデータベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/overview", "locator": "冒頭", "retrievedAt": "2026-10-14T22:20:00Z" }] } },
+        { "termKey": "cmk", "term": "カスタマー マネージド キー (CMK)", "type": "feature", "oneLine": { "text": "保存データの暗号化に、顧客が管理する自分のキーを使う方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/security/security-data-encryption", "locator": "サービスマネージド キー (SMK) またはカスタマー マネージド キー (CMK)", "retrievedAt": "2026-10-14T22:20:00Z" }] } },
+        { "termKey": "cross-tenant", "term": "クロステナント", "type": "term", "oneLine": { "text": "DB とは別の Microsoft Entra ID（テナント）にキーがある構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/security/security-data-encryption", "locator": "クロステナントのカスタマー マネージド キー (CMK)", "retrievedAt": "2026-10-14T22:20:00Z" }] } },
+        { "termKey": "isv", "term": "ISV", "type": "term", "oneLine": { "text": "独立系ソフトウェア ベンダー。ここではサービス提供者のテナントを管理する側。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/security/security-data-encryption", "locator": "Cross-tenant customer-managed keys (CMK)", "retrievedAt": "2026-10-14T22:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T22:20:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Database for PostgreSQL は東日本・西日本で提供されるサービスの機能",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/azure/postgresql/overview", "locator": "Azure regions（Japan East / Japan West）", "retrievedAt": "2026-10-14T22:20:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571783",
+        "learn": [
+          { "title": "Azure Database for PostgreSQL フレキシブル サーバーにおける保存データの暗号化", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/security/security-data-encryption", "locale": "ja-jp" },
+          { "title": "Azure Database for PostgreSQL フレキシブル サーバーでデータ暗号化を設定する", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/security/security-configure-data-encryption", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
