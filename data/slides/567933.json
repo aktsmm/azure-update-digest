@@ -1,0 +1,87 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["567933"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T19:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "567933",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Microsoft Dev Box が 2028-09-18 に廃止",
+        "subtitleJa": "既存環境は移行期間中も利用可能。推奨移行先は Windows 365",
+        "en": "Retirement: Microsoft Dev Box will be retired on September 18, 2028"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "modifiedJst": "2026-10-09",
+        "availability": [{ "rawRing": "Retirement", "year": 2028, "month": "September" }],
+        "status": null,
+        "products": ["Microsoft Dev Box"],
+        "categories": ["other"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Dev Box を利用中の組織・開発チーム**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "廃止後はサービスが利用できなくなる。新機能の開発予定はない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "Windows 365 などへの移行を今から計画・検証する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "アクションへの誘い", "retrievedAt": "2026-10-14T19:00:00Z" }] },
+        "deadline": { "date": "2028-09-18", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "閉鎖期間の開始", "when": { "date": "2026-09-14", "precision": "day" } },
+        { "label": "発表", "when": { "date": "2026-10-09", "precision": "day" } },
+        { "label": "廃止", "when": { "date": "2028-09-18", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "廃止は 2028年9月18日 17:00 UTC。閉鎖期間は 2026年9月14日 16:00 UTC から", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "廃止に関するよくある質問", "retrievedAt": "2026-10-14T19:00:00Z" }] },
+            { "text": "既存のデプロイは移行期間中もサポートされる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "よくある質問", "retrievedAt": "2026-10-14T19:00:00Z" }] },
+            { "text": "廃止後は利用不可。残るワークロードは削除される想定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "よくある質問", "retrievedAt": "2026-10-14T19:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "推奨は Windows 365（仮想化された開発者環境の進路）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "Windows 365", "retrievedAt": "2026-10-14T19:00:00Z" }] },
+            { "text": "Dev Box の 1 対 1 の代替ではなく、機能差の検証が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "よくある質問", "retrievedAt": "2026-10-14T19:00:00Z" }] },
+            { "text": "自動移行ツールはなく、クラウド PC の再構築とデータ移行が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "よくある質問", "retrievedAt": "2026-10-14T19:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure Advisor のサービス廃止ブックで影響リソースを確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "影響を受けるリソースの特定", "retrievedAt": "2026-10-14T19:00:00Z" }] },
+            { "text": "開発センター・プール・イメージ等を棚卸しし、新規の長期依存を作らない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "アクションへの誘い", "retrievedAt": "2026-10-14T19:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-dev-box", "term": "Microsoft Dev Box", "type": "product", "oneLine": { "text": "すぐにコーディングできるクラウド ワークステーション「開発ボックス」を、開発者がセルフサービスで使えるサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/overview-what-is-microsoft-dev-box", "locator": "冒頭", "retrievedAt": "2026-10-14T19:00:00Z" }] } },
+        { "termKey": "windows-365", "term": "Windows 365", "type": "product", "oneLine": { "text": "Microsoft Intune で管理できる永続的なクラウド PC を提供するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "Windows 365", "retrievedAt": "2026-10-14T19:00:00Z" }] } },
+        { "termKey": "dev-center", "term": "デベロッパー センター", "type": "term", "oneLine": { "text": "Dev Box のプロジェクトとリソースを束ねるコンテナー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/overview-what-is-microsoft-dev-box", "locator": "Microsoft Dev Box で始める", "retrievedAt": "2026-10-14T19:00:00Z" }] } },
+        { "termKey": "dev-box-pool", "term": "開発ボックス プール", "type": "feature", "oneLine": { "text": "プロジェクト管理者が作成し、開発者が開発ボックスを作成する元になる設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/overview-what-is-microsoft-dev-box", "locator": "開発者チーム リーダーのシナリオ", "retrievedAt": "2026-10-14T19:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=567933",
+        "learn": [
+          { "title": "Microsoft Dev Box リタイアメントガイド", "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locale": "ja-jp" },
+          { "title": "Microsoft Dev Box とは", "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/overview-what-is-microsoft-dev-box", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
