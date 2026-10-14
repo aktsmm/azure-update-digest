@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "canonicalKey": "570313",
+  "status": "verified",
+  "sourceQuery": "Azure Key Vault Secrets Store extension Azure Arc-enabled Kubernetes",
+  "checkedAt": "2026-10-14T12:00:00Z",
+  "candidates": [
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension",
+      "title": "シークレット ストア拡張機能を使用して、Azure Arc 対応 Kubernetes クラスターでオフライン アクセス用のシークレットをフェッチする",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "移行先である Azure Key Vault Secret Store Extension の公式ドキュメントです。",
+      "checkedAt": "2026-10-14T12:00:00Z"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider",
+      "title": "Azure Key Vault シークレット プロバイダー拡張機能を使用して、Azure Arc 対応 Kubernetes クラスターにシークレットをフェッチする",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "廃止対象の Azure Key Vault Secrets Provider extension の公式ドキュメントです。",
+      "checkedAt": "2026-10-14T12:00:00Z"
+    }
+  ]
+}
