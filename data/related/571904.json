@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "canonicalKey": "571904",
+  "status": "verified",
+  "sourceQuery": "SQL Server enabled by Azure Arc performance monitoring Grafana",
+  "checkedAt": "2026-10-14T13:05:00Z",
+  "candidates": [
+    {
+      "url": "https://learn.microsoft.com/sql/sql-server/azure-arc/sql-monitoring?view=sql-server-ver17",
+      "title": "Monitor SQL Server enabled by Azure Arc (preview)",
+      "verified": true,
+      "locale": "en-us",
+      "matchReason": "Arc 対応 SQL Server のパフォーマンスダッシュボードと監視の前提条件を説明しています。",
+      "checkedAt": "2026-10-14T13:05:00Z"
+    },
+    {
+      "url": "https://learn.microsoft.com/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry",
+      "title": "Query performance monitoring telemetry (preview)",
+      "verified": true,
+      "locale": "en-us",
+      "matchReason": "Arc 対応 SQL Server を含む監視テレメトリのエンドポイントとスキーマを説明しています。",
+      "checkedAt": "2026-10-14T13:05:00Z"
+    }
+  ]
+}
