@@ -15,4 +15,5 @@ cpSync("site/style.css", `${out}/style.css`);
 writeJson(`${out}/data/items.json`, { schema: 1, items });
 writeJson(`${out}/data/meta.json`, meta);
 await build({ entryPoints: ["src/web/app.ts"], bundle: true, format: "iife", target: "es2022", outfile: `${out}/app.js`, minify: false, logLevel: "warning" });
+await build({ entryPoints: ["src/web/pdf-merge.ts"], bundle: true, format: "iife", globalName: "PdfMerge", target: "es2022", outfile: `${out}/pdf-merge.js`, minify: true, logLevel: "warning" });
 console.log(`site built: ${items.length} items`);

@@ -41,6 +41,16 @@ jobs:
         run: npm run validate
       - name: Build site from data (raw -> normalized -> site)
         run: npm run build
+      - name: Render per-update slide PDFs and the PDF font
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+          npm run build:pdfs
+          pip install -q fonttools brotli
+          mkdir -p dist/fonts
+          curl -L --fail -o NotoSansJP-VF.ttf "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf"
+          python scripts/make-font.py NotoSansJP-VF.ttf dist/fonts/NotoSansJP.ttf
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

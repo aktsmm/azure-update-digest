@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 
 import { chromium, type Page } from "playwright-core";
 import { documentHtml, slideHtml, type Deck } from "../lib/slide-html.js";
 import { validateDeck } from "../lib/slide-validate.js";
+import { findChrome, fitSlide } from "../lib/slide-render.js";
 
 const args = process.argv.slice(2);
 const flag = (n: string, d?: string) => {
@@ -13,11 +14,6 @@ const outDir = flag("out", "dist-pdf")!;
 const ids = (flag("ids") ?? "").split(",").map((s) => s.trim()).filter(Boolean);
 const dir = flag("dir", "data/slides")!;
 const snapshotAt = flag("snapshot") ?? process.env.SNAPSHOT_AT ?? "1970-01-01T00:00:00Z";
-
-function findChrome(): string | undefined {
-  const cands = [process.env.CHROME_PATH, "/usr/bin/google-chrome", "/usr/bin/google-chrome-stable", "/usr/bin/chromium", "/usr/bin/chromium-browser", "C:/Program Files/Google/Chrome/Application/chrome.exe", "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe", "C:/Program Files/Microsoft/Edge/Application/msedge.exe"];
-  return cands.find((c) => c && existsSync(c));
-}
 
 const files = (ids.length ? ids.map((i) => `${i}.json`) : readdirSync(dir).filter((f) => f.endsWith(".json"))).sort();
 if (!files.length) throw new Error(`no slide files in ${dir}`);
@@ -35,13 +31,6 @@ if (problems.length) {
   throw new Error(`deck is invalid (${problems.length} problem(s)); refusing to render`);
 }
 
-const FS_STEPS = [16, 15.5, 15, 14.5, 14, 13.5, 13, 12.5];
-
-async function overflowOf(page: Page, key: string): Promise<number> {
-    const JS = `(() => { const s = document.querySelector('section[data-key="${key}"]'); const ft = s.querySelector('.ft'); const ftTop = ft.getBoundingClientRect().top; const cardOver = Math.max(0, ...[...s.querySelectorAll('.card')].map(c => c.getBoundingClientRect().bottom - ftTop)); const over = [...s.querySelectorAll('.main, .side')].map(e => e.scrollHeight - e.clientHeight); const hOver = s.scrollHeight - s.clientHeight; const ftOver = ft.getBoundingClientRect().bottom - s.getBoundingClientRect().bottom; return Math.max(0, hOver, Math.round(ftOver), Math.round(cardOver), ...over); })()`;
-    return Number(await page.evaluate(JS));
-  }
-
 const exe = findChrome();
 if (!exe) throw new Error("no Chrome/Chromium found; set CHROME_PATH");
 const browser = await chromium.launch({ executablePath: exe, args: ["--no-sandbox"] });
@@ -51,33 +40,9 @@ try {
   const pages: string[] = [];
 
   for (const s of slides) {
-    let chosen: { fs: number; detail: boolean } | null = null;
-    let last = Infinity;
-    for (const includeDetail of [true, false]) {
-      for (const fs of FS_STEPS) {
-        await page.setContent(`<!doctype html><meta charset="utf-8"><style>${(await import("../lib/slide-html.js")).PDF_CSS}</style>${slideHtml(s, { fs, includeDetail })}`);
-        await page.evaluate(() => document.fonts.ready);
-        const o = await overflowOf(page, s.key);
-        last = o;
-        if (o <= 0) { chosen = { fs, detail: includeDetail }; break; }
-      }
-      if (chosen) break;
-    }
-    const continuation = !!chosen && !chosen.detail && s.panels.some((p) => p.priority === "detail" && p.availability === "present");
-    if (!chosen) chosen = { fs: FS_STEPS.at(-1)!, detail: false };
-    report[s.key] = { fs: chosen.fs, detail: chosen.detail, continuation, overflow: chosen.detail || !Number.isFinite(last) ? 0 : Math.max(0, last) };
-    pages.push(slideHtml(s, { fs: chosen.fs, includeDetail: chosen.detail }));
-    if (continuation) {
-      const detailOnly = { ...s, panels: s.panels.filter((p) => p.priority === "detail") };
-      let cfs: number | null = null;
-      for (const fs of FS_STEPS) {
-        await page.setContent(`<!doctype html><meta charset="utf-8"><style>${(await import("../lib/slide-html.js")).PDF_CSS}</style>${slideHtml(detailOnly as typeof s, { fs, includeDetail: true, continuation: true })}`);
-        await page.evaluate(() => document.fonts.ready);
-        if ((await overflowOf(page, s.key)) <= 0) { cfs = fs; break; }
-      }
-      if (cfs === null) { report[s.key]!.overflow = 1; cfs = FS_STEPS.at(-1)!; }
-      pages.push(slideHtml(detailOnly as typeof s, { fs: cfs, includeDetail: true, continuation: true }));
-    }
+    const fit = await fitSlide(page, s);
+    report[s.key] = fit.report;
+    pages.push(...fit.pages);
   }
 
   mkdirSync(outDir, { recursive: true });
