@@ -1,0 +1,135 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["574430"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T15:55:00Z"
+  },
+  "slides": [
+    {
+      "key": "574430",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "AKS のマネージド NAT Gateway が StandardV2 で一般提供（GA）に",
+        "subtitleJa": "新規クラスターの既定がゾーン冗長・高帯域・IPv6 対応の StandardV2 に（対応リージョン）",
+        "en": "Generally Available: Managed StandardV2 NAT Gateway for AKS"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "modifiedJst": "2026-10-09",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Kubernetes Service (AKS)", "Azure NAT Gateway"],
+        "categories": ["compute", "networking", "containers"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "AKS 管理の仮想ネットワークで **マネージド NAT Gateway（managedNATGateway）を使う方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ゾーン冗長・高帯域・IPv6 対応の送信接続を AKS 任せで得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "新規作成は既定で適用。既存クラスターは移行したい場合のみ検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "AKS が NAT Gateway を作成・管理し、ノードに送信接続を提供する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/nat-gateway", "locator": "AKS のマネージド NAT ゲートウェイ", "retrievedAt": "2026-10-14T15:55:00Z" }]
+            },
+            {
+              "text": "StandardV2 はゾーン冗長が既定。帯域は最大 100 Gbps、1,000 万パケット/秒",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/nat-gateway/nat-sku", "locator": "StandardV2 SKU の機能", "retrievedAt": "2026-10-14T15:55:00Z" }]
+            },
+            {
+              "text": "Azure 管理の送信 IPv6 アドレスは StandardV2 のみ対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/nat-gateway", "locator": "マネージド NAT ゲートウェイ SKU の機能", "retrievedAt": "2026-10-14T15:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "az aks create に --outbound-type managedNATGateway を指定（対応リージョンでは StandardV2）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/nat-gateway", "locator": "AKS クラスターを作成する", "retrievedAt": "2026-10-14T15:55:00Z" }]
+            },
+            {
+              "text": "既存の Standard は natGatewayProfile.sku を StandardV2 にして移行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/nat-gateway", "locator": "マネージド NAT ゲートウェイ SKU を選択する", "retrievedAt": "2026-10-14T15:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "StandardV2 パブリック IP とプレフィックスが必要。Standard の IP は使えない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/nat-gateway", "locator": "マネージド NAT ゲートウェイ SKU を選択する", "retrievedAt": "2026-10-14T15:55:00Z" }]
+            },
+            {
+              "text": "StandardV2 から Standard へのダウングレードは不可。一部リージョンは非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/nat-gateway/nat-sku", "locator": "既知の制限事項", "retrievedAt": "2026-10-14T15:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "Standard との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Standard: ゾーン非対応・IPv4 のみ・50 Gbps。StandardV2: ゾーン対応・IPv4/IPv6・100 Gbps",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/nat-gateway/nat-sku", "locator": "SKU の比較", "retrievedAt": "2026-10-14T15:55:00Z" }]
+            },
+            {
+              "text": "Standard と StandardV2 の NAT Gateway は同じ価格",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/nat-gateway/nat-sku", "locator": "料金と SLA", "retrievedAt": "2026-10-14T15:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ゾーン障害に強い送信経路や、IPv6 の送信が必要なクラスターに向く", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "サブネットへの追加で、LB や Azure Firewall 経由の既存の送信接続が中断される場合がある",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/nat-gateway/nat-sku", "locator": "既知の問題", "retrievedAt": "2026-10-14T15:55:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "nat-gateway", "term": "NAT Gateway", "type": "product", "oneLine": { "text": "仮想ネットワーク内のリソースにインターネットへの送信接続を提供する、フル マネージドの NAT サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/reliability/reliability-nat-gateway", "locator": "冒頭", "retrievedAt": "2026-10-14T15:55:00Z" }] } },
+        { "termKey": "standardv2", "term": "StandardV2", "type": "feature", "oneLine": { "text": "NAT Gateway の SKU の 1 つで、ゾーン冗長・IPv6・高帯域に対応する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/nat-gateway/nat-sku", "locator": "StandardV2 SKU の機能", "retrievedAt": "2026-10-14T15:55:00Z" }] } },
+        { "termKey": "zone-redundant", "term": "ゾーン冗長", "type": "term", "oneLine": { "text": "1 つのゾーンが使えなくなっても、複数ゾーンにまたがり送信接続を維持できること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/nat-gateway/nat-sku", "locator": "ゾーン冗長性", "retrievedAt": "2026-10-14T15:55:00Z" }] } },
+        { "termKey": "managed-nat-gateway", "term": "managedNATGateway", "type": "term", "oneLine": { "text": "AKS が NAT Gateway を作成・管理する送信の種類（outbound type）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/nat-gateway", "locator": "AKS のマネージド NAT ゲートウェイ", "retrievedAt": "2026-10-14T15:55:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T15:55:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=574430",
+        "learn": [
+          { "title": "AKS クラスターのマネージド NAT ゲートウェイまたはユーザー割り当て NAT ゲートウェイを作成する", "url": "https://learn.microsoft.com/ja-jp/azure/aks/nat-gateway", "locale": "ja-jp" },
+          { "title": "Azure NAT Gateway SKU群", "url": "https://learn.microsoft.com/ja-jp/azure/nat-gateway/nat-sku", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
