@@ -1,0 +1,90 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573003"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T23:16:47Z"
+  },
+  "slides": [
+    {
+      "key": "573003",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Microsoft SQL Agent Skills がパブリック プレビュー",
+        "subtitleJa": "AI エージェントでの SQL の構築・運用・移行に、製品固有のガイダンスを提供",
+        "en": "Public Preview: Microsoft SQL Agent Skills"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "modifiedJst": "2026-09-30",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases", "ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "AI エージェントで **SQL ワークロードの開発・運用・移行**を行う Azure SQL の利用者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "AI エージェントが SQL 製品固有のガイダンスを使え、より正確に作業できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューは評価向け。本番ワークロードでの利用は想定されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T23:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "AI エージェントが、SQL 固有のガイダンスに基づいて開発・移行・管理タスクをこなしやすくなる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象シナリオ: Azure SQL Database、Azure SQL Database コンテナー、SQL Server から Azure への移行、Fabric Database Hub", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "SQL 固有のガイダンスで、開発・移行・管理の一般的なタスクを支援する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "パブリック プレビューは変更される可能性があり、通常 SLA の対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T23:00:00Z" }] },
+            { "text": "提供状況はリージョンやサブスクリプションの種類などで制限される場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T23:00:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "まず検証環境で、自分のユースケース（開発・移行・運用）に対するエージェントの回答精度を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "related", "heading": "関連機能（比較）", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "SSMS の GitHub Copilot でも、タスク固有の指示を Markdown で定義するエージェント スキルを利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/github-copilot/agent-skills", "locator": "冒頭", "retrievedAt": "2026-10-14T23:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "アップグレードやバックアップなどの管理をほぼ自動で行う、フル マネージドの PaaS データベース エンジン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/sql-database-paas-overview", "locator": "冒頭", "retrievedAt": "2026-10-14T23:00:00Z" }] } },
+        { "termKey": "agent-skills", "term": "エージェント スキル", "type": "feature", "oneLine": { "text": "特定のタスクの実行方法を AI エージェントに指示する、再利用可能な一連の命令。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/github-copilot/agent-skills", "locator": "冒頭", "retrievedAt": "2026-10-14T23:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Public preview（パブリック プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、すべての Azure 顧客が評価とフィードバックのために使える段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T23:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573003",
+        "learn": [
+          { "title": "Azure SQL Database とは", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/sql-database-paas-overview", "locale": "ja-jp" },
+          { "title": "SSMS の GitHub Copilot でエージェント スキルを使用する", "url": "https://learn.microsoft.com/ja-jp/ssms/github-copilot/agent-skills", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
