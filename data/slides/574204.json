@@ -1,0 +1,101 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["574204"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "574204",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Agent 365 と API Management の統合",
+        "subtitleJa": "MCP サーバーとツールを一元管理し、実行時は API Management が適用（パブリック プレビュー）",
+        "en": "Public Preview: Microsoft Agent 365 integration with Azure API Management"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "modifiedJst": "2026-10-09",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "October" }],
+        "status": "In preview",
+        "products": ["API Management"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "MCP サーバーを運用する **AI 管理者・プラットフォーム チーム**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "Agent 365 でガバナンスを一元管理し、実行時の適用は Azure 側に任せられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。Agent 365 テナントと対応する API Management が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "Prerequisites", "retrievedAt": "2026-10-15T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Agent 365 で API Management のゲートウェイと MCP サーバーを検出・管理し、アクセス制御を実行時に適用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "統合でできること", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ゲートウェイと MCP サーバーを検出し、中央インベントリで管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "ゲートウェイとMCPサーバーを発見する", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "MCP サーバーのブロック／解除（ブロック時は 403 を返す）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "MCPサーバーのブロックまたは解除", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "AI Gateway tier ではツール単位のブロックや監視、脅威保護も可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "サポートされている機能", "retrievedAt": "2026-10-15T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "API Management v1 tier は非対応。v2 tier はツール単位の制御に非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "プレビューの制限事項", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "ツール単位の制御は、許可ツールの静的リストがある MCP サーバーのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "プレビューの制限事項", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "テナント管理者による Agent 365 への同意（1 回）が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "Microsoft Agent 365へのアクセスを許可する", "retrievedAt": "2026-10-15T00:00:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "tiers", "heading": "tier ごとの対応", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "v2 tier: 集中インベントリとサーバー単位のブロック／解除に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "サポートされている機能", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "AI Gateway tier: ツール単位ブロック・監視・脅威保護にも対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "サポートされている機能", "retrievedAt": "2026-10-15T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "usage", "heading": "利用上の注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "エージェントは自動ではゲートウェイ経由にならず、MCP エンドポイントの設定が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "プレビューの制限事項", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "脅威保護は Microsoft Defender と Microsoft Purview と連携", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "ツール脅威対策", "retrievedAt": "2026-10-15T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "AI Gateway tier はプレビュー中で SLA なし。重要でない用途から開始", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/ai-gateway-overview", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "既存の MCP サーバーが許可ツールの静的リストを持つか事前に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-365", "term": "Microsoft Agent 365", "type": "product", "oneLine": { "text": "MCP サーバーとツールに集中型ガバナンスとランタイム強制を提供するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "冒頭", "retrievedAt": "2026-10-15T00:00:00Z" }] } },
+        { "termKey": "api-management", "term": "API Management", "type": "product", "oneLine": { "text": "MCP サーバーの認証・承認・監視を一元的に制御できる Azure のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/mcp-server-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T00:00:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "AI モデルやエージェントを外部データ ソースと接続するためのオープン標準。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/mcp-server-overview", "locator": "MCP の概念とアーキテクチャ", "retrievedAt": "2026-10-15T00:00:00Z" }] } },
+        { "termKey": "ai-gateway-tier", "term": "AI Gateway tier", "type": "feature", "oneLine": { "text": "AI モデルと MCP ツールを公開・保護・管理する、完全管理のゲートウェイ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/ai-gateway-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T00:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために全顧客へ提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-15T00:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=574204",
+        "learn": [
+          { "title": "Microsoft Agent 365 と Azure API Management を使用してツールを管理する（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locale": "ja-jp" },
+          { "title": "AI Gateway tier(プレビュー)概要", "url": "https://learn.microsoft.com/ja-jp/azure/api-management/ai-gateway-overview", "locale": "ja-jp" },
+          { "title": "Azure API Management の MCP サーバーについて", "url": "https://learn.microsoft.com/ja-jp/azure/api-management/mcp-server-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
