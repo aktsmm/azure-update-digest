@@ -120,7 +120,7 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
   g.text(end, "以上", (W - w) / 2, 290, 64, NAVY, true);
   const s2 = "Azure アップデート情報";
   g.text(end, s2, (W - g.width(s2, 26)) / 2, 380, 26, BLUE, true);
-  footer(g, end, "Created by yamapan（GitHub: aktsmm）", source);
+  footer(g, end, "Created by yamapan（GitHub: aktsmm） ／ CC BY-NC-SA 4.0", source);
 
   doc.setTitle("Azure アップデート情報");
   doc.setCreationDate(new Date(o.createdUtc));

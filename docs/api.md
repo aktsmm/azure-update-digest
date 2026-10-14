@@ -28,5 +28,6 @@ GitHub Pages から配信する、読み取り専用の静的 JSON です。認�
 - **取得状態**: `months[].coverage` が `complete` 以外の月は、更新が欠けている可能性があります。件数が少なくても 0 件とは限りません。
 - **原文は再配布しません**: MRC の `description`（原文の説明文）は含めません。要約とスライドは、MRC のメタ情報と Microsoft Learn を根拠に日本語で書いたもので、スライドの各文には根拠 URL（`evidence`）が付いています。
 - **安定性**: `schema` と `apiVersion` を持ちます。互換性のない変更は `api/v2/` に分けます。
+- **ライセンス**: CC BY-NC-SA 4.0（商用利用不可・要出典・継承）。`index.json` の `license` にも記載。Microsoft の原文・Learn の内容は対象外です。
 - **出典**: Microsoft Azure Updates / Microsoft Learn。利用時は出典を明記してください（`index.json` の `attribution`）。
 - **更新頻度**: データは毎日、スライドは週 2 回（月・木 03:00 JST）に増えます。
