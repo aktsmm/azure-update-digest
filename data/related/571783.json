@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "canonicalKey": "571783",
+  "status": "verified",
+  "sourceQuery": "PostgreSQL flexible server cross-tenant customer managed key",
+  "checkedAt": "2026-10-14T13:05:00Z",
+  "candidates": [
+    {
+      "url": "https://learn.microsoft.com/azure/postgresql/security/security-data-encryption",
+      "title": "Data encryption at rest in Azure Database for PostgreSQL flexible server",
+      "verified": true,
+      "locale": "en-us",
+      "matchReason": "クロステナント CMK を含む保存時暗号化の仕組みと要件を説明しています。",
+      "checkedAt": "2026-10-14T13:05:00Z"
+    },
+    {
+      "url": "https://learn.microsoft.com/azure/postgresql/security/security-configure-data-encryption",
+      "title": "Configure data encryption in Azure Database for PostgreSQL flexible server",
+      "verified": true,
+      "locale": "en-us",
+      "matchReason": "カスタマーマネージドキーによるデータ暗号化の構成手順です。",
+      "checkedAt": "2026-10-14T13:05:00Z"
+    }
+  ]
+}
