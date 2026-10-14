@@ -54,3 +54,9 @@ jobs:
             sleep 60
           done
           echo "started $started"
+      - name: Trigger auto-merge after the last agent run has had time to finish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 900
+          gh workflow run auto-merge-slides.yml
