@@ -1,0 +1,98 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573415"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T20:31:00Z"
+  },
+  "slides": [
+    {
+      "key": "573415",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "NVv4 シリーズ VM が 2026-09-30 に廃止",
+        "subtitleJa": "残っている VM は割り当て解除され、停止・SLA/サポート対象外に。NVads_V710_v5 などへ移行",
+        "en": "Retirement: NVv4-series Azure Virtual Machines"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "modifiedJst": "2026-10-01",
+        "availability": [{ "rawRing": "Retirement", "year": 2026, "month": "September" }],
+        "status": null,
+        "products": ["Virtual Machines"],
+        "categories": ["compute"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Azure で **NVv4 シリーズ（Standard_NV*as_v4 / NV*ahs_v4）の VM** を使っていた方", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "冒頭", "retrievedAt": "2026-10-14T20:31:00Z" }] },
+        "change": { "text": "残りの VM は割り当て解除状態になり、機能が停止。課金はなくなり、SLA・サポートも対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "どのような影響を受けますか", "retrievedAt": "2026-10-14T20:31:00Z" }] },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "ワークロードに合う VM シリーズを選び、クォータを申請して VM サイズを変更する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "VM サイズを変更する手順", "retrievedAt": "2026-10-14T20:31:00Z" }] },
+        "deadline": { "date": "2026-09-30", "precision": "day" }
+      },
+      "beforeAfter": {
+        "after": { "text": "2026-09-30 以降、残りの NVv4 VM は割り当て解除され、動作しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "どのような影響を受けますか", "retrievedAt": "2026-10-14T20:31:00Z" }] }
+      },
+      "timeline": [
+        { "label": "RI（1年・3年）購入終了", "when": { "date": "2025-11-02", "precision": "day" } },
+        { "label": "Compute Pre-Purchase 販売終了", "when": { "date": "2026-06-02", "precision": "day" } },
+        { "label": "NVv4 廃止", "when": { "date": "2026-09-30", "precision": "day" } },
+        { "label": "発表", "when": { "date": "2026-10-01", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "影響", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象は Standard_NV4as_v4 から NV32ahs_v4 までの 8 サイズ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "冒頭", "retrievedAt": "2026-10-14T20:31:00Z" }] },
+            { "text": "影響を受けるのは AMD Radeon Instinct MI25 GPU 搭載の NVv4 のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "どのような影響を受けますか / Note", "retrievedAt": "2026-10-14T20:31:00Z" }] },
+            { "text": "NVadsA10_v5 / NVads_V710_v5 シリーズの VM は対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "どのような影響を受けますか / Note", "retrievedAt": "2026-10-14T20:31:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "推奨は NVads_V710_v5（GPU あたりの GPU メモリ帯域幅が増加）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "冒頭", "retrievedAt": "2026-10-14T20:31:00Z" }] },
+            { "text": "用途により NVadsA10_v5 も候補。ゲーミングは NGads_V620", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "移行先の推奨 SKU", "retrievedAt": "2026-10-14T20:31:00Z" }] },
+            { "text": "V710_v5 へのサイズ変更で既知のエラーがある場合は AFEC 'VMTempDiskResizePreview' を登録", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "冒頭 / Note", "retrievedAt": "2026-10-14T20:31:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "残存する NVv4 VM を洗い出し、移行先のクォータを確保してからサイズ変更する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "サポート リクエストの問題の種類は「VM のサイズ変更に関するサポート」を選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "ヘルプとサポート", "retrievedAt": "2026-10-14T20:31:00Z" }] }
+          ]
+        },
+        {
+          "id": "purchase", "heading": "購入の終了", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "NVv4 の 1 年・3 年 RI 購入は 2025-11-02 に終了", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "Note", "retrievedAt": "2026-10-14T20:31:00Z" }] },
+            { "text": "NVv4 の Compute Pre-Purchase 販売は 2026-06-02 に終了", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "Note", "retrievedAt": "2026-10-14T20:31:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-virtual-machines", "term": "Azure Virtual Machines", "type": "product", "oneLine": { "text": "Azure が提供する、オンデマンドでスケーラブルなコンピューティング リソースの 1 種。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/overview", "locator": "冒頭", "retrievedAt": "2026-10-14T20:31:00Z" }] } },
+        { "termKey": "nvv4-series", "term": "NVv4 シリーズ", "type": "product", "oneLine": { "text": "AMD Radeon Instinct MI25 GPU を搭載した仮想マシン サイズのシリーズ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "どのような影響を受けますか / Note", "retrievedAt": "2026-10-14T20:31:00Z" }] } },
+        { "termKey": "nvads-v710-v5", "term": "NVads_V710_v5 シリーズ", "type": "product", "oneLine": { "text": "AMD Radeon Pro V710 GPU と AMD EPYC 9V64 F を搭載した、NVv4 の推奨移行先。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "提供終了日までに、どのような手続きを行う必要がありましたか", "retrievedAt": "2026-10-14T20:31:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止（Retirement）", "type": "label", "oneLine": { "text": "機能が利用できなくなり、サポートや更新、SLA が提供されなくなる最終段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Retirement", "retrievedAt": "2026-10-14T20:31:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573415",
+        "learn": [
+          { "title": "NVv4 シリーズ Virtual Machines 2026 年 9 月 30 日に廃止", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locale": "ja-jp" },
+          { "title": "Azure 内の仮想マシン", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
