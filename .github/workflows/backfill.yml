@@ -26,9 +26,12 @@ jobs:
       - name: Skip when backfill is already complete
         id: gate
         run: |
-          if [ -f data/state/collect-state.json ] && [ "$(jq -r '.backfill.completedAt // empty' data/state/collect-state.json)" != "" ] && [ "$(jq -r '[.backfill.months[] | select(.status != "complete")] | length' data/state/collect-state.json)" = "0" ] && [ "$(jq -r '.backfill.targetMonths | length' data/state/collect-state.json)" != "0" ]; then
+          last=$(ls data/runs 2>/dev/null | sort | tail -1)
+          pending=1
+          if [ -n "$last" ]; then pending=$(jq -r '.details.pendingAfter' "data/runs/$last"); fi
+          if [ -f data/state/collect-state.json ] && [ "$(jq -r '.backfill.completedAt // empty' data/state/collect-state.json)" != "" ] && [ "$(jq -r '[.backfill.months[] | select(.status != "complete")] | length' data/state/collect-state.json)" = "0" ] && [ "$(jq -r '.backfill.targetMonths | length' data/state/collect-state.json)" != "0" ] && [ "$pending" = "0" ]; then
             echo "done=true" >> "$GITHUB_OUTPUT"
-            echo "Initial backfill already complete."
+            echo "Initial backfill and detail completion are already done."
           else
             echo "done=false" >> "$GITHUB_OUTPUT"
           fi
