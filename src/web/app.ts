@@ -6,6 +6,7 @@ import { orderSlides } from "../lib/slide-order.js";
 import { checkGate, type PdfGate } from "../lib/pdf-gate.js";
 import type { SlideKind } from "../lib/slide-kind.js";
 
+declare const __PDF_MERGE_V__: string;
 const app = document.getElementById("app")!;
 let items: DigestItem[] = [];
 let meta: SiteMeta;
@@ -195,7 +196,7 @@ function bindDownload(r: QueryResult, q: Query) {
       await new Promise<void>((ok, ng) => {
         if ((window as unknown as { PdfMerge?: unknown }).PdfMerge) return ok();
         const s = document.createElement("script");
-        s.src = "pdf-merge.js";
+        s.src = `pdf-merge.js?v=${__PDF_MERGE_V__}`;
         s.onload = () => ok();
         s.onerror = () => ng(new Error("script"));
         document.head.append(s);
