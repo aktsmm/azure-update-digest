@@ -1,0 +1,85 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570313"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T15:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "570313",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Arc 対応 Kubernetes の Key Vault Secrets Provider 拡張機能が 2027-10-09 に廃止",
+        "subtitleJa": "廃止後は更新・サポートなし。期限までに Secret Store Extension へ移行",
+        "en": "Retirement: Azure Key Vault Secrets Provider Extension for Azure Arc enabled Kubernetes clusters"
+      },
+      "meta": {
+        "publishedJst": "2026-10-10",
+        "availability": [{ "rawRing": "Retirement", "year": 2027, "month": "October" }],
+        "status": null,
+        "products": [],
+        "categories": ["other"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Arc 対応 Kubernetes で **Key Vault Secrets Provider 拡張機能**を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "廃止後は新機能・バグ修正・セキュリティ更新・技術サポートが提供されなくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "廃止日までに Secret Store Extension へ移行する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2027-10-09", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-10-10", "precision": "day" } },
+        { "label": "廃止", "when": { "date": "2027-10-09", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象は Azure Arc 対応 Kubernetes 向けの Secrets Provider 拡張機能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "シークレットを CSI ボリューム経由で Key Vault から取得する拡張機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider", "locator": "冒頭", "retrievedAt": "2026-10-14T15:50:00Z" }] },
+            { "text": "クラスターごとに拡張機能のインスタンスは 1 つだけデプロイ可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider", "locator": "拡張機能をインストールする", "retrievedAt": "2026-10-14T15:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure Key Vault Secret Store Extension（同等機能を提供）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "オフライン アクセス用にシークレットを Key Vault からクラスターへ自動同期する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension", "locator": "冒頭", "retrievedAt": "2026-10-14T15:50:00Z" }] },
+            { "text": "ワークロード ID フェデレーションに対応し、長期資格情報の保存が不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "移行先は Kubernetes 1.27 以降の Arc 対応クラスターが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension", "locator": "前提条件", "retrievedAt": "2026-10-14T15:50:00Z" }] },
+            { "text": "利用クラスターを棚卸しし、移行とテストの時間を期限から逆算して計画する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "secret-store-extension", "term": "Secret Store Extension", "type": "product", "oneLine": { "text": "Key Vault のシークレットをオフライン アクセス用に Arc 対応クラスターへ自動同期する拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension", "locator": "冒頭", "retrievedAt": "2026-10-14T15:50:00Z" }] } },
+        { "termKey": "secrets-provider-extension", "term": "Secrets Provider 拡張機能", "type": "product", "oneLine": { "text": "CSI ボリューム経由で Key Vault をシークレット ストアとして Kubernetes と統合する拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider", "locator": "冒頭", "retrievedAt": "2026-10-14T15:50:00Z" }] } },
+        { "termKey": "workload-identity-federation", "term": "ワークロード ID フェデレーション", "type": "term", "oneLine": { "text": "Secret Store Extension が Key Vault のシークレットへアクセスするために使う機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension", "locator": "ワークロード ID フェデレーション", "retrievedAt": "2026-10-14T15:50:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止", "type": "label", "oneLine": { "text": "廃止後は新機能・バグ修正・セキュリティ更新・技術サポートが提供されなくなること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570313",
+        "learn": [
+          { "title": "シークレット ストア拡張機能でオフライン アクセス用のシークレットをフェッチする", "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension", "locale": "ja-jp" },
+          { "title": "Key Vault シークレット プロバイダー拡張機能でシークレットをフェッチする", "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
