@@ -56,11 +56,21 @@ ul{margin:0;padding-left:20px;font-size:var(--fs);line-height:1.45}li{margin:1px
 .stamp{display:inline-flex;flex-direction:column;gap:1px;border-radius:6px;padding:3px 12px;color:#fff;font-weight:700;font-size:15px;line-height:1.25;min-width:230px;max-width:520px}
 .stamp small{font-weight:400;font-size:11.5px;opacity:.95}
 .st-g{background:#1c6bd0}.st-ok{background:#1b7f3b}.st-no{background:#c62828}
-.cover{display:flex;flex-direction:column;justify-content:center;padding:0 90px;background:linear-gradient(135deg,#0b2a4a,#124a84);color:#fff}
-.cover h1{font-size:54px;margin:0 0 10px}.cover p{font-size:22px;margin:4px 0;color:#cfe3fb}.cover .small{font-size:15px;color:#9fc0e6;margin-top:30px}
+.cover{display:flex;flex-direction:column;background:#fff;color:#243a5e}
+.cover .cv-bar{height:14px;background:linear-gradient(90deg,#0078d4 0 70%,#50e6ff 70% 85%,#243a5e 85%)}
+.cover .cv-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 96px;background:linear-gradient(120deg,#fff 0 55%,#eaf3fc 55%)}
+.cover .cv-eyebrow{font-size:22px;font-weight:600;color:#0078d4;letter-spacing:.06em;margin-bottom:12px}
+.cover h1{font-size:68px;margin:0 0 28px;color:#243a5e;line-height:1.2}
+.cover .cv-period{font-size:28px;color:#0078d4;font-weight:600}
+.cover .cv-count{font-size:26px;margin-top:14px;color:#3d4a5c}.cover .cv-count b{font-size:44px;color:#243a5e}
+.cover .cv-foot{display:flex;justify-content:space-between;padding:16px 96px;background:#243a5e;color:#e6eef9;font-size:16px}
 .plain{padding:50px 70px}.plain h2{font-size:34px;color:#0b2a4a;margin:0 0 18px}
 .toc{font-size:20px;line-height:1.9}.toc .n{display:inline-block;width:44px;color:#0b6bcb;font-weight:700}
-.end{display:flex;flex-direction:column;justify-content:center;align-items:center;background:#f3f8ff;color:#0b2a4a}.end h1{font-size:60px;margin:0}.end p{font-size:24px;color:#3d4a5c}
+.end{display:flex;flex-direction:column;background:#fff;color:#243a5e}
+.end .cv-bar{height:14px;background:linear-gradient(90deg,#0078d4 0 70%,#50e6ff 70% 85%,#243a5e 85%)}
+.end .en-body{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(120deg,#fff 0 45%,#eaf3fc 45%)}
+.end h1{font-size:64px;margin:0 0 12px;color:#243a5e}.end .en-sub{font-size:26px;color:#0078d4;font-weight:600}
+.end .en-foot{display:flex;justify-content:space-between;padding:16px 96px;background:#243a5e;color:#e6eef9;font-size:16px}
 `;
 
 interface Slide {
@@ -125,8 +135,8 @@ export interface Deck {
 }
 
 export function coverHtml(d: Deck): string {
-  const range = d.selection.mode === "period" && d.selection.period ? `${d.selection.period.start} 〜 ${d.selection.period.end}` : `選択した ${d.slides.length} 件`;
-  return `<section class="page cover"><h1>Azure アップデート情報</h1><p>${esc(range)}（JST）</p><p>${d.slides.length} 件の更新</p><div class="small">データ時点 ${esc(d.selection.snapshotAt)}（UTC） ／ 取得状態: ${esc(d.selection.coverage === "complete" ? "全件" : d.selection.coverage === "partial" ? "一部" : "未取得")}<br>出典: Microsoft Release Communications / Microsoft Learn</div></section>`;
+  const period = d.selection.mode === "period" && d.selection.period ? `<div class="cv-period">対象期間 ${esc(d.selection.period.start)} 〜 ${esc(d.selection.period.end)}</div>` : "";
+  return `<section class="page cover"><div class="cv-bar"></div><div class="cv-body"><div class="cv-eyebrow">Microsoft Azure</div><h1>Azure アップデート情報</h1>${period}<div class="cv-count"><b>${d.slides.length}</b> 件</div></div><div class="cv-foot"><span>作成日 ${esc(d.selection.snapshotAt.slice(0, 10))}（UTC）</span><span>出典: Microsoft Azure Updates ／ Microsoft Learn</span></div></section>`;
 }
 
 export function tocHtml(d: Deck): string {
@@ -136,7 +146,7 @@ export function tocHtml(d: Deck): string {
 }
 
 export function endHtml(): string {
-  return `<section class="page end"><h1>以上</h1><p>Azure アップデート情報</p></section>`;
+  return `<section class="page end"><div class="cv-bar"></div><div class="en-body"><h1>以上</h1><div class="en-sub">Azure アップデート情報</div></div><div class="en-foot"><span>Created by yamapan（GitHub: aktsmm）</span><span>出典: Microsoft Azure Updates ／ Microsoft Learn</span></div></section>`;
 }
 
 export function documentHtml(d: Deck, slidePages: string[]): string {
