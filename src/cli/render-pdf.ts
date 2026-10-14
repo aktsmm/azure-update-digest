@@ -36,7 +36,7 @@ if (!exe) throw new Error("no Chrome/Chromium found; set CHROME_PATH");
 const browser = await chromium.launch({ executablePath: exe, args: ["--no-sandbox"] });
 try {
   const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
-  const report: Record<string, { fs: number; detail: boolean; continuation: boolean; overflow: number }> = {};
+  const report: Record<string, { fs: number; sfs: number; detail: boolean; continuation: boolean; overflow: number }> = {};
   const pages: string[] = [];
 
   for (const s of slides) {

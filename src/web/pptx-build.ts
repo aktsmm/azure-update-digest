@@ -152,7 +152,7 @@ export async function buildDeckPptx(o: PptxOptions): Promise<ArrayBuffer> {
     s.addText("以上", { x: 0, y: 2.6, w: W, h: 1.0, align: "center", fontFace: FONT, fontSize: 48, bold: true, color: C.navy, margin: 0 });
     s.addText("Azure アップデート情報", { x: 0, y: 3.7, w: W, h: 0.5, align: "center", fontFace: FONT, fontSize: 20, bold: true, color: C.blue, margin: 0 });
     s.addText([
-      { text: "GitHub Actions ＋ Agentic Workflow（GitHub Copilot）で自動生成しています。改善要望は GitHub（Issue）で対応します。", options: { breakLine: true } },
+      { text: "GitHub Actions ＋ Agentic Workflow（GitHub Copilot）で生成しています。改善要望は GitHub（Issue）で対応します。", options: { breakLine: true } },
       { text: "https://github.com/aktsmm/azure-update-digest", options: { hyperlink: { url: "https://github.com/aktsmm/azure-update-digest" }, color: C.blue, underline: { style: "sng" } } },
     ], { x: 0.9, y: 5.9, w: 11.5, h: 0.65, fontFace: FONT, fontSize: 10.5, color: C.gray, margin: 0, valign: "bottom" });
   }
@@ -213,21 +213,24 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
 
   // choose the largest font that fits both columns
   const detW = (mainW - 0.2) / Math.max(1, Math.min(3, detail.length));
-  const fitFor = (pt: number) => {
-    const baH = ba ? 0.34 + Math.max(...[ba.before?.text ?? "", ba.after?.text ?? ""].map((t) => lines(t, pt, mainW / 2 - 0.65) * lineH(pt))) + 0.36 + lineH(pt - 1.5) + 0.12 : 0;
+  const mainFor = (pt: number) => {
+    const baH = ba ? 0.34 + Math.max(...[ba.before?.text ?? "", ba.after?.text ?? ""].map((t) => lines(t, pt, ba.before ? mainW / 2 - 0.65 : mainW - 0.3) * lineH(pt))) + 0.3 + lineH(pt - 1.5) + 0.02 : 0;
     const coreH = core.reduce((a, p) => a + panelHeight(p, pt, mainW) + 0.08, 0);
     const detH = detail.length ? Math.max(...detail.map((p) => panelHeight(p, pt, detW))) + 0.08 : 0;
-    const sideGl = gloss.reduce((a, g) => a + lineH(pt) * (1 + lines(g.oneLine.text, pt - 1, sideW - 0.1)) + 0.05, 0.4);
-    const sideSug = sug.reduce((a, p) => a + panelHeight(p, pt, sideW) + 0.08, 0);
-    return { total: baH + (ba ? 0.08 : 0) + coreH + detH, side: sideGl + sideSug, baH };
+    return { total: baH + (ba ? 0.08 : 0) + coreH + detH, baH };
   };
-  let pt = 9;
-  for (const cand of [15, 14.5, 14, 13.5, 13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9]) {
-    const f = fitFor(cand);
-    if (f.total <= avail && f.side <= avail) { pt = cand; break; }
-  }
-
-  const drawPanel = (p: Panel, x: number, y: number, w: number, h: number) => {
+  const sideFor = (sp: number) => {
+    const gl = gloss.length ? gloss.reduce((a, g) => a + lineH(sp) * (1 + lines(g.oneLine.text, sp - 1, sideW - 0.1)) + 0.05, 0.4) + 0.08 : 0;
+    return gl + sug.reduce((a, p) => a + panelHeight(p, sp, sideW) + 0.08, 0);
+  };
+  // the two columns are fitted independently: the main column grows while the right column keeps its own (usually smaller) size
+  const STEPS = [18, 17, 16, 15, 14.5, 14, 13.5, 13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9];
+  let pt = 9, sp = 9;
+  for (const cand of STEPS) { if (mainFor(cand).total <= avail) { pt = cand; break; } }
+  for (const cand of STEPS.filter((x) => x <= 16)) { if (sideFor(cand) <= avail) { sp = cand; break; } }
+  const fitFor = (p: number) => ({ baH: mainFor(p).baH });
+  const mainPt = pt;
+  const drawPanel = (p: Panel, x: number, y: number, w: number, h: number, pt = mainPt) => {
     const col = p.tone === "warn" ? C.red : p.tone === "sug" ? "A8710F" : "0B6BCB";
     s.addShape("roundRect", { x, y, w, h, fill: { color: p.tone === "warn" ? "FFF4F4" : p.tone === "sug" ? "FFF8E8" : C.white }, line: { color: p.tone === "warn" ? C.red : p.tone === "sug" ? "D9A441" : C.line, width: 1.25, ...(p.tone === "sug" ? { dashType: "dash" } : {}) }, rectRadius: 0.06 });
     s.addText(p.heading, { x: x + 0.1, y: y + 0.03, w: w - 0.2, h: 0.3, fontFace: FONT, fontSize: pt + 1.5, bold: true, color: col, margin: 0, valign: "middle" });
@@ -264,17 +267,17 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
   // side column: glossary then suggestion
   let sy = bodyTop;
   if (gloss.length) {
-    const gh = gloss.reduce((a, g) => a + lineH(pt) * (1 + lines(g.oneLine.text, pt - 1, sideW - 0.1)) + 0.05, 0.4);
+    const gh = gloss.reduce((a, g) => a + lineH(sp) * (1 + lines(g.oneLine.text, sp - 1, sideW - 0.1)) + 0.05, 0.4);
     s.addShape("roundRect", { x: sideX, y: sy, w: sideW, h: gh, fill: { color: "F1F7FF" }, line: { color: "7AA7D9", width: 1.25 }, rectRadius: 0.06 });
-    s.addText("用語ミニ解説", { x: sideX + 0.1, y: sy + 0.03, w: sideW - 0.2, h: 0.3, fontFace: FONT, fontSize: pt + 1.5, bold: true, color: "0B6BCB", margin: 0, valign: "middle" });
+    s.addText("用語ミニ解説", { x: sideX + 0.1, y: sy + 0.03, w: sideW - 0.2, h: 0.3, fontFace: FONT, fontSize: sp + 1.5, bold: true, color: "0B6BCB", margin: 0, valign: "middle" });
     s.addText(gloss.flatMap((g) => [
-      { text: `${g.term}`, options: { bold: true, fontSize: pt, color: C.navy } },
-      { text: `  ${TYPE_JA[g.type] ?? g.type}`, options: { fontSize: pt - 2.5, color: "1C5AA0", breakLine: true } },
-      { text: g.oneLine.text, options: { fontSize: pt - 1, color: "1F2A37", breakLine: true } },
+      { text: `${g.term}`, options: { bold: true, fontSize: sp, color: C.navy } },
+      { text: `  ${TYPE_JA[g.type] ?? g.type}`, options: { fontSize: sp - 2.5, color: "1C5AA0", breakLine: true } },
+      { text: g.oneLine.text, options: { fontSize: sp - 1, color: "1F2A37", breakLine: true } },
     ]), { x: sideX + 0.12, y: sy + 0.34, w: sideW - 0.24, h: gh - 0.38, fontFace: FONT, valign: "top", margin: 0, paraSpaceAfter: 2, fit: "shrink" });
     sy += gh + 0.08;
   }
-  for (const p of sug) { const h = Math.min(panelHeight(p, pt, sideW), footerTop - sy - 0.05); drawPanel(p, sideX, sy, sideW, h); sy += h + 0.08; }
+  for (const p of sug) { const h = Math.min(panelHeight(p, sp, sideW), footerTop - sy - 0.05); drawPanel(p, sideX, sy, sideW, h, sp); sy += h + 0.08; }
 
   // footer: links, meta, region stamp
   s.addShape("line", { x: M, y: footerTop + 0.02, w: W - 2 * M, h: 0, line: { color: "DDE3EC", width: 0.75 } });
