@@ -29,6 +29,7 @@ if (files.length) {
   try {
     const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
     for (const f of files) {
+     try {
       const deck = JSON.parse(readFileSync(`${dir}/${f}`, "utf8"));
       const problems = validateDeck(deck);
       if (problems.length) throw new Error(`${f} is invalid: ${problems[0]!.message}`);
@@ -42,6 +43,10 @@ if (files.length) {
       const path = `${out}/pdf/${s.key}.pdf`;
       await page.pdf({ path, width: "1280px", height: "720px", printBackground: true, preferCSSPageSize: true });
       entries.push({ key: s.key, kind: s.kind, label: s.label, title: s.title.ja, publishedJst: s.meta.publishedJst, categories: s.meta.categories, pages: fit.pages.length, bytes: statSync(path).size });
+     } catch (e) {
+      // a bad slide must never block the whole site deploy
+      console.error(`::warning::skipping ${f}: ${(e as Error).message}`);
+     }
     }
   } finally {
     await browser.close();

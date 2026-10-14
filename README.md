@@ -31,6 +31,9 @@ dist/             サイト。data/ から常に再生成可能                 
 | `collect-daily.yml` | 日次収集（`modified` ベースの sweep）＋詳細補完、公開 | 毎日 21:00 UTC = **06:00 JST** |
 | `backfill.yml` | 初期バックフィル（直近 12 ヶ月）。完了後は no-op | 2 時間ごと（毎偶数時 :17 UTC） |
 | `summarize.md` (`.lock.yml`) | **GitHub Agentic Workflow**。日本語要約と Learn 関連資料を生成し PR を作成 | 6 時間ごと（:37 UTC） |
+| `slide-dispatch.yml` | 直近 3 か月でスライド未作成の更新を新しい順に最大 30 件、`slide.md` に 1 件ずつ起動（作成済みはスキップ） | 毎週月・木 **03:00 JST**（日・水 18:00 UTC） |
+| `slide.md` (`.lock.yml`) | **GitHub Agentic Workflow**。1 更新 1 枚のスライド JSON を生成し PR を作成。PDF も成果物として生成 | 手動（`id`）／ dispatch から |
+| `auto-merge-slides.yml` | スライド PR を検証（スキーマ・禁止語・PDF 描画）して自動マージ → 公開 | スライド生成完了時 / 3 時間ごと（:23 UTC） |
 | `pages.yml` | validate → build → GitHub Pages 公開（失敗時は既存公開物を維持） | 呼び出し / data 等の push |
 | `ci.yml` | typecheck / test / validate / build | PR |
 
@@ -45,6 +48,11 @@ dist/             サイト。data/ から常に再生成可能                 
 - 原文 fingerprint が変わった項目だけ再生成します（`sourceFingerprint` 照合）。
 - 出力は `npm run validate` が検査します（長さ、日本語、URL 混入、原文の逐語コピー、関連資料の host・ja-jp・最大 3 件など）。
 - **必要な設定**: リポジトリ Secret `COPILOT_GITHUB_TOKEN`（Copilot Requests 権限の PAT）と、リポジトリ設定「Actions に PR の作成・承認を許可」。ワークフロー変更後は `gh aw compile` で `.lock.yml` を更新します。要約の PR は `auto-merge-summaries.yml` が自動でマージします（データ以外のファイルを含まず、`npm run validate` を通ったものだけ）。
+
+### スライドと API
+
+- スライド JSON は Git、PDF はデプロイ時に生成（Git には入れない）。公開は**直近 3 か月**。サイトのボタンで、選んだ範囲の JSON と PDF（表紙・目次・概要付き）をブラウザ内で作成します。詳細は [スライドスキーマ](docs/slide-schema.md)。
+- 静的 JSON API: [docs/api.md](docs/api.md)（`api/v1/`）。
 
 ## 取得の考え方
 

@@ -51,6 +51,7 @@ jobs:
           mkdir -p dist/fonts
           curl -L --fail -o NotoSansJP-VF.ttf "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf"
           python scripts/make-font.py NotoSansJP-VF.ttf dist/fonts/NotoSansJP.ttf
+          npm run build:api
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
