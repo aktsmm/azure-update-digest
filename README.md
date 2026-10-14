@@ -43,7 +43,7 @@ dist/             サイト。data/ から常に再生成可能                 
 - 生成方式: **CI（Agentic Workflow）**。未生成・失敗でも収集と公開は止まらず、サイトは「要約未生成」と表示します。
 - 原文 fingerprint が変わった項目だけ再生成します（`sourceFingerprint` 照合）。
 - 出力は `npm run validate` が検査します（長さ、日本語、URL 混入、原文の逐語コピー、関連資料の host・ja-jp・最大 3 件など）。
-- **必要な設定**: リポジトリ Secret `COPILOT_GITHUB_TOKEN`（Copilot Requests 権限の PAT）と、リポジトリ設定「Actions に PR の作成・承認を許可」。ワークフロー変更後は `gh aw compile` で `.lock.yml` を更新します。要約の PR は手動マージです。
+- **必要な設定**: リポジトリ Secret `COPILOT_GITHUB_TOKEN`（Copilot Requests 権限の PAT）と、リポジトリ設定「Actions に PR の作成・承認を許可」。ワークフロー変更後は `gh aw compile` で `.lock.yml` を更新します。要約の PR は `auto-merge-summaries.yml` が自動でマージします（データ以外のファイルを含まず、`npm run validate` を通ったものだけ）。
 
 ## 取得の考え方
 
