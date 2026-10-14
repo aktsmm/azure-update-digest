@@ -1,0 +1,96 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569236"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T19:45:00Z"
+  },
+  "slides": [
+    {
+      "key": "569236",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Always Encrypted の Intel SGX エンクレーブが 2027-10-31 に廃止",
+        "subtitleJa": "DC シリーズの段階的廃止に伴い終了。期限までに VBS エンクレーブへ移行",
+        "en": "Retirement: Always Encrypted with Intel SGX Enclaves"
+      },
+      "meta": {
+        "publishedJst": "2026-10-07",
+        "availability": [{ "rawRing": "Retirement", "year": 2027, "month": "October" }],
+        "status": null,
+        "products": ["Azure SQL Database"],
+        "categories": ["databases"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Azure SQL Database の DC シリーズで **Intel SGX エンクレーブ**付き Always Encrypted を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "廃止後は SGX エンクレーブの機能が使えなくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "DC シリーズから標準シリーズへ移行し、VBS エンクレーブを有効化する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2027-10-31", "precision": "day" }
+      },
+      "beforeAfter": {
+        "before": { "text": "DC シリーズのハードウェアで Intel SGX エンクレーブを使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locator": "Intel SGX エンクレーブ タブ", "retrievedAt": "2026-10-14T19:45:00Z" }] },
+        "after": { "text": "2027-10-31 以降、DC シリーズに残る DB は標準シリーズへ自動移行され VBS エンクレーブが有効になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locator": "重要", "retrievedAt": "2026-10-14T19:45:00Z" }] }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-10-07", "precision": "day" } },
+        { "label": "廃止", "when": { "date": "2027-10-31", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "DC シリーズ ハードウェアの段階的廃止に伴い、SGX エンクレーブは廃止される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "SGX は DC シリーズ以外（Gen5 など）や DTU モデルでは使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locator": "Intel SGX エンクレーブ タブ（注）", "retrievedAt": "2026-10-14T19:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ハードウェア非依存の VBS エンクレーブ（構成証明は不要）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "代替案として SQL Server on Confidential VMs も検討できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "preferredEnclaveType を VBS に設定して有効化する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locator": "VBS エンクレーブ タブ", "retrievedAt": "2026-10-14T19:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "標準シリーズ（非 DC）へ移行し、クライアント ドライバーを VBS 対応版へ更新する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "接続文字列から SGX 構成証明の指定を外し、VBS エンクレーブ モードにする", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to", "heading": "VBS の有効化方法", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure portal・SSMS・Azure PowerShell・Azure CLI で設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locator": "VBS エンクレーブ タブ", "retrievedAt": "2026-10-14T19:45:00Z" }] },
+            { "text": "エラスティック プール内の DB はプールの設定を継承する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locator": "VBS エンクレーブ タブ", "retrievedAt": "2026-10-14T19:45:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "always-encrypted-enclaves", "term": "セキュアなエンクレーブ付き Always Encrypted", "type": "feature", "oneLine": { "text": "Intel SGX または VBS のエンクレーブを使える Always Encrypted の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locator": "冒頭", "retrievedAt": "2026-10-14T19:45:00Z" }] } },
+        { "termKey": "intel-sgx", "term": "Intel SGX エンクレーブ", "type": "term", "oneLine": { "text": "DC シリーズのハードウェアが必要となる、エンクレーブの種類。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locator": "Intel SGX エンクレーブ タブ", "retrievedAt": "2026-10-14T19:45:00Z" }] } },
+        { "termKey": "vbs", "term": "VBS エンクレーブ", "type": "term", "oneLine": { "text": "仮想化ベースのセキュリティを使うエンクレーブ。既定では無効で、設定で有効にする。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locator": "VBS エンクレーブ タブ", "retrievedAt": "2026-10-14T19:45:00Z" }] } },
+        { "termKey": "dc-series", "term": "DC シリーズ", "type": "term", "oneLine": { "text": "Intel SGX の利用に必要な、仮想コア モデルのハードウェア構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locator": "Intel SGX エンクレーブ タブ", "retrievedAt": "2026-10-14T19:45:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止（Retirement）", "type": "label", "oneLine": { "text": "機能が提供されなくなり、サポートや更新も終了する最終段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Retirement", "retrievedAt": "2026-10-14T19:45:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569236",
+        "learn": [
+          { "title": "セキュアなエンクレーブ付き Always Encrypted を有効にする", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locale": "ja-jp" },
+          { "title": "チュートリアル: VBS エンクレーブ付き Always Encrypted を使い始める", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-getting-started-vbs", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
