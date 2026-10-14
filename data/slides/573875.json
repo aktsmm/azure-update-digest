@@ -1,0 +1,92 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573875"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T15:05:00Z"
+  },
+  "slides": [
+    {
+      "key": "573875",
+      "kind": "announcement",
+      "kindSource": "tags",
+      "label": "アナウンス",
+      "title": {
+        "ja": "Fabric の検索で、テーブルが個別の結果として表示される",
+        "subtitleJa": "2026-10-15 から、セマンティック モデル等のテーブルが検索結果に個別表示",
+        "en": "Announcing: Table discovery in OneLake Catalog search"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "October" }],
+        "status": null,
+        "products": ["Microsoft Fabric"],
+        "categories": ["other"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Fabric の利用者・管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "検索でテーブルが見つかる。見える範囲は親アイテムの権限で決まる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者はテナント設定「Users can find objects in search」（既定で有効）を確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2026-10-15", "precision": "day" }
+      },
+      "beforeAfter": {
+        "before": { "text": "探索タブには、レイクハウスやミラー化アイテムなどが「アイテム」として一覧表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/governance/onelake-catalog-explore", "locator": "[探索] タブを開く", "retrievedAt": "2026-10-14T15:05:00Z" }] },
+        "after": { "text": "アイテム内のテーブルが個別の結果になり、テーブル名・説明、列名の完全一致でも探せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "適用範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象：セマンティック モデル、レイクハウス、ミラー化データベースのテーブル", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Fabric のグローバル検索、OneLake カタログ UI、Search API が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "MCP サーバーの検索、Fabric CLI の /find、discovery スキルも対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "permissions", "heading": "知っておくべき点（権限）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "表示は親アイテムの権限で決まり、Read 以上で全テーブルを発見できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "検索はデータへのアクセスを与えず、既存のアクセス制御は変わらない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "オブジェクト レベル セキュリティ付きモデルのテーブルは除外", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "見つかって困るテーブルがないか、親アイテムの権限設計を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "準備ができていなければ、設定を無効化し利用者へ周知する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-fabric", "term": "Microsoft Fabric", "type": "product", "oneLine": { "text": "データの取り込みから分析・レポートまでを支える、SaaS の分析プラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/fundamentals/microsoft-fabric-overview", "locator": "冒頭", "retrievedAt": "2026-10-14T15:05:00Z" }] } },
+        { "termKey": "onelake", "term": "OneLake", "type": "feature", "oneLine": { "text": "Fabric のすべてのワークロードが使う、組織全体の論理データ レイク。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/fundamentals/microsoft-fabric-overview", "locator": "OneLake: The unification of lakehouses", "retrievedAt": "2026-10-14T15:05:00Z" }] } },
+        { "termKey": "onelake-catalog", "term": "OneLake カタログ", "type": "feature", "oneLine": { "text": "必要な Fabric アイテムを検索・探索して使うための場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/governance/onelake-catalog-explore", "locator": "冒頭", "retrievedAt": "2026-10-14T15:05:00Z" }] } },
+        { "termKey": "lakehouse", "term": "レイクハウス", "type": "term", "oneLine": { "text": "データ レイクの拡張性と、ウェアハウスのクエリ機能を組み合わせた Fabric のアイテム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/data-engineering/lakehouse-overview", "locator": "冒頭", "retrievedAt": "2026-10-14T15:05:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "OneLake は、リージョンをまたぐテナント全体の単一データ レイク",
+        "evidence": [{ "url": "https://learn.microsoft.com/fabric/fundamentals/microsoft-fabric-overview", "locator": "OneLake and lakehouse data hierarchy", "retrievedAt": "2026-10-14T15:05:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573875",
+        "learn": [
+          { "title": "OneLake カタログでデータを検索および探索する", "url": "https://learn.microsoft.com/ja-jp/fabric/governance/onelake-catalog-explore", "locale": "ja-jp" },
+          { "title": "OneLake カタログの概要", "url": "https://learn.microsoft.com/ja-jp/fabric/governance/onelake-catalog-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
