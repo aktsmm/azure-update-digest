@@ -37,7 +37,7 @@ dist/             サイト・API・PDF。data/ から常に再生成可能     
 | `auto-merge-slides.yml` | スライド PR を検証（スキーマ・禁止語・PDF 描画）して自動マージ → 公開 | スライド生成完了時 / 3 時間ごと（:23 UTC） |
 | `maintain.md` (`.lock.yml`) | **自己修復の Agentic Workflow**（モデルは `auto`）。決定的な健康チェック（`npm run health`）の結果を読み、コード・設定・テスト・ドキュメントの不具合は PR で直し、直せないもの（ワークフロー定義・Secret・設定）は Issue にまとめる。PR は、許可した範囲（`src` / `tests` / `config` / `schema` / `docs` / `scripts` / README、400 行以内、削除なし）で検査に通れば `auto-merge-maintenance.yml` が自動マージ | 隔週: 毎月 2 日・16 日 **03:17 JST**（1 日・15 日 18:17 UTC）／手動 |
 | `auto-merge-maintenance.yml` | 保守 PR の自動マージ。PR のコードは読み取り専用のジョブで検査し（型・テスト・検証）、書き込み権限のジョブは検査した SHA を指定してマージするだけ | 保守完了時 / 6 時間ごと（:29 UTC）/ 手動（`dry_run`） |
-| `watchdog.yml` | AI なし。40 分を超えて固まったエージェント実行を取り消し、失敗した Pages デプロイを 1 回だけ再実行 | 30 分ごと |
+| `watchdog.yml` | AI なし。40 分を超えて固まったエージェント実行を取り消し、失敗した Pages デプロイを 1 回だけ再実行 | 毎日 05:41 JST（20:41 UTC。実行は遅れることがある） |
 | `pages.yml` | validate → build → GitHub Pages 公開（失敗時は既存公開物を維持） | 呼び出し / data 等の push |
 | `ci.yml` | typecheck / test / validate / build | PR |
 
