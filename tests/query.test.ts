@@ -8,7 +8,7 @@ const cats = JSON.parse(readFileSync("config/categories.json", "utf8"));
 const imp = JSON.parse(readFileSync("config/importance.json", "utf8"));
 
 const item = (key: string, createdJst: string, over: Partial<DigestItem> = {}): DigestItem => ({
-  key, id: key, title: `t${key}`, createdJst, modifiedJst: createdJst, status: null, tags: [], products: [], productCategories: [], categories: ["compute"],
+  key, id: key, title: `t${key}`, titleJa: null, createdJst, modifiedJst: createdJst, status: null, tags: [], products: [], productCategories: [], categories: ["compute"],
   importance: { level: "normal", score: 0, topics: [] }, availabilities: [], availabilityDates: { general: null, preview: null, privatePreview: null },
   sourceUrl: "https://azure.microsoft.com/updates?id=" + key, summary: { state: "missing", text: null }, related: { status: "uninvestigated", items: [] }, fingerprint: "f", detailState: "ok", ...over,
 });

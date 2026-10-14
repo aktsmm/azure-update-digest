@@ -21,6 +21,14 @@ for (const [k, s] of summaries) {
   if (!it) { err(`summary ${k}: no such item`); continue; }
   if (s.schema !== 1 || s.canonicalKey !== k) err(`summary ${k}: bad schema/key`);
   if (!/^[0-9a-f]{64}$/.test(s.sourceFingerprint)) err(`summary ${k}: bad sourceFingerprint`);
+  const tj = s.titleJa;
+  if (tj !== undefined) {
+    if (typeof tj !== "string" || tj.length < 8 || tj.length > 70) err(`summary ${k}: titleJa length out of 8..70`);
+    else if (!/[\u3040-\u30ff\u4e00-\u9fff]/.test(tj)) err(`summary ${k}: titleJa not Japanese`);
+    else if (/https?:\/\//i.test(tj) || /[\r\n]/.test(tj)) err(`summary ${k}: titleJa has URL/newline`);
+    else if (/(。|です|ます|ました|ください|でしょう)$/.test(tj)) err(`summary ${k}: titleJa must end as a noun phrase (体言止め)`);
+    else if (tj === it.title) err(`summary ${k}: titleJa equals the English title`);
+  }
   const t = s.summaryJa ?? "";
   if (t.length < 20 || t.length > 600) err(`summary ${k}: length ${t.length} out of 20..600`);
   if (!/[\u3040-\u30ff\u4e00-\u9fff]/.test(t)) err(`summary ${k}: not Japanese`);
