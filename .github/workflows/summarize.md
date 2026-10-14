@@ -37,7 +37,7 @@ steps:
   - name: Install and list pending items
     run: |
       npm ci
-      npm run pending -- --limit 30
+      npm run pending -- --limit 50
 safe-outputs:
   create-pull-request:
     title-prefix: "[summaries] "
