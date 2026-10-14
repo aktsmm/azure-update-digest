@@ -135,7 +135,7 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
   g.text(end, "以上", (W - w) / 2, 250, 64, NAVY, true);
   const s2 = "Azure アップデート情報";
   g.text(end, s2, (W - g.width(s2, 26)) / 2, 340, 26, BLUE, true);
-  const note = "GitHub Actions ＋ Agentic Workflow（GitHub Copilot）で自動生成しています。改善要望は GitHub（Issue）で対応します。";
+  const note = "GitHub Actions ＋ Agentic Workflow（GitHub Copilot）で生成しています。改善要望は GitHub（Issue）で対応します。";
   g.text(end, note, 96, 590, 14, GRAY);
   const repo = REPO_URL;
   const rw = g.width(repo, 14);
