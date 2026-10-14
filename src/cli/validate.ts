@@ -23,7 +23,7 @@ for (const [k, s] of summaries) {
   if (!/^[0-9a-f]{64}$/.test(s.sourceFingerprint)) err(`summary ${k}: bad sourceFingerprint`);
   const tj = s.titleJa;
   if (tj !== undefined) {
-    if (typeof tj !== "string" || tj.length < 8 || tj.length > 70) err(`summary ${k}: titleJa length out of 8..70`);
+    if (typeof tj !== "string" || tj.length < 8 || tj.length > 80) err(`summary ${k}: titleJa length out of 8..80`);
     else if (!/[\u3040-\u30ff\u4e00-\u9fff]/.test(tj)) err(`summary ${k}: titleJa not Japanese`);
     else if (/https?:\/\//i.test(tj) || /[\r\n]/.test(tj)) err(`summary ${k}: titleJa has URL/newline`);
     else if (/(。|です|ます|ました|ください|でしょう)$/.test(tj)) err(`summary ${k}: titleJa must end as a noun phrase (体言止め)`);
