@@ -4,6 +4,8 @@ Azure の更新情報（[Microsoft Release Communications](https://www.microsoft
 
 - 今回の範囲: 収集 / 保存 / 正規化 / 日本語要約 / 一覧・検索・絞り込み・アーカイブ / 定期更新
 - 対象外: PowerPoint・PDF 生成、月次ジョブ、M365 Roadmap（MRC が使えない場合は失敗として明示し、別ソースへ置換しません）
+- 公開サイト: https://aktsmm.github.io/azure-update-digest/
+- 設計・方式の詳細: **[docs/design.md](docs/design.md)**（データ層、取得方式、期間・日付、分類・重要度、要約・関連資料、権限、受け入れ条件、運用上の注意）
 
 ## 構成（4 層）
 
@@ -36,12 +38,12 @@ dist/             サイト。data/ から常に再生成可能                 
 
 ### 要約・関連資料（Agentic Workflow）
 
-`summarize.md` は Copilot エンジンで動き、MCP サーバー `mrc`（`get_azure_update_by_id`）と `microsoft-learn`（`microsoft_docs_search` / `microsoft_docs_fetch`）だけを使います。書き込みは safe-output の `create-pull-request` 経由のみで、エージェント自身は読み取り権限です。
+`summarize.md` は Copilot エンジンで動き、MCP サーバーは `microsoft-learn`（`microsoft_docs_search` / `microsoft_docs_fetch`）だけを使います。更新の本文は事前に `npm run pending` が作る `.work/pending.json` で渡すため、MRC への接続は不要です。書き込みは safe-output の `create-pull-request` 経由のみで、エージェント自身は読み取り権限です。
 
 - 生成方式: **CI（Agentic Workflow）**。未生成・失敗でも収集と公開は止まらず、サイトは「要約未生成」と表示します。
 - 原文 fingerprint が変わった項目だけ再生成します（`sourceFingerprint` 照合）。
 - 出力は `npm run validate` が検査します（長さ、日本語、URL 混入、原文の逐語コピー、関連資料の host・ja-jp・最大 3 件など）。
-- **必要な設定**: リポジトリ Secret `COPILOT_GITHUB_TOKEN`（Copilot 利用権限のある PAT）。ワークフロー変更後は `gh aw compile` で `.lock.yml` を更新します。
+- **必要な設定**: リポジトリ Secret `COPILOT_GITHUB_TOKEN`（Copilot Requests 権限の PAT）と、リポジトリ設定「Actions に PR の作成・承認を許可」。ワークフロー変更後は `gh aw compile` で `.lock.yml` を更新します。要約の PR は手動マージです。
 
 ## 取得の考え方
 
