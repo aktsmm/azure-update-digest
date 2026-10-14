@@ -206,6 +206,8 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 | `slide-dispatch.yml` | スライド未作成の更新（直近 3 か月・新しい順・最大 30 件）を 1 件ずつ起動 | 月・木 03:00 JST（日・水 18:00 UTC） | `actions: write` |
 | `slide.lock.yml` | スライド JSON 生成 → PR（PDF は成果物） | 手動 / dispatch | 読み取り + safe-output |
 | `auto-merge-slides.yml` | スライド PR の検証（1 ファイルのみ・スキーマ・PDF 描画）と自動マージ → 公開 | 生成完了時 / 3 時間ごと（:23 UTC） | `contents: write`, `pull-requests: write` |
+| `maintain.lock.yml` | 隔週の自己修復: 健康チェックを読み、不具合を PR で修正／直せないものを Issue で報告（`.github/` の変更・Secret・モデル・権限は触らない） | 毎月 2・16 日 03:17 JST / 手動 | 読み取り + safe-output |
+| `watchdog.yml` | 固まったエージェント実行の取り消しと、失敗したデプロイの 1 回再実行（AI なし） | 30 分ごと | `actions: write` |
 | `pages.yml` | validate → build → GitHub Pages 公開 | 呼び出し / `data/**` 等の push / 手動 | `pages: write`, `id-token: write` |
 | `ci.yml` | typecheck / test / validate / build | PR | `contents: read` |
 
@@ -247,6 +249,9 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 - **再利用ワークフローには `secrets: inherit` が必要**: `pages.yml` を `uses:` で呼ぶ全ワークフローに付けています（`PDF_PASSWORD` が渡らないと PDF が公開されません）。
 - **文字サイズの自動調整**: スライドの本文は、収まる最大のサイズを選びます（PDF: 12.5〜26px、左の本文列と右列は別々に決定。PPTX: 9〜18pt）。余白が多いスライドほど大きく表示されます。
 - **PDF 結合の注意**: Chrome は 1280×720 px を 960×540 pt で書き出すため、結合時の追加ページも同じサイズに揃えます。pdf-lib は可変フォントのサブセット化で字形が欠けるため、静的インスタンス化＋JIS・Latin-1 のサブセット（`scripts/make-font.py`）を使い、GSUB/GPOS は外します。
+
+- **詰まった実行**: ランナーが「Checkout」で止まった実行が、直列のスライド生成キューを数時間止めたことがありました。`watchdog.yml` が 40 分超の実行を取り消し（効かなければ force-cancel）、キューを進めます。
+- **健康チェック**: `npm run health` が `.work/health.json`（ワークフローの 14 日間の成否、詰まった実行、開いている PR、データの鮮度と未処理件数、公開サイトの応答、PDF のパスワード設定、`flags[]`）を作ります。隔週の `maintain.md` と、人の確認の両方で使います。
 
 ## 14. 検証と受け入れ条件
 

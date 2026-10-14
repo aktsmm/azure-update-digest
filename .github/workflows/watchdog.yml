@@ -1,0 +1,51 @@
+name: Watchdog
+
+# No AI. Keeps the pipeline moving when GitHub itself gets stuck:
+#  - cancels agent runs that hang (a run stuck in "Checkout" once blocked the serialized slide queue for hours)
+#  - re-runs the latest Pages deploy once when it failed (deploys collide when two finish close together)
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: watchdog
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Cancel hung agent runs
+        run: |
+          limit=$(date -u -d '40 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
+          for wf in slide.lock.yml summarize.lock.yml; do
+            for id in $(gh run list --workflow "$wf" --status in_progress --limit 20 --json databaseId,startedAt \
+                -q ".[] | select(.startedAt < \"$limit\") | .databaseId"); do
+              echo "cancel $wf #$id (running > 40 min)"
+              gh run cancel "$id" || true
+              sleep 60
+              if [ "$(gh run view "$id" --json status -q .status)" != "completed" ]; then
+                gh api -X POST "repos/$GH_REPO/actions/runs/$id/force-cancel" || true
+              fi
+            done
+          done
+      - name: Re-run a failed Pages deploy once
+        run: |
+          read -r id attempt concl created < <(gh run list --workflow pages.yml --limit 1 --json databaseId,attempt,conclusion,createdAt \
+            -q '.[0] | "\(.databaseId) \(.attempt) \(.conclusion) \(.createdAt)"')
+          age=$(( $(date +%s) - $(date -d "$created" +%s) ))
+          if [ "$concl" = "failure" ] && [ "$attempt" = "1" ] && [ "$age" -lt 7200 ]; then
+            echo "re-running deploy #$id"
+            gh run rerun "$id" --failed
+          else
+            echo "deploy ok or already retried ($concl, attempt $attempt)"
+          fi
