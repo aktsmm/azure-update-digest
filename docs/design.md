@@ -177,7 +177,7 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 
 - Secret `COPILOT_GITHUB_TOKEN`（Copilot Requests 権限を付けた fine-grained PAT）。
 - リポジトリ設定「Actions に PR の作成・承認を許可」をオンにします（オフだと safe-output が PR を作れず、Issue にフォールバックします）。
-- 要約の PR は自動マージしていません。マージして初めてサイトに反映されます。
+- 要約の PR は `auto-merge-summaries.yml` が自動でマージします。条件は、PR のブランチが `summaries/` で始まりラベル `data` が付いていること、変更が `data/summaries/*.json` と `data/related/*.json` だけであること、main の信頼済みコードで `npm run validate` が通ること。条件を外れた PR はマージされず、そのまま残ります。マージ後は Pages を再デプロイします（`GITHUB_TOKEN` のマージは push トリガを起動しないため、同じワークフロー内で `pages.yml` を呼びます）。
 
 ## 9. サイト
 
@@ -197,6 +197,7 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 | `collect-daily.yml` | 日次 sweep + 詳細補完 → commit → 公開 | 毎日 21:00 UTC（06:00 JST） | `contents: write`（収集ジョブのみ） |
 | `backfill.yml` | 初期バックフィル（完了後は no-op） | 2 時間ごと（:17 UTC）/ 手動 | `contents: write`（収集ジョブのみ） |
 | `summarize.lock.yml` | 要約・関連資料の生成 → PR | 6 時間ごと（:37 UTC）/ 手動 | 読み取り + safe-output ジョブ |
+| `auto-merge-summaries.yml` | 要約 PR の検証と自動マージ → 公開 | 要約完了時 / 3 時間ごと（:47 UTC）/ 手動 | `contents: write`, `pull-requests: write` |
 | `pages.yml` | validate → build → GitHub Pages 公開 | 呼び出し / `data/**` 等の push / 手動 | `pages: write`, `id-token: write` |
 | `ci.yml` | typecheck / test / validate / build | PR | `contents: read` |
 
@@ -214,7 +215,7 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 | 出典 | Microsoft Release Communications（フッターに明記） |
 | ライセンス | コードは MIT（`LICENSE`）。データの扱いは `NOTICE` |
 
-`data/raw/` の公開を避けたい場合は、raw を別の非公開ストアへ移す運用に変更してください（要約・サイトの再生成には raw が必要です）。
+`data/raw/` の公開を避けたい場合は、raw を別の非公開ストアへ移す運用に変更してください（要約・サイトの再生成には raw が必要です）。**現時点の方針は、raw を公開リポジトリに置いたまま**です（出典明記。サイトには description 全文を出さない）。
 
 ## 12. MRC で実データから確認した事実
 
@@ -252,6 +253,6 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 ## 15. 既知の制約と今後
 
 - 原文 URL の実在確認は自動化できません（9 章）。
-- 要約は 6 時間ごとに 20 件ずつ処理するため、バックフィル分の完了には時間がかかります。件数・頻度は `summarize.md` で調整できます。
-- 要約の PR は手動マージです（自動マージ化は未決定）。
+- 要約は 6 時間ごとに 30 件ずつ処理するため、バックフィル分の完了には時間がかかります（日次収集後は新着分のみ）。件数・頻度は `summarize.md` で調整できます。
+- 自動マージ PR の CI が、ジョブ 0 件のまま失敗扱いになることがありました（ワークフロー定義の問題ではなく起動時の一時的なもの）。自動マージは CI に依存せず独自に検証するため、影響はありません。
 - **将来**: PowerPoint / PDF 化。`DigestItem` と `runQuery` の結果（期間・フィルター条件・対象 ID・要約・URL・取得状態・`snapshotAt`）をそのまま再利用できる構造にしてあります。今回は実装していません。
