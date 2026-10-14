@@ -1,0 +1,251 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573861"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T14:52:47Z"
+  },
+  "slides": [
+    {
+      "key": "573861",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Application Gateway WAF が IPv6 トラフィックを検査",
+        "subtitleJa": "デュアルスタックで IPv4 と同じ保護を適用（パブリック プレビュー）",
+        "en": "Public Preview: IPv6 Support for Application Gateway WAF"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "October" }],
+        "status": "In preview",
+        "products": ["Application Gateway", "Web Application Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": {
+          "text": "IPv6 を使う／検討している **Application Gateway v2 の利用者**",
+          "origin": "mrc",
+          "assertion": "inference",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "IPv6 環境でも WAF の保護を使える（評価向け）",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "評価向け。プレビューの追加利用規約が適用される",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6",
+              "locator": "Important",
+              "retrievedAt": "2026-10-14T14:52:47Z"
+            }
+          ]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "デュアルスタックのアプリで、IPv4 と IPv6 の両方に同じセキュリティ制御（マネージド ルールセット・カスタム ルール・診断）を適用できる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "登録不要: マネージド ルールセットでの IPv6 検査、IPv6 アドレス・範囲のカスタム ルール、ログ・診断",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6",
+                  "locator": "機能登録が必要な場合",
+                  "retrievedAt": "2026-10-14T14:52:47Z"
+                }
+              ]
+            },
+            {
+              "text": "登録が必要: IPv6 の地域（ジオ）ベース カスタム ルール（AllowAppGwWafIpv6Geo）",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6",
+                  "locator": "機能を登録する",
+                  "retrievedAt": "2026-10-14T14:52:47Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "デュアルスタック必須。IPv6 専用のゲートウェイは未対応",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6",
+                  "locator": "IPv6ジオベースのカスタムルールを有効にするワークフロー",
+                  "retrievedAt": "2026-10-14T14:52:47Z"
+                }
+              ]
+            },
+            {
+              "text": "既存の IPv4 専用ゲートウェイは変換不可（新規作成が必要）",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/ipv6-application-gateway-portal",
+                  "locator": "冒頭",
+                  "retrievedAt": "2026-10-14T14:52:47Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ga-timing",
+          "heading": "GA の時期",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "IPv6 を使う予定か、デュアルスタック化できるかを確認し、まず検証環境で挙動を確認する",
+              "origin": "editorial",
+              "assertion": "recommendation",
+              "verification": "unverified"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "application-gateway",
+          "term": "Application Gateway",
+          "type": "product",
+          "oneLine": {
+            "text": "Web アプリへの通信を管理する、Web トラフィック用のロード バランサー。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/azure/application-gateway/overview",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-14T14:52:47Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "dual-stack",
+          "term": "デュアルスタック",
+          "type": "term",
+          "oneLine": {
+            "text": "IPv4 と IPv6 の両方のフロントエンド接続を受け付ける構成。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/ipv6-application-gateway-portal",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-14T14:52:47Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "preview-feature-registration",
+          "term": "プレビュー機能の登録",
+          "type": "term",
+          "oneLine": {
+            "text": "サブスクリプションに機能を登録して、プレビュー機能を使えるようにすること。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6",
+                "locator": "機能を登録する",
+                "retrievedAt": "2026-10-14T14:52:47Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-preview",
+          "term": "Preview（プレビュー）",
+          "type": "label",
+          "oneLine": {
+            "text": "GA の前に、評価とフィードバックのために全ユーザーへ提供される段階。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure",
+                "locator": "Public preview",
+                "retrievedAt": "2026-10-14T14:52:47Z"
+              }
+            ]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573861",
+        "learn": [
+          {
+            "title": "IPv6 ジオベースカスタムルール for Azure Web Application Firewall(プレビュー版)",
+            "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6",
+            "locale": "ja-jp"
+          },
+          {
+            "title": "Azure portal を使用してフロントエンド パブリック IPv6 アドレスを使用して Application Gateway を構成する",
+            "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/ipv6-application-gateway-portal",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
