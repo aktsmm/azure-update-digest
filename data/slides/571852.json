@@ -1,0 +1,137 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571852"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T22:45:00Z"
+  },
+  "slides": [
+    {
+      "key": "571852",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "SSMS の「データベース DevOps」が一般提供（GA）に",
+        "subtitleJa": "Microsoft.Build.Sql プロジェクトで、データベースの変更を実装・管理し CI/CD に組み込めます",
+        "en": "Generally Available: Database DevOps in SSMS powered by SQL projects"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "SSMS でデータベース開発をしている**データベース開発者・DBA、CI/CD を整えたいチーム**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "スキーマをローカルで定義し、使い慣れた CI/CD の流れに乗せられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "スキーマ管理を CI/CD 化したい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "テーブルやストアド プロシージャなどのスキーマを、ローカルの SQL プロジェクトとして定義する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops", "locator": "冒頭", "retrievedAt": "2026-10-14T22:45:00Z" }]
+            },
+            {
+              "text": "ビルドで参照関係と構文を検証し、.dacpac を生成する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops", "locator": "プロジェクトのビルド", "retrievedAt": "2026-10-14T22:45:00Z" }]
+            },
+            {
+              "text": "発行で .dacpac と対象 DB の差分から CREATE / ALTER / DROP を生成して反映する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops", "locator": "変更をデプロイする", "retrievedAt": "2026-10-14T22:45:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方（SSMS）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "既存 DB は SqlPackage の Extract で .sql ファイルに抽出し、プロジェクト フォルダーへコピーする",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops", "locator": "既存のデータベースからオブジェクトを追加する", "retrievedAt": "2026-10-14T22:45:00Z" }]
+            },
+            {
+              "text": "ソリューション エクスプローラーで右クリック →［ビルド］→［発行］（［スクリプトを生成］で事前確認可）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops", "locator": "変更をデプロイする", "retrievedAt": "2026-10-14T22:45:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": ".NET SDK、SSMS、SSMS の Database DevOps ワークロードが必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops", "locator": "前提条件", "retrievedAt": "2026-10-14T22:45:00Z" }]
+            },
+            {
+              "text": "SDK スタイルの Microsoft.Build.Sql（SDK 2.1.0 以上）のみ対応。従来形式は変換が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops", "locator": "既存のプロジェクトを開く", "retrievedAt": "2026-10-14T22:45:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "SDK スタイルは VS Code で GA。Visual Studio 2022 ではプレビュー、2026 は従来形式のみ対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/sql-database-projects/sql-database-projects", "locator": "オリジナル プロジェクトと SDK スタイルのプロジェクト", "retrievedAt": "2026-10-14T22:45:00Z" }]
+            },
+            {
+              "text": "SDK スタイルは .NET 8 以降（クロスプラットフォーム）と NuGet 参照に対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/sql-database-projects/sql-database-projects", "locator": "オリジナル プロジェクトと SDK スタイルのプロジェクト", "retrievedAt": "2026-10-14T22:45:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "スキーマを単一の情報源にして、繰り返し可能な方法で複数環境へデプロイする",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/sql-database-projects/sql-database-projects", "locator": "使用に適した状況", "retrievedAt": "2026-10-14T22:45:00Z" }]
+            },
+            {
+              "text": "データベースに接続しなくても、オフラインでプロジェクト開発ができる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops", "locator": "新しいプロジェクトの作成", "retrievedAt": "2026-10-14T22:45:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sql-database-project", "term": "SQL データベース プロジェクト", "type": "feature", "oneLine": { "text": "1 つのデータベースのスキーマを構成する SQL オブジェクトのローカル表現。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/sql-database-projects/sql-database-projects", "locator": "冒頭", "retrievedAt": "2026-10-14T22:45:00Z" }] } },
+        { "termKey": "microsoft-build-sql", "term": "Microsoft.Build.Sql", "type": "feature", "oneLine": { "text": "SQL プロジェクト用のプロジェクト SDK で、新しい開発に推奨される形式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/sql-database-projects/sql-database-projects", "locator": "Overview", "retrievedAt": "2026-10-14T22:45:00Z" }] } },
+        { "termKey": "dacpac", "term": ".dacpac", "type": "term", "oneLine": { "text": "SQL プロジェクトのビルドで生成される、データベース スキーマのコンパイル済みモデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops", "locator": "プロジェクトのビルド", "retrievedAt": "2026-10-14T22:45:00Z" }] } },
+        { "termKey": "ci-cd", "term": "CI/CD", "type": "term", "oneLine": { "text": "継続的インテグレーションと継続的デプロイ。開発のベスト プラクティスとして使われる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops", "locator": "冒頭", "retrievedAt": "2026-10-14T22:45:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T22:45:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571852",
+        "learn": [
+          { "title": "SQL Server Management Studio におけるデータベース DevOps", "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops", "locale": "ja-jp" },
+          { "title": "SQL データベース プロジェクトとは", "url": "https://learn.microsoft.com/ja-jp/sql/tools/sql-database-projects/sql-database-projects", "locale": "ja-jp" }
+        ]
+      }
+    }
+  ]
+}
