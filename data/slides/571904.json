@@ -1,0 +1,85 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571904"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T21:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "571904",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Arc 対応 SQL Server のパフォーマンス監視プレビューが拡張",
+        "subtitleJa": "テレメトリ エンドポイントから直接クエリ、Grafana ダッシュボードや Fabric Database Hub とも連携",
+        "en": "Public Preview: Performance monitoring for Azure Arc–enabled SQL Server "
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "modifiedJst": "2026-09-30",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure Arc"],
+        "categories": ["other"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Azure Arc 対応 SQL Server を運用する DBA・運用担当者**（複数インスタンスを管理する環境）", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "監視パイプラインを自前で構築せず、組み込みダッシュボードや自分の Grafana で性能を確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。前提条件を満たせば監視は自動で行われ、プレビュー中は無料", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/sql-monitoring?view=sql-server-ver17", "locator": "冒頭・前提条件", "retrievedAt": "2026-10-14T21:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Microsoft 管理の監視データをエンドポイントで直接クエリでき、Grafana や Fabric Database Hub で全体を横断して見られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "拡張された内容", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "テレメトリ エンドポイントで、Microsoft 管理の監視データを直接クエリできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Azure portal の組み込み体験は Grafana ダッシュボードを採用", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "自分の Grafana を同じエンドポイントに接続でき、Fabric Database Hub で横断表示も可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提条件・制約", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Windows 上の SQL Server 2016 SP1 以降、Standard / Enterprise。2012 R2 以前は非対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/sql-monitoring?view=sql-server-ver17", "locator": "前提条件", "retrievedAt": "2026-10-14T21:30:00Z" }] },
+            { "text": "ライセンスはソフトウェア アシュアランスか従量課金制。フェールオーバー クラスター インスタンスは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/sql-monitoring?view=sql-server-ver17", "locator": "前提条件・現在の制限", "retrievedAt": "2026-10-14T21:30:00Z" }] },
+            { "text": "エンドポイントのクエリは Azure 商用クラウドのみ。仕様はプレビュー中に変わる可能性あり", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locator": "重要・前提条件", "retrievedAt": "2026-10-14T21:30:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "収集のオン／オフは Azure portal または Azure CLI で切り替えられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/sql-monitoring?view=sql-server-ver17", "locator": "コレクションを無効または有効にする", "retrievedAt": "2026-10-14T21:30:00Z" }] },
+            { "text": "まず少数のインスタンスで、収集項目とダッシュボードが運用要件に合うか確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "arc-sql", "term": "SQL Server enabled by Azure Arc", "type": "product", "oneLine": { "text": "Azure Arc に接続された SQL Server で、Azure portal から監視できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/sql-monitoring?view=sql-server-ver17", "locator": "冒頭", "retrievedAt": "2026-10-14T21:30:00Z" }] } },
+        { "termKey": "dmv", "term": "DMV（動的管理ビュー）", "type": "term", "oneLine": { "text": "監視メトリックの収集元となる、SQL Server のデータセット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/sql-monitoring?view=sql-server-ver17", "locator": "冒頭", "retrievedAt": "2026-10-14T21:30:00Z" }] } },
+        { "termKey": "database-hub", "term": "Database Hub", "type": "feature", "oneLine": { "text": "SQL リソース全体の性能を組み込みダッシュボードで見られる無料の画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locator": "冒頭のヒント", "retrievedAt": "2026-10-14T21:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "全 Azure 利用者が評価とフィードバックのために使える、GA 前の段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T21:30:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571904",
+        "learn": [
+          { "title": "Azure Arc 対応の SQL Server の監視 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/sql-monitoring?view=sql-server-ver17", "locale": "ja-jp" },
+          { "title": "クエリパフォーマンスモニタリングテレメトリ (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
