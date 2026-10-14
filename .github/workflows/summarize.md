@@ -16,11 +16,6 @@ network:
     - learn.microsoft.com
     - www.microsoft.com
 mcp-servers:
-  mrc:
-    type: http
-    url: "https://www.microsoft.com/releasecommunications/mcp"
-    allowed:
-      - get_azure_update_by_id
   microsoft-learn:
     type: http
     url: "https://learn.microsoft.com/api/mcp"
@@ -122,7 +117,7 @@ Write `data/related/<canonicalKey>.json`:
 
 `status` is `verified` only if at least one candidate has `"verified": true`.
 
-If you need the full text of an update, you may call the `mrc` server's `get_azure_update_by_id` with the item's id; the pending file already contains the full description, so this is normally unnecessary.
+The pending file already contains the full description of each update; use only that as the source.
 
 ## Finish
 
