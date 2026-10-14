@@ -136,10 +136,16 @@ export async function buildDeckPptx(o: PptxOptions): Promise<ArrayBuffer> {
     const cats = new Map<string, number>();
     for (const e of order) { kinds.set(e.label, (kinds.get(e.label) ?? 0) + 1); for (const c of e.meta.categories) cats.set(c, (cats.get(c) ?? 0) + 1); }
     s.addText("種類別", { x: 0.7, y: 1.3, w: 5, h: 0.4, fontFace: FONT, fontSize: 16, bold: true, color: C.blue, margin: 0 });
-    s.addText([...kinds].map(([k, v]) => ({ text: `${k}　${v} 件`, options: { breakLine: true } })), { x: 0.9, y: 1.75, w: 5, h: 3.5, fontFace: FONT, fontSize: 16, color: C.navy, valign: "top", margin: 0, paraSpaceAfter: 6 });
-    s.addText("カテゴリ別（複数所属あり）", { x: 6.7, y: 1.3, w: 6, h: 0.4, fontFace: FONT, fontSize: 16, bold: true, color: C.blue, margin: 0 });
-    s.addText([...cats].sort((a, b) => b[1] - a[1]).map(([k, v]) => ({ text: `${labels[k] ?? k}　${v} 件`, options: { breakLine: true } })), { x: 6.9, y: 1.75, w: 5.5, h: 4, fontFace: FONT, fontSize: 16, color: C.navy, valign: "top", margin: 0, paraSpaceAfter: 6 });
-  }
+    const table = (rows: [string, number][], x: number, w: number) => {
+      rows.forEach(([name, n], i) => {
+        const y = 1.8 + i * 0.5;
+        s.addText(name, { x, y, w: w - 1.2, h: 0.42, fontFace: FONT, fontSize: 16, color: C.navy, margin: 0, valign: "middle" });
+        s.addText([{ text: String(n), options: { bold: true, color: C.navy } }, { text: " 件", options: { color: C.gray } }], { x: x + w - 1.2, y, w: 1.2, h: 0.42, fontFace: FONT, fontSize: 16, align: "right", margin: 0, valign: "middle" });
+        s.addShape("line", { x, y: y + 0.45, w, h: 0, line: { color: "DCE3ED", width: 0.5 } });
+      });
+    };
+    table([...kinds], 0.9, 4.8);
+    table([...cats].sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1)).map(([k, v]) => [labels[k] ?? k, v] as [string, number]), 6.9, 5.5);  }
 
   for (const sl of order) addUpdateSlide(pptx, sl, labels);
 
