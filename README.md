@@ -2,8 +2,8 @@
 
 Azure の更新情報（[Microsoft Release Communications](https://www.microsoft.com/releasecommunications) = MRC）を収集・保存・正規化し、日本語要約付きの静的サイトとして公開します。収集・要約・公開はすべて GitHub Actions 上で動き、ローカル実行は不要です。
 
-- 範囲: 収集 / 保存 / 正規化 / 日本語要約・日本語タイトル / 一覧・検索・絞り込み（期間・カテゴリ・種類）・アーカイブ / 定期更新 / **1 更新 1 枚のスライド JSON と PDF** / 静的 JSON API / JSON・PDF のダウンロード
-- 対象外: PowerPoint（.pptx）生成、月次ジョブ、M365 Roadmap（MRC が使えない場合は失敗として明示し、別ソースへ置換しません）
+- 範囲: 収集 / 保存 / 正規化 / 日本語要約・日本語タイトル / 一覧・検索・絞り込み（期間・カテゴリ・種類）・アーカイブ / 定期更新 / **1 更新 1 枚のスライド JSON・PDF・PowerPoint（.pptx）** / 静的 JSON API / JSON・PDF・PPTX のダウンロード
+- 対象外: 月次ジョブ、M365 Roadmap（MRC が使えない場合は失敗として明示し、別ソースへ置換しません）
 - 公開サイト: https://aktsmm.github.io/azure-update-digest/
 - 設計・方式の詳細: **[docs/design.md](docs/design.md)**（データ層、取得方式、期間・日付、分類・重要度、要約・関連資料、権限、受け入れ条件、運用上の注意）
 - 静的 JSON API: **[docs/api.md](docs/api.md)**
@@ -53,7 +53,7 @@ dist/             サイト・API・PDF。data/ から常に再生成可能     
 ### スライドと API
 
 - スライド JSON は Git、PDF はデプロイ時に生成（Git には入れない）。公開は**直近 3 か月**。サイトのボタンで、選んだ範囲の JSON と PDF（表紙・目次・概要付き）をブラウザ内で作成します。詳細は [スライドスキーマ](docs/slide-schema.md)。
-- **PDF**: スライドごとの PDF はデプロイ時に作り、**最新の 1 件だけ**サンプル（`pdf/sample.pdf`、パスワード不要）として公開します。それ以外はリポジトリ Secret `PDF_PASSWORD` で暗号化（AES-256-GCM / PBKDF2）して置き、サイトの「PDF（N 件）」ボタンでパスワードを入力するとブラウザ内で復号・結合します（表紙・目次・概要付き）。パスワードは公開されず、Secret が無い場合はサンプル以外の PDF を公開しません。変更は `gh secret set PDF_PASSWORD` のあと `pages.yml` を再実行します。
+- **PDF**: スライドごとの PDF はデプロイ時に作り、**最新の 1 件だけ**サンプル（`pdf/sample.pdf`、パスワード不要）として公開します。それ以外はリポジトリ Secret `PDF_PASSWORD` で暗号化（AES-256-GCM / PBKDF2）して置き、サイトの「PDF（N）」ボタンでパスワードを入力するとブラウザ内で復号・結合します（表紙・目次・概要付き）。「PPTX（N）」ボタンは同じ範囲のスライド JSON から、**編集できる PowerPoint**（テキストボックス・図形・実際のリンク）をブラウザ内で作ります（同じパスワード。`pptxgenjs`）。PDF と完全に同じ見た目にはならない場合があります。パスワードは公開されず、Secret が無い場合はサンプル以外の PDF を公開しません。変更は `gh secret set PDF_PASSWORD` のあと `pages.yml` を再実行します。
 - 静的 JSON API: [docs/api.md](docs/api.md)（`api/v1/`）。
 
 ## 取得の考え方
