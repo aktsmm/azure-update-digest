@@ -2048,6 +2048,150 @@
         "Features"
       ],
       "title": "Generally Available: Managed StandardV2 NAT Gateway for AKS"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "576214",
+      "categories": [
+        "ops-governance"
+      ],
+      "created": "2026-10-14T19:13:31.7366427Z",
+      "createdJst": "2026-10-15",
+      "description": "Azure Site Recovery (ASR) now supports disaster recovery for Azure ARC-enabled Windows VMWare virtual machines and on-premise physical servers. Customers can protect ARC-managed machines with ASR while continuing to use Azure ARC for governance, inventory, monitoring and management capabilities. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "f51aeef1fcd1b958d3a3ac14620405989635fc744391be21358cd7ecf4e4b34d",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T23:43:26.822Z",
+          "fingerprint": "c253c3e2e4537eb118f8004739b26013c764e8a5643a0eddbf5a0e518842365a",
+          "modifiedAfter": "2026-10-14T19:13:31.7366427Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T234326822Z_list_sweep_o0.json#576214"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T23:43:32.461Z",
+          "fingerprint": "f51aeef1fcd1b958d3a3ac14620405989635fc744391be21358cd7ecf4e4b34d",
+          "modifiedAfter": "2026-10-14T19:13:31.7366427Z",
+          "modifiedBefore": "2026-10-14T19:13:31.7366427Z",
+          "rawRef": "20261014T234332461Z_detail_576214.json#576214"
+        }
+      ],
+      "ids": [
+        "576214"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "576214",
+      "modified": "2026-10-14T19:13:31.7366427Z",
+      "modifiedJst": "2026-10-15",
+      "productCategories": [
+        "Management and governance",
+        "Migration"
+      ],
+      "products": [
+        "Azure Site Recovery"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=576214",
+      "status": "Launched",
+      "tags": [
+        "Feature",
+        "Management"
+      ],
+      "title": "Generally Available: Azure Site Recovery Support for Azure ARC-enabled Windows VMWare/Physical servers"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "576377",
+      "categories": [
+        "other"
+      ],
+      "created": "2026-10-14T19:17:47.0248415Z",
+      "createdJst": "2026-10-15",
+      "description": "Hardware Audit Logging for Azure Cloud HSM provides hardware-generated audit records for supported HSM management operations, helping organizations strengthen security monitoring, compliance reporting, governance, and forensic investigations. Customers can access human-readable records alongside HSM-signed binary audit data, signatures, and certificates to independently verify the authenticity and integrity of signed audit batches. Audit events are delivered to Azure Monitor Log Analytics for use in existing monitoring and investigation workflows.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "d3ba81fae035908a5fa52313b9d55b3bb2c5f8ba51c105a470ef1f580c60aebb",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T23:43:26.822Z",
+          "fingerprint": "0a9780877183c77cf828c599fac95a1e4d3d7d4b3916046886dd7574c91e4954",
+          "modifiedAfter": "2026-10-14T19:17:47.0248415Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T234326822Z_list_sweep_o0.json#576377"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T23:43:29.667Z",
+          "fingerprint": "d3ba81fae035908a5fa52313b9d55b3bb2c5f8ba51c105a470ef1f580c60aebb",
+          "modifiedAfter": "2026-10-14T19:17:47.0248415Z",
+          "modifiedBefore": "2026-10-14T19:17:47.0248415Z",
+          "rawRef": "20261014T234329667Z_detail_576377.json#576377"
+        }
+      ],
+      "ids": [
+        "576377"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "576377",
+      "modified": "2026-10-14T19:17:47.0248415Z",
+      "modifiedJst": "2026-10-15",
+      "productCategories": [],
+      "products": [],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=576377",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Azure Cloud HSM hardware audit logging"
     }
   ],
   "month": "2026-10",

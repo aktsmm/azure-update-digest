@@ -1,0 +1,70 @@
+{
+  "args": {
+    "filter": "modified ge 2026-10-13T12:16:25Z and modified lt 2026-10-14T23:43:26Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-14T23:43:26.822Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "576214",
+        "created": "2026-10-14T19:13:31.7366427Z",
+        "description": "Azure Site Recovery (ASR) now supports disaster recovery for Azure ARC-enabled Windows VMWare virtual machines and on-premise physical servers. Customers can protect ARC-managed machines with ASR whil...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "576214",
+        "modified": "2026-10-14T19:13:31.7366427Z",
+        "productCategories": [
+          "Management and governance",
+          "Migration"
+        ],
+        "products": [
+          "Azure Site Recovery"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Management",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Site Recovery Support for Azure ARC-enabled Windows VMWare/Physical servers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "576377",
+        "created": "2026-10-14T19:17:47.0248415Z",
+        "description": "Hardware Audit Logging for Azure Cloud HSM provides hardware-generated audit records for supported HSM management operations, helping organizations strengthen security monitoring, compliance reporting...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "576377",
+        "modified": "2026-10-14T19:17:47.0248415Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Cloud HSM hardware audit logging"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 2,
+    "totalCount": 2
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}
