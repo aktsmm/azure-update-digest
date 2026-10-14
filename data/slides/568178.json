@@ -1,0 +1,91 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568178"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T19:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "568178",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Azure Stack Hub 上の App Service が 2029-09-30 に提供終了",
+        "subtitleJa": "2026-09-30 以降は新規インストール不可。Azure 上の App Service への移行を計画",
+        "en": "Retirement: Azure App Service on Azure Stack Hub"
+      },
+      "meta": {
+        "publishedJst": "2026-10-07",
+        "availability": [{ "rawRing": "Retirement", "year": 2029, "month": "September" }],
+        "status": null,
+        "products": ["App Service", "Azure Stack Hub"],
+        "categories": ["compute"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Azure Stack Hub で App Service を運用している**オペレーター・アプリ開発者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "新機能や機能強化は提供されず、提供終了日にサポートが終了する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "アプリを評価し、2029-09-30 までに Azure 上の App Service へ移行する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2029-09-30", "precision": "day" }
+      },
+      "beforeAfter": {
+        "before": { "text": "サポート対象の既存環境は、提供終了まで最新リリースへアップグレードして動作できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "2026-09-30 以降は新規インストール未サポートで、新リリース・機能強化なし。2029-09-30 にサポート終了", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-10-07", "precision": "day" } },
+        { "label": "新規インストールが未サポートに", "when": { "date": "2026-09-30", "precision": "day" } },
+        { "label": "提供終了（サポート終了）", "when": { "date": "2029-09-30", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "2026-09-30 以降、新規インストールは未サポート", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既存のサポート対象環境は、提供終了まで動作・アップグレード可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "2029-09-30 に提供終了し、Microsoft のサポートも終了", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure 上の Azure App Service（Windows / Linux、スロット、自動スケール対応）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Windows 依存が複雑なアプリは、App Service の Managed Instance を検討", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "アプリと依存関係を棚卸しし、互換性を評価して移行先を選ぶ", "origin": "mrc", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "コード・構成・データを移行して検証し、期限前に完了する", "origin": "mrc", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-app-service", "term": "Azure App Service", "type": "product", "oneLine": { "text": "Web アプリ・モバイル バックエンド・REST API を、基盤の管理なしで動かせるプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview", "locator": "冒頭", "retrievedAt": "2026-10-14T19:40:00Z" }] } },
+        { "termKey": "app-service-on-azure-stack-hub", "term": "App Service on Azure Stack Hub", "type": "product", "oneLine": { "text": "Azure Stack Hub で使える PaaS で、Web アプリや Azure Functions を作成・実行できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure-stack/operator/azure-stack-app-service-overview", "locator": "冒頭", "retrievedAt": "2026-10-14T19:40:00Z" }] } },
+        { "termKey": "managed-instance", "term": "Managed Instance", "type": "feature", "oneLine": { "text": "OS のカスタマイズが必要な Windows Web アプリ向けの、プラン単位の App Service ホスティング。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "冒頭", "retrievedAt": "2026-10-14T19:40:00Z" }] } },
+        { "termKey": "app-service-plan", "term": "App Service プラン", "type": "term", "oneLine": { "text": "アプリを保持するために使う専用 VM のセットを表す、アプリの価格コンテナー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure-stack/operator/azure-stack-app-service-overview", "locator": "App Service プランとは", "retrievedAt": "2026-10-14T19:40:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止（提供終了）", "type": "label", "oneLine": { "text": "機能や製品が利用できなくなる最終段階で、サポートと更新プログラムも提供されなくなる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/lifecycle/faq/azure-infrastructure", "locator": "退職", "retrievedAt": "2026-10-14T19:40:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568178",
+        "learn": [
+          { "title": "Azure App Service と Azure Functions on Azure Stack Hub の概要", "url": "https://learn.microsoft.com/ja-jp/azure-stack/operator/azure-stack-app-service-overview", "locale": "ja-jp" },
+          { "title": "Azure App Service 上のマネージド インスタンス", "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locale": "ja-jp" },
+          { "title": "App Service の概要", "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
