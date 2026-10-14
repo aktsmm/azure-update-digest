@@ -1,0 +1,104 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573782"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "573782",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "AKS on bare metal が Ubuntu でパブリック プレビューに",
+        "subtitleJa": "お客様所有の Ubuntu 機に、Azure CLI で Kubernetes クラスターをデプロイできます",
+        "en": "Public Preview: AKS on bare metal now on Ubuntu"
+      },
+      "meta": {
+        "publishedJst": "2026-10-07",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": [],
+        "categories": ["other"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "オンプレミスの **Ubuntu 機で Kubernetes を動かしたい方**（GPU を使う AI ワークロードを含む）", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ハードウェアとソフトウェアを自分で選びつつ、AKS の運用モデルで管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。運用環境での使用は想定されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-overview", "locator": "重要", "retrievedAt": "2026-10-15T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "お客様所有の Ubuntu 環境に AKS のエクスペリエンスを拡張し、Azure CLI でクラスター全体をデプロイできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ハイパーバイザーなしで Ubuntu に直接 Kubernetes をデプロイし、Azure Arc で Azure に接続して管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "対象 OS は Ubuntu 24.04.3 / 24.04.4 LTS、x86_64。クラスターの作成は Azure CLI", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-preview-limitations", "locator": "サポートされているスコープ", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "Kubernetes は既定で 1.33.3。1.34 系も指定可能。デプロイは約 40 分", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-create-cluster-ubuntu-cli", "locator": "サポートされている Kubernetes のバージョン", "retrievedAt": "2026-10-15T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "リージョンは米国東部のみ。単一ノード クラスターで、ホストごとに 1 つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-preview-limitations", "locator": "既知の制限", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "GA 後にクラスターの削除と再作成が必要になる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-preview-limitations", "locator": "一般提供への移行", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "Ubuntu の保守とパッチ適用はお客様の責任。AKS は Kubernetes 層を管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-ubuntu-system-requirements", "locator": "お客様の責任", "retrievedAt": "2026-10-15T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites", "heading": "前提条件", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "最低 2 コア / 4 GB RAM / 256 GB 空き容量。ホストを Azure Arc 対応サーバーに接続", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-ubuntu-system-requirements", "locator": "ホスト オペレーティング システムとハードウェアの要件", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "Azure CLI 2.90.0 以降と aksarc 拡張機能（プレビュー）が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-create-cluster-ubuntu-cli", "locator": "オプション 2", "retrievedAt": "2026-10-15T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "billing", "heading": "課金・サポート", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "プレビュー中、AKS クラスター リソースは無料。Arc 対応マシンなどは通常料金", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-preview-limitations", "locator": "Billing", "retrievedAt": "2026-10-15T00:00:00Z" }] },
+            { "text": "サポートはベスト エフォート。SLA は限定的またはなし", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-preview-limitations", "locator": "Support", "retrievedAt": "2026-10-15T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "既存の Ubuntu ホストと米国東部の Arc 接続で要件を満たせるか、検証環境で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aks-bare-metal", "term": "AKS on bare metal", "type": "product", "oneLine": { "text": "ハイパーバイザーなしでホスト OS に直接 Kubernetes をデプロイする AKS。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T00:00:00Z" }] } },
+        { "termKey": "azure-arc", "term": "Azure Arc", "type": "product", "oneLine": { "text": "クラスターとホストを管理のために Azure に接続する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T00:00:00Z" }] } },
+        { "termKey": "ubuntu-host", "term": "Ubuntu ホスト", "type": "term", "oneLine": { "text": "お客様が用意し、保守する Ubuntu 搭載の物理マシン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-ubuntu-system-requirements", "locator": "お客様の責任", "retrievedAt": "2026-10-15T00:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-15T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビューは米国東部のみ",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-preview-limitations", "locator": "既知の制限", "retrievedAt": "2026-10-15T00:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573782",
+        "learn": [
+          { "title": "ベア メタル上の Azure Kubernetes Service とは何ですか? (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-overview", "locale": "ja-jp" },
+          { "title": "Azure CLIを使用して Ubuntu 上のベア メタル クラスターに AKS を作成する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-create-cluster-ubuntu-cli", "locale": "ja-jp" },
+          { "title": "パブリック プレビューの制限事項 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-preview-limitations", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
