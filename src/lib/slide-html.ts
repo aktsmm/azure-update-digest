@@ -6,7 +6,7 @@ const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&
 const rich = (s: string) => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
 
 const MONTH_JA: Record<string, string> = { January: "1", February: "2", March: "3", April: "4", May: "5", June: "6", July: "7", August: "8", September: "9", October: "10", November: "11", December: "12" };
-const monthJa = (a: { year: number; month: string }) => `${a.year}年${MONTH_JA[a.month] ?? a.month}月`;
+const monthJa = (a: { year: number; month: string }) => `${Number(a.year)}年${MONTH_JA[a.month] ?? a.month}月`;
 
 const STAMP: Record<string, { text: string; cls: string }> = {
   global: { text: "グローバル（リージョン不問）", cls: "st-g" },

@@ -14,7 +14,7 @@ if (existsSync(`${out}/slides`)) {
   for (const f of readdirSync(`${out}/slides`).filter((x) => x.endsWith(".json"))) {
     const deck = JSON.parse(readFileSync(`${out}/slides/${f}`, "utf8")) as { slides: { key: string }[] };
     const s = deck.slides[0];
-    if (s) slides.set(s.key, { slide: s, pdf: published.has(s.key) });
+    if (s && published.has(s.key)) slides.set(s.key, { slide: s, pdf: published.has(s.key) });
   }
 }
 
