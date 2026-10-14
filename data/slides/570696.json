@@ -1,0 +1,349 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570696"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T21:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "570696",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Arc 対応 SQL Server が Germany West Central で一般提供（GA）に",
+        "subtitleJa": "ドイツ西中部リージョンで、SQL Server を Azure Arc に接続して Azure から管理できます",
+        "en": "Generally Available: Azure Arc-enabled SQL Server in Germany West Central"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "modifiedJst": "2026-09-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": [],
+        "categories": ["other"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": {
+          "text": "Germany West Central で **Azure Arc 対応 SQL Server** を使いたい方",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "同リージョンで、インベントリ・ガバナンス・セキュリティ・評価・ライセンス管理を利用できる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "同リージョンで Arc 接続を検討しているなら確認",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Azure 外（データセンター・エッジ・他社クラウド）の SQL Server に Azure サービスを拡張",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17",
+                  "locator": "冒頭",
+                  "retrievedAt": "2026-10-14T21:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Azure portal で名前・バージョン・エディション等を確認し、Resource Graph で横断クエリ",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17",
+                  "locator": "単一の管理ポイントから SQL Server インスタンスを大規模に管理する",
+                  "retrievedAt": "2026-10-14T21:00:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "始め方",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Azure サブスクリプションと Arc エージェントを用意し、リソース プロバイダーを登録",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17",
+                  "locator": "デプロイする前に",
+                  "retrievedAt": "2026-10-14T21:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "登録対象は Microsoft.AzureArcData と Microsoft.HybridCompute",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17",
+                  "locator": "リソース プロバイダーを登録する",
+                  "retrievedAt": "2026-10-14T21:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Arc 対応サーバーと SQL Server インスタンスには同じリージョンを割り当てる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17",
+                  "locator": "サポートされているリージョン",
+                  "retrievedAt": "2026-10-14T21:00:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "SQL Server 2014 以降（64 ビット）。Windows Server 2016 以降、Ubuntu 20.04、RHEL 8、SLES 15 など",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17",
+                  "locator": "サポートされる構成",
+                  "retrievedAt": "2026-10-14T21:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "コンテナー上や Azure VM 上の SQL Server は非対応。Private Link も使えない",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17",
+                  "locator": "サポートされていない構成",
+                  "retrievedAt": "2026-10-14T21:00:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "関連機能",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "ベスト プラクティス評価、Microsoft Entra 認証、Defender for Cloud、Purview と連携できる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17",
+                  "locator": "各機能の節",
+                  "retrievedAt": "2026-10-14T21:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Microsoft Entra 認証には SQL Server 2022 以降が必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17",
+                  "locator": "Microsoft Entra認証",
+                  "retrievedAt": "2026-10-14T21:00:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "使いどころ",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "ドイツ西中部の環境にある SQL Server を Azure から一元管理したい場合に向く",
+              "origin": "editorial",
+              "assertion": "recommendation",
+              "verification": "unverified"
+            },
+            {
+              "text": "導入前にサポート リージョン一覧と構成の制限を確認する",
+              "origin": "editorial",
+              "assertion": "recommendation",
+              "verification": "unverified"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-arc-sql",
+          "term": "Azure Arc 対応 SQL Server",
+          "type": "product",
+          "oneLine": {
+            "text": "Azure 外にある SQL Server インスタンスへ Azure サービスを拡張する機能。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-14T21:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "arc-instance",
+          "term": "Arc 対応インスタンス",
+          "type": "term",
+          "oneLine": {
+            "text": "Azure Arc に接続された、オンプレミスやクラウド プロバイダー上の SQL Server インスタンス。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-14T21:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "resource-graph",
+          "term": "Azure Resource Graph",
+          "type": "feature",
+          "oneLine": {
+            "text": "すべての SQL Server インスタンスを横断してクエリできる Azure の機能。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17",
+                "locator": "単一の管理ポイントから SQL Server インスタンスを大規模に管理する",
+                "retrievedAt": "2026-10-14T21:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "entra-auth",
+          "term": "Microsoft Entra 認証",
+          "type": "feature",
+          "oneLine": {
+            "text": "Microsoft Entra ID を使って SQL Server に認証する仕組み。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17",
+                "locator": "Microsoft Entra認証",
+                "retrievedAt": "2026-10-14T21:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-ga",
+          "term": "GA（一般提供）",
+          "type": "label",
+          "oneLine": {
+            "text": "機能が完全にリリースされ、本番利用でサポートされる段階。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure",
+                "locator": "General availability (GA)",
+                "retrievedAt": "2026-10-14T21:00:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Arc 対応 SQL Server のサポート リージョン一覧に Japan East が含まれる",
+        "evidence": [
+          {
+            "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17",
+            "locator": "サポートされているリージョン",
+            "retrievedAt": "2026-10-14T21:00:00Z"
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570696",
+        "learn": [
+          {
+            "title": "Azure Arc で有効になっている SQL Server",
+            "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17",
+            "locale": "ja-jp"
+          },
+          {
+            "title": "Azure Arc によって有効化された SQL Server に必要な前提条件",
+            "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
