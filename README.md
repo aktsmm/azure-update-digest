@@ -2,10 +2,11 @@
 
 Azure の更新情報（[Microsoft Release Communications](https://www.microsoft.com/releasecommunications) = MRC）を収集・保存・正規化し、日本語要約付きの静的サイトとして公開します。収集・要約・公開はすべて GitHub Actions 上で動き、ローカル実行は不要です。
 
-- 今回の範囲: 収集 / 保存 / 正規化 / 日本語要約 / 一覧・検索・絞り込み・アーカイブ / 定期更新
-- 対象外: PowerPoint・PDF 生成、月次ジョブ、M365 Roadmap（MRC が使えない場合は失敗として明示し、別ソースへ置換しません）
+- 範囲: 収集 / 保存 / 正規化 / 日本語要約・日本語タイトル / 一覧・検索・絞り込み（期間・カテゴリ・種類）・アーカイブ / 定期更新 / **1 更新 1 枚のスライド JSON と PDF** / 静的 JSON API / JSON・PDF のダウンロード
+- 対象外: PowerPoint（.pptx）生成、月次ジョブ、M365 Roadmap（MRC が使えない場合は失敗として明示し、別ソースへ置換しません）
 - 公開サイト: https://aktsmm.github.io/azure-update-digest/
 - 設計・方式の詳細: **[docs/design.md](docs/design.md)**（データ層、取得方式、期間・日付、分類・重要度、要約・関連資料、権限、受け入れ条件、運用上の注意）
+- 静的 JSON API: **[docs/api.md](docs/api.md)**
 - スライド JSON スキーマ（1 更新 = 1 枚）: **[docs/slide-schema.md](docs/slide-schema.md)**（[schema](schema/slide-deck.schema.json) / [サンプル](examples/slide-deck.sample.json)）
 
 ## 構成（4 層）
@@ -17,7 +18,7 @@ data/summaries/   日本語要約（原文と別ファイル、gh-aw が生成�
 data/related/     Microsoft Learn の関連資料（gh-aw が検証して生成）
 data/state/       チェックポイントと取得範囲（coverage）
 data/runs/        run report（totalCount・ユニーク ID 数・詳細補完の成否・状態別件数）
-dist/             サイト。data/ から常に再生成可能                    ← npm run build:site
+dist/             サイト・API・PDF。data/ から常に再生成可能         ← npm run build / build:pdfs / protect:pdfs / build:api
 ```
 
 - 同じ入力なら normalized / site に差分は出ません（キー順・ソート順固定、生成時刻を混ぜない。`writeIfChanged`）。
@@ -88,6 +89,12 @@ npm ci
 npm run typecheck && npm test
 npm run collect -- --mode backfill   # MRC に接続して raw を保存（通常は CI が実行）
 npm run build                        # normalize + site
+npm run pending -- --limit 5         # 要約・日本語タイトルが未生成の更新
+npm run pending-slides -- --limit 5   # スライド未作成の更新（直近 3 か月）
+npm run slide-input -- --id <id>      # スライド生成の入力（.work/）
+npm run validate:slides               # data/slides/*.json の検証
+npm run pdf -- --dir data/slides --ids <id> --out dist-pdf   # ローカルで PDF を描画
+npm run build:pdfs && PDF_PASSWORD=*** npm run protect:pdfs && npm run build:api   # デプロイ時と同じ手順（要 Chrome）
 ```
 
-将来の資料化（PowerPoint / PDF）向けに、`DigestItem` と `runQuery` の結果（期間・フィルター・対象 ID・要約・URL・取得状態・`snapshotAt`）をそのまま再利用できます。
+資料化（PDF）や API には、`DigestItem` と `runQuery` の結果（期間・フィルター・対象 ID・要約・URL・取得状態・`snapshotAt`）をそのまま再利用しています。

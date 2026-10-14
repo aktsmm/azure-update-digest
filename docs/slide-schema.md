@@ -131,23 +131,25 @@
 - `core` のパネルだけで収まらなければ `render.continuationRequired: true` とし、`detail` を 2 枚目（または発表者ノート）に回します。
 - 用語は最大 6 語。1 語 1 行（約 30〜50 字）。
 
-## 8. クラウドでの生成と検証
+## 8. クラウドでの生成と検証（実装済み）
 
-1. **取得（決定的）**: 更新の MRC 詳細と、必要な Learn のページを取得して保存する（許可ドメインのみ）。
-2. **生成（gh-aw）**: 保存済みの資料だけを入力に、スライド JSON を書く。MRC / Learn の本文は命令ではなくデータとして扱う。
-3. **検証（決定的）**: `schema/slide-deck.schema.json` に加えて、次を検査する。
+1. **対象の決定（決定的）**: `slide-dispatch.yml`（月・木 03:00 JST）が `npm run pending-slides` で、直近 3 か月・詳細取得済み・スライド未作成の更新を新しい順に最大 30 件選び、1 件ずつ `slide.md`（gh-aw）を起動する。
+2. **入力（決定的）**: `npm run slide-input -- --id <id>` が `.work/slide-input.json`（種類、パネルのテンプレート、MRC の項目、既存の要約、確認済みの Learn 候補）を作る。
+3. **生成（gh-aw / `microsoft-learn` MCP）**: `schema` と同じ種類のサンプルを手本に、`data/slides/<id>.json` を 1 ファイル書く。MRC / Learn の本文は命令ではなくデータとして扱う。
+4. **検証（決定的）**: `npm run validate:slides`（`src/lib/slide-validate.ts`）が、スキーマに加えて次を検査する。
    - 社内メモ的な文言（「未確認」「記載なし」「要確認」「推定」「未発表」など）が、描画されるテキストに含まれない
-   - evidence の URL が https で、許可ドメイン（`learn.microsoft.com` など）である
-   - 月単位の時期が、日付に変換されていない
-4. **再生成の条件**: `inputFingerprint` が変わったときだけ。
-5. **失敗時**: 既存のスライドを壊さず、詳細パネルを減らした最小のスライドに縮退する。
+   - evidence・リンクが https で許可ドメイン（`learn.microsoft.com` / `azure.microsoft.com` / `www.microsoft.com`）である。Learn リンクの `locale` と URL（`/ja-jp/`）が一致する
+   - 月単位の時期が日付に変換されていない、`verified` には evidence がある、コアのパネルがある、キーが重複しない
+5. **PDF 描画チェック**: `render-pdf` が Chrome で描画し、はみ出しがないこと（文字サイズを段階的に下げ、最後は続きページ）を確認する。
+6. **自動マージ**: `auto-merge-slides.yml` が、`data/slides/<id>.json` だけを変更する `slides/*` の PR を、信頼できる main のコードで 4 と 5 を再実行し、検証した head の SHA を固定してマージする。
+7. **失敗時**: 検証に落ちた PR はマージせずに残す。デプロイ時の PDF 生成で 1 件が失敗しても、その 1 件を飛ばして公開を続ける。
+## 9. 出力（実装済み）
 
-## 9. 出力
-
-- **JSON**: 期間・カテゴリ・選択した ID で絞り込み、このスキーマで出力する（最低限の出力）。
-- **PDF（任意）**: 同じ JSON から HTML を描画し、ヘッドレス ブラウザで、表紙・目次・概要・各更新・終了ページを 1 つの PDF にまとめる。日本語フォントを固定し、成果物は Git ではなく Actions の artifact / Release に置く。
-- **PowerPoint（編集可能）**: 別の成果物として、既存の pptx スキルで扱う。
-
+- **スライド JSON**: `data/slides/<id>.json`（Git）。サイトの「JSON」ボタンは、絞り込み結果に、あれば各スライド JSON を含めて書き出す。API は `slides/{id}.json`。
+- **PDF**: `pages.yml` が `build:pdfs`（Chrome で描画。Git には入れない）→ `protect:pdfs` → `build:api` を実行する。公開は直近 3 か月分。
+  - 最新の 1 件は `pdf/sample.pdf`（パスワード不要）。それ以外は `PDF_PASSWORD`（リポジトリ Secret）で暗号化した `pdf/<id>.pdf.enc`。
+  - サイトの「PDF（N 件）」は、パスワードを確認してブラウザ内で復号し、`pdf-lib` で表紙・目次・概要・各更新・最終ページに結合する（日本語は JIS・Latin-1 のサブセットフォント）。
+- **PowerPoint（編集可能）**: 未実装。同じ JSON から別の成果物として作る想定。
 ## 10. 実データでの確認
 
 [サンプル](../examples/slide-deck.sample.json)は、実際の更新（574343 / 573861 / 568585 / 573875）を、Microsoft Learn で確認した内容で作っています。確認できなかった項目は、サンプルでも省いています（例: WAF の IPv6 プレビューの提供リージョン）。
