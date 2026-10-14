@@ -22,6 +22,7 @@ def jis_chars():
             if len(c) == 1:
                 chars.add(c)
     chars.update(chr(c) for c in range(0x20, 0x7F))
+    chars.update(chr(c) for c in range(0xA0, 0x100))
     chars.update("〜～・※→←↑↓×÷≠≤≥“”‘’—–…")
     return chars
 

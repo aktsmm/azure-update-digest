@@ -1,4 +1,4 @@
-import { PDFDocument, concatTransformationMatrix, pushGraphicsState, rgb, type PDFFont, type PDFPage } from "pdf-lib";
+import { PDFDocument, concatTransformationMatrix, PDFString, pushGraphicsState, rgb, type PDFFont, type PDFPage } from "pdf-lib";
 import fontkit from "@pdf-lib/fontkit";
 
 export interface SlideEntry { key: string; kind: string; label: string; title: string; publishedJst: string; categories: string[]; pages: number }
@@ -25,6 +25,21 @@ function newPage(doc: PDFDocument): PDFPage {
   const p = doc.addPage([W * PT, H * PT]);
   p.pushOperators(pushGraphicsState(), concatTransformationMatrix(PT, 0, 0, PT, 0, 0));
   return p;
+}
+
+const REPO_URL = "https://github.com/aktsmm/azure-update-digest";
+
+/** Clickable URI area; coordinates are in the same px units as the drawing helpers (top-based). */
+function addLink(doc: PDFDocument, p: PDFPage, x: number, top: number, w: number, h: number, url: string) {
+  const rect = [x * PT, (H - top - h) * PT, (x + w) * PT, (H - top) * PT];
+  const annot = doc.context.obj({
+    Type: "Annot",
+    Subtype: "Link",
+    Rect: rect,
+    Border: [0, 0, 0],
+    A: { Type: "Action", S: "URI", URI: PDFString.of(url) },
+  });
+  p.node.addAnnot(doc.context.register(annot));
 }
 
 class Painter {
@@ -117,10 +132,17 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
   const end = newPage(doc);
   tint(end, 790); frame(end);
   const w = g.width("以上", 64);
-  g.text(end, "以上", (W - w) / 2, 290, 64, NAVY, true);
+  g.text(end, "以上", (W - w) / 2, 250, 64, NAVY, true);
   const s2 = "Azure アップデート情報";
-  g.text(end, s2, (W - g.width(s2, 26)) / 2, 380, 26, BLUE, true);
-  footer(g, end, "Created by yamapan（GitHub: aktsmm） ／ CC BY-NC-SA 4.0", source);
+  g.text(end, s2, (W - g.width(s2, 26)) / 2, 340, 26, BLUE, true);
+  const note = "この資料は GitHub Actions と AI エージェントで自動生成しています。仕組みについてのお問い合わせ・ご意見は GitHub へどうぞ。";
+  g.text(end, note, (W - g.width(note, 15)) / 2, 420, 15, GRAY);
+  const repo = REPO_URL;
+  const rx = (W - g.width(repo, 17)) / 2;
+  g.text(end, repo, rx, 448, 17, BLUE);
+  end.drawLine({ start: { x: rx, y: H - 448 - 20 }, end: { x: rx + g.width(repo, 17), y: H - 448 - 20 }, thickness: 0.8, color: BLUE });
+  addLink(doc, end, rx, 448, g.width(repo, 17), 22, repo);
+  footer(g, end, "© 2026 yamapan（GitHub: aktsmm）  CC BY-NC-SA 4.0", source);
 
   doc.setTitle("Azure アップデート情報");
   doc.setCreationDate(new Date(o.createdUtc));
