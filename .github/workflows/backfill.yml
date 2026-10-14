@@ -1,0 +1,69 @@
+name: Backfill (initial 12 months)
+
+# Runs every 2 hours until the initial backfill is complete, then becomes a no-op.
+# 17 minutes past every second hour (UTC).
+on:
+  schedule:
+    - cron: "17 */2 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: data-write
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Skip when backfill is already complete
+        id: gate
+        run: |
+          if [ -f data/state/collect-state.json ] && [ "$(jq -r '.backfill.completedAt // empty' data/state/collect-state.json)" != "" ] && [ "$(jq -r '[.backfill.months[] | select(.status != "complete")] | length' data/state/collect-state.json)" = "0" ] && [ "$(jq -r '.backfill.targetMonths | length' data/state/collect-state.json)" != "0" ]; then
+            echo "done=true" >> "$GITHUB_OUTPUT"
+            echo "Initial backfill already complete."
+          else
+            echo "done=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.done != 'true'
+        with:
+          node-version: 22
+          cache: npm
+      - if: steps.gate.outputs.done != 'true'
+        run: npm ci
+      - name: Backfill chunk (resumes from the stored checkpoint)
+        if: steps.gate.outputs.done != 'true'
+        run: npm run collect -- --mode backfill
+      - if: steps.gate.outputs.done != 'true'
+        run: npm run normalize
+      - if: steps.gate.outputs.done != 'true'
+        run: npm run validate
+      - name: Commit data
+        id: commit
+        if: steps.gate.outputs.done != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -m "data: backfill chunk"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: backfill
+    if: needs.backfill.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

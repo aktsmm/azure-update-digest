@@ -1,0 +1,27 @@
+{
+  "name": "azure-update-digest",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Azure Update Digest: collect Azure updates from Microsoft Release Communications MCP and publish a static Japanese digest site.",
+  "scripts": {
+    "collect": "tsx src/cli/collect.ts",
+    "normalize": "tsx src/cli/normalize.ts",
+    "build:site": "tsx src/cli/build-site.ts",
+    "validate": "tsx src/cli/validate.ts",
+    "pending": "tsx src/cli/pending.ts",
+    "build": "npm run normalize && npm run build:site",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

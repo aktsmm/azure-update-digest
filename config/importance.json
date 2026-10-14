@@ -1,0 +1,23 @@
+{
+  "$comment": "Importance rule table. Score = sum of points of matched rules. No matched rule => score 0 => level 'normal' (no guessing). fields: tag | productCategory | product | ring | status | title. match: equals (case-insensitive) | regex (case-insensitive). 'ring' is matched against availabilities[].ring exactly as published; rings whose meaning is not established (e.g. 'Effective') have no rule and stay display-only.",
+  "levels": [
+    { "id": "high", "label": "重要", "minScore": 8 },
+    { "id": "notable", "label": "注目", "minScore": 5 },
+    { "id": "normal", "label": "通常", "minScore": 0 }
+  ],
+  "tieBreak": ["score desc", "created desc", "canonicalKey asc"],
+  "rules": [
+    { "id": "retire-tag", "topic": "retirement", "label": "廃止", "field": "tag", "match": "equals", "value": "Retirements", "points": 5 },
+    { "id": "retire-ring", "topic": "retirement", "label": "廃止", "field": "ring", "match": "equals", "value": "Retirement", "points": 3 },
+    { "id": "retire-title", "topic": "retirement", "label": "廃止", "field": "title", "match": "regex", "value": "\\b(retire[sd]?|retirement|deprecat\\w*|end of support|end-of-life)\\b", "points": 2 },
+    { "id": "security-tag", "topic": "security", "label": "セキュリティ", "field": "tag", "match": "equals", "value": "Security", "points": 5 },
+    { "id": "compliance-tag", "topic": "security", "label": "コンプライアンス", "field": "tag", "match": "equals", "value": "Compliance", "points": 5 },
+    { "id": "security-title", "topic": "security", "label": "セキュリティ", "field": "title", "match": "regex", "value": "\\b(security|vulnerabilit\\w*|compliance|CVE-\\d+)\\b", "points": 3 },
+    { "id": "ga-ring", "topic": "ga", "label": "GA 化", "field": "ring", "match": "equals", "value": "General Availability", "points": 3 },
+    { "id": "ga-title", "topic": "ga", "label": "GA 化", "field": "title", "match": "regex", "value": "^(generally available|general availability)\\b", "points": 2 },
+    { "id": "region-tag", "topic": "region", "label": "リージョン追加", "field": "tag", "match": "equals", "value": "Regions & Datacenters", "points": 5 },
+    { "id": "region-title", "topic": "region", "label": "リージョン追加", "field": "title", "match": "regex", "value": "\\b(regions?|East US 3|expands? to)\\b|\\bin (East|West|North|South|Central|Southeast|Southcentral|Japan|Korea|Australia|Canada|Germany|France|Sweden|Norway|Poland|Spain|Italy|Mexico|Chile|Israel|UAE|Qatar|Brazil|India|UK|Switzerland)\\b", "points": 3 },
+    { "id": "pricing-tag", "topic": "pricing", "label": "価格変更", "field": "tag", "match": "equals", "value": "Pricing & Offerings", "points": 5 },
+    { "id": "pricing-title", "topic": "pricing", "label": "価格変更", "field": "title", "match": "regex", "value": "\\b(pric(e|es|ing)|discount|cost reduction|billing)\\b", "points": 3 }
+  ]
+}

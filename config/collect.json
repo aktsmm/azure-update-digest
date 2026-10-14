@@ -1,0 +1,13 @@
+{
+  "$comment": "Collection limits and behaviour. Backfill is separate from the daily sweep.",
+  "backfillMonths": 12,
+  "dailySweepOverlapHours": 24,
+  "pageSize": 50,
+  "limits": {
+    "maxPagesPerRun": 60,
+    "maxDetailsPerRun": 300,
+    "maxSecondsPerRun": 1500
+  },
+  "minIntervalMs": 400,
+  "detailPriority": "newest-first"
+}
