@@ -3,6 +3,7 @@ import { defaultQuery, runQuery, type DigestItem, type Query, type QueryResult }
 import type { SiteMeta } from "../lib/site-data.js";
 import type { SlideEntry } from "./pdf-merge.js";
 import { orderSlides } from "../lib/slide-order.js";
+import { KIND_LABEL } from "../lib/slide-kind.js";
 import { decryptBytes, deriveKey, type PdfCryptoInfo } from "../lib/pdf-crypto.js";
 import type { SlideKind } from "../lib/slide-kind.js";
 
@@ -16,6 +17,7 @@ let samplePdf = false;
 let pdfKey: { pw: string; key: CryptoKey } | null = null;
 
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
+const KIND_FILTERS: SlideKind[] = ["ga", "preview", "private-preview", "retirement", "announcement", "update"];
 const catLabel = (id: string) => meta.categories.find((c) => c.id === id)?.label ?? id;
 const impLabel = (id: string) => meta.importanceLevels.find((c) => c.id === id)?.label ?? id;
 const safeUrl = (u: string) => (/^https:\/\//.test(u) ? esc(u) : "#");
@@ -40,6 +42,7 @@ function queryFrom(params: URLSearchParams, forcedPeriod?: Period): Query {
   q.basis = params.get("basis") === "modified" ? "modified" : "created";
   q.mode = params.get("mode") === "availability" ? "availability" : "dated";
   q.categories = (params.get("cat") ?? "").split(",").filter(Boolean);
+  q.kinds = (params.get("kind") ?? "").split(",").filter((k) => (KIND_FILTERS as string[]).includes(k));
   q.importance = params.get("imp") === "high" ? "high" : params.get("imp") === "notable" ? "notable-or-high" : "all";
   q.text = params.get("q") ?? "";
   return q;
@@ -51,6 +54,7 @@ function toParams(q: Query, keepPeriod: boolean): string {
   if (q.basis === "modified") p.set("basis", "modified");
   if (q.mode === "availability") p.set("mode", "availability");
   if (q.categories.length) p.set("cat", q.categories.join(","));
+  if (q.kinds.length) p.set("kind", q.kinds.join(","));
   if (q.importance !== "all") p.set("imp", q.importance === "high" ? "high" : "notable");
   if (q.text) p.set("q", q.text);
   return p.toString();
@@ -90,7 +94,7 @@ function card(i: DigestItem): string {
     i.related.items.length > 0 ? `<div>関連資料（Microsoft Learn）<ul>${i.related.items.map((r) => `<li><a href="${safeUrl(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a></li>`).join("")}</ul></div>`
     : `<div class="meta">関連資料: ${relNames[i.related.status]}</div>`;
   return `<article class="card" id="update-${esc(i.key)}">
-    <h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a>${esc(i.titleJa ?? i.title)}</h3>
+    <div class="card-head"><h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a>${esc(i.titleJa ?? i.title)}</h3><span class="kind k-${i.kind}">${esc(KIND_LABEL[i.kind])}</span></div>
     ${i.titleJa ? `<div class="orig">${esc(i.title)}</div>` : ""}
     <div class="meta">作成 ${esc(i.createdJst)} ／ 更新 ${esc(i.modifiedJst)} ／ ID ${esc(i.key)}</div>
     ${badges(i)}${summary}
@@ -100,6 +104,7 @@ function card(i: DigestItem): string {
 
 function periodForm(q: Query, fixedMonth: string | null, dl: string): string {
   const chips = meta.categories.map((c) => `<label class="chip"><input type="checkbox" name="cat" value="${esc(c.id)}" ${q.categories.includes(c.id) ? "checked" : ""}>${esc(c.label)}</label>`).join("");
+  const kindChips = KIND_FILTERS.map((k) => `<label class="chip kind-chip k-${k}"><input type="checkbox" name="kind" value="${k}" ${q.kinds.includes(k) ? "checked" : ""}>${esc(KIND_LABEL[k])}</label>`).join("");
   return `<form class="panel" id="f">
     ${fixedMonth ? "" : `<div class="row">
       <label>開始 <input type="date" name="start" value="${q.period.start}"></label>
@@ -113,7 +118,8 @@ function periodForm(q: Query, fixedMonth: string | null, dl: string): string {
       <input type="search" name="q" placeholder="タイトル・要約・製品で検索" value="${esc(q.text)}">
       ${dl}
     </div>
-    <div class="chips" style="margin-top:8px">${chips}</div>
+    <div class="chips" style="margin-top:8px"><span class="chips-label">種類</span>${kindChips}</div>
+    <div class="chips" style="margin-top:6px"><span class="chips-label">カテゴリ</span>${chips}</div>
   </form>`;
 }
 
@@ -126,7 +132,7 @@ function bind(q: Query, fixedMonth: string | null, basePath: string) {
   const f = document.getElementById("f") as HTMLFormElement;
   const apply = () => {
     const d = new FormData(f);
-    const nq: Query = { ...q, categories: d.getAll("cat").map(String), basis: d.get("basis") === "modified" ? "modified" : "created", importance: d.get("imp") === "high" ? "high" : d.get("imp") === "notable" ? "notable-or-high" : "all", text: String(d.get("q") ?? "") };
+    const nq: Query = { ...q, categories: d.getAll("cat").map(String), kinds: d.getAll("kind").map(String), basis: d.get("basis") === "modified" ? "modified" : "created", importance: d.get("imp") === "high" ? "high" : d.get("imp") === "notable" ? "notable-or-high" : "all", text: String(d.get("q") ?? "") };
     let start = String(d.get("start") ?? q.period.start), end = String(d.get("end") ?? q.period.end);
     const base = String(d.get("base") ?? "");
     if (!fixedMonth && base && isValidDateString(base) && base <= toJstDate(Date.now())) { end = base; start = addDays(base, -29); }

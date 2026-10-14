@@ -1,5 +1,6 @@
 import { addDays, jstStartMs, monthBounds, parseInstant, periodBoundsMs, type DateBasis, type Period } from "./period.js";
 import { periodCoverage, type PeriodCoverage } from "./coverage.js";
+import type { SlideKind } from "./slide-kind.js";
 import type { CoverageInterval } from "./types.js";
 
 /** Public, display-ready item (no MRC description). Shared by the site, counts, and future reports. */
@@ -15,6 +16,8 @@ export interface DigestItem {
   products: string[];
   productCategories: string[];
   categories: string[];
+  /** GA / Preview / retirement ... decided from availabilities, tags and title (see slide-kind.ts). */
+  kind: SlideKind;
   importance: { level: "high" | "notable" | "normal"; score: number; topics: string[] };
   availabilities: { ring: string; year: number; month: string }[];
   availabilityDates: { general: string | null; preview: string | null; privatePreview: string | null };
@@ -32,12 +35,13 @@ export interface Query {
   basis: DateBasis;
   mode: QueryMode;
   categories: string[];
+  kinds: string[];
   importance: "all" | "high" | "notable-or-high";
   text: string;
   rings: string[];
 }
 
-export const defaultQuery = (period: Period): Query => ({ period, basis: "created", mode: "dated", categories: [], importance: "all", text: "", rings: [] });
+export const defaultQuery = (period: Period): Query => ({ period, basis: "created", mode: "dated", categories: [], kinds: [], importance: "all", text: "", rings: [] });
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -59,6 +63,7 @@ export function inQueryPeriod(item: DigestItem, q: Query): boolean {
 
 export function matchesFilters(item: DigestItem, q: Query): boolean {
   if (q.categories.length && !q.categories.some((c) => item.categories.includes(c))) return false;
+  if (q.kinds.length && !q.kinds.includes(item.kind)) return false;
   if (q.importance === "high" && item.importance.level !== "high") return false;
   if (q.importance === "notable-or-high" && item.importance.level === "normal") return false;
   const t = q.text.trim().toLowerCase();

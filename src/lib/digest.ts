@@ -1,5 +1,6 @@
 import type { NormalizedItem } from "./types.js";
 import type { DigestItem } from "./query.js";
+import { decideKind } from "./slide-kind.js";
 
 export interface SummaryFile {
   schema: 1;
@@ -49,6 +50,7 @@ export function buildDigestItems(items: NormalizedItem[], summaries: Map<string,
       products: i.products,
       productCategories: i.productCategories,
       categories: i.categories,
+      kind: decideKind({ title: i.title, tags: i.tags, availabilities: i.availabilities }).kind,
       importance: { level: i.importance.level, score: i.importance.score, topics: i.importance.topics },
       availabilities: i.availabilities,
       availabilityDates: i.availabilityDates,
