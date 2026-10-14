@@ -1,0 +1,83 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["572940"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T19:55:00Z"
+  },
+  "slides": [
+    {
+      "key": "572940",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure HorizonDB が提供リージョンを拡大",
+        "subtitleJa": "PostgreSQL ワークロードを、アプリやユーザーに近い場所へ（パブリック プレビュー）",
+        "en": "Public Preview: Azure HorizonDB expands to additional regions"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "October" }],
+        "status": "In preview",
+        "products": ["Azure HorizonDB"],
+        "categories": ["databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Azure HorizonDB** を評価中／検討中で、配置リージョンを選びたい PostgreSQL の利用者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ワークロードに合わせて、デプロイ先リージョンの選択肢が増える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューのため評価向け。新リージョンは Azure portal で確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "Azureリージョン", "retrievedAt": "2026-10-14T19:55:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "追加のリージョンで利用でき、アプリやユーザーに近い場所に PostgreSQL ワークロードを配置しやすくなる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "PostgreSQL 上に構築された、フル マネージドの AI 対応データベース サービス", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "冒頭", "retrievedAt": "2026-10-14T19:55:00Z" }] },
+            { "text": "概要ページの掲載リージョン: 米国東部・米国中部・カナダ中部・ドイツ中西部・オーストラリア東部・韓国中部 ほか", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "Azureリージョン", "retrievedAt": "2026-10-14T19:55:00Z" }] },
+            { "text": "リージョンは今後も追加予定。一部では新規デプロイに制限がある場合あり", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "Azureリージョン / Note", "retrievedAt": "2026-10-14T19:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プレビュー中は、リージョン間の読み取りレプリカやカスタマー マネージド キーは未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "制限事項", "retrievedAt": "2026-10-14T19:55:00Z" }] },
+            { "text": "バックアップ保有期間は現在 7 日間。仮想ネットワーク インジェクションは未対応（プライベート リンクは対応）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "制限事項", "retrievedAt": "2026-10-14T19:55:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "自社の利用リージョンが対象か、Azure portal で確認してから検証を始める", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "制限事項（CMK・VNet 統合・リージョン間レプリカ）が要件に合うか事前に照合する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-horizondb", "term": "Azure HorizonDB", "type": "product", "oneLine": { "text": "PostgreSQL 上に構築された、クラウド ネイティブのフル マネージド データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "冒頭", "retrievedAt": "2026-10-14T19:55:00Z" }] } },
+        { "termKey": "postgresql", "term": "PostgreSQL", "type": "term", "oneLine": { "text": "HorizonDB が完全な互換性を維持している、オープンソースのリレーショナル データベース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "冒頭", "retrievedAt": "2026-10-14T19:55:00Z" }] } },
+        { "termKey": "horizondb-cluster", "term": "クラスター", "type": "feature", "oneLine": { "text": "コンピューティング レプリカと、全レプリカが共有するゾーン回復性ストレージからなる HorizonDB のリソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "クラスター", "retrievedAt": "2026-10-14T19:55:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、全 Azure 利用者が評価とフィードバックのために使える段階。通常は SLA なし。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T19:55:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=572940",
+        "learn": [{ "title": "Azure HorizonDB (プレビュー) とは", "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
