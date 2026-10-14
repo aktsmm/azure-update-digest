@@ -63,7 +63,8 @@ function toParams(q: Query, keepPeriod: boolean): string {
 function coverageBanner(r: QueryResult): string {
   const c = r.coverage;
   const ranges = c.coveredRanges.map((x) => `${x.start}〜${x.end}`).join(", ") || "なし";
-  if (c.status === "complete") return `<div class="banner complete"><strong>取得状態: 全件取得済み</strong>（この期間の更新はすべて取得済みです）${c.note ? `<br>${esc(c.note)}` : ""}</div>`;
+  // fully fetched periods need no banner; only partial / not-fetched states are called out (data time is in the footer)
+  if (c.status === "complete") return "";
   if (c.status === "partial") return `<div class="banner partial"><strong>取得状態: 一部のみ取得</strong>　取得済みの範囲: ${esc(ranges)}。件数は取得済み分のみで、全件ではありません。${c.note ? `<br>${esc(c.note)}` : ""}</div>`;
   return `<div class="banner not-fetched"><strong>取得状態: 未取得</strong>　この期間はまだ取得していないため、「0件」ではありません。</div>`;
 }
