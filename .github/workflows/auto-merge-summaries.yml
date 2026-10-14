@@ -1,0 +1,66 @@
+name: Auto-merge summaries
+
+# Merges PRs created by the summarize agentic workflow once they are provably safe:
+# data-only changes, validated against trusted code from main.
+on:
+  workflow_run:
+    workflows: ["Azure Update Digest — summaries and related documents"]
+    types: [completed]
+  schedule:
+    - cron: "47 */3 * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: data-write
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      pull-requests: write
+    outputs:
+      merged: ${{ steps.run.outputs.merged }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Validate and merge eligible PRs
+        id: run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          merged=false
+          for n in $(gh pr list --state open --json number,headRefName,labels,author \
+              -q '.[] | select((.headRefName | startswith("summaries/")) and (.labels | map(.name) | index("data"))) | .number'); do
+            echo "== PR #$n"
+            bad=$(gh pr view "$n" --json files -q '.files[].path' | grep -Ev '^data/(summaries|related)/[A-Za-z0-9_-]+\.json$' || true)
+            if [ -n "$bad" ]; then echo "skip: touches non-data paths:"; echo "$bad"; continue; fi
+            git fetch -q origin "pull/$n/head"
+            git checkout -q -f origin/main -- data 2>/dev/null || true
+            git checkout -q FETCH_HEAD -- data/summaries data/related
+            if ! npm run -s validate; then echo "skip: validation failed"; git reset -q --hard origin/main; continue; fi
+            git reset -q --hard origin/main
+            gh pr merge "$n" --squash && merged=true
+          done
+          echo "merged=$merged" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: merge
+    if: needs.merge.outputs.merged == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml
