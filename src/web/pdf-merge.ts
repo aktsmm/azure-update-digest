@@ -1,4 +1,4 @@
-import { PDFDocument, rgb, type PDFFont, type PDFPage } from "pdf-lib";
+import { PDFDocument, concatTransformationMatrix, pushGraphicsState, rgb, type PDFFont, type PDFPage } from "pdf-lib";
 import fontkit from "@pdf-lib/fontkit";
 
 export interface SlideEntry { key: string; kind: string; label: string; title: string; publishedJst: string; categories: string[]; pages: number }
@@ -19,6 +19,13 @@ const TINT = rgb(0xea / 255, 0xf3 / 255, 0xfc / 255);
 const GRAY = rgb(0x3d / 255, 0x4a / 255, 0x5c / 255);
 const WHITE = rgb(1, 1, 1);
 const PER_TOC_PAGE = 13;
+// Chrome writes the 1280x720 px slides as 960x540 pt; draw the extra pages in px units on the same page size.
+const PT = 0.75;
+function newPage(doc: PDFDocument): PDFPage {
+  const p = doc.addPage([W * PT, H * PT]);
+  p.pushOperators(pushGraphicsState(), concatTransformationMatrix(PT, 0, 0, PT, 0, 0));
+  return p;
+}
 
 class Painter {
   constructor(private font: PDFFont) {}
@@ -59,7 +66,7 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
   const tocPages = Math.max(1, Math.ceil(n / PER_TOC_PAGE));
   const firstSlidePage = 1 + tocPages + 1 + 1;
 
-  const cover = doc.addPage([W, H]);
+  const cover = newPage(doc);
   tint(cover, 910); frame(cover);
   g.text(cover, "Microsoft Azure", 96, 218, 22, BLUE, true);
   g.text(cover, "Azure アップデート情報", 96, 258, 68, NAVY, true);
@@ -71,7 +78,7 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
 
   let page = firstSlidePage;
   for (let t = 0; t < tocPages; t++) {
-    const p = doc.addPage([W, H]);
+    const p = newPage(doc);
     frame(p);
     g.text(p, t === 0 ? "目次" : "目次（続き）", 70, 44, 34, NAVY, true);
     o.entries.slice(t * PER_TOC_PAGE, (t + 1) * PER_TOC_PAGE).forEach((e, i) => {
@@ -85,7 +92,7 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
     footer(g, p, "Azure アップデート情報", source);
   }
 
-  const sum = doc.addPage([W, H]);
+  const sum = newPage(doc);
   frame(sum);
   g.text(sum, "概要", 70, 44, 34, NAVY, true);
   const kinds = new Map<string, number>();
@@ -107,7 +114,7 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
     o.onProgress?.(++done, n);
   }
 
-  const end = doc.addPage([W, H]);
+  const end = newPage(doc);
   tint(end, 790); frame(end);
   const w = g.width("以上", 64);
   g.text(end, "以上", (W - w) / 2, 290, 64, NAVY, true);
