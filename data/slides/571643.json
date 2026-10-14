@@ -1,0 +1,96 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571643"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T22:15:00Z"
+  },
+  "slides": [
+    {
+      "key": "571643",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure SQL の 2026 年 9 月下旬アップデートが一般提供（GA）に",
+        "subtitleJa": "Hyperscale の 192 vCore、インデックス自動圧縮、ポータルのクエリ エディターなどをまとめて提供",
+        "en": "Generally Available: Azure SQL updates for late-September 2026"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "modifiedJst": "2026-09-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure SQL Database** の運用者・開発者、SSMS や SQL ドライバーの利用者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "大規模ワークロードのスケールや保守・開発作業の効率化に役立つ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用中の機能に関連する項目から順に試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Hyperscale Premium シリーズに 160 / 192 vCore を追加（従来上限 128 vCore 比で最大 50% 増）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "インデックスの自動圧縮は、最近変更された行を含むページのみを対象に継続実行される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/relational-databases/indexes/automatic-index-compaction?view=azuresqldb-current", "locator": "利点と考慮事項", "retrievedAt": "2026-10-14T22:15:00Z" }] },
+            { "text": "SSMS に移行先推奨、Results Grid、SQL フォーマッター、Schema Compare を追加", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "自動圧縮は既定で無効。ALTER DATABASE ... SET AUTOMATIC_INDEX_COMPACTION = ON で有効化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/relational-databases/indexes/automatic-index-compaction?view=azuresqldb-current", "locator": "有効化と無効化", "retrievedAt": "2026-10-14T22:15:00Z" }] },
+            { "text": "有効かどうかは sys.databases の is_automatic_index_compaction_on で確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/relational-databases/indexes/automatic-index-compaction?view=azuresqldb-current", "locator": "有効化と無効化", "retrievedAt": "2026-10-14T22:15:00Z" }] },
+            { "text": "Azure portal の SQL Query Editor で、外部ツールなしにクエリを実行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Hyperscale の Premium シリーズは、限られたリージョンでのみ利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/service-tier-hyperscale?view=azuresql", "locator": "利用可能なリージョン", "retrievedAt": "2026-10-14T22:15:00Z" }] },
+            { "text": "自動圧縮の対象は B ツリーのリーフ ページのみ。ヒープや列ストアは対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/relational-databases/indexes/automatic-index-compaction?view=azuresqldb-current", "locator": "制限事項", "retrievedAt": "2026-10-14T22:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "自動圧縮は、全ページを処理する再構築・再編成よりオーバーヘッドが小さい", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/relational-databases/indexes/automatic-index-compaction?view=azuresqldb-current", "locator": "利点と考慮事項", "retrievedAt": "2026-10-14T22:15:00Z" }] },
+            { "text": "Schema Compare は接続済みデータベース、SQL プロジェクト、.dacpac を比較対象にできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "保守ジョブなしで領域の増加を抑えたいデータベースで自動圧縮を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "圧縮で多数の行が移動すると、ログ書き込みやログ バックアップが増える場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/relational-databases/indexes/automatic-index-compaction?view=azuresqldb-current", "locator": "利点と考慮事項", "retrievedAt": "2026-10-14T22:15:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "SQL データベース エンジンに基づくクラウド データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/service-tier-hyperscale?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-10-14T22:15:00Z" }] } },
+        { "termKey": "hyperscale", "term": "Hyperscale", "type": "feature", "oneLine": { "text": "高パフォーマンスでコスト効率に優れた Azure SQL Database のサービス レベル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/service-tier-hyperscale?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-10-14T22:15:00Z" }] } },
+        { "termKey": "index-compaction", "term": "インデックスの自動圧縮", "type": "feature", "oneLine": { "text": "保守ジョブなしで、ストレージや I/O の消費を継続的に抑える機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/relational-databases/indexes/automatic-index-compaction?view=azuresqldb-current", "locator": "冒頭", "retrievedAt": "2026-10-14T22:15:00Z" }] } },
+        { "termKey": "ssms", "term": "SSMS", "type": "product", "oneLine": { "text": "SQL Server Management Studio の略称で、SQL の管理・開発ツール。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T22:15:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571643",
+        "learn": [
+          { "title": "ハイパースケール サービス レベル", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/service-tier-hyperscale?view=azuresql", "locale": "ja-jp" },
+          { "title": "インデックスの自動コンパクション", "url": "https://learn.microsoft.com/ja-jp/sql/relational-databases/indexes/automatic-index-compaction?view=azuresqldb-current", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
