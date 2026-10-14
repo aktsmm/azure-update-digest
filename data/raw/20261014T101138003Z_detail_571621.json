@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "571621"
+  },
+  "fetchedAt": "2026-10-14T10:11:38.003Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "571621",
+    "created": "2026-09-16T14:13:08.8483041Z",
+    "description": "Azure Red Hat OpenShift with hosted control planes is now in public preview. It is a new deployment option for Azure Red Hat OpenShift that runs the OpenShift control plane as a fully managed service, separate from the worker nodes that run customer applications. Azure Red Hat OpenShift with hosted control planes accelerates application modernization by providing a fully managed OpenShift platform operated by Microsoft and Red Hat SREs, allowing teams to focus on building applications instead of managing infrastructure. Organizations can modernize at their own pace and run virtual machines, containers, and cloud-native applications on a single AI-ready platform.This deployment model enables developers to move faster. Clusters provision in minutes, and development and test environments can scale down during idle periods and scale back up when needed. This helps teams to accelerate experimentation, shorten testing cycles, and bring applications to production more quickly while optimizing infrastructure spend. Azure Red Hat OpenShift with hosted control planes simplifies operations across growing multi-cluster environments by separating control plane and worker node lifecycles, giving organizations greater flexibility over application upgrades. Teams can scale across regions and environments, customize networking, and maintain operational consistency while Microsoft and Red Hat manage the underlying platform. Azure Red Hat OpenShift with hosted control planes strengthens security through managed identity and workload identity, using short-lived, automatically rotated tokens instead of stored credentials. Organizations can integrate with their existing identity providers and enhance compliance with default etcd encryption and bring-your-own- keys to meet data residency, sovereignty, and regulatory requirements. Public preview is available in UK South, Canada Central, Australia East, Switzerland North, Brazil South, Central India, East US 2, and West Europe. To get started, create a new Azure Red Hat OpenShift cluster with hosted control planes through the Azure CLI, REST API, or Bicep. Azure Red Hat OpenShift with standard architecture remains fully supported and actively developed.  Learn more.",
+    "id": "571621",
+    "modified": "2026-09-16T14:13:08.8483041Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Red Hat OpenShift"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Red Hat OpenShift with hosted control planes "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

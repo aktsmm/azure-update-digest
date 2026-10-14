@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "573861"
+  },
+  "fetchedAt": "2026-10-14T10:07:01.261Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "573861",
+    "created": "2026-10-05T17:41:41.9221035Z",
+    "description": "Announcing the Public Preview of IPv6 support for Application Gateway WAF.Application Gateway Web Application Firewall (WAF) now supports inspection and enforcement for IPv6 traffic in Public Preview, marking a major step forward in modernizing the platform for dual‑stack environments. As IPv6 adoption accelerates globally due to IPv4 exhaustion and modern connectivity requirements, this enhancement enables customers to embrace IPv6 without compromising their security posture.With this update, Application Gateway WAF extends its full protection stack -including managed rule sets, custom rules, and diagnostics - to IPv6 traffic. Customers operating dual‑stack applications can now apply consistent security controls across both IPv4 and IPv6. Additionally, IPv6 geo‑based custom rules are available through AFEC enrollment, providing more granular traffic governance during the preview.Learn\nmore.",
+    "id": "573861",
+    "modified": "2026-10-05T17:41:41.9221035Z",
+    "previewAvailabilityDate": "2026-10",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway",
+      "Web Application Firewall"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Public Preview: IPv6 Support for Application Gateway WAF "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

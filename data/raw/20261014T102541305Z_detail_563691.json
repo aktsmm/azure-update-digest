@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563691"
+  },
+  "fetchedAt": "2026-10-14T10:25:41.305Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563691",
+    "created": "2026-06-03T19:00:25.4471206Z",
+    "description": "Azure AI Speech moves the Custom Voice authoring experience into the Microsoft Foundry portal in general availability. Approved Custom Voice customers can now upload voice talent recordings and consent statements, run data quality checks, train neural voice models, and deploy to endpoints from the same Foundry project that hosts their text-to-speech, Speech-to-text, and Voice Live workloads.  They can also train Personal voice in Foundry. The experience replaces the previous Speech Studio Custom Voice flow with consistent Foundry navigation, role-based access, and project-scoped resources. Existing custom voice models, test scripts, and endpoints carry over without retraining. Custom Voice remains a Limited Access feature, so customers must already be approved through the intake form before they can use the portal. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563691",
+    "modified": "2026-06-03T19:00:25.4471206Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Custom Voice portal experience in Microsoft Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

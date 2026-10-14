@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "571919"
+  },
+  "fetchedAt": "2026-10-14T10:10:20.785Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "571919",
+    "created": "2026-09-22T18:51:48.5685957Z",
+    "description": "Flex Nodes for AKS is a deployment option for application and platform teams to use hybrid and edge infrastructure as connected worker nodes to an AKS control plane in Azure. Flex Nodes provide a consistent Kubernetes control plane while enabling teams to govern and secure compute for latency, regulatory, or sovereign needs. Rather than deploying an operating a complete Kubernetes cluster with a local control plane, Flex Nodes for AKS are designed for connected environments where only the worker nodes run at the edge or on customer infrastructure. Flex Nodes for AKS is ideal for applications that require local execution but not local operations, including AI inference, data processing, industrial applications, content delivery, branch office services, and latency-sensitive business workloads.Learn more.",
+    "id": "571919",
+    "modified": "2026-09-22T18:51:48.5685957Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Flex Nodes for AKS"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

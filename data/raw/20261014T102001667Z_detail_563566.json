@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "563566"
+  },
+  "fetchedAt": "2026-10-14T10:20:01.667Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Effective",
+        "year": 2026
+      }
+    ],
+    "baseId": "563566",
+    "created": "2026-07-15T18:50:14.883913Z",
+    "description": "Microsoft Agent Framework adds the CodeAct pattern in public preview, which lets agents collapse a multi-step plan into a single executable code block rather than chaining one tool call at a time. In representative workloads, CodeAct cut end-to-end latency by roughly 50 percent and token use by more than 60 percent compared with step-by-step orchestration. The framework runs CodeAct programs inside Hyperlight, a Microsoft-built sandboxed container runtime that boots in milliseconds and isolates each execution from the host and from other agents. Developers get the productivity of letting the model write code without giving up the safety properties that enterprises require for production agents. Both capabilities ship through the framework on GitHub in .NET and Python. Learn more.",
+    "id": "563566",
+    "modified": "2026-07-15T18:50:14.883913Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "tags": [
+      "Microsoft Build",
+      "Feature",
+      "Announcement"
+    ],
+    "title": "Announcing: CodeAct pattern and Hyperlight containers in Microsoft Agent Framework"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

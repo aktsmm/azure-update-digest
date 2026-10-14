@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "562365"
+  },
+  "fetchedAt": "2026-10-14T10:27:39.066Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562365",
+    "created": "2026-06-02T19:30:20.2853906Z",
+    "description": "Rolling updates are now generally available in the Flex Consumption plan, delivering zero-downtime deployments with a simple configuration change.Instead of forcefully restarting all instances during code or configuration updates, the platform gracefully replaces live instances by draining batches every few seconds while dynamically scaling out the latest version to meet demand. This approach ensures uninterrupted execution and resilient throughput across HTTP, non-HTTP, and Durable workloads - even during intensive scale-out scenarios.How to enable:In the Azure Portal, enable it from the Configuration blade Update your ARM/Bicep template with `properties.functionAppConfig.siteUpdateStrategy.type` set to `RollingUpdate`For Durable Functions, configure an orchestration match strategy (see guidance).Known limitations:Scale-out issues may occur with low HTTP concurrency; recommended value is 16.No automatic rollback; roll forward by redeploying the last healthy version.Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562365",
+    "modified": "2026-06-02T19:30:20.2853906Z",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Build"
+    ],
+    "title": "Generally Available: Rolling updates in Flex Consumption "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

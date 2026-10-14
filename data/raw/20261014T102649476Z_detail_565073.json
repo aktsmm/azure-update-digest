@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "565073"
+  },
+  "fetchedAt": "2026-10-14T10:26:49.476Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "565073",
+    "created": "2026-06-02T22:00:05.7377172Z",
+    "description": "Azure Files now supports access\nfrom macOS using Entra ID authentication (Public Preview), enabling secure,\nidentity-based access to file shares for cross-platform teams. This expands\nsupport for modern workflows, allowing users on macOS to seamlessly access and\ncollaborate on shared data alongside Windows environments. Key benefits include:\n Enhanced security posture:\nPassword-less access from macOS using Entra ID - no credential prompts or\nstorage account keys—enforced by Conditional Access, MFA, and AES-256\nencryption Reduced operational overhead:\nEliminate key management; access is provisioned and governed through Entra ID\ngroups  No Active Directory dependency:\nEnable full access to Azure Files using cloud identities - no domain\ncontrollers required  True identity-based access model:\nKerberos authentication with Azure RBAC and NTFS ACLs for precise, layered\naccess control  Accelerated AI workflows:\nSeamless access to large datasets from macOS to support faster experimentation\nand development  Reach out to azurefiles@microsoft.com with questions. Learn\nmore.",
+    "id": "565073",
+    "modified": "2026-06-02T22:00:05.7377172Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Files"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Build",
+      "Security",
+      "Feature"
+    ],
+    "title": "Public Preview: Secure, Modern Access to Azure Files on macOS with MS Entra ID "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

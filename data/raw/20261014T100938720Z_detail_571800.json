@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "571800"
+  },
+  "fetchedAt": "2026-10-14T10:09:38.720Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "571800",
+    "created": "2026-09-28T22:07:19.1716197Z",
+    "description": "Vector search and vector indexes are now generally available in Azure SQL Database. Using the CREATE VECTOR INDEX and VECTOR_SEARCH T-SQL capabilities, you can perform efficient approximate nearest neighbor (ANN) searches for AI scenarios such as semantic search, retrieval-augmented generation (RAG), recommendation systems, and image search. Built on the DiskANN algorithm, vector indexes enable efficient vector similarity search over large datasets while allowing you to combine vector search with relational queries and filtering directly in Azure SQL Database. By bringing AI retrieval directly into Azure SQL Database, you can build AI-powered applications on your enterprise data without requiring a separate vector database, simplifying application architecture while leveraging the reliability, security, and governance capabilities of Azure SQL Database. Learn more.",
+    "generalAvailabilityDate": "2026-09",
+    "id": "571800",
+    "modified": "2026-09-28T22:07:19.1716197Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Vector search and vector indexes in Azure SQL "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

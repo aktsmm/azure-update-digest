@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "568339"
+  },
+  "fetchedAt": "2026-10-14T10:17:18.257Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "568339",
+    "created": "2026-08-03T17:00:56.6053348Z",
+    "description": "To enhance backup protection, Azure SQL Database and Azure SQL Managed Instance now automatically apply immutability to the most recent seven days of backups. This capability is enabled by default for all databases, regardless of the configured point-in-time restore retention period. No action or configuration is required.Note: Support for Azure SQL Hyperscale backups is coming in a future release.Learn more.",
+    "generalAvailabilityDate": "2026-08",
+    "id": "568339",
+    "modified": "2026-08-03T17:00:56.6053348Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database",
+      "Azure SQL Managed Instance"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Immutability to the most recent seven days of backups on Azure SQL Database and Azure SQL Managed Instance "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

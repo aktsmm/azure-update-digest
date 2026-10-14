@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "571857"
+  },
+  "fetchedAt": "2026-10-14T10:08:47.478Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "571857",
+    "created": "2026-09-29T17:40:40.709973Z",
+    "description": "Auto-pause and auto-resume are now available in public preview for Azure SQL Hyperscale databases using the Serverless compute tier. You can configure databases to automatically pause during periods of inactivity and automatically resume when activity returns, helping reduce costs for workloads that experience extended or predictable idle periods.  When a database is paused, compute billing stops and only storage-related charges continue to apply. Auto-pause and auto-resume can be enabled for both new and existing Azure SQL Hyperscale databases using the Serverless compute tier.  Learn more. ",
+    "id": "571857",
+    "modified": "2026-09-29T17:40:40.709973Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Azure SQL Database Hyperscale Serverless auto-pause and auto-resume "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "570025"
+  },
+  "fetchedAt": "2026-10-14T10:13:46.852Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "570025",
+    "created": "2026-08-26T16:56:29.1432127Z",
+    "description": "Azure Bastion support for IPv4 and IPv6 dual-stack\nconfigurations is now available in public preview. Customers can configure a\nnewly created Bastion deployment with both IPv4 and IPv6 public IP addresses. IPv6 is supported for connections between the user and Azure\nBastion. Connections from Azure Bastion to target virtual machines continue to\nuse IPv4. Existing IPv4-only Bastion deployments cannot currently be converted\nto dual stack. Learn more.",
+    "id": "570025",
+    "modified": "2026-08-26T16:56:29.1432127Z",
+    "previewAvailabilityDate": "2026-08",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure Bastion"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Public Preview: IPv6 dual-stack support for Azure Bastion"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

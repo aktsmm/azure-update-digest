@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "568631"
+  },
+  "fetchedAt": "2026-10-14T10:17:28.392Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "568631",
+    "created": "2026-07-31T20:48:35.6960868Z",
+    "description": "Route maps for Azure Route Server are now available in\npublic preview, providing fine-grained control over inbound and outbound routing\nacross hybrid connections. Customers can manage routes advertised to and from\nAzure Route Server BGP peerings with Network Virtual Appliances (NVAs),\nExpressRoute gateways, and VPN gateways in the same virtual network. Route-maps\nprovide the following capabilities: Route summarization: Summarize routes\nwhen on-premises networks connect to the virtual network through ExpressRoute\nor VPN. Route control: Control routes entering\nand leaving Azure Route Server between on-premises networks, NVAs, and virtual\nnetworks. Path selection: Modify BGP attributes\nsuch as AS-PATH to make routes more or less preferred. Route tagging: Tag routes by using the\nBGP Community attribute. Learn\nmore. ",
+    "id": "568631",
+    "modified": "2026-07-31T20:48:35.6960868Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Azure Route Server"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Route-Maps for Azure Route Server"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

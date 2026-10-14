@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "564543"
+  },
+  "fetchedAt": "2026-10-14T10:28:03.227Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "564543",
+    "created": "2026-06-02T19:30:20.2853906Z",
+    "description": "Azure Linux 4.0,\nMicrosoft's first-party Linux distribution purpose-built for Azure, is now\navailable in public preview for Azure Virtual Machines and VM Scale Sets. It brings a modernized stack — including Linux kernel 6.18 LTS, dnf5 package\nmanager, glibc 2.42, OpenSSL 3.5, and Python 3.14 — optimized for Azure\ncompute, storage, and networking. It delivers faster VM startup and\nprovisioning with a reduced package footprint and a security-first design.   Key highlights: Azure-tuned kernel — Linux 6.18 LTS with improved Hyper-V integration, GPU/AI accelerator\nsupport, and new hardware drivers Secure by default — Secure Boot, Trusted Launch, SELinux support, kernel hardening, and\nSBOMs published with target SLSA Level 3 Minimal footprint — Ships only the packages required for cloud workloads, reducing attack\nsurface from day one No additional OS licensing cost — Included with Azure compute; no separate OS licensing fees or support\ncontracts Microsoft-owned supply chain — From kernel to CVE response, enabling fast-track Critical/High CVE\npatches with monthly security updates Predictable lifecycle —full support with LTS kernel and annual HWE kernel updates for new\nhardware platforms Container images — Base, and distroless images available on Microsoft Container Registry\n(MCR) Learn more:Azure Linux 4.0 Build blog post   Azure Linux on GitHub Release notes ",
+    "id": "564543",
+    "modified": "2026-06-02T19:30:20.2853906Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Linux Virtual Machines",
+      "Azure Linux"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Open Source",
+      "Services"
+    ],
+    "title": "Public preview: Azure Linux 4.0 for Azure Virtual Machines and VM Scale Sets"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

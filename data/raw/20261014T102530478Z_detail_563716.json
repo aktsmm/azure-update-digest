@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563716"
+  },
+  "fetchedAt": "2026-10-14T10:25:30.478Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563716",
+    "created": "2026-06-03T19:15:46.0290041Z",
+    "description": "Microsoft Foundry Agent Service adds agent-to-agent (A2A) communication in public preview for Prompt agents and Hosted agents that use the responses protocol. Agents can call other agents by name through a managed endpoint, with identity, content safety, and audit logging applied to every hop. Developers can model multi-step business processes as a small set of cooperating agents instead of a single monolithic prompt, then trace the full conversation across agents in Application Insights. Because A2A is a first-class protocol in Agent Service, agents written with Agent Framework, LangGraph, or direct code can all participate in the same network without protocol shims. This release helps teams move from single-agent prototypes toward production multi-agent systems with the same enterprise controls already used for individual agents. Learn more.",
+    "id": "563716",
+    "modified": "2026-06-03T19:15:46.0290041Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Agent-to-agent (A2A) support for Prompt agents and Hosted agents in Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

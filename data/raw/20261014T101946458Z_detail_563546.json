@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "563546"
+  },
+  "fetchedAt": "2026-10-14T10:19:46.458Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Effective",
+        "year": 2026
+      }
+    ],
+    "baseId": "563546",
+    "created": "2026-07-15T18:55:40.0424263Z",
+    "description": "Microsoft Agent Framework reaches general availability for Agent Harness, the production runtime for agents built with the framework. Customers running pilots on the preview harness can now move the same agent code into production with backwards compatibility, SLA-backed support, and stable interfaces for tool calls, state, and telemetry. The GA release ships in .NET and Python, supports local development, container deployment, and Foundry Hosted Agents from one binary, and emits OpenTelemetry traces that show up in Foundry observability dashboards without custom wiring. Enterprise customers building internal copilots and customer-facing agents get a single supported runtime instead of stitching together orchestration, retries, and instrumentation. The framework remains open source on GitHub. Learn more.",
+    "id": "563546",
+    "modified": "2026-07-15T18:55:40.0424263Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "tags": [
+      "Microsoft Build",
+      "Feature",
+      "Announcement"
+    ],
+    "title": "Announcing: Agent Harness in Microsoft Agent Framework"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

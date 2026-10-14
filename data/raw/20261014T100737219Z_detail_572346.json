@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "572346"
+  },
+  "fetchedAt": "2026-10-14T10:07:37.219Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Retirement",
+        "year": 2029
+      }
+    ],
+    "baseId": "572346",
+    "created": "2026-09-30T17:07:30.9170547Z",
+    "description": "As part of the Microsoft Azure VM lifecycle\npolicy, Microsoft is announcing the retirement of the Dv3, Dsv3, Ev3, and\nEsv3 Azure VM series in public cloud Azure regions. These VMs will enter the\nEnd-of-Life lifecycle stage and retire on November 15, 2029. We know migrating production workloads takes planning and\nengineering time. To keep your applications and workloads running without\ninterruption, migrate any Dv3, Dsv3, Ev3, or Esv3 series VMs to a newer VM\nseries before November 15, 2029. After this date, Dv3, Dsv3, Ev3, and Esv3\nvirtual machines will enter the Retired lifecycle stage and will no longer be\nsupported on Azure. Virtual machines not transitioned by that time may be\ndeallocated and ultimately deleted as the underlying hardware and platform\ninfrastructure are retired. We recommend evaluating available modernization\noptions as soon as possible and moving to newer VM generations, such as Azure\nDsv5 or Esv5v5 series virtual machines, to maintain uninterrupted service and\ngain improved performance, security, and reliability.  Additionally, as previously\ncommunicated, as of July 1, 2026, one-year and three-year Reserved\nInstances (RIs) for the Dv3, Dsv3, Ev3, and Esv3 VM series are no\nlonger available for purchase or renewal. If you would like to continue\ncommitment savings, we recommend reviewing your current\nreserved instance orders and if RIs are still in effect for these\nVMs, consider a trade-in\nof active reservations for Azure\nsavings plan for compute contracts.   Help and support   Microsoft is committed to ensuring every customer navigates\nthis transition quickly, successfully, and with clarity. Customers with an\nactive support plan can submit a support\nrequest for technical assistance with migration planning and execution. For\ngeneral questions, Microsoft\nQ&A provides access to community experts.  Learn more:   \n Azure Virtual\n     Machines Lifecycle policy  \n v5 modernization\n     guide   \n Modernize\n     to the v6 and v7 VM series - Azure Virtual Machines ",
+    "id": "572346",
+    "modified": "2026-09-30T17:07:30.9170547Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Dv3, Dsv3, Ev3, and Esv3 Azure VMs "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

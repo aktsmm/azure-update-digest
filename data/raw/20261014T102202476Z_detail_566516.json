@@ -1,0 +1,40 @@
+{
+  "args": {
+    "id": "566516"
+  },
+  "fetchedAt": "2026-10-14T10:22:02.476Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "566516",
+    "created": "2026-06-24T19:00:43.412377Z",
+    "description": "Application Gateway for Containers is extending its ingress gateway feature set with new AI gateway capabilities. The new inference gateway capability brings the Kubernetes Gateway API Inference Extension to Application Gateway for Containers, enabling load and model-aware routing for self-hosted generative AI workloads on AKS.Application Gateway for Containers' inference gateway capability is purpose-built for serving LLMs and other inference workloads, routing requests based on model server signals rather than generic load balancing — improving Time to First Token (TTFT) and reducing timeouts under load.Managed Body-Based Router (BBR): A fully managed router that inspects the request body (such as the model field on OpenAI-compatible APIs) to drive model-aware routing — no custom proxy tier required.Bring your own Endpoint Picker (EPP): Choose the EPP implementation that fits your workload to drive metrics-aware endpoint selection across your InferencePool.Secure inference: Pairs natively with the existing web application firewall (WAF) capability in Application Gateway for Containers, applying OWASP-aligned protections to AI traffic before it reaches your model servers.Improved performance and reliability: Routes around saturated replicas and leverages model server state to lower TTFT, reduce timeouts, and improve GPU utilization.Learn more:Application Gateway for Containers – AI gateway - Inference gatewayApplication Gateway for Containers - Overview",
+    "id": "566516",
+    "modified": "2026-06-24T19:00:43.412377Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Networking",
+      "Security",
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Application Gateway",
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Services"
+    ],
+    "title": "Public Preview: Application Gateway for Containers – Inference gateway"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

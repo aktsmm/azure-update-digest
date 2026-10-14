@@ -1,0 +1,41 @@
+{
+  "args": {
+    "id": "570105"
+  },
+  "fetchedAt": "2026-10-14T10:13:38.099Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "570105",
+    "created": "2026-08-28T15:45:32.7674509Z",
+    "description": "Overview:Azure VM Image Builder is now generally available in Azure Government, China North 3, Azure Government Secret, and Azure Government Top Secret.You can now use the same managed image-building service across your sovereign and air-gapped environments that you use in global Azure.What you can do with it:Automate image customization with a secure, fully managed service. There's no self-hosted build infrastructure to deploy, patch, or operate.Use consistent image pipelines across global Azure, Azure Government, and sovereign clouds, so the same template definitions and workflows carry across your estate.Build repeatable hardening and validation workflows for OS configuration, security baselines, and compliance checks.Distribute images where you need them by publishing build output to Azure Compute Gallery and replicating across regions within the same cloud.Who this is for:Azure VM Image Builder in these clouds is built for you if you operate in regulated industries, government and public sector environments, or workloads with strict data residency, sovereignty, or isolation requirements — and you need standardized golden images without giving up local compliance controls.Learn more:Azure VM Image Builder overview — how the service works, supported scenarios, and architectureCreate an image template — full schema reference for your image configuration templatesQuickstarts and samples on GitHub — ready-to-use Windows and Linux build templates",
+    "generalAvailabilityDate": "2026-08",
+    "id": "570105",
+    "modified": "2026-08-28T15:45:32.7674509Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Azure VM Image Builder"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Management",
+      "Operating System",
+      "Regions & Datacenters",
+      "SDK and Tools",
+      "Services",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure VM Image Builder in sovereign and air-gapped clouds"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "568178"
+  },
+  "fetchedAt": "2026-10-14T10:06:30.530Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Retirement",
+        "year": 2029
+      }
+    ],
+    "baseId": "568178",
+    "created": "2026-10-06T18:24:43.7287643Z",
+    "description": "Azure App Service on Azure Stack Hub will be retired on September\n30, 2029. Starting September 30, 2026, new installations will\nno longer be supported, and no new product releases, features, or enhancements\nwill be made available. Existing supported deployments can continue to run and\nupgrade to the latest available release until retirement. Customers should begin planning migration to Azure App\nService in Azure now to continue receiving support, security updates, platform improvements,\nand new capabilities. On September 30th, 2029, App Service on\nAzure Stack will reach retirement and Microsoft support will end. Recommended action  Assessand migrate applications as soon as possible. Azure\nApp Service in Azure provides a fully managed platform with global availability,\nWindows and Linux hosting options, autoscale, deployment slots, advanced\nnetworking and security, Azure services integration, and continuous innovation. For applications with complex Windows dependencies, evaluate\nManaged Instance on Azure App Service. It can help accelerate migration for\napplications requiring registry access, COM components, custom runtimes, or\nother Windows-specific dependencies. For a successful transition, inventory applications and\ndependencies, assess compatibility, select the appropriate Azure hosting\ntarget, migrate code, configuration, and data, validate workloads, and complete\nmigration before September 30, 2029. Learn more:  Benefits Plan Migrate ",
+    "id": "568178",
+    "modified": "2026-10-06T18:24:43.7287643Z",
+    "productCategories": [
+      "Compute",
+      "Mobile",
+      "Web",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "App Service",
+      "Azure Stack Hub"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Azure App Service on Azure Stack Hub"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "573214"
+  },
+  "fetchedAt": "2026-10-14T10:07:28.701Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "573214",
+    "created": "2026-09-30T17:11:11.2479988Z",
+    "description": "Teams running Ubuntu node pools on AKS need to stay current with Ubuntu LTS releases, but each OS transition can introduce package footprint, security, and compatibility concerns. Ubuntu 26.04 support introduces the Ubuntu2604 OS SKU using Ubuntu Minimal as the baseline image, while preserving existing AKS create, update, and node pool workflows. You get a smaller default host footprint, Linux LTS kernel 7.0, and a controlled migration path with rollback flexibility to Ubuntu 24.04 where supported. Learn more.",
+    "id": "573214",
+    "modified": "2026-09-30T17:11:11.2479988Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Ubuntu 26.04 support in AKS"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

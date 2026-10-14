@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "569873"
+  },
+  "fetchedAt": "2026-10-14T10:14:20.690Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "569873",
+    "created": "2026-08-24T18:36:01.7715232Z",
+    "description": "eBPF Host Routing in Advanced\nContainer Networking Services for Azure Kubernetes Service (AKS) is now\ngenerally available. eBPF Host Routing improves\nKubernetes networking performance by moving packet forwarding and routing\ndecisions directly into the Linux kernel using eBPF. This removes the overhead\nof iptables-based processing and reduces dependence on the host networking\nstack, resulting in lower latency, fewer network hops, and higher throughput\nfor application traffic. For large-scale AKS deployments, eBPF Host Routing\nhelps deliver more efficient network performance, improved scalability, and a\nbetter experience for latency-sensitive and high-traffic workloads. This release also\nintroduces an enhanced enablement experience that respects existing network\nconnections during rollout. When eBPF Host Routing is enabled on an existing\ncluster, AKS performs a controlled node rotation to transition nodes to the new\nnetworking mode, helping maintain connection continuity and minimize disruption\nto running applications.Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "569873",
+    "modified": "2026-08-24T18:36:01.7715232Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Build",
+      "Services"
+    ],
+    "title": "Generally Available: eBPF host routing in Advanced Container Networking Services for AKS"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

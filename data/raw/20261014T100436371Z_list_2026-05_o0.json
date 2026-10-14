@@ -1,0 +1,1380 @@
+{
+  "args": {
+    "filter": "created ge 2026-04-30T15:00:00Z and created lt 2026-05-31T15:00:00Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-14T10:04:36.371Z",
+  "ok": true,
+  "response": {
+    "hasMore": true,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "557852",
+        "created": "2026-05-21T21:45:32.2389902Z",
+        "description": "As part of\nAzure’s ongoing security improvements, App Service, Functions, and Logic Apps\nwill no longer accept connections using TLS 1.0 or TLS 1.1 after May 31, 2027.\nAny client, application, or serv...",
+        "id": "557852",
+        "modified": "2026-05-21T21:45:32.2389902Z",
+        "productCategories": [
+          "Compute",
+          "Mobile",
+          "Web",
+          "Containers",
+          "Internet of Things",
+          "Integration"
+        ],
+        "products": [
+          "App Service",
+          "Azure Functions",
+          "Logic Apps"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement:  TLS 1.0 and TLS 1.1 in Azure App Service, Azure Functions, and Azure Logic Apps"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "558403",
+        "created": "2026-05-05T17:30:03.000965Z",
+        "description": "We previously announced the availability of Application Gateway for\nContainers and the Application Gateway for Containers AKS\nAdd-on for Azure Kubernetes Service (AKS). At that time, one\nlimitation wa...",
+        "id": "558403",
+        "modified": "2026-05-05T17:30:03.000965Z",
+        "previewAvailabilityDate": "2026-05",
+        "productCategories": [
+          "Networking",
+          "Security",
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Application Gateway",
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Application Gateway for Containers managed add-on + AKS Automatic "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559242",
+        "created": "2026-05-13T17:30:20.3464999Z",
+        "description": "Azure Container Apps Express is now generally available. It is the simplest and fastest way to launch and scale powerful applications on Azure, from zero to hyperscale, without infrastructure decision...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "559242",
+        "modified": "2026-09-23T18:50:49.380591Z",
+        "previewAvailabilityDate": "2026-05",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Container Apps Express"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559494",
+        "created": "2026-05-19T16:00:11.1747817Z",
+        "description": "Azure\nStorage Actions, our fully managed platform that transforms how\norganizations automate data management tasks for Azure Blob and Data Lake\nStorage, now supports mock runs - a new way to simulate ...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "559494",
+        "modified": "2026-05-19T16:00:11.1747817Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Storage Actions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Mock runs for Azure Storage Actions – Validate before you execute"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "560283",
+        "created": "2026-05-06T23:00:22.1479934Z",
+        "description": "In early May 2026, the following update and\nenhancement was made to Azure SQL: \n Right‑size memory\n     for Business Critical Azure SQL Managed Instance to\n     improve performance without overprovisi...",
+        "id": "560283",
+        "modified": "2026-05-06T23:00:22.1479934Z",
+        "previewAvailabilityDate": "2026-05",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure SQL Managed Instance"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure SQL update for early-May 2026 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "560668",
+        "created": "2026-05-06T18:45:15.6306735Z",
+        "description": "Azure NetApp Files now enables backup by default when\ncreating new volumes, delivering a more seamless and secure data‑protection\nexperience. Backups are automatically provisioned during volume creati...",
+        "id": "560668",
+        "modified": "2026-05-06T18:45:15.6306735Z",
+        "previewAvailabilityDate": "2026-04",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure NetApp Files enable backup by default "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "560734",
+        "created": "2026-05-07T18:00:38.9821329Z",
+        "description": "Azure has announced the general availability of the new Dl/D/E v7 Virtual Machines, powered by the latest Intel® Xeon® 6 (Granite Rapids) processors. These general‑purpose and memory‑optimized VMs del...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "560734",
+        "modified": "2026-05-07T18:00:38.9821329Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Pricing & Offerings"
+        ],
+        "title": "Generally Available: Azure Dl/D/E v7 Virtual Machines"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "560879",
+        "created": "2026-04-30T17:15:44.1498367Z",
+        "description": "Azure Functions support for Java 25 is now generally\navailable.   You can now develop apps using Java 25 locally and deploy\nthem to supported Azure Functions plans on Linux and Windows,\nincluding the ...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "560879",
+        "modified": "2026-04-30T17:15:44.1498367Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Open Source"
+        ],
+        "title": "Generally Available: Azure Functions support for Java 25"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "560894",
+        "created": "2026-05-05T16:00:38.4579403Z",
+        "description": "Azure\nElastic SAN datastores are now supported with AV64 SKUs, enabling higher-scale\nand higher-performance storage options for Azure VMware Solution deployments.",
+        "generalAvailabilityDate": "2025-02",
+        "id": "560894",
+        "modified": "2026-05-05T16:00:38.4579403Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Elastic SAN"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: AVS Support for AV64 SKU on Azure Elastic SAN"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "560899",
+        "created": "2026-05-05T16:00:38.4579403Z",
+        "description": "Azure Elastic SAN now supports single volume snapshots,\nenabling incremental, point‑in‑time backups of individual SAN volumes.\nSnapshots capture only changes since the previous snapshot and reside wit...",
+        "generalAvailabilityDate": "2025-03",
+        "id": "560899",
+        "modified": "2026-05-05T16:00:38.4579403Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Elastic SAN"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Single Volume Snapshots on Azure Elastic SAN"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "560909",
+        "created": "2026-05-05T16:00:38.4579403Z",
+        "description": "Elastic SAN datastores deliver simpler connectivity\nand improved performance when used with AVS Gen2 Private Cloud:   Simpler connectivity & configuration   \n No ExpressRoute gateway required   \n A si...",
+        "generalAvailabilityDate": "2025-08",
+        "id": "560909",
+        "modified": "2026-05-05T16:00:38.4579403Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Elastic SAN"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Elastic SAN support for AVS Gen2 Private Cloud  "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "560948",
+        "created": "2026-05-05T20:00:13.4947532Z",
+        "description": "Starting July 1, 2026, purchases and\nrenewals will no longer be available\nfor one-year Azure Reserved VM Instances for the Av2,\nAmv2, Bv1, D, Ds, Dv2, Dsv2, F, Fs, Fsv2, G, Gs, Ls, and Lsv2 VM\nseries....",
+        "id": "560948",
+        "modified": "2026-05-05T20:00:13.4947532Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "tags": [
+          "Retirements",
+          "Pricing & Offerings"
+        ],
+        "title": "Retirement: Azure Reserved Virtual Machines Instances for select VM series"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "560957",
+        "created": "2026-05-04T17:45:58.1858461Z",
+        "description": "The Durable Task Scheduler Consumption SKU is now generally available. Run durable workflows and AI agent orchestrations on Azure with pay-per-use pricing. No storage to manage, no capacity to plan, a...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "560957",
+        "modified": "2026-05-04T17:45:58.1858461Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Functions durable task scheduler Consumption SKU"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "561049",
+        "created": "2026-05-19T17:15:23.1651186Z",
+        "description": "Azure App Configuration now supports a scorecards capability in public preview. Scorecards provide a telemetry-driven view of how feature flag variants are performing in production, helping teams iden...",
+        "id": "561049",
+        "modified": "2026-05-19T17:15:23.1651186Z",
+        "previewAvailabilityDate": "2026-05",
+        "productCategories": [
+          "Containers",
+          "Developer tools",
+          "Mobile",
+          "Security",
+          "Web"
+        ],
+        "products": [
+          "App Configuration"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Evaluate feature rollouts with Azure App Configuration Scorecards"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "561162",
+        "created": "2026-05-06T18:45:15.6306735Z",
+        "description": "Azure Cosmos DB Shell is now available in public preview, introducing a modern command-line experience with agentic capabilities powered by Model Context Protocol (MCP). You can now query, explore, an...",
+        "id": "561162",
+        "modified": "2026-05-06T18:45:15.6306735Z",
+        "previewAvailabilityDate": "2026-05",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure Cosmos DB Shell—your new command line for data workflows "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "561167",
+        "created": "2026-05-06T18:30:28.3953373Z",
+        "description": "Azure Cosmos DB now offers spherical quantization in public preview to help you achieve faster vector indexing with higher recall and accuracy at scale. Spherical quantization is an advanced vector co...",
+        "id": "561167",
+        "modified": "2026-05-06T18:30:28.3953373Z",
+        "previewAvailabilityDate": "2026-05",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure Cosmos DB spherical quantization for improved vector search "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2029
+          }
+        ],
+        "baseId": "561176",
+        "created": "2026-05-06T22:15:33.2855099Z",
+        "description": "On March 30, 2029, Azure Document Intelligence v3.0 API will be retired. Please migrate to latest generally available Azure Document Intelligence API version, v4.0, by that date. After March 30, 2029,...",
+        "id": "561176",
+        "modified": "2026-05-06T22:15:33.2855099Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Azure AI Document Intelligence"
+        ],
+        "tags": [
+          "Retirements",
+          "Services"
+        ],
+        "title": "Retirement: Azure Document Intelligence v3.0 API will be retired on March 30, 2029"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "561257",
+        "created": "2026-04-30T18:00:11.3409793Z",
+        "description": "Support for prefix-scoped access for User Delegation\nSAS for Azure Blob Storage is generally available in all\nAzure regions. SAS tokens for Blob Storage have historically supported\ntwo levels of scope...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "561257",
+        "modified": "2026-04-30T18:00:11.3409793Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Prefix-scoped access for User Delegation SAS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "561373",
+        "created": "2026-05-06T19:45:54.2869239Z",
+        "description": "Azure Backup now supports ‘Bulk Restore’ for Azure virtual machines (VMs), enabling customers to restore multiple VMs (upto 100) in a single operation. This feature simplifies large-scale recovery sce...",
+        "id": "561373",
+        "modified": "2026-05-06T19:45:54.2869239Z",
+        "previewAvailabilityDate": "2026-05",
+        "productCategories": [
+          "Management and governance",
+          "Storage"
+        ],
+        "products": [
+          "Azure Backup"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Bulk Restore for Azure Virtual Machines using Azure Backup"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "561392",
+        "created": "2026-05-01T21:45:13.8055981Z",
+        "description": "We support customer choice, including the choice to transfer\nyour data between Azure and environments outside of Azure. Azure has offered free egress\nand at-cost data\ntransfer for customers and CSP pa...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "561392",
+        "modified": "2026-05-01T21:45:13.8055981Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Management",
+          "Pricing & Offerings"
+        ],
+        "title": "Update: Egress and data transfer with Azure in the United Kingdom"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "561432",
+        "created": "2026-05-04T17:45:58.1858461Z",
+        "description": "We have identified an issue impacting Multi-line (Multiple\nNumber Assignment) feature for Teams Phone enablement related to the\nusage of AlternateId in customer internal implementations for\nAzure Comm...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "561432",
+        "modified": "2026-05-04T17:45:58.1858461Z",
+        "productCategories": [
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "Azure Communication Services"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Cleanup legacy AlternateId usage to ensure continued service"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "561510",
+        "created": "2026-05-12T17:30:34.911185Z",
+        "description": "We’ve rolled out two important improvements to enhance\naccuracy and control in pattern-based workflows: Revoke fix: Resolved an issue where revoke\nactions were not consistently applied, ensuring chang...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "561510",
+        "modified": "2026-05-12T17:30:34.911185Z",
+        "productCategories": [
+          "Hybrid + multicloud",
+          "Security"
+        ],
+        "products": [
+          "Microsoft Sentinel"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Sentinel TI - improved pattern parsing & revoke reliability"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "561564",
+        "created": "2026-05-12T23:45:17.2647146Z",
+        "description": "Azure Monitor dashboards with Grafana are generally available, bringing the power of Grafana’s open and composable visualization platform directly into the Azure Portal. This capability enables develo...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "561564",
+        "modified": "2026-05-12T23:45:17.2647146Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Open Source"
+        ],
+        "title": "Generally Available: Azure Monitor dashboards with Grafana in Public, Government (Fairfax) and China"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "561722",
+        "created": "2026-05-14T18:00:48.9998713Z",
+        "description": "To support seamless migration and operation of workloads\nthat use large files including Azure VMware Solution (AVS) virtual machines\nwith large VMDK disks, Azure\nNetApp Files now supports file sizes o...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "561722",
+        "modified": "2026-05-14T18:00:48.9998713Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Support for workloads with large files in Azure NetApp Files "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "561771",
+        "created": "2026-05-18T18:00:18.6632711Z",
+        "description": "Auto activation for SaaS solutions is now available in Microsoft Marketplace, making it faster and easier to get the value from your SaaS products. When auto activation is enabled, your subscription—a...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "561771",
+        "modified": "2026-05-18T18:00:18.6632711Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": " Generally Available: Auto activation for SaaS subscriptions in Microsoft Marketplace"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "561814",
+        "created": "2026-05-07T18:15:17.6402753Z",
+        "description": "Azure Premium SSD v2 is now available in all three\nAvailability Zones in Japan West.    Azure Premium SSD v2 disk, a next-generation general-purpose\nblock storage option for Azure virtual machines, of...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "561814",
+        "modified": "2026-05-07T18:15:17.6402753Z",
+        "productCategories": [
+          "Compute",
+          "Storage",
+          "Management and governance",
+          "Migration"
+        ],
+        "products": [
+          "Azure Compute Fleet",
+          "Azure Disk Storage",
+          "Azure Migrate"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Premium SSD v2 Disk is now available in all three available zones in Japan West"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "561942",
+        "created": "2026-05-12T18:30:55.4534273Z",
+        "description": "Confidential computing for Azure Service Bus Premium is now\ngenerally available in Korea Central and UAE North. This\ncapability enables Service Bus to process messages inside hardware-based\ntrusted ex...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "561942",
+        "modified": "2026-05-12T18:30:55.4534273Z",
+        "productCategories": [
+          "Integration"
+        ],
+        "products": [
+          "Service Bus"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: Confidential computing for Azure Service Bus Premium"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "561947",
+        "created": "2026-05-12T18:30:55.4534273Z",
+        "description": "Starting May 1, 2026, all Azure Service Bus Premium\nnamespaces deployed in regions with Availability\nZone support now qualify for a 99.99% uptime SLA.\nPremium is the tier customers choose for their mo...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "561947",
+        "modified": "2026-05-12T18:30:55.4534273Z",
+        "productCategories": [
+          "Integration"
+        ],
+        "products": [
+          "Service Bus"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Compliance"
+        ],
+        "title": "Update: 99.99% uptime for all Azure Service Bus Premium namespaces in Availability Zone regions"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562010",
+        "created": "2026-05-12T17:30:34.911185Z",
+        "description": "Azure Virtual Network Manager rule impact\nanalyzer is now generally available, empowering you\nto simulate the impact of your security admin rules on your virtual\nnetworks before deploying your rules. ...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562010",
+        "modified": "2026-05-12T17:30:34.911185Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Virtual Network Manager"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Management",
+          "Security",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Virtual Network Manager rule impact analyzer "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562049",
+        "created": "2026-05-18T18:00:18.6632711Z",
+        "description": "Azure Monitor Application Insights auto-instrumentation for Azure Kubernetes Service (AKS) apps is now generally available, making it easier to monitor your applications without modifying source code....",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562049",
+        "modified": "2026-05-18T18:00:18.6632711Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Open Source"
+        ],
+        "title": "Generally Available: Application Insights Auto-instrumentation for Azure Kubernetes Service apps"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562074",
+        "created": "2026-05-20T17:15:19.2204703Z",
+        "description": "You can now build production-ready AI and agent applications faster using the new LangChain and LangGraph integration for Azure Cosmos DB. This Python package enables you to directly use Cosmos DB for...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562074",
+        "modified": "2026-05-20T17:15:19.2204703Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: langchain-azure-cosmosdb python package for Azure Cosmos DB "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562079",
+        "created": "2026-05-20T23:15:14.3383779Z",
+        "description": "You can now take advantage of Microsoft Entra\nID token refresh support in Python, .NET, and JavaScript client\nlibraries to simplify authentication in your applications backed by Azure\nDatabase for Pos...",
+        "id": "562079",
+        "modified": "2026-05-20T23:15:14.3383779Z",
+        "previewAvailabilityDate": "2026-05",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Update: Microsoft Entra ID token refresh support for Python, .NET, and JavaScript in Azure Database for PostgreSQL "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562094",
+        "created": "2026-05-20T23:15:14.3383779Z",
+        "description": "SQL Server on Azure Virtual Machines is now generally available in the Malaysia West and Indonesia Central Azure regions. With this regional expansion, you can deploy and manage SQL Server workloads c...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562094",
+        "modified": "2026-05-20T23:15:14.3383779Z",
+        "productCategories": [
+          "Compute",
+          "Databases"
+        ],
+        "products": [
+          "SQL Server on Azure Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: SQL Server on Azure VMs in Malaysia West, Indonesia Central "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562240",
+        "created": "2026-05-20T15:15:40.0758408Z",
+        "description": "Azure Event Grid namespaces are expanding MQTT capabilities\nto help organizations build more connected, scalable, and MQTT V5 standards-based\nreal-time solutions. These updates make it easier to deliv...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "562240",
+        "modified": "2026-05-20T15:15:40.0758408Z",
+        "previewAvailabilityDate": "2026-04",
+        "productCategories": [
+          "Integration",
+          "Internet of Things"
+        ],
+        "products": [
+          "Event Grid"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Event Grid releases for April 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562254",
+        "created": "2026-05-21T21:45:32.2389902Z",
+        "description": "The Object REST API (an S3-compatible REST API) on Azure NetApp Files bridges the gap between traditional file-based storage and modern cloud services, enabling you to use your existing data in new wa...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562254",
+        "modified": "2026-05-21T21:45:32.2389902Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure NetApp Files object REST API "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562259",
+        "created": "2026-05-19T17:00:29.3909817Z",
+        "description": "Azure NetApp Files cache volumes is now Generally Available. Azure NetApp Files now support cache volumes, which are cloud-based caches of an external origin volume, containing only the most actively ...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562259",
+        "modified": "2026-05-19T17:00:29.3909817Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure NetApp Files cache volumes "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562350",
+        "created": "2026-05-14T17:30:02.4952113Z",
+        "description": "Azure Files now supports Managed Identities for SMB\naccess, enabling applications and services to authenticate without storing\nstatic credentials or account keys. This feature aligns with Zero Trust\np...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "562350",
+        "modified": "2026-05-14T17:30:02.4952113Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Files"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Compliance",
+          "Microsoft Build",
+          "Security",
+          "Services"
+        ],
+        "title": "Generally Available: Managed Identity Support for Azure Files SMB Is now GA"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562359",
+        "created": "2026-05-21T22:00:20.0659083Z",
+        "description": "Azure Files announces general availability of Entra-only identities for SMB\naccess, enabling organizations to securely access file shares using\ncloud-native identities without requiring Active Directo...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562359",
+        "modified": "2026-05-21T22:00:20.0659083Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Files"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Build",
+          "Security"
+        ],
+        "title": "Generally Available: Entra-only identities with Azure Files"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562516",
+        "created": "2026-05-15T18:15:26.3457558Z",
+        "description": "The Azure Blob Storage SDK for Rust is now generally\navailable. The Rust SDK allows you to connect to an Azure Blob Storage account\nand perform operations on containers and blobs, including uploading,...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562516",
+        "modified": "2026-05-15T18:15:26.3457558Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "SDK and Tools"
+        ],
+        "title": "Generally Available: Azure Blob Storage SDK for Rust"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562533",
+        "created": "2026-05-15T22:00:42.0539372Z",
+        "description": "Role names in Microsoft Foundry have been updated to align with the product brand. The following built-in roles are now renamed:Azure AI Account Owner → Foundry Account OwnerAzure AI Owner → Foundry O...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562533",
+        "modified": "2026-05-15T22:00:42.0539372Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Management"
+        ],
+        "title": "Update: Microsoft Foundry built-in RBAC role naming and enhancements"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562548",
+        "created": "2026-05-18T17:45:33.5828999Z",
+        "description": "Azure Front Door Standard and Premium now support WebSocket in general availability. WebSocket is enabled by default and requires no additional configuration. WebSocket provides full-duplex communicat...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562548",
+        "modified": "2026-05-18T17:45:33.5828999Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Front Door WebSocket"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562622",
+        "created": "2026-05-20T17:00:39.7793213Z",
+        "description": "Azure Storage Mover now supports built-in job scheduling, giving customers more control over when migrations run and making it easier to automate repeatable data transfers into Azure. Customers can co...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562622",
+        "modified": "2026-05-20T17:00:39.7793213Z",
+        "productCategories": [
+          "Migration",
+          "Storage"
+        ],
+        "products": [
+          "Azure Storage Mover"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Management",
+          "Services"
+        ],
+        "title": "Generally Available: Schedule one-time or recurring migrations with Azure Storage Mover"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562690",
+        "created": "2026-05-19T16:45:42.9613633Z",
+        "description": "Azure Network Watcher rule impact analyzer is now generally available, enabling you to assess the potential impact of your network security group (NSG) or security admin rule changes on live network t...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562690",
+        "modified": "2026-05-19T16:45:42.9613633Z",
+        "productCategories": [
+          "Management and governance",
+          "Networking"
+        ],
+        "products": [
+          "Network Watcher"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Network Watcher rule impact analyser "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562695",
+        "created": "2026-05-19T16:45:42.9613633Z",
+        "description": "Azure Virtual Network has increased the default platform limits for network security groups (NSGs) and route tables. The new defaults are now 2,000 security rules per NSG, 6,000 addresses or ports per...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562695",
+        "modified": "2026-05-19T16:45:42.9613633Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Management",
+          "Security",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Virtual Network updates – default limits increased for NSGs and route tables "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562705",
+        "created": "2026-05-20T16:45:53.1895772Z",
+        "description": "Azure Site-to-Site VPN with digital certificate\nauthentication provides an alternative to the traditional pre-shared key (PSK)\nmodel by using a certificate-based asymmetric trust model. In this\nconfig...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562705",
+        "modified": "2026-05-20T16:45:53.1895772Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "VPN Gateway"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: site-to-site VPN connections with certificate authentication"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562753",
+        "created": "2026-05-20T17:00:39.7793213Z",
+        "description": "Azure Storage Mover now supports Blob container-to-Blob\ncontainer data transfers, enabling customers to move data seamlessly across\nregions, subscriptions, and accounts with a fully managed experience...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562753",
+        "modified": "2026-05-20T17:00:39.7793213Z",
+        "productCategories": [
+          "Migration",
+          "Storage"
+        ],
+        "products": [
+          "Azure Storage Mover"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Management",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Storage Mover Blob-to-Blob migration"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562808",
+        "created": "2026-05-21T18:45:42.3463074Z",
+        "description": "Flex Consumption introduces a site-scoped certificate model in\npublic preview in all the regions where Flex Consumption is available. Unlike\nwebspace-scoped certificates on other hosting plans which a...",
+        "id": "562808",
+        "modified": "2026-05-21T18:45:42.3463074Z",
+        "previewAvailabilityDate": "2026-05",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: TLS/SSL certificate support for Azure Functions Flex Consumption "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562813",
+        "created": "2026-05-20T16:45:53.1895772Z",
+        "description": "Summarized advertised gateway prefixes for route advertisement is now in public preview, enabling you to define summarized prefixes that Azure gateways, including ExpressRoute and VPN Gateway, adverti...",
+        "id": "562813",
+        "modified": "2026-05-20T16:45:53.1895772Z",
+        "previewAvailabilityDate": "2026-05",
+        "productCategories": [
+          "Hybrid + multicloud",
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure ExpressRoute",
+          "Virtual Network",
+          "VPN Gateway"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Management",
+          "Services"
+        ],
+        "title": "Public Preview: Summarized advertised gateway prefixes for route advertisement "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562970",
+        "created": "2026-05-20T15:15:40.0758408Z",
+        "description": "Gain more flexibility in message handling with Subscription Identifiers by enabling subscribers to identify which subscription triggered delivery,\n     helping streamline client-side processing in mor...",
+        "id": "562970",
+        "modified": "2026-05-20T15:15:40.0758408Z",
+        "previewAvailabilityDate": "2026-04",
+        "productCategories": [],
+        "products": [],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure Event Grid Subscription Identifiers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Private Preview",
+            "year": 2026
+          },
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563016",
+        "created": "2026-05-27T17:45:45.4524881Z",
+        "description": "Multiparty private offers give Microsoft partners a way to procure third-party cloud and AI solutions for customers through Marketplace. Software companies can expand into new markets by working with ...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "563016",
+        "modified": "2026-05-27T17:45:45.4524881Z",
+        "privatePreviewAvailabilityDate": "2026-05",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Feature"
+        ],
+        "title": "Generally Available: Multiparty private offers in Microsoft Marketplace expand to 30 countries in Europe "
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 50,
+    "totalCount": 55
+  },
+  "scan": "2026-05",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

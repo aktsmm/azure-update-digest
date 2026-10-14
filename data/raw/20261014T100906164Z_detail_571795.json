@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "571795"
+  },
+  "fetchedAt": "2026-10-14T10:09:06.164Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "571795",
+    "created": "2026-09-29T17:34:44.0070057Z",
+    "description": "You can now select Azure SQL Database, including Hyperscale, as a migration target directly from the database migration experience in Azure Arc. The workflow brings Azure Database Migration Service and Self-hosted Integration Runtime setup into the guided portal journey, allowing you to assess your SQL Server estate, choose your target, configure\nyour migration and monitor progress without leaving Arc.Until now, your path from assessment to migration required stepping outside Arc, learning a separate service, configuring a runtime, and moving between multiple tools. This additional effort slowed modernization projects. With this release, the databases Arc already identified as migration-ready become databases you can act on immediately, in the same place you assessed them.You get the same migration dashboard, monitoring experience, and guided workflow already used for other Azure SQL destinations, so choosing Hyperscale does not require learning a new migration methodology. Runtime setup is guided and completed only once, with in-portal instructions that walk you through the process.Learn more. ",
+    "id": "571795",
+    "modified": "2026-09-29T17:34:44.0070057Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Migrate directly from Azure Arc to Azure SQL Database, including Hyperscale"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

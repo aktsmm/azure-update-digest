@@ -1,0 +1,1343 @@
+{
+  "args": {
+    "filter": "created ge 2026-07-31T15:00:00Z and created lt 2026-08-31T15:00:00Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-14T10:03:56.205Z",
+  "ok": true,
+  "response": {
+    "hasMore": true,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557775",
+        "created": "2026-08-17T19:37:49.0696169Z",
+        "description": "This release adds Microsoft Marketplace as a new discovery and procurement channel for Dragon Copilot AI apps and agents. Dragon Copilot customers in the United States can now discover, evaluate and p...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "557775",
+        "modified": "2026-08-17T19:37:49.0696169Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Dragon Copilot Physician Apps and Agents on Microsoft Marketplace "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "565214",
+        "created": "2026-08-04T17:04:55.0175872Z",
+        "description": "Azure DNS now offers a seamless way to integrate with Azure Traffic Manager for DNS-based traffic routing. Customers can now directly associate Azure DNS record set with Traffic Manager profiles witho...",
+        "id": "565214",
+        "modified": "2026-08-04T17:04:55.0175872Z",
+        "previewAvailabilityDate": "2026-08",
+        "productCategories": [
+          "Networking",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure DNS",
+          "Traffic Manager"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Services",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure DNS enables DNS-based load balancing through Traffic Manager integration"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "567334",
+        "created": "2026-08-24T17:30:43.3459834Z",
+        "description": "On April 30 2027, support for Node 22 LTS will end. Your apps that are hosted on App\nService will continue to run, but security updates will no longer be available,\nand we’ll no longer provide custome...",
+        "id": "567334",
+        "modified": "2026-08-24T17:30:43.3459834Z",
+        "productCategories": [
+          "Compute",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "App Service"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Support for Node 22 LTS ends on April 30, 2027"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "567979",
+        "created": "2026-08-06T16:40:19.650341Z",
+        "description": "Azure Storage Mover now supports agentless, cloud-to-cloud migration from AWS FSx for Windows File Server (SMB) to Azure Files (SMB), in preview. You can move your Windows file shares off FSx and into...",
+        "id": "567979",
+        "modified": "2026-08-06T16:40:19.650341Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Migration",
+          "Storage"
+        ],
+        "products": [
+          "Azure Storage Mover"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Migrate from AWS FSx for Windows File Server to Azure Files with Azure Storage Mover"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "568139",
+        "created": "2026-07-31T18:16:23.763914Z",
+        "description": "In late-July 2026, the following update and enhancement was made to Azure SQL: Regex-based dynamic data masking (DDM) extends the built-in DDM feature with pattern‑based masking to hide sensitive data...",
+        "id": "568139",
+        "modified": "2026-07-31T18:16:23.763914Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure SQL updates for late-July "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568339",
+        "created": "2026-08-03T17:00:56.6053348Z",
+        "description": "To enhance backup protection, Azure SQL Database and Azure SQL Managed Instance now automatically apply immutability to the most recent seven days of backups. This capability is enabled by default for...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "568339",
+        "modified": "2026-08-03T17:00:56.6053348Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database",
+          "Azure SQL Managed Instance"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Immutability to the most recent seven days of backups on Azure SQL Database and Azure SQL Managed Instance "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "568344",
+        "created": "2026-08-17T19:54:52.7452533Z",
+        "description": "You can now benefit from enhanced resilience with the public preview of zone redundancy for Azure SQL Managed Instance Next-gen General Purpose. This update helps you improve business continuity by au...",
+        "id": "568344",
+        "modified": "2026-08-17T19:54:52.7452533Z",
+        "previewAvailabilityDate": "2026-08",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure SQL Managed Instance"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Zone redundancy for Azure SQL Managed Instance Next-gen General Purpose"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568419",
+        "created": "2026-08-13T16:13:22.0109031Z",
+        "description": "Pre-upgrade validation checks are now generally available for Azure Database for PostgreSQL flexible server, helping you proactively validate major version upgrade (MVU) readiness before initiating th...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "568419",
+        "modified": "2026-08-13T16:13:22.0109031Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Pre-upgrade validation checks for Azure Database for PostgreSQL Flexible Server "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "568457",
+        "created": "2026-08-12T19:41:20.8388416Z",
+        "description": "On September 14, 2026 we will retire the containerized data connector agent for the Microsoft Sentinel solution for SAP applications. After this date the agent will be permanently disabled and will st...",
+        "id": "568457",
+        "modified": "2026-08-12T19:41:20.8388416Z",
+        "productCategories": [
+          "Hybrid + multicloud",
+          "Security"
+        ],
+        "products": [
+          "Microsoft Sentinel"
+        ],
+        "tags": [
+          "Retirements",
+          "Security"
+        ],
+        "title": "Retirement: Containerized data connector agent for the Microsoft Sentinel solution for SAP applications"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568591",
+        "created": "2026-07-31T22:32:52.9651589Z",
+        "description": "Eligible SaaS products on Microsoft Marketplace now support a simplified purchase experience in Azure portal. Customers can review plan, billing, resource group, contact details, and terms information...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "568591",
+        "modified": "2026-07-31T22:32:52.9651589Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Single-click purchase for public SaaS offers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568600",
+        "created": "2026-08-03T19:56:26.5778098Z",
+        "description": "Trusted Launch as Default (TLaD) is now generally available for new Azure Gen2 virtual machines and virtual machine scale sets. TLaD automatically enables Secure Boot and vTPM for supported deployment...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "568600",
+        "modified": "2026-08-03T19:56:26.5778098Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machine Scale Sets",
+          "Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Pricing & Offerings",
+          "Security"
+        ],
+        "title": "Generally Available: Trusted Launch as Default"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568605",
+        "created": "2026-08-04T17:03:38.4537329Z",
+        "description": "Azure Virtual Network routing appliance is now generally\navailable. It delivers private connectivity across virtual networks, using\nspecialized hardware for low latency, high throughput, and better pe...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "568605",
+        "modified": "2026-08-04T17:03:38.4537329Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Virtual Network"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Management",
+          "Services",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Virtual Network routing appliance"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "568631",
+        "created": "2026-07-31T20:48:35.6960868Z",
+        "description": "Route maps for Azure Route Server are now available in\npublic preview, providing fine-grained control over inbound and outbound routing\nacross hybrid connections. Customers can manage routes advertise...",
+        "id": "568631",
+        "modified": "2026-07-31T20:48:35.6960868Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Route Server"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Route-Maps for Azure Route Server"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "568661",
+        "created": "2026-08-05T00:22:49.4777616Z",
+        "description": "On September 1, 2026,\nthe cc_v5 confidential VM series will be retired and will no longer be\navailable for use or purchase. Any affected VM that has not been resized before\nthat date will deallocated....",
+        "id": "568661",
+        "modified": "2026-08-05T00:22:49.4777616Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Nested confidential (cc_v5) VMs will be retired on September 1, 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "568666",
+        "created": "2026-08-07T15:52:31.9732846Z",
+        "description": "Azure ExpressRoute resiliency guard is now available in public preview for ExpressRoute virtual\nnetwork gateways. The new resiliency model property lets you specify whether a\ngateway is intended for a...",
+        "id": "568666",
+        "modified": "2026-08-07T15:52:31.9732846Z",
+        "previewAvailabilityDate": "2026-08",
+        "productCategories": [
+          "Hybrid + multicloud",
+          "Networking"
+        ],
+        "products": [
+          "Azure ExpressRoute"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure ExpressRoute resiliency guard"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568825",
+        "created": "2026-08-05T14:54:08.7570035Z",
+        "description": "Azure Firewall explicit proxy is now\ngenerally available. Explicit proxy enables customers to configure applications\nand browsers to send HTTP and HTTPS traffic directly to Azure Firewall using\nproxy ...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "568825",
+        "modified": "2026-08-05T14:54:08.7570035Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Security",
+          "Feature"
+        ],
+        "title": "Generally Available: Explicit proxy in Azure Firewall "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568830",
+        "created": "2026-08-13T16:19:56.5989095Z",
+        "description": "Control plane metrics collection for Azure Kubernetes Service (AKS), powered by Azure Monitor Managed Service for Prometheus, is now generally available.This capability gives AKS customers native obse...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "568830",
+        "modified": "2026-08-13T16:19:56.5989095Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)",
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Control plane metrics collection for AKS with Managed Prometheus"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "568837",
+        "created": "2026-08-04T18:30:09.8276034Z",
+        "description": "Perimeter link (cross-perimeter\nconnectivity) is a network security perimeter capability that allows trusted\nresources in two different network security perimeters to securely communicate\nwith each ot...",
+        "id": "568837",
+        "modified": "2026-08-04T18:30:09.8276034Z",
+        "previewAvailabilityDate": "2026-08",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Private Link"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Security",
+          "Feature"
+        ],
+        "title": "Public Preview: Perimeter link feature in network security perimeter "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "568842",
+        "created": "2026-08-04T18:29:36.5381861Z",
+        "description": "Azure Private Link over IPv6\nenables you to privately access Azure PaaS services, such as Azure Storage and\nAzure SQL Database, over IPv6-based connectivity. You can now use IPv6 private\nendpoints to ...",
+        "id": "568842",
+        "modified": "2026-08-04T18:29:36.5381861Z",
+        "previewAvailabilityDate": "2026-08",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Private Link"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure Private Link support over IPv6 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568905",
+        "created": "2026-08-05T22:34:02.6510143Z",
+        "description": "The SharePoint connector for Azure Databricks is now generally\navailable. Organizations can use Lakeflow Connect to ingest files from\nSharePoint into Azure Databricks, helping unify enterprise content...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "568905",
+        "modified": "2026-08-05T22:34:02.6510143Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: SharePoint Connector for Azure Databricks"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568910",
+        "created": "2026-08-05T22:32:45.6981636Z",
+        "description": "Unity AI Gateway is now generally available on Azure Databricks.\nUnity AI Gateway provides centralized governance for AI models, agents, tools,\nand MCP services, helping organizations monitor usage, m...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "568910",
+        "modified": "2026-08-05T22:32:45.6981636Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Unity AI Gateway on Azure Databricks"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568952",
+        "created": "2026-08-18T17:26:25.0178405Z",
+        "description": "Managed Instance on Azure App Service is now generally available. Managed Instance helps organizations migrate web applications to Azure App Service with minimal configuration and no code changes. App...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "568952",
+        "modified": "2026-08-18T17:26:25.0178405Z",
+        "productCategories": [
+          "Compute",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "App Service"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Services",
+          "Feature"
+        ],
+        "title": "Generally Available: Managed Instance on Azure App Service"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "568964",
+        "created": "2026-08-06T19:41:52.4567965Z",
+        "description": "Free usage of Genie One and Genie Agents in Azure Databricks is now extended through January 31, 2027, from the previous end date of July 31, 2026. Budget controls do not apply to these products durin...",
+        "id": "568964",
+        "modified": "2026-08-06T19:41:52.4567965Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "tags": [
+          "Announcement"
+        ],
+        "title": "Announcing:  Azure Databricks Genie One and Genie Agents Free Usage extended through January 31, 2027 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "July",
+            "ring": "Private Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "568979",
+        "created": "2026-08-12T16:38:31.6495985Z",
+        "description": "Today, we are announcing the public preview of Markdown for Agents in Azure App Service. This feature gives AI agents and other tools a cleaner way to consume content from an App Service app. When a c...",
+        "id": "568979",
+        "modified": "2026-08-12T16:38:31.6495985Z",
+        "previewAvailabilityDate": "2026-08",
+        "privatePreviewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Compute",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "App Service"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Markdown for Agents in Azure App Service"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569051",
+        "created": "2026-08-19T17:20:42.1113638Z",
+        "description": "Today, we are announcing the General Availability of VM vCore Customization for Azure Virtual Machines, introducing two new capabilities: Disable Simultaneous Multi-Threading/Hyper-Threading (SMT/HT) ...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569051",
+        "modified": "2026-08-19T17:20:42.1113638Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: vCore Customization: Disable Multithreading and Configurable Constrained Cores  "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "569140",
+        "created": "2026-08-10T17:50:54.0025923Z",
+        "description": "Starting August 23, 2026, Microsoft Fabric will enable Item Recovery by default for tenants that have not explicitly configured the setting. Supported item types will have a 3-day recovery window by d...",
+        "id": "569140",
+        "modified": "2026-08-10T17:50:54.0025923Z",
+        "productCategories": [
+          "Analytics"
+        ],
+        "products": [
+          "Microsoft Fabric"
+        ],
+        "tags": [
+          "Announcement"
+        ],
+        "title": "Announcing: Microsoft Fabric Item Recovery will be enabled by default for tenants without an explicit setting"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569145",
+        "created": "2026-08-19T21:01:47.4699862Z",
+        "description": "In mid-August 2026, the following updates and enhancements were made to Azure SQL: You can customize keyboard shortcuts for Quick Queries, the Results Grid, and the Query Editor directly within Visual...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569145",
+        "modified": "2026-08-19T21:01:47.4699862Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure SQL updates for mid-August 2026 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "569155",
+        "created": "2026-08-19T21:00:19.4445006Z",
+        "description": "With SQL Formatter, you can format SQL scripts directly in your editor for cleaner, more consistent, and readable code. Now in public preview, it includes more customizable formatting options to match...",
+        "id": "569155",
+        "modified": "2026-08-19T21:00:19.4445006Z",
+        "previewAvailabilityDate": "2026-08",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: SQL Formatter in MSSQL extension "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569160",
+        "created": "2026-08-19T20:59:19.2601578Z",
+        "description": "With Azure SQL Database provisioning, you can create and connect to a fully managed cloud database directly from your editor—at no cost. Now generally available, the feature also includes ready-to-use...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569160",
+        "modified": "2026-08-19T20:59:19.2601578Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure SQL Database provisioning in MSSQL extension "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569246",
+        "created": "2026-08-12T17:03:08.2202194Z",
+        "description": "Batch rule updates are now generally\navailable for Azure Front Door Standard and Premium. This capability enables\ncustomers to add, update, delete, or reorder multiple rules in a rule set as a\ncoordin...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569246",
+        "modified": "2026-08-12T17:03:08.2202194Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Batch rule updates for Azure Front Door "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "569251",
+        "created": "2026-08-12T17:01:19.0043426Z",
+        "description": "Mutual TLS, also known as client\ncertificate authentication, enables Azure Front Door to authenticate clients\nusing X.509 certificates before requests reach an application. It helps protect\nsensitive ...",
+        "id": "569251",
+        "modified": "2026-08-12T17:01:19.0043426Z",
+        "previewAvailabilityDate": "2026-08",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Front Door mutual TLS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569256",
+        "created": "2026-08-11T17:26:51.8935635Z",
+        "description": "Azure Firewall Premium now delivers up to 22 Gbps\nthroughput with TLS inspection and IDPS in Deny mode, a 120% increase from 10\nGbps, and up to 600 Mbps per TCP connection with IDPS enabled in either ...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569256",
+        "modified": "2026-08-11T17:26:51.8935635Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: 2.2X IDPS performance optimization in Azure Firewall"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569281",
+        "created": "2026-08-13T16:17:41.8342302Z",
+        "description": "We’re excited to announce the GA\nof Live Resize for shared Premium\nSSD v2 (Pv2) and Ultra data disks. This feature allows you to dynamically\nexpand the storage capacity of your disks without any disru...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569281",
+        "modified": "2026-08-13T16:17:41.8342302Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Disk Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Live Resize for Shared Premium SSD v2 and Ultra Data Disks"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "569353",
+        "created": "2026-08-14T17:43:51.3792538Z",
+        "description": "Azure Databricks Runtime\n10.4 LTS, a Databricks-managed runtime available on Azure Databricks, reached\nend of support on March 18, 2025 and will reach end of life on November 1, 2026. After this date,...",
+        "id": "569353",
+        "modified": "2026-08-14T17:43:51.3792538Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "tags": [
+          "Announcement"
+        ],
+        "title": "Announcing: Azure Databricks Runtime 10.4 LTS will reach end of life on November 1, 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "569376",
+        "created": "2026-08-17T17:08:40.487697Z",
+        "description": "Azure Linux on WSL is now available in Public Preview (Beta).  Extending Azure Linux to the developer workstation means that teams can now:Validate behavior using production-aligned configurationsRepr...",
+        "id": "569376",
+        "modified": "2026-08-17T17:08:40.487697Z",
+        "previewAvailabilityDate": "2026-08",
+        "productCategories": [],
+        "products": [
+          "Azure Linux"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Open Source",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Linux on WSL"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569504",
+        "created": "2026-08-24T17:25:03.0751952Z",
+        "description": "Announcing the General Availability of custom block response code and body for WAF integrated with Application Gateway Azure WAF integrated with Application Gateway now supports customizable response ...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569504",
+        "modified": "2026-08-24T17:25:03.0751952Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway",
+          "Web Application Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Security",
+          "Feature"
+        ],
+        "title": "Generally Available: Custom block response code and body for Application Gateway WAF "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569515",
+        "created": "2026-08-19T16:36:30.9785659Z",
+        "description": "Azure Site Recovery now lets you use and attach an existing, pre-provisioned Network Interface Card (NIC) in the target region for test-failover and failover in the Azure-to-Azure scenario. This helps...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569515",
+        "modified": "2026-08-19T16:36:30.9785659Z",
+        "productCategories": [
+          "Management and governance",
+          "Migration"
+        ],
+        "products": [
+          "Azure Site Recovery"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: BYON (Bring Your Own NIC) in Azure Site Recovery"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "569520",
+        "created": "2026-08-18T17:25:30.3598477Z",
+        "description": "Azure Firewall now supports IPv6 in public\npreview, enabling customers to configure Azure Firewall and Firewall Policy in\ndual-stack mode for both IPv4 and IPv6 traffic. This preview allows native IPv...",
+        "id": "569520",
+        "modified": "2026-08-18T17:25:30.3598477Z",
+        "previewAvailabilityDate": "2026-08",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Firewall"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Public Preview: Ipv6 support in Azure Firewall"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "569526",
+        "created": "2026-08-24T19:15:05.0204585Z",
+        "description": "Extended Support for Azure Database for PostgreSQL Flexible Server helps you maintain secure, supported workloads while transitioning to newer PostgreSQL versions. With access to critical security upd...",
+        "id": "569526",
+        "modified": "2026-08-24T19:15:05.0204585Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "tags": [
+          "Announcement"
+        ],
+        "title": "Announcing: Extended Support for Azure Database for PostgreSQL Flexible Server "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "569535",
+        "created": "2026-08-18T19:52:06.2772756Z",
+        "description": "In November last year, Broadcom changed its VMware licensing policies across all hyperscaler platforms to require customers to “bring your own” portable license for VMware Cloud Foundation (VCF).What’...",
+        "id": "569535",
+        "modified": "2026-08-18T19:52:06.2772756Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Azure VMware Solution"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure VMware Solution License-included service will be retired August 30, 2027"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569546",
+        "created": "2026-08-25T18:05:54.2343641Z",
+        "description": "Azure announces the general availability of 248 and 372 vCPU Dl/D/E v7 VM sizes, powered by Intel® Xeon® 6 processors. These general-purpose and memory-optimized VMs deliver up to 20% better compute p...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569546",
+        "modified": "2026-08-25T18:05:54.2343641Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure 248 and 372 vCPU sizes for D/E v7 series VMs "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569684",
+        "created": "2026-08-19T21:04:18.6843671Z",
+        "description": "Lakebase is now generally available in four additional Azure regions: North Central US, France Central, Germany West Central, and East Asia. This expansion provides customers with additional deploymen...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569684",
+        "modified": "2026-08-19T21:04:18.6843671Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Databricks Lakebase in four additional regions"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "569685",
+        "created": "2026-08-20T16:08:02.9408781Z",
+        "description": "Starting in August 2026, customers can engage directly with Azure Copilot agents to move more quickly from questions to action.With this update:Choose the right agent for your goal. Customers can sele...",
+        "id": "569685",
+        "modified": "2026-08-20T16:08:02.9408781Z",
+        "productCategories": [
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Copilot"
+        ],
+        "tags": [
+          "Announcement"
+        ],
+        "title": "Announcing: Azure Copilot introduces direct access to agents"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "569690",
+        "created": "2026-08-26T16:52:23.4483775Z",
+        "description": "We're excited to announce Live Reports, now in Public Preview for Azure SRE Agent. Live Reports help operations teams create dynamic operational views directly from SRE Agent conversations and keep th...",
+        "id": "569690",
+        "modified": "2026-08-26T16:52:23.4483775Z",
+        "previewAvailabilityDate": "2026-08",
+        "productCategories": [],
+        "products": [],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Public Preview: Introducing Live Reports for Azure SRE Agent"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569695",
+        "created": "2026-08-26T16:51:31.9579567Z",
+        "description": "Azure SRE Agent VNet Integration is now generally available. VNet integration enables Azure SRE Agent to operate within your existing network controls, including Network Security Groups (NSGs), privat...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569695",
+        "modified": "2026-08-26T16:51:31.9579567Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security",
+          "Services"
+        ],
+        "title": "Generally Available: Azure SRE Agent VNet Integration "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569743",
+        "created": "2026-08-20T17:02:23.1350478Z",
+        "description": "Summarized advertised gateway\nprefixes for route advertisement is now generally available. You can specify\naggregated (summarized) prefixes for an Azure gateway to advertise to your\non-premises networ...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569743",
+        "modified": "2026-08-20T17:02:23.1350478Z",
+        "productCategories": [
+          "Hybrid + multicloud",
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure ExpressRoute",
+          "Virtual Network",
+          "VPN Gateway"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Management",
+          "Services"
+        ],
+        "title": "Generally Available: Summarized advertised gateway prefixes for route advertisement"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569760",
+        "created": "2026-08-26T16:50:22.5734515Z",
+        "description": "New customers can now get started with Azure SRE Agent through a 30-day trial experience. During the trial, customers can create SRE Agents and connect them to your operational tools and data sources,...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569760",
+        "modified": "2026-08-26T16:50:22.5734515Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Pricing & Offerings"
+        ],
+        "title": "Generally Available: Azure SRE Agent 30-Day Trial"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569873",
+        "created": "2026-08-24T18:36:01.7715232Z",
+        "description": "eBPF Host Routing in Advanced\nContainer Networking Services for Azure Kubernetes Service (AKS) is now\ngenerally available. eBPF Host Routing improves\nKubernetes networking performance by moving packet...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "569873",
+        "modified": "2026-08-24T18:36:01.7715232Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Build",
+          "Services"
+        ],
+        "title": "Generally Available: eBPF host routing in Advanced Container Networking Services for AKS"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "569910",
+        "created": "2026-08-25T19:55:34.9451208Z",
+        "description": "Aspire 13.5 refreshes the dashboard and aspire.dev, expands the Interaction Service, adds cross-scope Azure references and persistent Kubernetes volumes, and brings live terminals into the apphost.Lea...",
+        "id": "569910",
+        "modified": "2026-08-25T19:55:34.9451208Z",
+        "productCategories": [],
+        "products": [],
+        "tags": [
+          "Announcement"
+        ],
+        "title": "Announcing: Aspire 13.5 has shipped"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570020",
+        "created": "2026-08-26T16:57:56.4461092Z",
+        "description": "Azure Bastion shareable link expiration is now generally\navailable. When creating a shareable link, administrators can specify the date\nand time when the link should expire. After the configured expir...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "570020",
+        "modified": "2026-08-26T16:57:56.4461092Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Bastion"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: Azure Bastion shareable link expiration "
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 50,
+    "totalCount": 54
+  },
+  "scan": "2026-08",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

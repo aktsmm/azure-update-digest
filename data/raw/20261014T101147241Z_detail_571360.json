@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "571360"
+  },
+  "fetchedAt": "2026-10-14T10:11:47.241Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "Effective",
+        "year": 2026
+      }
+    ],
+    "baseId": "571360",
+    "created": "2026-09-14T18:24:04.8309867Z",
+    "description": "Beginning in early October 2026, Windows App will begin using three new wildcard fully qualified domain names (FQDNs) for client-side service traffic to Azure Virtual Desktop. These domains are already included in the cloud-side connectivity requirements. If your organization applies network controls to devices running Windows App, you must allow these endpoints before activation. If the endpoints are not reachable, users may experience sign-in and connection failures.  This is a client-side change for Windows App and is separate from the previous cloud-side domain update. Organizations that have already completed the cloud-side update should still review proxy, firewall, VPN, DNS filtering, and Secure Web Gateway policies that apply to user devices to ensure these endpoints are allowed.This work is part of a wider Microsoft approach to unify domain requirements.Required client-side endpoints*.windows.cloud.microsoft Purpose: General Windows cloud service trafficPort: 443/TCP*.service.windows.cloud.microsoft Purpose: Service traffic which requires optimizationPort: 443/TCP*.windows.static.microsoft Purpose: Static content, installation, and update assetsPort: 443/TCPTimelineWindows App will begin using these endpoints in early October 2026. Who is affected?Organizations that:Use Windows App to connect to Azure Virtual Desktop.Apply firewall, proxy, VPN, DNS filtering, Secure Web Gateway, or similar controls to end-user devices.Potential Impact If these endpoints are unavailable, blocked, or inspected in a way that interrupts the connection, users may experience failures during sign-in, resource discovery, connection, or an active session.Recommended ActionBefore early October 2026:Allow outbound HTTPS traffic on 443/TCP to all three FQDNs in applicable firewall rules, proxy allow lists, VPN configurations, DNS filters, and Secure Web Gateway policies.Review TLS inspection or other traffic interception that could prevent Windows App from reaching Microsoft services. Where permitted by organizational policy, route this traffic directly to Microsoft.If client devices are behind managed network boundary engage the team that manages those controls as early as possible, as approval and change-management processes may require additional lead time.Inform your help desk and update internal network and troubleshoot guide.Learn more:Required FQDNs and endpoints for Azure Virtual DesktopMicrosoft unified cloud.microsoft domain",
+    "id": "571360",
+    "modified": "2026-09-14T18:24:04.8309867Z",
+    "productCategories": [
+      "Compute",
+      "Virtual desktop infrastructure"
+    ],
+    "products": [
+      "Azure Virtual Desktop"
+    ],
+    "tags": [
+      "Announcement"
+    ],
+    "title": "Announcing: New Windows App client-side endpoints for Azure Virtual Desktop"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

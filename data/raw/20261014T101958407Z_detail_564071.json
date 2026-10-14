@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "564071"
+  },
+  "fetchedAt": "2026-10-14T10:19:58.407Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Effective",
+        "year": 2026
+      }
+    ],
+    "baseId": "564071",
+    "created": "2026-07-15T18:51:45.2030575Z",
+    "description": "In public preview, Microsoft Foundry now offers tracing for the Microsoft Agent Framework in both Python and .NET, helping developers observe how agents reason, call tools, and interact with models during execution. This release is part of the broader hosted agents update and emits OpenTelemetry-compatible spans that you can route to Application Insights or other compatible backends, making it easier to debug failures, identify latency hotspots, and validate behavior before deploying to production. The preview is intended for evaluation and may evolve as schemas, attributes, and sampling controls are finalized ahead of general availability. By giving early access to tracing, Microsoft Foundry helps teams accelerate innovation on multi-step agent workflows without building custom instrumentation. To get started, enable tracing in the Microsoft Agent Framework SDK for Python or .NET and connect your preferred OpenTelemetry exporter. Learn more.",
+    "id": "564071",
+    "modified": "2026-07-15T18:51:45.2030575Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "tags": [
+      "Feature",
+      "Announcement"
+    ],
+    "title": "Announcing: Tracing for Microsoft Agent Framework (Python and .NET)"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

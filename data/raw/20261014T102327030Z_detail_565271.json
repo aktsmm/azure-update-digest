@@ -1,0 +1,31 @@
+{
+  "args": {
+    "id": "565271"
+  },
+  "fetchedAt": "2026-10-14T10:23:27.030Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "565271",
+    "created": "2026-06-08T18:15:14.0901533Z",
+    "description": "Azure NCv6-series virtual machines (VMs) are now generally available in the Azure Southeast Asia and West US 2 regions. NCv6 VMs are powered by NVIDIA RTX PRO 6000 Blackwell Server Edition graphics processing units (GPUs) with each GPU featuring 96 GB of GDDR7 memory, and enable both leading-edge graphics and generative artificial intelligence (AI) compute workloads. The VM host is equipped with Intel Xeon™ 6 \"Granite Rapids\" 6900P series central processing units (CPUs), providing all-core turbo frequencies up to 4.2 GHz for demanding pre- and post-processing steps.  NCv6 offers fractional GPU support and general purpose and compute optimized VM sizes. The general purpose NCv6 VM sizes provide larger amounts of CPU memory for demanding generative AI inference and independent software vendor (ISV) computer-aided design (CAD)/computer-aided engineering (CAE) simulations, while the compute optimized NCv6 VM sizes offer reduced memory to enable customers with less memory intensive workloads to cost optimize their deployments. Note: For customers using the NCv6-series VMs under public preview, please see here for guidance on how to navigate the preview to general availability transition.  ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "565271",
+    "modified": "2026-06-08T18:15:14.0901533Z",
+    "productCategories": [],
+    "products": [],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure NC RTX PRO 6000 Blackwell Server Edition v6 Series Virtual Machines"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,292 @@
+{
+  "args": {
+    "filter": "created ge 2026-02-28T15:00:00Z and created lt 2026-03-31T15:00:00Z",
+    "skip": 50
+  },
+  "fetchedAt": "2026-10-14T10:05:02.915Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558851",
+        "created": "2026-03-25T17:30:45.7754801Z",
+        "description": "We’re excited to announce that Google AlloyDB is now supported as a source for migration into Azure Database for PostgreSQL. You can migrate and consolidate PostgreSQL estates from Google AlloyDB to A...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558851",
+        "modified": "2026-03-25T17:30:45.7754801Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: PostgreSQL migration service supports for Google AlloyDB into Azure Database for PostgreSQL "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558865",
+        "created": "2026-03-25T17:30:45.7754801Z",
+        "description": "We’re excited to announce that EDB PostgreSQL is now supported as a source for migration into Azure Database for PostgreSQL. You can migrate and consolidate PostgreSQL estates from EDB Postgres Extend...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558865",
+        "modified": "2026-03-25T17:30:45.7754801Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: PostgreSQL migration service supports compatible EDB workloads into Azure Database for PostgreSQL "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558870",
+        "created": "2026-03-25T17:30:45.7754801Z",
+        "description": "You can now modify the cron.timezone server parameter in Azure Database for PostgreSQL. This parameter controls the time zone used by pg_cron when evaluating scheduled jobs. By configuring cron.timezo...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558870",
+        "modified": "2026-03-25T17:30:45.7754801Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Custom time zone support for pg_cron via cron.timezone in Azure Database for PostgreSQL "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558879",
+        "created": "2026-03-26T16:00:10.8422337Z",
+        "description": "In late-March 2026, the following updates and\nenhancements were made to Azure SQL:  \n Configure built-in SQL code analysis rules and\n     severity settings without editing project XML.  \n Use Fabric c...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558879",
+        "modified": "2026-03-26T16:00:10.8422337Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure SQL updates for late-March 2026 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "558884",
+        "created": "2026-03-25T17:30:45.7754801Z",
+        "description": "You can now stream row‑level data changes—inserts, updates, and deletes—from Azure SQL Managed Instance to Azure Event Hubs in near real time with change event streaming (CES). SQL publishes changes a...",
+        "id": "558884",
+        "modified": "2026-03-25T17:30:45.7754801Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database",
+          "Azure SQL Managed Instance"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure SQL Managed Instance change event streaming "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "558927",
+        "created": "2026-03-19T17:00:53.0406938Z",
+        "description": "You can now enable OneLake catalog federation in Azure Databricks to query Microsoft Fabric OneLake data without copying or moving it. By connecting Unity Catalog to a OneLake catalog, Azure Databrick...",
+        "id": "558927",
+        "modified": "2026-03-19T17:00:53.0406938Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure Databricks OneLake Catalog Federation "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "559273",
+        "created": "2026-03-24T17:15:45.4044114Z",
+        "description": "Azure Monitor now supports native ingestion of OpenTelemetry Protocol (OTLP) signals, enabling you to send telemetry data directly from OpenTelemetry-instrumented applications and platforms to Azure M...",
+        "id": "559273",
+        "modified": "2026-03-24T17:15:45.4044114Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Open Source"
+        ],
+        "title": "Public Preview: Ingest OTLP data into Azure Monitor with the OpenTelemetry Collector"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "559322",
+        "created": "2026-03-30T21:45:47.4558873Z",
+        "description": "Ephemeral OS Disk with full caching is now available in public preview for Azure VM/VMSS, bringing significantly faster and more reliable OS disk performance to your workloads. By caching the entire O...",
+        "id": "559322",
+        "modified": "2026-03-30T21:45:47.4558873Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machine Scale Sets",
+          "Virtual Machines"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Ephemeral OS Disk with full caching for VM/VMSS"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559526",
+        "created": "2026-03-30T16:30:50.9886051Z",
+        "description": "Azure Premium SSD v2 is now available in South India (a region without Availability Zone).Azure Premium SSD v2 disk, a next-generation general-purpose block storage option for Azure virtual machines, ...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "559526",
+        "modified": "2026-03-30T16:30:50.9886051Z",
+        "productCategories": [
+          "Storage",
+          "Compute"
+        ],
+        "products": [
+          "Azure Disk Storage",
+          "Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Premium SSD v2 Disk is now available in South India"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559552",
+        "created": "2026-03-30T21:30:50.093344Z",
+        "description": "Azure Red Hat OpenShift (ARO) is now generally available in\nthe Indonesia Central Azure region, expanding regional availability for\ncustomers running mission‑critical OpenShift workloads on Azure. Thi...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "559552",
+        "modified": "2026-03-30T21:30:50.093344Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Red Hat OpenShift"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Open Source"
+        ],
+        "title": "Generally Available: Azure Red Hat OpenShift in Indonesia Central"
+      }
+    ],
+    "limit": 50,
+    "offset": 50,
+    "returnedCount": 10,
+    "totalCount": 60
+  },
+  "scan": "2026-03",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

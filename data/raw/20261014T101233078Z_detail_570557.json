@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "570557"
+  },
+  "fetchedAt": "2026-10-14T10:12:33.078Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "570557",
+    "created": "2026-09-03T17:17:08.5092447Z",
+    "description": "Azure\nVirtual Network Manager IP address management is now generally available in\nadditional regions: US Gov Virginia, US Gov Texas and US Gov Arizona, and China\nNorth 3 and China East 3. In complex\nnetwork environments, managing IP addresses effectively is essential. This\nfeature centralizes IP planning and allocation, allowing users to automatically\nassign non-overlapping addresses and prevent conflicts between Azure,\non-premises, and multi-cloud address spaces. It also provides clear insights\ninto IP usage and allocation across your network resources. Through its\nintegration with Azure Policy, the feature ensures that virtual networks are\ncreated using the designated IP pool, preventing unintended overlapping\nprefixes for both new and existing virtual networks. With cross-region\nassociation, users can manage IP addresses for virtual networks across regions,\nallowing customers to plan and govern their full address space globally. Learn\nmore. ",
+    "generalAvailabilityDate": "2026-09",
+    "id": "570557",
+    "modified": "2026-09-03T17:17:08.5092447Z",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Azure Virtual Network Manager"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Management",
+      "Regions & Datacenters",
+      "Services"
+    ],
+    "title": "Generally Available: Azure Virtual Network Manager IPAM in additional Azure regions "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

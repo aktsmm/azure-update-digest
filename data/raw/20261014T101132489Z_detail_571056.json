@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "571056"
+  },
+  "fetchedAt": "2026-10-14T10:11:32.489Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "571056",
+    "created": "2026-09-16T17:15:10.2621356Z",
+    "description": "In mid-September 2026, the following updates and enhancements were made to Azure SQL:Configure soft delete for the Azure SQL logical server. When the logical server is deleted, it goes into a soft deleted state and is self-restorable during the configured retention period. Any accidental deletes of the logical server can now be self-recovered within the retention period predictably and consistently, without having to call Microsoft support.Learn more.",
+    "id": "571056",
+    "modified": "2026-09-16T17:15:10.2621356Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Azure SQL updates for mid-September 2026 "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

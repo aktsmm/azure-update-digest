@@ -1,0 +1,1434 @@
+{
+  "args": {
+    "filter": "created ge 2026-05-31T15:00:00Z and created lt 2026-06-30T15:00:00Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-14T10:04:17.729Z",
+  "ok": true,
+  "response": {
+    "hasMore": true,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2029
+          }
+        ],
+        "baseId": "558560",
+        "created": "2026-06-10T17:00:06.6090204Z",
+        "description": "As of March 31, 2026, new Azure Cosmos DB NoSQL accounts can no longer enable Azure Synapse Link. Existing customers will remain fully supported until March 31, 2029, when Azure Synapse Link will reac...",
+        "id": "558560",
+        "modified": "2026-06-10T17:00:06.6090204Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Cosmos DB",
+          "Azure Synapse Analytics"
+        ],
+        "tags": [
+          "Retirements",
+          "Services"
+        ],
+        "title": "Retirement: Azure Synapse Link for Azure Cosmos DB NoSQL"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "560810",
+        "created": "2026-06-03T22:15:24.5658598Z",
+        "description": "Ever wondered how to allow auditing personas (i.e. security analyst in your organization or security assessment contractor) the ability to view your ledger files and establish trust in the cryptograph...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "560810",
+        "modified": "2026-06-03T22:15:24.5658598Z",
+        "productCategories": [
+          "Databases",
+          "Security",
+          "Storage"
+        ],
+        "products": [
+          "Azure confidential ledger"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "SDK and Tools",
+          "Security",
+          "Services"
+        ],
+        "title": "General Availability: Backup your ledger files for audit with Azure confidential ledger’s new tool "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "561262",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Teams building agentic applications, multi-tenant platforms,\ndevelopment environments, and CI/CD systems have often had to stitch together\ncustom infrastructure to run untrusted code safely, preserve ...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "561262",
+        "modified": "2026-09-23T18:50:55.8011094Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Container Apps Sandboxes"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2025
+          },
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "561978",
+        "created": "2026-06-03T02:00:57.6296236Z",
+        "description": "We are excited to announce the General Availability of Simple log alerts in Azure Monitor, available starting today. This feature is designed to provide a simplified and more intuitive experience for ...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "561978",
+        "modified": "2026-06-03T02:00:57.6296236Z",
+        "previewAvailabilityDate": "2025-05",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Simple log alerts in Azure Monitor"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          },
+          {
+            "month": "September",
+            "ring": "Private Preview",
+            "year": 2024
+          },
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "561984",
+        "created": "2026-06-02T19:30:20.2853906Z",
+        "description": "We’re excited to announce the General Availability of Dynamic threshold for Log search alerts! Using dynamic thresholds means you don't have to know the right threshold for each Log alert rule - Dynam...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "561984",
+        "modified": "2026-06-02T19:30:20.2853906Z",
+        "previewAvailabilityDate": "2025-11",
+        "privatePreviewAvailabilityDate": "2024-09",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Dynamic threshold for Log search alerts"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Private Preview",
+            "year": 2024
+          },
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "562027",
+        "created": "2026-06-16T17:15:28.1226213Z",
+        "description": "A new Azure portal experience for Summary Rules in Log Analytics is now available. Summary Rules enable aggregation of high-volume log data at a defined cadence and store it in summarized tables for i...",
+        "generalAvailabilityDate": "2025-02",
+        "id": "562027",
+        "modified": "2026-06-16T17:15:28.1226213Z",
+        "privatePreviewAvailabilityDate": "2024-06",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Log Analytics Summary Rules experience"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562084",
+        "created": "2026-06-09T18:45:07.7252589Z",
+        "description": "PostgreSQL Hub for Azure Developers brings together key AI and application development resources for PostgreSQL on Azure. It includes curated sample apps and solution accelerators, tutorials, and stru...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562084",
+        "modified": "2026-06-09T18:45:07.7252589Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: PostgreSQL Hub for Azure Developers "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562099",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Developers\nbuilding Model Context Protocol (MCP) servers often rely on plain text\nresponses even when user interactions required richer experiences, such as\nvisual data exploration, complex configurat...",
+        "id": "562099",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Build",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Functions now supports hosting MCP Apps "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562365",
+        "created": "2026-06-02T19:30:20.2853906Z",
+        "description": "Rolling updates are now generally available in the Flex Consumption plan, delivering zero-downtime deployments with a simple configuration change.Instead of forcefully restarting all instances during ...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562365",
+        "modified": "2026-06-02T19:30:20.2853906Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Rolling updates in Flex Consumption "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562442",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure\nFunctions now includes managed connectors - the same 1,400+ connector ecosystem\nbehind Logic Apps and Power Platform - as first-class triggers and\noperations. This enables customers to build int...",
+        "id": "562442",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things",
+          "Integration"
+        ],
+        "products": [
+          "Azure Functions",
+          "Logic Apps"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Microsoft Build"
+        ],
+        "title": "Public Preview: Azure Functions now includes managed connectors to integrate with 1400+ of your favorite systems "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562482",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure Functions now supports building AI agents as a first-class workload using a markdown-first programming model in public preview. With this release, developers can author event-driven serverless a...",
+        "id": "562482",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Public Preview: Serverless agents runtime for Azure Functions"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562487",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Developers are already using AI coding assistants to build Azure Functions apps today, but the quality of the help varies widely. It depends on which underlying model the assistant is using and how re...",
+        "id": "562487",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Public Preview: Copilot-assisted coding & agent skills to build, deploy, and run Azure Functions faster in VS Code, CLI, and azd"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562492",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure Functions now provides built-in Grafana dashboards. Customers now get a zero-setup, single pane of glass for the health, performance, and scale of their function apps directly in the Azure porta...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562492",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Built-in Grafana dashboards for Azure Functions"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562497",
+        "created": "2026-06-16T19:00:15.6413078Z",
+        "description": "The Azure Functions extension for VS Code now provides a redesigned Create New Project experience in public preview, featuring a rich, visual template gallery that replaces the multi-step Quick Pick w...",
+        "id": "562497",
+        "modified": "2026-06-16T19:00:15.6413078Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Public Preview: New project templates and template gallery for Azure Functions in VS Code"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562502",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure Functions now supports Go as a first-class language option in public preview. With this release, developers can author event-driven serverless apps in Go using the Azure Functions Go programming...",
+        "id": "562502",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Public Preview: Go language support on Azure Functions"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562511",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure Functions on Container Apps has traditionally used platform-managed scaling, where triggers are automatically translated into KEDA scale rules. With the new allowScalingRuleOverride property, cu...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562511",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Override Scale Rules in Azure Functions on Azure Container Apps"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562554",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure\nContainer Apps enhances its OpenTelemetry (OTel) capabilities by expanding\nsupport for third-party observability platforms. This update introduces\nadditional endpoint options for commonly used m...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562554",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Additional support for OpenTelemetry destinations (New Relic, Dynatrace, Elastic) "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562559",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "In\naddition to platform-level logs, Azure Container Apps now adds a dedicated\nAzure Monitor diagnostic setting category, ContainerAppHTTPLogs,\nthat exposes detailed HTTP access logs for incoming traff...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562559",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Monitor HTTP traffic in Azure Container Apps "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562564",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Customers running regulated or sensitive containerized workloads often need stronger protection for data while it is actively being processed, especially in scenarios that require higher isolation and...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562564",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Confidential Compute support on Azure Container Apps"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562569",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Customers\ncan now bring Azure Container Apps environments into Microsoft Defender for\nCloud’s Serverless Containers Posture\nexperience, helping security teams extend posture management across more of\n...",
+        "id": "562569",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [],
+        "products": [],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Microsoft Defender for Cloud support for Azure Container Apps (Serverless Containers Posture)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562637",
+        "created": "2026-06-09T23:45:10.0389615Z",
+        "description": "You can now use Agent mode for GitHub Copilot in SSMS to work with your database: investigating performance problems, tuning queries, reviewing maintenance and configuration, identifying security conc...",
+        "id": "562637",
+        "modified": "2026-06-09T23:45:10.0389615Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [],
+        "products": [],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Agent mode for GitHub Copilot in SQL Server Management Studio (SSMS) "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562647",
+        "created": "2026-06-01T13:45:09.5790941Z",
+        "description": "Azure Functions support for Node.js 24 is now\ngenerally available.   You can now develop apps using Node.js 24 locally\nand deploy them to supported Azure Functions plans on Linux and\nWindows, includin...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "562647",
+        "modified": "2026-06-01T13:45:09.5790941Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Build",
+          "Open Source",
+          "Security"
+        ],
+        "title": "Generally Available: Azure Functions Support for Node.js 24"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562657",
+        "created": "2026-06-02T20:45:52.8723288Z",
+        "description": "Global Provisioned Throughput (PTU) reservations are now region-agnostic, enabling a single reservation to cover Global PTU deployments across multiple regions. Why it matters:Optimize savings: One re...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562657",
+        "modified": "2026-06-02T20:45:52.8723288Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Pricing & Offerings"
+        ],
+        "title": "Global PTU Reservations Are Now Region-Agnostic"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562733",
+        "created": "2026-06-04T19:30:58.6220186Z",
+        "description": "Microsoft Discovery is now generally available, providing research and development organizations an enterprise\nplatform for building and governing agentic AI workflows across scientific and\nengineerin...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562733",
+        "modified": "2026-06-04T19:30:58.6220186Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Microsoft Discovery"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562754",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "We are announcing the general availability of the Azure Cosmos DB Linux emulator (vNext), a cross-platform, Docker-based emulator for local development and testing against Azure Cosmos DB for NoSQL. T...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562754",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Cosmos DB Linux emulator (vNext)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562759",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "You can now automate embedding generation from multiple data sources into Azure Cosmos DB and other Azure destinations. Building AI applications often requires stitching together data extraction, embe...",
+        "id": "562759",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: OmniVec, an open-source embedding toolkit for Azure"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562764",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Building AI applications on Azure Cosmos DB just got simpler. With integrated embeddings, now in public preview, Azure Cosmos DB for NoSQL can automatically generate and maintain embeddings for your d...",
+        "id": "562764",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Integrated embeddings for Azure Cosmos DB for NoSQL"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562769",
+        "created": "2026-06-02T20:15:03.9718281Z",
+        "description": "You can now enable vaulted backups for Azure Cosmos DB\naccounts, protecting mission-critical data with secure, isolated, and resilient\nbackups. Azure Backup for Cosmos DB, now in preview, supports cyb...",
+        "id": "562769",
+        "modified": "2026-06-02T20:15:03.9718281Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Backup for Cosmos DB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562774",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "The safe key rotation feature helps you confidently rotate your Azure Cosmos DB account keys by providing visibility into when each key was last used. Without this insight, you risk rotating a key tha...",
+        "id": "562774",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Safe key rotation for Azure Cosmos DB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562779",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "You can now accelerate the development of agentic applications with the new Agent Memory Toolkit for Azure Cosmos DB. This toolkit provides a customizable, code-first solution to help you build scalab...",
+        "id": "562779",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Agent Memory Toolkit for Azure Cosmos DB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562784",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "You can now improve the relevance of any Cosmos DB query or search with the public preview of semantic reranker in Azure Cosmos DB. Semantic reranker analyzes the meaning of your queries and your data...",
+        "id": "562784",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Semantic reranker in Azure Cosmos DB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562794",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "We are announcing the public preview of the Agentic Retrieval Toolkit for Azure Cosmos DB. Motivated by GraphRAG and multiple-hop reasoning problems, this new capability helps you build advanced retri...",
+        "id": "562794",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Agentic Retrieval Toolkit for Azure Cosmos DB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562799",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Global secondary indexes (GSIs) for Azure Cosmos DB are now generally available, giving you a powerful way to accelerate query performance without adding complexity to your application code. GSIs are ...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562799",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Cosmos DB global secondary indexes"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562843",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "As\norganizations build more agentic applications, agent-to-agent communication is\nbecoming a critical part of enterprise AI systems. But in many environments,\nagent traffic operates outside existing A...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562843",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Integration",
+          "Internet of Things",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "API Management"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Azure API Management adds support for Agent-to-Agent (A2A) APIs"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562848",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Organizations\nusing workspace-based API management models previously needed a dedicated\nworkspace gateway and Premium tier deployment to take advantage of API\nManagement workspaces increasing both cos...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562848",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Integration",
+          "Internet of Things",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "API Management"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Azure API Management workspaces now support the built-in gateway"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562853",
+        "created": "2026-06-02T21:00:30.592373Z",
+        "description": "As organizations adopt multiple LLM providers, developers often need to handle different API formats, SDKs, and integration patterns for each model vendor. This increases application complexity and ma...",
+        "id": "562853",
+        "modified": "2026-06-02T21:00:30.592373Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Integration",
+          "Internet of Things",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "API Management"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Public Preview: Azure API Management introduces a Unified Model API for multi-model AI applications. "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562858",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "As\norganizations integrate external AI providers into production applications,\nplatform teams need consistent ways to secure, govern,\nand observe model interactions across providers. Without centraliz...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562858",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Integration",
+          "Internet of Things",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "API Management"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Azure API Management now supports AI gateway capabilities for Anthropic and Vertex AI models. "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562863",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Modern\nintegration and automation teams increasingly want the flexibility of writing\nworkflows directly in code while still benefiting from managed\norchestration, enterprise connectors, and cloud-scal...",
+        "id": "562863",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Integration",
+          "Internet of Things"
+        ],
+        "products": [
+          "Logic Apps"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Public Preview: Azure Logic Apps Codeful Workflows with Logic Apps Standard SDK. "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562868",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "As\norganizations adopt AI agents and MCP-based tooling, integration teams often\nneed to build and maintain custom API layers just to make existing\nworkflows callable by agents. This additional plumbin...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562868",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Integration",
+          "Internet of Things"
+        ],
+        "products": [
+          "Logic Apps"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Azure Logic Apps MCP Server. "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562874",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Integrating\napps with SaaS and line-of-business systems today means writing custom API\nclient code, managing credentials, and handling retries, pagination, and\nwebhooks for every service. Connector\nNa...",
+        "id": "562874",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Integration",
+          "Internet of Things"
+        ],
+        "products": [
+          "Logic Apps"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Public preview: Connector Namespace"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562880",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "As\norganizations deploy more agentic applications and MCP-based tools, enforcing\nconsistent safety and compliance policies across agent interactions becomes\nincreasingly important. Many teams today re...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562880",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Integration",
+          "Internet of Things",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "API Management"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Azure API Management now supports content safety controls for MCP and A2A APIs. "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562885",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "As\norganizations adopt advanced AI models, understanding token consumption is\nbecoming more complex. Traditional metrics focused primarily on prompt and\ncompletion tokens often fail to capture newer t...",
+        "id": "562885",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Integration",
+          "Internet of Things",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "API Management"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Public Preview: Azure API Management now supports token metrics for all token types"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562894",
+        "created": "2026-06-02T20:45:52.8723288Z",
+        "description": "As API\nestates grow, managing individual custom domains and certificates for every\nsubdomain can quickly become operationally complex and difficult to\nscale. Without wildcard support, every new subdom...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562894",
+        "modified": "2026-06-02T20:45:52.8723288Z",
+        "productCategories": [
+          "Integration",
+          "Internet of Things",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "API Management"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Azure API Management Premium v2 and Standard v2 now support wildcard custom hostnames. "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562899",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Organizations\noften need to expose APIs, developer portals, and management endpoints under\ndifferent branded or organizational domain names- — for example,\napi.contoso.com for external partners, apis....",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562899",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Integration",
+          "Internet of Things",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "API Management"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Azure API Management Premium v2 now supports multiple custom domains"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562904",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Managing Kubernetes clusters across hybrid and multi-cloud environments is fragmented by default: different consoles, different tools, different operational models. Azure Kubernetes Fleet Manager now ...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562904",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Fleet Manager"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Azure Kubernetes Fleet Manager for Arc-enabled clusters"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562909",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "As\norganizations increasingly build autonomous AI agents to automate workflows and\norchestrate enterprise tasks, developers need a centralized way to discover,\ngovern, and reuse these capabilities acr...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562909",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Integration",
+          "Internet of Things",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "API Management"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Azure API Center now supports agent registration, agent assessment, and Git-based synchronization. "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562914",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "As\norganizations adopt MCP-based tooling and AI agents at scale, developers need a\nsimpler way to discover and connect to the growing ecosystem of enterprise MCP\nservers, tools, APIs, and AI assets.  ...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562914",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Integration",
+          "Internet of Things",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "API Management"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Azure API Center now provides a data plane MCP server for enterprise-wide discovery of APIs and AI assets. "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562919",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Provisioning and maintaining system node pools in AKS requires ongoing work to handle scaling, patching, and availability. Managed system node pools in AKS Automatic remove that responsibility. The pl...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562919",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Generally available: Generally available: Managed system node pools in AKS Automatic"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562924",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "As\norganizations move toward agentic automation, developers increasingly need a\nsimpler way to combine workflows, APIs, and AI agents into production-ready\nbusiness processes. Today, building these sy...",
+        "id": "562924",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Integration",
+          "Internet of Things"
+        ],
+        "products": [
+          "Logic Apps"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Public Preview: Azure Logic Apps Automation SKU for agentic business process automation. "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562929",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Most RAG\nimplementations today are complex. Teams must build ingestion\npipelines, manage chunking and embeddings, configure vector stores, wire up\nretrieval layers, and then operate the entire system ...",
+        "id": "562929",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Integration",
+          "Internet of Things"
+        ],
+        "products": [
+          "Logic Apps"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Public Preview: Knowledge as a Service with Azure Logic Apps."
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 50,
+    "totalCount": 191
+  },
+  "scan": "2026-06",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

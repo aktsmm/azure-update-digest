@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "569804"
+  },
+  "fetchedAt": "2026-10-14T10:12:38.521Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "569804",
+    "created": "2026-09-02T17:00:51.9883567Z",
+    "description": "Azure Front\nDoor’s Web Application Firewall (WAF) now supports profile and route level WAF\npolicy associations in public preview. This gives you more flexibility to apply\nbroad baseline protection across an Azure Front Door profile while using\ntargeted policies for specific applications, domains, or routes that need\ndifferent controls. With this\nupdate, you can associate WAF policies at the profile, domain, or route scope.\nFor example, you can use a profile level policy for common protections across\nall domains in a profile, then apply a route level policy to sensitive paths\nsuch as sign-in, checkout, or API routes. This helps reduce policy duplication\nwhile still allowing more granular security configuration where it's needed. If multiple\nWAF policy scopes apply to a request, Azure Front Door uses the most specific\npolicy: a route level policy takes precedence over a domain level policy, and a\ndomain level policy takes precedence over a profile level policy. To get\nstarted, create or update an Azure Front Door WAF policy in the Azure portal\nand choose the associated scope that matches your deployment needs. Learn more.",
+    "id": "569804",
+    "modified": "2026-09-02T17:00:51.9883567Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure Front Door",
+      "Web Application Firewall"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Public Preview: Azure Front Door profile and route level WAF policies"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

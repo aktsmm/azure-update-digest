@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563481"
+  },
+  "fetchedAt": "2026-10-14T10:21:53.796Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563481",
+    "created": "2026-06-30T19:00:51.204585Z",
+    "description": "Microsoft Foundry brings Toolboxes to GA, providing a unified endpoint to invoke the most-used tools in prompt agents and callable outside of prompt agents. Today every agent team hand-assembles its own tool list to solve the same tasks, with no shared artifact to reuse across agents and no agreed way to consume a set of governed tools. Toolboxes provide that artifact: a curated, governed bundle of tools built once in the Foundry portal or in code, configured with governance policies, and reusable across an organization. The tools agents need span MCP servers, REST APIs, skills, and connectors, each with its own protocol and auth model. Toolboxes expose all of them through a single MCP-compatible endpoint so developers stop writing per-tool integration code and admins keep consistent governance over what agents can call. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563481",
+    "modified": "2026-06-30T19:00:51.204585Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Toolboxes in Microsoft Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,45 @@
+{
+  "args": {
+    "id": "572573"
+  },
+  "fetchedAt": "2026-10-14T10:10:03.632Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "September",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "572573",
+    "created": "2026-09-24T16:04:16.4485151Z",
+    "description": "Instant Access for application-consistent restore points on virtual machines (that have Premium v2 or Ultra disks as data disks) is now generally available. With Instant Access, you can begin restoring a disk from a restore point as soon as the snapshot is created, instead of waiting for the background data replication to complete fully. That shortens your recovery time objective when you are bringing a VM back online.What's new at general availabilityThis release introduces “instantAccessState”, a consolidated read-only property on the restore point itself. During preview, customer had to inspect “snapshotAccessState” on each individual disk restore point and work out for themselves whether the restore point as a whole was usable. Now the customer can read one property at the restore point level and decide in a single step whether they can restore, copy, or download it, which removes per-disk polling logic from recovery automation and makes restore decision much simpler.How to use itSet instantAccess to true on the restore point collection to enable Instant Access for every restore point in it and optionally set instantAccessDurationMinutes on the restore point to control how long Instant Access stays active (60–300 minutes; the default is 300). Before you trigger a restore, read instantAccessState on the restore point and decide to restore based on its value rather than aggregating per-disk states yourself. Learn more.",
+    "generalAvailabilityDate": "2026-09",
+    "id": "572573",
+    "modified": "2026-09-24T16:04:16.4485151Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Storage",
+      "Compute"
+    ],
+    "products": [
+      "Azure Disk Storage",
+      "Virtual Machines"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Compliance",
+      "Management",
+      "Feature"
+    ],
+    "title": "Generally Available: Instant Access for VM restore points"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

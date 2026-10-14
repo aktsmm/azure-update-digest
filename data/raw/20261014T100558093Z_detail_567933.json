@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "567933"
+  },
+  "fetchedAt": "2026-10-14T10:05:58.093Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Retirement",
+        "year": 2028
+      }
+    ],
+    "baseId": "567933",
+    "created": "2026-10-08T18:23:25.2897312Z",
+    "description": "Microsoft Dev Box will\nretire on September 18, 2028. Beginning on September 14, 2026,\nMicrosoft Dev Box will begin the closing-down process. After retirement,\nMicrosoft Dev Box will no longer be available. Microsoft Dev Box is currently in maintenance mode, and\nMicrosoft’s investments for developer cloud environments are focused on Windows\n365. Existing Microsoft Dev Box usage remains supported during the transition\nperiod, and we recommend that you begin planning your migration now to avoid\ndisruption to developer workflows. What this means for you If\nyou currently use Microsoft Dev Box, you can continue using your existing\ndeployments during the transition period. No\nnew feature development is planned for the service. You\nshould evaluate and begin planning your move to Windows 365, which is\nthe recommended path forward for virtualized developer environments. Recommended action Review\nyour current Dev Box usage, including dev centers, projects, pools, images, and\ndeveloper workflows. Identify\nwhich scenarios can transition directly to Windows 365 and which require\nadditional planning. Validate\nidentity, device management, networking, image, and licensing requirements for\nyour future-state environment. Begin\ntesting replacement workflows as early as possible to reduce risk before\nretirement.  If you have questions or need support, please contact your\nMicrosoft representative. ",
+    "id": "567933",
+    "modified": "2026-10-08T18:23:25.2897312Z",
+    "productCategories": [
+      "Developer tools",
+      "DevOps",
+      "Virtual desktop infrastructure"
+    ],
+    "products": [
+      "Microsoft Dev Box"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Microsoft Dev Box will be retired on September 18, 2028"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

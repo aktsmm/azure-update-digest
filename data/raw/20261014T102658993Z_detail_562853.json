@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "562853"
+  },
+  "fetchedAt": "2026-10-14T10:26:58.993Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "562853",
+    "created": "2026-06-02T21:00:30.592373Z",
+    "description": "As organizations adopt multiple LLM providers, developers often need to handle different API formats, SDKs, and integration patterns for each model vendor. This increases application complexity and makes provider switching, failover, and governance more difficult. With the Unified Model API, Azure API Management enables organizations to standardize on a single client-facing API format — such as the OpenAI Chat Completions API — while transparently transforming requests to various backend providers, including OpenAI and Anthropic models. This allows teams to: Use a consistent client SDK and API format across multiple LLM providers Switch or fail over between model providers without client-side changes Simplify application development for multi-model AI architectures Apply centralized governance, security, and observability across heterogeneous model backends By abstracting provider-specific differences behind a unified API layer, Azure API Management helps organizations build more portable, resilient, and governable AI applications. Learn\nmore. ",
+    "id": "562853",
+    "modified": "2026-06-02T21:00:30.592373Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Integration",
+      "Internet of Things",
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "API Management"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build"
+    ],
+    "title": "Public Preview: Azure API Management introduces a Unified Model API for multi-model AI applications. "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

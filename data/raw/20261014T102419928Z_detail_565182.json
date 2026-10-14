@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "565182"
+  },
+  "fetchedAt": "2026-10-14T10:24:19.928Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "565182",
+    "created": "2026-06-04T19:45:40.5539693Z",
+    "description": "AI pipelines for Azure HorizonDB is now\navailable in public preview. AI pipelines let you describe an AI data ingestion\nworkflow, chunking, embedding, extraction, generation, and ranking,\ndeclaratively in SQL, and run it as a fault-tolerant pipeline inside the\ndatabase.  Execution is durable: pipelines survive crashes, retry failed steps\nautomatically, checkpoint incremental work, and resume long-running jobs from\nthe last completed step. This removes the boilerplate ingestion service that many GenAI\napplications rebuild today. Pipelines run on change, so embeddings stay in sync\nas source rows are inserted or updated, and only new or changed rows need to be\nre-embedded. When the embedding model,\ndimensions, or chunk size change, backfill reprocesses every row as a single\ndurable instance that resumes from the last checkpoint instead of restarting\nfrom zero. AI pipelines are part of the azure_ai extension, built on pg_durable, and work with AI model management, pgvector,\nDiskANN vector search, and full-text search to provide an end-to-end retrieval\npath inside one database. Learn\nmore. ",
+    "id": "565182",
+    "modified": "2026-06-04T19:45:40.5539693Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure HorizonDB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Build"
+    ],
+    "title": "Public Preview: AI pipelines in Azure HorizonDB"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "569711"
+  },
+  "fetchedAt": "2026-10-14T10:13:23.642Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "569711",
+    "created": "2026-08-31T23:11:39.7892384Z",
+    "description": "Azure automatically recovers a VM when it loses access to an attached managed disk for an extended period. The VM is shut down and powered back on after disk connectivity is restored, with no customer action required. This remains the default behavior.Now in public preview in select regions, per-disk resiliency provides another option for applications that can tolerate the temporary loss of an individual data disk. When enabled, Azure detaches and takes only the affected disk offline while the VM and its remaining disks continue running. Once disk connectivity is restored, Azure automatically attaches and brings the disk back online.Use per-disk resiliency where a single data disk is not a single point of failure:Production VMs with backup or auxiliary disks, so a secondary disk issue does not interrupt the primary workload.Clustered and shared-disk applications with their own high-availability or failover logic.Containerized workloads with per-pod disks, so one persistent volume can recover without disrupting other pods on the node.Per-disk resiliency is opt-in for each Azure Managed Disk. While a data disk is offline, I/Os to it returns errors, so the application must continue without that disk until access is restored. OS disks continue to use the default VM shut down recovery behavior.Available now in public preview in select regions. Learn more.",
+    "id": "569711",
+    "modified": "2026-08-31T23:11:39.7892384Z",
+    "previewAvailabilityDate": "2026-08",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Disk Storage"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Per-disk resiliency for Azure VMs"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

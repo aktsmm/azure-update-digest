@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "570800"
+  },
+  "fetchedAt": "2026-10-14T10:07:40.476Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "570800",
+    "created": "2026-09-29T19:41:09.7685716Z",
+    "description": "The Functions on Azure Container Apps (ACA) V1 will be retired on September 29, 2027. After this date, existing Functions on ACA V1 Apps will stop running and no longer process\nrequests or event-driven triggers. Action required Review your Azure environments and migrate all affected apps\nto the Functions on Azure Container Apps(ACA) V2 hosting model before September 29, 2027 to avoid service\ndisruption. Functions on ACA V2 uses a native Azure Container App configured\nwith `kind=functionapp`. You can reuse your existing container image; the\nstandard migration path doesn't require function code changes. Use the Azure\nFunctions on Azure Container Apps v1 migration assistant to help\nmigrate your function apps from the V1 to V2 model. To migrate manually 1. Record the V1 app's configuration, including secrets,\nidentity, networking, and scaling. 2. Create a V2 app with `kind=functionapp` and reapply the\nconfiguration. 3. Test all triggers, shift production traffic, and then\ndecommission the V1 app. We recommend completing migration and production\nvalidation well before the retirement date. For assistance, contact your Microsoft account team or create\nan Azure\nsupport request.  Learn more: Migrate\nto Azure Functions v2 on Azure Container Apps Create\nan Azure Functions app with auto scaling rules on Azure Container Apps ",
+    "id": "570800",
+    "modified": "2026-09-29T19:41:09.7685716Z",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Container Apps"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Functions on Azure Container Apps V1 "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

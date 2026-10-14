@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "567934"
+  },
+  "fetchedAt": "2026-10-14T10:06:02.375Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "567934",
+    "created": "2026-10-08T18:20:34.0097044Z",
+    "description": "Azure Deployment\nEnvironments will retire on February 22, 2027. Beginning on September\n14, 2026, Azure Deployment Environments will begin the closing-down\nprocess. After retirement, the service will no longer be available. To help avoid disruption, we recommend that you begin\nassessing your current usage and planning your transition now. Review the\nenvironments, templates, and workflows in your organization that depend on\nAzure Deployment Environments and identify the replacement approach that best\nsupports your requirements. What this means for you You\nshould review all current Azure Deployment Environments usage across\nsubscriptions, projects, templates, and deployment workflows. You\nshould identify an alternative approach for environment provisioning and\ndeveloper self-service before the retirement date. You\nshould begin validating your migration plan as early as possible to minimize\noperational and development impact. Recommended action Inventory\nyour current environments, templates, catalogs, and provisioning workflows. Determine\nthe target platform or service that will replace Azure Deployment Environments\nfor your organization. Test\nyour migration path, including governance, access control,\ninfrastructure-as-code compatibility, and developer workflow readiness. Communicate\ninternal timelines to platform engineering teams, developers, and\nadministrators. ",
+    "id": "567934",
+    "modified": "2026-10-08T18:20:34.0097044Z",
+    "productCategories": [
+      "Developer tools",
+      "DevOps"
+    ],
+    "products": [
+      "Azure Deployment Environments"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Azure Deployment Environments will be retired on February 22, 2027"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

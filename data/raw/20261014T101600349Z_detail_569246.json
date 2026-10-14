@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "569246"
+  },
+  "fetchedAt": "2026-10-14T10:16:00.349Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "569246",
+    "created": "2026-08-12T17:03:08.2202194Z",
+    "description": "Batch rule updates are now generally\navailable for Azure Front Door Standard and Premium. This capability enables\ncustomers to add, update, delete, or reorder multiple rules in a rule set as a\ncoordinated operation, ensuring that all changes are applied together or not\napplied at all. Batch rule updates improve deployment\nsafety and predictability for customers managing large or complex rule sets\nthrough Terraform and other Infrastructure-as-Code workflows. They help prevent\npartial rule states, rule-order conflicts, deployment retries, and rollback\ncomplexity that can occur when related rules are updated individually. Customers explicitly enable batch mode when\ncreating a new rule set and submit the complete desired rule configuration.\nAzure Front Door then applies the changes together at the rule-set level.\nExisting rule sets continue to use classic rule management by default,\npreserving full backward compatibility. Learn\nmore. ",
+    "generalAvailabilityDate": "2026-08",
+    "id": "569246",
+    "modified": "2026-08-12T17:03:08.2202194Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure Front Door"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Batch rule updates for Azure Front Door "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

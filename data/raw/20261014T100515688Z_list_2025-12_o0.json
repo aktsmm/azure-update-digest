@@ -1,0 +1,637 @@
+{
+  "args": {
+    "filter": "created ge 2025-11-30T15:00:00Z and created lt 2025-12-31T15:00:00Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-14T10:05:15.688Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "499438",
+        "created": "2025-12-04T12:00:46.4665761Z",
+        "description": "Announcing the general availability of resumable uploads for\nAzure Storage Blob SFTP. In the event of a failed partial transfer, this new\nfeature enables users to open the partial file and continue wr...",
+        "generalAvailabilityDate": "2025-08",
+        "id": "499438",
+        "modified": "2025-12-04T12:00:46.4665761Z",
+        "productCategories": [
+          "Storage",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Blob Storage",
+          "Azure Data Lake Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Blob Storage SFTP - Resumable Uploads"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "501668",
+        "created": "2025-12-03T21:00:12.798141Z",
+        "description": "On June 30, 2026, AzureML SDK V1 will reach end of life. The following SDKs which work in tandem with the AzureML SDK V1 will also be retired.  azureml-train-core  azureml-pipeline  azureml-pipeline-c...",
+        "id": "501668",
+        "modified": "2025-12-03T21:00:12.798141Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Machine Learning"
+        ],
+        "tags": [
+          "Retirements",
+          "Features"
+        ],
+        "title": "Retirement: Remove dependency on these Azure ML SDKs before June 30, 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "513892",
+        "created": "2025-12-29T17:30:40.7931753Z",
+        "description": "In 2026, Azure Resource Manager will be deprecating the Custom Resource Provider (CuRP) service.We will retire the feature by October 31, 2026. We will be performing a scream test on October 27, 2025,...",
+        "id": "513892",
+        "modified": "2025-12-29T17:30:40.7931753Z",
+        "productCategories": [
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Resource Manager"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Deprecation of Custom Resource Providers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "515484",
+        "created": "2025-12-12T11:30:27.0841562Z",
+        "description": "The retirement date for default outbound access has been extended to March 31, 2026. This change aligns with the broader Azure Virtual Network (VNet) update and replaces the previously communicated Se...",
+        "id": "515484",
+        "modified": "2025-12-12T11:30:27.0841562Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Batch"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Update: The retirement date for default outbound access has been extended to March 31, 2026."
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "531889",
+        "created": "2025-12-04T17:00:18.9042729Z",
+        "description": "The Azure MCP (Model Context Protocol) Server provides a\nstreamlined approach for managing Azure resources—including Azure confidential ledger—through\nnatural language prompts. This feature allows use...",
+        "generalAvailabilityDate": "2025-12",
+        "id": "531889",
+        "modified": "2025-12-04T17:00:18.9042729Z",
+        "productCategories": [
+          "Databases",
+          "Security",
+          "Storage"
+        ],
+        "products": [
+          "Azure confidential ledger"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "SDK and Tools",
+          "Security",
+          "Services"
+        ],
+        "title": "Generally Availaible: Azure MCP Server support for Azure confidential ledger"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "534504",
+        "created": "2025-12-03T17:30:15.9333615Z",
+        "description": "Now you can install the credcheck extension in Azure\nDatabase for PostgreSQL Flexible Server. The credcheck extension helps you to\nenforce password and credential validation policies directly within P...",
+        "generalAvailabilityDate": "2025-12",
+        "id": "534504",
+        "modified": "2025-12-03T17:30:15.9333615Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: The credcheck extension in Azure Database for PostgreSQL Flexible Server "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "534509",
+        "created": "2025-12-03T17:30:15.9333615Z",
+        "description": "Now you can install the ip4r extension in Azure Database for PostgreSQL Flexible Server. Ip4r provides efficient storage and indexing functionality for IPv4 and IPv6 addresses and ranges.  Learn more.",
+        "generalAvailabilityDate": "2025-12",
+        "id": "534509",
+        "modified": "2025-12-03T17:30:15.9333615Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: The ip4r extension in Azure Database for PostgreSQL Flexible Server "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "534518",
+        "created": "2025-12-03T17:30:15.9333615Z",
+        "description": "Now you can upgrade the pg_squeeze extension to version 1.9.1 in Azure Database for PostgreSQL Flexible Server.  Learn more. ",
+        "generalAvailabilityDate": "2025-12",
+        "id": "534518",
+        "modified": "2025-12-03T17:30:15.9333615Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Update pg_squeeze to version 1.9.1 in Azure Database for PostgreSQL Flexible Server "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "534523",
+        "created": "2025-12-03T17:30:15.9333615Z",
+        "description": "Now you can deploy Azure Database for PostgreSQL Flexible Server in the Belgium Central Azure region.  Learn more.",
+        "generalAvailabilityDate": "2025-12",
+        "id": "534523",
+        "modified": "2025-12-03T17:30:15.9333615Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Database for PostgreSQL Flexible Server in Belgium Central "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "535363",
+        "created": "2025-12-01T17:30:38.1462034Z",
+        "description": "We are announcing the general availability of the Perth\nAzure Extended Zone.   Azure Extended Zones are small-footprint extensions of Azure\nplaced in metro areas, industry centers, or specific jurisdi...",
+        "generalAvailabilityDate": "2025-12",
+        "id": "535363",
+        "modified": "2025-12-01T17:30:38.1462034Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Services",
+          "Regions & Datacenters"
+        ],
+        "title": "Generally Available: Perth - Azure Extended Zones"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "536699",
+        "created": "2025-12-16T15:45:45.070746Z",
+        "description": "Azure NetApp Files advanced ransomware protection (ANF ARP) is now in Public Preview.  ANF ARP is designed to help organizations proactively detect, respond to, and recover from ransomware threats on ...",
+        "id": "536699",
+        "modified": "2025-12-16T15:45:45.070746Z",
+        "previewAvailabilityDate": "2025-12",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure NetApp Files advanced ransomware protection "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "536712",
+        "created": "2025-12-09T13:15:11.4522782Z",
+        "description": "The Federal Information Processing Standard (FIPS) 140-2\nis a US government standard that defines minimum security requirements for\ncryptographic modules in information technology products and systems...",
+        "generalAvailabilityDate": "2025-12",
+        "id": "536712",
+        "modified": "2025-12-09T13:15:11.4522782Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Services",
+          "Security",
+          "Features",
+          "Compliance"
+        ],
+        "title": "Generally Available: FIPS compliant mode for Application Gateway V2 SKUs "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "536721",
+        "created": "2025-12-04T16:15:01.684542Z",
+        "description": "Serverless workspaces in Azure Databricks are now available in Public Preview, offering a fully managed workspace type that comes preconfigured with serverless compute and default storage to deliver a...",
+        "id": "536721",
+        "modified": "2025-12-04T16:15:01.684542Z",
+        "previewAvailabilityDate": "2025-12",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Serverless workspaces in Azure Databricks"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "536747",
+        "created": "2025-12-03T17:00:27.0167531Z",
+        "description": "Bandwidth metrics for Azure Load\nBalancer are now published with metric dimension Protocol. When retrieving or\nviewing Byte, Packet, and SYN Count metrics in the Azure portal, you will now\nsee the dim...",
+        "generalAvailabilityDate": "2025-12",
+        "id": "536747",
+        "modified": "2025-12-03T17:00:27.0167531Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Load Balancer"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Load Balancer bandwidth metrics now support Protocol dimension"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "536907",
+        "created": "2025-12-11T20:30:24.5013232Z",
+        "description": "You can now receive insights where collaboration happens—in Microsoft Teams—with expanded dashboard subscription capabilities in Azure Databricks. This enhancement delivers timely, actionable data dir...",
+        "id": "536907",
+        "modified": "2025-12-11T20:30:24.5013232Z",
+        "previewAvailabilityDate": "2025-12",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure Databricks Dashboard subscriptions now support Microsoft Teams "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "536937",
+        "created": "2025-12-04T22:30:44.0714637Z",
+        "description": "Mistral Large 3, a frontier-class open-weight model with Apache 2.0 licensing, is now available in Microsoft Foundry on Azure. This model delivers enterprise-grade reliability, long-context comprehens...",
+        "id": "536937",
+        "modified": "2025-12-04T22:30:44.0714637Z",
+        "previewAvailabilityDate": "2025-12",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Mistral Large 3 in Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "537106",
+        "created": "2025-12-16T15:45:45.070746Z",
+        "description": "Cross-zone-region replication builds on the existing capabilities of cross-region replication and cross-zone replication. It enables you to replicate volumes across regions and across availability zon...",
+        "generalAvailabilityDate": "2025-12",
+        "id": "537106",
+        "modified": "2025-12-16T15:45:45.070746Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure NetApp Files cross-zone-region replication (CZRR) "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "541410",
+        "created": "2025-12-05T21:45:02.3832493Z",
+        "description": "Zonal Placement for Azure Files Premium LRS is now GA in select regions! This capability gives you explicit control over zone locality by pinning storage accounts to a specific availability zone, enab...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "541410",
+        "modified": "2025-12-05T21:45:02.3832493Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Files"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features",
+          "SDK and Tools"
+        ],
+        "title": "Generally Available: Zonal placement for Azure file shares Azure Files Premium LRS in select regions."
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "541427",
+        "created": "2025-12-17T18:45:01.5347468Z",
+        "description": "Azure\nFunctions triggers and bindings enable you to easily integrate event and data\nsources with function applications.   Now that SDK\ntype bindings support for Azure Blob Storage is available, we’re ...",
+        "id": "541427",
+        "modified": "2025-12-17T18:45:01.5347468Z",
+        "previewAvailabilityDate": "2025-12",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Service Bus SDK type bindings in Azure Functions for Node.js "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "541784",
+        "created": "2025-12-11T18:00:36.6592964Z",
+        "description": "Azure Sphere OS version 25.12 is now available for evaluation in the Retail Eval feed. Whilst this release encompasses no customer-facing changes, it represents significant under-the-hood build system...",
+        "generalAvailabilityDate": "2025-12",
+        "id": "541784",
+        "modified": "2025-12-11T18:00:36.6592964Z",
+        "productCategories": [
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Sphere"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Operating System"
+        ],
+        "title": "Generally Available: Azure Sphere OS version 25.12 is now available for evaluation"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "541813",
+        "created": "2025-12-17T18:30:05.217413Z",
+        "description": "You can now simplify how you diagnose and resolve issues in your applications running on Azure Cosmos DB with the introduction of the Azure Cosmos DB Site Reliability Engineering (SRE) Agent, built on...",
+        "id": "541813",
+        "modified": "2025-12-17T18:30:05.217413Z",
+        "previewAvailabilityDate": "2025-12",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Use Azure SRE Agent with Azure Cosmos DB "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "541818",
+        "created": "2025-12-17T18:30:05.217413Z",
+        "description": "In mid-December 2025, the following updates and enhancements were made to Azure SQL:  Identify causes that auto-resume serverless workloads using Activity Log in Azure SQL Database to troubleshoot and...",
+        "generalAvailabilityDate": "2025-12",
+        "id": "541818",
+        "modified": "2025-12-17T18:30:05.217413Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Avaailable: Azure SQL updates for early December 2025  "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "542813",
+        "created": "2025-12-18T18:45:03.573921Z",
+        "description": "Azure Storage Mover’s new Azure Blob container-to-container\nmigration feature is now in Public Preview, empowering organizations to move\ndata between two Blob containers within the same or different s...",
+        "id": "542813",
+        "modified": "2025-12-18T18:45:03.573921Z",
+        "previewAvailabilityDate": "2025-12",
+        "productCategories": [
+          "Migration",
+          "Storage"
+        ],
+        "products": [
+          "Azure Storage Mover"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Public Preview: Azure Blob-to-Blob migration made simple with Azure Storage Mover"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 23,
+    "totalCount": 23
+  },
+  "scan": "2025-12",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

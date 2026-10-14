@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "571894"
+  },
+  "fetchedAt": "2026-10-14T10:07:14.305Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "571894",
+    "created": "2026-09-30T21:13:13.6139783Z",
+    "description": "The public preview of Microsoft-managed performance monitoring for SQL Server on Azure Virtual Machines is now available. You can now monitor SQL Server on Azure Virtual Machines without building custom collection scripts or correlating telemetry across disconnected tools. The SQL IaaS Agent extension collects performance data from your SQL Server instances and sends it to a Microsoft-managed telemetry pipeline for processing and storage. Resource-level and estate-wide dashboards help you identify performance trends, anomalies, and resource bottlenecks. Integration with Fabric Database Hub brings this telemetry into a unified monitoring experience. For deeper analysis and custom visualizations, you can securely query your data with Kusto Query Language through an RBAC-protected Azure Data Explorer proxy endpoint. Learn more:  \n Documentation  \n Announcement\n     blog  ",
+    "id": "571894",
+    "modified": "2026-09-30T21:13:13.6139783Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Compute",
+      "Databases"
+    ],
+    "products": [
+      "SQL Server on Azure Virtual Machines"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: SQL performance monitoring for SQL Server on Azure Virtual Machines "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

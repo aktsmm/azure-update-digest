@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563731"
+  },
+  "fetchedAt": "2026-10-14T10:26:00.804Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563731",
+    "created": "2026-06-03T19:00:25.4471206Z",
+    "description": "Microsoft Foundry model catalog adds a domain filter in public preview, helping developers narrow the catalog of over 1,900 models to the ones trained for a specific industry or use case. Filters cover domains such as robotics, biomedical sciences, materials discovery, and coding. The filter sits alongside existing filters for publisher, modality, deployment type, and capability, so a developer searching for a robotics-tuned reasoning model can find it in a few clicks instead of scrolling through hundreds of general-purpose entries. The same filter is exposed through the catalog REST API, which lets internal model-discovery portals built on top of Foundry surface domain-specific shortlists for their developer audiences. Learn more.",
+    "id": "563731",
+    "modified": "2026-06-03T19:00:25.4471206Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Domain filter for specialized model discovery in Foundry model catalog"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

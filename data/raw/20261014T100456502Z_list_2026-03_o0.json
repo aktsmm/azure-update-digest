@@ -1,0 +1,1337 @@
+{
+  "args": {
+    "filter": "created ge 2026-02-28T15:00:00Z and created lt 2026-03-31T15:00:00Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-14T10:04:56.502Z",
+  "ok": true,
+  "response": {
+    "hasMore": true,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "516070",
+        "created": "2026-03-16T18:30:34.1207616Z",
+        "description": "Microsoft Azure will retire support for NVv3 or NVv4-series VMs on September 30th, 2026, including NVv3 Series (NVIDIA Tesla M60 GPU): Standard_NV12s_v3, Standard_NV12hs_v3, Standard_NV24s_v3, Standar...",
+        "id": "516070",
+        "modified": "2026-03-16T18:30:34.1207616Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Batch"
+        ],
+        "tags": [
+          "Features",
+          "Retirements"
+        ],
+        "title": "Retirement: End of life reminder of NVv3 and NVv4-series Azure virtual machine in Azure Batch pools "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "543279",
+        "created": "2026-03-16T18:45:11.5147114Z",
+        "description": "Azure Batch had retired\nLow-Priority VMs on September 30, 2025 and will begin a system-initiated\nmigration to Spot VMs beginning March 1, 2026. This change aligns Batch with the broader\nAzure Spot inf...",
+        "id": "543279",
+        "modified": "2026-03-16T18:45:11.5147114Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Batch"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Migration of Azure Batch Low-Priority VMs to Spot VMs in early March"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "548497",
+        "created": "2026-03-19T16:30:27.9756937Z",
+        "description": "On May 31, 2027, Microsoft Azure will retire the follow NP-series virtual machine (VMs) sizes: Standard_NP10s, Standard_NP20s, and Standard_NP40s. To ensure continuity and optimal performance, we reco...",
+        "id": "548497",
+        "modified": "2026-03-19T16:30:27.9756937Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "548525",
+        "created": "2026-03-19T16:30:27.9756937Z",
+        "description": "On May 31, 2027, Microsoft Azure will retire the following HBv2-series virtual machine (VMs) sizes: Standard_HB120rs_v2, Standard_HB120-96rs_v2, Standard_HB120-64rs_v2, Standard_HB120-32rs_v2, and Sta...",
+        "id": "548525",
+        "modified": "2026-03-19T16:30:27.9756937Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: HBv2-series Azure Virtual Machines will be retired on May 31, 2027"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "548543",
+        "created": "2026-03-19T16:30:27.9756937Z",
+        "description": "On May 31, 2027, Microsoft Azure will retire the following HC-series virtual machine (VMs) sizes: Standard_HC44rs, Standard_HC44-16rs, and Standard_HC44-32rs. To ensure continuity and improved perform...",
+        "id": "548543",
+        "modified": "2026-03-19T16:30:27.9756937Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: HC-series Azure Virtual Machines will be retired on May 31, 2027"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "January",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "549077",
+        "created": "2026-03-16T18:45:11.5147114Z",
+        "description": "Azure Batch periodically retires support for operating systems that reach end-of-life status. Support for Windows Server 2016 concluded on January 11, 2022, with extended support scheduled to end on J...",
+        "id": "549077",
+        "modified": "2026-03-16T18:45:11.5147114Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Batch"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Support for Windows Server 2016 Marketplace images on Azure Batch pools will end on January 12, 2027"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "550519",
+        "created": "2026-03-30T21:30:50.093344Z",
+        "description": "On March 31, 2027 Azure Monitor will be deprecating the sidecar for remote-write of Prometheus metrics to Azure Monitor Workspace. This is as part of our ongoing efforts to improve reliability and red...",
+        "id": "550519",
+        "modified": "2026-03-30T21:30:50.093344Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)",
+          "Azure Monitor"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Deprecation of sidecar for remote-write for Azure Monitor managed service for Prometheus"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2029
+          }
+        ],
+        "baseId": "556085",
+        "created": "2026-03-30T17:45:08.2587317Z",
+        "description": "On March 31, 2029, Azure Cosmos DB for PostgreSQL will be retired, and you'll need to migrate to Azure Database\nfor PostgreSQL Elastic Cluster by that date. Azure Database for PostgreSQL Elastic Clust...",
+        "id": "556085",
+        "modified": "2026-03-30T17:45:08.2587317Z",
+        "productCategories": [],
+        "products": [],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure Cosmos DB for PostgreSQL will retire on March 31, 2029"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Retirement",
+            "year": 2029
+          }
+        ],
+        "baseId": "557094",
+        "created": "2026-03-17T17:30:11.8113182Z",
+        "description": "Microsoft is announcing the retirement of the AV36P and AV52 Nodes on June 30, 2029. UPDATE: On August 30, 2027, as a result of the latest Broadcom VCF licensing change, the AVS license-included SKUs ...",
+        "id": "557094",
+        "modified": "2026-03-17T17:30:11.8113182Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Azure VMware Solution"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure VMware Solution AV36P and AV52 node retirement on June 30, 2029"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Retirement",
+            "year": 2031
+          }
+        ],
+        "baseId": "557123",
+        "created": "2026-03-20T17:15:50.3317724Z",
+        "description": "The Azure Sphere service is retiring and will stop supporting all customer application, OS, bug and security updates, along with DAA certificate issuance, on July 31, 2031. Why is this happening?  Azu...",
+        "id": "557123",
+        "modified": "2026-03-20T17:15:50.3317724Z",
+        "productCategories": [
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Sphere"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure Sphere will be retired on July 31, 2031"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557141",
+        "created": "2026-03-17T17:45:45.6987595Z",
+        "description": "Announcing general availability (GA) of the next-gen Foundry Agent Service—a redesigned API format and runtime experience designed to help teams build and operate agents that can move from prototype t...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "557141",
+        "modified": "2026-03-17T17:45:45.6987595Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Foundry Agent Service"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "557527",
+        "created": "2026-03-11T18:00:35.4377847Z",
+        "description": "You can now enhance data security for your Azure Database\nfor PostgreSQL workloads by\nusing customer managed keys (CMKs) with Premium SSD\nv2 disks. Available in public preview, this update gives\nyou g...",
+        "id": "557527",
+        "modified": "2026-03-11T18:00:35.4377847Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Customer‑managed encryption keys now supported on Premium SSD v2 disks for Azure Database for PostgreSQL "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "557862",
+        "created": "2026-03-25T20:00:39.2632249Z",
+        "description": "In‑place node pool upgrades can introduce risk by applying changes\ndirectly to running environments. Blue‑green agent pool upgrades create a\nparallel node pool with the new configuration, allowing val...",
+        "id": "557862",
+        "modified": "2026-03-25T20:00:39.2632249Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Blue-green agent pool upgrade in AKS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "557877",
+        "created": "2026-03-24T18:30:36.2493256Z",
+        "description": "Organizations running applications across multiple\nKubernetes clusters often face challenges with performance, global service\ndiscovery, and observability due to the complexity of distributed microser...",
+        "id": "557877",
+        "modified": "2026-03-24T18:30:36.2493256Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Containers",
+          "Compute"
+        ],
+        "products": [
+          "Azure Kubernetes Fleet Manager",
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Cross-cluster networking in Azure Kubernetes Fleet Manager"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "557882",
+        "created": "2026-03-24T18:30:36.2493256Z",
+        "description": "Teams running GPU‑backed\nworkloads often lack integrated visibility into GPU utilization alongside\nKubernetes metrics. AKS managed GPU metrics automatically expose performance\nand utilization data fro...",
+        "id": "557882",
+        "modified": "2026-03-24T18:30:36.2493256Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: AKS managed GPU metrics in Azure Monitor "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "557887",
+        "created": "2026-03-24T21:45:26.0157634Z",
+        "description": "Troubleshooting Kubernetes networking issues is often slowed by logs and\nmetrics scattered across multiple tools, forcing engineers to manually\ncorrelate signals during incidents. The container networ...",
+        "id": "557887",
+        "modified": "2026-03-24T21:45:26.0157634Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: AI Agent for container networking troubleshooting"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557892",
+        "created": "2026-03-24T18:15:48.9582197Z",
+        "description": "Networking issues in Kubernetes\nenvironments can be difficult to diagnose due to limited visibility into\ntraffic flows and insufficient context around failures. Container network logs\nin Azure Kuberne...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "557892",
+        "modified": "2026-03-24T18:15:48.9582197Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Container network logs in AKS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557902",
+        "created": "2026-03-24T23:00:18.1861028Z",
+        "description": "Network\nobservability can generate large volumes of metrics, making it difficult for\nteams to focus on data that is operationally relevant. Container network\nmetrics filtering in Azure Container Netwo...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "557902",
+        "modified": "2026-03-24T23:00:18.1861028Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Container network metrics filtering for AKS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557912",
+        "created": "2026-03-24T18:15:48.9582197Z",
+        "description": "Containerized workloads often\nrequire higher and more consistent storage performance without managing large\nnumbers of individual disks. Azure Container Storage integration with Elastic\nSAN allows Kub...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "557912",
+        "modified": "2026-03-24T18:15:48.9582197Z",
+        "productCategories": [
+          "Containers",
+          "Compute"
+        ],
+        "products": [
+          "Azure Container Storage",
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Container Storage v2.1.0 now with Elastic SAN integration and on demand installation "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557917",
+        "created": "2026-03-18T18:30:05.9257189Z",
+        "description": "Azure Red Hat OpenShift now supports managed identities and workload identities as a generally available capability, enabling you to run OpenShift clusters and applications on Azure without long lived...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "557917",
+        "modified": "2026-03-18T18:30:05.9257189Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Red Hat OpenShift"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Compliance",
+          "Management"
+        ],
+        "title": "Generally Available: Azure Red Hat OpenShift Managed Identity and Workload Identity"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "557922",
+        "created": "2026-03-24T17:30:29.8186836Z",
+        "description": "As Kubernetes environments scale\nacross regions and clusters, IP‑based networking becomes difficult to manage\nand provides limited application‑level visibility and security controls. Azure\nKubernetes ...",
+        "id": "557922",
+        "modified": "2026-03-24T17:30:29.8186836Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Microsoft Azure Kubernetes Application Network "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "557927",
+        "created": "2026-03-24T17:30:29.8186836Z",
+        "description": "Following the deprecation\nof ingress‑nginx, Kubernetes operators need a supported, standards‑aligned\nmigration path for ingress without the complexity of a full service mesh.\nApplication Routing with ...",
+        "id": "557927",
+        "modified": "2026-03-24T17:30:29.8186836Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Application routing with meshless Istio in AKS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "557929",
+        "created": "2026-03-16T18:15:54.3746863Z",
+        "description": "Azure Kubernetes\nService support for Flatcar Container Linux for AKS (preview) will be retired\non June 8, 2026, transition to a supported alternative by that date. From now to June 7, 2026, you can co...",
+        "id": "557929",
+        "modified": "2026-03-16T18:15:54.3746863Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Flatcar Container Linux for AKS (preview) "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557991",
+        "created": "2026-03-02T19:15:14.5977479Z",
+        "description": "Today we’re announcing the General Availability of Azure Databricks Lakebase, a managed PostgreSQL environment with next generation separation of storage and compute for OLTP, providing instant availa...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "557991",
+        "modified": "2026-03-02T19:15:14.5977479Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Databricks Lakebase "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558016",
+        "created": "2026-03-17T17:45:45.6987595Z",
+        "description": "We are updating the managed ruleset support policy for Azure Web Application Firewall (WAF) following the general availability of Default Rule Set (DRS) 2.2 on Azure Application Gateway and Azure Fron...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558016",
+        "modified": "2026-03-17T17:45:45.6987595Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway",
+          "Azure Front Door",
+          "Web Application Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: Default Rule Set 2.2 and updates to ruleset support policy"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558060",
+        "created": "2026-03-02T19:15:14.5977479Z",
+        "description": "Azure\nDatabricks workspaces have two network configurations – Azure\nDatabricks-managed VNet and VNet Injection. The ability to update the Network\nConfiguration of your workspace is now generally avail...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558060",
+        "modified": "2026-03-02T19:15:14.5977479Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Databricks update workspace network configuration"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558072",
+        "created": "2026-03-03T01:00:04.7633571Z",
+        "description": "The new Draft & Deploy feature for Azure Firewall Policy\nintroduces a streamlined, two-phase approach to managing firewall policies,\nsignificantly reducing deployment time and disruption. Traditionall...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558072",
+        "modified": "2026-03-03T01:00:04.7633571Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security",
+          "Services"
+        ],
+        "title": "Generally Available: Draft & Deploy on Azure Firewall"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "558086",
+        "created": "2026-03-20T19:00:50.812324Z",
+        "description": "Starting March 31, 2027 Elastic query using Shard_Map_Manager external data source type reaches end of support.Existing workloads can continue to run using Azure SQL Elastic query - Shard_Map_Manager ...",
+        "id": "558086",
+        "modified": "2026-03-20T19:00:50.812324Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure SQL Elastic query - Shard_Map_Manager mode"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "558102",
+        "created": "2026-03-04T21:15:02.2751745Z",
+        "description": "Over the years, we’ve made significant investments to improve the responsiveness of the Azure Policy service. As a result, policy assignment creation and updates for Resource Manager mode policies now...",
+        "id": "558102",
+        "modified": "2026-03-04T21:15:02.2751745Z",
+        "productCategories": [
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Policy"
+        ],
+        "tags": [
+          "Compliance"
+        ],
+        "title": "Retirement: Azure Policy faster enforcement and retirement of login/logout workaround"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "558116",
+        "created": "2026-03-20T19:15:35.2206794Z",
+        "description": "In mid-March 2026, the following updates and\nenhancements were made to Azure SQL:   \n Reduce\n     the consumption of storage space, I/O, and memory and improve performance\n     without investing time ...",
+        "id": "558116",
+        "modified": "2026-03-20T19:15:35.2206794Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database",
+          "Azure SQL Managed Instance"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure SQL updates for mid-March 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558121",
+        "created": "2026-03-18T18:30:05.9257189Z",
+        "description": "In mid-March 2026, the\nfollowing updates and enhancements were made to Azure SQL:  \n Publish SQL database projects directly from\n     Visual Studio Code to streamline database deployment\n     workflow...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558121",
+        "modified": "2026-03-18T18:30:05.9257189Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "General availability: Azure SQL updates for mid-March 2026 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558134",
+        "created": "2026-03-18T18:15:04.6151584Z",
+        "description": "GitHub Copilot is now generally available in SQL Server Management Studio (SSMS) 22, bringing AI‑powered assistance directly into the application that you use every day.  With GitHub Copilot in SSMS, ...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558134",
+        "modified": "2026-03-18T18:15:04.6151584Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: GitHub Copilot in SQL Server Management Studio 22 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558140",
+        "created": "2026-03-11T18:00:35.4377847Z",
+        "description": "You can now monitor your Azure Database for PostgreSQL with rich, built-in Grafana dashboards—right from the Azure portal. This native integration with Azure Monitor means you no longer need to set up...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558140",
+        "modified": "2026-03-11T18:00:35.4377847Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Database for PostgreSQL dashboards with Grafana "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558145",
+        "created": "2026-03-11T18:00:35.4377847Z",
+        "description": "You can now provision and manage Azure Database for\nPostgreSQL elastic clusters using Terraform, Bicep, and Ansible, with\nfull General Availability support. With\nnative infrastructure-as-code support,...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558145",
+        "modified": "2026-03-11T18:00:35.4377847Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Terraform, Bicep, Ansible support for elastic clusters on Azure Database for PostgreSQL "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "558150",
+        "created": "2026-03-18T18:15:04.6151584Z",
+        "description": "Announcing SQL MCP Server, our Model Context Protocol (MCP) connector for production databases. SQL MCP Server is a feature rich component of data API builder (DAB) that gives you a simple, predictabl...",
+        "id": "558150",
+        "modified": "2026-03-18T18:15:04.6151584Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: SQL MCP Server"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "558155",
+        "created": "2026-03-18T18:15:04.6151584Z",
+        "description": "Bring the benefits of schema-as-code to your database development workflow. SQL database projects enable you to source control your database schema, perform reliable deployments to any environment, an...",
+        "id": "558155",
+        "modified": "2026-03-18T18:15:04.6151584Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Database DevOps in SSMS powered by SQL projects "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "558164",
+        "created": "2026-03-11T17:45:49.9056495Z",
+        "description": "The MSSQL extension for Visual Studio Code now introduces Query Profiler in public preview, bringing real-time insight into your database activity directly inside Visual Studio Code. With Query Profil...",
+        "id": "558164",
+        "modified": "2026-03-11T17:45:49.9056495Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Query Profiler in MSSQL extension for Visual Studio Code "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "558169",
+        "created": "2026-03-18T18:15:04.6151584Z",
+        "description": "The MSSQL extension for Visual Studio Code now introduces GitHub Copilot integration in Schema Designer, expanding the visual schema design experience with AI-assisted capabilities. Based on developer...",
+        "id": "558169",
+        "modified": "2026-03-18T18:15:04.6151584Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public preview: GitHub Copilot integration in Schema Designer for the MSSQL extension "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "558178",
+        "created": "2026-03-18T17:00:05.1025868Z",
+        "description": "The MSSQL extension for Visual Studio Code now introduces Data API builder in public preview with built-in GitHub Copilot integration, bringing a guided back-end generation experience directly into yo...",
+        "id": "558178",
+        "modified": "2026-03-18T17:00:05.1025868Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Data API builder with built-in GitHub Copilot in MSSQL extension "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558183",
+        "created": "2026-03-18T17:00:05.1025868Z",
+        "description": "Azure SQL Database now supports versionless keys for transparent data encryption (TDE), giving you a simpler and more reliable way to manage your own encryption keys. You no longer need to reference a...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558183",
+        "modified": "2026-03-18T17:00:05.1025868Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Versionless key support for transparent data encryption in Azure SQL Database "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "558278",
+        "created": "2026-03-18T18:45:54.5925446Z",
+        "description": "Effective March 31, 2027, the Emissions Impact Dashboard for Azure hosted by Power BI will be\nretired. After this date, the dashboard will no longer be accessible and\ntechnical support will be discont...",
+        "id": "558278",
+        "modified": "2026-03-18T18:45:54.5925446Z",
+        "productCategories": [],
+        "products": [],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Emissions Impact Dashboard for Azure"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558321",
+        "created": "2026-03-11T17:45:49.9056495Z",
+        "description": "Azure SRE Agent is now generally\navailable. This AI-powered operations agent helps teams improve uptime, reduce\nincident impact, and cut operational toil by accelerating diagnosis and\nautomating respo...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558321",
+        "modified": "2026-03-11T17:45:49.9056495Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Gallery",
+          "Open Source",
+          "Services"
+        ],
+        "title": "Generally Available: Azure SRE Agent with new capabilities "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "March",
+            "ring": "Private Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "558651",
+        "created": "2026-03-12T21:15:25.9320773Z",
+        "description": "Azure Storage Mover now enables direct, secure data\nmigration from AWS S3 data in Virtual Private Cloud to Azure Blob Storage with\nprivate networking. This update removes the need for manual pipelines...",
+        "id": "558651",
+        "modified": "2026-03-12T21:15:25.9320773Z",
+        "previewAvailabilityDate": "2026-03",
+        "privatePreviewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Migration",
+          "Storage"
+        ],
+        "products": [
+          "Azure Storage Mover"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure Storage Mover enables private data transfers from AWS S3 to Azure Blob"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "558656",
+        "created": "2026-03-12T21:15:25.9320773Z",
+        "description": "Summary rules run batch aggregation inside your Log\nAnalytics workspace and re-ingest the summarized results into a custom\ndestination table. When a bin fails, that can create gaps in your summarized\n...",
+        "generalAvailabilityDate": "2025-07",
+        "id": "558656",
+        "modified": "2026-03-12T21:15:25.9320773Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Summary rules in Log Analytics workspace now support manual “Retry bin”"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "December",
+            "ring": "Private Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "558662",
+        "created": "2026-03-16T18:30:34.1207616Z",
+        "description": "Microsoft Entra ID-based access for Azure Blob Storage SFTP\nis now in public preview. This new capability empowers you to use Microsoft\nEntra ID identities (including guest users via Entra External Id...",
+        "id": "558662",
+        "modified": "2026-03-16T18:30:34.1207616Z",
+        "previewAvailabilityDate": "2026-03",
+        "privatePreviewAvailabilityDate": "2025-12",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Entra ID-Based Access for Azure Blob Storage SFTP"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558810",
+        "created": "2026-03-18T17:00:05.1025868Z",
+        "description": "Azure Databricks now offers a Lakeflow Connect Free Tier that gives each workspace 100 free DBUs per workspace per day for ingestion from SaaS applications and databases. This allows you to bring roug...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558810",
+        "modified": "2026-03-18T17:00:05.1025868Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Lakeflow Connect Free Tier now available in Azure Databricks  "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558825",
+        "created": "2026-03-24T17:30:29.8186836Z",
+        "description": "Azure Monitor now offers one-click enablement of Prometheus\nrecommended alerts directly in the Azure Portal for Azure Arc-enabled\nKubernetes clusters. These alerts, based on enhanced Prometheus commun...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558825",
+        "modified": "2026-03-24T17:30:29.8186836Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Monitor Prometheus community recommended alerts for Azure Arc-enabled Kubernetes"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558836",
+        "created": "2026-03-25T20:00:39.2632249Z",
+        "description": "We're excited to announce that private endpoint support for Azure Cosmos DB Mirroring in Microsoft Fabric is now generally available. You can now unlock powerful analytics on your operational data whi...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558836",
+        "modified": "2026-03-25T20:00:39.2632249Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Cosmos DB Mirroring in Microsoft Fabric with private endpoints "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "558841",
+        "created": "2026-03-25T17:45:33.5422578Z",
+        "description": "We are excited to announce the public preview of Fabric Mirroring integration for Azure Database for MySQL – Flexible Server. You can now replicate MySQL operational data into Microsoft Fabric in near...",
+        "id": "558841",
+        "modified": "2026-03-25T17:45:33.5422578Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure Database for MySQL"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Fabric Mirroring integration for Azure Database for MySQL "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558846",
+        "created": "2026-03-25T17:30:45.7754801Z",
+        "description": "You can now leverage pgoutput for online (minimal-downtime) migrations with improved reliability and performance. By aligning with PostgreSQL’s native logical replication framework, this update improv...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "558846",
+        "modified": "2026-03-25T17:30:45.7754801Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Online migration now uses the pgoutput plugin "
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 50,
+    "totalCount": 60
+  },
+  "scan": "2026-03",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

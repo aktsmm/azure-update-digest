@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "572630"
+  },
+  "fetchedAt": "2026-10-14T10:07:45.764Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "572630",
+    "created": "2026-09-29T19:27:09.7500172Z",
+    "description": "The Laosv5 series and Lasv5 storage optimized VMs, based on the 5th Gen AMD EPYC™ processor (Turin), are now generally available.Lasv5 and Laosv5 VMs have sizes ranging from 2-160 vCPUs, with 8GiB of memory and 720GB of local NVMe disk capacity per vCPU.  Both support 200Gbps of network bandwidth and deliver up to 35% better average CPU performance. The Lasv5 VMs offer up to 30.7TB of local storage capacity with 9.6M read IOPS performance, while the Laosv5 VMs offer up to 138TB of local storage capacity with 20.7M read IOPS performance.These VM series are powered by Azure Boost and Azure Boost SSDs, enable NVMe local SSD disk encryption by default, and come with an NVMe remote storage interface with support for premium storage caching, significantly improving remote storage performance.Compared to the previous generation Lasv4 VMs, Lasv5 VMs have:33% larger maximum local storage capacity9% larger temp disk random read IOPS per vCPUNew 128 and 160 vCPU sizesCompared to the previous generation Laosv4 VMs, Laosv5 VMs have:500% larger maximum local storage capacity619% larger maximum read IOPSNew 48, 64, 96, 128, and160 vCPU sizesAll L-series v5 VMs are perfect for distributed, scale-out workloads that require high amounts of local storage capacity per vCPU and the ability to move that data quickly over the network or to an Azure remote storage backend.Learn more.",
+    "generalAvailabilityDate": "2026-09",
+    "id": "572630",
+    "modified": "2026-09-29T19:27:09.7500172Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Pricing & Offerings",
+      "Services"
+    ],
+    "title": "Generally Available: Storage optimized Lasv5 and Laosv5 Azure VM series "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

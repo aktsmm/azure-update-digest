@@ -1,0 +1,169 @@
+{
+  "args": {
+    "filter": "created ge 2026-06-30T15:00:00Z and created lt 2026-07-31T15:00:00Z",
+    "skip": 50
+  },
+  "fetchedAt": "2026-10-14T10:04:11.056Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568334",
+        "created": "2026-07-30T19:14:44.2145007Z",
+        "description": "Now you can deploy Azure Database for PostgreSQL flexible server in the India South Central Azure region.   Learn more.  ",
+        "generalAvailabilityDate": "2026-07",
+        "id": "568334",
+        "modified": "2026-07-30T19:14:44.2145007Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Database for PostgreSQL flexible server in India South Central "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "568377",
+        "created": "2026-07-28T18:51:02.9668565Z",
+        "description": "Announcing the public preview of Azure Enclave for Microsoft\nAzure, Azure Government, Azure Government Secret, and Azure Government Top Secret.\nAzure Enclave helps streamline the deployment and manage...",
+        "id": "568377",
+        "modified": "2026-07-28T18:51:02.9668565Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [],
+        "products": [],
+        "status": "In preview",
+        "tags": [
+          "Security",
+          "Services"
+        ],
+        "title": "Public Preview: Azure Enclave"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "568396",
+        "created": "2026-07-30T16:38:15.2598617Z",
+        "description": "Azure NetApp Files now supports configuration of SMB opportunistic locking (oplocks) for SMB and dual-protocol volumes. Opportunistic locks (Oplocks) improve SMB client caching and are enabled by defa...",
+        "id": "568396",
+        "modified": "2026-07-30T16:38:15.2598617Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Support for SMB Opportunistic Locking (Oplocks) configuration "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568409",
+        "created": "2026-07-28T18:50:11.7215161Z",
+        "description": "StandardV2 NAT Gateway now supports NAT64, enabling IPv6\nworkloads to communicate with IPv4-only internet destinations by translating synthesized\noutbound IPv6 traffic into IPv4 traffic. NAT64 relies ...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "568409",
+        "modified": "2026-07-28T18:50:11.7215161Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure NAT Gateway"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Services",
+          "Feature"
+        ],
+        "title": "Generally Available: NAT64 on StandardV2 NAT Gateway"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568466",
+        "created": "2026-07-29T18:50:00.8869709Z",
+        "description": "Azure Sphere OS version 26.09 RC1 is now available for evaluation in the Retail Eval feed. Whilst this release encompasses no customer-facing changes, it represents a major bump in Azure Sphere's unde...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "568466",
+        "modified": "2026-07-29T18:50:00.8869709Z",
+        "productCategories": [
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Sphere"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Operating System"
+        ],
+        "title": "Generally Available: Azure Sphere OS version 26.09 is now available for evaluation"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Effective",
+            "year": 2027
+          }
+        ],
+        "baseId": "568514",
+        "created": "2026-07-30T19:03:21.2212435Z",
+        "description": "Starting February 1, 2027, Azure reservations exchanges will no longer be available for services covered by savings plans.  At the time of this announcement, this includes reservations for the followi...",
+        "id": "568514",
+        "modified": "2026-07-30T19:03:21.2212435Z",
+        "productCategories": [],
+        "products": [],
+        "tags": [
+          "Announcement"
+        ],
+        "title": "Announcing: Reservation exchanges for Azure services supported by savings plans will no longer be available starting February 1, 2027  "
+      }
+    ],
+    "limit": 50,
+    "offset": 50,
+    "returnedCount": 6,
+    "totalCount": 56
+  },
+  "scan": "2026-07",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

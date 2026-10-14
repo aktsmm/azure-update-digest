@@ -1,0 +1,141 @@
+{
+  "args": {
+    "filter": "created ge 2026-07-31T15:00:00Z and created lt 2026-08-31T15:00:00Z",
+    "skip": 50
+  },
+  "fetchedAt": "2026-10-14T10:04:03.039Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "570025",
+        "created": "2026-08-26T16:56:29.1432127Z",
+        "description": "Azure Bastion support for IPv4 and IPv6 dual-stack\nconfigurations is now available in public preview. Customers can configure a\nnewly created Bastion deployment with both IPv4 and IPv6 public IP addre...",
+        "id": "570025",
+        "modified": "2026-08-26T16:56:29.1432127Z",
+        "previewAvailabilityDate": "2026-08",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Bastion"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Public Preview: IPv6 dual-stack support for Azure Bastion"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570030",
+        "created": "2026-08-26T16:55:25.4584262Z",
+        "description": "Azure Bastion integration with Azure Kubernetes Service is\nnow generally available. Customers can establish a secure tunnel from their\nlocal machine through Azure Bastion to an AKS cluster API server....",
+        "generalAvailabilityDate": "2026-08",
+        "id": "570030",
+        "modified": "2026-08-26T16:55:25.4584262Z",
+        "productCategories": [
+          "Networking",
+          "Security",
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Bastion",
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: Connect to AKS clusters using Azure Bastion"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570105",
+        "created": "2026-08-28T15:45:32.7674509Z",
+        "description": "Overview:Azure VM Image Builder is now generally available in Azure Government, China North 3, Azure Government Secret, and Azure Government Top Secret.You can now use the same managed image-building ...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "570105",
+        "modified": "2026-08-28T15:45:32.7674509Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Azure VM Image Builder"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Management",
+          "Operating System",
+          "Regions & Datacenters",
+          "SDK and Tools",
+          "Services",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure VM Image Builder in sovereign and air-gapped clouds"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570120",
+        "created": "2026-08-28T20:25:22.5508153Z",
+        "description": "The Azure Files Container Storage Interface (CSI) driver in Azure\nKubernetes Service (AKS) now supports workload identity for pod-level\nauthentication to SMB file shares. Previously, managed identity ...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "570120",
+        "modified": "2026-08-28T20:25:22.5508153Z",
+        "productCategories": [
+          "Storage",
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Files",
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Security",
+          "Feature"
+        ],
+        "title": "Generally Available: Workload identity support for Azure Files CSI driver (SMB) in Azure"
+      }
+    ],
+    "limit": 50,
+    "offset": 50,
+    "returnedCount": 4,
+    "totalCount": 54
+  },
+  "scan": "2026-08",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

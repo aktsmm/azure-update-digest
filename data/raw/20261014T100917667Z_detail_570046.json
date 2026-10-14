@@ -1,0 +1,29 @@
+{
+  "args": {
+    "id": "570046"
+  },
+  "fetchedAt": "2026-10-14T10:09:17.667Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "570046",
+    "created": "2026-09-29T17:26:50.7288439Z",
+    "description": "Microsoft is retiring all versions of HPC Pack. End of\nSupport is August 27, 2027. HPC Pack is now entering a one-year retirement\nperiod. Microsoft will provide\nlimited, retirement-only support during this period. The scope of this support\nis defined below so customers know what to expect. In scope until End of\nSupport: • Security/CVE response and necessary security updates. • Guidance from existing documentation and validated\nconfigurations. • Assistance with supported components and documented\nfunctionality. • Case-by-case evaluation of long-term support options where\navailable. Out of scope: • Non-security fixes or product improvements. • New features, custom code, or design changes. • Validation of new operating systems, hardware,\ndependencies, architectures, or integrations. • New product investigation or documentation. • Migration planning, execution, or consulting. • Unsupported configurations. After August 27, 2027, HPC Pack will receive no updates,\nfixes, or technical support. Existing deployments will remain operational but\nunsupported. Required action Begin assessing and transitioning workloads now. Consider\nAzure Batch for managed parallel and HPC scheduling, or another appropriate\nAzure service. No alternative guarantees one-to-one feature parity. Engage your\nMicrosoft account team or Cloud Solution Architect for planning. Share customer needs and transition challenges through this\nform: ESU Extend Request.",
+    "id": "570046",
+    "modified": "2026-09-29T17:26:50.7288439Z",
+    "productCategories": [],
+    "products": [],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Microsoft HPC Pack"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

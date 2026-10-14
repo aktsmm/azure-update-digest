@@ -1,0 +1,29 @@
+{
+  "args": {
+    "id": "571257"
+  },
+  "fetchedAt": "2026-10-14T10:11:54.512Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "December",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "571257",
+    "created": "2026-09-11T18:08:28.7193012Z",
+    "description": "Support for Azure Linux with OS Guard in Azure Kubernetes Service will end on December 10, 2026. Azure Container Linux is the replacement for Azure Linux with OS Guard (preview). Starting on December 10, 2026:Users won’t be able to create new Azure Linux with OS Guard (preview) node pools.AKS won’t produce new node images for affected node pools.Existing node pools won’t receive security patches.On March 10, 2027, AKS will remove the Azure Linux with OS Guard node images. After the images are removed, scaling and remediation operations, including reimage and redeploy operations, will fail for affected node pools. You can use either of the following migration options:Migrate an existing Azure Linux with OS Guard node pool in place by following the Migrate nodes to Azure Container Linux for Azure Kubernetes Service documentation. This operation preforms a standard node image upgrade.Alternatively, create a new Azure Container Linux node pool, migrate and validate workloads, and then delete the Azure Linux with OS Guard node pool. Follow Add Azure Container Linux node pools and remove existing node pools.For other available options, see the AKS node operating system. If you have questions, get answers from community experts in Microsoft Q&A or AKS GitHub Repository. If you have a support plan and need technical help, create a support request.",
+    "id": "571257",
+    "modified": "2026-09-11T18:08:28.7193012Z",
+    "productCategories": [],
+    "products": [],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Azure Linux with OS Guard in Azure Kubernetes Service"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

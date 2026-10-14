@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "565480"
+  },
+  "fetchedAt": "2026-10-14T10:22:07.847Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "565480",
+    "created": "2026-06-23T20:15:55.3256351Z",
+    "description": "Azure NetApp Files migration assistant (with SnapMirror) provides efficient and cost-effective data migration leveraging ONTAP's built-in replication engine for seamless transition from on-premises or CVO/other cloud providers to Azure NetApp Files (ANF). This feature offers benefits aligned with the goal to accelerate and simplify migrations of business-critical applications and data to Azure. The feature is now available in Azure Portal and API experiences,and is now Generally Available in all regions.Key BenefitsStorage-efficient data transfer that reduces network transfer costs for both baseline and incremental updatesLow cutover/downtime window ensuring faster and more efficient final updates, minimizing disruption to customer operationsVolume migration using migration assistant includes source volume snapshots for primary data protection, and directory and file metadata maintaining security attributesLearn more:What’s newMigrate volumes to Azure NetApp Files | Microsoft Learn",
+    "generalAvailabilityDate": "2026-06",
+    "id": "565480",
+    "modified": "2026-06-23T20:15:55.3256351Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure NetApp Files"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure NetApp Files migration assistant "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

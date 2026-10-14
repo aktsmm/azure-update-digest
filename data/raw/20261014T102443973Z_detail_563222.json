@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563222"
+  },
+  "fetchedAt": "2026-10-14T10:24:43.973Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563222",
+    "created": "2026-06-04T19:15:11.3851002Z",
+    "description": "Microsoft Foundry IQ reaches general availability, giving developers a managed knowledge layer that grounds agents in enterprise data without rebuilding retrieval pipelines for each project. Teams connect SharePoint, OneLake, Azure Blob, and other sources once, then Foundry IQ handles ingestion, chunking, vector indexing, and access enforcement using the calling user's permissions. Agents query a single knowledge base and receive ranked, source-cited results, so answers stay tied to the documents customers control. Foundry IQ runs inside the same Foundry project as the agent and shares its identity, observability, and content safety configuration. Customers can ship grounded copilots faster, reduce duplicated retrieval code across teams, and keep sensitive data inside the tenant boundary. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563222",
+    "modified": "2026-06-04T19:15:11.3851002Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Microsoft Foundry IQ"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

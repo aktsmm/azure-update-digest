@@ -1,0 +1,29 @@
+{
+  "args": {
+    "id": "568514"
+  },
+  "fetchedAt": "2026-10-14T10:17:49.953Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "Effective",
+        "year": 2027
+      }
+    ],
+    "baseId": "568514",
+    "created": "2026-07-30T19:03:21.2212435Z",
+    "description": "Starting February 1, 2027, Azure reservations exchanges will no longer be available for services covered by savings plans.  At the time of this announcement, this includes reservations for the following services:    Compute services: Azure Virtual Machines, including exchanges between non-premium and premium storage, Azure Dedicated Host, and Azure App Service. Database services: Azure Database for PostgreSQL, Azure Database for MySQL, Azure DocumentDB, Azure Cosmos DB, Azure SQL Database, and Azure SQL Managed Instance.  Each active reservation for impacted services purchased before February 1, 2027, will retain the right to one final exchange after that date.  This reservation exchange policy update excludes products or services that are deprecated and approaching end of life, as well as cloud environments that don’t currently support savings plans. As savings plans coverage expands, reservations for those services will follow this policy and will not support exchanges. Learn more.",
+    "id": "568514",
+    "modified": "2026-07-30T19:03:21.2212435Z",
+    "productCategories": [],
+    "products": [],
+    "tags": [
+      "Announcement"
+    ],
+    "title": "Announcing: Reservation exchanges for Azure services supported by savings plans will no longer be available starting February 1, 2027  "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "572214"
+  },
+  "fetchedAt": "2026-10-14T10:10:29.671Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "572214",
+    "created": "2026-09-21T16:58:19.4839139Z",
+    "description": "Today we're previewing a new way to build cloud apps with GitHub Copilot in VS Code: a guided Copilot experience that takes you from idea to a deployed Azure app through a structured, predictable workflow instead of a free-form chat session that may or may not land where you need it to.The problem: Copilot is powerful, but unpredictableAsk Copilot to \"build me a Node.js API on Azure Functions with a Postgres database\" today, and you might get a working project, or you might not. Sometimes Copilot scaffolds the app but skips infrastructure. Sometimes it generates a deployment script that fails halfway through. Sometimes it forgets what you were building three prompts later.The underlying model is capable. The problem is the shape of the experience: an open-ended chat with no checkpoints, no guardrails, and no consistent path from \"I have an idea\" to \"it's running in Azure.\"Learn more: Read\nthe blog Install\nthe Azure Tools extension for VS Code ",
+    "id": "572214",
+    "modified": "2026-09-21T16:58:19.4839139Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Developer tools"
+    ],
+    "products": [
+      "Visual Studio Code"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "SDK and Tools",
+      "Feature"
+    ],
+    "title": "Public Preview: Introducing a Guided Copilot Experience for Building Azure Apps in VS Code"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

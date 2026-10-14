@@ -1,0 +1,49 @@
+{
+  "args": {
+    "id": "561984"
+  },
+  "fetchedAt": "2026-10-14T10:27:34.631Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      },
+      {
+        "month": "September",
+        "ring": "Private Preview",
+        "year": 2024
+      },
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "561984",
+    "created": "2026-06-02T19:30:20.2853906Z",
+    "description": "We’re excited to announce the General Availability of Dynamic threshold for Log search alerts! Using dynamic thresholds means you don't have to know the right threshold for each Log alert rule - Dynamic thresholds calculate the most appropriate thresholds for you.Key benefitsDynamic thresholds apply advanced machine learning and use a set of algorithms and methods to:Learn the historical behavior of log query results.Analyze these results over time and identify hourly / daily / weekly seasonal patterns.Calculate the most appropriate thresholds for log alert rules.Adapt automatically to changes in data patterns and adjust the threshold accordingly.At-scale monitoring - in rule monitoring multiple dimensions - the Dynamic threshold is calculated individually, per dimension combination.Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "561984",
+    "modified": "2026-06-02T19:30:20.2853906Z",
+    "previewAvailabilityDate": "2025-11",
+    "privatePreviewAvailabilityDate": "2024-09",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Build"
+    ],
+    "title": "Generally Available: Dynamic threshold for Log search alerts"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

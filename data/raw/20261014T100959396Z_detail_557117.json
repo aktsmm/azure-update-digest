@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "557117"
+  },
+  "fetchedAt": "2026-10-14T10:09:59.396Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Retirement",
+        "year": 2028
+      }
+    ],
+    "baseId": "557117",
+    "created": "2026-09-24T17:51:23.9357057Z",
+    "description": "Microsoft will retire several standalone Azure Communication\nServices (ACS) offerings on September 30, 2028. After this date, the affected\nservices will no longer be available.  Details\nBeginning September 30, 2028, the following ACS services will be retired and will no\nlonger function: \n Email \n SMS \n Advanced Messaging with WhatsApp \n Chat \n Chat for Teams Meeting Interop \n Rooms \n Number Management (Direct Offer)Direct Routing \n Job Router \n Web UI Library SDK \n Mobile UI Library SDK Several ACS services will also undergo breaking changes.\nThese services will continue to function only when used with Microsoft Teams and will require customers to update their applications to the\nlatest SDKs: \n Voice/Video Calling SDK \n Call Diagnostics \n Call Automation \n Audio Streaming \n Call Recording \n Closed Captions Standalone ACS calling implementations, or any\nimplementation that does not update to the latest SDKs by September 30, 2028, will\nno longer be supported and will stop functioning after this date. Required action  Review the ACS Retirement\nand Breaking Change FAQ to learn more. More information  If you have questions, get answers from community experts\nin Microsoft Q&A. If you have a support plan and you need technical\nhelp, open the Azure\nportal and select the question mark icon at the top of the\npage.   ",
+    "id": "557117",
+    "modified": "2026-09-24T17:51:23.9357057Z",
+    "productCategories": [
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "Azure Communication Services"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Azure Communication Services (ACS) standalone services will be retired on September 30, 2028"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

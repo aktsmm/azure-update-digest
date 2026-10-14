@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563601"
+  },
+  "fetchedAt": "2026-10-14T10:27:26.859Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563601",
+    "created": "2026-06-02T20:00:59.5913718Z",
+    "description": "Microsoft Foundry Agent Service is now generally available\nfor Voice Live integration, allowing developers to connect real-time\nspeech-to-text and text-to-speech to a Foundry Agent without writing their own\naudio pipeline. Existing agent capabilities — including tool calling,\nknowledge, memory, guardrails, and enterprise integrations — continue to work\nseamlessly and are now enhanced with low-latency speech interactions. The agent\nprovides a real-time streaming voice channel with interrupt handling, turn-taking,\nbarge-in support, connection management, natural voices, and avatars for\nproduction phone and web experiences. For customers building customer service\nagents, learning companions, and in-car assistants, this provides a single\nsupported path from Foundry agent logic to live audio input and output, instead\nof requiring them to stitch together Speech, the agent runtime, and WebRTC on\ntheir own.  Learn\nmore. ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563601",
+    "modified": "2026-06-02T20:00:59.5913718Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Voice Live integration with Microsoft Foundry Agent Service"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

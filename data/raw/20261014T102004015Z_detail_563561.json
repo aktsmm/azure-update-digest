@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "563561"
+  },
+  "fetchedAt": "2026-10-14T10:20:04.015Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Effective",
+        "year": 2026
+      }
+    ],
+    "baseId": "563561",
+    "created": "2026-07-15T18:48:54.9044611Z",
+    "description": "Microsoft Agent Framework adds episodic procedural memory in public preview, a built-in store that lets agents remember successful task patterns and replay them on similar future requests. The framework records action sequences, tool selections, and intermediate decisions as episodes, then retrieves the closest match when a new user request looks similar. Agents become measurably faster and cheaper at recurring tasks because they reuse proven plans instead of re-deriving them from scratch on every run. The capability targets agent developers who currently bolt on custom caching layers or manual few-shot prompts to get this behavior. Episodic memory is configurable per agent, ships in .NET and Python through the framework on GitHub, and integrates with the existing tracing pipeline. Learn more.",
+    "id": "563561",
+    "modified": "2026-07-15T18:48:54.9044611Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "tags": [
+      "Microsoft Build",
+      "Feature",
+      "Announcement"
+    ],
+    "title": "Announcing: Episodic procedural memory in Microsoft Agent Framework"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

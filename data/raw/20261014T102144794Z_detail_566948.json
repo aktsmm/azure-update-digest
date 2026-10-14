@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "566948"
+  },
+  "fetchedAt": "2026-10-14T10:21:44.794Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "566948",
+    "created": "2026-07-01T16:56:50.2222367Z",
+    "description": "Azure Storage Mover now supports cloud-to-cloud migration of data from Google Cloud Storage (GCS) to Azure Blob Storage, helping organizations simplify multi-cloud consolidation onto Azure.Using the S3-compatible interface, customers can migrate data from GCS buckets through a fully managed, agentless experience with HMAC credentials stored securely in Azure Key Vault, no custom tooling required. For workloads with strict security and compliance needs, migrations can run over private network connections using Azure Private Link and Private Service Connect, keeping data off the public internet and within trusted network boundaries.With this update, enterprises can consolidate their cloud storage into Azure securely and at scale, reducing operational overhead while meeting their network isolation requirements. Get started migrating your cloud data to Azure.Learn more.",
+    "id": "566948",
+    "modified": "2026-07-01T16:56:50.2222367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Migration",
+      "Storage"
+    ],
+    "products": [
+      "Azure Storage Mover"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Storage Mover now supports migration from Google Cloud Storage (GCS)"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "564563"
+  },
+  "fetchedAt": "2026-10-14T10:24:10.196Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "564563",
+    "created": "2026-06-04T21:45:11.1193125Z",
+    "description": "We’re pleased to\nannounce that Azure Migrate now generally supports discovery and assessment\nof SMB and NFS file shares hosted on Windows and Linux servers. This gives\ncustomers a complete, data-driven view of their file share environment and a\nclear path to migrate to Azure Files. The capability entered preview in\nmid-February and is now generally available worldwide. The\nadoption during public preview has been strong, with hundreds of customers\ncreating file share assessments, actively planning and executing migrations to\nAzure Files. Key benefits include:   \n Discover and review\n     on-premises SMB/NFS shares from Windows/Linux environments   \n Group, tag, and filter\n     shares for better planning   \n Generate business cases\n     comparing Azure Files and on-premises costs   \n Assess shares with Azure\n     Files SKU recommendations based on region, redundancy, media type, and\n     performance   \n Alternately, evaluate move\n     to Azure VMs for quick lift and shift rehost  This enhancement streamlines migration\nplanning, reduces guesswork, and speeds up transitions to Azure Files,\nespecially for complex environments.    Getting started: Use Azure portal to set up discovery and run Azure Files assessments in\nyour Azure Migrate project. Learn more.",
+    "generalAvailabilityDate": "2026-05",
+    "id": "564563",
+    "modified": "2026-06-04T21:45:11.1193125Z",
+    "productCategories": [
+      "Management and governance",
+      "Migration"
+    ],
+    "products": [
+      "Azure Migrate"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Services",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure Files assessments are now available worldwide using Azure Migrate"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

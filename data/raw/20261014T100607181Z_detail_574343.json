@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "574343"
+  },
+  "fetchedAt": "2026-10-14T10:06:07.181Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "574343",
+    "created": "2026-10-08T17:29:30.8258325Z",
+    "description": "Announcing the general availability of exceptions\nfor Web Application Firewall on Azure Application Gateway and Azure Front Door.Azure Web\nApplication Firewall (WAF) helps protect your web applications from common\nthreats and attacks. In some cases, WAF may block requests that are safe and\nexpected for your application. Existing exclusions help reduce false positives\nby omitting specific request attributes, such as headers, cookies, query string\narguments, or body fields, from WAF evaluation while the rest of the request\ncontinues to be inspected. Exceptions\nprovide additional flexibility by allowing specific requests to bypass WAF\ninspection at the rule, rule group, or managed ruleset level. Exceptions can be\ndefined using request URI, remote IP address, or request header name and value,\nhelping customers tune WAF policies more precisely while keeping other\nprotections active. To configure exceptions, navigate to your WAF policy in the Azure portal, select Managed\nrules, and then add an exception. Learn more: Application\nGateway documentation Front\nDoor documentation ",
+    "generalAvailabilityDate": "2026-10",
+    "id": "574343",
+    "modified": "2026-10-08T17:29:30.8258325Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway",
+      "Azure Front Door",
+      "Web Application Firewall"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Generally Available: Exceptions in WAF for Azure Application Gateway and Azure Front Door"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

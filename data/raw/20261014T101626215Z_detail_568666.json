@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "568666"
+  },
+  "fetchedAt": "2026-10-14T10:16:26.215Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "568666",
+    "created": "2026-08-07T15:52:31.9732846Z",
+    "description": "Azure ExpressRoute resiliency guard is now available in public preview for ExpressRoute virtual\nnetwork gateways. The new resiliency model property lets you specify whether a\ngateway is intended for a single-homed or multi-homed configuration, helping\nalign your deployment with the resiliency requirements of your workloads.\nFor multi-homed gateways, resiliency guard guides you to connect either two\nExpressRoute circuits in different peering locations or an ExpressRoute Metro\ncircuit. Portal guidance and configuration safeguards help identify incomplete\nsetups and reduce the risk of changes that could weaken gateway resiliency.\nSingle-homed configurations remain available for workloads that do not require\nmulti-site resiliency. Learn\nmore.",
+    "id": "568666",
+    "modified": "2026-08-07T15:52:31.9732846Z",
+    "previewAvailabilityDate": "2026-08",
+    "productCategories": [
+      "Hybrid + multicloud",
+      "Networking"
+    ],
+    "products": [
+      "Azure ExpressRoute"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Azure ExpressRoute resiliency guard"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "564532"
+  },
+  "fetchedAt": "2026-10-14T10:27:52.438Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "564532",
+    "created": "2026-06-02T19:30:20.2853906Z",
+    "description": "Azure Event Grid Standard Namespace now supports MQTT v5 subscription identifier capabilities in GA. Now each MQTT subscription can include an identifier that is\ndelivered with incoming messages, enabling applications to route events\nimmediately based on subscription context rather than parsing topic strings.\nThis results in cleaner application logic and faster message handling for\nscenarios such as dashboards, alerts, and analytics pipelines. ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "564532",
+    "modified": "2026-06-02T19:30:20.2853906Z",
+    "productCategories": [
+      "Integration",
+      "Internet of Things"
+    ],
+    "products": [
+      "Event Grid"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Build"
+    ],
+    "title": "Generally Available: Azure Event Grid - MQTT v5 Subscription Identifier"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

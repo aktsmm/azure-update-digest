@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "565758"
+  },
+  "fetchedAt": "2026-10-14T10:21:40.359Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "565758",
+    "created": "2026-07-01T16:59:39.884047Z",
+    "description": "Azure introduces Instant Access for VM Restore Points, enabling you to restore disks immediately after a restore point is created—without waiting for background data replication.Key benefits:Faster recovery (lower RTO): Restore disks instantly—no wait for data hydration. High performance from the start: Restored disks are usable immediately while data copies in the background.Consistent recovery: Application-consistent restore points ensure reliable recovery across all VM disks. Flexible controls: Enable Instant Access and configure duration per restore point or collection.How it works:Create restore points with Instant Access enabledRestore disks immediately after creationData continues to hydrate in the background for long-term durabilityPricing:Public Preview: No additional charges apply when using Instant Access. Standard billing for disks and snapshots remains unchanged.  Post General Availability (GA): Two charges will apply:   Storage Charge: Billed only for the additional storage space consumed by Instant Access Snapshots, based on data changes on the source disk after the snapshot is created.  Restore Charge: A one-time fee applies for each disk restored from an Instant Access Snapshot, calculated based on the disk’s provisioned size at the time of restore. Learn\nmore. ",
+    "id": "565758",
+    "modified": "2026-07-01T16:59:39.884047Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Storage",
+      "Compute"
+    ],
+    "products": [
+      "Azure Disk Storage",
+      "Virtual Machines"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Feature"
+    ],
+    "title": "Public Preview: Instant Access via application consistent restore points"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

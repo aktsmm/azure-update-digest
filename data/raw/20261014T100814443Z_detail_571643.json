@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "571643"
+  },
+  "fetchedAt": "2026-10-14T10:08:14.443Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "571643",
+    "created": "2026-09-29T18:05:11.7866023Z",
+    "description": "The following updates and enhancements were made to Azure\nSQL:   \n Scale\n     larger workloads on Azure SQL Database Hyperscale Premium series with new\n     160-vCore and 192-vCore options, delivering up to 50% greater compute\n     capacity than the previous 128-vCore maximum.  \n Enable\n     automatic index compaction to reduce storage space consumption and save\n     resources without index maintenance jobs.  \n Query\n     and explore Azure SQL Database directly from the Azure portal with the\n     modern, browser-based SQL Query Editor, without requiring external tools.  \n Make\n     informed Azure SQL migration decisions directly within SQL Server\n     Management Studio (SSMS) with intelligent target recommendations tailored\n     to your workload.  \n Get\n     enhanced state management for improved performance and responsiveness with\n     the new Results Grid experience, now with expanded column customization\n     options.  \n Run\n     the built-in SQL formatter on demand in SSMS, configuring for automatic\n     formatting on save, and customizing through SSMS settings or .editorconfig\n     files.  \n Compare\n     two database definitions with Schema Compare. The source and target of the\n     comparison can be any combination of connected database, SQL database\n     project, or .dacpac file.  \n Now\n     write one set of connection string keywords and use them across our\n     Microsoft SQL drivers. No more looking up connection string keywords for\n     every different language or framework that you work with.  Learn more: New\n160-vCore and 192-vCore options Enable\nautomatic index compaction  Query\nand explore Azure SQL Database directly from the Azure portal with SQL Query\nEditor  SQL Server Management Studio (SSMS) with\nintelligent target recommendations  Expanded column customization\noptions with Results Grid Run the built-in\nSQL formatter on demand in SSMS Compare two database\ndefinitions with Schema Compare  ",
+    "generalAvailabilityDate": "2026-09",
+    "id": "571643",
+    "modified": "2026-09-29T18:05:11.7866023Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Azure SQL updates for late-September 2026"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

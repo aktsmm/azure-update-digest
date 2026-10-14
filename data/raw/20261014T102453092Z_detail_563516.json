@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563516"
+  },
+  "fetchedAt": "2026-10-14T10:24:53.092Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563516",
+    "created": "2026-06-04T19:15:11.3851002Z",
+    "description": "Azure AI Search and Foundry Knowledge Bases now support private, end-to-end network connectivity between search resources and Foundry services. Customers can route ingestion, enrichment, retrieval, and agent traffic over Shared Private Link or Network Security Perimeter so data never traverses the public internet. This release is built for organizations running RAG pipelines, Knowledge Bases, and Foundry agents on regulated or sensitive data, where compliance teams require full network isolation. Existing search indexes, indexers, and Knowledge Base configurations continue to work; customers add private connectivity through the portal or ARM templates. Combined with Azure RBAC and customer-managed keys, this brings Foundry knowledge workflows in line with the same network controls already used for Azure AI Search production deployments. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563516",
+    "modified": "2026-06-04T19:15:11.3851002Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Private Connectivity for Azure AI Search and Foundry Knowledge Bases"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

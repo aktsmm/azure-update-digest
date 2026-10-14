@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "570120"
+  },
+  "fetchedAt": "2026-10-14T10:13:32.742Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "570120",
+    "created": "2026-08-28T20:25:22.5508153Z",
+    "description": "The Azure Files Container Storage Interface (CSI) driver in Azure\nKubernetes Service (AKS) now supports workload identity for pod-level\nauthentication to SMB file shares. Previously, managed identity support in AKS enabled\nworkloads to mount Azure Files without using storage account keys. With workload\nidentity support in AKS, applications can leverage pod-level least-privilege\naccess to Azure Files. This provides granular security control for regulated\nindustries operating under stringent compliance requirements. With workload\nidentity, you can scope application pod access to exactly the data it needs\nrather than granting access at the node level. This feature is available in all\nAzure regions that support Azure Files and AKS. Learn More: Create\nand manage persistent volumes (PVs) with Azure Files in Azure Kubernetes\nService (AKS) - Azure Kubernetes ServiceWorkload\nidentities - Microsoft Entra Workload ID",
+    "generalAvailabilityDate": "2026-08",
+    "id": "570120",
+    "modified": "2026-08-28T20:25:22.5508153Z",
+    "productCategories": [
+      "Storage",
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Files",
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Security",
+      "Feature"
+    ],
+    "title": "Generally Available: Workload identity support for Azure Files CSI driver (SMB) in Azure"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

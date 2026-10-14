@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "571821"
+  },
+  "fetchedAt": "2026-10-14T10:10:52.574Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "571821",
+    "created": "2026-09-18T17:23:21.3964293Z",
+    "description": "In public preview, Microsoft Foundry now lets customers govern the outbound connections a hosted agent can make. Customers author ordered rules matched on destination host, including FQDN with wildcards such as *.contoso.com, with actions to allow, deny, transform outbound request headers, or rewrite the destination. Rules live in the agent's Responsible AI policy and are enforced inside the Foundry-managed agent sandbox before traffic leaves the runtime, so no separate network appliance is required for basic allow-listing. Two enforcement modes are supported: audit, which logs would-deny decisions without blocking, and enforce, which blocks denied traffic, letting teams observe real traffic before switching on enforcement. Every egress decision is emitted to Application Insights for audit. The preview is intended for evaluation and is not covered by production SLAs. To get started, configure egress controls under Guardrails in the Foundry portal. Learn more.",
+    "id": "571821",
+    "modified": "2026-09-18T17:23:21.3964293Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Network egress controls for hosted agents in Microsoft Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

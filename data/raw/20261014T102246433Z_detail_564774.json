@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "564774"
+  },
+  "fetchedAt": "2026-10-14T10:22:46.433Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Retirement",
+        "year": 2028
+      }
+    ],
+    "baseId": "564774",
+    "created": "2026-06-11T19:00:41.8954189Z",
+    "description": "Azure Compute will retire the following Virtual Machine series on November 15, 2028, impacting Azure Batch pools that rely on them:Av2-seriesF-series, Fs-series, Fsv2-seriesG-series, Gs-seriesLsv2-seriesAfter this date:New Batch pools using these VM series cannot be createdExisting pools cannot scale outPools may be forcibly resized to zero nodesRemaining VMs will be stopped/deallocated and no longer covered by SLATimeline:Now – November 15, 2028: Existing pools continue to run; migration is recommendedNovember 15, 2028: Full retirement; affected pools may become unusableRequired action:\nMigrate your Batch pools to supported VM families before the retirement date to avoid disruption.Recommended replacements:Av2 → Dsv5/Ddsv5 or Dasv5/Dadsv5F/Fs/Fsv2 → Dlsv6/Dldsv6, Falsv6, or Dsv5/Ddsv5G/Gs → Lsv3/Lasv3 or Easv5/Edsv5Lsv2 → Lsv3/Lasv3Migration options:Scale pool to zero and update VM size using Batch API (07-01-24 or later)Create a new pool with supported VM sizes and migrate workloadsNote: VM pricing may change after migration. Refer to Azure VM pricing for details.",
+    "id": "564774",
+    "modified": "2026-06-11T19:00:41.8954189Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Batch"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Av2-series, F-series, Fs-series, Fsv2-series, G-series, Gs-series, and Lsv2-series Virtual Machines for Azure Batch pools"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

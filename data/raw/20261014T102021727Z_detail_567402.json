@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "567402"
+  },
+  "fetchedAt": "2026-10-14T10:20:21.727Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "567402",
+    "created": "2026-07-14T20:03:32.0753041Z",
+    "description": "Announcing the public preview of Azure Front Door edge actions (serverless compute at the edge).With edge actions, customers can execute lightweight JavaScript functions during Azure Front Door request processing to make real-time decisions closer to users, improving performance, security, and application flexibility without adding complexity to origin infrastructure.Common scenarios include A/B testing and canary deployments, header manipulation, request filtering, dynamic origin selection, URL rewrites, authentication at the edge and many more. Edge actions integrate seamlessly with Azure Front Door capabilities such as rules engine, caching, routing, and Web Application Firewall (WAF). Built on Hyperlight, Microsoft’s secure micro-VM technology, edge actions provide hardware-backed isolation for customer code execution.Learn more:\n Blog\n     announcement \n Azure Front Door edge actions documentation ",
+    "id": "567402",
+    "modified": "2026-07-14T20:03:32.0753041Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure Front Door"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Services"
+    ],
+    "title": "Public Preview: Azure Front Door edge actions"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,31 @@
+{
+  "args": {
+    "id": "565359"
+  },
+  "fetchedAt": "2026-10-14T10:23:31.433Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "565359",
+    "created": "2026-06-08T18:00:23.123919Z",
+    "description": "Azure Premium SSD v2 disks now support non-zonal, single-instance Azure virtual machines in select Azure regions with Availability Zones (AZs). Customers can now deploy Premium SSD v2 with non-zonal virtual machines without selecting an Availability Zone. This allows customers to bring the performance and price benefits of Premium SSD v2 to workloads that have not transitioned to zonal configurations. Azure Premium SSD v2 is a next-generation block storage option for Azure virtual machines that delivers sub-millisecond latency and strong price performance for IO-intensive workloads such as SQL Server, Oracle, SAP, Cassandra, MongoDB, big data and analytics, and gaming workloads running on virtual machines or stateful containers. Pricing for non-zonal Premium SSD v2 disks is the same as zonal Premium SSD v2 disks. Customers pay for provisioned storage capacity, along with any additional IOPS and throughput provisioned above the baseline performance.   Learn more:     \n Documentation  \n Premium\n     SSD v2 Disk Storage pricing.      ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "565359",
+    "modified": "2026-06-08T18:00:23.123919Z",
+    "productCategories": [],
+    "products": [],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Premium SSD v2 disks now support non-zonal Azure Virtual Machines "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

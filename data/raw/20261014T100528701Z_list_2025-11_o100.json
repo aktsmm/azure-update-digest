@@ -1,0 +1,1423 @@
+{
+  "args": {
+    "filter": "created ge 2025-10-31T15:00:00Z and created lt 2025-11-30T15:00:00Z",
+    "skip": 100
+  },
+  "fetchedAt": "2026-10-14T10:05:28.701Z",
+  "ok": true,
+  "response": {
+    "hasMore": true,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525455",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Confidential\ncomputing support in Azure Container Apps is now in public preview. This\nrelease brings hardware-based Trusted Execution Environments (TEEs) to your\ncontainerized workloads. Azure already...",
+        "id": "525455",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Confidential computing in Azure Container Apps"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "525460",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "To meet growing demand for GPU-powered workloads, Azure\nContainer Apps serverless GPUs are\nnow generally available in additional regions. This expansion enables\ndevelopers to run AI inference, model t...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "525460",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features",
+          "Regions & Datacenters"
+        ],
+        "title": "Generally Available: Azure Container Apps serverless GPUs in additional regions "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525465",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Flexible workload profile represents a new option\nthat blends the simplicity of consumption with many of the performance and\ncontrol characteristics of dedicated workload profiles. This offers the sam...",
+        "id": "525465",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Azure Container Apps introduces flexible workload profile "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525470",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Azure Container Apps is bringing the familiar\ndeveloper workflow of Docker Compose directly to Azure Container Apps. As one\nof the most widely adopted tools among developers, Docker Compose simplifies...",
+        "id": "525470",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Azure Container Apps adds support for agentic Docker Compose "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "525479",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Azure Functions now supports\nOpenTelemetry in general availability (GA), enabling developers to export logs,\ntraces, and metrics using open standards. This release builds on the public\npreview and del...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "525479",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: Azure Functions enables OpenTelemetry support "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "525500",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Azure Functions Flex Consumption is\nnow the recommended hosting plan for serverless workloads requiring advanced\nscaling, networking, and cost optimization. To support customers migrating from\nthe Azu...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "525500",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Announcing: Resources for migrating to Azure Functions Flex Consumption "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525505",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "We are introducing a new capability that allows you to host\nremote Model Context Protocol (MCP) servers built with the MCP SDKs on Functions. Some key benefits of hosting on the Functions platform inc...",
+        "id": "525505",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Self-hosted remote MCP servers on Azure Functions "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "525518",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Earlier this year, we\nintroduced Azure Functions durable task scheduler, an orchestration engine\ndesigned for complex workflows and intelligent agents. It automatically\ncheckpoints progress and protec...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "525518",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: Azure Functions durable task scheduler Dedicated SKU (GA) & Consumption SKU (Public Preview)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "525523",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Model\nContext Protocol (MCP) is a way for apps to provide capabilities and context to\na large language model. A key feature of MCP is the ability to define tools\nthat AI agents can leverage to accompl...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "525523",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: Model Context Protocol (MCP) tool trigger for Azure Functions "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525536",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "OpenTelemetry based visualizations in Azure Monitor are in public preview, along with an enhanced, unified monitoring experience for Azure Virtual Machines and Arc Servers. This release consolidates k...",
+        "id": "525536",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features",
+          "Open Source"
+        ],
+        "title": "Public Preview: OpenTelemetry visualizations and enhanced monitoring experience in Azure Monitor for Azure VMs and Arc Servers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525549",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Now you can run bigger, faster workloads on fewer nodes using high-performance storage for Azure DocumentDB. This update delivers up to 64 TiB capacity, 80,000 IOPS, and 1,200 MB/s throughput per phys...",
+        "id": "525549",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure DocumentDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Azure DocumentDB high-performance storage "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525620",
+        "created": "2025-11-20T13:45:47.4956033Z",
+        "description": "Azure NetApp Files migration assistant (with SnapMirror) provides efficient and cost-effective data migration leveraging ONTAP's built-in replication engine for seamless transition from on-premises or...",
+        "id": "525620",
+        "modified": "2025-11-20T13:45:47.4956033Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure NetApp Files migration assistant (portal support) "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525874",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Application\nGateway for Containers now supports integration with Istio service mesh through\nan optional service mesh extension. This feature simplifies secure north-south\ncommunication between externa...",
+        "id": "525874",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Networking",
+          "Security",
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Application Gateway",
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features",
+          "Services"
+        ],
+        "title": "Public Preview: Application Gateway for Containers Istio Service Mesh integration"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "525893",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Slow start is now\ngenerally available as a load balancing algorithm in Application Gateway for\nContainers. This feature improves stability and performance during backend\nscale-up by gradually increasi...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "525893",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Networking",
+          "Security",
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Application Gateway",
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Services",
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: Application Gateway for Containers – Slow start"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525923",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Introducing guardrails for agents in Microsoft Foundry Control Plane. Formerly called content filters, guardrails can now be applied at the agent level rather than only to model deployments. They incl...",
+        "id": "525923",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Microsoft Ignite",
+          "Security"
+        ],
+        "title": "Public Preview: Agent mitigations and guardrail customization "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525933",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Microsoft Foundry streamlines AI development and management for the enterprise. We're introducing more granular controls for network and integration security and resource management that empower IT ad...",
+        "id": "525933",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: New granular controls for network and integration security in Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "525942",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Microsoft Foundry streamlines AI development and management\nfor the enterprise. These features are now generally available, empowering IT\nadmins to deploy AI solutions while meeting enterprise-grade s...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "525942",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: Streamline IT governance, security, and cost management experiences with Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525952",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Microsoft Foundry now has a Developer Training\ntier, offering ultra-low-cost model training by leveraging spot capacity. It’s designed to match the affordability of\nDeveloper tier for hosting but appl...",
+        "id": "525952",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Announcing: Developer Training tier for low-cost fine-tuning training"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525957",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "The BYO AI Model Gateway feature allows enterprises to connect Foundry-hosted\nmodels through any AI gateway services like Azure API Management, Mulesoft, and\nKong, to Foundry Agent Service. The Agent ...",
+        "id": "525957",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Bring Your Own AI Gateway to Foundry Agent Service"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525962",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "LLM Speech in\nMicrosoft Foundry brings advanced large language model capabilities to speech,\ndelivering transcription and translation with unmatched fluency and contextual\nawareness. With enhanced\nmul...",
+        "id": "525962",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: LLM Speech in Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525971",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Microsoft Foundry now\nenables one-click, no-code publishing of custom agents to Microsoft Teams and\nMicrosoft 365 Copilot. This feature removes the complexity of pro-code\ndeployment, allowing organiza...",
+        "id": "525971",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Microsoft Foundry one-click deploy channels in Teams, M365 and non-Microsoft"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525976",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Microsoft Foundry has enhanced integration to Enterprise MCP to enable secure, authenticated connections to MCP servers, allowing credentials to be passed to MCP servers securely. These updates enable...",
+        "id": "525976",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Enterprise MCP enhancements in Foundry Agent Service"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "525985",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Observability in Foundry Control Plane now in public preview for agents with a GA pre-announcement for model evals is a comprehensive suite of capabilities that enable developers to evaluate, monitor,...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "525985",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: Observability in Foundry Control Plane"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525994",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Hosted agents in Foundry Agent Service make it effortless for teams to move\nfrom local experimentation to full-scale production.Developers can now deploy custom-code agents\nbuilt with Microsoft Agent ...",
+        "id": "525994",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Hosted agents in Foundry Agent Service"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "525999",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Developers can now\nbuild robust multi-agent workflows using both a visual designer and code-first\nAPI. These workflows provide structured orchestration, context sharing,\npersistent state, and error re...",
+        "id": "525999",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Multi-agent workflows in Foundry Agent Service"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526004",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "The new long-term memory in Foundry Agent Service gives developers a robust, scalable foundation for agents that can remember, adapt, and act coherently across sessions and workflows. Integrated direc...",
+        "id": "526004",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Built-in memory in Foundry Agent Service"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526018",
+        "created": "2025-11-24T17:15:03.3351852Z",
+        "description": "Announcing Azure Bastion now supports Microsoft Entra ID\nauthentication for RDP connections to Windows VMs directly in the portal. This update\nbrings two key benefits for RDP users connecting to their...",
+        "id": "526018",
+        "modified": "2025-11-24T17:15:03.3351852Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Identity",
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Microsoft Entra ID (formerly Azure AD)",
+          "Azure Bastion"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features",
+          "Services",
+          "Security"
+        ],
+        "title": "Public Preview: Entra ID support for RDP connections "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526072",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "You can now develop functions using Java\n25 locally and deploy them to Azure Functions on Windows and Linux.  Upgrade your apps to Java 25 to take\nadvantage of enhanced security, a longer support wind...",
+        "id": "526072",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Azure Functions support for Java 25 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526077",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "You can now develop functions using Node.js 24 locally and deploy them\nto Azure Functions on Windows and Linux.   Note: Node.js 24 does not support\n32-bit systems on Windows. To ensure compatibility, ...",
+        "id": "526077",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Azure Functions support for Node.js 24 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526114",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "With these latest updates in public preview, Microsoft Foundry enables developers to enrich agents with real-time business context, multimodal capabilities, and custom business logic through a unified...",
+        "id": "526114",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Enrich agents with a unified catalog of prebuilt and custom tools in Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "526123",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "With the general availability of Content Understanding, the service now enables connecting to Foundry models, allowing customers to use Foundry model deployments. Additional key updates include suppor...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "526123",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: Content Understanding in Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "526132",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Foundry Tools (rebranded from Azure AI Services)\nprovide a unified suite of prebuilt, production-ready AI capabilities for\naudio, video, images, documents, and text. Seamlessly integrated into the Mic...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "526132",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite"
+        ],
+        "title": "Generally Available: Foundry Tools (rebrand from Azure AI Services)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "526145",
+        "created": "2025-11-13T18:30:39.769711Z",
+        "description": "Azure Virtual Network Manager\nUDR management now offers UseExisting mode, providing customers with greater\nflexibility and compliance control over user-defined routes (UDRs). With the UseExisting mode...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "526145",
+        "modified": "2025-11-13T18:30:39.769711Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Virtual Network Manager"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services",
+          "Management"
+        ],
+        "title": "Generally Available: Azure Virtual Network Manager UseExisting Mode for UDR management "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526150",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Foundry\nIQ, powered by Azure AI Search, is a knowledge system that delivers a smarter way to ground agents in enterprise\ndata. Agents only need to connect to a single knowledge base to access\nmultiple...",
+        "id": "526150",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Foundry IQ by Azure AI Search"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "526155",
+        "created": "2025-11-13T17:00:24.9154341Z",
+        "description": "Azure Virtual Network Manager peering\ncompliance is now generally available, providing a secure and compliant mechanism to\nprotect network connectivity managed by Azure Virtual Network Manager. In\nlar...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "526155",
+        "modified": "2025-11-13T17:00:24.9154341Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Virtual Network Manager"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Management",
+          "Services",
+          "Features"
+        ],
+        "title": "Generally Available: Azure Virtual Network Manager peering compliance "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "526160",
+        "created": "2025-11-13T17:00:24.9154341Z",
+        "description": "Azure Virtual Network Manager\nIP Address Management (IPAM) – Pool Association Recommendation is now generally\navailable,\nbringing intelligent, large-scale automation to IP address management in Azure....",
+        "generalAvailabilityDate": "2025-11",
+        "id": "526160",
+        "modified": "2025-11-13T17:00:24.9154341Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Virtual Network Manager"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services",
+          "Management"
+        ],
+        "title": "Generally Available: Azure Virtual Network Manager IP Address Management Pool Association Recommendation"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "526169",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Azure Virtual Network Manager\naddress space overlap prevention in mesh is now generally available, bringing enhanced\nreliability and governance to multi-virtual network environments. Unintended\naddres...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "526169",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Virtual Network Manager"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Management",
+          "Services",
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: Azure Virtual Network Manager address overlap prevention in mesh "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526174",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Managing\nIP address spaces across multiple regions can be complex and error-prone.  With\nthis new capability, you can now associate a single IPAM pool with virtual\nnetworks in multiple regions, simpli...",
+        "id": "526174",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Virtual Network Manager"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features",
+          "Services",
+          "Management"
+        ],
+        "title": "Public Preview: Cross region pool association support for Azure Virtual Network Manager IP address management"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526179",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "You can now build and host reliable\nproduction-grade AI agents using the durable extension for\nMicrosoft Agent Framework. This integration combines the Microsoft Agent\nFramework with Azure Functions’ ...",
+        "id": "526179",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Add durability to AI agents in Azure Functions using Microsoft Agent Framework"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526188",
+        "created": "2025-11-18T18:00:28.886638Z",
+        "description": "Introducing smart tier Public Preview for account level\ntiering Announcing the public preview of smart\ntier for Azure Blob Storage and Azure Data Lake Storage (ADLS). Smart tier\nis a fully managed and...",
+        "id": "526188",
+        "modified": "2025-11-18T18:00:28.886638Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Storage",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Blob Storage",
+          "Azure Data Lake Storage"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features",
+          "Management",
+          "Pricing & Offerings"
+        ],
+        "title": "Public Preview: Smart Tier account level tiering (Azure Blob Storage and ADLS)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526193",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Foundry Local now extends its capabilities, supporting the Whisper model and advanced on-device AI for\nsmartphones, tablets, and IoT devices. Whisper model integration delivers robust, privacy-preserv...",
+        "id": "526193",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Foundry Local updates"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Private Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526198",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Foundry Local now extends its capabilities to\nAndroid, in addition to Windows and Mac supporting\nadvanced on-device AI for smartphones, tablets, and IoT devices, while Whisper model integration delive...",
+        "id": "526198",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "privatePreviewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In development",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Private Preview: Foundry Local Android support"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526203",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Provisioning and maintaining system node pools in AKS\nrequires ongoing effort to ensure proper scaling, patching, and availability, tasks\nthat can divert resources from application development and del...",
+        "id": "526203",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: AKS Automatic managed system node pools"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "526208",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Azure Kubernetes Service (AKS) Automatic\nclusters now come with a pod readiness SLA, guaranteeing that eligible pods meet\nreadiness criteria within five minutes at the 99.9th percentile.\nThis empowers...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "526208",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: AKS Automatic pod readiness SLA"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526213",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Organizations running Windows-based\nworkloads on Azure Kubernetes Service (AKS) face increasing pressure to\nmodernize as support timelines for older Windows Server versions approach\nretirement. To hel...",
+        "id": "526213",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Windows Server 2025 on AKS"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526227",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Managing\nKubernetes clusters across hybrid and multi-cloud environments can be complex\nand fragmented. To simplify this, Azure Kubernetes Fleet Manager now supports\nAzure Arc-enabled Kubernetes, enabl...",
+        "id": "526227",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Containers",
+          "Compute"
+        ],
+        "products": [
+          "Azure Kubernetes Fleet Manager",
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Azure Kubernetes Fleet Manager for Arc-enabled clusters "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "526232",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Managing\nnamespace configurations across AKS clusters has traditionally required manual\nsetup and ongoing maintenance, creating complexity and potential for\nmisconfiguration. With the general availabi...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "526232",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: Managed namespaces on AKS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "526237",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Running\ncontainerized workloads in shared environments can raise concerns around\nsecurity and workload isolation. To address this, AKS now supports pod\nsandboxing, enabling customers to run containers...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "526237",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: Pod sandboxing on AKS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "526242",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "AKS desktop delivers a modern, application-centric\nexperience for deploying and managing workloads on Azure Kubernetes Service.\nBuilt on supported AKS features, best practices, and the open-source Hea...",
+        "id": "526242",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Azure Kubernetes Service desktop "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "526330",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Model router in Microsoft Foundry is now generally\navailable. Model router is an AI orchestration layer dynamically selects the\noptimal model for each prompt. It now supports a broader range of models...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "526330",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: Model Router in Microsoft Foundry"
+      }
+    ],
+    "limit": 50,
+    "offset": 100,
+    "returnedCount": 50,
+    "totalCount": 220
+  },
+  "scan": "2025-11",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

@@ -1,0 +1,29 @@
+{
+  "args": {
+    "id": "571342"
+  },
+  "fetchedAt": "2026-10-14T10:11:29.278Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "571342",
+    "created": "2026-09-16T17:19:02.1256185Z",
+    "description": "The containerized SAP data connector retired on September 14, 2026 and is unsupported and unmaintained. Existing TLS-compliant agents may continue sending logs through the retired HTTP Data Collector API. Container images will be removed on October 14, 2026, preventing new pulls, installation, redeployment, scaling, replacement, and disaster recovery. Customers must migrate to the supported SAP agentless connector.Learn\nmore. ",
+    "id": "571342",
+    "modified": "2026-09-16T17:19:02.1256185Z",
+    "productCategories": [],
+    "products": [],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement Update: SAP container images removed October 14, 2026"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

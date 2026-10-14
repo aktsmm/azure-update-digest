@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "573041"
+  },
+  "fetchedAt": "2026-10-14T10:09:34.412Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "573041",
+    "created": "2026-09-29T17:07:55.4152603Z",
+    "description": "Azure NetApp Files now supports Microsoft Entra Kerberos\nauthentication for SMB volumes. The capability enables users with hybrid or\ncloud-only identities to authenticate through Microsoft Entra ID using\ncloud-issued Kerberos tickets. This capability removes the requirement for\nSMB clients to have network line-of-sight to Active Directory Domain Services\ndomain controllers in the authentication path. It helps organizations simplify\nidentity architecture, reduce infrastructure dependencies, and modernize SMB\naccess for hybrid and cloud-first environments.Learn more:\n What's new in\n     Azure NetApp FilesUnderstand Microsoft Entra\n     Kerberos with Azure NetApp Files\n Configure Microsoft Entra\n     Kerberos authentication with Azure NetApp Files\n Troubleshoot Microsoft Entra\n     Kerberos authentication for Azure NetApp Files",
+    "id": "573041",
+    "modified": "2026-09-29T17:07:55.4152603Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure NetApp Files"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview : Microsoft entra kerberos authentication for Azure NetApp Files   "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

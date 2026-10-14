@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "567979"
+  },
+  "fetchedAt": "2026-10-14T10:16:38.298Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "567979",
+    "created": "2026-08-06T16:40:19.650341Z",
+    "description": "Azure Storage Mover now supports agentless, cloud-to-cloud migration from AWS FSx for Windows File Server (SMB) to Azure Files (SMB), in preview. You can move your Windows file shares off FSx and into Azure Files without deploying or managing a migration agent — the service handles the transfer for you. File data is copied directly from FSx to your Azure file share over a private connection between Azure and your AWS network.Learn\nmore. ",
+    "id": "567979",
+    "modified": "2026-08-06T16:40:19.650341Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "Migration",
+      "Storage"
+    ],
+    "products": [
+      "Azure Storage Mover"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Migrate from AWS FSx for Windows File Server to Azure Files with Azure Storage Mover"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

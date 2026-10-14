@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "569504"
+  },
+  "fetchedAt": "2026-10-14T10:14:31.239Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "569504",
+    "created": "2026-08-24T17:25:03.0751952Z",
+    "description": "Announcing the General Availability of custom block response code and body for WAF integrated with Application Gateway Azure WAF integrated with Application Gateway now supports customizable response status codes and bodies for blocked requests, enabling greater flexibility and control. By default, when the WAF blocks a request due to a matched rule, it returns a 403 status code with a \"The request is blocked\" message. As with WAF with Azure Front Door, now customers can also define a custom response status code and message with Application Gateway when WAF blocks a request. This customization is a policy-level setting, ensuring that all blocked requests receive the same custom response status and message. For further details, please reach out to the Azure WAF product team.Learn\nmore.  ",
+    "generalAvailabilityDate": "2026-08",
+    "id": "569504",
+    "modified": "2026-08-24T17:25:03.0751952Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway",
+      "Web Application Firewall"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Security",
+      "Feature"
+    ],
+    "title": "Generally Available: Custom block response code and body for Application Gateway WAF "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

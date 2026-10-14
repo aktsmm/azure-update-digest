@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "570940"
+  },
+  "fetchedAt": "2026-10-14T10:12:05.183Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "570940",
+    "created": "2026-09-10T16:12:49.3807434Z",
+    "description": "Azure\nFunctions Flex Consumption support for TLS/SSL certificates is now generally\navailable through a new site-scoped certificate model. Each function app can\nhold up to 3 private (.pfx) and 3 public (.cer) certificates uploaded directly,\nimported from Azure Key Vault, or issued as free App Service Managed\nCertificates to enable custom domains, client-certificate authentication, and\nmutual TLS scenarios on Flex Consumption. End-to-end\nTLS encryption is also generally available for Flex Consumption and allows traffic\nencryption between the platform front ends and the workers that run your\nfunctions. Learn more:  Configure\nsite-scoped certificates Infrastructure\nas code instructions Cross-plan\ncertificate comparison Configure\nend-to-end TLS encryption ",
+    "generalAvailabilityDate": "2026-09",
+    "id": "570940",
+    "modified": "2026-09-10T16:12:49.3807434Z",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Security",
+      "Feature"
+    ],
+    "title": "Generally Available: TLS/SSL certificate and end-to-end TLS encryption support for Azure Functions Flex Consumption "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "565214"
+  },
+  "fetchedAt": "2026-10-14T10:17:02.872Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "565214",
+    "created": "2026-08-04T17:04:55.0175872Z",
+    "description": "Azure DNS now offers a seamless way to integrate with Azure Traffic Manager for DNS-based traffic routing. Customers can now directly associate Azure DNS record set with Traffic Manager profiles without creating CNAME record for trafficmanager.net domain. This improves lookup latency by eliminating a CNAME hop and enables DNSSEC compatibility for load balanced records by removing unsigned trafficmanager.net domain from CNAME lookup chain.Learn more.",
+    "id": "565214",
+    "modified": "2026-08-04T17:04:55.0175872Z",
+    "previewAvailabilityDate": "2026-08",
+    "productCategories": [
+      "Networking",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure DNS",
+      "Traffic Manager"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Services",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure DNS enables DNS-based load balancing through Traffic Manager integration"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

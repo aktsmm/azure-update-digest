@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "573415"
+  },
+  "fetchedAt": "2026-10-14T10:07:23.086Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "573415",
+    "created": "2026-09-30T18:24:01.2462397Z",
+    "description": "On September 30, 2026, Microsoft Azure retired the Standard_NV4as_v4, Standard_NV4ahs_v4, Standard_NV8as_v4, Standard_NV8ahs_v4, Standard_NV16as_v4, Standard_NV16ahs_v4, Standard_NV32as_v4, and Standard_NV32ahs_v4 virtual machines (VMs) in the NVv4-series VMs. Any remaining NVv4-series VMs will be set to a deallocated state. They'll stop working and no longer incur billing charges. NVv4 will no longer be under SLA or have support included. Note: 1-year and 3-year Reserved Instance (RI) purchases for the NVv4-series ended on November 2, 2025.Note: All Compute Pre-Purchase (CPP) sales for the NVv4-series ended on June 2, 2026.Learn\nmore. ",
+    "id": "573415",
+    "modified": "2026-09-30T18:24:01.2462397Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: NVv4-series Azure Virtual Machines"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

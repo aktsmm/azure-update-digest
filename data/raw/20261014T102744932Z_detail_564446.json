@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "564446"
+  },
+  "fetchedAt": "2026-10-14T10:27:44.932Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Private Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "564446",
+    "created": "2026-06-02T19:30:20.2853906Z",
+    "description": "The Lasv5 and Laosv5 storage optimized VMs, based\non the 5th Gen AMD EPYC™ processor (Turin), are in preview. Lasv5-series is designed for storage-intensive workloads\nrequiring high disk capacity, throughput, and I/O, while Laosv5-series is\nwell-suited for workloads requiring significantly higher local storage capacity\nand performance. Lasv5 and Laosv5 VMs have sizes ranging from 2-160\nvCPUs, with 8GiB of memory and 720GB of local NVMe disk capacity per vCPU. Both\nsupport 200Gbps of network bandwidth and deliver up to 35% better\naverage CPU performance. The Lasv5 VMs offer up to 30.7TB of local\nstorage capacity, while the Laosv5 VMs offer up to 138TB of local storage\ncapacity. Compared to the previous generation Lasv4 VMs, Lasv5 VMs\nhave: \n 33%\n     larger maximum local storage capacity \n New\n     128 and 160 vCPU sizes Compared to the previous generation Laosv4 VMs, Laosv5 VMs\nhave: \n 500%\n     larger maximum local storage capacity \n New\n     48, 64, 96, 128, and160 vCPU sizes Learn more. ",
+    "id": "564446",
+    "modified": "2026-06-02T19:30:20.2853906Z",
+    "privatePreviewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "In development",
+    "tags": [
+      "Microsoft Build"
+    ],
+    "title": "Private Preview: Storage optimized Lasv5 and Laosv5 Azure VM series"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

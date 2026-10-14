@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "565000"
+  },
+  "fetchedAt": "2026-10-14T10:26:17.770Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Private Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "565000",
+    "created": "2026-06-03T18:15:04.2697902Z",
+    "description": "Microsoft is announcing Confidential Live Migration in Azure, a new capability designed to improve operational flexibility and availability for Intel® TDX Confidential VMs during platform servicing. Confidential Live Migration helps move a Confidential VM to another host with limited interruption while maintaining protections against privileged software access. The capability supports attested transfers, destination authorization, and protected migration of VM memory and execution context. This capability will roll out gradually for DC/ECesv6 and DC/ECedsv6 series, with additional details to be shared ahead of general availability.Learn more.",
+    "id": "565000",
+    "modified": "2026-06-03T18:15:04.2697902Z",
+    "privatePreviewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "In development",
+    "tags": [
+      "Microsoft Build"
+    ],
+    "title": "Announcing: Confidential Live Migration for Intel TDX confidential VMs in Azure"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

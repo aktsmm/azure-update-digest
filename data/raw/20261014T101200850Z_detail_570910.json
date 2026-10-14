@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "570910"
+  },
+  "fetchedAt": "2026-10-14T10:12:00.850Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "570910",
+    "created": "2026-09-11T15:58:56.5174477Z",
+    "description": "Azure Storage Mover now supports agentless migration of on-premises SMB file shares to Azure Files (SMB), in public preview. You can move file data from Windows Server or NAS shares into Azure without deploying, registering, or maintaining a migration agent on-premises.With agentless migration, the Storage Mover service connects directly to your SMB share over your existing private connection (VPN or ExpressRoute) and copies data to the destination Azure file share. Source credentials are stored securely in Azure Key Vault, and Storage Mover's managed identities handle access to both the source secrets and the target share. Configure source and target endpoints, create a job, and start the copy from the Azure portal or Azure CLI. Agentless SMB migration joins Storage Mover's existing agent-based paths for SMB and NFS sources, giving you more flexibility to modernize file storage on your own terms.Learn\nmore.",
+    "id": "570910",
+    "modified": "2026-09-11T15:58:56.5174477Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Migration",
+      "Storage"
+    ],
+    "products": [
+      "Azure Storage Mover"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Agentless migration of on-premises SMB file shares to Azure Files (SMB)"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

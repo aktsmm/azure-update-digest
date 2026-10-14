@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "572770"
+  },
+  "fetchedAt": "2026-10-14T10:10:06.013Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "572770",
+    "created": "2026-09-23T16:50:05.5913061Z",
+    "description": "Support for PowerShell 7.4 will\nend on November 10, 2026, please transition to PowerShell 7.6. Your Azure Function apps will continue to run, but security patches and updates will no\nlonger be provided and customer support for\nPowerShell 7.4 will be discontinued. Running function apps on\nunsupported runtime or language version, may lead to issues and degraded\nperformance.  Required action  To avoid potential security vulnerabilities, minimize risk\nfor your Azure Functions apps, and take advantage of latest features, follow\nthe steps to upgrade your app to PowerShell\n7.6 before November 10, 2026.  Note: If your app is on a Linux Consumption plan, you will\nneed to first upgrade to Flex Consumption plan before upgrading to PowerShell\n7.6. Learn\nmore.",
+    "id": "572770",
+    "modified": "2026-09-23T16:50:05.5913061Z",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "tags": [
+      "Retirements",
+      "Compliance",
+      "Security"
+    ],
+    "title": "Retirement: Support for PowerShell 7.4 ends on November 10, 2026"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563431"
+  },
+  "fetchedAt": "2026-10-14T10:25:19.393Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563431",
+    "created": "2026-06-03T21:15:57.2176338Z",
+    "description": "This feature introduces end user feedback logging semantics that enables developers to capture structured feedback signals from real users interacting with AI agents—such as thumbs up/down, ratings, or custom annotations—and automatically associates that feedback with the underlying request traces in Azure Monitor. By standardizing how feedback is logged and correlated with agent runs and telemetry, the feature closes the loop between user experience and system behavior, allowing teams to analyze quality, detect issues, and continuously improve models based on real-world usage. Captured feedback flows through existing observability pipelines, making it available alongside performance and evaluation metrics, and can be fed into downstream evaluation and optimization workflows so that production signals directly inform ongoing model tuning and product iteration. Learn more.",
+    "id": "563431",
+    "modified": "2026-06-03T21:15:57.2176338Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: User feedback logging in Microsoft Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

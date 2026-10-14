@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "568396"
+  },
+  "fetchedAt": "2026-10-14T10:18:01.479Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "568396",
+    "created": "2026-07-30T16:38:15.2598617Z",
+    "description": "Azure NetApp Files now supports configuration of SMB opportunistic locking (oplocks) for SMB and dual-protocol volumes. Opportunistic locks (Oplocks) improve SMB client caching and are enabled by default. You can configure oplocks on new volumes or update the setting on existing volumes. System default is the default selection and enables opportunistic locks on the volume. A cross-region replication destination volume can use an oplock setting independent of its source volume. Learn more:\n Create\n     an SMB volume for Azure NetApp Files | Microsoft Learn  \n Create\n     a dual-protocol volume for Azure NetApp Files | Microsoft Learn \n What\n     is Azure NetApp Files | Microsoft Learn  ",
+    "id": "568396",
+    "modified": "2026-07-30T16:38:15.2598617Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure NetApp Files"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Support for SMB Opportunistic Locking (Oplocks) configuration "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

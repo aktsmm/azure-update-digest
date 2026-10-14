@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "564806"
+  },
+  "fetchedAt": "2026-10-14T10:21:56.133Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "January",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "564806",
+    "created": "2026-06-25T16:00:03.1057825Z",
+    "description": "In September 2023, we announced Azure Blueprints would retire on July 11, 2026. We're extending that timeline to January 31, 2027, with phased retirement beginning July 31, 2026.What's changing?July 31, 2026, you won't be able to create new blueprint definitions and versions.October 31, 2026, you won't be able to modify blueprint definitions or create new blueprint assignments.December 31, 2026, you won't be able to modify existing blueprint assignments.When Azure Blueprints retires on January 31, 2027:The API will no longer respond.Azure CLI and PowerShell commands will stop functioning.Azure Blueprints will be removed from the Azure portal.Blueprint definitions, versions, or assignments not exported will be automatically deleted.The blueprint locks \"Do Not Delete\" and \"Read Only\" on your resources will stop functioning, effectively setting them to a \"Don't Lock\" state.Resources you've created through blueprints won't be deleted.Recommended actionTo avoid disruptions, act ahead of the phased retirement dates above. Migrate to Azure deployment stacks for resource grouping, lifecycle, and \"deny assignments\" enforcement. Publish definitions as template specs or store them in a template folder in Git for versioning. Go to the Blueprints portal to identify your impacted blueprint artifacts and export your data before January 31, 2027.If you don't take action, Azure Blueprints functionality will decrease as the retirement phases progress but your resources will remain.",
+    "id": "564806",
+    "modified": "2026-06-25T16:00:03.1057825Z",
+    "productCategories": [
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Blueprints"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Migrate from Azure Blueprints by January 31, 2027"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

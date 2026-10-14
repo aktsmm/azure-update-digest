@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563696"
+  },
+  "fetchedAt": "2026-10-14T10:25:49.142Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563696",
+    "created": "2026-06-03T19:00:25.4471206Z",
+    "description": "Microsoft Foundry observability introduces intelligent trace filtering and sampling for evaluations in public preview. Instead of running evaluations against all production traces, Foundry now select a representative subset of traces using a multi-stage MinHash farthest-first diversity algorithm, including deduplication, hard filers, aggregation and diversity-based selection for evaluation. This approach improves cost efficiency while producing significantly higher lexical diversity and diverse coverage compared to random sampling. Intelligent sampling is particularly effective for: evaluation and benchmarks, rubric generation and finetuning dataset curation.Learn more.",
+    "id": "563696",
+    "modified": "2026-06-03T19:00:25.4471206Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Evaluations with Intelligent Trace Sampling"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

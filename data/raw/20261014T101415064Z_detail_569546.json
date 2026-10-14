@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "569546"
+  },
+  "fetchedAt": "2026-10-14T10:14:15.064Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "569546",
+    "created": "2026-08-25T18:05:54.2343641Z",
+    "description": "Azure announces the general availability of 248 and 372 vCPU Dl/D/E v7 VM sizes, powered by Intel® Xeon® 6 processors. These general-purpose and memory-optimized VMs deliver up to 20% better compute performance than prior-generation Intel-based v6 VMs, with major scale, networking, and storage gains. The new VMs scale to 372 vCPUs and 2.8 TiB of memory, enabling larger in-memory databases, agentic AI workloads with larger context windows, and lower-latency applications through fewer cross-node network hops. The 248 and 372 vCPU VMs enable Dlsv7, Dsv7, and Esv7 VMs to deliver the highest networking, remote storage, and local storage specs across comparable VMs from leading hyperscalers, driven by the latest capabilities of Azure Boost: Higher Networking Bandwidth - Up to 400 Gbps networking bandwidth with the 372 vCPU Esv7/Edsv7 size Faster Remote Storage - Up to 800k IOPS and 20 GBps throughput to Premium v2 SSD and Ultra Disk remote storage with the 372 vCPU Esv7/Edsv7 size Improved Local Storage Performance - Up to 9.6M IOPS and 53 GBps throughput to local NVMe temp disk with the 372 vCPU Ddsv7/Edsv7 sizes These VMs are now generally available in Central US, East US, East US 2, Germany West Central, South Central US, Sweden Central, West US 2, and West US 3.  Learn more: \n Dsv7 & Ddsv7  \n Dlsv7 & Dldsv7  \n Esv7 & Edsv7  ",
+    "generalAvailabilityDate": "2026-08",
+    "id": "569546",
+    "modified": "2026-08-25T18:05:54.2343641Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Azure 248 and 372 vCPU sizes for D/E v7 series VMs "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "562657"
+  },
+  "fetchedAt": "2026-10-14T10:27:13.337Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562657",
+    "created": "2026-06-02T20:45:52.8723288Z",
+    "description": "Global Provisioned Throughput (PTU) reservations are now region-agnostic, enabling a single reservation to cover Global PTU deployments across multiple regions. Why it matters:Optimize savings: One reservation can apply across regions, improving utilization and reducing stranded capacity. Increase flexibility: Deploy workloads where capacity is available without needing region-specific reservations.Simplify cost management: Consolidate reservations instead of managing multiple regional commitments.This builds on the benefits of provisioned throughput—predictable performance, allocated capacity, and cost savings for high-throughput workloads.Learn\nmore:  \n What\n     is Provisioned Throughput for Foundry Models?  \n Save\n     costs with Microsoft Foundry Provisioned Throughput Reservations  ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562657",
+    "modified": "2026-06-02T20:45:52.8723288Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Pricing & Offerings"
+    ],
+    "title": "Global PTU Reservations Are Now Region-Agnostic"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

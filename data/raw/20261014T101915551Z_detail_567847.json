@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "567847"
+  },
+  "fetchedAt": "2026-10-14T10:19:15.551Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "567847",
+    "created": "2026-07-20T14:59:26.7340592Z",
+    "description": "IPv6 support for Azure VPN Gateway enables customers to run IPv6 inner traffic through VPN tunnels in a dual‑stack configuration. IPv6 is supported on all production SKU gateways that use standard public IPs.IPv6 inner traffic can be configured for both new and existing VPN Gateway deployments in dual‑stack mode, enabling customers to support IPv4 and IPv6 workloads through the same gateway configuration.Site‑to‑Site VPN enables branch and on‑premises networks to connect to Azure over IPsec/IKE VPN tunnels with IPv6 traffic carried inside the tunnel.Point‑to‑Site VPN enables remote users to connect securely to Azure with IPv6 support in the client address pool and routed traffic configuration.Learn\nmore. ",
+    "generalAvailabilityDate": "2026-07",
+    "id": "567847",
+    "modified": "2026-07-20T14:59:26.7340592Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "VPN Gateway"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: IPv6 support for Azure VPN Gateway"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,42 @@
+{
+  "args": {
+    "id": "562027"
+  },
+  "fetchedAt": "2026-10-14T10:22:34.519Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Private Preview",
+        "year": 2024
+      },
+      {
+        "month": "February",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "562027",
+    "created": "2026-06-16T17:15:28.1226213Z",
+    "description": "A new Azure portal experience for Summary Rules in Log Analytics is now available. Summary Rules enable aggregation of high-volume log data at a defined cadence and store it in summarized tables for improved query performance, reporting, or enhanced data privacy. Also, you can ingest logs at lower tier and summarize the important data you need in Analytics tier.Learn more.",
+    "generalAvailabilityDate": "2025-02",
+    "id": "562027",
+    "modified": "2026-06-16T17:15:28.1226213Z",
+    "privatePreviewAvailabilityDate": "2024-06",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Log Analytics Summary Rules experience"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

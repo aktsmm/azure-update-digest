@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "571042"
+  },
+  "fetchedAt": "2026-10-14T10:11:09.906Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "571042",
+    "created": "2026-09-18T15:51:06.215764Z",
+    "description": "Updated troubleshooting guidance is now available for Azure Database for PostgreSQL flexible server. You can use the expanded documentation to diagnose high CPU, memory, IOPS, temporary file usage, and autovacuum issues, helping you identify root causes and resolve performance problems more efficiently.The updated guidance provides end-to-end investigation workflows for the built-in troubleshooting guides and explains how to correlate Azure Monitor metrics, Query Store statistics, session data, and server logs. You can learn how to configure the required telemetry, identify the query, session, wait event, or configuration behind an issue, and apply targeted mitigations before deciding to scale your server. Learn more.",
+    "generalAvailabilityDate": "2026-09",
+    "id": "571042",
+    "modified": "2026-09-18T15:51:06.215764Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: New and improved troubleshooting guides for Azure Database for PostgreSQL "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

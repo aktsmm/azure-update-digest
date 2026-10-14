@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "561475"
+  },
+  "fetchedAt": "2026-10-14T10:19:05.892Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "561475",
+    "created": "2026-07-22T16:57:10.5694998Z",
+    "description": "Standard service endpoint is now available in public preview, introducing a scalable and secure way to connect IaaS workloads to Azure PaaS services under the Private Link family. This enhanced capability overcomes the scale and management limitations of traditional service endpoints by integrating with network security perimeter and using Public IPs as network identifiers, enabling large‑scale IaaS‑to‑PaaS connectivity with stronger security controls.With standard service endpoint, customers can associate a single public IP or prefix with multiple subnets or virtual networks across subscriptions within the same tenant and region. When combined with network security perimeter organizations can define a perimeter around supported PaaS resources—such as Azure Storage, Azure SQL, Azure Cosmos DB, and Azure Key Vault—and restrict access so that only approved networks and workloads can communicate with those resources.This public preview builds on extensive private preview validation with enterprise and partner customers, delivering improved reliability, simplified configuration while maintaining a strong security posture for large and complex Azure environments. Additionally, The feature has been battle tested for 1P as part of SFI program providing network identification for 42k+ VNets used by 1P service providers, Learn more.",
+    "id": "561475",
+    "modified": "2026-07-22T16:57:10.5694998Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Azure Private Link"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Pricing & Offerings",
+      "SDK and Tools"
+    ],
+    "title": "Public Preview: Standard service endpoint "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

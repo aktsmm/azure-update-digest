@@ -1,0 +1,1387 @@
+{
+  "args": {
+    "filter": "created ge 2026-05-31T15:00:00Z and created lt 2026-06-30T15:00:00Z",
+    "skip": 50
+  },
+  "fetchedAt": "2026-10-14T10:04:22.461Z",
+  "ok": true,
+  "response": {
+    "hasMore": true,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562934",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Now in\nPublic Preview, Anyscale on Azure is a cloud-native managed Ray platform for\nmachine learning engineers and AI developers who need to run Python workloads\nat massive scale without compromising ...",
+        "id": "562934",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Public Preview: Anyscale on Azure"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562939",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Organizations\nbuilding AI agents often face a disconnect between where agents are built and\nwhere business processes are automated. Now, with improved integration between\nAzure AI Foundry and Azure Lo...",
+        "id": "562939",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Integration",
+          "Internet of Things"
+        ],
+        "products": [
+          "Logic Apps"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build"
+        ],
+        "title": "Public Preview: Azure Logic Apps now enables developers to invoke Microsoft Foundry Agents directly from workflows. "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "562971",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "The Azure Cosmos DB all versions and deletes change feed mode is now generally available, giving you complete visibility into every change that happens in your containers. Unlike the default latest ve...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "562971",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Cosmos DB all versions and deletes change feed mode"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "562976",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Plan your Azure Cosmos DB deployment with confidence. The Azure Cosmos DB cost estimator is now in public preview, giving you a fast, accurate way to model throughput, storage, regions, and capacity m...",
+        "id": "562976",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: New Azure Cosmos DB cost estimator"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563017",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "You can now change the partition key of an Azure Cosmos DB NoSQL container directly from the Azure portal with just a few clicks. The process supports both online and offline modes by copying data fro...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563017",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Change partition keys in Azure Cosmos DB for NoSQL API"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563022",
+        "created": "2026-06-02T22:30:49.3043078Z",
+        "description": "Your AI coding agents just got smarter about building high-performance database applications. The Azure Cosmos DB Agent Kit is now generally available, bringing proven best practices directly into you...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563022",
+        "modified": "2026-06-02T22:30:49.3043078Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Agent kit for Azure Cosmos DB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563027",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "You can now use AI assistance in the Azure Cosmos DB extension for Visual Studio Code to work with your data faster and with less manual effort. You can ask questions in plain English and get optimize...",
+        "id": "563027",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Introducing AI Assistant in the Azure Cosmos DB extension for Visual Studio Code"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563032",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "You can use the MCP Toolkit for Azure Cosmos DB, now in general availability, to connect your AI agents and copilots to operational data with enterprise-ready reliability. This release gives you a sta...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563032",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: MCP Toolkit for Azure Cosmos DB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563042",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Per-partition automatic failover (PPAF) is now generally available in Azure Cosmos DB, bringing faster recovery and higher availability to your mission-critical applications. With PPAF, you no longer ...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563042",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Per-partition automatic failover for Azure Cosmos DB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563047",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Announcing the public preview of distributed transactions in Azure Cosmos DB. You can now perform atomic operations across items and partitions, with changes committing together or rolling back automa...",
+        "id": "563047",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Cosmos DB distributed transactions"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563052",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "You can now more easily migrate from relational databases such as Oracle, SQL Server, PostgreSQL, and MySQL to Azure Cosmos DB for NoSQL. The Migration Assistant in the Azure Cosmos DB extension for V...",
+        "id": "563052",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Relational Database to Azure Cosmos DB NoSQL Migration Assistant"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563057",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure DocumentDB is excited to announce the general availability of service-managed failover for multi-region clusters. In the event of a regional outage, Azure DocumentDB will automatically fail over...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563057",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure DocumentDB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Service-managed failover in Azure DocumentDB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563062",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure DocumentDB is excited to announce the general availability of graceful failovers that promote replica clusters while guaranteeing zero data loss.  \n\nThis feature is an addition to the already ex...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563062",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure DocumentDB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Graceful failover with zero data loss guarantee"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563067",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "You can build real-time, event-driven applications with change streams in Azure DocumentDB, now in public preview and featuring multi-node support. You can capture live data changes with controlled po...",
+        "id": "563067",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure DocumentDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Change streams (multi-shard) in Azure DocumentDB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563072",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Announcing the general availability of the Azure DocumentDB Migration Extension for Visual Studio Code. With this release, you can create, run, and manage migration jobs directly from Visual Studio Co...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563072",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure DocumentDB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure DocumentDB Migration Extension in Visual Studio Code"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563077",
+        "created": "2026-06-03T17:00:49.5163687Z",
+        "description": "Now you can unify your search operations in a single database. Azure DocumentDB has added fuzzy search, proximity search, more language support, and BM25 ranking to its full-text capabilities, bringin...",
+        "id": "563077",
+        "modified": "2026-06-03T17:00:49.5163687Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure DocumentDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Advanced full-text search in Azure DocumentDB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563082",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "With near-instant provisioning of free tier clusters, you can get started immediately on Azure DocumentDB. Learn more.",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563082",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure DocumentDB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure DocumentDB instant free tier clusters"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563087",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure HorizonDB is a PostgreSQL-compatible database service engineered for performance and built for what's next. It delivers future-proof autoscaling storage up to 128 TB, up to three times faster pe...",
+        "id": "563087",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure HorizonDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure HorizonDB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563092",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Agentic Advisor Solution Accelerator for Azure HorizonDB is now generally available. You can use this financial services-focused reference solution to build multi-agent applications in Python using La...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563092",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure HorizonDB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure HorizonDB Agentic Advisor Solution Accelerator"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563102",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Advanced filtering for DiskANN vector search in Azure HorizonDB is now available in public preview. With this release, you can combine vector similarity search with metadata filters such as category, ...",
+        "id": "563102",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure HorizonDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Advanced filtering for DiskANN vector search in Azure HorizonDB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563107",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "BM25 full-text search is now available in public preview for Azure HorizonDB. Now you can get production-quality keyword search powered by BM25, the same relevance ranking algorithm used by Elasticsea...",
+        "id": "563107",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure HorizonDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: BM25 full-text search in Azure HorizonDB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563112",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure DocumentDB now supports the Model Context Protocol (MCP), available in public preview. With the MCP toolkit, you can connect AI agents and LLM-powered applications directly to your DocumentDB da...",
+        "id": "563112",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure DocumentDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: MCP toolkit for Azure DocumentDB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563122",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "The MSSQL extension for Visual Studio Code now introduces Azure SQL Database provisioning in public preview, starting with the free tier so you can create and connect to a fully managed cloud database...",
+        "id": "563122",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure SQL Database provisioning in the MSSQL extension"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563127",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "The MSSQL extension for Visual Studio Code now offers data API builder with built-in GitHub Copilot integration as generally available, bringing guided back-end generation into your development workfl...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563127",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Data API builder with built-in GitHub Copilot in MSSQL extension"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563132",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "The GitHub Copilot integration with Schema Designer is now generally available in the MSSQL extension for Visual Studio Code, expanding the visual schema design experience with AI-assisted capabilitie...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563132",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: GitHub Copilot integration in Schema Designer for the MSSQL extension"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563137",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "In June 2026, the following updates and enhancements were made to Azure SQL: Execute SQL queries, document with Markdown, and mix kernels like Python using SQL Notebooks in the MSSQL extension for Vis...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563137",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure SQL updates for June"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563142",
+        "created": "2026-06-02T22:15:55.6656037Z",
+        "description": "In early June 2026, the following update and enhancement was made to Azure SQL: Now you can use post-quantum resilient AES 256 symmetric keys to configure transparent data encryption (TDE) with custom...",
+        "id": "563142",
+        "modified": "2026-06-02T22:15:55.6656037Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature",
+          "Post Quantum Crypto"
+        ],
+        "title": "Public Preview: Azure SQL updates for early-June"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563147",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Managing your quota is now faster, simpler, and more transparent. Azure Database for MySQL Flexible Server supports self-service quota management through the Azure Quotas blade in the Azure portal. Yo...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563147",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure Database for MySQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Database for MySQL Flexible Server self-service quota management experience"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563152",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure Database for MySQL Flexible Server continues to expand its global footprint with new regional availability and enhanced availability zone support. You can now deploy Azure Database for MySQL Fle...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563152",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure Database for MySQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Database for MySQL now available in new regions and expanded availability zones"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563167",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Choosing the right AI system is rarely as simple as picking\nthe newest or largest model — and agents add their own layer of variability on\ntop. A model that wins on a public leaderboard can still unde...",
+        "id": "563167",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Benchmark evaluations for fine-tuned models in Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563172",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Deployment templates in Azure Machine Learning add public preview support for deploying from registries, expanding the set of model registries that customers can use as the source for a templated depl...",
+        "id": "563172",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Machine Learning"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Deployment Templates support packaging deployment configurations in registries for curated deployment"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563187",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Deployment templates in Azure Machine Learning add CLI and SDK support in public preview, so platform teams can create, update, delete, and manage templates from infrastructure-as-code pipelines inste...",
+        "id": "563187",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Machine Learning"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: CLI and SDK support for Deployment Templates"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563192",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Speech SDK 1.50 ships as a generally available release across all supported languages: C#, C++, Java, JavaScript, Python, Objective-C, Swift, and Go. The release rolls up the latest speech-to-text and...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563192",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Speech SDK 1.50 for Azure AI Speech"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563197",
+        "created": "2026-06-02T23:15:29.2782955Z",
+        "description": "Microsoft Foundry brings code-first observability to agent developers in public preview, delivered as an observe skill inside the Foundry Plugin for VS Code Copilot Chat. Developers run the full evalu...",
+        "id": "563197",
+        "modified": "2026-06-02T23:15:29.2782955Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Code-first observability for Foundry Agents in VS Code "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563212",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Microsoft Foundry adds region-agnostic reservations for\nGlobal Provisioned Throughput Units (PTUs) at general availability, letting\ncustomers commit to PTU capacity once and consume it from any suppor...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563212",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Region-agnostic reservations for Global PTU in Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563217",
+        "created": "2026-06-03T23:00:57.4864659Z",
+        "description": "Microsoft Foundry now offers MAI-Voice-2 in public preview, a first-party voice model from the Microsoft AI team. MAI-Voice-2 generates natural speech across more than 10 languages and supports voice ...",
+        "id": "563217",
+        "modified": "2026-06-03T23:00:57.4864659Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: MAI-Voice-2 in Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563222",
+        "created": "2026-06-04T19:15:11.3851002Z",
+        "description": "Microsoft Foundry IQ reaches general availability, giving developers a managed knowledge layer that grounds agents in enterprise data without rebuilding retrieval pipelines for each project. Teams con...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563222",
+        "modified": "2026-06-04T19:15:11.3851002Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Microsoft Foundry IQ"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563227",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Microsoft Foundry IQ adds public preview support for OneLake Catalog as a knowledge source, so agents can ground responses on lakehouse tables, files, and shortcuts already governed in Microsoft Fabri...",
+        "id": "563227",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: OneLake Catalog integration for Foundry IQ Knowledge Sources"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563237",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Foundry IQ knowledge bases now surface document-extracted images at query time in public preview. When ingestion pulls figures, screenshots, and diagrams out of PDFs, slides, and Office files, Foundry...",
+        "id": "563237",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Image serving in Foundry IQ knowledge bases"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563242",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure AI Search now supports managed identity authentication for the billing operations it issues against Microsoft Foundry resources, replacing the prior key-based flow. Customers assign a system-ass...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563242",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Managed identity for Foundry billing calls from Azure AI Search"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563247",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure AI Search makes the GenAI prompt skill generally available, letting indexers call chat completion models during enrichment without custom code. Authors point the skill at a Foundry-hosted model,...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563247",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: GenAI prompt skill and chat completion in Azure AI Search knowledge sources"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563257",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Content Understanding in Microsoft Foundry now supports an extractionMode setting that lets you choose how documents are analyzed. Pick a layout-aware mode for structured documents where tables, secti...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563257",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Content Understanding extractionMode for documents"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563262",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "The Azure AI Search SharePoint in Microsoft 365 indexer now indexes ASPX site content and SharePoint Lists in addition to document libraries. The indexer connects through a Microsoft Entra application...",
+        "id": "563262",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: SharePoint in Microsoft 365 indexer supports ASPX pages and Lists"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563267",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure AI Search now emits audit events for Microsoft Purview sensitivity labels carried alongside indexed documents. When the SharePoint in Microsoft 365 indexer is configured to preserve and honor se...",
+        "id": "563267",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Microsoft Purview sensitivity label auditing in Azure AI Search"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563282",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Photo Avatar in Azure AI Speech is now generally available in standard and custom flavors. Standard Photo Avatar produces a talking head video from a single photo at 512x512 resolution, and custom Pho...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563282",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Photo Avatar standard and custom in Azure AI Speech"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563307",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Adaptive\nCustom Translation (AdaptCT) is generally available in the Azure AI Foundry\nNextGen playground for Azure Translator. AdaptCT enables enterprises to adapt\ntranslations to domain‑specific termi...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563307",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Adaptive custom translation in the Azure AI Foundry NextGen playground"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563326",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure AI\nTranslator publishes generally available SDKs that target the latest text\ntranslation REST API across four languages: C#/.NET, Java, JavaScript, and\nPython. The SDKs expose Translator API v4 ...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563326",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure AI Translator SDKs for the latest text translation API"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563341",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure AI Translator now supports synchronous single-document image translation at general availability. Customers can submit a standalone image file (JPEG, PNG, and similar formats) through one synchr...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563341",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Document translation for image files (synchronous, single document)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563361",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Microsoft Foundry brings Content Understanding into the portal in public preview, ending the context switch to the standalone Content Understanding Studio for everyday work. Developers get Read and La...",
+        "id": "563361",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Content Understanding NextGen in Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563396",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Azure AI Search and Foundry IQ Knowledge Sources add incremental SharePoint permissions sync in public preview, keeping document-level, site, and library access control lists current as SharePoint per...",
+        "id": "563396",
+        "modified": "2026-06-02T19:00:47.5410367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Incremental SharePoint permissions sync for Azure AI Search and Foundry IQ"
+      }
+    ],
+    "limit": 50,
+    "offset": 50,
+    "returnedCount": 50,
+    "totalCount": 191
+  },
+  "scan": "2026-06",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "563331"
+  },
+  "fetchedAt": "2026-10-14T10:21:27.517Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563331",
+    "created": "2026-07-01T17:04:40.8610724Z",
+    "description": "Document-based PII detection in Azure AI Language now ships an initial playground experience in the Microsoft Foundry NextGen portal. The playground loads a prepared sample document, runs it through the document-based PII feature, and shows the redacted output side by side with the source so you can see entity categories, confidence scores, and the resulting file fidelity before integrating the API. This first cut focuses on the built-in sample to make first-touch evaluation fast; configuration of your own files and entity selection lands in the upcoming API configuration panel release. The capability uses the existing asynchronous native-file PII pipeline. Learn more.",
+    "id": "563331",
+    "modified": "2026-07-01T17:04:40.8610724Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Document PII playground sample in Microsoft Foundry NextGen"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

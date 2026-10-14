@@ -1,0 +1,1101 @@
+{
+  "args": {
+    "filter": "created ge 2026-01-31T15:00:00Z and created lt 2026-02-28T15:00:00Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-14T10:05:05.248Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "545784",
+        "created": "2026-02-17T17:00:32.6930852Z",
+        "description": "Announcing the General Availability of instant access\nsupport for incremental snapshots of Premium SSD v2 (Pv2) and Ultra Disk. This\nnew capability enables you to restore new disks immediately after c...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "545784",
+        "modified": "2026-02-17T17:00:32.6930852Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Instant access support for incremental snapshots of Azure Premium SSD v2 and Ultra Disk"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "January",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "548114",
+        "created": "2026-02-13T00:30:15.9986693Z",
+        "description": "Kubernetes version 1.34 is now generally available for\nAKS. This release introduces 58 upstream enhancements, including 23 Stable\nfeatures, 22 Beta features, and 13 Alpha features.These enhancements h...",
+        "generalAvailabilityDate": "2026-01",
+        "id": "548114",
+        "modified": "2026-02-13T00:30:15.9986693Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: AKS support for Kubernetes version 1.34 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "January",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "548198",
+        "created": "2026-02-03T20:30:31.5612949Z",
+        "description": "Namespace-scoped resource placement, now\nin preview for Azure Kubernetes Fleet Manager, delivers fine‑grained control\nover selection and propagation of individual namespace‑scoped resources across\nmul...",
+        "id": "548198",
+        "modified": "2026-02-03T20:30:31.5612949Z",
+        "previewAvailabilityDate": "2026-01",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Fleet Manager"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure Kubernetes Fleet Manager namespace-scoped resource placement "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "550159",
+        "created": "2026-02-11T23:15:55.5973583Z",
+        "description": "In mid-February 2026, the following updates and enhancements were made to Azure SQL:Simplify SQL deployments from Visual Studio Code using the new SQL Projects Publish dialog.Connections Migration dia...",
+        "id": "550159",
+        "modified": "2026-02-11T23:15:55.5973583Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure SQL updates for mid-February 2026  "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "550845",
+        "created": "2026-02-02T18:15:39.9638421Z",
+        "description": "Serverless workspaces in Azure Databricks are now generally available, offering a fully managed workspace type that comes preconfigured with serverless compute and default storage. They deliver an ent...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "550845",
+        "modified": "2026-02-02T18:15:39.9638421Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Serverless workspaces in Azure Databricks"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "January",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "550863",
+        "created": "2026-02-04T20:00:42.437706Z",
+        "description": "Azure NetApp Files Elastic zone-redundant storage (ANF\nElastic ZRS) is an advanced high-availability service level for Azure NetApp\nFiles that provides continuous data access with zero data loss, even...",
+        "id": "550863",
+        "modified": "2026-02-04T20:00:42.437706Z",
+        "previewAvailabilityDate": "2026-01",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Services",
+          "Pricing & Offerings"
+        ],
+        "title": "Public Preview: Azure NetApp Files Elastic zone-redundant service level"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "552808",
+        "created": "2026-02-26T00:30:50.3640084Z",
+        "description": "We are announcing several\ncapabilities in public preview with Azure Monitor pipeline. Secure\n     Ingress to Azure Monitor pipeline from external endpoints (TLS/mTLS) with\n     Bring Your Own Certific...",
+        "id": "552808",
+        "modified": "2026-02-26T00:30:50.3640084Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Secure ingestion and pod placement for Azure Monitor pipeline"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "553527",
+        "created": "2026-02-02T18:15:39.9638421Z",
+        "description": "As part of our ongoing commitment to security, Azure Front Door (Standard, Premium, Classic) and Azure CDN from Microsoft (Classic) services will no longer support  weak cipher suites TLS_DHE_RSA_WITH...",
+        "id": "553527",
+        "modified": "2026-02-02T18:15:39.9638421Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure Front Door and Azure CDN profiles will end support for DHE cipher suites on April 1, 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "553532",
+        "created": "2026-02-02T17:45:01.0885406Z",
+        "description": "Announcing the general availability of Default Rule Set (DRS) 2.2 for Web Application Firewall on Azure Application Gateway.The Azure-managed DRS provides active protection against common web vulnerab...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "553532",
+        "modified": "2026-02-02T17:45:01.0885406Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway",
+          "Web Application Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Security",
+          "Features"
+        ],
+        "title": "Generally Available: Default Ruleset 2.2 in WAF for Azure Application Gateway"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "553917",
+        "created": "2026-02-03T20:30:31.5612949Z",
+        "description": "Azure Container Storage v2.1.0 is now generally available. This release adds native Elastic SAN support and introduces a lightweight, on-demand installation model to simplify deployment and operations...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "553917",
+        "modified": "2026-02-03T20:30:31.5612949Z",
+        "productCategories": [
+          "Containers",
+          "Compute"
+        ],
+        "products": [
+          "Azure Container Storage",
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Container Storage v2.1.0 now with Elastic SAN integration and on demand installation"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "January",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "553966",
+        "created": "2026-02-06T01:00:02.3553601Z",
+        "description": "DCa/ECa v6 series AMD based confidential virtual machines are now generally available in 11 new regions: Canada Central, Canada East, Norway East, Norway West, Italy North, Germany North, France South...",
+        "generalAvailabilityDate": "2026-01",
+        "id": "553966",
+        "modified": "2026-02-06T01:00:02.3553601Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Regions & Datacenters"
+        ],
+        "title": "Generally Available: AMD v6 confidential VMs in new regions for January 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Private Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "553999",
+        "created": "2026-02-06T19:00:01.2646667Z",
+        "description": "Microsoft is announcing our intent to establish\na new datacenter region in Thailand. The datacenter region will expand the\navailability of Microsoft’s hyperscale cloud services in the region,\nfacilita...",
+        "id": "553999",
+        "modified": "2026-02-06T19:00:01.2646667Z",
+        "privatePreviewAvailabilityDate": "2026-02",
+        "productCategories": [],
+        "products": [],
+        "status": "In development",
+        "tags": [
+          "Regions & Datacenters"
+        ],
+        "title": "Private Preview: New planned datacenter region in Thailand (Thailand South)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Private Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "555184",
+        "created": "2026-02-06T23:00:02.6705187Z",
+        "description": "Today, Azure Disk Backup protects data by taking regular, crash-consistent snapshots of Azure Disks. These snapshots are stored within your subscription and tenant in a resource group, referred to as ...",
+        "id": "555184",
+        "modified": "2026-02-06T23:00:02.6705187Z",
+        "privatePreviewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Management and governance",
+          "Storage"
+        ],
+        "products": [
+          "Azure Backup"
+        ],
+        "status": "In development",
+        "tags": [
+          "Features"
+        ],
+        "title": "Private Preview: Vaulted Backups for Azure Disk "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "555205",
+        "created": "2026-02-03T20:30:31.5612949Z",
+        "description": "Application Gateway Web Application Firewall (WAF) v2 now supports additional rate‑limiting GroupBy options based on the X‑Forwarded‑For (XFF) HTTP header. This enables customers running Application G...",
+        "id": "555205",
+        "modified": "2026-02-03T20:30:31.5612949Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Web Application Firewall"
+        ],
+        "status": "In development",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Public Preview: X-Forwarded-For (XFF) grouping for rate limiting on Application Gateway WAF v2"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "November",
+            "ring": "Private Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "555488",
+        "created": "2026-02-06T22:45:47.8502569Z",
+        "description": "Azure Monitor pipeline transformations feature\nis now Public Preview! This feature enables users to shape telemetry before\nit’s ingested into Azure Monitor, helping them control ingestion costs, impro...",
+        "id": "555488",
+        "modified": "2026-02-06T22:45:47.8502569Z",
+        "previewAvailabilityDate": "2026-02",
+        "privatePreviewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Security",
+          "Features"
+        ],
+        "title": "Public Preview: Azure Monitor pipeline transformations "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "555603",
+        "created": "2026-02-09T19:45:45.6255032Z",
+        "description": "We're announcing public preview of an AKS managed add-on that simplifies the deployment and lifecycle management of Application Gateway for Containers and its ALB Controller. With the managed AKS add-...",
+        "id": "555603",
+        "modified": "2026-02-09T19:45:45.6255032Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Application Gateway for Containers - AKS managed add-on "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "555839",
+        "created": "2026-02-27T21:45:03.1344369Z",
+        "description": "The upstream Ingress-NGINX project is being deprecated and will stop receiving updates after March 2026. Microsoft will continue providing critical security patches through 30 November 2026, after whi...",
+        "id": "555839",
+        "modified": "2026-02-27T21:45:03.1344369Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "tags": [
+          "Retirements",
+          "Open Source"
+        ],
+        "title": "Retirement: Managed NGINX Ingress with Application Routing Add-on Retiring November 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "555870",
+        "created": "2026-02-05T18:30:32.5524535Z",
+        "description": "Claude Opus 4.6 is now available in Microsoft Foundry, bringing Anthropic’s most advanced reasoning model to a secure, enterprise-ready platform built on Azure. With support for complex coding, knowle...",
+        "id": "555870",
+        "modified": "2026-02-05T18:30:32.5524535Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Claude Opus 4.6, Available on Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "555944",
+        "created": "2026-02-05T21:45:03.6669313Z",
+        "description": "Azure Virtual\nNetwork routing appliance offers private connectivity\nfor workloads across virtual networks. Using specialized\nhardware, it delivers low latency and\nhigh throughput, and optimal performa...",
+        "id": "555944",
+        "modified": "2026-02-05T21:45:03.6669313Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Virtual Network"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Services",
+          "Management"
+        ],
+        "title": "Public Preview: Azure virtual network routing appliance "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "555981",
+        "created": "2026-02-06T19:00:01.2646667Z",
+        "description": "Azure Databricks now supports Anthropic Claude Opus 4.6 through Mosaic AI Model serving. Claude Opus 4.6 is Anthropic's most advanced model, delivering state-of-the-art performance on agentic coding, ...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "555981",
+        "modified": "2026-02-06T19:00:01.2646667Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "​Generally Available: Claude Opus 4.6 now available on Azure Databricks"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "556003",
+        "created": "2026-02-18T18:00:55.6125974Z",
+        "description": "Azure Functions support for .NET 10 is generally\navailable, enabling production use of the latest .NET runtime for serverless\napplications. This support was introduced as part of the Azure Functions\nI...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "556003",
+        "modified": "2026-02-18T18:00:55.6125974Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Functions .NET 10 support "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "556008",
+        "created": "2026-02-18T18:00:55.6125974Z",
+        "description": "Azure Functions Flex Consumption introduces\nnew platform‑integrated tools that provide clearer insight into quota\navailability and deployment behavior.   The\nquota troubleshooting\nexperience surfaces ...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "556008",
+        "modified": "2026-02-18T18:00:55.6125974Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Quota and deployment troubleshooting tools for Azure Functions Flex Consumption "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "556282",
+        "created": "2026-02-10T21:15:47.6101475Z",
+        "description": "You can now set UAE North as a region for Azure Private Link-enabled origins in your Azure Front Door Premium profile. Azure Private Link-enabled origins in Azure Front Door allow you to deliver conte...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "556282",
+        "modified": "2026-02-10T21:15:47.6101475Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door",
+          "Azure Private Link"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Regions & Datacenters"
+        ],
+        "title": "Generally Available: Azure Front Door Premium now supports Azure Private Link origins in UAE North"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557081",
+        "created": "2026-02-10T18:00:43.1415428Z",
+        "description": "Introducing Supervisor Agent, now Generally Available in Azure Databricks. Supervisor Agent is part of the Azure Databricks Agent Bricks Platform. Supervisor Agent brings a breakthrough in agentic int...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "557081",
+        "modified": "2026-02-10T18:00:43.1415428Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available:  Azure Databricks Supervisor Agent"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557203",
+        "created": "2026-02-18T16:45:58.1348655Z",
+        "description": "Customers previously could not\nenable LocalDNS on clusters that used Node auto‑provisioning in AKS, limiting\ntheir ability to use this feature in those environments. LocalDNS is now\ngenerally availabl...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "557203",
+        "modified": "2026-02-18T16:45:58.1348655Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [],
+        "title": "Generally Available: Node auto-provisioning enabled clusters in AKS now support LocalDNS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557208",
+        "created": "2026-02-18T17:15:17.8354103Z",
+        "description": "Node auto‑provisioning removes the\nneed for teams to manually size and manage compute resources for Kubernetes\nworkloads. Azure Kubernetes Service (AKS) now provides general availability\nsupport for n...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "557208",
+        "modified": "2026-02-18T17:15:17.8354103Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [],
+        "title": "Generally Available: Node auto-provisioning support in Sovereign Cloud"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557213",
+        "created": "2026-02-18T16:30:06.2089913Z",
+        "description": "Node auto-provisioning enabled clusters previously did not\nhave support for Encryption\nat Host and disk encryption sets. This limited users with certain\nsecurity requirements for their cluster to not ...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "557213",
+        "modified": "2026-02-18T16:30:06.2089913Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [],
+        "title": "Generally Available: Encryption at host & disk encryption sets support in node auto-provisioning "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "557218",
+        "created": "2026-02-18T18:00:55.6125974Z",
+        "description": "Users often face security and\nmanageability challenges when diagnostic agents inherit broad user permissions,\nsuch as cluster-admin rights, and when each user must deploy their own\ninstance. Cluster m...",
+        "id": "557218",
+        "modified": "2026-02-18T18:00:55.6125974Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [],
+        "title": "Public Preview: Cluster mode for the agentic CLI for AKS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "557223",
+        "created": "2026-02-18T18:00:55.6125974Z",
+        "description": "Managing AKS MCP servers can be affected by the number of tools and the\namount of context required, which can increase latency and cost. The unified\ntooling for the AKS MCP Server introduces two new t...",
+        "id": "557223",
+        "modified": "2026-02-18T18:00:55.6125974Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [],
+        "title": "Public Preview: Unified tooling in the AKS MCP server "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "557224",
+        "created": "2026-02-23T18:15:17.6308579Z",
+        "description": "Windows Server Annual Channel (Preview) on AKS will be retired on May 15, 2026, please transition to Long Term Servicing Channel (LTSC) by that date.  We encourage you to transition to Long Term Servi...",
+        "id": "557224",
+        "modified": "2026-02-23T18:15:17.6308579Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Windows Server Annual Channel (preview) "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "557416",
+        "created": "2026-02-23T16:15:47.6664217Z",
+        "description": "Announcing the public preview of Application Gateway WAF Insights. Azure Application Gateway WAF now offers WAF Insights, providing an interactive view of logs and metrics. WAF Insights enables quick ...",
+        "id": "557416",
+        "modified": "2026-02-23T16:15:47.6664217Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway",
+          "Web Application Firewall"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Public Preview: WAF Insights for Application Gateway "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557517",
+        "created": "2026-02-25T19:00:32.1921868Z",
+        "description": "In late-February 2026,\nthe following updates and enhancements were made to Azure SQL:  \n Introducing Search Database Objects in the MSSQL\n     extension for Visual Studio Code. Instantly find tables, ...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "557517",
+        "modified": "2026-02-25T19:00:32.1921868Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure SQL updates for late-February 2026 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "557522",
+        "created": "2026-02-25T18:45:40.5445742Z",
+        "description": "In late-February 2026,\nthe following updates and enhancements were made to Azure SQL: \n Manage your databases directly from the dialog using\n     actions such as Name, Rename, and Drop.  \n Import a fl...",
+        "id": "557522",
+        "modified": "2026-02-25T18:45:40.5445742Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure SQL updates for late-February 2026 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "557532",
+        "created": "2026-02-25T18:30:06.4312032Z",
+        "description": "You can now configure geo‑redundant backups with Premium SSD v2 disks for Azure Database for PostgreSQL, giving you an additional layer of disaster recovery for mission‑critical workloads. With this r...",
+        "id": "557532",
+        "modified": "2026-02-25T18:30:06.4312032Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Geo‑redundant backups for Premium SSD v2 in Azure Database for PostgreSQL "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557595",
+        "created": "2026-02-18T18:00:55.6125974Z",
+        "description": "Azure Databricks now supports Anthropic Claude Sonnet 4.6\nthrough Azure Databricks AI\nModel Serving. Claude Sonnet 4.6\ndelivers frontier-level performance on complex coding, agentic\nworkflows, and pro...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "557595",
+        "modified": "2026-02-18T18:00:55.6125974Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Anthropic Claude Sonnet 4.6 is now available on Azure Databricks "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557623",
+        "created": "2026-02-20T19:00:04.0288685Z",
+        "description": "Azure Premium SSD v2 is now available in Brazil Southeast (a region without Availability Zone), and in a third Availability Zone in Malaysia West and Indonesia Central.Azure Premium SSD v2 disk, a nex...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "557623",
+        "modified": "2026-02-20T19:00:04.0288685Z",
+        "productCategories": [
+          "Storage",
+          "Compute"
+        ],
+        "products": [
+          "Azure Disk Storage",
+          "Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Services",
+          "Features",
+          "Regions & Datacenters"
+        ],
+        "title": "Generally Available: Azure Premium SSD v2 Disk is now available in Brazil Southeast, and in a third Availability Zone in Malaysia West and Indonesia Central"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "557694",
+        "created": "2026-02-26T19:45:06.0659425Z",
+        "description": "We’re excited to announce the addition of enhanced\nsecure authentication in Azure Storage that combines the flexibility of\nuser-delegation shared access signature (SAS) with the user-bound access of\nE...",
+        "id": "557694",
+        "modified": "2026-02-26T19:45:06.0659425Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Public Preview: Restrict usage of user delegation SAS to an Entra ID identity "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557897",
+        "created": "2026-02-27T17:30:41.1734092Z",
+        "description": "Azure Red Hat OpenShift is now generally available in three additional Azure regions: Malaysia West, New Zealand North, and Mexico Central. This expansion strengthens Azure Red Hat OpenShift’s presenc...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "557897",
+        "modified": "2026-02-27T17:30:41.1734092Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Red Hat OpenShift"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Open Source",
+          "Regions & Datacenters"
+        ],
+        "title": "Generally Available: Azure Red Hat OpenShift is now available in Malaysia West, New Zealand North, and Mexico Central"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558051",
+        "created": "2026-02-27T23:15:13.5682826Z",
+        "description": "The DCesv6, DCedsv6,\nECesv6, and ECedsv6 series are Azure’s next generation\nof confidential Virtual Machines (VMs) based on 5th Gen\nIntel® Xeon® processors with Intel® Trust Domain Extensions (Intel® ...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "558051",
+        "modified": "2026-02-27T23:15:13.5682826Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Generally Available: DCesv6, DCedsv6, ECesv6, and ECedsv6 confidential VMs"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558078",
+        "created": "2026-02-27T23:15:13.5682826Z",
+        "description": "Azure Premium SSD v2 is now available in a third Availability Zone in New Zealand North.    Azure Premium SSD v2 disk, a next-generation general-purpose block storage option for Azure virtual machines...",
+        "generalAvailabilityDate": "2026-02",
+        "id": "558078",
+        "modified": "2026-02-27T23:15:13.5682826Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Disk Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Premium SSD v2 Disk Storage is now available in a third Availability Zone in New Zealand North"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 40,
+    "totalCount": 40
+  },
+  "scan": "2026-02",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "571867"
+  },
+  "fetchedAt": "2026-10-14T10:08:07.744Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "571867",
+    "created": "2026-09-29T18:13:31.3678314Z",
+    "description": "The public preview of Microsoft-managed performance monitoring for Azure SQL Database is now available.  You can now monitor Azure SQL Database without building custom collection scripts or correlating telemetry across disconnected tools. Built-in data collection sends performance telemetry from your databases to a Microsoft-managed telemetry pipeline for processing and storage.  Resource-level and estate-wide dashboards help you identify performance trends, anomalies, and resource bottlenecks. Integration with Fabric Database Hub brings this telemetry into a unified, estate-level monitoring experience. For deeper analysis and custom visualizations, you can securely query your data with Kusto Query Language through an RBAC-protected Azure Data Explorer proxy endpoint.  Learn more:  \n Documentation  \n Announcement\n     blog ",
+    "id": "571867",
+    "modified": "2026-09-29T18:13:31.3678314Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: SQL Performance Monitoring for Azure SQL Database"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

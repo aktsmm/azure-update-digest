@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "569353"
+  },
+  "fetchedAt": "2026-10-14T10:15:34.214Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Effective",
+        "year": 2026
+      }
+    ],
+    "baseId": "569353",
+    "created": "2026-08-14T17:43:51.3792538Z",
+    "description": "Azure Databricks Runtime\n10.4 LTS, a Databricks-managed runtime available on Azure Databricks, reached\nend of support on March 18, 2025 and will reach end of life on November 1, 2026. After this date,\nDatabricks Runtime 10.4 LTS will no longer be available or usable, and\nworkloads remaining on this version will no longer run. To avoid disruption,\nmigrate affected clusters and workloads to a supported Databricks Runtime\nversion before November 1, 2026. Learn\nmore.",
+    "id": "569353",
+    "modified": "2026-08-14T17:43:51.3792538Z",
+    "productCategories": [
+      "AI + machine learning",
+      "Analytics"
+    ],
+    "products": [
+      "Azure Databricks"
+    ],
+    "tags": [
+      "Announcement"
+    ],
+    "title": "Announcing: Azure Databricks Runtime 10.4 LTS will reach end of life on November 1, 2026"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

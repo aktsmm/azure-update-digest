@@ -1,0 +1,1412 @@
+{
+  "args": {
+    "filter": "created ge 2026-06-30T15:00:00Z and created lt 2026-07-31T15:00:00Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-14T10:04:07.534Z",
+  "ok": true,
+  "response": {
+    "hasMore": true,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "561475",
+        "created": "2026-07-22T16:57:10.5694998Z",
+        "description": "Standard service endpoint is now available in public preview, introducing a scalable and secure way to connect IaaS workloads to Azure PaaS services under the Private Link family. This enhanced capabi...",
+        "id": "561475",
+        "modified": "2026-07-22T16:57:10.5694998Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Private Link"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Pricing & Offerings",
+          "SDK and Tools"
+        ],
+        "title": "Public Preview: Standard service endpoint "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563331",
+        "created": "2026-07-01T17:04:40.8610724Z",
+        "description": "Document-based PII detection in Azure AI Language now ships an initial playground experience in the Microsoft Foundry NextGen portal. The playground loads a prepared sample document, runs it through t...",
+        "id": "563331",
+        "modified": "2026-07-01T17:04:40.8610724Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Document PII playground sample in Microsoft Foundry NextGen"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563481",
+        "created": "2026-06-30T19:00:51.204585Z",
+        "description": "Microsoft Foundry brings Toolboxes to GA, providing a unified endpoint to invoke the most-used tools in prompt agents and callable outside of prompt agents. Today every agent team hand-assembles its o...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "563481",
+        "modified": "2026-06-30T19:00:51.204585Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Generally Available: Toolboxes in Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "563546",
+        "created": "2026-07-15T18:55:40.0424263Z",
+        "description": "Microsoft Agent Framework reaches general availability for Agent Harness, the production runtime for agents built with the framework. Customers running pilots on the preview harness can now move the s...",
+        "id": "563546",
+        "modified": "2026-07-15T18:55:40.0424263Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "tags": [
+          "Microsoft Build",
+          "Feature",
+          "Announcement"
+        ],
+        "title": "Announcing: Agent Harness in Microsoft Agent Framework"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "563551",
+        "created": "2026-07-15T15:15:25.5094704Z",
+        "description": "Microsoft Agent Framework adds DevUI Agent Inspector in public preview, a local debugging surface that shows agent runs as a navigable tree of model calls, tool invocations, and intermediate state. De...",
+        "id": "563551",
+        "modified": "2026-07-15T15:15:25.5094704Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "tags": [
+          "Microsoft Build",
+          "Feature",
+          "Announcement"
+        ],
+        "title": "Announcing: DevUI Agent Inspector for Microsoft Agent Framework"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "563561",
+        "created": "2026-07-15T18:48:54.9044611Z",
+        "description": "Microsoft Agent Framework adds episodic procedural memory in public preview, a built-in store that lets agents remember successful task patterns and replay them on similar future requests. The framewo...",
+        "id": "563561",
+        "modified": "2026-07-15T18:48:54.9044611Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "tags": [
+          "Microsoft Build",
+          "Feature",
+          "Announcement"
+        ],
+        "title": "Announcing: Episodic procedural memory in Microsoft Agent Framework"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "563566",
+        "created": "2026-07-15T18:50:14.883913Z",
+        "description": "Microsoft Agent Framework adds the CodeAct pattern in public preview, which lets agents collapse a multi-step plan into a single executable code block rather than chaining one tool call at a time. In ...",
+        "id": "563566",
+        "modified": "2026-07-15T18:50:14.883913Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "tags": [
+          "Microsoft Build",
+          "Feature",
+          "Announcement"
+        ],
+        "title": "Announcing: CodeAct pattern and Hyperlight containers in Microsoft Agent Framework"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "563571",
+        "created": "2026-07-15T18:57:24.0401385Z",
+        "description": "Microsoft Agent Framework reaches general availability for multi-agent orchestration patterns, including the dynamic Magentic pattern that delivered 38 percent on GAIA and competitive results on Assis...",
+        "id": "563571",
+        "modified": "2026-07-15T18:57:24.0401385Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "tags": [
+          "Microsoft Build",
+          "Feature",
+          "Announcement"
+        ],
+        "title": "Announcing: Multi-agent orchestration patterns including Magentic in Microsoft Agent Framework"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "564071",
+        "created": "2026-07-15T18:51:45.2030575Z",
+        "description": "In public preview, Microsoft Foundry now offers tracing for the Microsoft Agent Framework in both Python and .NET, helping developers observe how agents reason, call tools, and interact with models du...",
+        "id": "564071",
+        "modified": "2026-07-15T18:51:45.2030575Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "tags": [
+          "Feature",
+          "Announcement"
+        ],
+        "title": "Announcing: Tracing for Microsoft Agent Framework (Python and .NET)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "564312",
+        "created": "2026-07-15T18:53:28.4264342Z",
+        "description": "Microsoft Foundry is now introducing Agent Framework, a unified multi-agent orchestration SDK for C# and Python. This release consolidates patterns previously spread across AutoGen and Semantic Kernel...",
+        "id": "564312",
+        "modified": "2026-07-15T18:53:28.4264342Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "tags": [
+          "Feature",
+          "Announcement"
+        ],
+        "title": "Announcing: Multi-agent orchestration SDK with the Microsoft Foundry Agent Framework in C# and Python"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "564382",
+        "created": "2026-07-01T17:01:07.4429839Z",
+        "description": "Azure AI Language now offers a refreshed Document PII playground in general availability, giving customers a faster way to evaluate personally identifiable information detection on documents. The play...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "564382",
+        "modified": "2026-07-01T17:01:07.4429839Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Document PII NextGen Playground in Azure AI Language"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "565758",
+        "created": "2026-07-01T16:59:39.884047Z",
+        "description": "Azure introduces Instant Access for VM Restore Points, enabling you to restore disks immediately after a restore point is created—without waiting for background data replication.Key benefits:Faster re...",
+        "id": "565758",
+        "modified": "2026-07-01T16:59:39.884047Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Storage",
+          "Compute"
+        ],
+        "products": [
+          "Azure Disk Storage",
+          "Virtual Machines"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Feature"
+        ],
+        "title": "Public Preview: Instant Access via application consistent restore points"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "566209",
+        "created": "2026-07-01T17:19:25.823282Z",
+        "description": "We’re excited to introduce the newly renamed Az.PostgreSQLFlexibleServer PowerShell module, delivering a more streamlined experience for you to manage Azure Database for PostgreSQL with PowerShell. Bu...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "566209",
+        "modified": "2026-07-01T17:19:25.823282Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: New Powershell module:  Az.PostgreSQLFlexibleServer  "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "June",
+            "ring": "Private Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "566591",
+        "created": "2026-07-07T17:37:55.305955Z",
+        "description": "The Log Analytics Export job enables you to export historical data from a Log Analytics workspace to an Azure Storage account based on a specified query and time range. This allows you to extract only...",
+        "id": "566591",
+        "modified": "2026-07-07T17:37:55.305955Z",
+        "previewAvailabilityDate": "2026-07",
+        "privatePreviewAvailabilityDate": "2025-06",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Public Preview: Export historical data from Log Analytics workspace with Export jobs "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "566732",
+        "created": "2026-07-07T17:31:55.9387077Z",
+        "description": "Azure Red Hat OpenShift (ARO) is now generally available in Azure\nChile Central, expanding regional availability for OpenShift deployments\nacross South America. With the launch of Microsoft’s first Az...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "566732",
+        "modified": "2026-07-07T17:31:55.9387077Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Red Hat OpenShift"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Open Source",
+          "Regions & Datacenters"
+        ],
+        "title": "Generally Available: Azure Red Hat OpenShift in Chile Central"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "566746",
+        "created": "2026-07-30T18:57:18.5140638Z",
+        "description": "We’re announcing post-quantum resilient symmetric\nkeys on Azure Key Vault Premium are now available in public preview. This preview enables\ncustomers and partners to evaluate symmetric encryption capa...",
+        "id": "566746",
+        "modified": "2026-07-30T18:57:18.5140638Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Security"
+        ],
+        "products": [
+          "Key Vault"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Security",
+          "Post Quantum Crypto"
+        ],
+        "title": "Public Preview: Symmetric keys on Azure Key Vault Premium"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "566895",
+        "created": "2026-06-30T20:45:26.1903809Z",
+        "description": "Azure Blob Storage has long supported data integrity validation, starting with MD5 as part of the original HTTP standards and adding CRC64-NVME support in 2019. Today, CRC64-NVME is now integrated int...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "566895",
+        "modified": "2026-06-30T20:45:26.1903809Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "SDK and Tools"
+        ],
+        "title": "Generally Available: Client-side data integrity protections in Azure Blob Storage"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "566948",
+        "created": "2026-07-01T16:56:50.2222367Z",
+        "description": "Azure Storage Mover now supports cloud-to-cloud migration of data from Google Cloud Storage (GCS) to Azure Blob Storage, helping organizations simplify multi-cloud consolidation onto Azure.Using the S...",
+        "id": "566948",
+        "modified": "2026-07-01T16:56:50.2222367Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Migration",
+          "Storage"
+        ],
+        "products": [
+          "Azure Storage Mover"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Storage Mover now supports migration from Google Cloud Storage (GCS)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "566966",
+        "created": "2026-07-06T15:00:33.5679807Z",
+        "description": "Azure Site Recovery now supports up to 5x churn (500 MB/s per VM). This major enhancement empowers customers to confidently run high IOPS workloads with Azure Site Recovery, ensuring robust disaster r...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "566966",
+        "modified": "2026-07-06T15:00:33.5679807Z",
+        "productCategories": [
+          "Management and governance",
+          "Migration"
+        ],
+        "products": [
+          "Azure Site Recovery"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Compliance",
+          "Management"
+        ],
+        "title": "Generally Available: Support 5x churn in Azure Site Recovery"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "567085",
+        "created": "2026-07-06T15:54:08.5134364Z",
+        "description": "Microsoft Entra ID-based access for Azure Blob Storage SFTP is now generally available in all regions. You can now use Entra ID identities including guest users via Entra External Identities to secure...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "567085",
+        "modified": "2026-07-06T15:54:08.5134364Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Microsoft Entra ID-based access for Azure Blob Storage SFTP"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "April",
+            "ring": "Private Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "567184",
+        "created": "2026-07-07T17:40:32.0730538Z",
+        "description": "Azure Chaos Studio now supports Workspaces and Scenarios, a faster, application-centric way to validate how your workloads hold up during real outages.Point a Workspace at your application's scope—a s...",
+        "id": "567184",
+        "modified": "2026-07-07T17:40:32.0730538Z",
+        "previewAvailabilityDate": "2026-07",
+        "privatePreviewAvailabilityDate": "2026-04",
+        "productCategories": [
+          "Analytics",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Chaos Studio"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Services",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Chaos Studio Workspaces and Scenarios"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "567194",
+        "created": "2026-07-02T22:21:51.2982096Z",
+        "description": "Azure Databricks now supports Anthropic Claude Sonnet 5 through Azure Databricks AI Model Serving. Claude Sonnet 5 is Anthropic's most agentic Sonnet model to date, delivering near-Opus-level intellig...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "567194",
+        "modified": "2026-07-02T22:21:51.2982096Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally available: Anthropic Claude Sonnet 5 on Azure Databricks"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "567203",
+        "created": "2026-07-07T17:35:19.9319817Z",
+        "description": "Azure Event Hubs now supports Network Security Perimeter (NSP), enabling organizations to define a logical network isolation boundary for PaaS resources and control public network access through perim...",
+        "generalAvailabilityDate": "2025-07",
+        "id": "567203",
+        "modified": "2026-07-07T17:35:19.9319817Z",
+        "productCategories": [
+          "Analytics"
+        ],
+        "products": [
+          "Event Hubs"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security",
+          "Services"
+        ],
+        "title": "Generally Available: Network Security Perimeter support for Azure Event Hubs"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "567212",
+        "created": "2026-07-07T17:33:53.800937Z",
+        "description": "Azure Event Hubs Dedicated now supports Confidential Computing, enabling organizations to protect streaming data while it is being processed in memory. By leveraging hardware-based trusted execution e...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "567212",
+        "modified": "2026-07-07T17:33:53.800937Z",
+        "productCategories": [
+          "Analytics"
+        ],
+        "products": [
+          "Event Hubs"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Compliance",
+          "Security",
+          "Services"
+        ],
+        "title": "Generally Available: Confidential Computing support for Azure Event Hubs Dedicated"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "567218",
+        "created": "2026-07-07T17:42:50.6317607Z",
+        "description": "Azure Web Application Firewall (WAF) helps protect your web applications from common threats and attacks. In some cases, WAF may block requests that are safe and expected for your application. Existin...",
+        "id": "567218",
+        "modified": "2026-07-07T17:42:50.6317607Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway",
+          "Azure Front Door",
+          "Web Application Firewall"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Security",
+          "Services"
+        ],
+        "title": "Public Preview: Exceptions in WAF for Azure Application Gateway and Azure Front Door"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "567225",
+        "created": "2026-07-09T22:57:33.8046852Z",
+        "description": "You can now create and run Azure Chaos Studio resilience Scenarios directly from the Azure CLI with the new az chaos extension — no more hand-assembling REST calls and JSON files. Get started in one s...",
+        "id": "567225",
+        "modified": "2026-07-09T22:57:33.8046852Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Analytics",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Chaos Studio"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Services",
+          "Feature"
+        ],
+        "title": "Public Preview: Manage Azure Chaos Studio from the Azure CLI"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "567362",
+        "created": "2026-07-15T17:35:31.9011863Z",
+        "description": "The Azure Arc migration solution now supports SQL Server on Azure Virtual Machines as a migration target. Arc-enabled SQL Server instances can now be migrated to both Azure SQL Managed Instance and SQ...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "567362",
+        "modified": "2026-07-15T17:35:31.9011863Z",
+        "productCategories": [
+          "Compute",
+          "Databases"
+        ],
+        "products": [
+          "SQL Server on Azure Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Expanding Azure Arc SQL Migration with SQL Server on Azure Virtual Machines "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "567402",
+        "created": "2026-07-14T20:03:32.0753041Z",
+        "description": "Announcing the public preview of Azure Front Door edge actions (serverless compute at the edge).With edge actions, customers can execute lightweight JavaScript functions during Azure Front Door reques...",
+        "id": "567402",
+        "modified": "2026-07-14T20:03:32.0753041Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Public Preview: Azure Front Door edge actions"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "567426",
+        "created": "2026-07-15T17:50:44.731985Z",
+        "description": "In mid-July 2026, the following updates and enhancements\nwere made to Azure SQL: \n Shortcut\n     Configuration lets you customize keyboard shortcuts for Quick Queries, the\n     Results Grid, and the Q...",
+        "id": "567426",
+        "modified": "2026-07-15T17:50:44.731985Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure SQL updates for mid-July 2026 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "567431",
+        "created": "2026-07-09T20:21:12.1440894Z",
+        "description": "Open AI GPT-5.6 is now available on Azure Databricks. You can use GPT 5.6 (purchased on Microsoft Foundry) via Model Serving Endpoint in Azure Databricks. Through integrations across Foundry and Azure...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "567431",
+        "modified": "2026-07-09T20:21:12.1440894Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Open AI GPT-5.6 on Azure Databricks "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "567444",
+        "created": "2026-07-13T17:04:04.3982566Z",
+        "description": "Starting July 13th, 2026, customers can use Azure Databricks SQL Serverless in the UK West region to simplify analytics workloads while benefiting from instant compute, automated scaling, and reduced ...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "567444",
+        "modified": "2026-07-13T17:04:04.3982566Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Databricks SQL Serverless in UK West  "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "567527",
+        "created": "2026-07-17T14:55:28.3336589Z",
+        "description": "Microsoft Defender Cloud Security Posture Management (CSPM) assessments for Azure Database for PostgreSQL Flexible Server are now generally available. You can use assessments to continuously evaluate ...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "567527",
+        "modified": "2026-07-17T14:55:28.3336589Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Microsoft Defender security assessments for Azure Database for PostgreSQL Flexible Server "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "567556",
+        "created": "2026-07-10T21:33:34.3800968Z",
+        "description": "Starting October 1, 2026, the specified runtime versions Python 2.7, Python 3.8, and PowerShell 7.1 & 7.2. will\nno longer be supported by Automation.  Runbooks\nusing these versions may continue to run...",
+        "id": "567556",
+        "modified": "2026-07-10T21:33:34.3800968Z",
+        "productCategories": [
+          "Management and governance"
+        ],
+        "products": [
+          "Automation"
+        ],
+        "tags": [
+          "Retirements",
+          "Compliance",
+          "Security"
+        ],
+        "title": "Retirement: Support for Python-2.7; 3.8 and PowerShell- 7.1; 7.2 will be retired on September 30, 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "July",
+            "ring": "Private Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "567594",
+        "created": "2026-07-20T15:09:43.6800215Z",
+        "description": "Azure Monitor Application Insights now stores generative AI\ncontent in a dedicated GenAIContent table (AppGenAIContent in Log\nAnalytics), making it possible to apply newly\navailable access controls to...",
+        "id": "567594",
+        "modified": "2026-07-20T15:09:43.6800215Z",
+        "previewAvailabilityDate": "2026-07",
+        "privatePreviewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "AI + machine learning",
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor",
+          "Azure AI Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Management",
+          "Security"
+        ],
+        "title": "Public Preview: Protect sensitive generative AI telemetry in Application Insights and Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "567646",
+        "created": "2026-07-17T17:47:00.5376223Z",
+        "description": "You can now develop functions using Python 3.14 locally and\ndeploy them to Azure Functions plans on Linux. Upgrade your apps to Python 3.14 to take advantage\nof enhanced security, a longer support win...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "567646",
+        "modified": "2026-07-17T17:47:00.5376223Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Open Source",
+          "Services",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Functions support for Python 3.14"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "567651",
+        "created": "2026-07-17T17:44:00.8975507Z",
+        "description": "Azure Functions support for PowerShell 7.6 is now available in preview. You can now develop apps using PowerShell 7.6 locally and deploy them to Azure Functions plans. Learn more:  What's\nnew in Power...",
+        "id": "567651",
+        "modified": "2026-07-17T17:44:00.8975507Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Security",
+          "Services",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Functions Support for PowerShell 7.6 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "567726",
+        "created": "2026-07-15T15:30:11.0541045Z",
+        "description": "Starting July 15, 2026, advanced platform metrics are available in Public Preview. This update provides enhanced visibility into platform performance, resource health, and operational trends across su...",
+        "id": "567726",
+        "modified": "2026-07-15T15:30:11.0541045Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Storage",
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Blob Storage",
+          "Azure Monitor",
+          "Storage Accounts"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Advanced platform metrics in Azure Monitor"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2025
+          },
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "567787",
+        "created": "2026-07-17T14:54:09.8338708Z",
+        "description": "Azure Kubernetes Service (AKS) now generally supports Encryption in Transit (EiT) for Azure Files NFS v4.1 volumes through the Azure File CSI driver. With EiT enabled, data transferred between AKS wor...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "567787",
+        "modified": "2026-07-17T14:54:09.8338708Z",
+        "previewAvailabilityDate": "2025-05",
+        "productCategories": [
+          "Storage",
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Files",
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Security",
+          "Feature"
+        ],
+        "title": "Generally Available: Encryption in Transit for Azure Files NFS Shares in Azure Kubernetes Service (AKS)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "567847",
+        "created": "2026-07-20T14:59:26.7340592Z",
+        "description": "IPv6 support for Azure VPN Gateway enables customers to run IPv6 inner traffic through VPN tunnels in a dual‑stack configuration. IPv6 is supported on all production SKU gateways that use standard pub...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "567847",
+        "modified": "2026-07-20T14:59:26.7340592Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "VPN Gateway"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: IPv6 support for Azure VPN Gateway"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "567931",
+        "created": "2026-07-28T16:52:51.1200597Z",
+        "description": "Managing Kubernetes resources across multiple clusters can require significant manual effort to apply updates and maintain consistency. Resource placement in Azure Kubernetes Fleet Manager is now gene...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "567931",
+        "modified": "2026-07-28T16:52:51.1200597Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Fleet Manager"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Resource placement in Azure Kubernetes Fleet Manager"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "567939",
+        "created": "2026-07-28T16:51:04.9615497Z",
+        "description": "In fail-fast update rollouts, a small number of member cluster update failures can halt progress across a broader update deployment. Maximum Allowed Failures for update runs in Azure Kubernetes Fleet ...",
+        "id": "567939",
+        "modified": "2026-07-28T16:51:04.9615497Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Fleet Manager"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Maximum allowed failures for update runs in Azure Kubernetes Fleet Manager "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "567944",
+        "created": "2026-07-28T16:54:22.6301678Z",
+        "description": "Managing ingress routing while adopting newer Kubernetes standards can require balancing modernization efforts with existing deployments. Application Routing with Gateway API is now generally availabl...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "567944",
+        "modified": "2026-07-28T16:54:22.6301678Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Application Routing with Gateway API"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "567949",
+        "created": "2026-07-28T16:45:37.6263515Z",
+        "description": "Organizations running large-scale, AI, GPU, Windows, and other performance-sensitive workloads on AKS often experience longer node startup times because new nodes must repeatedly download container im...",
+        "id": "567949",
+        "modified": "2026-07-28T16:45:37.6263515Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Prepared Image Specification"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568013",
+        "created": "2026-07-28T15:40:55.3874374Z",
+        "description": "Microsoft announces the opening of its fourth datacenter region in India, India South Central, with campuses in Hyderabad, Telangana. The region will provide customers with local, secure, state-of-the...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "568013",
+        "modified": "2026-07-28T15:40:55.3874374Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Regions & Datacenters"
+        ],
+        "title": "Generally Available: Microsoft Azure now available from new cloud region in India (India South Central)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "568063",
+        "created": "2026-07-23T16:47:24.773819Z",
+        "description": "Azure DDoS Protection custom policy\nis now in public preview. This capability provides per-resource control over\nDDoS mitigation thresholds for protected Standard Load Balancer frontend IP\nconfigurati...",
+        "id": "568063",
+        "modified": "2026-07-23T16:47:24.773819Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure DDoS Protection"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Security",
+          "Services",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure DDoS Protection custom policy"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568102",
+        "created": "2026-07-30T19:10:35.6575903Z",
+        "description": "Azure Automation is pleased to announce: General Availability of in-support PowerShell 7.6  runbooksRuntime Environment GA, enabling customers to seamlessly upgrade their outdated scripts to supported...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "568102",
+        "modified": "2026-07-30T19:10:35.6575903Z",
+        "productCategories": [
+          "Management and governance"
+        ],
+        "products": [
+          "Automation"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Automation supports PowerShell 7.6 runbooks and Runtime environment"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568115",
+        "created": "2026-07-27T16:54:36.40102Z",
+        "description": "Azure Firewall now supports HTTP header insertion, enabling\norganizations to add or overwrite HTTP/HTTPS request\nheaders directly from Azure Firewall application rules. This capability helps\ncustomers...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "568115",
+        "modified": "2026-07-27T16:54:36.40102Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Firewall Manager"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security",
+          "Services"
+        ],
+        "title": "Generally Available: HTTP header insertion in Azure Firewall "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "568184",
+        "created": "2026-07-27T16:44:29.771476Z",
+        "description": "The AI Gateway tier for Azure API Management is now available in public preview. Building on the AI gateway capabilities already available across API Management tiers, the new AI Gateway tier provides...",
+        "id": "568184",
+        "modified": "2026-07-27T16:44:29.771476Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "Integration",
+          "Internet of Things",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "API Management"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: AI Gateway in Azure API Management "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568316",
+        "created": "2026-07-27T19:41:46.0287442Z",
+        "description": "Azure Databricks now supports Anthropic Claude Opus 5 through AI Model Serving. Claude Opus 5 is Anthropic's latest model for advanced reasoning, coding, agentic workflows, and professional knowledge ...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "568316",
+        "modified": "2026-07-27T19:41:46.0287442Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Databricks"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Claude Opus 5 on Azure Databricks"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "568322",
+        "created": "2026-07-29T18:52:32.0504211Z",
+        "description": "This capability shares telemetry from Azure Monitor Log Analytics workspaces into Microsoft Fabric, making observability data available in OneLake as Delta Parquet, the open format, without duplicatio...",
+        "id": "568322",
+        "modified": "2026-07-29T18:52:32.0504211Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Monitor Logs mirroring into Microsoft Fabric"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 50,
+    "totalCount": 56
+  },
+  "scan": "2026-07",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

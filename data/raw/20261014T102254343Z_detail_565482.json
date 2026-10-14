@@ -1,0 +1,31 @@
+{
+  "args": {
+    "id": "565482"
+  },
+  "fetchedAt": "2026-10-14T10:22:54.343Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "565482",
+    "created": "2026-06-11T16:15:07.0164094Z",
+    "description": "Update to our previous communication: We previously\nannounced the retirement of all Inbound NAT rules version 1 resources, which\nincluded both single-VM NAT rules and NAT pools for Virtual Machine Scale\nSets. We have narrowed the scope of this retirement to Inbound NAT pools\nonly. NAT pools are being retired because they provide the\nsame functionality as Inbound NAT rules v2, which offer improved performance\nand is the recommended option for Virtual Machine Scale Sets (VMSS). Understanding the difference: Inbound NAT rules version 1 includes two resource types: \n Inbound\n     NAT rules version 1: Port forwarding to a single virtual machine.\n     This feature is not affected. \n Inbound\n     NAT pools: Port forwarding to Virtual Machine Scale Set\n     instances. This feature is retiring. On September 30, 2027, Inbound NAT pools in Azure Load\nBalancer will be retired. Starting November 15, 2026, you will no longer be\nable to create new Inbound NAT pools. Existing configuration will continue to\nfunction until September 30, 2027. Recommended action: To avoid potential service disruptions, we recommend that\nyou migrate\nto Inbound NAT rules version 2 in Azure Load Balancer by September 30,\n2027. ",
+    "id": "565482",
+    "modified": "2026-06-11T16:15:07.0164094Z",
+    "productCategories": [],
+    "products": [],
+    "tags": [
+      "Retirements",
+      "Services",
+      "Feature"
+    ],
+    "title": "Retirement: Azure Load Balancer Inbound NAT rule version 1 for Azure VMSS (aka Inbound NAT Pools)"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "570474"
+  },
+  "fetchedAt": "2026-10-14T10:13:12.873Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "570474",
+    "created": "2026-09-01T17:10:38.3279302Z",
+    "description": "Azure Firewall’s auto-learn SNAT routes is now\ngenerally available, automatically learning registered and private destination\nprefixes periodically and applying them as No-SNAT ranges to preserve original\nsource IPs and simplify SNAT management.Learn more.",
+    "generalAvailabilityDate": "2026-09",
+    "id": "570474",
+    "modified": "2026-09-01T17:10:38.3279302Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure Firewall"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Generally Available: Azure Firewall auto-learn SNAT routes "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "562769"
+  },
+  "fetchedAt": "2026-10-14T10:27:22.460Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "562769",
+    "created": "2026-06-02T20:15:03.9718281Z",
+    "description": "You can now enable vaulted backups for Azure Cosmos DB\naccounts, protecting mission-critical data with secure, isolated, and resilient\nbackups. Azure Backup for Cosmos DB, now in preview, supports cyber-resiliency\nand compliance needs, even in scenarios involving accidental deletion,\nmalicious activity, or ransomware. With vaulted backups, Azure Backup maintains\nan independent copy of your Cosmos DB data in a vault that is isolated from the\nsource account, strengthening protection against operational and security\nrisks.  Key capabilities:  Off-site, isolated\nprotection. Store Cosmos DB backups in an Azure Backup vault, isolated from the\nsource account to enable recovery even if the source is compromised.  Resilience. Vaulted backups\nprotect against accidental deletion, insider threats, and ransomware scenarios.\n Policy-based, automated\nbackups. Configure scheduled backups using Azure Backup policies, reducing\nmanual efforts and improving consistency. Long-term retention for\ncompliance. Retain backups for extended durations of up to 10 years to meet\nregulatory and audit requirements.  Built-in protections such\nas encryption, soft delete, immutability, and role-based access control help\nsafeguard backup data in the vault.  Billing will be enabled from July\n1, 2026.  Learn more: Documentation  Azure Backup pricing Pricing calculator ",
+    "id": "562769",
+    "modified": "2026-06-02T20:15:03.9718281Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Cosmos DB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Backup for Cosmos DB"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "570364"
+  },
+  "fetchedAt": "2026-10-14T10:13:28.460Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "570364",
+    "created": "2026-08-31T18:36:12.3628022Z",
+    "description": "Announcing the public preview of Azure Multicloud Interconnect, a managed service that provides private connectivity between Azure and supported cloud providers, with Amazon Web Services (AWS) available as the first supported provider in preview. As organizations increasingly distribute applications, data, AI services, and business-critical workloads across multiple clouds, establishing and operating cloud-to-cloud connectivity can become complex and operationally intensive. Azure Multicloud Interconnect helps simplify this experience by providing a managed connectivity solution that reduces deployment complexity while delivering resilient private, high-performance connectivity between Azure and supported cloud environments.With Azure Multicloud Interconnect, you can deploy a multicloud connection directly from the Azure portal, select your cloud provider, region, and bandwidth, and onboard your environment through a guided experience. Once provisioned, you can connect Azure virtual networks and supported cloud-provider virtual networks through a private cloud-to-cloud connection, helping streamline operations and accelerate multicloud deployments.Key highlights:Managed private connectivity between Azure and supported cloud providersSimplified deployment and onboardingBuilt-in resiliency designed for mission-critical workloadsLearn more: Read the documentation Read the announcement blog ",
+    "id": "570364",
+    "modified": "2026-08-31T18:36:12.3628022Z",
+    "previewAvailabilityDate": "2026-08",
+    "productCategories": [
+      "Hybrid + multicloud",
+      "Networking"
+    ],
+    "products": [
+      "Azure ExpressRoute"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Services"
+    ],
+    "title": "Public Preview: Azure Multicloud Interconnect"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

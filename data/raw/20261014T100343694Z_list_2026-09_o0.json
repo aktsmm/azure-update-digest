@@ -1,0 +1,1340 @@
+{
+  "args": {
+    "filter": "created ge 2026-08-31T15:00:00Z and created lt 2026-09-30T15:00:00Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-14T10:03:43.694Z",
+  "ok": true,
+  "response": {
+    "hasMore": true,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2028
+          }
+        ],
+        "baseId": "557117",
+        "created": "2026-09-24T17:51:23.9357057Z",
+        "description": "Microsoft will retire several standalone Azure Communication\nServices (ACS) offerings on September 30, 2028. After this date, the affected\nservices will no longer be available.  Details\nBeginning Sept...",
+        "id": "557117",
+        "modified": "2026-09-24T17:51:23.9357057Z",
+        "productCategories": [
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "Azure Communication Services"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure Communication Services (ACS) standalone services will be retired on September 30, 2028"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563536",
+        "created": "2026-09-18T19:10:53.5185011Z",
+        "description": "In public preview, Foundry Agent Service adds Foundry Routines, a native trigger primitive for running published agents automatically. Production agents often need to run on a schedule or when a busin...",
+        "id": "563536",
+        "modified": "2026-09-18T19:10:53.5185011Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Build",
+          "Feature"
+        ],
+        "title": "Public Preview: Foundry Routines in Foundry Agent Service"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "568414",
+        "created": "2026-09-18T16:44:11.802883Z",
+        "description": "You can now monitor the synchronization status of your logical replication slots in Azure Database for PostgreSQL – Flexible Server using the new logical_replication_slot_sync_status metric. This Azur...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "568414",
+        "modified": "2026-09-18T16:44:11.802883Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Logical replication slot sync status metric for Azure PostgreSQL Flexible Server "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569241",
+        "created": "2026-09-09T22:30:41.8966856Z",
+        "description": "Announcing the addition of enhanced secure authentication in Azure Storage that combines the flexibility of user-delegation shared access signature (SAS) with the user-bound access of Entra ID. User-b...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "569241",
+        "modified": "2026-09-09T22:30:41.8966856Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Security",
+          "Feature"
+        ],
+        "title": "Generally Available: User-bound user delegation SAS for Azure Storage "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "September",
+            "ring": "Private Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "569653",
+        "created": "2026-09-02T16:59:15.7071022Z",
+        "description": "We’re happy to announce the public preview of reader endpoint support to simplify connection management when using multiple replicas in Azure Database for MySQL - Flexible Server. A reader endpoint en...",
+        "id": "569653",
+        "modified": "2026-10-01T17:57:11.1219383Z",
+        "previewAvailabilityDate": "2026-09",
+        "privatePreviewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure Database for MySQL"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Reader Endpoint for Azure Database for MySQL "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "569664",
+        "created": "2026-09-16T14:07:14.7248853Z",
+        "description": "The PostgreSQL skills and MCP plugin turns supported AI coding assistants into context-aware PostgreSQL experts that can both provide guidance and act on a connected database. The bundled plugin combi...",
+        "id": "569664",
+        "modified": "2026-09-16T14:07:14.7248853Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: PostgreSQL skills and MCP plugin for Azure Database for PostgreSQL "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569700",
+        "created": "2026-09-01T18:40:59.5904166Z",
+        "description": "Align Microsoft Marketplace purchases to your business's accounting needs. Purchase order mapping helps allocate your Microsoft invoice, including Marketplace purchases, making it easier to reconcile ...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "569700",
+        "modified": "2026-09-01T18:40:59.5904166Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Purchase order mapping available in Microsoft Marketplace "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "569711",
+        "created": "2026-08-31T23:11:39.7892384Z",
+        "description": "Azure automatically recovers a VM when it loses access to an attached managed disk for an extended period. The VM is shut down and powered back on after disk connectivity is restored, with no customer...",
+        "id": "569711",
+        "modified": "2026-08-31T23:11:39.7892384Z",
+        "previewAvailabilityDate": "2026-08",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Disk Storage"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Per-disk resiliency for Azure VMs"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "569804",
+        "created": "2026-09-02T17:00:51.9883567Z",
+        "description": "Azure Front\nDoor’s Web Application Firewall (WAF) now supports profile and route level WAF\npolicy associations in public preview. This gives you more flexibility to apply\nbroad baseline protection acr...",
+        "id": "569804",
+        "modified": "2026-09-02T17:00:51.9883567Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door",
+          "Web Application Firewall"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Public Preview: Azure Front Door profile and route level WAF policies"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569899",
+        "created": "2026-09-01T16:29:24.3305731Z",
+        "description": "The Auxiliary table plan in Azure Monitor Logs is a cost-effective option for ingesting and retaining high-volume, verbose logs used for compliance and auditing. Auxiliary Logs is now generally availa...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569899",
+        "modified": "2026-09-01T16:29:24.3305731Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Monitor Auxiliary Logs Plan in Azure Government and China regions"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "569904",
+        "created": "2026-09-01T16:25:33.6876567Z",
+        "description": "The Auxiliary table plan in Azure Monitor Logs gives you a cost-effective way to ingest and retain high-volume, verbose logs that you keep for compliance and auditing but rarely query. Two highly requ...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "569904",
+        "modified": "2026-09-01T16:25:33.6876567Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Monitor Auxiliary Logs Plan support for Azure tables and plan switching"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2029
+          }
+        ],
+        "baseId": "569914",
+        "created": "2026-09-29T17:25:10.2803304Z",
+        "description": "Azure\nIoT Central will be retired on September 20, 2029.\nYou can continue using Azure IoT Central until the retirement date, but we\nrecommend starting your transition planning early.Why\nis this happen...",
+        "id": "569914",
+        "modified": "2026-09-29T17:25:10.2803304Z",
+        "productCategories": [
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure IoT Central"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure IoT Central will be retired on September 20, 2029"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "570046",
+        "created": "2026-09-29T17:26:50.7288439Z",
+        "description": "Microsoft is retiring all versions of HPC Pack. End of\nSupport is August 27, 2027. HPC Pack is now entering a one-year retirement\nperiod. Microsoft will provide\nlimited, retirement-only support during...",
+        "id": "570046",
+        "modified": "2026-09-29T17:26:50.7288439Z",
+        "productCategories": [],
+        "products": [],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Microsoft HPC Pack"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570090",
+        "created": "2026-09-01T22:31:50.8522627Z",
+        "description": "Organizations running Windows-based workloads on Azure Kubernetes Service (AKS) face increasing pressure to modernize as support timelines for older Windows Server versions approach retirement. To hel...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "570090",
+        "modified": "2026-09-01T22:31:50.8522627Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Windows Server 2025 on AKS"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570095",
+        "created": "2026-09-01T22:30:59.8786524Z",
+        "description": "You can now accelerate your containerized workloads on Azure Kubernetes Service (AKS) using Azure Container Registry (ACR) with Artifact streaming. Artifact streaming will allow you to scale your work...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "570095",
+        "modified": "2026-09-01T22:30:59.8786524Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Artifact Streaming on AKS"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570100",
+        "created": "2026-09-01T22:30:18.0639636Z",
+        "description": "Confidential Virtual Machines (CVM) offer strong security and confidentiality for tenants. CVM for Azure Linux in AKS is now generally available and enables node pools with CVM to target the migration...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "570100",
+        "modified": "2026-09-01T22:30:18.0639636Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Confidential VMs for Azure Linux"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570250",
+        "created": "2026-09-01T16:31:14.2094207Z",
+        "description": "Azure Copilot Observability Agent, an\nAI-powered operational companion in Azure Monitor, is now covering Log Analytics data\nin Basic and Auxiliary table plans during interactive analysis\nand deep inve...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "570250",
+        "modified": "2026-09-01T16:31:14.2094207Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor",
+          "Azure Copilot"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Copilot Observability Agent supports Basic and Auxiliary table plans"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570282",
+        "created": "2026-09-01T22:34:43.8927127Z",
+        "description": "Customers can now bring Azure Container Apps environments into Microsoft Defender for Cloud’s Serverless Containers Posture experience, helping security teams extend posture management across more of ...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "570282",
+        "modified": "2026-09-01T22:34:43.8927127Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Microsoft Defender for Cloud support for Azure Container Apps (Serverless Containers Posture)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2029
+          }
+        ],
+        "baseId": "570283",
+        "created": "2026-09-29T17:36:13.5325647Z",
+        "description": "Microsoft is retiring Azure Arc-enabled System Center Virtual Machine Manager (SCVMM) in September 2029. Customers must plan and transition to alternative solutions.What does this mean for you?If you ...",
+        "id": "570283",
+        "modified": "2026-09-29T17:36:13.5325647Z",
+        "productCategories": [],
+        "products": [],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure Arc enabled System Center Virtual Machine Manager will be retired September 30, 2029"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "570364",
+        "created": "2026-08-31T18:36:12.3628022Z",
+        "description": "Announcing the public preview of Azure Multicloud Interconnect, a managed service that provides private connectivity between Azure and supported cloud providers, with Amazon Web Services (AWS) availab...",
+        "id": "570364",
+        "modified": "2026-08-31T18:36:12.3628022Z",
+        "previewAvailabilityDate": "2026-08",
+        "productCategories": [
+          "Hybrid + multicloud",
+          "Networking"
+        ],
+        "products": [
+          "Azure ExpressRoute"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Services"
+        ],
+        "title": "Public Preview: Azure Multicloud Interconnect"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570474",
+        "created": "2026-09-01T17:10:38.3279302Z",
+        "description": "Azure Firewall’s auto-learn SNAT routes is now\ngenerally available, automatically learning registered and private destination\nprefixes periodically and applying them as No-SNAT ranges to preserve orig...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "570474",
+        "modified": "2026-09-01T17:10:38.3279302Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: Azure Firewall auto-learn SNAT routes "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "570509",
+        "created": "2026-09-17T18:36:44.4352804Z",
+        "description": "Azure Payments HSM v2 is a highly available,\nsingle-tenant Payment HSM service for payment processing, credential issuance,\nPIN processing, key management, and authentication data protection. Customer...",
+        "id": "570509",
+        "modified": "2026-09-17T18:36:44.4352804Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [],
+        "products": [],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Security",
+          "Services"
+        ],
+        "title": "Public Preview: Azure Payments HSM v2"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570551",
+        "created": "2026-09-09T21:24:37.7972663Z",
+        "description": "Azure Ephemeral OS Disk with full caching is now generally available for new virtual machines and Virtual Machine Scale Sets. The capability caches the complete OS image on a VM’s local storage, elimi...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "570551",
+        "modified": "2026-09-09T21:24:37.7972663Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Ephemeral OS Disk with full caching for VM/VMSS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570557",
+        "created": "2026-09-03T17:17:08.5092447Z",
+        "description": "Azure\nVirtual Network Manager IP address management is now generally available in\nadditional regions: US Gov Virginia, US Gov Texas and US Gov Arizona, and China\nNorth 3 and China East 3. In complex\nn...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "570557",
+        "modified": "2026-09-03T17:17:08.5092447Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Virtual Network Manager"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Management",
+          "Regions & Datacenters",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Virtual Network Manager IPAM in additional Azure regions "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570696",
+        "created": "2026-09-29T19:07:44.6606067Z",
+        "description": "Azure Arc-enabled SQL Server is now\navailable in Germany West Central, enabling you to connect SQL Server\ninstances to Azure Arc and take advantage of Azure-based inventory, governance,\nsecurity, asse...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "570696",
+        "modified": "2026-09-29T19:07:44.6606067Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Arc-enabled SQL Server in Germany West Central"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570763",
+        "created": "2026-09-29T19:06:50.8102568Z",
+        "description": "Azure Arc-enabled SQL Server is now available in Italy\nNorth, enabling you to connect SQL Server instances to Azure Arc and\ntake advantage of Azure-based inventory, governance, security, assessment, a...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "570763",
+        "modified": "2026-09-29T19:06:50.8102568Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Arc-enabled SQL Server Available in Italy North"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "570800",
+        "created": "2026-09-29T19:41:09.7685716Z",
+        "description": "The Functions on Azure Container Apps (ACA) V1 will be retired on September 29, 2027. After this date, existing Functions on ACA V1 Apps will stop running and no longer process\nrequests or event-drive...",
+        "id": "570800",
+        "modified": "2026-09-29T19:41:09.7685716Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Functions on Azure Container Apps V1 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570881",
+        "created": "2026-09-08T17:18:38.4446075Z",
+        "description": "The Azure Developer CLI (azd) Extension Framework is now generally available. The framework enables developers, teams, and partners to extend Azure Developer CLI with custom capabilities that support ...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "570881",
+        "modified": "2026-09-08T17:18:38.4446075Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Storage",
+          "Containers",
+          "Compute",
+          "Internet of Things",
+          "Security",
+          "Developer tools"
+        ],
+        "products": [
+          "Microsoft Foundry",
+          "Azure Blob Storage",
+          "Azure Container Apps",
+          "Azure Container Registry",
+          "Azure Functions",
+          "Key Vault",
+          "SDKs"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Open Source",
+          "SDK and Tools"
+        ],
+        "title": "Generally Available: Azure Developer CLI (azd) Extension Framework"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "570910",
+        "created": "2026-09-11T15:58:56.5174477Z",
+        "description": "Azure Storage Mover now supports agentless migration of on-premises SMB file shares to Azure Files (SMB), in public preview. You can move file data from Windows Server or NAS shares into Azure without...",
+        "id": "570910",
+        "modified": "2026-09-11T15:58:56.5174477Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Migration",
+          "Storage"
+        ],
+        "products": [
+          "Azure Storage Mover"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Agentless migration of on-premises SMB file shares to Azure Files (SMB)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570919",
+        "created": "2026-09-08T17:35:32.1636029Z",
+        "description": "Playwright Workspaces in Azure App Testing is now generally available in Switzerland North, Japan East, and Australia East.Playwright Workspaces provides fully managed cloud-hosted browsers for runnin...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "570919",
+        "modified": "2026-09-08T17:35:32.1636029Z",
+        "productCategories": [
+          "Developer tools",
+          "DevOps"
+        ],
+        "products": [
+          "Azure Load Testing"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Regions & Datacenters",
+          "Feature"
+        ],
+        "title": "Generally Available: Playwright Workspaces in Australia East, Japan East, and Switzerland North"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570940",
+        "created": "2026-09-10T16:12:49.3807434Z",
+        "description": "Azure\nFunctions Flex Consumption support for TLS/SSL certificates is now generally\navailable through a new site-scoped certificate model. Each function app can\nhold up to 3 private (.pfx) and 3 public...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "570940",
+        "modified": "2026-09-10T16:12:49.3807434Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security",
+          "Feature"
+        ],
+        "title": "Generally Available: TLS/SSL certificate and end-to-end TLS encryption support for Azure Functions Flex Consumption "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "570980",
+        "created": "2026-09-10T15:25:52.9183356Z",
+        "description": "Azure Copilot Troubleshooting Agent is now generally available. Troubleshooting Agent is a unified, built-in Azure Copilot capability that helps customers investigate and resolve operational issues fa...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "570980",
+        "modified": "2026-09-10T15:25:52.9183356Z",
+        "productCategories": [
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Copilot"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Copilot Troubleshooting Agent"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571042",
+        "created": "2026-09-18T15:51:06.215764Z",
+        "description": "Updated troubleshooting guidance is now available for Azure Database for PostgreSQL flexible server. You can use the expanded documentation to diagnose high CPU, memory, IOPS, temporary file usage, an...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "571042",
+        "modified": "2026-09-18T15:51:06.215764Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: New and improved troubleshooting guides for Azure Database for PostgreSQL "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571047",
+        "created": "2026-09-18T15:49:46.9813246Z",
+        "description": "Azure Database for PostgreSQL elastic clusters now support PostgreSQL 18, bringing the latest PostgreSQL capabilities to distributed, cloud-scale workloads. You can build new applications or modernize...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "571047",
+        "modified": "2026-09-18T15:49:46.9813246Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: PG18 support for Azure Database for PostgreSQL elastic clusters "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571056",
+        "created": "2026-09-16T17:15:10.2621356Z",
+        "description": "In mid-September 2026, the following updates and enhancements were made to Azure SQL:Configure soft delete for the Azure SQL logical server. When the logical server is deleted, it goes into a soft del...",
+        "id": "571056",
+        "modified": "2026-09-16T17:15:10.2621356Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure SQL updates for mid-September 2026 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571075",
+        "created": "2026-09-29T19:17:59.8571009Z",
+        "description": "Automatic Zone Placement for VM Scale Sets (Public Preview) enables Azure to automatically select the best availability zones for your scale set based on SKU availability, capacity, and placement requ...",
+        "id": "571075",
+        "modified": "2026-09-29T19:17:59.8571009Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Automatic Zone Placement for Virtual Machine Scale Sets"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571123",
+        "created": "2026-09-14T17:55:00.1174889Z",
+        "description": "Announcing public preview\nsupport for HTTP/3 over QUIC on Azure Application Gateway. HTTP/3 is the next\nevolution of HTTP and uses QUIC to improve connection setup time, reduce\nlatency, and provide be...",
+        "id": "571123",
+        "modified": "2026-09-14T17:55:00.1174889Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: HTTP/3 over QUIC support in Azure Application Gateway"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "December",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "571257",
+        "created": "2026-09-11T18:08:28.7193012Z",
+        "description": "Support for Azure Linux with OS Guard in Azure Kubernetes Service will end on December 10, 2026. Azure Container Linux is the replacement for Azure Linux with OS Guard (preview). Starting on December ...",
+        "id": "571257",
+        "modified": "2026-09-11T18:08:28.7193012Z",
+        "productCategories": [],
+        "products": [],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure Linux with OS Guard in Azure Kubernetes Service"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "571342",
+        "created": "2026-09-16T17:19:02.1256185Z",
+        "description": "The containerized SAP data connector retired on September 14, 2026 and is unsupported and unmaintained. Existing TLS-compliant agents may continue sending logs through the retired HTTP Data Collector ...",
+        "id": "571342",
+        "modified": "2026-09-16T17:19:02.1256185Z",
+        "productCategories": [],
+        "products": [],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement Update: SAP container images removed October 14, 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "571360",
+        "created": "2026-09-14T18:24:04.8309867Z",
+        "description": "Beginning in early October 2026, Windows App will begin using three new wildcard fully qualified domain names (FQDNs) for client-side service traffic to Azure Virtual Desktop. These domains are alread...",
+        "id": "571360",
+        "modified": "2026-09-14T18:24:04.8309867Z",
+        "productCategories": [
+          "Compute",
+          "Virtual desktop infrastructure"
+        ],
+        "products": [
+          "Azure Virtual Desktop"
+        ],
+        "tags": [
+          "Announcement"
+        ],
+        "title": "Announcing: New Windows App client-side endpoints for Azure Virtual Desktop"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571530",
+        "created": "2026-09-18T17:29:29.2304701Z",
+        "description": "The Mdsv4\nand Msv4 Series are memory-optimized virtual machine series built on 6th\nGeneration Intel® Xeon® Scalable processors and enhanced with advanced security\ncapabilities and the latest Azure Boo...",
+        "id": "571530",
+        "modified": "2026-09-18T17:29:29.2304701Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Mdsv4 and Msv4 Series Virtual Machines for SAP"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571572",
+        "created": "2026-09-17T17:40:33.6598501Z",
+        "description": "High-scale mesh using connected\ngroup in Azure Virtual Network\nManager is now in general availability. In available regions, customers may connect\nup to 3,000 virtual networks in a single mesh connect...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "571572",
+        "modified": "2026-09-17T17:40:33.6598501Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Virtual Network Manager"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Management",
+          "Services"
+        ],
+        "title": "Generally Available: High-scale mesh in Azure Virtual Network Manager"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571621",
+        "created": "2026-09-16T14:13:08.8483041Z",
+        "description": "Azure Red Hat OpenShift with hosted control planes is now in public preview. It is a new deployment option for Azure Red Hat OpenShift that runs the OpenShift control plane as a fully managed service,...",
+        "id": "571621",
+        "modified": "2026-09-16T14:13:08.8483041Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Red Hat OpenShift"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Red Hat OpenShift with hosted control planes "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571632",
+        "created": "2026-09-28T18:52:10.2686871Z",
+        "description": "In\nlate September 2026, the following updates and\nenhancements were made to Azure SQL Managed Instance:  \n Use\n     the flexible memory feature in Azure SQL Managed Instance to change the\n     amount ...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "571632",
+        "modified": "2026-09-28T18:52:10.2686871Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure SQL Managed Instance"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure SQL Managed Instance updates for late-September 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571643",
+        "created": "2026-09-29T18:05:11.7866023Z",
+        "description": "The following updates and enhancements were made to Azure\nSQL:   \n Scale\n     larger workloads on Azure SQL Database Hyperscale Premium series with new\n     160-vCore and 192-vCore options, delivering...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "571643",
+        "modified": "2026-09-29T18:05:11.7866023Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure SQL updates for late-September 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571783",
+        "created": "2026-09-29T17:57:36.7609391Z",
+        "description": "Azure Database for PostgreSQL Flexible Server now supports cross-tenant customer-managed keys (CMK). You can encrypt your data using keys stored in an Azure Key Vault or Azure Managed HSM that resides...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "571783",
+        "modified": "2026-09-29T17:57:36.7609391Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Database for PostgreSQL Flexible Server supports cross-tenant customer-managed keys (CMK) "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571795",
+        "created": "2026-09-29T17:34:44.0070057Z",
+        "description": "You can now select Azure SQL Database, including Hyperscale, as a migration target directly from the database migration experience in Azure Arc. The workflow brings Azure Database Migration Service an...",
+        "id": "571795",
+        "modified": "2026-09-29T17:34:44.0070057Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Migrate directly from Azure Arc to Azure SQL Database, including Hyperscale"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571800",
+        "created": "2026-09-28T22:07:19.1716197Z",
+        "description": "Vector search and vector indexes are now generally available in Azure SQL Database. Using the CREATE VECTOR INDEX and VECTOR_SEARCH T-SQL capabilities, you can perform efficient approximate nearest ne...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "571800",
+        "modified": "2026-09-28T22:07:19.1716197Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Vector search and vector indexes in Azure SQL "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571810",
+        "created": "2026-09-29T17:52:59.7566932Z",
+        "description": "A new deployment experience for SQL Server on Linux Azure Virtual Machines (VMs) replaces legacy marketplace images with automated script-based provisioning. This release provides greater flexibility,...",
+        "id": "571810",
+        "modified": "2026-09-29T17:52:59.7566932Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Compute",
+          "Databases"
+        ],
+        "products": [
+          "SQL Server on Azure Virtual Machines"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public preview: Script-based deployment for SQL Server on Linux Azure VM "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571816",
+        "created": "2026-09-18T17:21:06.4634401Z",
+        "description": "Publishing Microsoft Foundry agents to Microsoft 365 Copilot and Teams is now generally available. An agent only delivers value once it reaches the people who need it, and Foundry developers previousl...",
+        "generalAvailabilityDate": "2026-07",
+        "id": "571816",
+        "modified": "2026-09-18T17:21:06.4634401Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Publishing Microsoft Foundry agents to Microsoft 365 Copilot and Teams"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 50,
+    "totalCount": 79
+  },
+  "scan": "2026-09",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

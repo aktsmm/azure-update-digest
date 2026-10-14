@@ -1,0 +1,45 @@
+{
+  "args": {
+    "id": "567594"
+  },
+  "fetchedAt": "2026-10-14T10:19:11.173Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "July",
+        "ring": "Private Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "567594",
+    "created": "2026-07-20T15:09:43.6800215Z",
+    "description": "Azure Monitor Application Insights now stores generative AI\ncontent in a dedicated GenAIContent table (AppGenAIContent in Log\nAnalytics), making it possible to apply newly\navailable access controls to sensitive AI telemetry. Because Application\nInsights powers observability in Microsoft Foundry, these protections benefit\ncustomers using either experience. Since these new protections are built into Log Analytics at\nthe platform layer, they extend beyond just generative AI content. You can now easily\nconfigure any table in Azure Monitor to use a more restrictive role for data\naccess.Organizations can use these capabilities to help restrict\naccess to prompts, responses, tool calls, and other AI-generated content that\nmay contain sensitive information such as PII or PHI. This capability is\nespecially relevant for customers in regulated industries such as healthcare,\nfinancial services, and government. Learn\nmore. ",
+    "id": "567594",
+    "modified": "2026-07-20T15:09:43.6800215Z",
+    "previewAvailabilityDate": "2026-07",
+    "privatePreviewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "AI + machine learning",
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor",
+      "Azure AI Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Management",
+      "Security"
+    ],
+    "title": "Public Preview: Protect sensitive generative AI telemetry in Application Insights and Microsoft Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

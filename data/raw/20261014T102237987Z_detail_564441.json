@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "564441"
+  },
+  "fetchedAt": "2026-10-14T10:22:37.987Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "564441",
+    "created": "2026-06-11T19:00:41.8954189Z",
+    "description": "As part of our ongoing efforts to streamline the Azure\nStorage portfolio and deliver enhanced performance, scalability, and cost\nefficiency, we are announcing the retirement of all General purpose v1 (GPv1)\nstorage accounts. This includes legacy blob storage and Files accounts\nconfigurations. Key Dates: \n October\n     1st, 2025: Public announcement. \n September 1st,\n     2026: New account creation blocked \n October\n     13th, 2026: Final retirement. All remaining GPv1 accounts will\n     be transitioned to GPv2. What’s Changing: The following account types will be retired: \n General\n     purpose v1 (GPv1) storage\n     accounts (all redundancy options) \n Legacy\n     blob storage accounts. \n Files storage accounts hosted on\n     GPv1. Customers are encouraged to migrate to General Purpose v2 (GPv2) or specialized alternatives such\nas BlockBlobStorage or FileStorage,\ndepending on workload requirements. Automatic migration warning:After October 13, 2026, all existing GPv1 accounts will\nbe auto migrated over to a GPv2 account, which may result in higher billing\ncosts. Your decision not to migrate an existing GPv1 account will be\nconstrued as consent for Microsoft to migrate the account on your behalf. Learn more: \n https://learn.microsoft.com/en-us/azure/storage/common/storage-account-upgrade  \n GPv1\n     storage account retirement overview - Azure Storage | Microsoft Learn Legacy\nBlob Storage account retirement overview - Azure Storage | Microsoft Learn",
+    "id": "564441",
+    "modified": "2026-06-11T19:00:41.8954189Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Storage Accounts"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: GPv1 and Legacy Blob storage account creation"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

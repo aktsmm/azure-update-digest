@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "568063"
+  },
+  "fetchedAt": "2026-10-14T10:19:01.546Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "568063",
+    "created": "2026-07-23T16:47:24.773819Z",
+    "description": "Azure DDoS Protection custom policy\nis now in public preview. This capability provides per-resource control over\nDDoS mitigation thresholds for protected Standard Load Balancer frontend IP\nconfigurations. Customers can configure fixed\ninbound detection thresholds for TCP, UDP, and TCP SYN traffic. Thresholds can\nbe set from 50,000 to 2,000,000 packets per second, helping customers account\nfor predictable or unusual traffic patterns, including planned launches,\nseasonal peaks, gaming events, and sustained high-volume workloads. When a custom threshold is\nconfigured for a protocol, Azure uses that threshold instead of adaptive\nauto-tuning for that protocol. Protocols without a custom threshold continue to\nuse Azure DDoS Protection’s adaptive auto-tuning. During public preview, customers\ncan create and manage Custom Policy through the Azure portal, Azure CLI, Azure\nResource Manager templates, and the REST API. Custom policy currently supports\ninbound traffic for Standard Load Balancer frontend IP configurations. Regional\navailability is limited during the preview. Learn more:  Read\nthe custom policy overview Manage\ncustom policy using the Azure portal Manage\ncustom policy using Azure CLI Deploy\ncustom policy using an ARM template ",
+    "id": "568063",
+    "modified": "2026-07-23T16:47:24.773819Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure DDoS Protection"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Security",
+      "Services",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure DDoS Protection custom policy"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

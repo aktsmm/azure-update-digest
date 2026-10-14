@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "568184"
+  },
+  "fetchedAt": "2026-10-14T10:18:56.191Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "568184",
+    "created": "2026-07-27T16:44:29.771476Z",
+    "description": "The AI Gateway tier for Azure API Management is now available in public preview. Building on the AI gateway capabilities already available across API Management tiers, the new AI Gateway tier provides a dedicated experience optimized for AI workloads.As organizations operationalize AI, platform teams need a consistent way to securely expose AI assets including AI models, MCP servers, and tools. AI Gateway helps organizations apply consistent security, policies, authentication, observability, and operational controls across AI workloads. Built on the trusted, enterprise-grade Azure API Management platform, AI Gateway provides portal and programmatic experiences optimized for AI. The experience is centered on models, MCP servers, and tools, making it easier for platform teams to discover, expose, secure, and observe AI assets.The public preview supports models hosted from Microsoft Foundry as well as models hosted in AWS Bedrock, Google Vertex AI, OpenAI, and Anthropic. It also extends the same consistent controls to MCP servers, created from existing MCP backends, OpenAPI definitions, or connectors, with built-in policy enforcement, OpenTelemetry-based observability, and enterprise authentication. Learn more: Announcement blog Documentation  Build your first AI Gateway resource",
+    "id": "568184",
+    "modified": "2026-07-27T16:44:29.771476Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "Integration",
+      "Internet of Things",
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "API Management"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: AI Gateway in Azure API Management "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

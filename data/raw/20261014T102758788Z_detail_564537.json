@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "564537"
+  },
+  "fetchedAt": "2026-10-14T10:27:58.788Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "564537",
+    "created": "2026-06-02T19:30:20.2853906Z",
+    "description": "Azure Container Linux is a container-optimized, immutable operating system for\nAKS node pools — derived from Flatcar Container Linux and built on Azure Linux\nRPM packages. It delivers a locked-down, minimal host purpose-built for running\ncontainerized workloads at scale. Key features include: Immutable by design — The root /usr directory is\nread-only with dm-verity integrity verification. There is no package manager on\nthe host — what ships in the image is what runs in production. This eliminates\nconfiguration drift and ensures consistent node state across your fleet. Container-optimized — Minimal OS footprint with\nonly the components needed to run Kubernetes workloads. Out-of-the-box security — SELinux in enforcing mode applies strict least-privilege policies to all processes. Trusted Launch with a Unified Kernel Image (UKI) verifies boot integrity from firmware through kernel, ensuring nodes haven't been tampered with before they join your cluster. Derived from Flatcar — Built on Flatcar Container Linux's proven architecture: declarative node configuration, systemd-first service management, and an operational model designed for fleets of immutable nodes. Built on Azure Linux — Powered by the Azure Linux RPM ecosystem with Microsoft's security patching cadence, CVE response SLAs, and integrated support through Azure. Learn more and get started:  Tech Community blog post Azure Container Linux Documentation Azure Linux Documentation Azure Linux on GitHub",
+    "generalAvailabilityDate": "2026-06",
+    "id": "564537",
+    "modified": "2026-06-02T19:30:20.2853906Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Linux Virtual Machines",
+      "Azure Linux"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Open Source",
+      "Services"
+    ],
+    "title": "Azure Container Linux (ACL) now generally available on Azure Kubernetes Service (AKS)"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,44 @@
+{
+  "args": {
+    "id": "567184"
+  },
+  "fetchedAt": "2026-10-14T10:20:48.683Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "April",
+        "ring": "Private Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "567184",
+    "created": "2026-07-07T17:40:32.0730538Z",
+    "description": "Azure Chaos Studio now supports Workspaces and Scenarios, a faster, application-centric way to validate how your workloads hold up during real outages.Point a Workspace at your application's scope—a subscription, resource group, or service group—and Chaos Studio discovers the resources inside it and recommends Scenarios: preconfigured tests that reproduce real-world outage patterns. Select a Scenario, and Chaos Studio injects the right faults, in the right order, across every affected resource, then produces a Scenario report showing exactly what happened.With Workspaces and Scenarios, you can:Simulate common outage patterns out of the box, including availability zone failures, DNS and Microsoft Entra ID outages, PostgreSQL and SQL Managed Instance failovers, cache stampedes, and messaging disruptions.Keep tests in sync as your app changes—resources are discovered automatically from the Workspace scope.Control the blast radius with a managed identity governed by Azure RBAC.Generate Scenario reports for game days, retrospectives, and compliance frameworks such as DORA.Learn more.",
+    "id": "567184",
+    "modified": "2026-07-07T17:40:32.0730538Z",
+    "previewAvailabilityDate": "2026-07",
+    "privatePreviewAvailabilityDate": "2026-04",
+    "productCategories": [
+      "Analytics",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Chaos Studio"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Services",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Chaos Studio Workspaces and Scenarios"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

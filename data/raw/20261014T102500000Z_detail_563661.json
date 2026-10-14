@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563661"
+  },
+  "fetchedAt": "2026-10-14T10:25:00.000Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563661",
+    "created": "2026-06-04T19:00:34.7881254Z",
+    "description": "Azure AI Search now supports Content Understanding chunking and image verbalization in public preview, expanding the built-in skill that parses rich documents during indexing. Indexers can split documents into semantically meaningful chunks and generate text descriptions of embedded images, charts, and diagrams in the same pass. Retrieval-augmented generation apps benefit because each chunk carries the visual context that used to be lost when images were stripped out. Customers indexing slide decks, technical manuals, and scanned forms get higher answer quality without running a separate vision pipeline. The skill plugs into existing integrated vectorization workflows, so teams can add it to current skillsets without rebuilding indexes from scratch. This release ships under the same Azure AI Search billing and data residency commitments customers already use today. Learn more.",
+    "id": "563661",
+    "modified": "2026-06-04T19:00:34.7881254Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Content Understanding chunking and image verbalization in Azure AI Search"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563446"
+  },
+  "fetchedAt": "2026-10-14T10:24:30.490Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563446",
+    "created": "2026-06-04T19:30:58.6220186Z",
+    "description": "Microsoft Foundry adds Azure SQL Database as a first-class Knowledge Source in Azure AI Search, available in public preview. Enterprise developers and solution architects building Copilot, RAG, and agentic experiences can now expose authoritative tables and views from Azure SQL as searchable, retrieval-ready knowledge for Knowledge Bases, RAG pipelines, and Foundry agents. The capability uses the same indexer-based ingestion patterns developers already know in Azure AI Search and aligns Azure SQL with SharePoint, OneLake, and other Knowledge Sources under one configuration model. Copilots and agents can ground responses in current operational data, including customer profiles, transactions, and reference tables, without custom pipelines or duplicate retrieval systems. The result is a unified knowledge layer where structured business data and unstructured content are queried through a single framework for more accurate, enterprise-ready AI. Learn more.",
+    "id": "563446",
+    "modified": "2026-06-04T19:30:58.6220186Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure SQL as a knowledge source in Foundry IQ"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,1360 @@
+{
+  "args": {
+    "filter": "created ge 2026-03-31T15:00:00Z and created lt 2026-04-30T15:00:00Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-14T10:04:44.583Z",
+  "ok": true,
+  "response": {
+    "hasMore": true,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "492542",
+        "created": "2026-03-31T17:30:08.6418325Z",
+        "description": "Azure Event Grid now offers a variety of new features intended\nto help you better manage large-scale, distributed systems with improved\ninteroperability and control.  Generally Available features:  \n ...",
+        "generalAvailabilityDate": "2025-05",
+        "id": "492542",
+        "modified": "2026-03-31T17:30:08.6418325Z",
+        "productCategories": [
+          "Integration",
+          "Internet of Things"
+        ],
+        "products": [
+          "Event Grid"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: Azure Event Grid provides new capabilities for smarter, more secure event-driven architectures"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "502936",
+        "created": "2026-04-27T16:15:55.7068873Z",
+        "description": "Prompt Flow will be retired from Microsoft Foundry and Azure Machine\nLearning on April 20, 2027 and replaced by a single, modern orchestration\nplatform: Microsoft\nAgent Framework. This change unlocks ...",
+        "id": "502936",
+        "modified": "2026-04-27T16:15:55.7068873Z",
+        "productCategories": [],
+        "products": [],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Prompt Flow in Azure ML and Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "513249",
+        "created": "2026-04-22T17:45:10.5979041Z",
+        "description": "You can now monitor the synchronization status of\nyour logical replication slots in Azure Database for PostgreSQL – Flexible\nServer using the new logical_replication_slot_sync_status metric, now in\npu...",
+        "id": "513249",
+        "modified": "2026-04-22T17:45:10.5979041Z",
+        "previewAvailabilityDate": "2026-04",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Logical replication slot sync Status metric for Azure PostgreSQL Flexible Server "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "537234",
+        "created": "2026-04-01T19:00:05.6570368Z",
+        "description": "You can now deliver dynamic configuration directly to client-side\napplications—securely and at CDN scale—thanks to Azure App\nConfiguration’s integration with Azure Front Door. This delivers new\nflexib...",
+        "id": "537234",
+        "modified": "2026-04-01T19:00:05.6570368Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Containers",
+          "Developer tools",
+          "Mobile",
+          "Security",
+          "Web"
+        ],
+        "products": [
+          "App Configuration"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Public Preview: Unlock Client-Side Configuration at Scale with Azure App Configuration and Azure Front Door"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2029
+          }
+        ],
+        "baseId": "557394",
+        "created": "2026-04-01T18:00:10.4921362Z",
+        "description": "On March 31, 2029, Microsoft will retire the following eight Azure AI Language features: Key Phrase ExtractionSentiment Analysis and Opinion MiningCustom Text ClassificationConversational Language Und...",
+        "id": "557394",
+        "modified": "2026-04-01T18:00:10.4921362Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Azure AI Language"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Select Azure AI Language Features "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2029
+          }
+        ],
+        "baseId": "557395",
+        "created": "2026-03-31T16:45:33.5681052Z",
+        "description": "On March 31, 2029, we’ll be retiring manually registered\nAzure VPN clients for point-to-site connections with Microsoft Entra ID\nauthentication for ​Azure\nGovernment and ​Microsoft\nAzure operated by 2...",
+        "id": "557395",
+        "modified": "2026-03-31T16:45:33.5681052Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "VPN Gateway"
+        ],
+        "tags": [
+          "Retirements",
+          "Security"
+        ],
+        "title": "Retirement: Manually registered Azure VPN Clients for ​Azure Government and ​Microsoft Azure operated by 21Vianet clouds will be retired on March 31, 2029"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "557406",
+        "created": "2026-03-31T20:00:35.9196595Z",
+        "description": "Import data from external sources (Preview) – S3, Snowflake, Azure SQL Db along with external Data Connections (Preview) in Azure Machine Learning are being deprecated. These features will no longer b...",
+        "id": "557406",
+        "modified": "2026-03-31T20:00:35.9196595Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Machine Learning"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: External Data Import & Data Connections in Azure Machine Learning will be retired on September 30, 2026 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557828",
+        "created": "2026-04-13T23:45:31.5187853Z",
+        "description": "Azure File Sync enables seamless tiering of data from on-premises Windows Servers to Azure Files for hybrid use cases and simplified migration. It also enables you to leverage the performance, flexibi...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "557828",
+        "modified": "2026-04-13T23:45:31.5187853Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Files"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure File Sync in Belgium Central, Malaysia West, and Indonesia Central"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557857",
+        "created": "2026-04-07T17:45:41.0970467Z",
+        "description": "Organizations\nthat use HTTP proxies to control outbound traffic often need to change or\nremove those settings as network requirements evolve, which can be disruptive\nin running clusters. Azure Kuberne...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "557857",
+        "modified": "2026-04-07T17:45:41.0970467Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Disable HTTP proxy in AKS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "557907",
+        "created": "2026-04-07T17:00:23.912259Z",
+        "description": "When clusters\nexhaust available pod IP addresses, teams have historically been forced to\nrebuild environments to restore capacity, creating operational disruption. Pod\nCIDR expansion allows overlay‑ba...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "557907",
+        "modified": "2026-04-07T17:00:23.912259Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Pod CIDR expansion in AKS"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "557928",
+        "created": "2026-04-16T20:30:13.2444082Z",
+        "description": "On June 30, 2027, we'll retire Ubuntu 22.04 on Azure\nKubernetes Service. To avoid disruptions, transition to\nUbuntu 24.04 or later by that date. Newer\nsupported versions include kernel\nupdates and sec...",
+        "id": "557928",
+        "modified": "2026-04-16T20:30:13.2444082Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure Kubernetes Service support for Ubuntu 22.04 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "558027",
+        "created": "2026-04-02T16:45:52.7122053Z",
+        "description": "Starting March 31, 2027,\nPython applications hosted on Azure App Service on\nWindows and Azure Functions on Windows will no longer run. After\nthis date:  \n Your application configuration and content wi...",
+        "id": "558027",
+        "modified": "2026-04-02T16:45:52.7122053Z",
+        "productCategories": [
+          "Compute",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "App Service"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Python support for Azure App Service and Azure Functions on Windows will be retired on March 31, 2027 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "558033",
+        "created": "2026-04-24T17:45:05.9024351Z",
+        "description": "On November 10, 2026, support for .NET 8 (LTS)\nwill end. Your apps that are hosted on App Service will continue to run,\nbut security updates will no longer\nbe available and we'll no longer provide cus...",
+        "id": "558033",
+        "modified": "2026-04-24T17:45:05.9024351Z",
+        "productCategories": [
+          "Compute",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "App Service"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Support for .NET 8 (LTS) ends on November 10, 2026—upgrade your apps to .NET 10 (LTS) "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "558246",
+        "created": "2026-04-01T20:30:41.7066612Z",
+        "description": "Service Fabric will end support for all clusters running on Windows Server\n2019 on March 31, 2027. Customers must upgrade\nto Windows Server 2025 by this date to remain in a supported state. This chang...",
+        "id": "558246",
+        "modified": "2026-04-01T20:30:41.7066612Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Service Fabric"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Service Fabric support for Windows Server 2019 ends on March 31, 2027 - upgrade to Windows Server 2025"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "558247",
+        "created": "2026-04-01T21:00:19.8626472Z",
+        "description": "Service Fabric will end support\nfor all clusters running on Windows Server 2022 on March 31, 2027. Customers\nmust upgrade to Windows Server 2025 by this date to remain in a\nsupported state. This chang...",
+        "id": "558247",
+        "modified": "2026-04-01T21:00:19.8626472Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Service Fabric"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Service Fabric support for Windows Server 2022 ends on March 31, 2027 - upgrade to Windows Server 2025"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "558276",
+        "created": "2026-04-02T16:30:09.2101811Z",
+        "description": "AzureDnsZone\nendpoints (preview) for Azure Blob storage accounts will enter\nretirement in March 2027. Customers leveraging AzureDnsZone endpoints (preview)\nshould transition to Standard endpoints for ...",
+        "id": "558276",
+        "modified": "2026-04-02T16:30:09.2101811Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: AzureDnsEndpoints for Azure storage accounts will be retired March 2027"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "558483",
+        "created": "2026-04-16T18:00:13.1407436Z",
+        "description": "For organizations leveraging individual user and group\nquotas in Azure NetApp Files to manage capacity on NFS, SMB, and dual-protocol\nvolumes, the user and group quota reporting feature offers clear\nv...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "558483",
+        "modified": "2026-04-16T18:00:13.1407436Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: User and group quota reports in Azure NetApp Files "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "559311",
+        "created": "2026-04-17T19:00:12.8775967Z",
+        "description": "Azure Functions runtime v3 was retired on December\n13, 2022. As part of ongoing efforts to reduce reliance on legacy\ninfrastructure and focus investments on supported platforms, Azure will enforce\nthi...",
+        "id": "559311",
+        "modified": "2026-04-17T19:00:12.8775967Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure Functions runtime v3 on Linux Consumption will stop running September 30, 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "559395",
+        "created": "2026-04-13T17:15:23.1377681Z",
+        "description": "Azure Managed Grafana Essential SKU will be retired on March 30, 2027.Customers using the Essential SKU are encouraged to transition to Azure Managed Grafana Standard SKU or Azure Monitor Dashboards w...",
+        "id": "559395",
+        "modified": "2026-04-13T17:15:23.1377681Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Managed Grafana"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure Managed Grafana Essential SKU will retire on March 30, 2027"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559406",
+        "created": "2026-03-31T17:15:56.0929401Z",
+        "description": "Microsoft announces the opening of its cloud region in\nDenmark to accelerate digital transformation and AI innovation. The Denmark\nEast region provides Danish customers with local, secure cloud infras...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "559406",
+        "modified": "2026-03-31T17:15:56.0929401Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Regions & Datacenters"
+        ],
+        "title": "Generally Available: Microsoft Azure now available from new cloud region in Denmark"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "559504",
+        "created": "2026-04-01T18:15:44.8377397Z",
+        "description": "QoS update with cool\naccess enabled on Premium and Ultra service levels improves how Azure\nNetApp Files balances performance and cost for mixed hot and cool workloads.\nThroughput automatically adjusts...",
+        "id": "559504",
+        "modified": "2026-04-01T18:15:44.8377397Z",
+        "previewAvailabilityDate": "2026-03",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure NetApp Files storage with cool access enhancement "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559535",
+        "created": "2026-03-31T17:30:08.6418325Z",
+        "description": "User delegation SAS for Azure Tables, Azure Files, and Azure\nQueues is now generally available.  User delegation SAS allows users to create a more secure SAS\ntoken than account or service SAS by tying...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "559535",
+        "modified": "2026-03-31T17:30:08.6418325Z",
+        "productCategories": [
+          "Storage",
+          "Databases"
+        ],
+        "products": [
+          "Azure Files",
+          "Queue Storage",
+          "Table Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: User delegation SAS for Azure Tables, Azure Files, and Azure Queues"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559547",
+        "created": "2026-04-07T19:30:53.5106906Z",
+        "description": "Azure Red Hat OpenShift (ARO) now supports NVIDIA H100 and\nH200 GPU-based Azure Virtual Machine SKUs, enabling customers to run\nlarge-scale AI, machine learning, and high-performance computing (HPC)\nw...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "559547",
+        "modified": "2026-04-07T19:30:53.5106906Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Red Hat OpenShift"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Open Source",
+          "Regions & Datacenters"
+        ],
+        "title": "Generally Available: Azure Red Hat OpenShift adds NVIDIA H100 and H200 GPU support"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559623",
+        "created": "2026-04-08T17:45:09.303049Z",
+        "description": "PgBouncer 1.25.1 is now generally available in Azure Database for PostgreSQL. As a built-in connection pooling feature, PgBouncer helps you scale to thousands of connections with low overhead by effic...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "559623",
+        "modified": "2026-04-08T17:45:09.303049Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: PgBouncer 1.25.1 support in Azure Database for PostgreSQL – Flexible Server "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559628",
+        "created": "2026-04-08T17:45:09.303049Z",
+        "description": "We’re introducing regional level consolidated maintenance notifications for Azure Database for PostgreSQL to simplify how you stay informed about upcoming maintenance. Instead of one notification per ...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "559628",
+        "modified": "2026-04-08T17:45:09.303049Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Enhancements to maintenance notifications in Azure Service Health "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559633",
+        "created": "2026-04-22T17:45:10.5979041Z",
+        "description": "Dynamic data masking (DDM) is a\nserver-side, policy-based security feature in Azure Cosmos DB that\nhelps your organization protect sensitive data from unauthorized\naccess. DDM dynamically masks data f...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "559633",
+        "modified": "2026-04-22T17:45:10.5979041Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Dynamic data masking with Azure Cosmos DB "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559660",
+        "created": "2026-03-31T18:15:10.6713801Z",
+        "description": "The following updates were made to Azure DevOps in March\n2026.   \n The\n     Remote MCP Server entered public preview, enabling seamless AI-powered\n     integration with Azure DevOps without requiring ...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "559660",
+        "modified": "2026-03-31T18:15:10.6713801Z",
+        "productCategories": [
+          "Developer tools",
+          "DevOps",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure DevOps"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure DevOps March 2026 updates"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559677",
+        "created": "2026-03-31T16:30:51.6348366Z",
+        "description": "Azure Premium SSD v2 is now available in US Gov Arizona (a\nregion without Availability Zone).  Azure Premium SSD v2 disk, a next-generation general-purpose\nblock storage option for Azure virtual machi...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "559677",
+        "modified": "2026-03-31T16:30:51.6348366Z",
+        "productCategories": [
+          "Storage",
+          "Compute"
+        ],
+        "products": [
+          "Azure Disk Storage",
+          "Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Premium SSD v2 Disk is now available in US Gov Arizona"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "559695",
+        "created": "2026-03-31T17:45:46.9375071Z",
+        "description": "Azure Event Grid offers a variety of features in\nPublic Preview – intended to help you better manage large-scale, distributed\nsystems with improved interoperability and control.  Public Preview Featur...",
+        "id": "559695",
+        "modified": "2026-03-31T17:45:46.9375071Z",
+        "previewAvailabilityDate": "2025-05",
+        "productCategories": [],
+        "products": [],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Microsoft Build"
+        ],
+        "title": "Public Preview: Azure Event Grid provides new capabilities for smarter, more secure event-driven architectures"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559746",
+        "created": "2026-04-14T17:15:47.4350801Z",
+        "description": "Announcing the GA of smart tier for Azure Blob and Data Lake Storage (ADLS). Smart Tier is Generally Available (GA) today in nearly all zonal public cloud regions. (The Azure regions Israel Central, Q...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "559746",
+        "modified": "2026-04-14T17:15:47.4350801Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Smart Tier (Azure Blob and Data Lake Storage)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "559751",
+        "created": "2026-04-15T17:30:33.2820175Z",
+        "description": "Microsoft Azure will retire support for HBv2-series,\nHC-series, and NP-series VMs in Azure Batch pools on May 31, 2027,\nincluding:   \n HBv2-series: 120 AMD EPYC 7V12 vCPUs, 480 GB RAM, 200\n     Gb/s H...",
+        "id": "559751",
+        "modified": "2026-04-15T17:30:33.2820175Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Batch"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: End of life reminder of HBv2/HC-Series/NP-Series Azure Virtual Machine in Azure Batch Pool"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559756",
+        "created": "2026-04-14T21:15:15.0637793Z",
+        "description": "We are pausing the introduction of a minimum billable object size for the cool, cold, and archive access tiers. As a result, billing behavior will not change on July 1, 2026, for either new or existin...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "559756",
+        "modified": "2026-06-08T23:45:02.9471363Z",
+        "productCategories": [
+          "Storage",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Blob Storage",
+          "Azure Data Lake Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Pricing & Offerings"
+        ],
+        "title": "Update: Minimum billable object size for cooler storage tiers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559761",
+        "created": "2026-04-15T17:15:38.5873423Z",
+        "description": "Cross-tenant customer-managed\nkeys (CMK) for Premium SSD v2 and Ultra Disks are\nnow generally available. This capability allows managed disks to be\nencrypted using a customer-managed key stored in an ...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "559761",
+        "modified": "2026-04-15T17:15:38.5873423Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Disk Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Compliance",
+          "Security"
+        ],
+        "title": "Generally Available: Encrypt Premium SSD v2 and Ultra Disks with Cross Tenant Customer Managed Keys"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559767",
+        "created": "2026-04-01T18:15:44.8377397Z",
+        "description": "Azure\nData Box now supports ingestion of data into Azure\nFiles Provisioned v2 storage accounts. Azure Files Provisioned v2\nis a billing model where customers provision and pay for specific capacity,\nI...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "559767",
+        "modified": "2026-04-01T18:15:44.8377397Z",
+        "productCategories": [
+          "Migration",
+          "Storage"
+        ],
+        "products": [
+          "Azure Data Box"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Data Box now supports Azure Files Provisioned v2"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559772",
+        "created": "2026-04-01T18:30:16.1809536Z",
+        "description": "Azure\nData Box now automatically generates a downloadable Secure Erasure\nCertificate for every completed order, providing verification that all data on\nthe device has been securely erased in accordanc...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "559772",
+        "modified": "2026-04-01T18:30:16.1809536Z",
+        "productCategories": [
+          "Migration",
+          "Storage"
+        ],
+        "products": [
+          "Azure Data Box"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Data Box enhances compliance with automatic Secure Erasure Certificates"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559836",
+        "created": "2026-04-10T17:00:41.2372907Z",
+        "description": "Developers can now route Stripe events directly into Azure Event Grid and build scalable, event-driven architectures without managing webhook infrastructure or custom brokers.This means that Event Gri...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "559836",
+        "modified": "2026-04-10T17:00:41.2372907Z",
+        "previewAvailabilityDate": "2026-04",
+        "productCategories": [
+          "Integration",
+          "Internet of Things"
+        ],
+        "products": [
+          "Event Grid"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Event Grid as a destination for Stripe events"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "559876",
+        "created": "2026-04-06T16:15:40.6397683Z",
+        "description": "Rule impact analysis on Azure Network Watcher enables you to preview the impact of security admin rules and network security group (NSG) rules before applying them to your environment. This feature he...",
+        "id": "559876",
+        "modified": "2026-04-06T16:15:40.6397683Z",
+        "previewAvailabilityDate": "2026-04",
+        "productCategories": [
+          "Management and governance",
+          "Networking"
+        ],
+        "products": [
+          "Network Watcher"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Public Preview: Rule impact analysis on Azure Network Watcher "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559886",
+        "created": "2026-04-21T20:30:49.5079707Z",
+        "description": "Azure Monitor pipeline is now generally available.Azure Monitor pipeline provides a centralized control point for telemetry ingestion and transformation, designed specifically for secure, high‑through...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "559886",
+        "modified": "2026-04-21T20:30:49.5079707Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Monitor pipeline"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559899",
+        "created": "2026-04-06T18:00:04.7340299Z",
+        "description": "Network Security Perimeter (NSP) support for Azure Service Bus is now generally available. Network Security Perimeter creates a logical network boundary around your Service Bus namespaces and other Az...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "559899",
+        "modified": "2026-04-06T18:00:04.7340299Z",
+        "productCategories": [
+          "Integration"
+        ],
+        "products": [
+          "Service Bus"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Security"
+        ],
+        "title": "Generally Available: Network Security Perimeter for Azure Service Bus"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "559981",
+        "created": "2026-04-07T17:15:12.2534237Z",
+        "description": "Developers\nbuilding MCP servers on Azure Functions can expose tools but not resources.\nNow, Azure Functions supports MCP resource triggers, enabling\ndevelopers to expose resources directly from an Azu...",
+        "generalAvailabilityDate": "2026-03",
+        "id": "559981",
+        "modified": "2026-04-07T17:15:12.2534237Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Functions now supports MCP resource triggers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "560001",
+        "created": "2026-04-13T17:45:02.9871629Z",
+        "description": "Azure Files now supports independent configuration of encryption-in-transit settings for SMB and NFS protocols at the storage account level. Customers can now define protocol-specific security policie...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "560001",
+        "modified": "2026-04-13T17:45:02.9871629Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Files"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Security"
+        ],
+        "title": "Generally Available: Granular Encryption-in-Transit Controls for SMB and NFS on Azure Files "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "560015",
+        "created": "2026-04-24T18:15:17.6031683Z",
+        "description": "WireGuard in‑transit encryption is now generally\navailable for Azure Kubernetes Service (AKS) clusters using Azure CNI\npowered by Cilium and Advanced Container Networking Services (ACNS). This capabil...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "560015",
+        "modified": "2026-04-24T18:15:17.6031683Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: WireGuard In‑Transit Encryption for Azure Kubernetes Service (AKS)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "560025",
+        "created": "2026-04-08T17:30:02.4404486Z",
+        "description": "Azure Migrate\nnow supports assessments for Azure Files, allowing customers and partners to\nefficiently plan migrations of on-premises SMB and NFS file shares (Windows and\nLinux) to Azure Files. This f...",
+        "id": "560025",
+        "modified": "2026-04-08T17:30:02.4404486Z",
+        "previewAvailabilityDate": "2026-02",
+        "productCategories": [
+          "Management and governance",
+          "Migration"
+        ],
+        "products": [
+          "Azure Migrate"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure Files assessments are now available using Azure Migrate"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "560039",
+        "created": "2026-04-08T17:30:02.4404486Z",
+        "description": "AKS now surfaces observability data powered by Azure Monitor managed service for Prometheus directly within Namespace and Workload views, making it easier to:Monitor cluster and workload healthTrouble...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "560039",
+        "modified": "2026-04-08T17:30:02.4404486Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Observability in AKS Namespace and Workload Views"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "560119",
+        "created": "2026-04-13T17:45:02.9871629Z",
+        "description": "Azure Monitor now supports monitoring applications that run on Azure Kubernetes Service (AKS) by using OpenTelemetry for instrumentation and data collection.Leverage autoinstrumentation to deploy the ...",
+        "id": "560119",
+        "modified": "2026-04-13T17:45:02.9871629Z",
+        "previewAvailabilityDate": "2026-04",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Open Source"
+        ],
+        "title": "Public Preview: Monitor AKS applications with OpenTelemetry and Azure Monitor "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "560162",
+        "created": "2026-04-13T18:45:30.1773132Z",
+        "description": "Today, we are announcing Azure Bastion now supports managed\nidentities for graphical session recording. Azure Bastion graphical session recording now supports write\naccess to storage accounts using ma...",
+        "id": "560162",
+        "modified": "2026-04-13T18:45:30.1773132Z",
+        "previewAvailabilityDate": "2026-04",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Bastion"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Security",
+          "Services"
+        ],
+        "title": "Public Preview: Managed identity support for graphical session recording"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "560188",
+        "created": "2026-04-21T18:15:14.8646419Z",
+        "description": "Azure NetApp Files advanced ransomware protection (ANF ARP) is now in GA (General Availability).  ANF ARP is designed to help organizations proactively detect, respond to, and recover from ransomware ...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "560188",
+        "modified": "2026-04-21T18:15:14.8646419Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure NetApp Files advanced ransomware protection "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "560198",
+        "created": "2026-04-13T18:00:56.7922365Z",
+        "description": "Azure Storage Mover is now available in Azure\nGovernment (US), enabling U.S. government customers and partners to securely\nmigrate large‑scale file data to Azure Government cloud environments using a\n...",
+        "generalAvailabilityDate": "2026-04",
+        "id": "560198",
+        "modified": "2026-04-13T18:00:56.7922365Z",
+        "productCategories": [
+          "Migration",
+          "Storage"
+        ],
+        "products": [
+          "Azure Storage Mover"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Regions & Datacenters",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Storage Mover now available in Azure Government (US)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "560207",
+        "created": "2026-04-13T16:00:36.6118364Z",
+        "description": "AKS now\nsupports managed and user-assigned StandardV2 NAT Gateway as an outbound type\nfor your AKS managed or BYO VNets. This unlocks zone-redundant outbound\nconnectivity, up to 100 Gbps outbound thro...",
+        "id": "560207",
+        "modified": "2026-04-13T16:00:36.6118364Z",
+        "previewAvailabilityDate": "2026-04",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Networking"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)",
+          "Azure NAT Gateway"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Public Preview: StandardV2 NAT Gateway as an outbound type for AKS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "560241",
+        "created": "2026-04-14T21:15:15.0637793Z",
+        "description": "Azure Site Recovery now supports replication and disaster recovery for Windows Azure Virtual Machines running on NVMe-enabled Generation 2 VM families, such as the Da/Ea/Fa v6-series, Ddsv6, Edsv6 and...",
+        "generalAvailabilityDate": "2026-06",
+        "id": "560241",
+        "modified": "2026-04-14T21:15:15.0637793Z",
+        "previewAvailabilityDate": "2026-04",
+        "productCategories": [
+          "Management and governance",
+          "Migration"
+        ],
+        "products": [
+          "Azure Site Recovery"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Management"
+        ],
+        "title": "Generally Available: Azure Site Recovery support for Windows Azure VMs with NVMe disk controllers"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 50,
+    "totalCount": 73
+  },
+  "scan": "2026-04",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

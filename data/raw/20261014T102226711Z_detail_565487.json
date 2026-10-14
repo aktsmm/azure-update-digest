@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "565487"
+  },
+  "fetchedAt": "2026-10-14T10:22:26.711Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "565487",
+    "created": "2026-06-17T16:30:04.653937Z",
+    "description": "Azure\nStandardV2 NAT Gateway now supports outbound ICMP Echo Request and Echo Reply\ntraffic, enabling customers to use tools such as ping to quickly validate\noutbound connectivity and troubleshoot network issues from workloads behind\nStandardV2 NAT Gateway. This support extends to IPv4 and IPv6 for existing and\nnew StandardV2 SKU NAT Gateways. Learn more:   \n ICMP Ping Support through Azure NAT Gateway  \n Azure NAT Gateway overview  \n Troubleshoot Azure NAT Gateway  ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "565487",
+    "modified": "2026-06-17T16:30:04.653937Z",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Azure NAT Gateway"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Services"
+    ],
+    "title": "Generally Available: ICMP Support for Azure Standard V2 NAT Gateway"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

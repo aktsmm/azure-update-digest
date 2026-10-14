@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "574430"
+  },
+  "fetchedAt": "2026-10-14T10:05:48.961Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "574430",
+    "created": "2026-10-08T22:51:01.6329557Z",
+    "description": "AKS will now provision and manage a StandardV2 NAT Gateway\nfor clusters using an AKS-managed virtual network.StandardV2 is now the default managed NAT Gateway SKU for\nnew clusters in supported regions when using the managedNATGateway outbound\ntype. StandardV2 NAT Gateway provides zone redundancy by default, higher\nbandwidth and throughput, and IPv6 support.Existing AKS clusters can migrate from a managed Standard\nNAT Gateway or load balancer to a managed StandardV2 NAT Gateway.Learn more.",
+    "generalAvailabilityDate": "2026-10",
+    "id": "574430",
+    "modified": "2026-10-08T22:51:01.6329557Z",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Networking"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)",
+      "Azure NAT Gateway"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Managed StandardV2 NAT Gateway for AKS"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

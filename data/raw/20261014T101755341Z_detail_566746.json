@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "566746"
+  },
+  "fetchedAt": "2026-10-14T10:17:55.341Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "566746",
+    "created": "2026-07-30T18:57:18.5140638Z",
+    "description": "We’re announcing post-quantum resilient symmetric\nkeys on Azure Key Vault Premium are now available in public preview. This preview enables\ncustomers and partners to evaluate symmetric encryption capabilities using the oct-HSM\nkey type and the Advanced Encryption Standard (AES) algorithm\ndirectly within Azure Key Vault. Customers can use AES algorithms to encrypt,\ndecrypt, wrap, and unwrap data while continuing to benefit from Azure-managed\nsecurity, compliance, and operational controls. AES algorithms with 256-bit\nkeys are aligned with CNSA 2.0 requirements and can help organizations prepare\nfor post-quantum cryptography readiness scenarios. Key benefits include: \n Centralized\n     key management through Azure Key Vault Premium \n Support\n     for oct-HSM symmetric keys \n AES-based\n     encryption and decryption operations \n Simplified\n     integration with existing Azure security workflows \n Consistent\n     security and operational controls across Azure services Note: Azure portal support for symmetric key management is\ncurrently rolling out. During the rollout period, customers can use Azure\nCLI, ARM templates to create and manage oct-HSM symmetric keys and access\nthe full preview functionality. Learn more:About\nkeys  Key\ntypes, algorithms, and operations",
+    "id": "566746",
+    "modified": "2026-07-30T18:57:18.5140638Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "Security"
+    ],
+    "products": [
+      "Key Vault"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Security",
+      "Post Quantum Crypto"
+    ],
+    "title": "Public Preview: Symmetric keys on Azure Key Vault Premium"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

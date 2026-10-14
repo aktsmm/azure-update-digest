@@ -1,0 +1,41 @@
+{
+  "args": {
+    "id": "569743"
+  },
+  "fetchedAt": "2026-10-14T10:14:36.271Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "569743",
+    "created": "2026-08-20T17:02:23.1350478Z",
+    "description": "Summarized advertised gateway\nprefixes for route advertisement is now generally available. You can specify\naggregated (summarized) prefixes for an Azure gateway to advertise to your\non-premises networks, rather than having every individual virtual network\naddress space advertised. The capability is supported on both ExpressRoute\nGateway and VPN Gateway, and covers IPv4 and IPv6 address spaces.  Large hub-and-spoke deployments\noften approach the advertised-prefix limits of ExpressRoute and VPN Gateway as\nspokes are added. Advertising a covering prefix such as 10.0.0.0/16 in place of\nhundreds of individual spoke prefixes keeps route counts well within those\nlimits and lets you keep growing an environment without re-architecting the\naddress plan or splitting virtual networks. Any spoke address space that falls\noutside the summarized prefix continues to be advertised on its own, so\nexisting connectivity is preserved when you turn the feature on. Learn\nmore.",
+    "generalAvailabilityDate": "2026-08",
+    "id": "569743",
+    "modified": "2026-08-20T17:02:23.1350478Z",
+    "productCategories": [
+      "Hybrid + multicloud",
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure ExpressRoute",
+      "Virtual Network",
+      "VPN Gateway"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Management",
+      "Services"
+    ],
+    "title": "Generally Available: Summarized advertised gateway prefixes for route advertisement"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

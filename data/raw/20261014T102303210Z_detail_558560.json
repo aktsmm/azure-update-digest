@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "558560"
+  },
+  "fetchedAt": "2026-10-14T10:23:03.210Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Retirement",
+        "year": 2029
+      }
+    ],
+    "baseId": "558560",
+    "created": "2026-06-10T17:00:06.6090204Z",
+    "description": "As of March 31, 2026, new Azure Cosmos DB NoSQL accounts can no longer enable Azure Synapse Link. Existing customers will remain fully supported until March 31, 2029, when Azure Synapse Link will reach end of life.We encourage all customers to begin migrating to Mirroring for Microsoft Fabric — the recommended go-forward solution for Cosmos DB analytics workloads.Mirroring for Microsoft Fabric delivers the same zero-ETL hybrid transactional and analytical processing (HTAP) capabilities as Azure Synapse Link, with meaningful improvements:Open Delta Parquet format stored in Microsoft Fabric OneLake — accessible by Fabric Spark, Fabric SQL, Power BI Direct Lake, Azure Databricks, and moreNo schema nesting limits — removes the 1,000 property and 127-level depth restrictions of Synapse LinkFree replication storage — mirrored data storage is included at no cost up to your Fabric capacity limit (e.g. F64 = 64 TB of free OneLake storage)Free replication compute — data replication does not consume Request Units (RUs) or impact transactional performanceFull Microsoft Fabric ecosystem integration — unified data management across OneLake, enabling AI and analytics scenarios at scaleTo get started with migration, visit Cosmos Mirror Synapse\nMigration. If you have questions about this retirement or your\nmigration path, please contact your Microsoft account manager or reach out\ndirectly at cosmosdbsynapselink@microsoft.com ",
+    "id": "558560",
+    "modified": "2026-06-10T17:00:06.6090204Z",
+    "productCategories": [
+      "Databases",
+      "Internet of Things",
+      "Analytics"
+    ],
+    "products": [
+      "Azure Cosmos DB",
+      "Azure Synapse Analytics"
+    ],
+    "tags": [
+      "Retirements",
+      "Services"
+    ],
+    "title": "Retirement: Azure Synapse Link for Azure Cosmos DB NoSQL"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

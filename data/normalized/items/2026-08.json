@@ -1,0 +1,3971 @@
+{
+  "items": [
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "557775",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-08-17T19:37:49.0696169Z",
+      "createdJst": "2026-08-18",
+      "description": "This release adds Microsoft Marketplace as a new discovery and procurement channel for Dragon Copilot AI apps and agents. Dragon Copilot customers in the United States can now discover, evaluate and purchase Dragon Copilot Physician Apps and Agents through Microsoft Marketplace.Dragon Copilot Physician Apps and Agents enhance clinical workflows using advanced AI for documentation guidance, information surfacing, and task automation. These solutions help physicians in creating, summarizing, searching, automating, and analyzing data—helping improve efficiency, clinician wellbeing, patient experience, and care delivery. Dragon Copilot is part of Microsoft for Healthcare and is built on a modern architecture with enhanced security.Purchasing through Microsoft Marketplace removes the need to onboard a new vendor or navigate separate procurement processes. Customers can acquire Dragon Copilot Physician Apps and Agents through a streamlined purchase experience with consolidated billing through Microsoft.   Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "3b2b27b2dcf8b7b542d985555f5988013ca3aab5f17c0fe0fec8d9058e838d27",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "3c074f4c73088683d35abc690254f5d9f2fc64e56d09c44224029febcf94b7ef",
+          "modifiedAfter": "2026-08-17T19:37:49.0696169Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#557775"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:15:26.206Z",
+          "fingerprint": "3b2b27b2dcf8b7b542d985555f5988013ca3aab5f17c0fe0fec8d9058e838d27",
+          "modifiedAfter": "2026-08-17T19:37:49.0696169Z",
+          "modifiedBefore": "2026-08-17T19:37:49.0696169Z",
+          "rawRef": "20261014T101526206Z_detail_557775.json#557775"
+        }
+      ],
+      "ids": [
+        "557775"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "557775",
+      "modified": "2026-08-17T19:37:49.0696169Z",
+      "modifiedJst": "2026-08-18",
+      "productCategories": [],
+      "products": [],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=557775",
+      "status": "Launched",
+      "tags": [
+        "Features"
+      ],
+      "title": "Generally Available: Dragon Copilot Physician Apps and Agents on Microsoft Marketplace "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-08",
+        "privatePreview": null
+      },
+      "canonicalKey": "565214",
+      "categories": [
+        "networking",
+        "ops-governance"
+      ],
+      "created": "2026-08-04T17:04:55.0175872Z",
+      "createdJst": "2026-08-05",
+      "description": "Azure DNS now offers a seamless way to integrate with Azure Traffic Manager for DNS-based traffic routing. Customers can now directly associate Azure DNS record set with Traffic Manager profiles without creating CNAME record for trafficmanager.net domain. This improves lookup latency by eliminating a CNAME hop and enables DNSSEC compatibility for load balanced records by removing unsigned trafficmanager.net domain from CNAME lookup chain.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "3eb7a82434c8f3c03b0dac9c4393e30ea074a26990d2adc4d19401c87d7f6bdb",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "44c82de341964e7f1d651d84e221632c54d15cc21413eea671555ff79f314db0",
+          "modifiedAfter": "2026-08-04T17:04:55.0175872Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#565214"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:17:02.872Z",
+          "fingerprint": "3eb7a82434c8f3c03b0dac9c4393e30ea074a26990d2adc4d19401c87d7f6bdb",
+          "modifiedAfter": "2026-08-04T17:04:55.0175872Z",
+          "modifiedBefore": "2026-08-04T17:04:55.0175872Z",
+          "rawRef": "20261014T101702872Z_detail_565214.json#565214"
+        }
+      ],
+      "ids": [
+        "565214"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "565214",
+      "modified": "2026-08-04T17:04:55.0175872Z",
+      "modifiedJst": "2026-08-05",
+      "productCategories": [
+        "Management and governance",
+        "Networking"
+      ],
+      "products": [
+        "Azure DNS",
+        "Traffic Manager"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=565214",
+      "status": "In preview",
+      "tags": [
+        "Feature",
+        "Services"
+      ],
+      "title": "Public Preview: Azure DNS enables DNS-based load balancing through Traffic Manager integration"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "April",
+          "ring": "Retirement",
+          "year": 2027
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "567334",
+      "categories": [
+        "compute"
+      ],
+      "created": "2026-08-24T17:30:43.3459834Z",
+      "createdJst": "2026-08-25",
+      "description": "On April 30 2027, support for Node 22 LTS will end. Your apps that are hosted on App\nService will continue to run, but security updates will no longer be available,\nand we’ll no longer provide customer service for Node 22 LTS. Required action: To\navoid potential security vulnerabilities and minimize risk for your App Service\napps, follow the steps to upgrade your app to Node 24 LTS\nbefore April 30, 2027. Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "45392d1e9f2d81e7b2a535e77ede35e49325553aa825aa6c6d05c6316317ca9d",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "957ba55be86eccde53f95dae4a7772318e9424c034acb49e7b3bdffde0ef56f1",
+          "modifiedAfter": "2026-08-24T17:30:43.3459834Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#567334"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:25.024Z",
+          "fingerprint": "45392d1e9f2d81e7b2a535e77ede35e49325553aa825aa6c6d05c6316317ca9d",
+          "modifiedAfter": "2026-08-24T17:30:43.3459834Z",
+          "modifiedBefore": "2026-08-24T17:30:43.3459834Z",
+          "rawRef": "20261014T101425024Z_detail_567334.json#567334"
+        }
+      ],
+      "ids": [
+        "567334"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "retire-tag",
+          "retire-ring",
+          "retire-title"
+        ],
+        "score": 10,
+        "topics": [
+          "retirement"
+        ]
+      },
+      "latestId": "567334",
+      "modified": "2026-08-24T17:30:43.3459834Z",
+      "modifiedJst": "2026-08-25",
+      "productCategories": [
+        "Compute",
+        "Mobile",
+        "Web"
+      ],
+      "products": [
+        "App Service"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=567334",
+      "status": null,
+      "tags": [
+        "Retirements"
+      ],
+      "title": "Retirement: Support for Node 22 LTS ends on April 30, 2027"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "July",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-07",
+        "privatePreview": null
+      },
+      "canonicalKey": "567979",
+      "categories": [
+        "storage"
+      ],
+      "created": "2026-08-06T16:40:19.650341Z",
+      "createdJst": "2026-08-07",
+      "description": "Azure Storage Mover now supports agentless, cloud-to-cloud migration from AWS FSx for Windows File Server (SMB) to Azure Files (SMB), in preview. You can move your Windows file shares off FSx and into Azure Files without deploying or managing a migration agent — the service handles the transfer for you. File data is copied directly from FSx to your Azure file share over a private connection between Azure and your AWS network.Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "7c1faa6604883465afc721e221e6ca41ad13732fe9a94b0357aee4e63be5c47b",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "9bcaa18b496652ff17d7e24310f1e82091745db8b5c3005ab81c4a38c85f492f",
+          "modifiedAfter": "2026-08-06T16:40:19.650341Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#567979"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:38.298Z",
+          "fingerprint": "7c1faa6604883465afc721e221e6ca41ad13732fe9a94b0357aee4e63be5c47b",
+          "modifiedAfter": "2026-08-06T16:40:19.650341Z",
+          "modifiedBefore": "2026-08-06T16:40:19.650341Z",
+          "rawRef": "20261014T101638298Z_detail_567979.json#567979"
+        }
+      ],
+      "ids": [
+        "567979"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "567979",
+      "modified": "2026-08-06T16:40:19.650341Z",
+      "modifiedJst": "2026-08-07",
+      "productCategories": [
+        "Migration",
+        "Storage"
+      ],
+      "products": [
+        "Azure Storage Mover"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=567979",
+      "status": "In preview",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Public Preview: Migrate from AWS FSx for Windows File Server to Azure Files with Azure Storage Mover"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "July",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-07",
+        "privatePreview": null
+      },
+      "canonicalKey": "568139",
+      "categories": [
+        "databases"
+      ],
+      "created": "2026-07-31T18:16:23.763914Z",
+      "createdJst": "2026-08-01",
+      "description": "In late-July 2026, the following update and enhancement was made to Azure SQL: Regex-based dynamic data masking (DDM) extends the built-in DDM feature with pattern‑based masking to hide sensitive data like emails, phone numbers, and identifiers—centrally enforced at the database layer.Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "cf089c14b7def5390278bb70e1f1582bfa3222d87bc8fe9fa4a8cade04c90d1c",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "6176b87fb6195d718ba8501d1848e3827ee90f773175b133a7e6c64d97b8b3b5",
+          "modifiedAfter": "2026-07-31T18:16:23.763914Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568139"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:17:34.810Z",
+          "fingerprint": "cf089c14b7def5390278bb70e1f1582bfa3222d87bc8fe9fa4a8cade04c90d1c",
+          "modifiedAfter": "2026-07-31T18:16:23.763914Z",
+          "modifiedBefore": "2026-07-31T18:16:23.763914Z",
+          "rawRef": "20261014T101734810Z_detail_568139.json#568139"
+        }
+      ],
+      "ids": [
+        "568139"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "568139",
+      "modified": "2026-07-31T18:16:23.763914Z",
+      "modifiedJst": "2026-08-01",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure SQL Database"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568139",
+      "status": "In preview",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Public Preview: Azure SQL updates for late-July "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568339",
+      "categories": [
+        "databases"
+      ],
+      "created": "2026-08-03T17:00:56.6053348Z",
+      "createdJst": "2026-08-04",
+      "description": "To enhance backup protection, Azure SQL Database and Azure SQL Managed Instance now automatically apply immutability to the most recent seven days of backups. This capability is enabled by default for all databases, regardless of the configured point-in-time restore retention period. No action or configuration is required.Note: Support for Azure SQL Hyperscale backups is coming in a future release.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "a215a6e4239218bcc6f0ebbe2f5a26f7f8533f30d177b032d1e64e1178685637",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "fbc4fed8542ea104caf92ad0451629e443d34712080d0dee0e0068c634e4eb56",
+          "modifiedAfter": "2026-08-03T17:00:56.6053348Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568339"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:17:18.257Z",
+          "fingerprint": "a215a6e4239218bcc6f0ebbe2f5a26f7f8533f30d177b032d1e64e1178685637",
+          "modifiedAfter": "2026-08-03T17:00:56.6053348Z",
+          "modifiedBefore": "2026-08-03T17:00:56.6053348Z",
+          "rawRef": "20261014T101718257Z_detail_568339.json#568339"
+        }
+      ],
+      "ids": [
+        "568339"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "568339",
+      "modified": "2026-08-03T17:00:56.6053348Z",
+      "modifiedJst": "2026-08-04",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure SQL Database",
+        "Azure SQL Managed Instance"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568339",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Immutability to the most recent seven days of backups on Azure SQL Database and Azure SQL Managed Instance "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-08",
+        "privatePreview": null
+      },
+      "canonicalKey": "568344",
+      "categories": [
+        "databases"
+      ],
+      "created": "2026-08-17T19:54:52.7452533Z",
+      "createdJst": "2026-08-18",
+      "description": "You can now benefit from enhanced resilience with the public preview of zone redundancy for Azure SQL Managed Instance Next-gen General Purpose. This update helps you improve business continuity by automatically distributing your compute and data across availability zones, reducing the risk of downtime from localized failures. You gain greater reliability with up to 99.995% uptime without changing your application architecture, while maintaining the cost efficiency and flexibility of the General Purpose tier. With built-in high availability, you can confidently run mission-critical workloads and meet stricter uptime requirements with less operational effort. Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "02d6b12fed7df2448d9cd1be8732a338bac04ec2ab5b6656a240302e28af5758",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "03b817ad1fc942cfcb7b6d6d6a1df3567c0072be8a3aeaab0bfddbabd5e73edb",
+          "modifiedAfter": "2026-08-17T19:54:52.7452533Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568344"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:15:22.643Z",
+          "fingerprint": "02d6b12fed7df2448d9cd1be8732a338bac04ec2ab5b6656a240302e28af5758",
+          "modifiedAfter": "2026-08-17T19:54:52.7452533Z",
+          "modifiedBefore": "2026-08-17T19:54:52.7452533Z",
+          "rawRef": "20261014T101522643Z_detail_568344.json#568344"
+        }
+      ],
+      "ids": [
+        "568344"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "568344",
+      "modified": "2026-08-17T19:54:52.7452533Z",
+      "modifiedJst": "2026-08-18",
+      "productCategories": [
+        "Databases"
+      ],
+      "products": [
+        "Azure SQL Managed Instance"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568344",
+      "status": "In preview",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Public Preview: Zone redundancy for Azure SQL Managed Instance Next-gen General Purpose"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568419",
+      "categories": [
+        "databases"
+      ],
+      "created": "2026-08-13T16:13:22.0109031Z",
+      "createdJst": "2026-08-14",
+      "description": "Pre-upgrade validation checks are now generally available for Azure Database for PostgreSQL flexible server, helping you proactively validate major version upgrade (MVU) readiness before initiating the actual upgrade process. With the general availability of this update, you can now run these checks from both the Azure portal and Azure CLI using the new --validate-only option. With pre-upgrade validation checks, you can independently run upgrade compatibility validations and identify potential blockers ahead of time, helping reduce failed upgrade attempts and improve operational predictability. The validation process checks your server against Azure PostgreSQL upgrade policies and PostgreSQL pg_upgrade --check compatibility requirements, surfacing actionable guidance for issues such as unsupported extensions, replication slots, prepared transactions, configuration mismatches, and other upgrade constraints. By shifting validation from inline execution during upgrade to a proactive pre-flight step, this capability helps improve first-time upgrade success rates, reduce troubleshooting effort, and simplify upgrade planning for production workloads. You can resolve identified issues, rerun validations as needed, and proceed with the upgrade only when your environment is ready. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "245797b7103b1a32dd47e7e0d6377628242fa04963a39079578c474204ea205c",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "4b70c88ce3530e41e6b1ca069e76e6ff147eefc250808ec667aad22da61f114f",
+          "modifiedAfter": "2026-08-13T16:13:22.0109031Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568419"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:15:50.837Z",
+          "fingerprint": "245797b7103b1a32dd47e7e0d6377628242fa04963a39079578c474204ea205c",
+          "modifiedAfter": "2026-08-13T16:13:22.0109031Z",
+          "modifiedBefore": "2026-08-13T16:13:22.0109031Z",
+          "rawRef": "20261014T101550837Z_detail_568419.json#568419"
+        }
+      ],
+      "ids": [
+        "568419"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "568419",
+      "modified": "2026-08-13T16:13:22.0109031Z",
+      "modifiedJst": "2026-08-14",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure Database for PostgreSQL"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568419",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Pre-upgrade validation checks for Azure Database for PostgreSQL Flexible Server "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "September",
+          "ring": "Retirement",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568457",
+      "categories": [
+        "ai",
+        "security"
+      ],
+      "created": "2026-08-12T19:41:20.8388416Z",
+      "createdJst": "2026-08-13",
+      "description": "On September 14, 2026 we will retire the containerized data connector agent for the Microsoft Sentinel solution for SAP applications. After this date the agent will be permanently disabled and will stop sending SAP logs to Microsoft Sentinel.The SAP agentless data connector is generally available and is the replacement. Creation of new containerized agents is already disabled.How this affects you:If you use the containerized agent, SAP log collection through it stops on 14 September 2026. Analytics rules, workbooks, hunting queries and playbooks that rely on this data will stop returning results for the affected SAP systems. Customers already using the agentless connector are not affected. There is no change to pricing or billing meters.What you need to do:Migrate to the SAP agentless data connector before September 14, 2026. Migration runs side-by-side with no gap in coverage: deploy the agentless connector alongside your existing agent, validate log ingestion, then decommission the agent. Your existing analytics rules, workbooks and playbooks keep working throughout.Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "8ce224bc60c5edadf191d0a729d8311ca68b47b310222317279379309e9c1fd4",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "20b9878e80dd4af162e91e48e57ed4a1af705824bd4f0289306ca383378df640",
+          "modifiedAfter": "2026-08-12T19:41:20.8388416Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568457"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:15:55.535Z",
+          "fingerprint": "8ce224bc60c5edadf191d0a729d8311ca68b47b310222317279379309e9c1fd4",
+          "modifiedAfter": "2026-08-12T19:41:20.8388416Z",
+          "modifiedBefore": "2026-08-12T19:41:20.8388416Z",
+          "rawRef": "20261014T101555535Z_detail_568457.json#568457"
+        }
+      ],
+      "ids": [
+        "568457"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "retire-tag",
+          "retire-ring",
+          "retire-title",
+          "security-tag"
+        ],
+        "score": 15,
+        "topics": [
+          "retirement",
+          "security"
+        ]
+      },
+      "latestId": "568457",
+      "modified": "2026-08-12T19:41:20.8388416Z",
+      "modifiedJst": "2026-08-13",
+      "productCategories": [
+        "Hybrid + multicloud",
+        "Security"
+      ],
+      "products": [
+        "Microsoft Sentinel"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568457",
+      "status": null,
+      "tags": [
+        "Retirements",
+        "Security"
+      ],
+      "title": "Retirement: Containerized data connector agent for the Microsoft Sentinel solution for SAP applications"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "July",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-07",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568591",
+      "categories": [
+        "other"
+      ],
+      "created": "2026-07-31T22:32:52.9651589Z",
+      "createdJst": "2026-08-01",
+      "description": "Eligible SaaS products on Microsoft Marketplace now support a simplified purchase experience in Azure portal. Customers can review plan, billing, resource group, contact details, and terms information on a single page for completing the purchase. This experience isn’t currently supported for SaaS offers that use a custom purchasing experience (i.e. Azure native integrations, Model-as-a-Service, Secure Exchange products, etc.).Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "803230151c2a853a7af9515363de499901efc9fb07be84281410d308162755b3",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "92977cdabee551014dddde1f29c3073f07df745e107cf09641a09e0fd4167f17",
+          "modifiedAfter": "2026-07-31T22:32:52.9651589Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568591"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:17:22.099Z",
+          "fingerprint": "803230151c2a853a7af9515363de499901efc9fb07be84281410d308162755b3",
+          "modifiedAfter": "2026-07-31T22:32:52.9651589Z",
+          "modifiedBefore": "2026-07-31T22:32:52.9651589Z",
+          "rawRef": "20261014T101722099Z_detail_568591.json#568591"
+        }
+      ],
+      "ids": [
+        "568591"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "568591",
+      "modified": "2026-07-31T22:32:52.9651589Z",
+      "modifiedJst": "2026-08-01",
+      "productCategories": [],
+      "products": [],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568591",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Single-click purchase for public SaaS offers"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "July",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-07",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568600",
+      "categories": [
+        "compute",
+        "security"
+      ],
+      "created": "2026-08-03T19:56:26.5778098Z",
+      "createdJst": "2026-08-04",
+      "description": "Trusted Launch as Default (TLaD) is now generally available for new Azure Gen2 virtual machines and virtual machine scale sets. TLaD automatically enables Secure Boot and vTPM for supported deployments, helping customers establish a stronger security baseline for workloads at no additional cost.New Gen2 VMs deployed through Azure Portal, Azure CLI, and Azure PowerShell automatically use Trusted Launch by default. Customers deploying through ARM templates, Bicep, Terraform, and Azure SDKs can extend the same experience with a one-time subscription registration. Existing VMs remain unchanged, and any explicitly configured security settings continue to be honored.Trusted Launch is available on supported x64 and Arm64 Gen2 VM sizes across Azure public, Azure Government, and Azure China regions.Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "e283c13eb5ea2dbd4bdc19887f77daae14dea5413259351aa4344ac1a4615922",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "5508fca0df4f9d80f1ac712b8d55c24e52d155b8cbce2426d3711c1aa02717e1",
+          "modifiedAfter": "2026-08-03T19:56:26.5778098Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568600"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:17:14.044Z",
+          "fingerprint": "e283c13eb5ea2dbd4bdc19887f77daae14dea5413259351aa4344ac1a4615922",
+          "modifiedAfter": "2026-08-03T19:56:26.5778098Z",
+          "modifiedBefore": "2026-08-03T19:56:26.5778098Z",
+          "rawRef": "20261014T101714044Z_detail_568600.json#568600"
+        }
+      ],
+      "ids": [
+        "568600"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title",
+          "pricing-tag"
+        ],
+        "score": 15,
+        "topics": [
+          "ga",
+          "pricing",
+          "security"
+        ]
+      },
+      "latestId": "568600",
+      "modified": "2026-08-03T19:56:26.5778098Z",
+      "modifiedJst": "2026-08-04",
+      "productCategories": [
+        "Compute"
+      ],
+      "products": [
+        "Virtual Machine Scale Sets",
+        "Virtual Machines"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568600",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Pricing & Offerings",
+        "Security"
+      ],
+      "title": "Generally Available: Trusted Launch as Default"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568605",
+      "categories": [
+        "networking",
+        "ops-governance"
+      ],
+      "created": "2026-08-04T17:03:38.4537329Z",
+      "createdJst": "2026-08-05",
+      "description": "Azure Virtual Network routing appliance is now generally\navailable. It delivers private connectivity across virtual networks, using\nspecialized hardware for low latency, high throughput, and better performance\nthan virtual machines. Key benefits and functionalities: High-bandwidth east-west routing: provisioned bandwidth tiers up\nto 200 Gbps per instance.  Dual-stack and IPv6 at scale: IPv4, IPv6, and dual-stack virtual\nnetworks, including IPv6 access control list enforcement.  Scale-out private access: global and cross-region private\nendpoint support through a single appliance.  No operational overhead: fully managed with built-in high\navailability and availability zone resiliency.  Built-in monitoring: throughput, packet, and flow metrics\navailable in Azure Monitor with no diagnostic configuration required. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "8da4fb75fbad8444d0bf5e54a4bbc010951115a8f0c6e065be1ace33d511bb0c",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "5b0b21743fcbcd1a35624812b3b6d49f3ee631b4d212da6ebf538b4278462178",
+          "modifiedAfter": "2026-08-04T17:03:38.4537329Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568605"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:17:07.674Z",
+          "fingerprint": "8da4fb75fbad8444d0bf5e54a4bbc010951115a8f0c6e065be1ace33d511bb0c",
+          "modifiedAfter": "2026-08-04T17:03:38.4537329Z",
+          "modifiedBefore": "2026-08-04T17:03:38.4537329Z",
+          "rawRef": "20261014T101707674Z_detail_568605.json#568605"
+        }
+      ],
+      "ids": [
+        "568605"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "568605",
+      "modified": "2026-08-04T17:03:38.4537329Z",
+      "modifiedJst": "2026-08-05",
+      "productCategories": [
+        "Networking"
+      ],
+      "products": [
+        "Virtual Network"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568605",
+      "status": "Launched",
+      "tags": [
+        "Feature",
+        "Management",
+        "Services"
+      ],
+      "title": "Generally Available: Azure Virtual Network routing appliance"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "July",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-07",
+        "privatePreview": null
+      },
+      "canonicalKey": "568631",
+      "categories": [
+        "networking"
+      ],
+      "created": "2026-07-31T20:48:35.6960868Z",
+      "createdJst": "2026-08-01",
+      "description": "Route maps for Azure Route Server are now available in\npublic preview, providing fine-grained control over inbound and outbound routing\nacross hybrid connections. Customers can manage routes advertised to and from\nAzure Route Server BGP peerings with Network Virtual Appliances (NVAs),\nExpressRoute gateways, and VPN gateways in the same virtual network. Route-maps\nprovide the following capabilities: Route summarization: Summarize routes\nwhen on-premises networks connect to the virtual network through ExpressRoute\nor VPN. Route control: Control routes entering\nand leaving Azure Route Server between on-premises networks, NVAs, and virtual\nnetworks. Path selection: Modify BGP attributes\nsuch as AS-PATH to make routes more or less preferred. Route tagging: Tag routes by using the\nBGP Community attribute. Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "7e2691e2b4b27c82d0f3d02cb4deabd3be56da2e6bd3d6d5f625b9c75587fed8",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "b793d513d8912ef241a2709c60f79dcba16cc8f1d016bd9eb54920a7bd3b1720",
+          "modifiedAfter": "2026-07-31T20:48:35.6960868Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568631"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:17:28.392Z",
+          "fingerprint": "7e2691e2b4b27c82d0f3d02cb4deabd3be56da2e6bd3d6d5f625b9c75587fed8",
+          "modifiedAfter": "2026-07-31T20:48:35.6960868Z",
+          "modifiedBefore": "2026-07-31T20:48:35.6960868Z",
+          "rawRef": "20261014T101728392Z_detail_568631.json#568631"
+        }
+      ],
+      "ids": [
+        "568631"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "568631",
+      "modified": "2026-07-31T20:48:35.6960868Z",
+      "modifiedJst": "2026-08-01",
+      "productCategories": [
+        "Networking"
+      ],
+      "products": [
+        "Azure Route Server"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568631",
+      "status": "In preview",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Public Preview: Route-Maps for Azure Route Server"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "September",
+          "ring": "Retirement",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568661",
+      "categories": [
+        "compute"
+      ],
+      "created": "2026-08-05T00:22:49.4777616Z",
+      "createdJst": "2026-08-05",
+      "description": "On September 1, 2026,\nthe cc_v5 confidential VM series will be retired and will no longer be\navailable for use or purchase. Any affected VM that has not been resized before\nthat date will deallocated. The impacted VM sizes that will be retired are: DCas_cc_v5,\nDCads_cc_v5, ECas_cc_v5, and ECads_cc_v5. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "c988296eb3d5a5e8be060f54bb479f2a0c6a36ea8dc8bfde2c80c8b32ce0dacd",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "b3adfe4a895457deef14d548ec283ead68458fdd49f011cd374119082e645329",
+          "modifiedAfter": "2026-08-05T00:22:49.4777616Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568661"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:51.774Z",
+          "fingerprint": "c988296eb3d5a5e8be060f54bb479f2a0c6a36ea8dc8bfde2c80c8b32ce0dacd",
+          "modifiedAfter": "2026-08-05T00:22:49.4777616Z",
+          "modifiedBefore": "2026-08-05T00:22:49.4777616Z",
+          "rawRef": "20261014T101651774Z_detail_568661.json#568661"
+        }
+      ],
+      "ids": [
+        "568661"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "retire-tag",
+          "retire-ring",
+          "retire-title"
+        ],
+        "score": 10,
+        "topics": [
+          "retirement"
+        ]
+      },
+      "latestId": "568661",
+      "modified": "2026-08-05T00:22:49.4777616Z",
+      "modifiedJst": "2026-08-05",
+      "productCategories": [
+        "Compute"
+      ],
+      "products": [
+        "Virtual Machines"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568661",
+      "status": null,
+      "tags": [
+        "Retirements"
+      ],
+      "title": "Retirement: Nested confidential (cc_v5) VMs will be retired on September 1, 2026"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-08",
+        "privatePreview": null
+      },
+      "canonicalKey": "568666",
+      "categories": [
+        "networking"
+      ],
+      "created": "2026-08-07T15:52:31.9732846Z",
+      "createdJst": "2026-08-08",
+      "description": "Azure ExpressRoute resiliency guard is now available in public preview for ExpressRoute virtual\nnetwork gateways. The new resiliency model property lets you specify whether a\ngateway is intended for a single-homed or multi-homed configuration, helping\nalign your deployment with the resiliency requirements of your workloads.\nFor multi-homed gateways, resiliency guard guides you to connect either two\nExpressRoute circuits in different peering locations or an ExpressRoute Metro\ncircuit. Portal guidance and configuration safeguards help identify incomplete\nsetups and reduce the risk of changes that could weaken gateway resiliency.\nSingle-homed configurations remain available for workloads that do not require\nmulti-site resiliency. Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "0ea100017e6608b04f812ad32e29183c63c1c8539f7d325a72610b7d4230ed0f",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "f08bb179049fd02381bd812cb55f4f3ecb774a8116cf5325e3a5591736a8c4fa",
+          "modifiedAfter": "2026-08-07T15:52:31.9732846Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568666"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:26.215Z",
+          "fingerprint": "0ea100017e6608b04f812ad32e29183c63c1c8539f7d325a72610b7d4230ed0f",
+          "modifiedAfter": "2026-08-07T15:52:31.9732846Z",
+          "modifiedBefore": "2026-08-07T15:52:31.9732846Z",
+          "rawRef": "20261014T101626215Z_detail_568666.json#568666"
+        }
+      ],
+      "ids": [
+        "568666"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "568666",
+      "modified": "2026-08-07T15:52:31.9732846Z",
+      "modifiedJst": "2026-08-08",
+      "productCategories": [
+        "Hybrid + multicloud",
+        "Networking"
+      ],
+      "products": [
+        "Azure ExpressRoute"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568666",
+      "status": "In preview",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Public Preview: Azure ExpressRoute resiliency guard"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568825",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-08-05T14:54:08.7570035Z",
+      "createdJst": "2026-08-05",
+      "description": "Azure Firewall explicit proxy is now\ngenerally available. Explicit proxy enables customers to configure applications\nand browsers to send HTTP and HTTPS traffic directly to Azure Firewall using\nproxy settings, providing an alternative to route-based traffic steering and\nenabling more granular control over outbound web traffic. The GA release builds on extensive customer\nvalidation during public preview, where explicit proxy was enabled across 300+\nAzure subscriptions and adopted by approximately 40 S500 customers.\nCustomer feedback gathered during preview directly influenced several key\nenhancements delivered as part of GA, including support for serving both HTTP\nand HTTPS destinations through a single proxy endpoint, Managed Identity-based\nPAC file retrieval, and an improved portal configuration experience. A key customer use case for explicit proxy\nis Azure Arc onboarding in hybrid environments. Organizations can use\nAzure Firewall as a forward proxy for Arc-enabled servers, enabling secure\nconnectivity to required Microsoft services while maintaining centralized\noutbound access controls. Combined with support for forward proxy migration\nscenarios and application-level traffic steering, Explicit Proxy helps\ncustomers simplify network operations while leveraging Azure Firewall's\nexisting security capabilities. Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "bfbe2cabff5f6e00a60cdec4879b730d328f7e56f27d88cd6febc7bc3a28b884",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "8b8b18a39d7751f1693153e34794e093dc664d7ffa4f81b8080ecebc4f440c2f",
+          "modifiedAfter": "2026-08-05T14:54:08.7570035Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568825"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:48.291Z",
+          "fingerprint": "bfbe2cabff5f6e00a60cdec4879b730d328f7e56f27d88cd6febc7bc3a28b884",
+          "modifiedAfter": "2026-08-05T14:54:08.7570035Z",
+          "modifiedBefore": "2026-08-05T14:54:08.7570035Z",
+          "rawRef": "20261014T101648291Z_detail_568825.json#568825"
+        }
+      ],
+      "ids": [
+        "568825"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "security"
+        ]
+      },
+      "latestId": "568825",
+      "modified": "2026-08-05T14:54:08.7570035Z",
+      "modifiedJst": "2026-08-05",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Firewall"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568825",
+      "status": "Launched",
+      "tags": [
+        "Feature",
+        "Security"
+      ],
+      "title": "Generally Available: Explicit proxy in Azure Firewall "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568830",
+      "categories": [
+        "compute",
+        "containers",
+        "ops-governance"
+      ],
+      "created": "2026-08-13T16:19:56.5989095Z",
+      "createdJst": "2026-08-14",
+      "description": "Control plane metrics collection for Azure Kubernetes Service (AKS), powered by Azure Monitor Managed Service for Prometheus, is now generally available.This capability gives AKS customers native observability into key managed control plane components, including the API server, etcd, kube-scheduler, kube-controller-manager, cluster autoscaler, and node auto-provisioning. With these metrics, platform teams can better understand how workloads, controllers, automation, and scaling activity interact with the AKS control plane over time.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "2df5d6dea91a8fb8506486d1ddc393d7cc74e0211075ada619c152b91e871024",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "9906515fbad8172cdfd059ecf1dca7e86041ca9d01e5286458200d3985cec1aa",
+          "modifiedAfter": "2026-08-13T16:19:56.5989095Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568830"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:15:39.922Z",
+          "fingerprint": "2df5d6dea91a8fb8506486d1ddc393d7cc74e0211075ada619c152b91e871024",
+          "modifiedAfter": "2026-08-13T16:19:56.5989095Z",
+          "modifiedBefore": "2026-08-13T16:19:56.5989095Z",
+          "rawRef": "20261014T101539922Z_detail_568830.json#568830"
+        }
+      ],
+      "ids": [
+        "568830"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "568830",
+      "modified": "2026-08-13T16:19:56.5989095Z",
+      "modifiedJst": "2026-08-14",
+      "productCategories": [
+        "Compute",
+        "Containers",
+        "DevOps",
+        "Management and governance"
+      ],
+      "products": [
+        "Azure Kubernetes Service (AKS)",
+        "Azure Monitor"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568830",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Control plane metrics collection for AKS with Managed Prometheus"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-08",
+        "privatePreview": null
+      },
+      "canonicalKey": "568837",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-08-04T18:30:09.8276034Z",
+      "createdJst": "2026-08-05",
+      "description": "Perimeter link (cross-perimeter\nconnectivity) is a network security perimeter capability that allows trusted\nresources in two different network security perimeters to securely communicate\nwith each other using Managed Identity (MSI), without requiring additional network\nsecurity perimeter access rules or network configuration changes. It preserves\nZero Trust boundaries while enabling controlled service-to-service access\nacross perimeters Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "4f7f003f234c08e7f4edb42a4b1c41d9537fd65e8274ab8e9ed55b161c66d3cf",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "1779ae05fc0dea1bc95b76856f66130c4534bc613e401c1d0972dfb7d1758dfd",
+          "modifiedAfter": "2026-08-04T18:30:09.8276034Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568837"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:55.983Z",
+          "fingerprint": "4f7f003f234c08e7f4edb42a4b1c41d9537fd65e8274ab8e9ed55b161c66d3cf",
+          "modifiedAfter": "2026-08-04T18:30:09.8276034Z",
+          "modifiedBefore": "2026-08-04T18:30:09.8276034Z",
+          "rawRef": "20261014T101655983Z_detail_568837.json#568837"
+        }
+      ],
+      "ids": [
+        "568837"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "security-title"
+        ],
+        "score": 8,
+        "topics": [
+          "security"
+        ]
+      },
+      "latestId": "568837",
+      "modified": "2026-08-04T18:30:09.8276034Z",
+      "modifiedJst": "2026-08-05",
+      "productCategories": [
+        "Networking"
+      ],
+      "products": [
+        "Azure Private Link"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568837",
+      "status": "In preview",
+      "tags": [
+        "Feature",
+        "Security"
+      ],
+      "title": "Public Preview: Perimeter link feature in network security perimeter "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-08",
+        "privatePreview": null
+      },
+      "canonicalKey": "568842",
+      "categories": [
+        "networking"
+      ],
+      "created": "2026-08-04T18:29:36.5381861Z",
+      "createdJst": "2026-08-05",
+      "description": "Azure Private Link over IPv6\nenables you to privately access Azure PaaS services, such as Azure Storage and\nAzure SQL Database, over IPv6-based connectivity. You can now use IPv6 private\nendpoints to connect from IPv6 clients in an Azure virtual network or from\non-premises networks over ExpressRoute. Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "cabe422519da1abf1162950aa018c2400f0d19bcc97b6de6699b1af2253afdce",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "7f33a683e57aeccad7fd02530eea70aff2fee647ce469e67d8be5ee7c632c3d6",
+          "modifiedAfter": "2026-08-04T18:29:36.5381861Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568842"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:59.594Z",
+          "fingerprint": "cabe422519da1abf1162950aa018c2400f0d19bcc97b6de6699b1af2253afdce",
+          "modifiedAfter": "2026-08-04T18:29:36.5381861Z",
+          "modifiedBefore": "2026-08-04T18:29:36.5381861Z",
+          "rawRef": "20261014T101659594Z_detail_568842.json#568842"
+        }
+      ],
+      "ids": [
+        "568842"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "568842",
+      "modified": "2026-08-04T18:29:36.5381861Z",
+      "modifiedJst": "2026-08-05",
+      "productCategories": [
+        "Networking"
+      ],
+      "products": [
+        "Azure Private Link"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568842",
+      "status": "In preview",
+      "tags": [
+        "Features"
+      ],
+      "title": "Public Preview: Azure Private Link support over IPv6 "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568905",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-08-05T22:34:02.6510143Z",
+      "createdJst": "2026-08-06",
+      "description": "The SharePoint connector for Azure Databricks is now generally\navailable. Organizations can use Lakeflow Connect to ingest files from\nSharePoint into Azure Databricks, helping unify enterprise content with data\nand AI workflows on Azure. The connector supports incremental ingestion, Unity\nCatalog governance, and multiple authentication methods for enterprise-scale\ndeployments.  Learn\nmore.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "ab83a5d91b29bd2dcb6dd4b187c4e5cf22c147c2659702e7606f5ed34424141d",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "b91d7659f85fa15c873f48616266147a9e75558194bbbe794e955e1d39457c44",
+          "modifiedAfter": "2026-08-05T22:34:02.6510143Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568905"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:40.724Z",
+          "fingerprint": "ab83a5d91b29bd2dcb6dd4b187c4e5cf22c147c2659702e7606f5ed34424141d",
+          "modifiedAfter": "2026-08-05T22:34:02.6510143Z",
+          "modifiedBefore": "2026-08-05T22:34:02.6510143Z",
+          "rawRef": "20261014T101640724Z_detail_568905.json#568905"
+        }
+      ],
+      "ids": [
+        "568905"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "568905",
+      "modified": "2026-08-05T22:34:02.6510143Z",
+      "modifiedJst": "2026-08-06",
+      "productCategories": [
+        "AI + machine learning",
+        "Analytics"
+      ],
+      "products": [
+        "Azure Databricks"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568905",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: SharePoint Connector for Azure Databricks"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568910",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-08-05T22:32:45.6981636Z",
+      "createdJst": "2026-08-06",
+      "description": "Unity AI Gateway is now generally available on Azure Databricks.\nUnity AI Gateway provides centralized governance for AI models, agents, tools,\nand MCP services, helping organizations monitor usage, manage costs, apply\nguardrails, and enforce access controls across AI workloads. Built on Unity\nCatalog, it extends governance capabilities across both Azure Databricks and\nexternal AI services.  Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "34765057d0b8c8c2b7830790255cf3dd64c5c76594323f9261c6ad28167213e3",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "b5541cc75ee9870c9fa7c08297999277f4d7d333315cb920964da6b1b5be8eee",
+          "modifiedAfter": "2026-08-05T22:32:45.6981636Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568910"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:43.978Z",
+          "fingerprint": "34765057d0b8c8c2b7830790255cf3dd64c5c76594323f9261c6ad28167213e3",
+          "modifiedAfter": "2026-08-05T22:32:45.6981636Z",
+          "modifiedBefore": "2026-08-05T22:32:45.6981636Z",
+          "rawRef": "20261014T101643978Z_detail_568910.json#568910"
+        }
+      ],
+      "ids": [
+        "568910"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "568910",
+      "modified": "2026-08-05T22:32:45.6981636Z",
+      "modifiedJst": "2026-08-06",
+      "productCategories": [
+        "AI + machine learning",
+        "Analytics"
+      ],
+      "products": [
+        "Azure Databricks"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568910",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Unity AI Gateway on Azure Databricks"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568952",
+      "categories": [
+        "compute"
+      ],
+      "created": "2026-08-18T17:26:25.0178405Z",
+      "createdJst": "2026-08-19",
+      "description": "Managed Instance on Azure App Service is now generally available. Managed Instance helps organizations migrate web applications to Azure App Service with minimal configuration and no code changes. Applications running on-premises or in virtual machines can move to a fully managed PaaS environment while maintaining compatibility with Windows-specific dependencies.Many business-critical .NET applications rely on Windows services, third-party libraries, custom runtimes, and other components that can make modernization challenging. Managed Instance enables these applications to run on Azure App Service while preserving compatibility and reducing operational overhead.Key benefits include:Built-in App Service capabilities such as autoscale, resiliency, zone redundancy, and Azure service integration.Administrative control through Azure Bastion-enabled RDP access, custom scripts, registry adapters, storage mounts, and identity management.Support for complex workloads, including classic .NET Framework applications, without code changes.Enterprise-ready capabilities, including a 99.95% SLA, Premium v4 performance, Azure Policy integration, Microsoft Defender for Cloud support, and deployment through Bicep, Terraform, and ARM templates.Get started by assessing eligible workloads with Azure Migrate and deploying through the Azure portal, Azure CLI, or infrastructure-as-code tools.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "62c24076b0251db1bbf045c7bb7cabccdcb32ee8c4661426849684ae82294653",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "dbead77b5b289583dcce2c7b37fad2bd56d208927a4e1305e0c014da6a11d6d9",
+          "modifiedAfter": "2026-08-18T17:26:25.0178405Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568952"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:15:12.360Z",
+          "fingerprint": "62c24076b0251db1bbf045c7bb7cabccdcb32ee8c4661426849684ae82294653",
+          "modifiedAfter": "2026-08-18T17:26:25.0178405Z",
+          "modifiedBefore": "2026-08-18T17:26:25.0178405Z",
+          "rawRef": "20261014T101512360Z_detail_568952.json#568952"
+        }
+      ],
+      "ids": [
+        "568952"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "568952",
+      "modified": "2026-08-18T17:26:25.0178405Z",
+      "modifiedJst": "2026-08-19",
+      "productCategories": [
+        "Compute",
+        "Mobile",
+        "Web"
+      ],
+      "products": [
+        "App Service"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568952",
+      "status": "Launched",
+      "tags": [
+        "Feature",
+        "Services"
+      ],
+      "title": "Generally Available: Managed Instance on Azure App Service"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Effective",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568964",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-08-06T19:41:52.4567965Z",
+      "createdJst": "2026-08-07",
+      "description": "Free usage of Genie One and Genie Agents in Azure Databricks is now extended through January 31, 2027, from the previous end date of July 31, 2026. Budget controls do not apply to these products during the promotional period. The promotion covers usage by users only - service principals are excluded, and their Genie One and Genie Agents usage continues to be billed. Genie Code is not included in this promotion: each Genie Code user continues to receive 150 free Databricks units (DBUs) per month, and usage above that allowance receives a 25% promotional discount through January 31, 2027, combined with applicable discounts on the Serverless Real-Time Inference SKU. Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "b78f718d917433fc310540d8eab101a6aa17ed84dc3fa13cadc09e5d2c726395",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "30a7c5d5cd88a1cda6a78306b2769202ed26bb4c6cd75094edaf7a0eec530762",
+          "modifiedAfter": "2026-08-06T19:41:52.4567965Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568964"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:32.913Z",
+          "fingerprint": "b78f718d917433fc310540d8eab101a6aa17ed84dc3fa13cadc09e5d2c726395",
+          "modifiedAfter": "2026-08-06T19:41:52.4567965Z",
+          "modifiedBefore": "2026-08-06T19:41:52.4567965Z",
+          "rawRef": "20261014T101632913Z_detail_568964.json#568964"
+        }
+      ],
+      "ids": [
+        "568964"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "568964",
+      "modified": "2026-08-06T19:41:52.4567965Z",
+      "modifiedJst": "2026-08-07",
+      "productCategories": [
+        "AI + machine learning",
+        "Analytics"
+      ],
+      "products": [
+        "Azure Databricks"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568964",
+      "status": null,
+      "tags": [
+        "Announcement"
+      ],
+      "title": "Announcing:  Azure Databricks Genie One and Genie Agents Free Usage extended through January 31, 2027 "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "July",
+          "ring": "Private Preview",
+          "year": 2026
+        },
+        {
+          "month": "August",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-08",
+        "privatePreview": "2026-07"
+      },
+      "canonicalKey": "568979",
+      "categories": [
+        "compute",
+        "ai"
+      ],
+      "created": "2026-08-12T16:38:31.6495985Z",
+      "createdJst": "2026-08-13",
+      "description": "Today, we are announcing the public preview of Markdown for Agents in Azure App Service. This feature gives AI agents and other tools a cleaner way to consume content from an App Service app. When a client requests Markdown, App Service can automatically convert the app's HTML response to Markdown without requiring changes to the application code. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "a5caeb22035f70be0fe38d165bd6850de15898913f5049f09d7d7b4024ffb9f1",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "d9fc3de846ef116f0120a1501dc04d1c47c6be4db64d2d1cfa16602365649b53",
+          "modifiedAfter": "2026-08-12T16:38:31.6495985Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#568979"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:12.363Z",
+          "fingerprint": "a5caeb22035f70be0fe38d165bd6850de15898913f5049f09d7d7b4024ffb9f1",
+          "modifiedAfter": "2026-08-12T16:38:31.6495985Z",
+          "modifiedBefore": "2026-08-12T16:38:31.6495985Z",
+          "rawRef": "20261014T101612363Z_detail_568979.json#568979"
+        }
+      ],
+      "ids": [
+        "568979"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "568979",
+      "modified": "2026-08-12T16:38:31.6495985Z",
+      "modifiedJst": "2026-08-13",
+      "productCategories": [
+        "Compute",
+        "Mobile",
+        "Web"
+      ],
+      "products": [
+        "App Service"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568979",
+      "status": "In preview",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Public Preview: Markdown for Agents in Azure App Service"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569051",
+      "categories": [
+        "compute"
+      ],
+      "created": "2026-08-19T17:20:42.1113638Z",
+      "createdJst": "2026-08-20",
+      "description": "Today, we are announcing the General Availability of VM vCore Customization for Azure Virtual Machines, introducing two new capabilities: Disable Simultaneous Multi-Threading/Hyper-Threading (SMT/HT) and Configurable Constrained Cores. These features provide greater control over virtual CPU configurations, helping customers optimize performance while reducing software licensing costs.With VM vCore Customization, customers can now disable SMT/HT on supported VMs to provide workloads exclusive access to physical cores for improved latency consistency and performance. Customers can also select from supported vCPU counts to align with software licensing requirements or workload demands without changing the VM's memory, storage, or network bandwidth.By decoupling active core count from VM size, organizations can deploy larger-memory or higher-bandwidth VMs while activating only the vCores they need. This is especially valuable for licensed software workloads such as SQL Server, Oracle, and SAP, where licensing costs are tied to core count.VM vCore Customization is now available in all Azure public regions and includes support for Virtual Machine Scale Sets (VMSS) Uniform orchestration mode. Customers can configure these capabilities through the Azure portal, ARM templates, Azure CLI, and PowerShell. Support is currently available for first-party Azure operating system images. Marketplace images that include third-party licensing are not supported.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "d028930ff1788c84aee8258044f0117f34d265b564b1c45c75ad820e4826f6a9",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "25b888988c3c59c1b15aaecdacd3850ab4de50f73a36ff80186406d0ae9fd58c",
+          "modifiedAfter": "2026-08-19T17:20:42.1113638Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569051"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:15:00.843Z",
+          "fingerprint": "d028930ff1788c84aee8258044f0117f34d265b564b1c45c75ad820e4826f6a9",
+          "modifiedAfter": "2026-08-19T17:20:42.1113638Z",
+          "modifiedBefore": "2026-08-19T17:20:42.1113638Z",
+          "rawRef": "20261014T101500843Z_detail_569051.json#569051"
+        }
+      ],
+      "ids": [
+        "569051"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "569051",
+      "modified": "2026-08-19T17:20:42.1113638Z",
+      "modifiedJst": "2026-08-20",
+      "productCategories": [
+        "Compute"
+      ],
+      "products": [
+        "Virtual Machines"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569051",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: vCore Customization: Disable Multithreading and Configurable Constrained Cores  "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Effective",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569140",
+      "categories": [
+        "other"
+      ],
+      "created": "2026-08-10T17:50:54.0025923Z",
+      "createdJst": "2026-08-11",
+      "description": "Starting August 23, 2026, Microsoft Fabric will enable Item Recovery by default for tenants that have not explicitly configured the setting. Supported item types will have a 3-day recovery window by default. Admins can review or change this setting in the Fabric admin portal under Tenant settings > Item Recovery.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "1dd7323830856a56f58cda1023b54c539c82da740561f1fe8d456f9b8235f103",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "4467eef8721c341113c8321e62cc35de8620565353ed6fd72bf65ed42b0d840b",
+          "modifiedAfter": "2026-08-10T17:50:54.0025923Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569140"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:21.705Z",
+          "fingerprint": "1dd7323830856a56f58cda1023b54c539c82da740561f1fe8d456f9b8235f103",
+          "modifiedAfter": "2026-08-10T17:50:54.0025923Z",
+          "modifiedBefore": "2026-08-10T17:50:54.0025923Z",
+          "rawRef": "20261014T101621705Z_detail_569140.json#569140"
+        }
+      ],
+      "ids": [
+        "569140"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "569140",
+      "modified": "2026-08-10T17:50:54.0025923Z",
+      "modifiedJst": "2026-08-11",
+      "productCategories": [
+        "Analytics"
+      ],
+      "products": [
+        "Microsoft Fabric"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569140",
+      "status": null,
+      "tags": [
+        "Announcement"
+      ],
+      "title": "Announcing: Microsoft Fabric Item Recovery will be enabled by default for tenants without an explicit setting"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569145",
+      "categories": [
+        "databases"
+      ],
+      "created": "2026-08-19T21:01:47.4699862Z",
+      "createdJst": "2026-08-20",
+      "description": "In mid-August 2026, the following updates and enhancements were made to Azure SQL: You can customize keyboard shortcuts for Quick Queries, the Results Grid, and the Query Editor directly within Visual Studio Code—without leaving your editor. Shortcut Configuration helps you complete your data tasks faster. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "5628faca1ad74921ffba13fc695ec7c0ef4187f2acf93232f61b74ea67ae3229",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "83ce17ec9352147809d5db6be4a4bc955034c13edf175f9d7944be206c242a27",
+          "modifiedAfter": "2026-08-19T21:01:47.4699862Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569145"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:49.903Z",
+          "fingerprint": "5628faca1ad74921ffba13fc695ec7c0ef4187f2acf93232f61b74ea67ae3229",
+          "modifiedAfter": "2026-08-19T21:01:47.4699862Z",
+          "modifiedBefore": "2026-08-19T21:01:47.4699862Z",
+          "rawRef": "20261014T101449903Z_detail_569145.json#569145"
+        }
+      ],
+      "ids": [
+        "569145"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "569145",
+      "modified": "2026-08-19T21:01:47.4699862Z",
+      "modifiedJst": "2026-08-20",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure SQL Database"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569145",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Azure SQL updates for mid-August 2026 "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-08",
+        "privatePreview": null
+      },
+      "canonicalKey": "569155",
+      "categories": [
+        "databases"
+      ],
+      "created": "2026-08-19T21:00:19.4445006Z",
+      "createdJst": "2026-08-20",
+      "description": "With SQL Formatter, you can format SQL scripts directly in your editor for cleaner, more consistent, and readable code. Now in public preview, it includes more customizable formatting options to match your preferred coding style and streamline development.  Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "2d1743b7ba439e0e37f2ea5d6206df91bdb06120ced766cd2bfe5e10b6441a8d",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "da895a04c6d1204dea0dfef45a95c4e7131f62c151508eb98d10a1cbc6fda2ba",
+          "modifiedAfter": "2026-08-19T21:00:19.4445006Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569155"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:53.212Z",
+          "fingerprint": "2d1743b7ba439e0e37f2ea5d6206df91bdb06120ced766cd2bfe5e10b6441a8d",
+          "modifiedAfter": "2026-08-19T21:00:19.4445006Z",
+          "modifiedBefore": "2026-08-19T21:00:19.4445006Z",
+          "rawRef": "20261014T101453212Z_detail_569155.json#569155"
+        }
+      ],
+      "ids": [
+        "569155"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "569155",
+      "modified": "2026-08-19T21:00:19.4445006Z",
+      "modifiedJst": "2026-08-20",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure SQL Database"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569155",
+      "status": "In preview",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Public Preview: SQL Formatter in MSSQL extension "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569160",
+      "categories": [
+        "databases"
+      ],
+      "created": "2026-08-19T20:59:19.2601578Z",
+      "createdJst": "2026-08-20",
+      "description": "With Azure SQL Database provisioning, you can create and connect to a fully managed cloud database directly from your editor—at no cost. Now generally available, the feature also includes ready-to-use Azure Resource Manager (ARM), Bicep, and Terraform templates for repeatable deployments, along with additional options to help you get started faster. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "1e47cb8e87cc86092e5b5df4a554e88b50e9ffb3bda9015223c39f887a070a75",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "1d7af1d18b564793bb11b5f077757a359e5b224a4f38542500c1a4e4015f3e76",
+          "modifiedAfter": "2026-08-19T20:59:19.2601578Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569160"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:57.571Z",
+          "fingerprint": "1e47cb8e87cc86092e5b5df4a554e88b50e9ffb3bda9015223c39f887a070a75",
+          "modifiedAfter": "2026-08-19T20:59:19.2601578Z",
+          "modifiedBefore": "2026-08-19T20:59:19.2601578Z",
+          "rawRef": "20261014T101457571Z_detail_569160.json#569160"
+        }
+      ],
+      "ids": [
+        "569160"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "569160",
+      "modified": "2026-08-19T20:59:19.2601578Z",
+      "modifiedJst": "2026-08-20",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure SQL Database"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569160",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Azure SQL Database provisioning in MSSQL extension "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569246",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-08-12T17:03:08.2202194Z",
+      "createdJst": "2026-08-13",
+      "description": "Batch rule updates are now generally\navailable for Azure Front Door Standard and Premium. This capability enables\ncustomers to add, update, delete, or reorder multiple rules in a rule set as a\ncoordinated operation, ensuring that all changes are applied together or not\napplied at all. Batch rule updates improve deployment\nsafety and predictability for customers managing large or complex rule sets\nthrough Terraform and other Infrastructure-as-Code workflows. They help prevent\npartial rule states, rule-order conflicts, deployment retries, and rollback\ncomplexity that can occur when related rules are updated individually. Customers explicitly enable batch mode when\ncreating a new rule set and submit the complete desired rule configuration.\nAzure Front Door then applies the changes together at the rule-set level.\nExisting rule sets continue to use classic rule management by default,\npreserving full backward compatibility. Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "aa30c4a8ccc43b76c415aeee38bfdca95547621e3bcb4a6006bc2e808b76da83",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "3a07af2fb228653918bf386e49d2b262ddaf77147012caa79219fe659b04e20e",
+          "modifiedAfter": "2026-08-12T17:03:08.2202194Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569246"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:00.349Z",
+          "fingerprint": "aa30c4a8ccc43b76c415aeee38bfdca95547621e3bcb4a6006bc2e808b76da83",
+          "modifiedAfter": "2026-08-12T17:03:08.2202194Z",
+          "modifiedBefore": "2026-08-12T17:03:08.2202194Z",
+          "rawRef": "20261014T101600349Z_detail_569246.json#569246"
+        }
+      ],
+      "ids": [
+        "569246"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "569246",
+      "modified": "2026-08-12T17:03:08.2202194Z",
+      "modifiedJst": "2026-08-13",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Front Door"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569246",
+      "status": "Launched",
+      "tags": [
+        "Features"
+      ],
+      "title": "Generally Available: Batch rule updates for Azure Front Door "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-08",
+        "privatePreview": null
+      },
+      "canonicalKey": "569251",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-08-12T17:01:19.0043426Z",
+      "createdJst": "2026-08-13",
+      "description": "Mutual TLS, also known as client\ncertificate authentication, enables Azure Front Door to authenticate clients\nusing X.509 certificates before requests reach an application. It helps protect\nsensitive applications and APIs across business-to-business, Internet of\nThings, financial services, VPN, and enterprise network scenarios.  Customers can choose from four client\ncertificate validation modes: \n Require and validate: A client\n     certificate is mandatory. Azure Front Door validates the certificate at\n     the edge and forwards it to the origin in the X-Azure-ClientCertificate\n     request header. \n Require without validation: A\n     client certificate is mandatory, but Azure Front Door does not validate\n     it. The certificate is forwarded in the X-Azure-ClientCertificate header\n     for validation by the origin. \n Validate when presented: A client\n     certificate is optional. When a certificate is presented, Azure Front Door\n     validates it and forwards it to the origin. Requests without a certificate\n     are allowed to continue. \n Pass through to the origin: A\n     client certificate is optional. Azure Front Door does not validate it but\n     forwards it to the origin when presented, allowing the origin to perform\n     validation.  Azure Front Door supports client\ncertificates issued by public and private certificate authorities. Customers\nupload the trusted certificate authority chain to Azure Key Vault and associate\nit with a Front Door custom domain. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "aefa0d6819d0175a5573b78beff3bbf96197fb3ffd59bd511f8a5ff47aa56ed7",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "abdbb22ed5b0b164b0a97afb7d85a1d180b8b1e4707634cd2ddace753221c570",
+          "modifiedAfter": "2026-08-12T17:01:19.0043426Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569251"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:05.669Z",
+          "fingerprint": "aefa0d6819d0175a5573b78beff3bbf96197fb3ffd59bd511f8a5ff47aa56ed7",
+          "modifiedAfter": "2026-08-12T17:01:19.0043426Z",
+          "modifiedBefore": "2026-08-12T17:01:19.0043426Z",
+          "rawRef": "20261014T101605669Z_detail_569251.json#569251"
+        }
+      ],
+      "ids": [
+        "569251"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "569251",
+      "modified": "2026-08-12T17:01:19.0043426Z",
+      "modifiedJst": "2026-08-13",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Front Door"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569251",
+      "status": "In preview",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Public Preview: Azure Front Door mutual TLS "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569256",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-08-11T17:26:51.8935635Z",
+      "createdJst": "2026-08-12",
+      "description": "Azure Firewall Premium now delivers up to 22 Gbps\nthroughput with TLS inspection and IDPS in Deny mode, a 120% increase from 10\nGbps, and up to 600 Mbps per TCP connection with IDPS enabled in either Alert\nor Deny mode (doubled from 300 Mbps). Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "dfa5c60a14d80d2231bf72d2a1c89f904a7f00e72a6afc2a040d9195a1b7699c",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "f7545f9aeef2c7798f15ae06b9b10f6a3e3dae5ccb0ccbec81e911285db94984",
+          "modifiedAfter": "2026-08-11T17:26:51.8935635Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569256"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:16:16.827Z",
+          "fingerprint": "dfa5c60a14d80d2231bf72d2a1c89f904a7f00e72a6afc2a040d9195a1b7699c",
+          "modifiedAfter": "2026-08-11T17:26:51.8935635Z",
+          "modifiedBefore": "2026-08-11T17:26:51.8935635Z",
+          "rawRef": "20261014T101616827Z_detail_569256.json#569256"
+        }
+      ],
+      "ids": [
+        "569256"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "569256",
+      "modified": "2026-08-11T17:26:51.8935635Z",
+      "modifiedJst": "2026-08-12",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Firewall"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569256",
+      "status": "Launched",
+      "tags": [
+        "Features"
+      ],
+      "title": "Generally Available: 2.2X IDPS performance optimization in Azure Firewall"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569281",
+      "categories": [
+        "storage"
+      ],
+      "created": "2026-08-13T16:17:41.8342302Z",
+      "createdJst": "2026-08-14",
+      "description": "We’re excited to announce the GA\nof Live Resize for shared Premium\nSSD v2 (Pv2) and Ultra data disks. This feature allows you to dynamically\nexpand the storage capacity of your disks without any disruption to your\napplications. To optimize costs, you can start with smaller disks and gradually\nincrease their storage capacity as needed, all without experiencing any\ndowntime.  Learn more.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "e0e16d7761b16169e3f54ca15570217d5b25d26509f4b07a6f4a66c3038d78ea",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "45d63ca79f6705904abc62efde03b7916cede2340f11fdce8e078129a15f3042",
+          "modifiedAfter": "2026-08-13T16:17:41.8342302Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569281"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:15:44.377Z",
+          "fingerprint": "e0e16d7761b16169e3f54ca15570217d5b25d26509f4b07a6f4a66c3038d78ea",
+          "modifiedAfter": "2026-08-13T16:17:41.8342302Z",
+          "modifiedBefore": "2026-08-13T16:17:41.8342302Z",
+          "rawRef": "20261014T101544377Z_detail_569281.json#569281"
+        }
+      ],
+      "ids": [
+        "569281"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "569281",
+      "modified": "2026-08-13T16:17:41.8342302Z",
+      "modifiedJst": "2026-08-14",
+      "productCategories": [
+        "Storage"
+      ],
+      "products": [
+        "Azure Disk Storage"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569281",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Live Resize for Shared Premium SSD v2 and Ultra Data Disks"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Effective",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569353",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-08-14T17:43:51.3792538Z",
+      "createdJst": "2026-08-15",
+      "description": "Azure Databricks Runtime\n10.4 LTS, a Databricks-managed runtime available on Azure Databricks, reached\nend of support on March 18, 2025 and will reach end of life on November 1, 2026. After this date,\nDatabricks Runtime 10.4 LTS will no longer be available or usable, and\nworkloads remaining on this version will no longer run. To avoid disruption,\nmigrate affected clusters and workloads to a supported Databricks Runtime\nversion before November 1, 2026. Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "baedb423c22333a1fd24ed8f86b9bcbf8e1072d9ce965e8d03bbc85f4c37db83",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "bd0d765ec9747acfde05e0c595dd3ec0ad9cbf6959bcb8e7524cd27f8ec1685d",
+          "modifiedAfter": "2026-08-14T17:43:51.3792538Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569353"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:15:34.214Z",
+          "fingerprint": "baedb423c22333a1fd24ed8f86b9bcbf8e1072d9ce965e8d03bbc85f4c37db83",
+          "modifiedAfter": "2026-08-14T17:43:51.3792538Z",
+          "modifiedBefore": "2026-08-14T17:43:51.3792538Z",
+          "rawRef": "20261014T101534214Z_detail_569353.json#569353"
+        }
+      ],
+      "ids": [
+        "569353"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "569353",
+      "modified": "2026-08-14T17:43:51.3792538Z",
+      "modifiedJst": "2026-08-15",
+      "productCategories": [
+        "AI + machine learning",
+        "Analytics"
+      ],
+      "products": [
+        "Azure Databricks"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569353",
+      "status": null,
+      "tags": [
+        "Announcement"
+      ],
+      "title": "Announcing: Azure Databricks Runtime 10.4 LTS will reach end of life on November 1, 2026"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-08",
+        "privatePreview": null
+      },
+      "canonicalKey": "569376",
+      "categories": [
+        "other"
+      ],
+      "created": "2026-08-17T17:08:40.487697Z",
+      "createdJst": "2026-08-18",
+      "description": "Azure Linux on WSL is now available in Public Preview (Beta).  Extending Azure Linux to the developer workstation means that teams can now:Validate behavior using production-aligned configurationsReproduce issues more reliablyReduce time spent debugging cross-environment differencesWith WSL support, teams can now use one Microsoft-supported Linux foundation across development, testing, and production. Now you can use familiar tools such as VS Code and Git locally, then deploy to Azure targets including virtual machines, AKS, and containers.Learn more: Read the blog Overview\nof Azure Linux on WSL ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "158e0de64446bde7effa1e8a6c538feef5ec3be6d34d572f21c97f2e30a59df0",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "e9d7121379c2770818b13d8d9a878a3dcf86981f21ead067607e05f0054f3a0b",
+          "modifiedAfter": "2026-08-17T17:08:40.487697Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569376"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:15:31.591Z",
+          "fingerprint": "158e0de64446bde7effa1e8a6c538feef5ec3be6d34d572f21c97f2e30a59df0",
+          "modifiedAfter": "2026-08-17T17:08:40.487697Z",
+          "modifiedBefore": "2026-08-17T17:08:40.487697Z",
+          "rawRef": "20261014T101531591Z_detail_569376.json#569376"
+        }
+      ],
+      "ids": [
+        "569376"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "569376",
+      "modified": "2026-08-17T17:08:40.487697Z",
+      "modifiedJst": "2026-08-18",
+      "productCategories": [],
+      "products": [
+        "Azure Linux"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569376",
+      "status": "In preview",
+      "tags": [
+        "Feature",
+        "Open Source"
+      ],
+      "title": "Public Preview: Azure Linux on WSL"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569504",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-08-24T17:25:03.0751952Z",
+      "createdJst": "2026-08-25",
+      "description": "Announcing the General Availability of custom block response code and body for WAF integrated with Application Gateway Azure WAF integrated with Application Gateway now supports customizable response status codes and bodies for blocked requests, enabling greater flexibility and control. By default, when the WAF blocks a request due to a matched rule, it returns a 403 status code with a \"The request is blocked\" message. As with WAF with Azure Front Door, now customers can also define a custom response status code and message with Application Gateway when WAF blocks a request. This customization is a policy-level setting, ensuring that all blocked requests receive the same custom response status and message. For further details, please reach out to the Azure WAF product team.Learn\nmore.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "6bc0291e33bedad38c79975721ae80fa0c33d075fbefa52a48f3f4c22eb19a2e",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "54c8846355f7ab5ed2cdbd60f078d3a84ed96b194b821b15a37bc7c57ed272fe",
+          "modifiedAfter": "2026-08-24T17:25:03.0751952Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569504"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:31.239Z",
+          "fingerprint": "6bc0291e33bedad38c79975721ae80fa0c33d075fbefa52a48f3f4c22eb19a2e",
+          "modifiedAfter": "2026-08-24T17:25:03.0751952Z",
+          "modifiedBefore": "2026-08-24T17:25:03.0751952Z",
+          "rawRef": "20261014T101431239Z_detail_569504.json#569504"
+        }
+      ],
+      "ids": [
+        "569504"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "security"
+        ]
+      },
+      "latestId": "569504",
+      "modified": "2026-08-24T17:25:03.0751952Z",
+      "modifiedJst": "2026-08-25",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Application Gateway",
+        "Web Application Firewall"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569504",
+      "status": "Launched",
+      "tags": [
+        "Feature",
+        "Security"
+      ],
+      "title": "Generally Available: Custom block response code and body for Application Gateway WAF "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569515",
+      "categories": [
+        "ops-governance"
+      ],
+      "created": "2026-08-19T16:36:30.9785659Z",
+      "createdJst": "2026-08-20",
+      "description": "Azure Site Recovery now lets you use and attach an existing, pre-provisioned Network Interface Card (NIC) in the target region for test-failover and failover in the Azure-to-Azure scenario. This helps preserve prepared networking configurations, reserve IPs in the target region and more, giving you greater control over the disaster recovery environment. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "c3c4b5b315a51ef29266dbfc99c5e9e1089b27922c971e5e6aefeca0b10c4d4f",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "83810047e2a3dd69aee87986f627ece6f55dab72ba73d1a9b540da73cc4c8199",
+          "modifiedAfter": "2026-08-19T16:36:30.9785659Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569515"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:15:06.728Z",
+          "fingerprint": "c3c4b5b315a51ef29266dbfc99c5e9e1089b27922c971e5e6aefeca0b10c4d4f",
+          "modifiedAfter": "2026-08-19T16:36:30.9785659Z",
+          "modifiedBefore": "2026-08-19T16:36:30.9785659Z",
+          "rawRef": "20261014T101506728Z_detail_569515.json#569515"
+        }
+      ],
+      "ids": [
+        "569515"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "569515",
+      "modified": "2026-08-19T16:36:30.9785659Z",
+      "modifiedJst": "2026-08-20",
+      "productCategories": [
+        "Management and governance",
+        "Migration"
+      ],
+      "products": [
+        "Azure Site Recovery"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569515",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: BYON (Bring Your Own NIC) in Azure Site Recovery"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-08",
+        "privatePreview": null
+      },
+      "canonicalKey": "569520",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-08-18T17:25:30.3598477Z",
+      "createdJst": "2026-08-19",
+      "description": "Azure Firewall now supports IPv6 in public\npreview, enabling customers to configure Azure Firewall and Firewall Policy in\ndual-stack mode for both IPv4 and IPv6 traffic. This preview allows native IPv6\nnetwork-rule filtering and DNS Proxy support, helping organizations secure\ncloud, hybrid, and internal IPv6 traffic as they modernize toward dual-stack\narchitectures. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "99b54d166ec8bfba0ceec4015ec5339cd707ca907a7203a432527a77df0f2b7a",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "637bb9866c903e0658f92adaf96013919a5ed231f343d69d8217439f4949d14b",
+          "modifiedAfter": "2026-08-18T17:25:30.3598477Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569520"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:15:19.181Z",
+          "fingerprint": "99b54d166ec8bfba0ceec4015ec5339cd707ca907a7203a432527a77df0f2b7a",
+          "modifiedAfter": "2026-08-18T17:25:30.3598477Z",
+          "modifiedBefore": "2026-08-18T17:25:30.3598477Z",
+          "rawRef": "20261014T101519181Z_detail_569520.json#569520"
+        }
+      ],
+      "ids": [
+        "569520"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "security-tag"
+        ],
+        "score": 5,
+        "topics": [
+          "security"
+        ]
+      },
+      "latestId": "569520",
+      "modified": "2026-08-18T17:25:30.3598477Z",
+      "modifiedJst": "2026-08-19",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Firewall"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569520",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Security"
+      ],
+      "title": "Public Preview: Ipv6 support in Azure Firewall"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Effective",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569526",
+      "categories": [
+        "databases"
+      ],
+      "created": "2026-08-24T19:15:05.0204585Z",
+      "createdJst": "2026-08-25",
+      "description": "Extended Support for Azure Database for PostgreSQL Flexible Server helps you maintain secure, supported workloads while transitioning to newer PostgreSQL versions. With access to critical security updates, critical bug fixes, and technical support for eligible versions after community support ends, you can upgrade on your timeline with greater flexibility and confidence. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "6b45da353d1959bc9e607c60500724ffd408235c423072f3e36cb7c3acc6bf96",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "5c86bd4b11cb53e8317155f7b42dd7ee96fa38fe23e92b2c333021f057ea489b",
+          "modifiedAfter": "2026-08-24T19:15:05.0204585Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569526"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:17.455Z",
+          "fingerprint": "6b45da353d1959bc9e607c60500724ffd408235c423072f3e36cb7c3acc6bf96",
+          "modifiedAfter": "2026-08-24T19:15:05.0204585Z",
+          "modifiedBefore": "2026-08-24T19:15:05.0204585Z",
+          "rawRef": "20261014T101417455Z_detail_569526.json#569526"
+        }
+      ],
+      "ids": [
+        "569526"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "569526",
+      "modified": "2026-08-24T19:15:05.0204585Z",
+      "modifiedJst": "2026-08-25",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure Database for PostgreSQL"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569526",
+      "status": null,
+      "tags": [
+        "Announcement"
+      ],
+      "title": "Announcing: Extended Support for Azure Database for PostgreSQL Flexible Server "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Retirement",
+          "year": 2027
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569535",
+      "categories": [
+        "compute"
+      ],
+      "created": "2026-08-18T19:52:06.2772756Z",
+      "createdJst": "2026-08-19",
+      "description": "In November last year, Broadcom changed its VMware licensing policies across all hyperscaler platforms to require customers to “bring your own” portable license for VMware Cloud Foundation (VCF).What’s changing?On August 30, 2027, as a result of the latest\nBroadcom VCF licensing change, the AVS license-included service will be\nretired.  Customers currently using license-included Reserved Instance\n(RI) SKUs will be required to purchase portable Broadcom VCF Licenses and\ntransition to an AVS VCF BYOL SKU prior to August 30, 2027, to avoid service\ndisruption on August 31, 2027.Take Action Today:Allow plenty of time to purchase VCF licenses from\nBroadcom and complete the transition to AVS VCF BYOL. For customers evaluating\nmodernization opportunities, start assessing current AVS environments\nimmediately, and develop a transition roadmap to ensure you have time to evaluate\nall options and avoid service disruption on August 31, 2027. Contact your account team to plan your transition.Key Dates and Transition Details:August 30, 2027 Last Day of all AVS license-included servicesAVS License-included RIs Microsoft allows for the exchange of Reservations with expiration dates beyond August 30, 2027AVS License-included PayGo SKUs will retire on October 31, 2026UPDATE AV36 SKU Retirement is now August 30, 2027Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "cb0e769eed73ed13fb60c782cd56ff5ce915a45094c7459c7eccd28970e34470",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "134412911b4e6bf61b7d9c230fc71b9dbd0bcecafe1097c1681d1b392275db89",
+          "modifiedAfter": "2026-08-18T19:52:06.2772756Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569535"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:15:09.091Z",
+          "fingerprint": "cb0e769eed73ed13fb60c782cd56ff5ce915a45094c7459c7eccd28970e34470",
+          "modifiedAfter": "2026-08-18T19:52:06.2772756Z",
+          "modifiedBefore": "2026-08-18T19:52:06.2772756Z",
+          "rawRef": "20261014T101509091Z_detail_569535.json#569535"
+        }
+      ],
+      "ids": [
+        "569535"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "retire-tag",
+          "retire-ring",
+          "retire-title"
+        ],
+        "score": 10,
+        "topics": [
+          "retirement"
+        ]
+      },
+      "latestId": "569535",
+      "modified": "2026-08-18T19:52:06.2772756Z",
+      "modifiedJst": "2026-08-19",
+      "productCategories": [
+        "Compute"
+      ],
+      "products": [
+        "Azure VMware Solution"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569535",
+      "status": null,
+      "tags": [
+        "Retirements"
+      ],
+      "title": "Retirement: Azure VMware Solution License-included service will be retired August 30, 2027"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569546",
+      "categories": [
+        "compute"
+      ],
+      "created": "2026-08-25T18:05:54.2343641Z",
+      "createdJst": "2026-08-26",
+      "description": "Azure announces the general availability of 248 and 372 vCPU Dl/D/E v7 VM sizes, powered by Intel® Xeon® 6 processors. These general-purpose and memory-optimized VMs deliver up to 20% better compute performance than prior-generation Intel-based v6 VMs, with major scale, networking, and storage gains. The new VMs scale to 372 vCPUs and 2.8 TiB of memory, enabling larger in-memory databases, agentic AI workloads with larger context windows, and lower-latency applications through fewer cross-node network hops. The 248 and 372 vCPU VMs enable Dlsv7, Dsv7, and Esv7 VMs to deliver the highest networking, remote storage, and local storage specs across comparable VMs from leading hyperscalers, driven by the latest capabilities of Azure Boost: Higher Networking Bandwidth - Up to 400 Gbps networking bandwidth with the 372 vCPU Esv7/Edsv7 size Faster Remote Storage - Up to 800k IOPS and 20 GBps throughput to Premium v2 SSD and Ultra Disk remote storage with the 372 vCPU Esv7/Edsv7 size Improved Local Storage Performance - Up to 9.6M IOPS and 53 GBps throughput to local NVMe temp disk with the 372 vCPU Ddsv7/Edsv7 sizes These VMs are now generally available in Central US, East US, East US 2, Germany West Central, South Central US, Sweden Central, West US 2, and West US 3.  Learn more: \n Dsv7 & Ddsv7  \n Dlsv7 & Dldsv7  \n Esv7 & Edsv7  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "dc929afbeeb1e63a5b3e9bc04e62dd4bb8484964baf3b91aa3a4cb3d4159435a",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "270014563625497d25542a45062070168426563b45d87eb09c82a199216d081e",
+          "modifiedAfter": "2026-08-25T18:05:54.2343641Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569546"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:15.064Z",
+          "fingerprint": "dc929afbeeb1e63a5b3e9bc04e62dd4bb8484964baf3b91aa3a4cb3d4159435a",
+          "modifiedAfter": "2026-08-25T18:05:54.2343641Z",
+          "modifiedBefore": "2026-08-25T18:05:54.2343641Z",
+          "rawRef": "20261014T101415064Z_detail_569546.json#569546"
+        }
+      ],
+      "ids": [
+        "569546"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "569546",
+      "modified": "2026-08-25T18:05:54.2343641Z",
+      "modifiedJst": "2026-08-26",
+      "productCategories": [
+        "Compute"
+      ],
+      "products": [
+        "Virtual Machines"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569546",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Azure 248 and 372 vCPU sizes for D/E v7 series VMs "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569684",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-08-19T21:04:18.6843671Z",
+      "createdJst": "2026-08-20",
+      "description": "Lakebase is now generally available in four additional Azure regions: North Central US, France Central, Germany West Central, and East Asia. This expansion provides customers with additional deployment options and broader regional availability for Lakebase workloads. The newly supported regions are: North Central US (northcentralus) France Central (francecentral) Germany West Central (germanywestcentral) East Asia (eastasia) Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "f86a29e2be1f9c477e505bee6568950517b9004e62ec90209ec136e6918258f7",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "69ba89a882fd5afbe058e0ed5dba6373fe97a86e676125c0d502fe25f727d4f7",
+          "modifiedAfter": "2026-08-19T21:04:18.6843671Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569684"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:47.389Z",
+          "fingerprint": "f86a29e2be1f9c477e505bee6568950517b9004e62ec90209ec136e6918258f7",
+          "modifiedAfter": "2026-08-19T21:04:18.6843671Z",
+          "modifiedBefore": "2026-08-19T21:04:18.6843671Z",
+          "rawRef": "20261014T101447389Z_detail_569684.json#569684"
+        }
+      ],
+      "ids": [
+        "569684"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "ga-ring",
+          "ga-title",
+          "region-title"
+        ],
+        "score": 8,
+        "topics": [
+          "ga",
+          "region"
+        ]
+      },
+      "latestId": "569684",
+      "modified": "2026-08-19T21:04:18.6843671Z",
+      "modifiedJst": "2026-08-20",
+      "productCategories": [
+        "AI + machine learning",
+        "Analytics"
+      ],
+      "products": [
+        "Azure Databricks"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569684",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Azure Databricks Lakebase in four additional regions"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Effective",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569685",
+      "categories": [
+        "ai",
+        "ops-governance"
+      ],
+      "created": "2026-08-20T16:08:02.9408781Z",
+      "createdJst": "2026-08-21",
+      "description": "Starting in August 2026, customers can engage directly with Azure Copilot agents to move more quickly from questions to action.With this update:Choose the right agent for your goal. Customers can select the specific agent best suited to their needs and get to the right action faster.Agents are enabled by default. Azure Copilot agents are enabled by default for users who have access to Azure Copilot.Admins have granular control. Global administrators can enable or disable individual agents directly from the Azure Copilot Admin Center.As of August 2026, users can directly invoke four Azure Copilot agents from the Azure Copilot chat experience: Troubleshooting, Deployment, Optimization, and Resiliency.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "0e596b20e5310df9a868c1282f43a57087c2e9e8434e208ed48f03f72e6dbf53",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "bda7c1e47f9512a918ed3638a86d45f33a6e416d95e070793e3200261cc31370",
+          "modifiedAfter": "2026-08-20T16:08:02.9408781Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569685"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:41.639Z",
+          "fingerprint": "0e596b20e5310df9a868c1282f43a57087c2e9e8434e208ed48f03f72e6dbf53",
+          "modifiedAfter": "2026-08-20T16:08:02.9408781Z",
+          "modifiedBefore": "2026-08-20T16:08:02.9408781Z",
+          "rawRef": "20261014T101441639Z_detail_569685.json#569685"
+        }
+      ],
+      "ids": [
+        "569685"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "569685",
+      "modified": "2026-08-20T16:08:02.9408781Z",
+      "modifiedJst": "2026-08-21",
+      "productCategories": [
+        "Management and governance"
+      ],
+      "products": [
+        "Azure Copilot"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569685",
+      "status": null,
+      "tags": [
+        "Announcement"
+      ],
+      "title": "Announcing: Azure Copilot introduces direct access to agents"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-08",
+        "privatePreview": null
+      },
+      "canonicalKey": "569690",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-08-26T16:52:23.4483775Z",
+      "createdJst": "2026-08-27",
+      "description": "We're excited to announce Live Reports, now in Public Preview for Azure SRE Agent. Live Reports help operations teams create dynamic operational views directly from SRE Agent conversations and keep them continuously up to date with the latest data from connected environments. Instead of manually rebuilding dashboards or collecting information across multiple tools, teams can use Azure SRE Agent to automatically generate the report and return to it anytime, with fresh data surfaced on a daily, weekly or monthly cadence that you define. Whether you're tracking incidents, service health, operational trends, or recurring investigations, Live Reports provide a consistent, shareable, and always-current view that helps teams make faster, more informed decisions.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "2dfec751a86819a86b843e2a937a6835306322d4c7add3a19e09f075900c39e2",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "f9499a62f827684055074e6b82c62c4a374252c98f84421ef714156858f799bb",
+          "modifiedAfter": "2026-08-26T16:52:23.4483775Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569690"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:13:56.536Z",
+          "fingerprint": "2dfec751a86819a86b843e2a937a6835306322d4c7add3a19e09f075900c39e2",
+          "modifiedAfter": "2026-08-26T16:52:23.4483775Z",
+          "modifiedBefore": "2026-08-26T16:52:23.4483775Z",
+          "rawRef": "20261014T101356536Z_detail_569690.json#569690"
+        }
+      ],
+      "ids": [
+        "569690"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "569690",
+      "modified": "2026-08-26T16:52:23.4483775Z",
+      "modifiedJst": "2026-08-27",
+      "productCategories": [],
+      "products": [],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569690",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Services"
+      ],
+      "title": "Public Preview: Introducing Live Reports for Azure SRE Agent"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569695",
+      "categories": [
+        "ai",
+        "security"
+      ],
+      "created": "2026-08-26T16:51:31.9579567Z",
+      "createdJst": "2026-08-27",
+      "description": "Azure SRE Agent VNet Integration is now generally available. VNet integration enables Azure SRE Agent to operate within your existing network controls, including Network Security Groups (NSGs), private DNS, and firewall policies, etc. With VNet support, the agent can securely access private resources, including services behind private endpoints, during incident investigation and remediation without requiring changes to your network boundary. This capability helps organizations extend Azure SRE Agent into security-sensitive environments while maintaining existing networking, security, and compliance controls.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "9c2e9b720808fadaa1c50150f94fd728e822e0f156234a6484a997afc70712a2",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "ad093b14b1f10d6fe2208de2e8fe08f59cf23cb78d76a524fabac661964e5f4b",
+          "modifiedAfter": "2026-08-26T16:51:31.9579567Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569695"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:00.978Z",
+          "fingerprint": "9c2e9b720808fadaa1c50150f94fd728e822e0f156234a6484a997afc70712a2",
+          "modifiedAfter": "2026-08-26T16:51:31.9579567Z",
+          "modifiedBefore": "2026-08-26T16:51:31.9579567Z",
+          "rawRef": "20261014T101400978Z_detail_569695.json#569695"
+        }
+      ],
+      "ids": [
+        "569695"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "security"
+        ]
+      },
+      "latestId": "569695",
+      "modified": "2026-08-26T16:51:31.9579567Z",
+      "modifiedJst": "2026-08-27",
+      "productCategories": [],
+      "products": [],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569695",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Security",
+        "Services"
+      ],
+      "title": "Generally Available: Azure SRE Agent VNet Integration "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569743",
+      "categories": [
+        "networking",
+        "security",
+        "ops-governance"
+      ],
+      "created": "2026-08-20T17:02:23.1350478Z",
+      "createdJst": "2026-08-21",
+      "description": "Summarized advertised gateway\nprefixes for route advertisement is now generally available. You can specify\naggregated (summarized) prefixes for an Azure gateway to advertise to your\non-premises networks, rather than having every individual virtual network\naddress space advertised. The capability is supported on both ExpressRoute\nGateway and VPN Gateway, and covers IPv4 and IPv6 address spaces.  Large hub-and-spoke deployments\noften approach the advertised-prefix limits of ExpressRoute and VPN Gateway as\nspokes are added. Advertising a covering prefix such as 10.0.0.0/16 in place of\nhundreds of individual spoke prefixes keeps route counts well within those\nlimits and lets you keep growing an environment without re-architecting the\naddress plan or splitting virtual networks. Any spoke address space that falls\noutside the summarized prefix continues to be advertised on its own, so\nexisting connectivity is preserved when you turn the feature on. Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "883c6718c0c94bc177a26484d5ce4bf71d96308befeab1d9764164701acc7fdb",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "2f7a766bad02c493b5347871a90d90dc82880806a5c74cd4217b62b74daf247c",
+          "modifiedAfter": "2026-08-20T17:02:23.1350478Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569743"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:36.271Z",
+          "fingerprint": "883c6718c0c94bc177a26484d5ce4bf71d96308befeab1d9764164701acc7fdb",
+          "modifiedAfter": "2026-08-20T17:02:23.1350478Z",
+          "modifiedBefore": "2026-08-20T17:02:23.1350478Z",
+          "rawRef": "20261014T101436271Z_detail_569743.json#569743"
+        }
+      ],
+      "ids": [
+        "569743"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "569743",
+      "modified": "2026-08-20T17:02:23.1350478Z",
+      "modifiedJst": "2026-08-21",
+      "productCategories": [
+        "Hybrid + multicloud",
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure ExpressRoute",
+        "VPN Gateway",
+        "Virtual Network"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569743",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Management",
+        "Services"
+      ],
+      "title": "Generally Available: Summarized advertised gateway prefixes for route advertisement"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569760",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-08-26T16:50:22.5734515Z",
+      "createdJst": "2026-08-27",
+      "description": "New customers can now get started with Azure SRE Agent through a 30-day trial experience. During the trial, customers can create SRE Agents and connect them to your operational tools and data sources, and explore capabilities at their own pace without baseline always-on charges.Customers pay only for Azure Agent Units (AAUs) consumed when agents perform work.Here are a few practical ways developers, SREs, and IT operations teams can use the 30-day trial: Investigate a root cause: Let the agent work across alerts, logs, metrics, traces, Azure resource state, code, and recent deployments to build a likely root cause and suggest a mitigation. Automate alert response: Trigger investigations from Azure Monitor, Datadog, Dynatrace, or PagerDuty and guide the response with your team's existing runbooks and practices. Get ahead of operational risks: Run post-deployment health checks, monitor certificate expiration, detect configuration drift, review costs, or support compliance checks. Close the loop: Have your agent send evidence, root cause, mitigation, and follow-up work to GitHub, ServiceNow, Jira, or Azure DevOps. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "36d8479c2032b08f2fafb43f82c0f989c8a9e81d8341100358246ff61d1e1d9a",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "8dfad92b1b851fdd35fca4d7da5f7684591d61a9ec2e8af1162d132005fd7d85",
+          "modifiedAfter": "2026-08-26T16:50:22.5734515Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569760"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:06.262Z",
+          "fingerprint": "36d8479c2032b08f2fafb43f82c0f989c8a9e81d8341100358246ff61d1e1d9a",
+          "modifiedAfter": "2026-08-26T16:50:22.5734515Z",
+          "modifiedBefore": "2026-08-26T16:50:22.5734515Z",
+          "rawRef": "20261014T101406262Z_detail_569760.json#569760"
+        }
+      ],
+      "ids": [
+        "569760"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "ga-ring",
+          "ga-title",
+          "pricing-tag"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "pricing"
+        ]
+      },
+      "latestId": "569760",
+      "modified": "2026-08-26T16:50:22.5734515Z",
+      "modifiedJst": "2026-08-27",
+      "productCategories": [],
+      "products": [],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569760",
+      "status": "Launched",
+      "tags": [
+        "Pricing & Offerings"
+      ],
+      "title": "Generally Available: Azure SRE Agent 30-Day Trial"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "June",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-06",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569873",
+      "categories": [
+        "compute",
+        "containers"
+      ],
+      "created": "2026-08-24T18:36:01.7715232Z",
+      "createdJst": "2026-08-25",
+      "description": "eBPF Host Routing in Advanced\nContainer Networking Services for Azure Kubernetes Service (AKS) is now\ngenerally available. eBPF Host Routing improves\nKubernetes networking performance by moving packet forwarding and routing\ndecisions directly into the Linux kernel using eBPF. This removes the overhead\nof iptables-based processing and reduces dependence on the host networking\nstack, resulting in lower latency, fewer network hops, and higher throughput\nfor application traffic. For large-scale AKS deployments, eBPF Host Routing\nhelps deliver more efficient network performance, improved scalability, and a\nbetter experience for latency-sensitive and high-traffic workloads. This release also\nintroduces an enhanced enablement experience that respects existing network\nconnections during rollout. When eBPF Host Routing is enabled on an existing\ncluster, AKS performs a controlled node rotation to transition nodes to the new\nnetworking mode, helping maintain connection continuity and minimize disruption\nto running applications.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "3bbabbb61b04cbfe89bfa897add0bc0221ce66a880196b92398aa72550837966",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "a2be4be7a67a73c1e58f97fc131c2ebf72f276645b7039a0d60a0a75f8031920",
+          "modifiedAfter": "2026-08-24T18:36:01.7715232Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569873"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:20.690Z",
+          "fingerprint": "3bbabbb61b04cbfe89bfa897add0bc0221ce66a880196b92398aa72550837966",
+          "modifiedAfter": "2026-08-24T18:36:01.7715232Z",
+          "modifiedBefore": "2026-08-24T18:36:01.7715232Z",
+          "rawRef": "20261014T101420690Z_detail_569873.json#569873"
+        }
+      ],
+      "ids": [
+        "569873"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "569873",
+      "modified": "2026-08-24T18:36:01.7715232Z",
+      "modifiedJst": "2026-08-25",
+      "productCategories": [
+        "Compute",
+        "Containers"
+      ],
+      "products": [
+        "Azure Kubernetes Service (AKS)"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569873",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Microsoft Build",
+        "Services"
+      ],
+      "title": "Generally Available: eBPF host routing in Advanced Container Networking Services for AKS"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Effective",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "569910",
+      "categories": [
+        "other"
+      ],
+      "created": "2026-08-25T19:55:34.9451208Z",
+      "createdJst": "2026-08-26",
+      "description": "Aspire 13.5 refreshes the dashboard and aspire.dev, expands the Interaction Service, adds cross-scope Azure references and persistent Kubernetes volumes, and brings live terminals into the apphost.Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "c6f79dae8dabe6d5fa650d9641e4f907b9ef237ffc9b2b6fc4bd384b8c661d98",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "54276ac2e1aa6a8621971f876e8c39494a86bbb7aded8e3dff46fde36fba48ee",
+          "modifiedAfter": "2026-08-25T19:55:34.9451208Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#569910"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:14:09.681Z",
+          "fingerprint": "c6f79dae8dabe6d5fa650d9641e4f907b9ef237ffc9b2b6fc4bd384b8c661d98",
+          "modifiedAfter": "2026-08-25T19:55:34.9451208Z",
+          "modifiedBefore": "2026-08-25T19:55:34.9451208Z",
+          "rawRef": "20261014T101409681Z_detail_569910.json#569910"
+        }
+      ],
+      "ids": [
+        "569910"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "569910",
+      "modified": "2026-08-25T19:55:34.9451208Z",
+      "modifiedJst": "2026-08-26",
+      "productCategories": [],
+      "products": [],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=569910",
+      "status": null,
+      "tags": [
+        "Announcement"
+      ],
+      "title": "Announcing: Aspire 13.5 has shipped"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "570020",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-08-26T16:57:56.4461092Z",
+      "createdJst": "2026-08-27",
+      "description": "Azure Bastion shareable link expiration is now generally\navailable. When creating a shareable link, administrators can specify the date\nand time when the link should expire. After the configured expiration time, the link can no longer\nbe used to connect to the target resource. This helps organizations limit\npersistent access and better manage temporary connections provided through\nAzure Bastion. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "74e76359ae2bccb95bdc6849dc849fdca487f439388e45863899737e6b4056b3",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:03:56.205Z",
+          "fingerprint": "80e5fcd8f4f8f3bd3f76d585b0bc1584e1f6f00711a2e76ca7173fcb85bed92c",
+          "modifiedAfter": "2026-08-26T16:57:56.4461092Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100356205Z_list_2026-08_o0.json#570020"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:13:44.452Z",
+          "fingerprint": "74e76359ae2bccb95bdc6849dc849fdca487f439388e45863899737e6b4056b3",
+          "modifiedAfter": "2026-08-26T16:57:56.4461092Z",
+          "modifiedBefore": "2026-08-26T16:57:56.4461092Z",
+          "rawRef": "20261014T101344452Z_detail_570020.json#570020"
+        }
+      ],
+      "ids": [
+        "570020"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "security"
+        ]
+      },
+      "latestId": "570020",
+      "modified": "2026-08-26T16:57:56.4461092Z",
+      "modifiedJst": "2026-08-27",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Bastion"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=570020",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Security"
+      ],
+      "title": "Generally Available: Azure Bastion shareable link expiration "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-08",
+        "privatePreview": null
+      },
+      "canonicalKey": "570025",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-08-26T16:56:29.1432127Z",
+      "createdJst": "2026-08-27",
+      "description": "Azure Bastion support for IPv4 and IPv6 dual-stack\nconfigurations is now available in public preview. Customers can configure a\nnewly created Bastion deployment with both IPv4 and IPv6 public IP addresses. IPv6 is supported for connections between the user and Azure\nBastion. Connections from Azure Bastion to target virtual machines continue to\nuse IPv4. Existing IPv4-only Bastion deployments cannot currently be converted\nto dual stack. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "9472d2b42874493da245541a3ba477eaabe75e376da598d0d4f5cb31a75ad980",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:04:03.039Z",
+          "fingerprint": "873acfaf030f2655e186da97771fe33e0efa8664a3a0c2dd96bac83a34cf9e69",
+          "modifiedAfter": "2026-08-26T16:56:29.1432127Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100403039Z_list_2026-08_o50.json#570025"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:13:46.852Z",
+          "fingerprint": "9472d2b42874493da245541a3ba477eaabe75e376da598d0d4f5cb31a75ad980",
+          "modifiedAfter": "2026-08-26T16:56:29.1432127Z",
+          "modifiedBefore": "2026-08-26T16:56:29.1432127Z",
+          "rawRef": "20261014T101346852Z_detail_570025.json#570025"
+        }
+      ],
+      "ids": [
+        "570025"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "security-tag"
+        ],
+        "score": 5,
+        "topics": [
+          "security"
+        ]
+      },
+      "latestId": "570025",
+      "modified": "2026-08-26T16:56:29.1432127Z",
+      "modifiedJst": "2026-08-27",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Bastion"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=570025",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Security"
+      ],
+      "title": "Public Preview: IPv6 dual-stack support for Azure Bastion"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "570030",
+      "categories": [
+        "compute",
+        "networking",
+        "security",
+        "containers"
+      ],
+      "created": "2026-08-26T16:55:25.4584262Z",
+      "createdJst": "2026-08-27",
+      "description": "Azure Bastion integration with Azure Kubernetes Service is\nnow generally available. Customers can establish a secure tunnel from their\nlocal machine through Azure Bastion to an AKS cluster API server. The integration enables customers to use\nstandard Kubernetes tools while avoiding public exposure of private cluster\nendpoints. It reduces the need to deploy and maintain separate jump boxes, VPN\nservers, or additional access agents.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "e75afdfde96f343967f82e9eea449c627be2e0f6e86b84394daa566c3f4fe4e1",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:04:03.039Z",
+          "fingerprint": "0d05b82a72fc76b937e4ce031f0fdb2bea4875f12be9a5c9c2140e68777c5500",
+          "modifiedAfter": "2026-08-26T16:55:25.4584262Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100403039Z_list_2026-08_o50.json#570030"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:13:52.139Z",
+          "fingerprint": "e75afdfde96f343967f82e9eea449c627be2e0f6e86b84394daa566c3f4fe4e1",
+          "modifiedAfter": "2026-08-26T16:55:25.4584262Z",
+          "modifiedBefore": "2026-08-26T16:55:25.4584262Z",
+          "rawRef": "20261014T101352139Z_detail_570030.json#570030"
+        }
+      ],
+      "ids": [
+        "570030"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "security"
+        ]
+      },
+      "latestId": "570030",
+      "modified": "2026-08-26T16:55:25.4584262Z",
+      "modifiedJst": "2026-08-27",
+      "productCategories": [
+        "Compute",
+        "Containers",
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Bastion",
+        "Azure Kubernetes Service (AKS)"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=570030",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Security"
+      ],
+      "title": "Generally Available: Connect to AKS clusters using Azure Bastion"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "570105",
+      "categories": [
+        "compute",
+        "ops-governance"
+      ],
+      "created": "2026-08-28T15:45:32.7674509Z",
+      "createdJst": "2026-08-29",
+      "description": "Overview:Azure VM Image Builder is now generally available in Azure Government, China North 3, Azure Government Secret, and Azure Government Top Secret.You can now use the same managed image-building service across your sovereign and air-gapped environments that you use in global Azure.What you can do with it:Automate image customization with a secure, fully managed service. There's no self-hosted build infrastructure to deploy, patch, or operate.Use consistent image pipelines across global Azure, Azure Government, and sovereign clouds, so the same template definitions and workflows carry across your estate.Build repeatable hardening and validation workflows for OS configuration, security baselines, and compliance checks.Distribute images where you need them by publishing build output to Azure Compute Gallery and replicating across regions within the same cloud.Who this is for:Azure VM Image Builder in these clouds is built for you if you operate in regulated industries, government and public sector environments, or workloads with strict data residency, sovereignty, or isolation requirements — and you need standardized golden images without giving up local compliance controls.Learn more:Azure VM Image Builder overview — how the service works, supported scenarios, and architectureCreate an image template — full schema reference for your image configuration templatesQuickstarts and samples on GitHub — ready-to-use Windows and Linux build templates",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "509ecba0a99c5f0cfc8fead6ee5bb605f290106eeedd306a550537bfd88a6824",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:04:03.039Z",
+          "fingerprint": "d5b2f17e545df98146dac62b9202a40aa9875ebb06cd37dcb12da29c8321da64",
+          "modifiedAfter": "2026-08-28T15:45:32.7674509Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100403039Z_list_2026-08_o50.json#570105"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:13:38.099Z",
+          "fingerprint": "509ecba0a99c5f0cfc8fead6ee5bb605f290106eeedd306a550537bfd88a6824",
+          "modifiedAfter": "2026-08-28T15:45:32.7674509Z",
+          "modifiedBefore": "2026-08-28T15:45:32.7674509Z",
+          "rawRef": "20261014T101338099Z_detail_570105.json#570105"
+        }
+      ],
+      "ids": [
+        "570105"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "ga-ring",
+          "ga-title",
+          "region-tag"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "region"
+        ]
+      },
+      "latestId": "570105",
+      "modified": "2026-08-28T15:45:32.7674509Z",
+      "modifiedJst": "2026-08-29",
+      "productCategories": [
+        "Compute"
+      ],
+      "products": [
+        "Azure VM Image Builder"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=570105",
+      "status": "Launched",
+      "tags": [
+        "Feature",
+        "Features",
+        "Management",
+        "Operating System",
+        "Regions & Datacenters",
+        "SDK and Tools",
+        "Services"
+      ],
+      "title": "Generally Available: Azure VM Image Builder in sovereign and air-gapped clouds"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "August",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-08",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "570120",
+      "categories": [
+        "compute",
+        "storage",
+        "security",
+        "containers"
+      ],
+      "created": "2026-08-28T20:25:22.5508153Z",
+      "createdJst": "2026-08-29",
+      "description": "The Azure Files Container Storage Interface (CSI) driver in Azure\nKubernetes Service (AKS) now supports workload identity for pod-level\nauthentication to SMB file shares. Previously, managed identity support in AKS enabled\nworkloads to mount Azure Files without using storage account keys. With workload\nidentity support in AKS, applications can leverage pod-level least-privilege\naccess to Azure Files. This provides granular security control for regulated\nindustries operating under stringent compliance requirements. With workload\nidentity, you can scope application pod access to exactly the data it needs\nrather than granting access at the node level. This feature is available in all\nAzure regions that support Azure Files and AKS. Learn More: Create\nand manage persistent volumes (PVs) with Azure Files in Azure Kubernetes\nService (AKS) - Azure Kubernetes ServiceWorkload\nidentities - Microsoft Entra Workload ID",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "2a9af7fdb0f76c9939622f7be836f1b80a24d293f0280ccca9fea14d186bd23c",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-14T10:04:03.039Z",
+          "fingerprint": "837c36f255b3b1d081b2579edcb8568b924f89b238866a4a59187fe3e4140d52",
+          "modifiedAfter": "2026-08-28T20:25:22.5508153Z",
+          "modifiedBefore": null,
+          "rawRef": "20261014T100403039Z_list_2026-08_o50.json#570120"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:13:32.742Z",
+          "fingerprint": "2a9af7fdb0f76c9939622f7be836f1b80a24d293f0280ccca9fea14d186bd23c",
+          "modifiedAfter": "2026-08-28T20:25:22.5508153Z",
+          "modifiedBefore": "2026-08-28T20:25:22.5508153Z",
+          "rawRef": "20261014T101332742Z_detail_570120.json#570120"
+        }
+      ],
+      "ids": [
+        "570120"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "security"
+        ]
+      },
+      "latestId": "570120",
+      "modified": "2026-08-28T20:25:22.5508153Z",
+      "modifiedJst": "2026-08-29",
+      "productCategories": [
+        "Compute",
+        "Containers",
+        "Storage"
+      ],
+      "products": [
+        "Azure Files",
+        "Azure Kubernetes Service (AKS)"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=570120",
+      "status": "Launched",
+      "tags": [
+        "Feature",
+        "Security"
+      ],
+      "title": "Generally Available: Workload identity support for Azure Files CSI driver (SMB) in Azure"
+    }
+  ],
+  "month": "2026-08",
+  "schema": 1
+}

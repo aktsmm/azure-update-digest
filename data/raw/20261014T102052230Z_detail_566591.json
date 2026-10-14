@@ -1,0 +1,43 @@
+{
+  "args": {
+    "id": "566591"
+  },
+  "fetchedAt": "2026-10-14T10:20:52.230Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "June",
+        "ring": "Private Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "566591",
+    "created": "2026-07-07T17:37:55.305955Z",
+    "description": "The Log Analytics Export job enables you to export historical data from a Log Analytics workspace to an Azure Storage account based on a specified query and time range. This allows you to extract only the data you need and move it to external systems for further processing or long-term retention.  Key scenarios include: \n Compliance\n     and audit – Export data from specific time periods to support audit\n     requests, legal holds, and regulatory requirements. \n Security\n     investigations – Extract relevant datasets for forensic analysis or\n     integration with third-party SIEM solutions.  \n Advanced\n     analytics and machine learning – Use exported datasets to build and\n     train models in external environments.  \n Business\n     intelligence and reporting – Combine exported logs with other data\n     sources to enable reporting and analytics across your organization.  \n Data\n     migration – Move data out of Log Analytics for use in other platforms\n     or long-term storage.  Learn more. ",
+    "id": "566591",
+    "modified": "2026-07-07T17:37:55.305955Z",
+    "previewAvailabilityDate": "2026-07",
+    "privatePreviewAvailabilityDate": "2025-06",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Services"
+    ],
+    "title": "Public Preview: Export historical data from Log Analytics workspace with Export jobs "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "564772"
+  },
+  "fetchedAt": "2026-10-14T10:22:41.221Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "Retirement",
+        "year": 2028
+      }
+    ],
+    "baseId": "564772",
+    "created": "2026-06-11T19:00:41.8954189Z",
+    "description": "Azure Compute will retire the following Virtual Machine series on May 1, 2028, impacting Azure Batch pools that rely on them:D-series, Ds-seriesDv2-series, Dsv2-seriesLs-seriesAfter this date:New Batch pools using these VM series cannot be createdExisting pools cannot scale outPools may be forcibly resized to zero nodesRemaining VMs will be stopped/deallocated and no longer covered by SLATimelineNow – May 1, 2028: Existing pools continue to run; migration is recommendedMay 1, 2028: Full retirement; affected pools may become unusableRequired action\nMigrate your Batch pools to supported VM families before the retirement date to avoid disruption.Recommended replacements:For general-purpose pools (D/Ds/Dv2/Dsv2): Dsv5/Ddsv5 or Dasv5/Dadsv5; or Dsv6/Ddsv6 / Dasv6/Dadsv6 for NVMe workloadsFor storage-optimized pools (Ls): Lsv3/Lasv3 or Lsv4/Lasv4Migration options:Scale pool to zero and update VM size using Batch API (2024-07-01 or later)Create a new pool with supported VM sizes and migrate workloadsNote: VM pricing may change after migration. Refer to Azure VM pricing for details.",
+    "id": "564772",
+    "modified": "2026-06-11T19:00:41.8954189Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Batch"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: D-series, Ds-series, Dv2-series, Dsv2-series, and Ls-series Virtual Machines for Azure Batch pools"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

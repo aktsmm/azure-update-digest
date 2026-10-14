@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "562894"
+  },
+  "fetchedAt": "2026-10-14T10:27:17.749Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562894",
+    "created": "2026-06-02T20:45:52.8723288Z",
+    "description": "As API\nestates grow, managing individual custom domains and certificates for every\nsubdomain can quickly become operationally complex and difficult to\nscale. Without wildcard support, every new subdomain — whether\npayments.api.contoso.com, inventory.api.contoso.com, or orders.api.contoso.com\n— requires its own hostname registration and certificate, meaning a team\nonboarding ten new API surfaces generates ten separate domain and certificate\nmanagement tasks.  With\nthis update, Azure API Management Premium v2 and Standard v2 now support\nwildcard entries in custom hostnames,  allowing a single\nentry like *.api.contoso.com  and a single wildcard\ncertificate to cover all subdomains automatically — no per-subdomain\nconfiguration required. This helps teams:  \n Simplify certificate and domain\n     management at scale  \n Reduce operational overhead for\n     rapidly growing API environments  \n Maintain consistent branded API\n     endpoints across dynamic subdomains  \n Accelerate onboarding of new API\n     surfaces without repeated hostname configuration  By\nextending this capability to both Premium v2 and Standard v2, Azure API\nManagement makes flexible and scalable domain management accessible to more\norganizations without requiring higher-tier deployments.  Learn\nmore.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562894",
+    "modified": "2026-06-02T20:45:52.8723288Z",
+    "productCategories": [
+      "Integration",
+      "Internet of Things",
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "API Management"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build"
+    ],
+    "title": "Generally Available: Azure API Management Premium v2 and Standard v2 now support wildcard custom hostnames. "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,45 @@
+{
+  "args": {
+    "id": "567787"
+  },
+  "fetchedAt": "2026-10-14T10:19:36.652Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "Preview",
+        "year": 2025
+      },
+      {
+        "month": "July",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "567787",
+    "created": "2026-07-17T14:54:09.8338708Z",
+    "description": "Azure Kubernetes Service (AKS) now generally supports Encryption in Transit (EiT) for Azure Files NFS v4.1 volumes through the Azure File CSI driver. With EiT enabled, data transferred between AKS workloads and Azure Files NFS shares is encrypted using TLS, helping customers meet security and compliance requirements for production workloads. The capability is integrated with the AZNFS mount helper and Stunnel and can be enabled through storage class configuration without requiring application changes. This capability is available in all Azure regions that support Azure Files Premium (SSD).Learn more:  Create\nand Manage Persistent Volumes with Azure Files in Azure Kubernetes Service\n(AKS)Redundancy\nsupport for SSD Azure file shares | Microsoft Learn How\nto Encrypt Data in Transit for NFS shares Use\nContainer Storage Interface (CSI) Drivers on Azure Kubernetes Service (AKS)",
+    "generalAvailabilityDate": "2026-07",
+    "id": "567787",
+    "modified": "2026-07-17T14:54:09.8338708Z",
+    "previewAvailabilityDate": "2025-05",
+    "productCategories": [
+      "Storage",
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Files",
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Security",
+      "Feature"
+    ],
+    "title": "Generally Available: Encryption in Transit for Azure Files NFS Shares in Azure Kubernetes Service (AKS)"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

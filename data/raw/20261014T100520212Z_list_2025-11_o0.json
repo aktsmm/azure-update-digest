@@ -1,0 +1,1389 @@
+{
+  "args": {
+    "filter": "created ge 2025-10-31T15:00:00Z and created lt 2025-11-30T15:00:00Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-14T10:05:20.212Z",
+  "ok": true,
+  "response": {
+    "hasMore": true,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "467471",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "You can now minimize downtime when you copy data across containers in Azure Cosmos DB accounts. You can use online container copy in Azure Cosmos DB to copy data from one container to another in real ...",
+        "id": "467471",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Public Preview: Online container copy in Azure Cosmos DB "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          },
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "488990",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Announcing a new mTLS enhancement in Azure Application Gateway for backend applications that perform client certificate and authorization header validation at the backend while still requiring web tra...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "488990",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services",
+          "Microsoft Ignite"
+        ],
+        "title": "Generally Available: Azure Application Gateway mTLS passthrough support"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "489855",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Announcing the preview of JSON Web Token (JWT) validation in Azure Application Gateway — enabling authentication and token validation right at the Application gateway before traffic reaches your backe...",
+        "id": "489855",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Security",
+          "Microsoft Ignite"
+        ],
+        "title": "Public Preview: JWT Validation in Azure Application Gateway"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "492303",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Custom error pages are now generally available on App Service. When using custom error pages you can configure your apps to present an error page of your choosing instead of the default error pages th...",
+        "generalAvailabilityDate": "2025-06",
+        "id": "492303",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "productCategories": [
+          "Compute",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "App Service"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Generally Available: Custom error pages on Azure App Service"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "499906",
+        "created": "2025-11-14T18:00:13.7355821Z",
+        "description": "Announcing the retirement of Windows Server 2022 on Azure Kubernetes Service enabled by Azure Arc in October 2026. ",
+        "id": "499906",
+        "modified": "2025-11-14T18:00:13.7355821Z",
+        "productCategories": [],
+        "products": [],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Windows Server 2022 on Azure Kubernetes Service enabled by Azure Arc"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "501658",
+        "created": "2025-11-21T18:45:18.2393356Z",
+        "description": "On September 30, 2025, Low-Priority VM will reach end of life. However, you will continue to be supported on Azure Machine Learning until March 31, 2026.  To ensure that your clusters are not automati...",
+        "id": "501658",
+        "modified": "2025-11-21T18:45:18.2393356Z",
+        "productCategories": [
+          "AI + machine learning",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Machine Learning"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Migrate to dedicated VM for your compute clusters"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          },
+          {
+            "month": "September",
+            "ring": "Private Preview",
+            "year": 2024
+          }
+        ],
+        "baseId": "503704",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "We’re bringing Azure Monitor’s dynamic threshold capabilities to Log search alerts!Using dynamic thresholds means you don't have to know the right threshold for each Log alert rule - Dynamic threshold...",
+        "id": "503704",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "privatePreviewAvailabilityDate": "2024-09",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Dynamic threshold for Log search alerts"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "508390",
+        "created": "2025-11-12T17:00:15.7521975Z",
+        "description": "Azure Database for MySQL triggers for Azure Functions are now generally available, enabling you to set up change tracking and develop event-driven applications at scale on any MySQL table. You can tri...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "508390",
+        "modified": "2025-11-12T17:00:15.7521975Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure Database for MySQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Database for MySQL Triggers for Azure Functions "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "508408",
+        "created": "2025-11-07T18:45:02.212728Z",
+        "description": "Now you can deploy Azure Database for PostgreSQL flexible server in all three availability zones in Japan West.Learn more.",
+        "generalAvailabilityDate": "2025-11",
+        "id": "508408",
+        "modified": "2025-11-07T18:45:02.212728Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Database for PostgreSQL – Flexible Server availability zones expansion in Japan West"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "509686",
+        "created": "2025-11-14T21:15:14.5052991Z",
+        "description": "On October 1, 2026 extended\nsupport for Python 3.10 will end. Your\napps that are hosted on App Service will continue to run, but security updates will\nno longer be available, and we’ll no longer provi...",
+        "id": "509686",
+        "modified": "2025-11-14T21:15:14.5052991Z",
+        "productCategories": [
+          "Compute",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "App Service"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Support for Python 3.10 ends on October 1st, 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "512413",
+        "created": "2025-11-21T19:15:38.8906497Z",
+        "description": "Azure Functions now supports custom\nhandlers in Flex consumption. Custom handlers are lightweight web servers that\nreceive events from the Functions host. Any language that supports HTTP\nprimitives ca...",
+        "generalAvailabilityDate": "2025-10",
+        "id": "512413",
+        "modified": "2025-11-21T19:15:38.8906497Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Custom handler support in Azure Functions Flex consumption "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "512813",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Azure\nContainer Apps support for premium ingress is now generally available. This\nfeature introduces environment-level ingress configuration options, with the\nprimary highlight being customizable ingr...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "512813",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Generally Available: Premium Ingress in Azure Container Apps"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "512850",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Azure Container Apps support for rule-based routing is now\ngenerally available. This feature provides greater flexibility and\ncomposability to your Azure Container Apps by simplifying your architectur...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "512850",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Generally Available: Rule-based routing in Azure Container Apps"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "512900",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Azure\nContainer Apps now supports deployment labels in public preview as a new\ndeployment mode. This feature simplifies environment management and enables\nadvanced deployment strategies for your appli...",
+        "id": "512900",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Public Preview: Deployment labels in Azure Container Apps"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "512949",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Azure Container Apps now supports dynamic shell sessions in public\npreview. A shell session is a platform-managed built-in container used to\nrun and execute common shell commands in an isolated sandbo...",
+        "id": "512949",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Apps"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Public Preview: Dynamic sessions shell environment and MCP support in Azure Container Apps"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "513802",
+        "created": "2025-11-11T17:00:09.0850349Z",
+        "description": "Announcing the general availability of JavaScript (JS) challenge for Azure Web Application Firewall (WAF) with Azure\nFront Door To strengthen bot mitigation strategies,\nAzure WAF now introduces JS cha...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "513802",
+        "modified": "2025-11-11T17:00:09.0850349Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door",
+          "Web Application Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Security",
+          "Features"
+        ],
+        "title": "Generally Available: Azure WAF JavaScript challenge on Azure Front Door"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "515505",
+        "created": "2025-11-19T17:45:05.4516997Z",
+        "description": "Azure Monitor now offers one-click enablement of recommended alerts directly in the Azure Portal for Azure Monitor Managed service for Prometheus customers. These alerts enable you to monitor the inge...",
+        "id": "515505",
+        "modified": "2025-11-19T17:45:05.4516997Z",
+        "previewAvailabilityDate": "2025-10",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)",
+          "Azure Monitor"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Recommended alerts for Azure Monitor Workspace"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "516643",
+        "created": "2025-11-03T17:30:04.7569048Z",
+        "description": "The Object REST API, an S3-compatible REST API, on Azure NetApp Files bridges the gap between traditional file-based storage and modern cloud services, enabling customers to use their existing data in...",
+        "id": "516643",
+        "modified": "2025-11-03T17:30:04.7569048Z",
+        "previewAvailabilityDate": "2025-10",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure NetApp Files Object REST API "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "516656",
+        "created": "2025-11-18T14:00:03.2444639Z",
+        "description": "Breakthrough mode in Azure NetApp Files enables extreme performance and scalability for demanding HPC and EDA workloads. It supports large volumes up to 2PiB, delivering throughput up to 50GiBps, depe...",
+        "id": "516656",
+        "modified": "2025-11-18T14:00:03.2444639Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public preview: Support for large volume breakthrough mode"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "518469",
+        "created": "2025-11-18T08:00:28.4827466Z",
+        "description": "Azure Monitor metric\nalerts now support all Azure metrics - including platform,\nPrometheus, and custom metrics - giving you complete coverage for your monitoring\nneeds. In addition, metric alerts now ...",
+        "id": "518469",
+        "modified": "2025-11-18T08:00:28.4827466Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Query-based metric alerts in Azure Monitor"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Preview",
+            "year": 2025
+          },
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "520201",
+        "created": "2025-11-06T16:00:54.3723896Z",
+        "description": "Blob storage Object Replication metrics for pending operations and pending bytes are now generally available in all regions. These replication metrics will empower you to optimize the performance, tro...",
+        "generalAvailabilityDate": "2025-10",
+        "id": "520201",
+        "modified": "2025-11-06T16:00:54.3723896Z",
+        "previewAvailabilityDate": "2025-03",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Object Replication Metrics"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "520454",
+        "created": "2025-11-18T13:45:04.7393983Z",
+        "description": "Azure Backup has introduced threat detection capabilities for Azure VM backups, powered by Microsoft Defender for Cloud (MDC). This new capability enables customers to assess the health of their Azure...",
+        "id": "520454",
+        "modified": "2025-11-18T13:45:04.7393983Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Management and governance",
+          "Storage"
+        ],
+        "products": [
+          "Azure Backup"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Security",
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Public Preview: Threat Detection in Azure Backup powered by MDC"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "520686",
+        "created": "2025-11-05T16:00:17.5024602Z",
+        "description": "Now you can use the open-source DocumentDB Kubernetes Operator to run DocumentDB on Kubernetes. DocumentDB is a Mongo-DB–compatible, open-source document database built on PostgreSQL. The operator ext...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "520686",
+        "modified": "2025-11-05T16:00:17.5024602Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure DocumentDB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Open Source: Announcing the DocumentDB Kubernetes Operator "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "520691",
+        "created": "2025-11-05T17:00:26.5227629Z",
+        "description": "Azure Cosmos DB for NoSQL now supports ORDER BY ST_DISTANCE for geospatial queries, now generally available. With this feature, you can sort query results by their distance from a given point or GeoJS...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "520691",
+        "modified": "2025-11-05T17:00:26.5227629Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: ORDER BY ST_DISTANCE in Azure Cosmos DB for NoSQL Geospatial Queries "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "520696",
+        "created": "2025-11-05T17:00:26.5227629Z",
+        "description": "Azure Cosmos DB for NoSQL includes Query Advisor, now generally available in the .NET SDK. Query Advisor helps you write faster, more efficient queries by analyzing your query structure and providing ...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "520696",
+        "modified": "2025-11-05T17:00:26.5227629Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Query Advisor in Azure Cosmos DB "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "520705",
+        "created": "2025-11-05T17:00:26.5227629Z",
+        "description": "Announcing the general availability of a dedicated Azure Standard Load Balancer in Azure Database for MySQL - Flexible Server for high availability-enabled servers. With this feature, a high availabil...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "520705",
+        "modified": "2025-11-05T17:00:26.5227629Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure Database for MySQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure Database for MySQL – Flexible Server now supports high availability with dedicated Azure Standard Load Balancer "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "520710",
+        "created": "2025-11-06T15:45:17.7628368Z",
+        "description": "You can now configure read replicas (in-region and geo-replicas) with Premium SSD v2 storage tier in Azure Database for PostgreSQL flexible server. Read replicas enable you to scale out read-heavy wor...",
+        "id": "520710",
+        "modified": "2025-11-06T15:45:17.7628368Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure Database for PostgreSQL read replicas with Premium SSD v2 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "520715",
+        "created": "2025-11-06T15:45:17.7628368Z",
+        "description": "In early November 2025, the following updates and enhancements were made to Azure SQL:  Azure SQL Hyperscale now supports multiple geo-secondary replicas, making it easier to design and deploy disaste...",
+        "id": "520715",
+        "modified": "2025-11-06T15:45:17.7628368Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure SQL updates for early November 2025  "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "520729",
+        "created": "2025-11-06T15:45:17.7628368Z",
+        "description": "GitHub Copilot in SQL Server Management Studio (SSMS) is now available in public preview. GitHub Copilot in SSMS helps you write Transact-SQL (T-SQL) faster and with greater accuracy. Using database a...",
+        "id": "520729",
+        "modified": "2025-11-06T15:45:17.7628368Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [],
+        "products": [],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: GitHub Copilot in SQL Server Management Studio (SSMS) "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          },
+          {
+            "month": "November",
+            "ring": "Private Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "520762",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Azure Copilot introduces specialized\nagents (gated preview) to help migrate,\noperate, and modernize workloads anywhere. Copilot evolves chat into an\nimmersive, full-screen command center (public previ...",
+        "id": "520762",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "privatePreviewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Copilot"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Azure Copilot brings new intelligent agents to support end-to-end lifecycle management of workloads"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "521941",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Azure Monitor now offers a unified, single-click onboarding experience for both Azure Kubernetes Service (AKS) clusters and virtual machines (VMs). This new experience simplifies setup by automaticall...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "521941",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Generally Available: Azure Monitor unified onboarding experience for AKS and VMs"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "522059",
+        "created": "2025-11-10T19:30:03.9585249Z",
+        "description": "Geo priority replication enhances the replication process\nfor GRS and GZRS storage accounts by enabling accelerated data replication\nbetween the primary and secondary regions. This feature is backed b...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "522059",
+        "modified": "2025-11-10T19:30:03.9585249Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Compliance",
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: Geo Priority Replication for Azure Blob"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "522072",
+        "created": "2025-11-10T19:30:03.9585249Z",
+        "description": "Object replication priority replication will allow users to\nobtain prioritized replication from the source to the destination storage\naccount of their replication policy. When you enable priority repl...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "522072",
+        "modified": "2025-11-10T19:30:03.9585249Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Compliance",
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Generally Available: Object Replication Priority Replication for Azure Blob"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "522077",
+        "created": "2025-11-20T18:15:25.2421445Z",
+        "description": "With Azure NetApp Files single file restore from backup, you can restore individual files from Azure NetApp Files backup vault without needing to restore an entire volume. By restoring only the necess...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "522077",
+        "modified": "2025-11-20T18:15:25.2421445Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Regions & Datacenters",
+          "Services"
+        ],
+        "title": "Generally Available: Azure NetApp Files single file restore from backup "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "522086",
+        "created": "2025-11-05T22:30:04.4225583Z",
+        "description": "Planned Failover is a customer-managed failover that\nprovides the ability to failover your geo-redundant storage account while\nkeeping geo-redundancy and data durability. You can seamlessly swap the\np...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "522086",
+        "modified": "2025-11-05T22:30:04.4225583Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Compliance",
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Generally Available: Planned Failover for Azure Storage"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "522390",
+        "created": "2025-11-20T16:00:12.0026183Z",
+        "description": "Azure Sphere OS version 25.10 is now available in the Retail feed. This release includes updates to Azure Sphere OS only; it does not include an updated SDK. If your devices are connected to the inter...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "522390",
+        "modified": "2025-11-20T16:00:12.0026183Z",
+        "productCategories": [
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Sphere"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Operating System"
+        ],
+        "title": "Generally Available: Azure Sphere OS version 25.10 is now available"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "522514",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "In November 2025, the following updates and enhancements were made to Azure SQL: View, modify, insert rows in a table without manually writing T-SQL code using the interactive Edit Data interface in t...",
+        "id": "522514",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database",
+          "Azure SQL Managed Instance"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: Azure SQL updates for November 2025 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "522523",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "In November 2025, the following updates and enhancements were made to Azure SQL:  Apply the reservation discount for a 1-year or 3-year reservation of a zone-redundant Azure SQL Managed Instance in th...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "522523",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database",
+          "Azure SQL Managed Instance"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Generally Available: Azure SQL updates for November 2025 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "522554",
+        "created": "2025-11-18T16:00:16.8047472Z",
+        "description": "Microsoft Foundry introduces new ready-to-use, customizable AI templates for popular use cases such as live voice agents, release management, data unification, and SharePoint integration applications....",
+        "id": "522554",
+        "modified": "2025-11-18T16:00:16.8047472Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Public Preview: New AI templates in Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "522559",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "SQL Server 2025, the AI-ready enterprise database, is now generally available, marking a major milestone in Microsoft’s mission to modernize enterprise data platforms. This release introduces built-in...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "522559",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Generally Availabe: SQL Server 2025 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "522572",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "A new SQL Server migration in Azure Arc solution streamlines and accelerates your journey to Azure SQL Managed Instance. Powered by Azure Database Migration Service and assisted by Copilot, it deliver...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "522572",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Arc"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Microsoft Ignite"
+        ],
+        "title": "Generally Available: New SQL Server migration in Azure Arc "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "522581",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "Announcing that the mssql-python driver is now generally available. This milestone marks a major step forward in delivering a modern, high-performance, and developer-friendly experience for Python dev...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "522581",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: Microsoft Python driver for SQL Server "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "522586",
+        "created": "2025-11-18T17:01:02.7161876Z",
+        "description": "SQL Server Management Studio (SSMS) has long been the trusted tool for managing SQL databases, writing T-SQL, and troubleshooting issues. With SSMS 22, built on Visual Studio 2026, you get support for...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "522586",
+        "modified": "2025-11-18T17:01:02.7161876Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Features"
+        ],
+        "title": "Generally Available: SQL Server Management Studio (SSMS) 22 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "522772",
+        "created": "2025-11-07T19:00:43.7305819Z",
+        "description": "The labels() function in KQL graph semantics is now generally available. This function enables you to retrieve, filter, and project label information for nodes and edges in your graph queries, making ...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "522772",
+        "modified": "2025-11-07T19:00:43.7305819Z",
+        "productCategories": [
+          "Analytics"
+        ],
+        "products": [
+          "Azure Data Explorer"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: labels() function in KQL graph semantics"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "522866",
+        "created": "2025-11-07T19:00:43.7305819Z",
+        "description": "Announcing openCypher support for KQL graph semantics, bringing the widely adopted open-source graph query language to your graph data. This update allows you to run openCypher queries on any Fabric E...",
+        "id": "522866",
+        "modified": "2025-11-07T19:00:43.7305819Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Analytics"
+        ],
+        "products": [
+          "Azure Data Explorer"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: openCypher support for KQL graph semantics"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "523057",
+        "created": "2025-11-11T17:45:46.9200485Z",
+        "description": "LocalDNS for AKS is\nnow generally available.   Large-scale Kubernetes clusters often face DNS resolution\ndelays and reliability issues, especially during upstream outages or high query\nvolumes. To add...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "523057",
+        "modified": "2025-11-11T17:45:46.9200485Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: LocalDNS for AKS"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "523062",
+        "created": "2025-11-11T17:00:09.0850349Z",
+        "description": "Diagnosing and resolving issues in Kubernetes clusters can\nbe complex and time-consuming, especially when navigating logs, telemetry, and\ndiagnostics manually. To simplify this experience, Azure Kuber...",
+        "id": "523062",
+        "modified": "2025-11-11T20:30:22.4062054Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Agentic CLI for AKS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "523067",
+        "created": "2025-11-11T17:00:09.0850349Z",
+        "description": "Maintaining consistent and secure node configurations in\nKubernetes environments can be challenging due to issues like configuration\ndrift, manual changes, and complex upgrade paths. These challenges ...",
+        "id": "523067",
+        "modified": "2025-11-11T17:00:09.0850349Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Flatcar Container Linux for AKS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2025
+          }
+        ],
+        "baseId": "523076",
+        "created": "2025-11-20T20:00:10.7324376Z",
+        "description": "Container network metrics\nfiltering in Azure Container Networking Services (ACNS) is now available in\npublic preview. In\ncontainerized environments, the ingestion of excessive network metrics can lead...",
+        "id": "523076",
+        "modified": "2025-11-20T20:00:10.7324376Z",
+        "previewAvailabilityDate": "2025-11",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Container network metrics filtering in Advanced Container Networking Services for (ACNS) for AKS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2025
+          }
+        ],
+        "baseId": "523081",
+        "created": "2025-11-20T18:30:02.2785845Z",
+        "description": "Local redirect policy with Azure\nCNI powered by Cilium for AKS is now generally available. Customers running high-scale AKS workloads often experience\nlatency and performance bottlenecks due to cross-...",
+        "generalAvailabilityDate": "2025-11",
+        "id": "523081",
+        "modified": "2025-11-20T18:30:02.2785845Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Local redirect policy in Azure CNI powered by Cilium for AKS "
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 50,
+    "totalCount": 220
+  },
+  "scan": "2025-11",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

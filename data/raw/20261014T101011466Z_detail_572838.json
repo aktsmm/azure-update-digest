@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "572838"
+  },
+  "fetchedAt": "2026-10-14T10:10:11.466Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "572838",
+    "created": "2026-09-23T16:46:49.1401459Z",
+    "description": "Support for .NET\n8 and .NET 9 will end on November\n10, 2026. Please transition to .NET\n10 by that date. Your\nAzure Function Apps will continue to operate,\nbut security updates will no longer be provided, and support for .NET 8 and\n.NET 9 on Azure Functions will end. Running Function Apps on an unsupported\nruntime or language version might lead to security and performance issues. Upgrade to .NET 10 before November 10, 2026 to remain on a\nsupported version. Learn more about Azure\nFunctions stack version support. Required action  To avoid potential security vulnerabilities, minimize risk\nfor your Azure Functions apps, and take advantage of latest features, you must take\naction based on your current configuration: If your app is using the in-process model: \nMigrate your app to the isolated worker model, then upgrade to .NET 10. For\nguidance, see: \n Migrate C# Apps from In-Process\n     to Isolated Worker Model \n Update Language Versions in\n     Azure Functions If your app is already using the isolated worker model: \nUpgrade your app directly to .NET 10 by following:\n Update\n     Language Versions in Azure Functions Note: If your app is on a Linux Consumption\nplan, you will need to first upgrade to Flex Consumption plan\nbefore upgrading to .NET 10. Complete all required upgrades and ensure your\napp has moved off the in-process model before November 10, 2026. Learn\nmore.  ",
+    "id": "572838",
+    "modified": "2026-09-23T16:46:49.1401459Z",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "tags": [
+      "Retirements",
+      "Compliance",
+      "Security"
+    ],
+    "title": "Retirement: Support for .NET 8 and .NET 9 ends on November 10, 2026—upgrade your apps to .NET 10  "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

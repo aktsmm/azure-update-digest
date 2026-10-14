@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "567939"
+  },
+  "fetchedAt": "2026-10-14T10:18:36.456Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "567939",
+    "created": "2026-07-28T16:51:04.9615497Z",
+    "description": "In fail-fast update rollouts, a small number of member cluster update failures can halt progress across a broader update deployment. Maximum Allowed Failures for update runs in Azure Kubernetes Fleet Manager, now available in preview, introduces an optional setting that allows update runs to continue when some member cluster updates fail. Customers can define failure thresholds at either the stage or group level using fixed counts or percentages. This gives platform teams more control over the balance between rollout correctness and continued update progress, enabling more flexible and failure-tolerant update strategies across fleet-managed clusters.Learn more.",
+    "id": "567939",
+    "modified": "2026-07-28T16:51:04.9615497Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Fleet Manager"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Maximum allowed failures for update runs in Azure Kubernetes Fleet Manager "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

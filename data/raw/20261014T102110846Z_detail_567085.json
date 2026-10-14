@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "567085"
+  },
+  "fetchedAt": "2026-10-14T10:21:10.846Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "567085",
+    "created": "2026-07-06T15:54:08.5134364Z",
+    "description": "Microsoft Entra ID-based access for Azure Blob Storage SFTP is now generally available in all regions. You can now use Entra ID identities including guest users via Entra External Identities to securely connect to Azure Blob Storage over SFTP, without provisioning or managing local SFTP users.Why it mattersEliminates the operational overhead of managing local SFTP users and credentials.Strengthens security with Entra ID authentication, MFA, and Conditional Access.Accelerates onboarding and enables secure external collaboration with partners and vendors via Entra External Identities (B2B).Key capabilitiesSingle Sign-On and Multi-Factor Authentication using existing corporate credentials.Conditional Access policies based on user location, device compliance, sign-in risk, and other signals.Unified identity lifecycle — SFTP access is automatically updated or revoked through your existing identity governance processes.Native Azure RBAC, ABAC, and ACL integration — SFTP honors the same authorization model as the REST API, Azure CLI, and other data-plane access methods.New in GAABAC + Storage Blob Data Owner: resolved an inconsistency that could cause timeouts when combining ABAC conditions with the Storage Blob Data Owner role.ABAC sub-operations: added support for sub-operations, enabling finer-grained conditional access.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "567085",
+    "modified": "2026-07-06T15:54:08.5134364Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Blob Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Microsoft Entra ID-based access for Azure Blob Storage SFTP"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

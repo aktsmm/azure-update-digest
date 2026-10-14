@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "567949"
+  },
+  "fetchedAt": "2026-10-14T10:18:42.865Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "567949",
+    "created": "2026-07-28T16:45:37.6263515Z",
+    "description": "Organizations running large-scale, AI, GPU, Windows, and other performance-sensitive workloads on AKS often experience longer node startup times because new nodes must repeatedly download container images and perform initialization tasks before workloads can run. With AKS Prepared Image Specification, now in preview, customers can create preconfigured node images that include required container images and customizations ahead of time, enabling new nodes to start in a ready-to-run state. This helps workloads achieve faster and more predictable scaling, reduce application startup latency, and improve operational efficiency during growth and burst traffic events.Learn more.",
+    "id": "567949",
+    "modified": "2026-07-28T16:45:37.6263515Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Prepared Image Specification"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

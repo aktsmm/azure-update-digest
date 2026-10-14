@@ -1,0 +1,741 @@
+{
+  "args": {
+    "filter": "created ge 2026-09-30T15:00:00Z and created lt 2026-10-14T10:03:38Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-14T10:03:38.141Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2028
+          }
+        ],
+        "baseId": "567933",
+        "created": "2026-10-08T18:23:25.2897312Z",
+        "description": "Microsoft Dev Box will\nretire on September 18, 2028. Beginning on September 14, 2026,\nMicrosoft Dev Box will begin the closing-down process. After retirement,\nMicrosoft Dev Box will no longer be avail...",
+        "id": "567933",
+        "modified": "2026-10-08T18:23:25.2897312Z",
+        "productCategories": [
+          "Developer tools",
+          "DevOps",
+          "Virtual desktop infrastructure"
+        ],
+        "products": [
+          "Microsoft Dev Box"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Microsoft Dev Box will be retired on September 18, 2028"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "567934",
+        "created": "2026-10-08T18:20:34.0097044Z",
+        "description": "Azure Deployment\nEnvironments will retire on February 22, 2027. Beginning on September\n14, 2026, Azure Deployment Environments will begin the closing-down\nprocess. After retirement, the service will n...",
+        "id": "567934",
+        "modified": "2026-10-08T18:20:34.0097044Z",
+        "productCategories": [
+          "Developer tools",
+          "DevOps"
+        ],
+        "products": [
+          "Azure Deployment Environments"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure Deployment Environments will be retired on February 22, 2027"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2029
+          }
+        ],
+        "baseId": "568178",
+        "created": "2026-10-06T18:24:43.7287643Z",
+        "description": "Azure App Service on Azure Stack Hub will be retired on September\n30, 2029. Starting September 30, 2026, new installations will\nno longer be supported, and no new product releases, features, or enhanc...",
+        "id": "568178",
+        "modified": "2026-10-06T18:24:43.7287643Z",
+        "productCategories": [
+          "Compute",
+          "Mobile",
+          "Web",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "App Service",
+          "Azure Stack Hub"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure App Service on Azure Stack Hub"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "568585",
+        "created": "2026-10-06T18:21:59.3548773Z",
+        "description": "On September 1, 2027 support for Java 8, 11 and 17 will end. Your\napps that are hosted on App Service will continue to run, but security updates\nwill no longer be available, and we’ll no longer provid...",
+        "id": "568585",
+        "modified": "2026-10-06T18:21:59.3548773Z",
+        "productCategories": [
+          "Compute",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "App Service"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Support for Java 8, 11 and 17 will end on September 1, 2027"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "569236",
+        "created": "2026-10-06T16:42:33.6279734Z",
+        "description": "Always Encrypted with Intel SGX enclaves in Azure SQL Database will retire on October 31, 2027 as support for SGX-enabled DC-series hardware is phased out. Customers should transition to Virtualizatio...",
+        "id": "569236",
+        "modified": "2026-10-06T16:42:33.6279734Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Always Encrypted with Intel SGX Enclaves"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Retirement",
+            "year": 2029
+          }
+        ],
+        "baseId": "569592",
+        "created": "2026-10-01T17:02:55.8403654Z",
+        "description": "On October 31, 2029, DCsv3 and DCdsv3-series\nAzure Linux, Windows and Dedicated Host virtual\nmachines will be retired. After that date, they will no longer be\navailable for use or purchase.  Before Oc...",
+        "id": "569592",
+        "modified": "2026-10-01T17:02:55.8403654Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Linux Virtual Machines",
+          "Virtual Machines",
+          "Windows Virtual Machines"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: DCsv3 and DCdsv3-series Azure Virtual Machines will be retired on October 31, 2029"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "570232",
+        "created": "2026-10-06T22:37:54.798617Z",
+        "description": "Beginning September 30, 2027, support for the pod name dimension on the following Azure\nMonitor platform metrics is retiring, and these metrics are transitioning to aggregate pod counters:Number of po...",
+        "id": "570232",
+        "modified": "2026-10-06T22:37:54.798617Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Pod name dimension in AKS pod platform metrics"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "570313",
+        "created": "2026-10-09T20:27:17.3413744Z",
+        "description": "The Azure Key Vault Secrets Provider Extension for Azure Arc-enabled Kubernetes will be retired on October 9, 2027.Customers currently using the extension should plan to migrate to the Azure Key Vault...",
+        "id": "570313",
+        "modified": "2026-10-09T20:27:17.3413744Z",
+        "productCategories": [],
+        "products": [],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure Key Vault Secrets Provider Extension for Azure Arc enabled Kubernetes clusters"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571499",
+        "created": "2026-10-05T18:12:09.4716262Z",
+        "description": "SQL Server on Azure Virtual Machines is now available in Azure Bleu, enabling you to deploy and manage SQL Server workloads in France's sovereign cloud environment while meeting data residency and sov...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "571499",
+        "modified": "2026-10-05T18:12:09.4716262Z",
+        "productCategories": [
+          "Compute",
+          "Databases"
+        ],
+        "products": [
+          "SQL Server on Azure Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: SQL Server on Azure Virtual Machines in Azure Bleu "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571504",
+        "created": "2026-10-02T17:35:21.6842344Z",
+        "description": "MVUs are now available for elastic clusters in Azure Database for PostgreSQL. You can upgrade an existing elastic cluster to a supported newer PostgreSQL version in place without provisioning a replac...",
+        "id": "571504",
+        "modified": "2026-10-02T17:35:21.6842344Z",
+        "previewAvailabilityDate": "2026-10",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview:  Major version upgrades (MVU) for Azure Database for PostgreSQL elastic clusters "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "571831",
+        "created": "2026-10-08T14:17:44.5087831Z",
+        "description": "Multiparty private offers give Microsoft partners a way to procure third-party cloud and AI solutions for customers through Marketplace. Software companies can expand into new markets by working with ...",
+        "id": "571831",
+        "modified": "2026-10-08T14:17:44.5087831Z",
+        "productCategories": [],
+        "products": [],
+        "tags": [
+          "Announcement"
+        ],
+        "title": "Announcing: Multiparty private offers in Microsoft Marketplace expands to Hong Kong"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571894",
+        "created": "2026-09-30T21:13:13.6139783Z",
+        "description": "The public preview of Microsoft-managed performance monitoring for SQL Server on Azure Virtual Machines is now available. You can now monitor SQL Server on Azure Virtual Machines without building cust...",
+        "id": "571894",
+        "modified": "2026-09-30T21:13:13.6139783Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Compute",
+          "Databases"
+        ],
+        "products": [
+          "SQL Server on Azure Virtual Machines"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: SQL performance monitoring for SQL Server on Azure Virtual Machines "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Retirement",
+            "year": 2029
+          }
+        ],
+        "baseId": "572346",
+        "created": "2026-09-30T17:07:30.9170547Z",
+        "description": "As part of the Microsoft Azure VM lifecycle\npolicy, Microsoft is announcing the retirement of the Dv3, Dsv3, Ev3, and\nEsv3 Azure VM series in public cloud Azure regions. These VMs will enter the\nEnd-o...",
+        "id": "572346",
+        "modified": "2026-09-30T17:07:30.9170547Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Dv3, Dsv3, Ev3, and Esv3 Azure VMs "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "572940",
+        "created": "2026-10-05T18:51:57.6539655Z",
+        "description": "Azure HorizonDB is expanding to additional Azure regions, giving you greater flexibility to deploy PostgreSQL workloads closer to your applications and users.With expanded regional availability, you h...",
+        "id": "572940",
+        "modified": "2026-10-05T18:51:57.6539655Z",
+        "previewAvailabilityDate": "2026-10",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure HorizonDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure HorizonDB expands to additional regions"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "573214",
+        "created": "2026-09-30T17:11:11.2479988Z",
+        "description": "Teams running Ubuntu node pools on AKS need to stay current with Ubuntu LTS releases, but each OS transition can introduce package footprint, security, and compatibility concerns. Ubuntu 26.04 support...",
+        "id": "573214",
+        "modified": "2026-09-30T17:11:11.2479988Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Ubuntu 26.04 support in AKS"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "573385",
+        "created": "2026-09-30T17:09:51.5337578Z",
+        "description": "Discover Azure canvases for GitHub Copilot, interactive shared workspaces that bring Azure tools, dashboards, and guided workflows directly alongside your Copilot conversations. Explore Azure resource...",
+        "id": "573385",
+        "modified": "2026-09-30T17:09:51.5337578Z",
+        "productCategories": [
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Copilot"
+        ],
+        "tags": [
+          "SDK and Tools",
+          "Announcement"
+        ],
+        "title": "Announcing: Azure canvases for GitHub Copilot"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "573414",
+        "created": "2026-09-30T18:26:47.0594641Z",
+        "description": "On September 30, 2026, Microsoft Azure retired the Standard_NV12s_v3, Standard_NV12hs_v3, Standard_NV24s_v3, Standard_NV24ms_v3, Standard_NV32ms_v3, and Standard_NV48s_v3 virtual machines (VMs) in the...",
+        "id": "573414",
+        "modified": "2026-09-30T18:26:47.0594641Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: NVv3-series Azure Virtual Machines"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "573415",
+        "created": "2026-09-30T18:24:01.2462397Z",
+        "description": "On September 30, 2026, Microsoft Azure retired the Standard_NV4as_v4, Standard_NV4ahs_v4, Standard_NV8as_v4, Standard_NV8ahs_v4, Standard_NV16as_v4, Standard_NV16ahs_v4, Standard_NV32as_v4, and Standa...",
+        "id": "573415",
+        "modified": "2026-09-30T18:24:01.2462397Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: NVv4-series Azure Virtual Machines"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "573425",
+        "created": "2026-10-05T17:44:31.259469Z",
+        "description": "Azure Backup for PostgreSQL flexible server and elastic cluster (v2) preview brings enterprise-grade long-term retention to PostgreSQL. Backups are taken as physical backups from managed disk snapshot...",
+        "id": "573425",
+        "modified": "2026-10-05T17:44:31.259469Z",
+        "previewAvailabilityDate": "2026-10",
+        "productCategories": [
+          "Management and governance",
+          "Storage",
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Backup",
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Backup for PostgreSQL flexible server and elastic cluster (v2)"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "573443",
+        "created": "2026-10-07T16:57:04.0990443Z",
+        "description": "Starting with SQL Server 2025 CU9 and SQL Server 2022 CU27, SQL Server on Linux supports the bulkadmin fixed server role and the ADMINISTER BULK OPERATIONS permission for performing bulk data import o...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "573443",
+        "modified": "2026-10-07T16:57:04.0990443Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Enabling the Bulk admin role for SQL Server on Linux"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "573691",
+        "created": "2026-10-08T19:56:31.5764663Z",
+        "description": "Now you can deploy Azure Database for PostgreSQL flexible server in the East US 3 Azure region.  Learn more.  ",
+        "generalAvailabilityDate": "2026-10",
+        "id": "573691",
+        "modified": "2026-10-08T19:56:31.5764663Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Database for PostgreSQL flexible server in East US 3 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "573744",
+        "created": "2026-10-07T17:06:00.3228241Z",
+        "description": "Anyscale on Azure is now Generally Available. Anyscale on Azure is a managed platform for running distributed Python workloads on Ray. It deploys directly onto your Azure Kubernetes Service (AKS) clus...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "573744",
+        "modified": "2026-10-07T17:06:00.3228241Z",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Anyscale on Azure"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "573782",
+        "created": "2026-10-06T15:44:06.5345459Z",
+        "description": "Running Kubernetes on-premises often means adding a\nvirtualization layer, adapting to unfamiliar infrastructure, or giving up\ncontrol over the hardware and software your applications depend on. For AI...",
+        "id": "573782",
+        "modified": "2026-10-06T15:44:06.5345459Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [],
+        "products": [],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: AKS on bare metal now on Ubuntu"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "573861",
+        "created": "2026-10-05T17:41:41.9221035Z",
+        "description": "Announcing the Public Preview of IPv6 support for Application Gateway WAF.Application Gateway Web Application Firewall (WAF) now supports inspection and enforcement for IPv6 traffic in Public Preview,...",
+        "id": "573861",
+        "modified": "2026-10-05T17:41:41.9221035Z",
+        "previewAvailabilityDate": "2026-10",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway",
+          "Web Application Firewall"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Public Preview: IPv6 Support for Application Gateway WAF "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "573875",
+        "created": "2026-10-05T17:55:23.4226434Z",
+        "description": "Starting October 15, 2026, Search in Microsoft Fabric will return tables from semantic models, lakehouses, and mirrored databases as individual results. Users can search by table name or description, ...",
+        "id": "573875",
+        "modified": "2026-10-05T17:55:23.4226434Z",
+        "productCategories": [
+          "Analytics"
+        ],
+        "products": [
+          "Microsoft Fabric"
+        ],
+        "tags": [
+          "Announcement"
+        ],
+        "title": "Announcing: Table discovery in OneLake Catalog search"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "574204",
+        "created": "2026-10-08T17:24:34.408277Z",
+        "description": "The integration between Microsoft Agent 365 and Azure API Management is now available in public preview, helping organizations connect centralized governance with runtime enforcement for MCP servers a...",
+        "id": "574204",
+        "modified": "2026-10-08T17:24:34.408277Z",
+        "previewAvailabilityDate": "2026-10",
+        "productCategories": [
+          "Integration",
+          "Internet of Things",
+          "Mobile",
+          "Web"
+        ],
+        "products": [
+          "API Management"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Microsoft Agent 365 integration with Azure API Management"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "574343",
+        "created": "2026-10-08T17:29:30.8258325Z",
+        "description": "Announcing the general availability of exceptions\nfor Web Application Firewall on Azure Application Gateway and Azure Front Door.Azure Web\nApplication Firewall (WAF) helps protect your web application...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "574343",
+        "modified": "2026-10-08T17:29:30.8258325Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway",
+          "Azure Front Door",
+          "Web Application Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: Exceptions in WAF for Azure Application Gateway and Azure Front Door"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "574430",
+        "created": "2026-10-08T22:51:01.6329557Z",
+        "description": "AKS will now provision and manage a StandardV2 NAT Gateway\nfor clusters using an AKS-managed virtual network.StandardV2 is now the default managed NAT Gateway SKU for\nnew clusters in supported regions...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "574430",
+        "modified": "2026-10-08T22:51:01.6329557Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Networking"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)",
+          "Azure NAT Gateway"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Managed StandardV2 NAT Gateway for AKS"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 28,
+    "totalCount": 28
+  },
+  "scan": "2026-10",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

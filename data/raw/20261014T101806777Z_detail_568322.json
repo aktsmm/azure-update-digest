@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "568322"
+  },
+  "fetchedAt": "2026-10-14T10:18:06.777Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "568322",
+    "created": "2026-07-29T18:52:32.0504211Z",
+    "description": "This capability shares telemetry from Azure Monitor Log Analytics workspaces into Microsoft Fabric, making observability data available in OneLake as Delta Parquet, the open format, without duplication and with near real-time availability. All Azure Monitor Logs tiers are supported, including Analytics, Basic, and Auxiliary logs.Once available in Fabric, Azure Monitor data can be analyzed alongside operational and business data using Fabric capabilities such as Eventhouse, Power BI, Spark.What you can do:Organizations can combine telemetry with business context from systems such as ERP and CRM to gain deeper insight into the business impact of operational events, supporting cross-domain analysis, more informed decision-making, and faster action. Organizations can also apply advanced analytics, machine learning, long-term trend analysis, and reporting directly to their observability data.Learn more.",
+    "id": "568322",
+    "modified": "2026-07-29T18:52:32.0504211Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Monitor Logs mirroring into Microsoft Fabric"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

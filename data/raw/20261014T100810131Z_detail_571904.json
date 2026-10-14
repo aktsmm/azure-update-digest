@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "571904"
+  },
+  "fetchedAt": "2026-10-14T10:08:10.131Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "571904",
+    "created": "2026-09-29T18:11:15.3221366Z",
+    "description": "The preview of performance monitoring for SQL Server enabled by Azure Arc is expanding with more flexible ways to explore and visualize your performance data. You can query Microsoft-managed monitoring data directly through a telemetry endpoint. The built-in Azure portal experience now uses Grafana dashboards, providing ready-to-use views without requiring you to deploy and manage a monitoring pipeline.  You can also connect your own Grafana environment to the same telemetry endpoint and build dashboards tailored to your operational needs. Integration with Fabric Database Hub brings this telemetry into a unified, estate-level monitoring experience. This update helps provide a unified view of health and performance across your Azure database estate, eliminating the need to monitor databases one instance at a time.  Learn more.",
+    "id": "571904",
+    "modified": "2026-09-29T18:11:15.3221366Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Arc"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Performance monitoring for Azure Arc–enabled SQL Server "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

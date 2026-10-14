@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "569515"
+  },
+  "fetchedAt": "2026-10-14T10:15:06.728Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "569515",
+    "created": "2026-08-19T16:36:30.9785659Z",
+    "description": "Azure Site Recovery now lets you use and attach an existing, pre-provisioned Network Interface Card (NIC) in the target region for test-failover and failover in the Azure-to-Azure scenario. This helps preserve prepared networking configurations, reserve IPs in the target region and more, giving you greater control over the disaster recovery environment. Learn more.",
+    "generalAvailabilityDate": "2026-08",
+    "id": "569515",
+    "modified": "2026-08-19T16:36:30.9785659Z",
+    "productCategories": [
+      "Management and governance",
+      "Migration"
+    ],
+    "products": [
+      "Azure Site Recovery"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: BYON (Bring Your Own NIC) in Azure Site Recovery"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

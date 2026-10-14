@@ -1,0 +1,32 @@
+{
+  "args": {
+    "id": "564981"
+  },
+  "fetchedAt": "2026-10-14T10:24:00.480Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Private Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "564981",
+    "created": "2026-06-05T20:30:12.4011045Z",
+    "description": "Guest RDMA is now in preview on Azure, starting in the UK South region, bringing high-throughput, ultra-low latency networking directly into guest VMs within the same region. By using Azure Boost to enable RDMA in the guest OS, applications can bypass the traditional networking stack and offload transport to the NIC, reducing CPU overhead and improving communication performance.  Key benefits include low latency through kernel bypass, high throughput of up to 100 Gb/s in preview depending on VM SKU, and lower CPU usage from hardware-based data movement.  The preview is designed for workloads with frequent or large data transfers, including AI/ML training and inference, distributed storage and databases, and HPC workloads.  In preview, Guest RDMA supports VM-to-VM connections within the same VNet and region. Load balancers, private endpoints, VNet encryption, flow logging, UDRs, and IP forwarding are not yet supported, but are planned for GA.  Learn more. ",
+    "id": "564981",
+    "modified": "2026-06-05T20:30:12.4011045Z",
+    "privatePreviewAvailabilityDate": "2026-06",
+    "productCategories": [],
+    "products": [],
+    "status": "In development",
+    "tags": [
+      "Features",
+      "Microsoft Build"
+    ],
+    "title": "Private Preview: Guest RDMA on Azure Boost"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

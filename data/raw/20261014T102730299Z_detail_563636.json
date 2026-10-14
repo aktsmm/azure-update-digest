@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563636"
+  },
+  "fetchedAt": "2026-10-14T10:27:30.299Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563636",
+    "created": "2026-06-02T20:00:59.5913718Z",
+    "description": "Azure Policy now provides centralized governance for deployments using the model router. Organizations can define and enforce routing standards across their environment, helping ensure that model selection aligns with security, compliance, and operational requirements.\nBuilt-in policy definitions allow teams to govern deployment regions, approved model lists, required routing rules, and logging configurations. Administrators can apply policies across management groups and subscriptions, identify deployments that drift from approved configurations, and remediate issues using existing Azure governance workflows.\nBecause the integration is built on Azure Policy’s native framework, customers can use familiar tools for compliance monitoring, exemptions, remediation, and reporting without additional engineering effort. This enables regulated organizations to adopt new models more quickly while maintaining consistent governance and control across the enterprise. Learn more.",
+    "id": "563636",
+    "modified": "2026-06-02T20:00:59.5913718Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Policy Coverage for Model Router in Foundry Models"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

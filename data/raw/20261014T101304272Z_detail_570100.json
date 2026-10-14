@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "570100"
+  },
+  "fetchedAt": "2026-10-14T10:13:04.272Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "570100",
+    "created": "2026-09-01T22:30:18.0639636Z",
+    "description": "Confidential Virtual Machines (CVM) offer strong security and confidentiality for tenants. CVM for Azure Linux in AKS is now generally available and enables node pools with CVM to target the migration of highly sensitive container workloads to AKS without any code refactoring while benefiting from the features of AKS. You can create new node pools using supported CVM vm sizes with Azure Linux 3. The nodes in a node pool created with CVM use a customized Azure Linux 3 image specially configured for CVM. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "570100",
+    "modified": "2026-09-01T22:30:18.0639636Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Confidential VMs for Azure Linux"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

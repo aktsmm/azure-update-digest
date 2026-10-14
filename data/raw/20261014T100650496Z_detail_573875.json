@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "573875"
+  },
+  "fetchedAt": "2026-10-14T10:06:50.496Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "Effective",
+        "year": 2026
+      }
+    ],
+    "baseId": "573875",
+    "created": "2026-10-05T17:55:23.4226434Z",
+    "description": "Starting October 15, 2026, Search in Microsoft Fabric will return tables from semantic models, lakehouses, and mirrored databases as individual results. Users can search by table name or description, or find a table by an exact column-name match.  More object types will become available over time. This applies to Fabric's global search, the OneLake Catalog UI, the Search API, search in Fabric's MCP servers, the /find command in the Fabric CLI, and the discovery skill.What you need to know: Table visibility in search follows permissions on the parent item, not data-level permissions on the table. If a user has Read permission or higher on the item, they can discover all tables under that item, even tables they can't query. Search does not grant access to table data; existing data-access controls still apply when a user opens or queries a table. Tables in semantic models protected by object-level security are excluded from search. Action: Review \"Users can find objects in search\" setting in the Fabric admin portal under Tenant settings. It's enabled by default. Turn it off if your organization isn't ready for users to find tables by search; item and data access won't change.",
+    "id": "573875",
+    "modified": "2026-10-05T17:55:23.4226434Z",
+    "productCategories": [
+      "Analytics"
+    ],
+    "products": [
+      "Microsoft Fabric"
+    ],
+    "tags": [
+      "Announcement"
+    ],
+    "title": "Announcing: Table discovery in OneLake Catalog search"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

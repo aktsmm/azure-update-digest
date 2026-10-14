@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "569251"
+  },
+  "fetchedAt": "2026-10-14T10:16:05.669Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "569251",
+    "created": "2026-08-12T17:01:19.0043426Z",
+    "description": "Mutual TLS, also known as client\ncertificate authentication, enables Azure Front Door to authenticate clients\nusing X.509 certificates before requests reach an application. It helps protect\nsensitive applications and APIs across business-to-business, Internet of\nThings, financial services, VPN, and enterprise network scenarios.  Customers can choose from four client\ncertificate validation modes: \n Require and validate: A client\n     certificate is mandatory. Azure Front Door validates the certificate at\n     the edge and forwards it to the origin in the X-Azure-ClientCertificate\n     request header. \n Require without validation: A\n     client certificate is mandatory, but Azure Front Door does not validate\n     it. The certificate is forwarded in the X-Azure-ClientCertificate header\n     for validation by the origin. \n Validate when presented: A client\n     certificate is optional. When a certificate is presented, Azure Front Door\n     validates it and forwards it to the origin. Requests without a certificate\n     are allowed to continue. \n Pass through to the origin: A\n     client certificate is optional. Azure Front Door does not validate it but\n     forwards it to the origin when presented, allowing the origin to perform\n     validation.  Azure Front Door supports client\ncertificates issued by public and private certificate authorities. Customers\nupload the trusted certificate authority chain to Azure Key Vault and associate\nit with a Front Door custom domain. Learn more.",
+    "id": "569251",
+    "modified": "2026-08-12T17:01:19.0043426Z",
+    "previewAvailabilityDate": "2026-08",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure Front Door"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Front Door mutual TLS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

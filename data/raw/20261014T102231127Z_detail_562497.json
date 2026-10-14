@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "562497"
+  },
+  "fetchedAt": "2026-10-14T10:22:31.127Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "562497",
+    "created": "2026-06-16T19:00:15.6413078Z",
+    "description": "The Azure Functions extension for VS Code now provides a redesigned Create New Project experience in public preview, featuring a rich, visual template gallery that replaces the multi-step Quick Pick wizard with a searchable, filterable view of project templates. Developers can browse templates by language and use case, search across template names, descriptions, and tags, and start from featured templates. A \"Generate with Copilot\" mode lets developers describe what they want to build and get a project scaffold generated for them. The gallery is populated from a continuously updated, Microsoft-curated catalog of 75+ ready-to-deploy samples that have recently been refreshed across all supported languages, covering common scenarios such as HTTP APIs, event-driven processing, scheduled jobs, data integration, Durable Functions orchestrations, MCP servers, and AI and agent workloads. The release also improves the Run Function App experience with smart, runtime-specific pre-start steps that automatically prepare the project — installing dependencies and building the app as needed — before launching the local runtime, so developers can go from create to running in a single click.  Learn more. ",
+    "id": "562497",
+    "modified": "2026-06-16T19:00:15.6413078Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build"
+    ],
+    "title": "Public Preview: New project templates and template gallery for Azure Functions in VS Code"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

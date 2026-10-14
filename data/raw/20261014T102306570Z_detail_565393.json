@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "565393"
+  },
+  "fetchedAt": "2026-10-14T10:23:06.570Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "August",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "565393",
+    "created": "2026-06-10T16:15:16.3861323Z",
+    "description": "The Azure VPN Client for Linux (Preview) has remained in public preview and does not have a path to general availability (GA). As part of our ongoing efforts to align Azure networking services with current security and reliability standards, this preview client will be retired.Timeline and Impact: August 31, 2026 – Azure VPN Client for Linux (Preview) is retiredSeptember 1, 2026 – The Linux preview client is no longer supported for Azure VPN Gateway Point-to-Site (P2S) connectionsAfter August 31, 2026, connections using the Azure VPN Client for Linux (Preview) may fail, which could result in loss of access to Azure resources through Point-to-Site (P2S) VPN connections.  Recommended action:To help ensure uninterrupted connectivity, transition your Azure VPN Gateway Point-to-Site (P2S) configuration to support alternative Linux VPN clients and distribute said clients to users before September 1, 2026.For guidance on supported Point‑to‑Site VPN options and configuration steps, see the Azure VPN Gateway documentation.  Risk/mitigation:Update your VPN gateway configuration and your end-user clients through your standard change management process to minimize user disruption.Help and Support :If you have questions, get answers from community experts in Microsoft Q&A  If you have a support plan and you need technical help, create a support request.",
+    "id": "565393",
+    "modified": "2026-06-10T16:15:16.3861323Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Virtual WAN",
+      "VPN Gateway"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Azure VPN Client for Linux (Preview) will be retired on August 31, 2026 "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "569592"
+  },
+  "fetchedAt": "2026-10-14T10:07:08.956Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "Retirement",
+        "year": 2029
+      }
+    ],
+    "baseId": "569592",
+    "created": "2026-10-01T17:02:55.8403654Z",
+    "description": "On October 31, 2029, DCsv3 and DCdsv3-series\nAzure Linux, Windows and Dedicated Host virtual\nmachines will be retired. After that date, they will no longer be\navailable for use or purchase.  Before October 31, 2029, migrate your workloads to one of\nthe following options that best aligns with your business needs:  \n To use\n     a VM-based programming model consider DCasv6/DCadsv6/DCesv6/DCedsv6\n     or memory optimized ECasv6/ECadsv6/ECesv6/ECedsv6 \n     series confidential VMs (CVMs),   \n For\n     containerized applications, consider using Azure\n     Confidential Container Instances (C-ACI) or Virtual\n     nodes on Azure Container Instances (C-VN2) for Azure Kubernetes\n     Service (AKS).  Your billing may change. For details, see the Azure Virtual\nMachines pricing\npage. Additionally, 3-year and 1-year Reserved VM\nInstances (RIs) for these series will no longer be available for purchase or\nrenewal after October 31, 2026.  Required action To avoid service disruptions, migrate your DCsv3 and/or\nDCdsv3-series VMs to one of the recommended options before October 31, 2029.Starting November 1, 2026, capacity restrictions\nwill be applied to DCsv3/DCdsv3-series VMs. Help and support For technical questions, issues, and help get answers in Microsoft\nQ&A.  Learn more: Migration\nguide Azure\nRetirement Workbook (Please note that retirements may not be visible in\nthe workbook for up to two weeks after being announced) ",
+    "id": "569592",
+    "modified": "2026-10-01T17:02:55.8403654Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Linux Virtual Machines",
+      "Virtual Machines",
+      "Windows Virtual Machines"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: DCsv3 and DCdsv3-series Azure Virtual Machines will be retired on October 31, 2029"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

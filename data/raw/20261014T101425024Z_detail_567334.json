@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "567334"
+  },
+  "fetchedAt": "2026-10-14T10:14:25.024Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "567334",
+    "created": "2026-08-24T17:30:43.3459834Z",
+    "description": "On April 30 2027, support for Node 22 LTS will end. Your apps that are hosted on App\nService will continue to run, but security updates will no longer be available,\nand we’ll no longer provide customer service for Node 22 LTS. Required action: To\navoid potential security vulnerabilities and minimize risk for your App Service\napps, follow the steps to upgrade your app to Node 24 LTS\nbefore April 30, 2027. Learn\nmore. ",
+    "id": "567334",
+    "modified": "2026-08-24T17:30:43.3459834Z",
+    "productCategories": [
+      "Compute",
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "App Service"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Support for Node 22 LTS ends on April 30, 2027"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

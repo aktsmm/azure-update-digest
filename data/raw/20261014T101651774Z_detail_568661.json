@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "568661"
+  },
+  "fetchedAt": "2026-10-14T10:16:51.774Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "568661",
+    "created": "2026-08-05T00:22:49.4777616Z",
+    "description": "On September 1, 2026,\nthe cc_v5 confidential VM series will be retired and will no longer be\navailable for use or purchase. Any affected VM that has not been resized before\nthat date will deallocated. The impacted VM sizes that will be retired are: DCas_cc_v5,\nDCads_cc_v5, ECas_cc_v5, and ECads_cc_v5. ",
+    "id": "568661",
+    "modified": "2026-08-05T00:22:49.4777616Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Nested confidential (cc_v5) VMs will be retired on September 1, 2026"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

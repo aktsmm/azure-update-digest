@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "567931"
+  },
+  "fetchedAt": "2026-10-14T10:18:28.753Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "567931",
+    "created": "2026-07-28T16:52:51.1200597Z",
+    "description": "Managing Kubernetes resources across multiple clusters can require significant manual effort to apply updates and maintain consistency. Resource placement in Azure Kubernetes Fleet Manager is now generally available and enables platform and application teams to consistently distribute Kubernetes resources across multiple AKS and Arc-enabled clusters. This release includes the Resource Placement Kubernetes APIs in v1 and introduces a new Azure portal experience for creating, viewing, and managing placements across a fleet. By using placement policies that select target member clusters based on labels and properties, teams can reduce the effort and risk associated with applying, updating, and tracking resources on a cluster-by-cluster basis.Learn more.",
+    "generalAvailabilityDate": "2026-07",
+    "id": "567931",
+    "modified": "2026-07-28T16:52:51.1200597Z",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Fleet Manager"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Resource placement in Azure Kubernetes Fleet Manager"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,29 @@
+{
+  "args": {
+    "id": "570283"
+  },
+  "fetchedAt": "2026-10-14T10:09:01.813Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Retirement",
+        "year": 2029
+      }
+    ],
+    "baseId": "570283",
+    "created": "2026-09-29T17:36:13.5325647Z",
+    "description": "Microsoft is retiring Azure Arc-enabled System Center Virtual Machine Manager (SCVMM) in September 2029. Customers must plan and transition to alternative solutions.What does this mean for you?If you are using Azure Arc-enabled SCVMM for:Azure services and Azure Arc capabilities such as monitoring, security, governance, updates, and licensing for Extended Security Updates and Pay-as-you-go SQL and WS, we recommend switching to Azure Arc-enabled Servers. VM lifecycle and powercycle operations such as create, start, stop, restart, resize, and self-service VM management, we recommend that you reach out to us through e-mail to arc-vmm-feedback@microsoft.com.What action should you take?Review your current use of Azure Arc-enabled SCVMM.Determine the appropriate migration path: Azure Arc-enabled Servers or if you need help, reach out to Microsoft.Follow the migration guidance to deboard your SCVMM environment from Azure Arc and onboard to your alternative solution.We recommend beginning your transition planning as soon as possible to ensure a smooth migration before retirement. You can also share your feedback or any concerns that you may have during this transition through e-mail to arc-vmm-feedback@microsoft.com.Learn\nmore. ",
+    "id": "570283",
+    "modified": "2026-09-29T17:36:13.5325647Z",
+    "productCategories": [],
+    "products": [],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Azure Arc enabled System Center Virtual Machine Manager will be retired September 30, 2029"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

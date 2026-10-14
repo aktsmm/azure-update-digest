@@ -1,0 +1,792 @@
+{
+  "args": {
+    "filter": "created ge 2026-08-31T15:00:00Z and created lt 2026-09-30T15:00:00Z",
+    "skip": 50
+  },
+  "fetchedAt": "2026-10-14T10:03:49.282Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571821",
+        "created": "2026-09-18T17:23:21.3964293Z",
+        "description": "In public preview, Microsoft Foundry now lets customers govern the outbound connections a hosted agent can make. Customers author ordered rules matched on destination host, including FQDN with wildcar...",
+        "id": "571821",
+        "modified": "2026-09-18T17:23:21.3964293Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Network egress controls for hosted agents in Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "August",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571826",
+        "created": "2026-09-18T17:24:02.0816279Z",
+        "description": "Microsoft Foundry now exposes enable and disable actions for Foundry agent objects within the Agent 365 governance surface in Microsoft Admin Center, generally available. Administrators can control wh...",
+        "generalAvailabilityDate": "2026-08",
+        "id": "571826",
+        "modified": "2026-09-18T17:24:02.0816279Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Enable and disable controls for Microsoft Foundry agents in Agent 365"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571836",
+        "created": "2026-09-29T17:51:34.4679001Z",
+        "description": "Now you can use ALDO to extend SQL Server support to environments that can’t maintain continuous connectivity to Azure. ALDO is designed for operations in highly regulated, secure, remote, or air-gapp...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "571836",
+        "modified": "2026-09-29T17:51:34.4679001Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: SQL Server on Azure Local Disconnected (ALDO) "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571841",
+        "created": "2026-09-29T17:50:20.447234Z",
+        "description": "With SQL Server on Azure Local, you can run SQL Server workloads on Azure Local infrastructure while leveraging Azure services for centralized management, governance, monitoring, security, and licensi...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "571841",
+        "modified": "2026-09-29T17:50:20.447234Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: SQL Server support on Azure Local connected mode "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571846",
+        "created": "2026-09-29T17:49:15.1602846Z",
+        "description": "In late September 2026, the following updates and\nenhancements were made to Azure SQL:  \n Database\n     Hub in Microsoft Fabric is a unified experience for discovering, managing,\n     monitoring, and ...",
+        "id": "571846",
+        "modified": "2026-09-29T17:49:15.1602846Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database",
+          "Azure SQL Managed Instance"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure SQL updates for late-September 2026 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571852",
+        "created": "2026-09-29T17:42:47.305897Z",
+        "description": "In SSMS, you can now use Microsoft.Build.Sql projects to help you implement, manage, and collaborate on database changes, by providing a local definition of the database objects. A SQL database projec...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "571852",
+        "modified": "2026-09-29T17:42:47.305897Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Database DevOps in SSMS powered by SQL projects "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571857",
+        "created": "2026-09-29T17:40:40.709973Z",
+        "description": "Auto-pause and auto-resume are now available in public preview for Azure SQL Hyperscale databases using the Serverless compute tier. You can configure databases to automatically pause during periods o...",
+        "id": "571857",
+        "modified": "2026-09-29T17:40:40.709973Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure SQL Database Hyperscale Serverless auto-pause and auto-resume "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571867",
+        "created": "2026-09-29T18:13:31.3678314Z",
+        "description": "The public preview of Microsoft-managed performance monitoring for Azure SQL Database is now available.  You can now monitor Azure SQL Database without building custom collection scripts or correlatin...",
+        "id": "571867",
+        "modified": "2026-09-29T18:13:31.3678314Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: SQL Performance Monitoring for Azure SQL Database"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571872",
+        "created": "2026-09-29T17:39:36.1793686Z",
+        "description": "You can now format SQL scripts directly in Visual Studio Code using SQL Formatter for more consistent, readable code. Customizable formatting options help you match your preferred coding style, so you...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "571872",
+        "modified": "2026-09-29T17:39:36.1793686Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: SQL Formatter "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571899",
+        "created": "2026-09-29T17:38:16.2083332Z",
+        "description": "SQL Migration Agent Skills help you automate and streamline the end-to-end migration journey from SQL Server to Azure. These reusable AI-powered skills help guide you through assessment, target select...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "571899",
+        "modified": "2026-09-29T17:38:16.2083332Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: SQL Migration Agent Skills for assessment, migration, and validation "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571904",
+        "created": "2026-09-29T18:11:15.3221366Z",
+        "description": "The preview of performance monitoring for SQL Server enabled by Azure Arc is expanding with more flexible ways to explore and visualize your performance data. You can query Microsoft-managed monitorin...",
+        "id": "571904",
+        "modified": "2026-09-29T18:11:15.3221366Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Arc"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Performance monitoring for Azure Arc–enabled SQL Server "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571909",
+        "created": "2026-09-29T18:14:46.4154621Z",
+        "description": "Ultra Disk support is now available in public preview for Azure Database for PostgreSQL flexible server. You can use Azure’s highest-performance managed disk option for I/O-intensive and transaction-h...",
+        "id": "571909",
+        "modified": "2026-09-29T18:14:46.4154621Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Database for PostgreSQL Ultra Disk "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571914",
+        "created": "2026-09-29T17:28:57.331963Z",
+        "description": "LTR v2 is the next-generation long-term backup solution for Azure Database for PostgreSQL that moves from logical backups (pg_dump/pg_restore) used in LTR v1 to physical snapshot-based backups integra...",
+        "id": "571914",
+        "modified": "2026-09-29T17:28:57.331963Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Long-term retention (LTR) v2 for Azure Database for PostgreSQL"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "571919",
+        "created": "2026-09-22T18:51:48.5685957Z",
+        "description": "Flex Nodes for AKS is a deployment option for application and platform teams to use hybrid and edge infrastructure as connected worker nodes to an AKS control plane in Azure. Flex Nodes provide a cons...",
+        "id": "571919",
+        "modified": "2026-09-22T18:51:48.5685957Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Flex Nodes for AKS"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "572214",
+        "created": "2026-09-21T16:58:19.4839139Z",
+        "description": "Today we're previewing a new way to build cloud apps with GitHub Copilot in VS Code: a guided Copilot experience that takes you from idea to a deployed Azure app through a structured, predictable work...",
+        "id": "572214",
+        "modified": "2026-09-21T16:58:19.4839139Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Developer tools"
+        ],
+        "products": [
+          "Visual Studio Code"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "SDK and Tools",
+          "Feature"
+        ],
+        "title": "Public Preview: Introducing a Guided Copilot Experience for Building Azure Apps in VS Code"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "572219",
+        "created": "2026-09-21T16:55:34.6324521Z",
+        "description": "Azure Functions support for PowerShell 7.6 is\nnow generally available.  You can now develop apps using PowerShell 7.6 locally and\ndeploy them to Azure Functions plans.   Learn more: Updating\nyour app ...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "572219",
+        "modified": "2026-09-21T16:55:34.6324521Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Security",
+          "Services",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Functions support for PowerShell 7.6"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "572573",
+        "created": "2026-09-24T16:04:16.4485151Z",
+        "description": "Instant Access for application-consistent restore points on virtual machines (that have Premium v2 or Ultra disks as data disks) is now generally available. With Instant Access, you can begin restorin...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "572573",
+        "modified": "2026-09-24T16:04:16.4485151Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Storage",
+          "Compute"
+        ],
+        "products": [
+          "Azure Disk Storage",
+          "Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Compliance",
+          "Management",
+          "Feature"
+        ],
+        "title": "Generally Available: Instant Access for VM restore points"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "572579",
+        "created": "2026-09-21T18:44:49.7842536Z",
+        "description": "Azure Sphere OS version 26.09 is now available in the Retail feed. This release includes updates to the Azure Sphere OS only, with no update to the SDK. If your devices are connected to the internet, ...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "572579",
+        "modified": "2026-09-21T18:44:49.7842536Z",
+        "productCategories": [
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Sphere"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Operating System"
+        ],
+        "title": "Generally Available: Azure Sphere OS version 26.09 is now available"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "572630",
+        "created": "2026-09-29T19:27:09.7500172Z",
+        "description": "The Laosv5 series and Lasv5 storage optimized VMs, based on the 5th Gen AMD EPYC™ processor (Turin), are now generally available.Lasv5 and Laosv5 VMs have sizes ranging from 2-160 vCPUs, with 8GiB of ...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "572630",
+        "modified": "2026-09-29T19:27:09.7500172Z",
+        "productCategories": [
+          "Compute"
+        ],
+        "products": [
+          "Virtual Machines"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Pricing & Offerings",
+          "Services"
+        ],
+        "title": "Generally Available: Storage optimized Lasv5 and Laosv5 Azure VM series "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "572770",
+        "created": "2026-09-23T16:50:05.5913061Z",
+        "description": "Support for PowerShell 7.4 will\nend on November 10, 2026, please transition to PowerShell 7.6. Your Azure Function apps will continue to run, but security patches and updates will no\nlonger be provide...",
+        "id": "572770",
+        "modified": "2026-09-23T16:50:05.5913061Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "tags": [
+          "Retirements",
+          "Compliance",
+          "Security"
+        ],
+        "title": "Retirement: Support for PowerShell 7.4 ends on November 10, 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "April",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "572771",
+        "created": "2026-09-22T19:22:34.3836913Z",
+        "description": "Support for Node.js 22 will end on April 30, 2027, please transition to Node.js 24 by that date. Your Azure Function apps will continue to run, but security patches and updates will no longer be provi...",
+        "id": "572771",
+        "modified": "2026-09-22T19:22:34.3836913Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "tags": [
+          "Retirements",
+          "Compliance",
+          "Security"
+        ],
+        "title": "Retirement: Support for Node.js 22 ends on April 30, 2027"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "572838",
+        "created": "2026-09-23T16:46:49.1401459Z",
+        "description": "Support for .NET\n8 and .NET 9 will end on November\n10, 2026. Please transition to .NET\n10 by that date. Your\nAzure Function Apps will continue to operate,\nbut security updates will no longer be provid...",
+        "id": "572838",
+        "modified": "2026-09-23T16:46:49.1401459Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "tags": [
+          "Retirements",
+          "Compliance",
+          "Security"
+        ],
+        "title": "Retirement: Support for .NET 8 and .NET 9 ends on November 10, 2026—upgrade your apps to .NET 10  "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "572968",
+        "created": "2026-09-28T17:08:48.081374Z",
+        "description": "We are announcing the general availability of the Luxembourg Azure Extended Zone. Azure Extended Zones are small-footprint extensions of Azure placed in metro areas, industry centers, or specific juri...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "572968",
+        "modified": "2026-09-28T17:08:48.081374Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Regions & Datacenters"
+        ],
+        "title": "Generally Available: Luxembourg - Azure Extended Zones"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "572998",
+        "created": "2026-09-28T22:06:05.6611888Z",
+        "description": "Azure SQL Dev Hub gives you a central starting point for building applications with Azure SQL, whether you’re developing directly or using AI agents. You can find guidance for connecting to Azure SQL ...",
+        "id": "572998",
+        "modified": "2026-09-28T22:06:05.6611888Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure SQL Dev Hub"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "573003",
+        "created": "2026-09-29T17:31:11.9235467Z",
+        "description": "Microsoft SQL Agent Skills help you get more accurate, product-specific guidance when using AI agents to build, operate, and migrate SQL workloads. You can use these skills with Azure SQL Database, Az...",
+        "id": "573003",
+        "modified": "2026-09-29T17:31:11.9235467Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Microsoft SQL Agent Skills"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "573027",
+        "created": "2026-09-29T17:12:40.6934092Z",
+        "description": "Large volume breakthrough mode in Azure NetApp Files enables extreme performance and scalability for demanding HPC and EDA workloads. It supports large volumes up to 2PiB, delivering throughput up to ...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "573027",
+        "modified": "2026-09-29T17:12:40.6934092Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Support for large volume breakthrough mode"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "573032",
+        "created": "2026-09-29T17:09:58.0096921Z",
+        "description": "QoS update with cool access enabled on Premium and\nUltra service levels improves how Azure NetApp Files balances performance and\ncost for mixed hot and cool workloads. Throughput automatically adjusts...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "573032",
+        "modified": "2026-09-29T17:09:58.0096921Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Storage with cool access enhancement "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "573041",
+        "created": "2026-09-29T17:07:55.4152603Z",
+        "description": "Azure NetApp Files now supports Microsoft Entra Kerberos\nauthentication for SMB volumes. The capability enables users with hybrid or\ncloud-only identities to authenticate through Microsoft Entra ID us...",
+        "id": "573041",
+        "modified": "2026-09-29T17:07:55.4152603Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure NetApp Files"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview : Microsoft entra kerberos authentication for Azure NetApp Files   "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "573048",
+        "created": "2026-09-25T18:07:26.930029Z",
+        "description": "Azure HorizonDB is a fully managed, PostgreSQL-compatible, cloud-native database service designed for scalable, high-performance workloads.Azure HorizonDB, now in public preview, includes PostgreSQL 1...",
+        "id": "573048",
+        "modified": "2026-09-25T18:07:26.930029Z",
+        "previewAvailabilityDate": "2026-09",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure HorizonDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure HorizonDB supports PostgreSQL 18"
+      }
+    ],
+    "limit": 50,
+    "offset": 50,
+    "returnedCount": 29,
+    "totalCount": 79
+  },
+  "scan": "2026-09",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

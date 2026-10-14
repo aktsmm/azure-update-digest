@@ -1,0 +1,159 @@
+{
+  "args": {
+    "filter": "created ge 2026-04-30T15:00:00Z and created lt 2026-05-31T15:00:00Z",
+    "skip": 50
+  },
+  "fetchedAt": "2026-10-14T10:04:40.623Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "564460",
+        "created": "2026-05-21T18:45:42.3463074Z",
+        "description": "User Groups and IP Address Pools for Point-to-Site\nconnections in VPN Gateway enable customers to assign distinct IP address pools\nto remote users based on their credentials. With this capability, cus...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "564460",
+        "modified": "2026-05-21T18:45:42.3463074Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "VPN Gateway"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: User Groups and IP address pools for P2S connections"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "564478",
+        "created": "2026-05-26T18:00:01.4593619Z",
+        "description": "Azure Virtual Network Manager integration with Virtual WAN is now in public preview, enabling you to use an Azure Virtual WAN hub as the hub in Azure Virtual Network Manager hub-and-spoke connectivity...",
+        "id": "564478",
+        "modified": "2026-05-26T18:00:01.4593619Z",
+        "previewAvailabilityDate": "2026-05",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Virtual WAN",
+          "Azure Virtual Network Manager"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Management",
+          "Security",
+          "Services"
+        ],
+        "title": "Public Preview: Azure Virtual Network Manager integration with Virtual WAN "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "564644",
+        "created": "2026-05-29T15:15:43.6800866Z",
+        "description": "Azure Site Recovery\n(ASR) now supports replication of virtual machines using Performance Plus\nenabled managed disks. With this update, virtual machines using Premium SSD,\nStandard SSD or Standard HDD ...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "564644",
+        "modified": "2026-05-29T15:15:43.6800866Z",
+        "productCategories": [
+          "Management and governance",
+          "Migration"
+        ],
+        "products": [
+          "Azure Site Recovery"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Management"
+        ],
+        "title": "Generally Available: Azure Site Recovery Support for Performance Plus Managed Disks"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "564689",
+        "created": "2026-05-26T16:45:10.1880975Z",
+        "description": "Azure virtual network flow logs connector with Microsoft Sentinel is now generally available, enabling you to seamlessly export and analyze network traffic data within your security operations workflo...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "564689",
+        "modified": "2026-05-26T16:45:10.1880975Z",
+        "productCategories": [
+          "Management and governance",
+          "Networking"
+        ],
+        "products": [
+          "Network Watcher"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Virtual network flow logs connector with Microsoft Sentinel"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "564714",
+        "created": "2026-05-28T05:30:31.9108097Z",
+        "description": "Application Gateway for Containers service mesh integration\nwith Istio is now generally available. This capability simplifies secure\nnorth-south traffic into workloads running in an Istio service mesh...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "564714",
+        "modified": "2026-05-28T05:30:31.9108097Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Application Gateway for Containers – Service Mesh integration with Istio"
+      }
+    ],
+    "limit": 50,
+    "offset": 50,
+    "returnedCount": 5,
+    "totalCount": 55
+  },
+  "scan": "2026-05",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

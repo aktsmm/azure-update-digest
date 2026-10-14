@@ -1,0 +1,43 @@
+{
+  "args": {
+    "id": "565090"
+  },
+  "fetchedAt": "2026-10-14T10:24:14.510Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "565090",
+    "created": "2026-06-04T19:45:40.5539693Z",
+    "description": "Azure Monitor's support for native ingestion of OpenTelemetry Protocol (OTLP) signals is now generally available. This enables you to send telemetry data directly from OpenTelemetry-instrumented applications and platforms to Azure Monitor. You can configure your OpenTelemetry Collector to send data directly to Azure Monitor cloud ingestion endpoints to ingest OTLP metrics, logs and traces using Microsoft Entra for authentication. You can enable OTLP data ingestion in Azure Monitor using Application Insights OR by manually creating the required data collection endpoints, rules and workspaces. The Application Insights-based approach is recommended for most scenarios as it automates resource creation and includes built-in application performance management experiences.Ingested OTLP metrics are stored in Azure Monitor Workspaces and can be queried and alerted upon with Prometheus query language (PromQL). OTLP logs and traces are stored in Log Analytics workspaces using new OpenTelemetry tables and semantics.Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "565090",
+    "modified": "2026-06-04T19:45:40.5539693Z",
+    "previewAvailabilityDate": "2026-03",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Open Source"
+    ],
+    "title": "Generally Available: Ingest OTLP signals into Azure Monitor with the OpenTelemetry Collector"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

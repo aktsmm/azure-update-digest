@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "571846"
+  },
+  "fetchedAt": "2026-10-14T10:08:37.485Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "571846",
+    "created": "2026-09-29T17:49:15.1602846Z",
+    "description": "In late September 2026, the following updates and\nenhancements were made to Azure SQL:  \n Database\n     Hub in Microsoft Fabric is a unified experience for discovering, managing,\n     monitoring, and optimizing databases across SQL Server, Azure SQL,\n     PostgreSQL, Azure Cosmos DB, and Fabric SQL. By bringing AI-powered\n     insights and agents into a single control plane, Database Hub simplifies\n     database operations and helps you modernize your data estate.  \n You\n     can now increase the number of databases allowed in a Hyperscale Elastic\n     pool to 50.  \n Azure\n     SQL Database now supports local time zones, enabling applications to\n     operate using a configured time zone without requiring custom logic or\n     workarounds.  \n The\n     MSSQL extension’s modernized landing page makes it easier to discover\n     features and get started quickly.   \n You\n     can now use a single Azure SQL Managed Instance link to replicate multiple\n     databases from SQL Server Always On Availability Groups to Azure SQL\n     Managed Instance.  Learn more: Data Hub in Microsoft Fabric   Increased\ndatabases in Hyperscale Elastic pool  Local time zones in Azure SQL\nDatabase  MSSQL extension modernized\nlanding page Single Azure SQL Managed\nInstance link to replicate multiple databases ",
+    "id": "571846",
+    "modified": "2026-09-29T17:49:15.1602846Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database",
+      "Azure SQL Managed Instance"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Azure SQL updates for late-September 2026 "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

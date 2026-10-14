@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "567944"
+  },
+  "fetchedAt": "2026-10-14T10:18:24.973Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "567944",
+    "created": "2026-07-28T16:54:22.6301678Z",
+    "description": "Managing ingress routing while adopting newer Kubernetes standards can require balancing modernization efforts with existing deployments. Application Routing with Gateway API is now generally available on AKS, bringing the Kubernetes Gateway API to ingress management without requiring a service mesh. Existing ingress-nginx-based Application Routing remains supported until November, and customers can migrate to the Gateway API-based model at their own pace using the open-source ingress2gateway tool. This enables technical practitioners to adopt a standardized routing model while maintaining a lightweight footprint and supporting a gradual transition from existing ingress configurations.Learn more.",
+    "generalAvailabilityDate": "2026-07",
+    "id": "567944",
+    "modified": "2026-07-28T16:54:22.6301678Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Application Routing with Gateway API"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

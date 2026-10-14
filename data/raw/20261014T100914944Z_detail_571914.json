@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "571914"
+  },
+  "fetchedAt": "2026-10-14T10:09:14.944Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "571914",
+    "created": "2026-09-29T17:28:57.331963Z",
+    "description": "LTR v2 is the next-generation long-term backup solution for Azure Database for PostgreSQL that moves from logical backups (pg_dump/pg_restore) used in LTR v1 to physical snapshot-based backups integrated with Azure Backup Vaults.  With this release, you can now support daily backups while gaining much greater scalability for large databases through physical snapshots rather than pg_dump-based exports.  Learn more. ",
+    "id": "571914",
+    "modified": "2026-09-29T17:28:57.331963Z",
+    "previewAvailabilityDate": "2026-09",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Long-term retention (LTR) v2 for Azure Database for PostgreSQL"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

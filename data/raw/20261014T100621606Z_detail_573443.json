@@ -1,0 +1,31 @@
+{
+  "args": {
+    "id": "573443"
+  },
+  "fetchedAt": "2026-10-14T10:06:21.606Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "573443",
+    "created": "2026-10-07T16:57:04.0990443Z",
+    "description": "Starting with SQL Server 2025 CU9 and SQL Server 2022 CU27, SQL Server on Linux supports the bulkadmin fixed server role and the ADMINISTER BULK OPERATIONS permission for performing bulk data import operations without requiring users to be members of the sysadmin fixed server role. This capability enables you to use operations such as BULK INSERT and OPENROWSET(BULK...) while following a least-privilege security model. Previously on SQL Server on Linux, these operations required sysadmin membership.With this release, organizations running SQL Server on Linux can provide users with the permissions required for bulk data loading without granting broader sysadmin privileges, improving alignment with the principle of least privilege. The feature applies to SQL Server on Linux, including on-premises, SQL Server on Azure VMs and container deployments.Learn\nmore. ",
+    "generalAvailabilityDate": "2026-10",
+    "id": "573443",
+    "modified": "2026-10-07T16:57:04.0990443Z",
+    "productCategories": [],
+    "products": [],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Enabling the Bulk admin role for SQL Server on Linux"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

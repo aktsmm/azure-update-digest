@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "565154"
+  },
+  "fetchedAt": "2026-10-14T10:22:58.676Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "565154",
+    "created": "2026-06-10T20:45:26.0085246Z",
+    "description": "Microsoft Entra server principals (logins) for Azure SQL Database is now generally available. You can now use CREATE LOGIN ... FROM EXTERNAL PROVIDER in the virtual master database, bringing parity with SQL logins for your Microsoft Entra identities.With Entra logins, you can assign server roles to Entra principals, automate user and database provisioning using service principal logins, and enable Entra-only authentication to disable SQL authentication entirely. If you're already using Entra logins on Azure SQL Managed Instance or SQL Server 2022, you now get the same experience on Azure SQL Database. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "565154",
+    "modified": "2026-06-10T20:45:26.0085246Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Microsoft Entra server principals on Azure SQL Database "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

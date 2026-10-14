@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "572579"
+  },
+  "fetchedAt": "2026-10-14T10:10:26.349Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "572579",
+    "created": "2026-09-21T18:44:49.7842536Z",
+    "description": "Azure Sphere OS version 26.09 is now available in the Retail feed. This release includes updates to the Azure Sphere OS only, with no update to the SDK. If your devices are connected to the internet, they will receive the updated OS from the cloud.The 26.09 OS Retail release migrates the underlying Azure Sphere OS Linux Kernel version from the 5.10.x to 6.1.x branch, aligning Azure Sphere with the Linux CIP Platform for Super Long-Term Support. This will be Azure Sphere's final major kernel update prior to retirement in 2031.Please note that there are no functional changes or new features in this release.Learn more. ",
+    "generalAvailabilityDate": "2026-09",
+    "id": "572579",
+    "modified": "2026-09-21T18:44:49.7842536Z",
+    "productCategories": [
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Sphere"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Operating System"
+    ],
+    "title": "Generally Available: Azure Sphere OS version 26.09 is now available"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

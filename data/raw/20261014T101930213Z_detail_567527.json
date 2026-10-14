@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "567527"
+  },
+  "fetchedAt": "2026-10-14T10:19:30.213Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "567527",
+    "created": "2026-07-17T14:55:28.3336589Z",
+    "description": "Microsoft Defender Cloud Security Posture Management (CSPM) assessments for Azure Database for PostgreSQL Flexible Server are now generally available. You can use assessments to continuously evaluate the security posture of your Azure PostgreSQL flexible servers and identify vulnerabilities and misconfigurations that may cause security risks. The assessments are tailored to PostgreSQL-specific security best practices and provide actionable recommendations to help you strengthen your security baseline, prioritize remediation efforts, and support compliance requirements. If you already have Microsoft Defender CSPM enabled for your Azure PostgreSQL flexible server, no additional setup is required to start using these assessments. An initial set of built-in assessments is available today, with additional assessment coverage planned for future releases. You can see all findings and recommendations in the Azure portal on the resource blade of your Azure Database for PostgreSQL flexible server or the main Defender for Cloud experience, and the Microsoft Defender portal.Learn more.  ",
+    "generalAvailabilityDate": "2026-07",
+    "id": "567527",
+    "modified": "2026-07-17T14:55:28.3336589Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Microsoft Defender security assessments for Azure Database for PostgreSQL Flexible Server "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
