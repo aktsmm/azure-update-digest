@@ -1,0 +1,168 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571810"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T22:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "571810",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "SQL Server on Linux VM がスクリプトベースでデプロイ可能に",
+        "subtitleJa": "標準の Linux VM に SQL Server を自動インストール・登録（パブリック プレビュー）",
+        "en": "Public preview: Script-based deployment for SQL Server on Linux Azure VM "
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "modifiedJst": "2026-09-30",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["SQL Server on Azure Virtual Machines"],
+        "categories": ["compute", "databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": {
+          "text": "Azure VM 上で SQL Server on Linux を新規に構築する**データベース管理者・インフラ担当者**",
+          "origin": "learn", "assertion": "inference", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview?view=azuresql", "locator": "Azure portal のデプロイ", "retrievedAt": "2026-10-14T22:30:00Z" }]
+        },
+        "change": {
+          "text": "ディストリビューション・バージョン・エディションを選び、mssql.conf も持ち込める",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview?view=azuresql", "locator": "柔軟性とコントロール", "retrievedAt": "2026-10-14T22:30:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "新規デプロイは本方式が前提。プレビューのため検証環境から試す",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [
+            { "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview?view=azuresql", "locator": "Important", "retrievedAt": "2026-10-14T22:30:00Z" },
+            { "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T22:30:00Z" }
+          ]
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "事前作成済みの Marketplace イメージから SQL Server on Linux VM をデプロイしていた（現在は新規デプロイ不可）",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview?view=azuresql", "locator": "Important", "retrievedAt": "2026-10-14T22:30:00Z" }]
+        },
+        "after": {
+          "text": "標準の Linux ベース イメージで VM を作成し、SQL Server のインストールと登録まで一連の流れで自動化される",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview?view=azuresql", "locator": "展開は以下の段階を経ます", "retrievedAt": "2026-10-14T22:30:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Azure portal の VM 作成ページまたは Azure SQL ハブから開始できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?view=azuresql", "locator": "Linux VM の作成", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            },
+            {
+              "text": "VM は SQL Server IaaS Agent 拡張機能に既定で自動登録される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview?view=azuresql", "locator": "自動登録", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            },
+            {
+              "text": "ライセンスは従量課金（既定）か Azure ハイブリッド特典を選択",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?view=azuresql", "locator": "SQL Server 設定の構成", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "対応 OS は RHEL 9/10 と Ubuntu 22.04/24.04/26.04。SLES は未対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview?view=azuresql", "locator": "サポートされているLinuxディストリビューション", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            },
+            {
+              "text": "SLES では SLES の VM を作成し、SQL Server を手動でインストールする",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview?view=azuresql", "locator": "SQL Serverを手動でインストールしてください", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            },
+            {
+              "text": "Azure ハイブリッド特典には Software Assurance の License Mobility が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?view=azuresql", "locator": "ライセンスモデル", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "使う OS・SQL Server バージョンが対応範囲か、検証用 VM で確認する",
+              "origin": "editorial", "assertion": "recommendation", "verification": "unverified"
+            },
+            {
+              "text": "検証・機能テストは DS2 以上、性能テストは DS13 以上の VM サイズが目安",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?view=azuresql", "locator": "ヒント", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "sql-server-on-azure-vm", "term": "SQL Server on Azure Virtual Machines", "type": "product",
+          "oneLine": {
+            "text": "オンプレミスのハードウェアなしで、クラウド上でフル バージョンの SQL Server を使える VM。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-10-14T22:30:00Z" }]
+          }
+        },
+        {
+          "termKey": "sql-iaas-agent", "term": "SQL Server IaaS Agent 拡張機能", "type": "feature",
+          "oneLine": {
+            "text": "登録すると SQL 仮想マシン リソースが作られ、ライセンスの種類を Azure から管理できる。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?view=azuresql", "locator": "SQL IaaS Agent拡張機能で登録を確認しましょう", "retrievedAt": "2026-10-14T22:30:00Z" }]
+          }
+        },
+        {
+          "termKey": "azure-hybrid-benefit", "term": "Azure ハイブリッド特典", "type": "term",
+          "oneLine": {
+            "text": "Software Assurance の License Mobility を持つ SQL Server ライセンスを使えるライセンス モデル。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?view=azuresql", "locator": "ライセンスモデル", "retrievedAt": "2026-10-14T22:30:00Z" }]
+          }
+        },
+        {
+          "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label",
+          "oneLine": {
+            "text": "GA の前に、全 Azure 利用者が評価とフィードバックのために使える段階。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T22:30:00Z" }]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571810",
+        "learn": [
+          { "title": "SQL Server on Linux Azure 仮想マシンの概要", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-server-on-linux-vm-what-is-iaas-overview?view=azuresql", "locale": "ja-jp" },
+          { "title": "Azure portal で SQL Server を実行している Linux 仮想マシンをプロビジョニングする", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart?view=azuresql", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
