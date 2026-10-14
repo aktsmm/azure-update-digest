@@ -1,0 +1,85 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569592"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T20:17:14Z"
+  },
+  "slides": [
+    {
+      "key": "569592",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "DCsv3 / DCdsv3 シリーズ VM が 2029-10-31 に廃止",
+        "subtitleJa": "廃止後は利用も購入も不可。期限までに機密 VM やコンテナーへ移行を",
+        "en": "Retirement: DCsv3 and DCdsv3-series Azure Virtual Machines will be retired on October 31, 2029"
+      },
+      "meta": {
+        "publishedJst": "2026-10-02",
+        "modifiedJst": "2026-10-02",
+        "availability": [{ "rawRing": "Retirement", "year": 2029, "month": "October" }],
+        "status": null,
+        "products": ["Linux Virtual Machines", "Virtual Machines", "Windows Virtual Machines"],
+        "categories": ["compute"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "DCsv3 / DCdsv3 シリーズの **Linux・Windows・Dedicated Host VM、VM Scale Sets、AKS** を使っている方", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/retirement/dcsv3-series-retirement", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-14T20:17:14Z" }] },
+        "change": { "text": "廃止日以降は利用・購入ができなくなり、残る VM サブスクリプションは動作を停止する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/retirement/dcsv3-series-retirement", "locator": "提供終了日以降はどうなりますか?", "retrievedAt": "2026-10-14T20:17:14Z" }] },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "2029-10-31 までにワークロードを推奨オプションへ移行する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2029-10-31", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-10-02", "precision": "day" } },
+        { "label": "容量制限の開始", "when": { "date": "2026-11-01", "precision": "day" } },
+        { "label": "廃止", "when": { "date": "2029-10-31", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "2026-11-01 から容量制限が適用され、新しいサブスクリプションは許可されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/retirement/dcsv3-series-retirement", "locator": "新しい顧客のサインアップ", "retrievedAt": "2026-10-14T20:17:14Z" }] },
+            { "text": "廃止日まではサポート、SLA、メンテナンスを引き続き受けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/retirement/dcsv3-series-retirement", "locator": "現在のワークロードは Microsoft によって引き続きサポートされますか?", "retrievedAt": "2026-10-14T20:17:14Z" }] },
+            { "text": "課金が変わる場合あり。1年・3年の予約は 2026-10-31 以降購入・更新不可", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "VM: DCasv6 / DCadsv6 / DCesv6 / DCedsv6、または ECasv6 系・ECesv6 系の機密 VM", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/retirement/dcsv3-series-retirement", "locator": "モダン化に推奨されるオプション", "retrievedAt": "2026-10-14T20:17:14Z" }] },
+            { "text": "コンテナー: Confidential Container Instances、または AKS の仮想ノード (C-VN2)", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/retirement/dcsv3-series-retirement", "locator": "モダン化に推奨されるオプション", "retrievedAt": "2026-10-14T20:17:14Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "移行前にサブスクリプションで移行先シリーズの vCPU クォータを確認し、不足なら引き上げを要求する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/retirement/dcsv3-series-retirement", "locator": "クォータの引き上げを確認して要求する", "retrievedAt": "2026-10-14T20:17:14Z" }] },
+            { "text": "予約インスタンスは、新シリーズへの交換か節約プランへの切り替えを検討できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/retirement/dcsv3-series-retirement", "locator": "予約インスタンス (RI)", "retrievedAt": "2026-10-14T20:17:14Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dcsv3-dcdsv3", "term": "DCsv3 / DCdsv3 シリーズ", "type": "product", "oneLine": { "text": "今回廃止される、機密コンピューティング向けの Azure 仮想マシンのシリーズ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/retirement/dcsv3-series-retirement", "locator": "冒頭", "retrievedAt": "2026-10-14T20:17:14Z" }] } },
+        { "termKey": "cvm", "term": "機密 VM (CVM)", "type": "term", "oneLine": { "text": "DCasv6 や DCesv6 などの、移行先として推奨される新世代の機密 VM。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/retirement/dcsv3-series-retirement", "locator": "モダン化に推奨されるオプション", "retrievedAt": "2026-10-14T20:17:14Z" }] } },
+        { "termKey": "c-aci", "term": "Confidential Container Instances", "type": "product", "oneLine": { "text": "コンテナー化したアプリをリフト アンド シフトできる、サーバーレスの機密コンテナー基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/retirement/dcsv3-series-retirement", "locator": "次世代の提供内容にモダナイズする", "retrievedAt": "2026-10-14T20:17:14Z" }] } },
+        { "termKey": "retirement", "term": "廃止", "type": "label", "oneLine": { "text": "指定日以降、このシリーズの VM が利用も購入もできなくなること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569592",
+        "learn": [
+          { "title": "DCsv3 および Dcdsv3 シリーズの提供終了", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/retirement/dcsv3-series-retirement", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
