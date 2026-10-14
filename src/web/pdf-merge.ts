@@ -117,9 +117,18 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
     for (const c of e.categories) cats.set(c, (cats.get(c) ?? 0) + 1);
   }
   g.text(sum, "種類別", 70, 112, 22, BLUE, true);
-  [...kinds].forEach(([k, v], i) => { g.text(sum, `${k}　${v} 件`, 90, 152 + i * 34, 22, NAVY); });
+  const row = (label: string, n: number, x: number, w: number, i: number) => {
+    const top = 152 + i * 34;
+    g.text(sum, label, x, top, 22, NAVY);
+    const cnt = String(n), unit = " 件";
+    const ux = x + w - g.width(unit, 22);
+    g.text(sum, unit, ux, top, 22, GRAY);
+    g.text(sum, cnt, ux - g.width(cnt, 22), top, 22, NAVY, true);
+    sum.drawLine({ start: { x, y: H - top - 28 }, end: { x: x + w, y: H - top - 28 }, thickness: 0.5, color: rgb(0.86, 0.89, 0.93) });
+  };
+  [...kinds].forEach(([k, v], i) => row(k, v, 90, 360, i));
   g.text(sum, "カテゴリ別（複数所属あり）", 560, 112, 22, BLUE, true);
-  [...cats].sort((a, b) => b[1] - a[1]).forEach(([k, v], i) => { g.text(sum, `${o.categoryLabels[k] ?? k}　${v} 件`, 580, 152 + i * 34, 22, NAVY); });
+  [...cats].sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1)).forEach(([k, v], i) => row(o.categoryLabels[k] ?? k, v, 580, 560, i));
   footer(g, sum, "Azure アップデート情報", source);
 
   let done = 0;
