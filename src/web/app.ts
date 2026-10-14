@@ -1,10 +1,14 @@
 import { addDays, isValidDateString, monthBounds, resolvePeriod, toJstDate, type Period } from "../lib/period.js";
 import { defaultQuery, runQuery, type DigestItem, type Query, type QueryResult } from "../lib/query.js";
 import type { SiteMeta } from "../lib/site-data.js";
+import type { SlideEntry } from "./pdf-merge.js";
+import { orderSlides } from "../lib/slide-order.js";
+import type { SlideKind } from "../lib/slide-kind.js";
 
 const app = document.getElementById("app")!;
 let items: DigestItem[] = [];
 let meta: SiteMeta;
+let slideEntries = new Map<string, SlideEntry>();
 
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 const catLabel = (id: string) => meta.categories.find((c) => c.id === id)?.label ?? id;
@@ -84,7 +88,7 @@ function card(i: DigestItem): string {
     <h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a>${esc(i.title)}</h3>
     <div class="meta">作成 ${esc(i.createdJst)} ／ 更新 ${esc(i.modifiedJst)} ／ ID ${esc(i.key)}</div>
     ${badges(i)}${summary}
-    <div class="links"><a href="${safeUrl(i.sourceUrl)}" target="_blank" rel="noopener noreferrer">原文（Azure Updates）</a>${rel}</div>
+    <div class="links"><a href="${safeUrl(i.sourceUrl)}" target="_blank" rel="noopener noreferrer">原文（Azure Updates）</a>${slideEntries.has(i.key) ? ` ／ <a href="pdf/${esc(i.key)}.pdf" target="_blank" rel="noopener noreferrer">スライド PDF</a>` : ""}${rel}</div>
   </article>`;
 }
 
@@ -135,6 +139,79 @@ function bind(q: Query, fixedMonth: string | null, basePath: string) {
   }));
 }
 
+function download(name: string, blob: Blob) {
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+}
+
+function selectionLabel(q: Query, r: QueryResult) {
+  const cats = q.categories.length ? q.categories.map(catLabel).join("・") : "すべて";
+  return { period: `${q.period.start} 〜 ${q.period.end}`, cats, file: `azure-updates_${q.period.start}_${q.period.end}` };
+}
+
+function downloadBar(r: QueryResult, q: Query): string {
+  const withSlide = r.items.filter((i) => slideEntries.has(i.key)).length;
+  const pdf = slideEntries.size
+    ? `<button type="button" data-dl="pdf" ${withSlide ? "" : "disabled"}>PDF（スライド ${withSlide} 件）</button>`
+    : "";
+  const note = slideEntries.size ? `<span class="meta">PDF は、スライドを作成済みの更新（直近3か月分）だけをまとめます（絞り込み後 ${r.items.length} 件中 ${withSlide} 件）。</span>` : "";
+  return `<div class="panel row" id="dl"><strong>ダウンロード</strong><button type="button" data-dl="json" ${r.items.length ? "" : "disabled"}>JSON（${r.items.length} 件）</button>${pdf}${note}<span class="meta" id="dl-status"></span></div>`;
+}
+
+function bindDownload(r: QueryResult, q: Query) {
+  const status = document.getElementById("dl-status")!;
+  const sel = selectionLabel(q, r);
+  document.querySelector('[data-dl="json"]')?.addEventListener("click", async () => {
+    status.textContent = "作成中…";
+    const slides: unknown[] = [];
+    for (const i of r.items) {
+      if (!slideEntries.has(i.key)) continue;
+      try { slides.push(...((await (await fetch(`slides/${i.key}.json`)).json()) as { slides: unknown[] }).slides); } catch { /* slide JSON is optional */ }
+    }
+    const body = {
+      schema: 1,
+      selection: { period: q.period, basis: q.basis, mode: q.mode, categories: q.categories, importance: q.importance, text: q.text, snapshotAt: meta.snapshotAt, coverage: r.coverage.status },
+      items: r.items,
+      slides,
+    };
+    download(`${sel.file}.json`, new Blob([JSON.stringify(body, null, 2)], { type: "application/json" }));
+    status.textContent = `JSON を保存しました（更新 ${r.items.length} 件、スライド ${slides.length} 件）`;
+  });
+  document.querySelector('[data-dl="pdf"]')?.addEventListener("click", async () => {
+    const entries = orderSlides(r.items.flatMap((i) => (slideEntries.has(i.key) ? [slideEntries.get(i.key)!] : [])).map((e) => ({ ...e, kind: e.kind as SlideKind })));
+    if (!entries.length) return;
+    status.textContent = "PDF 作成の準備中…";
+    try {
+      await new Promise<void>((ok, ng) => {
+        if ((window as unknown as { PdfMerge?: unknown }).PdfMerge) return ok();
+        const s = document.createElement("script");
+        s.src = "pdf-merge.js";
+        s.onload = () => ok();
+        s.onerror = () => ng(new Error("script"));
+        document.head.append(s);
+      });
+      const font = await (await fetch("fonts/NotoSansJP.ttf")).arrayBuffer();
+      const lib = (window as unknown as { PdfMerge: typeof import("./pdf-merge.js") }).PdfMerge;
+      const bytes = await lib.buildDeckPdf(
+        {
+          entries, categoryLabels: Object.fromEntries(meta.categories.map((c) => [c.id, c.label])),
+          periodLabel: q.mode === "dated" ? sel.period : null, totalInPeriod: r.items.length, createdUtc: new Date().toISOString(),
+          onProgress: (d, t) => { status.textContent = `PDF を結合中… ${d} / ${t}`; },
+        },
+        font,
+        async (key) => (await fetch(`pdf/${key}.pdf`)).arrayBuffer(),
+      );
+      download(`${sel.file}.pdf`, new Blob([bytes as BlobPart], { type: "application/pdf" }));
+      status.textContent = `PDF を保存しました（${entries.length} 件）`;
+    } catch {
+      status.textContent = "PDF を作成できませんでした。時間をおいて再度お試しください。";
+    }
+  });
+}
+
 function renderList(q: Query, heading: string, fixedMonth: string | null, basePath: string) {
   const r = runQuery(items, q, meta.coverage, meta.snapshotAt);
   const basisLabel = q.mode === "availability" ? "提供・廃止予定（月単位）" : q.basis === "created" ? "作成日基準" : "更新日基準";
@@ -145,9 +222,10 @@ function renderList(q: Query, heading: string, fixedMonth: string | null, basePa
   const note = q.mode === "availability" ? "<p class='meta'>提供時期は公式の月単位表記のまま表示しています（日付への換算はしていません）。</p>" : "";
   app.innerHTML = `<h1>${esc(heading)}</h1>
     <p><strong>${esc(q.period.start)} 〜 ${esc(q.period.end)}</strong>（JST・${basisLabel}）: <strong>${r.items.length} 件</strong> ${filtered}</p>
-    ${coverageBanner(r)}${backfillPanel()}${periodForm(q, fixedMonth)}${note}${hl}
+    ${coverageBanner(r)}${backfillPanel()}${periodForm(q, fixedMonth)}${downloadBar(r, q)}${note}${hl}
     <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${r.items.map(card).join("")}${empty}`;
   bind(q, fixedMonth, basePath);
+  bindDownload(r, q);
 }
 
 function renderArchive() {
@@ -198,6 +276,10 @@ async function main() {
     return;
   }
   document.getElementById("footer")!.innerHTML = `${esc(meta.attribution)}<br>データ時点: ${esc(meta.snapshotAt ?? "未取得")}（UTC） ／ 件数 ${meta.itemCount} ／ 原文リンクは Azure Updates の公式 permalink 形式で、リンク先の存在は自動確認できません（開けない場合は MRC の ID をご確認ください）。<br><a href="https://github.com/aktsmm/azure-update-digest/blob/main/docs/design.md" target="_blank" rel="noopener noreferrer">設計・方式の詳細</a> ／ <a href="https://github.com/aktsmm/azure-update-digest#readme" target="_blank" rel="noopener noreferrer">README</a>`;
+  try {
+    const s = (await (await fetch("data/slides.json")).json()) as { slides: SlideEntry[] };
+    slideEntries = new Map(s.slides.map((e) => [e.key, e]));
+  } catch { /* no slide PDFs published */ }
   window.addEventListener("hashchange", route);
   route();
 }
