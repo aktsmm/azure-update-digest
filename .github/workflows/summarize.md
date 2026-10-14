@@ -8,7 +8,7 @@ on:
 permissions:
   contents: read
 engine: copilot
-timeout-minutes: 30
+timeout-minutes: 45
 network:
   allowed:
     - defaults
@@ -37,7 +37,7 @@ steps:
   - name: Install and list pending items
     run: |
       npm ci
-      npm run pending -- --limit 20
+      npm run pending -- --limit 30
 safe-outputs:
   create-pull-request:
     title-prefix: "[summaries] "
