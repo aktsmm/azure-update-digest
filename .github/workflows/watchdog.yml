@@ -41,7 +41,7 @@ jobs:
       - name: Re-run a failed Pages deploy once
         run: |
           read -r id attempt concl created < <(gh run list --workflow pages.yml --limit 1 --json databaseId,attempt,conclusion,createdAt \
-            -q '.[0] | "\(.databaseId) \(.attempt) \(.conclusion) \(.createdAt)"')
+            -q '.[0] | "\(.databaseId) \(.attempt) \(.conclusion // "none") \(.createdAt)"')
           age=$(( $(date +%s) - $(date -d "$created" +%s) ))
           if [ "$concl" = "failure" ] && [ "$attempt" = "1" ] && [ "$age" -lt 7200 ]; then
             echo "re-running deploy #$id"
