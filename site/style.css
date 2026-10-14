@@ -7,6 +7,12 @@ body { margin:0; font-family: "Segoe UI","Hiragino Sans","Yu Gothic UI",Meiryo,s
 .brand { color:#fff; font-weight:700; font-size:1.15rem; text-decoration:none; }
 nav { display:flex; gap:16px; }
 nav a { color:#cfe3fb; text-decoration:none; } nav a.active, nav a:hover { color:#fff; text-decoration:underline; }
+.demo-nav { background:#eaf3fc; border-bottom:1px solid #cfe0f3; font-size:13px; }
+.demo-nav .wrap { display:flex; flex-wrap:wrap; gap:6px 14px; align-items:center; padding-top:6px; padding-bottom:6px; }
+.demo-nav-label { color:#3d4a5c; font-weight:600; }
+.demo-nav ul { display:flex; flex-wrap:wrap; gap:4px 14px; list-style:none; margin:0; padding:0; }
+.demo-nav a { color:#0b5cad; text-decoration:none; } .demo-nav a:hover { text-decoration:underline; }
+.demo-nav-current { color:#243a5e; font-weight:700; }
 h1 { font-size:1.4rem; margin:20px 0 8px; } h2 { font-size:1.1rem; margin:24px 0 8px; }
 .banner { border:1px solid var(--line); border-left-width:5px; background:var(--card); padding:10px 14px; border-radius:6px; margin:12px 0; }
 .banner.complete { border-left-color: var(--ok); } .banner.partial { border-left-color: var(--warn); } .banner.not-fetched, .banner.failed { border-left-color: var(--bad); }
