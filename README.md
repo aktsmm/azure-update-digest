@@ -101,3 +101,5 @@ npm run build:pdfs && PDF_PASSWORD=*** npm run protect:pdfs && npm run build:api
 ```
 
 資料化（PDF）や API には、`DigestItem` と `runQuery` の結果（期間・フィルター・対象 ID・要約・URL・取得状態・`snapshotAt`）をそのまま再利用しています。
+
+<!-- dry-run probe -->
