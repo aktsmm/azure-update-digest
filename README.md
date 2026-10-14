@@ -35,6 +35,8 @@ dist/             サイト・API・PDF。data/ から常に再生成可能     
 | `slide-dispatch.yml` | 直近 3 か月でスライド未作成の更新を新しい順に最大 30 件、`slide.md` に 1 件ずつ起動（作成済みはスキップ） | 毎週月・木 **03:00 JST**（日・水 18:00 UTC） |
 | `slide.md` (`.lock.yml`) | **GitHub Agentic Workflow**。1 更新 1 枚のスライド JSON を生成し PR を作成。PDF も成果物として生成 | 手動（`id`）／ dispatch から |
 | `auto-merge-slides.yml` | スライド PR を検証（スキーマ・禁止語・PDF 描画）して自動マージ → 公開 | スライド生成完了時 / 3 時間ごと（:23 UTC） |
+| `maintain.md` (`.lock.yml`) | **自己修復の Agentic Workflow**（モデルは `auto`）。決定的な健康チェック（`npm run health`）の結果を読み、コード・設定・テスト・ドキュメントの不具合は PR で直し、直せないもの（ワークフロー定義・Secret・設定）は Issue にまとめる。PR は自動マージしない | 隔週: 毎月 2 日・16 日 **03:17 JST**（1 日・15 日 18:17 UTC）／手動 |
+| `watchdog.yml` | AI なし。40 分を超えて固まったエージェント実行を取り消し、失敗した Pages デプロイを 1 回だけ再実行 | 30 分ごと |
 | `pages.yml` | validate → build → GitHub Pages 公開（失敗時は既存公開物を維持） | 呼び出し / data 等の push |
 | `ci.yml` | typecheck / test / validate / build | PR |
 
