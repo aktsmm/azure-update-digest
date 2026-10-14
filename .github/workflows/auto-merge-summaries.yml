@@ -43,7 +43,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           merged=false
           for n in $(gh pr list --state open --json number,headRefName,labels,author \
-              -q '.[] | select((.headRefName | startswith("summaries/")) and (.labels | map(.name) | index("data"))) | .number'); do
+              -q '.[] | select((.headRefName | test("^summaries[/-]")) and (.labels | map(.name) | index("data"))) | .number'); do
             echo "== PR #$n"
             bad=$(gh pr view "$n" --json files -q '.files[].path' | grep -Ev '^data/(summaries|related)/[A-Za-z0-9_-]+\.json$' || true)
             if [ -n "$bad" ]; then echo "skip: touches non-data paths:"; echo "$bad"; continue; fi

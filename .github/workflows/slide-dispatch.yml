@@ -43,11 +43,11 @@ jobs:
         run: |
           case "$LIMIT" in ''|*[!0-9]*) echo "invalid limit"; exit 1;; esac
           [ "$LIMIT" -gt 30 ] && LIMIT=30
-          open=$(gh pr list --state open --limit 200 --json headRefName -q '.[].headRefName' | grep '^slides/' || true)
+          open=$(gh pr list --state open --limit 200 --json headRefName -q '.[].headRefName' | grep -E '^slides[/-]' || true)
           started=0
           for id in $(npm run -s pending-slides -- --limit 100 2>/dev/null); do
             [ "$started" -ge "$LIMIT" ] && break
-            if echo "$open" | grep -q "^slides/$id-"; then echo "skip $id: open PR"; continue; fi
+            if echo "$open" | grep -Eq "^slides[/-]$id"; then echo "skip $id: open PR"; continue; fi
             echo "dispatch $id"
             gh workflow run slide.lock.yml -f id="$id"
             started=$((started + 1))
