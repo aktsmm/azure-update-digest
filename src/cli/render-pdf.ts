@@ -35,7 +35,7 @@ if (problems.length) {
   throw new Error(`deck is invalid (${problems.length} problem(s)); refusing to render`);
 }
 
-const FS_STEPS = [16, 15.5, 15, 14.5, 14, 13.5, 13];
+const FS_STEPS = [16, 15.5, 15, 14.5, 14, 13.5, 13, 12.5];
 
 async function overflowOf(page: Page, key: string): Promise<number> {
     const JS = `(() => { const s = document.querySelector('section[data-key="${key}"]'); const ft = s.querySelector('.ft'); const ftTop = ft.getBoundingClientRect().top; const cardOver = Math.max(0, ...[...s.querySelectorAll('.card')].map(c => c.getBoundingClientRect().bottom - ftTop)); const over = [...s.querySelectorAll('.main, .side')].map(e => e.scrollHeight - e.clientHeight); const hOver = s.scrollHeight - s.clientHeight; const ftOver = ft.getBoundingClientRect().bottom - s.getBoundingClientRect().bottom; return Math.max(0, hOver, Math.round(ftOver), Math.round(cardOver), ...over); })()`;

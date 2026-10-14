@@ -22,7 +22,7 @@ export const PDF_CSS = `
 html,body{margin:0;padding:0;background:#fff;font-family:"Noto Sans CJK JP","Noto Sans JP","Yu Gothic UI","Meiryo","Segoe UI",sans-serif;color:#1b2430;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .page{width:1280px;height:720px;position:relative;overflow:hidden;page-break-after:always;break-after:page}
 .page:last-child{page-break-after:auto;break-after:auto}
-.slide{padding:20px 34px 14px;display:flex;flex-direction:column;gap:9px;--fs:15px}
+.slide{padding:20px 34px 14px;display:flex;flex-direction:column;gap:6px;--fs:15px}
 .hd{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
 .t{font-size:28px;font-weight:700;color:#0b2a4a;line-height:1.25}.t small{display:block;font-size:18px;font-weight:600;margin-top:2px}
 .en{font-size:12.5px;color:#8a95a6;margin-top:2px}.dt{font-size:13.5px;color:#3d4a5c;font-weight:600;margin-left:12px}
@@ -35,7 +35,7 @@ html,body{margin:0;padding:0;background:#fff;font-family:"Noto Sans CJK JP","Not
 .imp .act-yes{border-color:#c62828;background:#fdecec}.imp .act-optional{border-color:#1b7f3b;background:#eaf6ee}.imp .act-no,.imp .act-unknown{border-color:#0b6bcb;background:#eaf3ff}
 .tl{display:flex;align-items:center}.tl .pt{flex:none;text-align:center;font-size:13px;width:170px}.tl .pt b{display:block;font-size:16px}.tl .ln{flex:1;height:4px;background:linear-gradient(90deg,#9fb0c8,#c62828);border-radius:2px}
 .cols{display:flex;gap:14px;flex:1;min-height:0}
-.main{flex:1.9;display:flex;flex-direction:column;gap:7px;min-width:0}
+.main{flex:1.9;display:flex;flex-direction:column;gap:5px;min-width:0}
 .row2{display:flex;gap:10px}.row2 .card{flex:1;min-width:0}
 .side{flex:1;display:flex;flex-direction:column;gap:9px;min-width:0}
 .card{border:1.5px solid #b8c7dc;border-radius:8px;padding:6px 12px;background:#fff}
@@ -43,7 +43,7 @@ html,body{margin:0;padding:0;background:#fff;font-family:"Noto Sans CJK JP","Not
 .card.hot{border-color:#0b6bcb;background:#f3f8ff}.card.red{border-color:#c62828;background:#fff4f4}.card.red h3{color:#c62828}
 .card.sug{border:1.5px dashed #d9a441;background:#fff8e8;flex:1}.card.sug h3{color:#a8710f}
 .card.gl{border-color:#7aa7d9;background:#f1f7ff}
-ul{margin:0;padding-left:20px;font-size:var(--fs);line-height:1.45}li{margin:1px 0}
+ul{margin:0;padding-left:20px;font-size:var(--fs);line-height:1.38}li{margin:1px 0}
 .ba{display:flex;gap:8px;align-items:stretch}
 .ba .p{flex:1;border-radius:6px;padding:6px 10px;font-size:var(--fs);line-height:1.45}
 .ba .bf{background:#f1f3f6;border:1.5px solid #c4ccd8}.ba .af{background:#e8f6ec;border:1.5px solid #1b7f3b}
