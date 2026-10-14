@@ -1,0 +1,93 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["572346"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T21:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "572346",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Dv3 / Dsv3 / Ev3 / Esv3 VM が 2029-11-15 に廃止",
+        "subtitleJa": "廃止後は作成・実行ができなくなる。期限までに Dsv5 / Esv5 などへ移行",
+        "en": "Retirement: Dv3, Dsv3, Ev3, and Esv3 Azure VMs"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "modifiedJst": "2026-10-01",
+        "availability": [{ "rawRing": "Retirement", "year": 2029, "month": "November" }],
+        "status": null,
+        "products": ["Virtual Machines"],
+        "categories": ["compute"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Azure VM で **Dv3 / Dsv3 / Ev3 / Esv3 シリーズ**を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "廃止日以降は、これらのサイズの作成・サイズ変更・実行・購入ができなくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirements-and-capacity-restrictions", "locator": "汎用の廃止サイズ", "retrievedAt": "2026-10-14T21:48:00Z" }] },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "2029-11-15 までに新しい VM シリーズへ移行する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2029-11-15", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-10-01", "precision": "day" } },
+        { "label": "1 年・3 年 RI の購入・更新終了", "when": { "date": "2026-07-01", "precision": "day" } },
+        { "label": "廃止", "when": { "date": "2029-11-15", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "廃止は 4 シリーズの 32 サイズすべてが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirements-and-capacity-restrictions", "locator": "汎用の廃止サイズ", "retrievedAt": "2026-10-14T21:48:00Z" }] },
+            { "text": "期限までに移行しない VM は、割り当て解除され最終的に削除される場合がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "2026-07-01 以降、1 年・3 年の予約インスタンスは購入・更新不可", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "最も簡単な移行先は v5（Dv5 / Dsv5、Ev5 / Esv5 など）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/sizes-v5-modernization-overview", "locator": "重要", "retrievedAt": "2026-10-14T21:48:00Z" }] },
+            { "text": "最新の機能と性能を求める場合は v6 / v7 シリーズ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/sizes-v5-modernization-overview", "locator": "Note", "retrievedAt": "2026-10-14T21:48:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "既存 VM のシリーズを棚卸しし、サイズ変更か再構築かを決めて期限から逆算して計画する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "v5 の多くのベース シリーズにはローカル一時ディスクがなく、必要なら d バリアントを選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/sizes-v5-modernization-overview", "locator": "VM ファミリが変更されたときの変更点", "retrievedAt": "2026-10-14T21:48:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-virtual-machines", "term": "Azure Virtual Machines", "type": "product", "oneLine": { "text": "Azure で仮想マシンを作成・実行するためのサービス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "vm-series", "term": "VM シリーズ", "type": "term", "oneLine": { "text": "同じ世代・特性でまとめられた VM サイズの区分（Dv3、Ev3 など）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-retirement", "term": "廃止（Retired）", "type": "label", "oneLine": { "text": "サポートが終了し、これ以降は利用できなくなるライフサイクル段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "reserved-instance", "term": "予約インスタンス（RI）", "type": "term", "oneLine": { "text": "1 年または 3 年の利用を約束して割引を受ける購入方式。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "VM ライフサイクル ポリシーに基づく廃止（パブリック クラウド リージョンが対象。Azure Government・21Vianet・ソブリン クラウドは対象外）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirements-and-capacity-restrictions", "locator": "汎用の廃止サイズ", "retrievedAt": "2026-10-14T21:48:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=572346",
+        "learn": [
+          { "title": "VM サイズ シリーズの提供終了、容量拡張の制限、モダナイゼーション ガイダンス", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirements-and-capacity-restrictions", "locale": "ja-jp" },
+          { "title": "v5 VM シリーズに最新化する", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/sizes-v5-modernization-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
