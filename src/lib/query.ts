@@ -7,6 +7,7 @@ export interface DigestItem {
   key: string;
   id: string;
   title: string;
+  titleJa: string | null;
   createdJst: string;
   modifiedJst: string;
   status: string | null;
@@ -62,7 +63,7 @@ export function matchesFilters(item: DigestItem, q: Query): boolean {
   if (q.importance === "notable-or-high" && item.importance.level === "normal") return false;
   const t = q.text.trim().toLowerCase();
   if (t) {
-    const hay = [item.title, item.summary.text ?? "", item.products.join(" "), item.tags.join(" "), item.productCategories.join(" ")].join("\n").toLowerCase();
+    const hay = [item.title, item.titleJa ?? "", item.summary.text ?? "", item.products.join(" "), item.tags.join(" "), item.productCategories.join(" ")].join("\n").toLowerCase();
     if (!t.split(/\s+/).every((w) => hay.includes(w))) return false;
   }
   return true;

@@ -90,7 +90,8 @@ function card(i: DigestItem): string {
     i.related.items.length > 0 ? `<div>関連資料（Microsoft Learn）<ul>${i.related.items.map((r) => `<li><a href="${safeUrl(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a></li>`).join("")}</ul></div>`
     : `<div class="meta">関連資料: ${relNames[i.related.status]}</div>`;
   return `<article class="card" id="update-${esc(i.key)}">
-    <h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a>${esc(i.title)}</h3>
+    <h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a>${esc(i.titleJa ?? i.title)}</h3>
+    ${i.titleJa ? `<div class="orig">${esc(i.title)}</div>` : ""}
     <div class="meta">作成 ${esc(i.createdJst)} ／ 更新 ${esc(i.modifiedJst)} ／ ID ${esc(i.key)}</div>
     ${badges(i)}${summary}
     <div class="links"><a href="${safeUrl(i.sourceUrl)}" target="_blank" rel="noopener noreferrer">原文（Azure Updates）</a>${rel}</div>

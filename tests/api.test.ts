@@ -4,7 +4,7 @@ import type { DigestItem } from "../src/lib/query.js";
 import type { SiteMeta } from "../src/lib/site-data.js";
 
 const item = (key: string, createdJst: string, categories: string[]): DigestItem => ({
-  key, id: key, title: `t${key}`, createdJst, modifiedJst: createdJst, status: null, tags: [], products: [], productCategories: [], categories,
+  key, id: key, title: `t${key}`, titleJa: null, createdJst, modifiedJst: createdJst, status: null, tags: [], products: [], productCategories: [], categories,
   importance: { level: "normal", score: 0, topics: [] }, availabilities: [], availabilityDates: { general: null, preview: null, privatePreview: null },
   sourceUrl: `https://azure.microsoft.com/updates?id=${key}`, summary: { state: "missing", text: null }, related: { status: "uninvestigated", items: [] }, fingerprint: "f", detailState: "ok",
 });

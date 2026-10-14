@@ -6,6 +6,8 @@ export interface SummaryFile {
   canonicalKey: string;
   sourceFingerprint: string;
   summaryJa: string;
+  /** Natural Japanese headline (noun-ending), shown above the original English title. */
+  titleJa?: string;
   generatedBy: string;
   generatedAt: string;
 }
@@ -39,6 +41,7 @@ export function buildDigestItems(items: NormalizedItem[], summaries: Map<string,
       key: i.canonicalKey,
       id: i.latestId,
       title: i.title,
+      titleJa: s && s.sourceFingerprint === i.fingerprint ? (s.titleJa ?? null) : null,
       createdJst: i.createdJst,
       modifiedJst: i.modifiedJst,
       status: i.status,

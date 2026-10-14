@@ -20,15 +20,17 @@ const todo = items
   .filter((i) => i.detailState === "ok" && i.description)
   .map((i) => ({
     needsSummary: summaries.get(i.canonicalKey)?.sourceFingerprint !== i.fingerprint,
+    needsTitle: summaries.get(i.canonicalKey)?.sourceFingerprint === i.fingerprint && !summaries.get(i.canonicalKey)?.titleJa,
     needsRelated: !related.has(i.canonicalKey),
     i,
   }))
-  .filter((x) => x.needsSummary || x.needsRelated)
+  .filter((x) => x.needsSummary || x.needsTitle || x.needsRelated)
   .sort((a, b) => parseInstant(b.i.created) - parseInstant(a.i.created) || (a.i.canonicalKey < b.i.canonicalKey ? -1 : 1))
   .slice(0, limit)
-  .map(({ needsSummary, needsRelated, i }) => ({
+  .map(({ needsSummary, needsTitle, needsRelated, i }) => ({
     canonicalKey: i.canonicalKey,
     needsSummary,
+    needsTitle,
     needsRelated,
     sourceFingerprint: i.fingerprint,
     title: i.title,
@@ -43,4 +45,4 @@ const todo = items
 
 mkdirSync(out.replace(/[\\/][^\\/]+$/, ""), { recursive: true });
 writeFileSync(out, stableStringify({ count: todo.length, items: todo }), "utf8");
-console.log(`pending: ${todo.length} item(s) (${todo.filter((t) => t.needsSummary).length} summaries, ${todo.filter((t) => t.needsRelated).length} related) -> ${out}`);
+console.log(`pending: ${todo.length} item(s) (${todo.filter((t) => t.needsSummary).length} summaries, ${todo.filter((t) => t.needsTitle).length} titles, ${todo.filter((t) => t.needsRelated).length} related) -> ${out}`);
