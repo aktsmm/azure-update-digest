@@ -1,0 +1,167 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573214"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T21:45:00Z"
+  },
+  "slides": [
+    {
+      "key": "573214",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "AKS が Ubuntu 26.04 に対応（パブリック プレビュー）",
+        "subtitleJa": "Ubuntu Minimal ベースの Ubuntu2604 OS SKU と Linux カーネル 7.0 を評価できます",
+        "en": "Public Preview: Ubuntu 26.04 support in AKS"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "modifiedJst": "2026-10-01",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "containers"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "AKS で Ubuntu ノード プールを運用している**クラスター管理者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ホストのフットプリントが小さくなり、Linux LTS カーネル 7.0 を使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "評価向け。運用環境での使用は想定されていない",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-os-version", "locator": "Ubuntu 26.04 への移行 (プレビュー) / Important", "retrievedAt": "2026-10-14T21:44:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Ubuntu2604 OS SKU で、作成・更新・ノード プール操作を維持したまま Ubuntu 26.04 を利用できる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの内容",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "OS SKU は Ubuntu2604。Kubernetes 1.36 以降のプレビューで利用可能",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-os-version", "locator": "OS SKU の表", "retrievedAt": "2026-10-14T21:44:00Z" }]
+            },
+            {
+              "text": "AMD64 と Arm64 の最小ノード イメージを使用",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-os-version", "locator": "Ubuntu 26.04 への移行 (プレビュー)", "retrievedAt": "2026-10-14T21:44:00Z" }]
+            },
+            {
+              "text": "対応する場合は Ubuntu 24.04 へロールバックも可能",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "前提・制約",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Ubuntu2604Preview 機能フラグの登録が必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-os-version", "locator": "Ubuntu2604Preview フィーチャーフラグを登録する", "retrievedAt": "2026-10-14T21:44:00Z" }]
+            },
+            {
+              "text": "第 2 世代 VM 対応の VM サイズが必要。FIPS・機密 VM・信頼された起動は非対応",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-os-version", "locator": "Ubuntu 26.04 への移行 (プレビュー)", "retrievedAt": "2026-10-14T21:44:00Z" }]
+            },
+            {
+              "text": "プレビュー版 Azure CLI 21.0.0b14 以降と aks-preview 拡張機能が必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-os-version", "locator": "aks-preview Azure CLI 拡張機能をインストールする", "retrievedAt": "2026-10-14T21:44:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "検証用ノード プールで、既存ワークロードの互換性とパッケージ構成を確認する",
+              "origin": "editorial",
+              "assertion": "recommendation",
+              "verification": "unverified"
+            },
+            {
+              "text": "既存ノード プールは az aks nodepool update で OS SKU を更新して移行できる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-os-version", "locator": "既存のノード プールを Ubuntu 26.04 に更新する", "retrievedAt": "2026-10-14T21:44:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "aks",
+          "term": "Azure Kubernetes Service (AKS)",
+          "type": "product",
+          "oneLine": { "text": "コンテナー化アプリを展開・管理するためのマネージド Kubernetes サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/what-is-aks", "locator": "冒頭", "retrievedAt": "2026-10-14T21:44:00Z" }] }
+        },
+        {
+          "termKey": "os-sku",
+          "term": "OS SKU",
+          "type": "term",
+          "oneLine": { "text": "AKS ノード プールで使用する OS の種類・バージョンを指定する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-os-version", "locator": "OS SKU の表", "retrievedAt": "2026-10-14T21:44:00Z" }] }
+        },
+        {
+          "termKey": "feature-flag",
+          "term": "機能フラグの登録",
+          "type": "term",
+          "oneLine": { "text": "サブスクリプションに機能を登録して、プレビュー機能を使えるようにすること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-os-version", "locator": "Ubuntu2604Preview フィーチャーフラグを登録する", "retrievedAt": "2026-10-14T21:44:00Z" }] }
+        },
+        {
+          "termKey": "label-preview",
+          "term": "Preview（パブリック プレビュー）",
+          "type": "label",
+          "oneLine": { "text": "GA の前に、評価とフィードバックのために全利用者へ提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T21:44:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573214",
+        "learn": [{ "title": "AKS でのオペレーティング システム (OS) バージョンのアップグレード", "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-os-version", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
