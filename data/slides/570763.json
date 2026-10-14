@@ -1,0 +1,107 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570763"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T21:15:00Z"
+  },
+  "slides": [
+    {
+      "key": "570763",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Arc 対応 SQL Server が Italy North リージョンで一般提供（GA）に",
+        "subtitleJa": "Italy North の SQL Server を Azure Arc に接続し、インベントリ・ガバナンス・ライセンス管理を Azure で一元化",
+        "en": "Generally Available: Azure Arc-enabled SQL Server Available in Italy North"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": [],
+        "categories": ["other"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Italy North リージョンを使う、**Azure Arc 対応 SQL Server** の利用者／検討者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "SQL Server を Azure Arc に接続し、Azure でインベントリ・ガバナンス・セキュリティ・評価・ライセンスを管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Italy North で利用したい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Italy North リージョンで、SQL Server インスタンスを Azure Arc に接続して Azure ベースの管理機能を使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure サービスを、Azure の外（データセンター・エッジ・他クラウド）の SQL Server に拡張する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17", "locator": "冒頭", "retrievedAt": "2026-10-14T21:15:00Z" }] },
+            { "text": "Azure portal で SQL Server の詳細を確認し、Resource Graph で全インスタンスを横断検索できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17", "locator": "単一の制御点から大規模に SQL Server インスタンスを管理する", "retrievedAt": "2026-10-14T21:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure Arc → [SQL Server] → [追加] でサブスクリプション等を指定し、オンボード スクリプトを生成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/connect?view=sql-server-ver17", "locator": "SQL Server 用のオンボード スクリプトを生成する", "retrievedAt": "2026-10-14T21:15:00Z" }] },
+            { "text": "ターゲット マシンでスクリプトを実行し、Arc 対応 SQL Server リソースを確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/connect?view=sql-server-ver17", "locator": "SQL Server インスタンスを Azure Arc に接続する", "retrievedAt": "2026-10-14T21:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Arc 対応サーバーと SQL Server に同じリージョンを割り当てる。SQL Server 2014 以降の 64 ビット版が対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17", "locator": "サポートされているリージョン / サポートされる構成", "retrievedAt": "2026-10-14T21:15:00Z" }] },
+            { "text": "Windows 10/11、Windows Server 2016 以降、RHEL 8、SLES 15 が対象。Arc エージェントは完全モード", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17", "locator": "オペレーティング システム", "retrievedAt": "2026-10-14T21:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する機能", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Defender for Cloud の脆弱性評価・脅威の防止や、ベスト プラクティス評価を利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17", "locator": "Microsoft Defender for Cloud", "retrievedAt": "2026-10-14T21:15:00Z" }] },
+            { "text": "従量課金制（PAYG）や拡張セキュリティ更新プログラム（ESU）も利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17", "locator": "SQL Serverの従量課金制", "retrievedAt": "2026-10-14T21:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Italy North の SQL Server を Azure 側で一元管理したいときに検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "インストール アカウントにはローカル管理者権限と、Azure 側の所定のロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17", "locator": "インストール アカウントのアクセス許可", "retrievedAt": "2026-10-14T21:15:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-arc-sql", "term": "Azure Arc 対応 SQL Server", "type": "product", "oneLine": { "text": "Azure サービスを、Azure の外でホストされている SQL Server に拡張する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17", "locator": "冒頭", "retrievedAt": "2026-10-14T21:15:00Z" }] } },
+        { "termKey": "connected-machine-agent", "term": "Connected Machine エージェント", "type": "feature", "oneLine": { "text": "サーバーを Azure リソースとして登録するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/connect?view=sql-server-ver17", "locator": "SQL Server インスタンスを Azure Arc に接続する", "retrievedAt": "2026-10-14T21:15:00Z" }] } },
+        { "termKey": "resource-graph", "term": "Azure Resource Graph", "type": "feature", "oneLine": { "text": "すべての SQL Server インスタンスに対してクエリを実行できる Azure の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17", "locator": "単一の制御点から大規模に SQL Server インスタンスを管理する", "retrievedAt": "2026-10-14T21:15:00Z" }] } },
+        { "termKey": "payg", "term": "従量課金制（PAYG）", "type": "term", "oneLine": { "text": "ライセンスを購入する代わりに、利用分を支払う SQL Server の利用モデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17", "locator": "SQL Serverの従量課金制", "retrievedAt": "2026-10-14T21:15:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T21:15:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Arc 対応 SQL Server の提供リージョン一覧に東日本が含まれる（西日本は一覧にない）",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17", "locator": "サポートされているAzure リージョン（アジア太平洋）", "retrievedAt": "2026-10-14T21:15:00Z" },
+          { "url": "https://learn.microsoft.com/azure/reliability/regions-list", "locator": "Japan East", "retrievedAt": "2026-10-14T21:15:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570763",
+        "learn": [
+          { "title": "Azure Arc で有効になっている SQL Server", "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/overview?view=sql-server-ver17", "locale": "ja-jp" },
+          { "title": "Azure Arc で有効化された SQL Server に必要な前提条件", "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17", "locale": "ja-jp" },
+          { "title": "SQL Server を Azure Arc に接続する", "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/connect?view=sql-server-ver17", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
