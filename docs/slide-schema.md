@@ -41,7 +41,7 @@
 | フィールド | 必須 | 内容 |
 | --- | --- | --- |
 | `key` | ○ | canonicalKey（MRC の baseId）。サイトのアンカー `update-{key}` と同じ |
-| `kind` | ○ | `ga` / `preview` / `private-preview` / `retirement` / `announcement` / `update` |
+| `kind` | ○ | `ga` / `preview`（Private Preview を含む） / `retirement` / `announcement` / `update` |
 | `kindSource` |  | `kind` の決め方（`ring` / `tags` / `title` / `manual`）。ルールで決め、推測しない |
 | `label` | ○ | 表示ラベル（右上のバッジ） |
 | `title` | ○ | `ja`（日本語タイトル）、`subtitleJa`（副題）、`en`（MRC の原題。突合用に小さく表示） |
