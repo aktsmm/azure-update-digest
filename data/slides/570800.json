@@ -1,0 +1,87 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570800"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T20:55:00Z"
+  },
+  "slides": [
+    {
+      "key": "570800",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Functions on Azure Container Apps V1 が 2027-09-29 に廃止",
+        "subtitleJa": "廃止後は既存アプリが動作しなくなる。kind=functionapp の V2 へ期限までに移行",
+        "en": "Retirement: Functions on Azure Container Apps V1 "
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "Retirement", "year": 2027, "month": "September" }],
+        "status": null,
+        "products": ["Azure Container Apps"],
+        "categories": ["containers"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Functions on Azure Container Apps V1 を使っている方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "廃止日以降、V1 アプリは停止し、リクエストやイベント トリガーを処理しなくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "2027-09-29 までに V2 ホスティング モデルへ移行する。コード変更は不要で既存イメージを再利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2027-09-29", "precision": "day" }
+      },
+      "beforeAfter": {
+        "before": { "text": "V1 は Function App と非表示のコンテナー アプリを組み合わせたプロキシ型のレガシー モデル", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-functions", "locator": "モデルの比較", "retrievedAt": "2026-10-14T20:55:00Z" }] },
+        "after": { "text": "V2 は kind=functionapp の単一のネイティブ コンテナー アプリで、Container Apps の機能を直接利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-functions", "locator": "モデルの比較", "retrievedAt": "2026-10-14T20:55:00Z" }] }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-09-30", "precision": "day" } },
+        { "label": "V1 廃止", "when": { "date": "2027-09-29", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "廃止日以降、V1 アプリは停止しリクエストやトリガーを処理しない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "V1 ではシークレット、ヘルスプローブ、カスタム ドメイン等が使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-functions", "locator": "機能のギャップ", "retrievedAt": "2026-10-14T20:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Functions on ACA V2（kind=functionapp の単一コンテナー アプリ）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-functions", "locator": "モデルの比較", "retrievedAt": "2026-10-14T20:55:00Z" }] },
+            { "text": "既存のコンテナー イメージを再利用でき、コード変更は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-functions", "locator": "V2 の利点", "retrievedAt": "2026-10-14T20:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "移行手順の概要", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "構成を記録 → V2 作成 → トリガー検証 → トラフィック切替 → V1 削除", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-functions", "locator": "移行手順", "retrievedAt": "2026-10-14T20:55:00Z" }] },
+            { "text": "本番切替前に全トリガーとスケーリングを検証し、期限に余裕を持って完了させる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-container-apps", "term": "Azure Container Apps", "type": "product", "oneLine": { "text": "コンテナー化したアプリを動かせる、完全管理型のサーバーレス ホスティング環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/functions-overview", "locator": "冒頭", "retrievedAt": "2026-10-14T20:55:00Z" }] } },
+        { "termKey": "functions-on-aca", "term": "Functions on Azure Container Apps", "type": "feature", "oneLine": { "text": "Azure Functions のイベント駆動機能を Container Apps 上でホストする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/functions-overview", "locator": "冒頭", "retrievedAt": "2026-10-14T20:55:00Z" }] } },
+        { "termKey": "aca-v1", "term": "V1（レガシー）", "type": "term", "oneLine": { "text": "Function App と背後のコンテナー アプリを組み合わせたプロキシ モデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-functions", "locator": "冒頭", "retrievedAt": "2026-10-14T20:55:00Z" }] } },
+        { "termKey": "aca-v2", "term": "V2（kind=functionapp）", "type": "term", "oneLine": { "text": "kind=functionapp の単一のネイティブ コンテナー アプリを作る、推奨モデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-functions", "locator": "冒頭", "retrievedAt": "2026-10-14T20:55:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570800",
+        "learn": [
+          { "title": "Functions on Azure Container Apps V1 から V2 への移行", "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-functions", "locale": "ja-jp" },
+          { "title": "Azure Container Apps の Azure Functions の概要", "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/functions-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
