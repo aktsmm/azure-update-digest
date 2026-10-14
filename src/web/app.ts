@@ -157,7 +157,7 @@ function downloadBar(r: QueryResult, q: Query): string {
   const pdf = slideEntries.size
     ? `<button type="button" data-dl="pdf" ${withSlide ? "" : "disabled"}>PDF（スライド ${withSlide} 件）</button>`
     : "";
-  const note = slideEntries.size ? `<span class="meta">PDF は、スライドを作成済みの更新だけをまとめます（絞り込み後 ${r.items.length} 件中 ${withSlide} 件）。</span>` : "";
+  const note = slideEntries.size ? `<span class="meta">PDF は、スライドを作成済みの更新（直近3か月分）だけをまとめます（絞り込み後 ${r.items.length} 件中 ${withSlide} 件）。</span>` : "";
   return `<div class="panel row" id="dl"><strong>ダウンロード</strong><button type="button" data-dl="json" ${r.items.length ? "" : "disabled"}>JSON（${r.items.length} 件）</button>${pdf}${note}<span class="meta" id="dl-status"></span></div>`;
 }
 
