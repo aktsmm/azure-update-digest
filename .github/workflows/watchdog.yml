@@ -5,7 +5,8 @@ name: Watchdog
 #  - re-runs the latest Pages deploy once when it failed (deploys collide when two finish close together)
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    # once a day, 05:41 JST (20:41 UTC); GitHub scheduled runs are often delayed, so nothing here is time-critical
+    - cron: "41 20 * * *"
   workflow_dispatch:
 
 permissions:
