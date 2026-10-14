@@ -3,15 +3,15 @@ import { defaultQuery, runQuery, type DigestItem, type Query, type QueryResult }
 import type { SiteMeta } from "../lib/site-data.js";
 import type { SlideEntry } from "./pdf-merge.js";
 import { orderSlides } from "../lib/slide-order.js";
-import { decryptBytes, deriveKey, type PdfCryptoInfo } from "../lib/pdf-crypto.js";
+import { checkGate, type PdfGate } from "../lib/pdf-gate.js";
 import type { SlideKind } from "../lib/slide-kind.js";
 
 const app = document.getElementById("app")!;
 let items: DigestItem[] = [];
 let meta: SiteMeta;
 let slideEntries = new Map<string, SlideEntry>();
-let pdfCrypto: PdfCryptoInfo | null = null;
-let pdfKey: { pw: string; key: CryptoKey } | null = null;
+let pdfGate: PdfGate | null = null;
+let verifiedPw = "";
 
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 const catLabel = (id: string) => meta.categories.find((c) => c.id === id)?.label ?? id;
@@ -91,7 +91,7 @@ function card(i: DigestItem): string {
     <h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a>${esc(i.title)}</h3>
     <div class="meta">作成 ${esc(i.createdJst)} ／ 更新 ${esc(i.modifiedJst)} ／ ID ${esc(i.key)}</div>
     ${badges(i)}${summary}
-    <div class="links"><a href="${safeUrl(i.sourceUrl)}" target="_blank" rel="noopener noreferrer">原文（Azure Updates）</a>${pdfCrypto && slideEntries.has(i.key) ? ` ／ <a href="#" data-pdf="${esc(i.key)}">スライド PDF（要パスワード）</a>` : ""}${rel}</div>
+    <div class="links"><a href="${safeUrl(i.sourceUrl)}" target="_blank" rel="noopener noreferrer">原文（Azure Updates）</a>${slideEntries.has(i.key) ? ` ／ <a href="pdf/${esc(i.key)}.pdf" target="_blank" rel="noopener noreferrer">スライド PDF</a>` : ""}${rel}</div>
   </article>`;
 }
 
@@ -157,10 +157,10 @@ function selectionLabel(q: Query, r: QueryResult) {
 
 function downloadBar(r: QueryResult, q: Query): string {
   const withSlide = r.items.filter((i) => slideEntries.has(i.key)).length;
-  const pdf = pdfCrypto && slideEntries.size
+  const pdf = pdfGate && slideEntries.size
     ? `<input type="password" id="pdf-pw" placeholder="PDF パスワード" autocomplete="off" aria-label="PDF パスワード"><button type="button" data-dl="pdf" ${withSlide ? "" : "disabled"}>PDF（スライド ${withSlide} 件）</button>`
     : "";
-  const note = pdfCrypto && slideEntries.size ? `<span class="meta">PDF は、スライドを作成済みの更新（直近3か月分）だけをまとめます（絞り込み後 ${r.items.length} 件中 ${withSlide} 件）。</span>` : "";
+  const note = slideEntries.size ? `<span class="meta">まとめて PDF は、スライドを作成済みの更新（直近3か月分）だけをまとめます（絞り込み後 ${r.items.length} 件中 ${withSlide} 件）。</span>` : "";
   return `<div class="panel row" id="dl"><strong>ダウンロード</strong><button type="button" data-dl="json" ${r.items.length ? "" : "disabled"}>JSON（${r.items.length} 件）</button>${pdf}${note}<span class="meta" id="dl-status"></span></div>`;
 }
 
@@ -188,6 +188,8 @@ function bindDownload(r: QueryResult, q: Query) {
     if (!entries.length) return;
     const pw = askPassword();
     if (!pw) { status.textContent = "パスワードを入力してください。"; return; }
+    if (!pdfGate || !(await checkGate(pw, pdfGate))) { verifiedPw = ""; status.textContent = "パスワードが違います。"; return; }
+    verifiedPw = pw;
     status.textContent = "PDF 作成の準備中…";
     try {
       await new Promise<void>((ok, ng) => {
@@ -207,49 +209,19 @@ function bindDownload(r: QueryResult, q: Query) {
           onProgress: (d, t) => { status.textContent = `PDF を結合中… ${d} / ${t}`; },
         },
         font,
-        (key) => fetchPdf(key, pw),
+        async (key) => (await fetch(`pdf/${key}.pdf`)).arrayBuffer(),
       );
       download(`${sel.file}.pdf`, new Blob([bytes as BlobPart], { type: "application/pdf" }));
       status.textContent = `PDF を保存しました（${entries.length} 件）`;
-    } catch (e) {
-      status.textContent = e instanceof WrongPasswordError ? "パスワードが違います。" : "PDF を作成できませんでした。時間をおいて再度お試しください。";
+    } catch {
+      status.textContent = "PDF を作成できませんでした。時間をおいて再度お試しください。";
     }
   });
 }
 
-class WrongPasswordError extends Error {}
-
 function askPassword(): string {
   const field = document.getElementById("pdf-pw") as HTMLInputElement | null;
-  return field?.value || pdfKey?.pw || window.prompt("PDF のパスワードを入力してください") || "";
-}
-
-/** Fetches an encrypted slide PDF and decrypts it; the key is derived once per password. */
-async function fetchPdf(key: string, pw: string): Promise<ArrayBuffer> {
-  if (!pdfCrypto) throw new Error("PDF is not published");
-  if (!pdfKey || pdfKey.pw !== pw) pdfKey = { pw, key: await deriveKey(pw, pdfCrypto) };
-  const res = await fetch(`pdf/${key}.pdf.enc`);
-  if (!res.ok) throw new Error("fetch");
-  try {
-    return await decryptBytes(pdfKey.key, await res.arrayBuffer());
-  } catch {
-    pdfKey = null;
-    throw new WrongPasswordError();
-  }
-}
-
-function bindPdfLinks() {
-  document.querySelectorAll<HTMLAnchorElement>("a[data-pdf]").forEach((a) => a.addEventListener("click", async (e) => {
-    e.preventDefault();
-    const pw = askPassword();
-    if (!pw) return;
-    try {
-      const bytes = await fetchPdf(a.dataset.pdf!, pw);
-      download(`azure-update-${a.dataset.pdf}.pdf`, new Blob([bytes], { type: "application/pdf" }));
-    } catch (err) {
-      window.alert(err instanceof WrongPasswordError ? "パスワードが違います。" : "PDF を取得できませんでした。");
-    }
-  }));
+  return field?.value || verifiedPw || "";
 }
 
 function renderList(q: Query, heading: string, fixedMonth: string | null, basePath: string) {
@@ -266,7 +238,6 @@ function renderList(q: Query, heading: string, fixedMonth: string | null, basePa
     <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${r.items.map(card).join("")}${empty}`;
   bind(q, fixedMonth, basePath);
   bindDownload(r, q);
-  bindPdfLinks();
 }
 
 function renderArchive() {
@@ -318,8 +289,8 @@ async function main() {
   }
   document.getElementById("footer")!.innerHTML = `${esc(meta.attribution)}<br>データ時点: ${esc(meta.snapshotAt ?? "未取得")}（UTC） ／ 件数 ${meta.itemCount} ／ 原文リンクは Azure Updates の公式 permalink 形式で、リンク先の存在は自動確認できません（開けない場合は MRC の ID をご確認ください）。<br>ライセンス: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a>（商用利用不可）© yamapan (aktsmm) ／ Microsoft の原文・Learn の内容は対象外<br><a href="https://github.com/aktsmm/azure-update-digest/blob/main/docs/design.md" target="_blank" rel="noopener noreferrer">設計・方式の詳細</a> ／ <a href="https://github.com/aktsmm/azure-update-digest#readme" target="_blank" rel="noopener noreferrer">README</a>`;
   try {
-    const s = (await (await fetch("data/slides.json")).json()) as { slides: SlideEntry[]; pdfCrypto?: PdfCryptoInfo | null };
-    pdfCrypto = s.pdfCrypto ?? null;
+    const s = (await (await fetch("data/slides.json")).json()) as { slides: SlideEntry[]; pdfGate?: PdfGate | null };
+    pdfGate = s.pdfGate ?? null;
     slideEntries = new Map(s.slides.map((e) => [e.key, e]));
   } catch { /* no slide PDFs published */ }
   window.addEventListener("hashchange", route);

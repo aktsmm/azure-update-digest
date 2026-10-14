@@ -52,7 +52,7 @@ dist/             サイト。data/ から常に再生成可能                 
 ### スライドと API
 
 - スライド JSON は Git、PDF はデプロイ時に生成（Git には入れない）。公開は**直近 3 か月**。サイトのボタンで、選んだ範囲の JSON と PDF（表紙・目次・概要付き）をブラウザ内で作成します。詳細は [スライドスキーマ](docs/slide-schema.md)。
-- **PDF はパスワード保護**: デプロイ時にリポジトリ Secret `PDF_PASSWORD` で暗号化（AES-256-GCM / PBKDF2）して公開し、ブラウザでパスワードを入力して復号・結合します。Secret が無い場合は PDF を公開しません（JSON は従来どおり公開）。変更は `gh secret set PDF_PASSWORD` のあと、`pages.yml` を再実行します。
+- **PDF**: スライド単品の PDF（`pdf/{id}.pdf`）は誰でも開けます。サイトの「まとめて PDF」（表紙・目次・概要付き）だけ、リポジトリ Secret `PDF_PASSWORD` のパスワードが必要です（デプロイ時に PBKDF2 の検証値だけを公開。パスワードは公開されません。Secret が無いとまとめ機能は無効）。単品が公開なので、これは機能を使える人を絞る簡易的な制限です。変更は `gh secret set PDF_PASSWORD` のあと `pages.yml` を再実行します。
 - 静的 JSON API: [docs/api.md](docs/api.md)（`api/v1/`）。
 
 ## 取得の考え方
