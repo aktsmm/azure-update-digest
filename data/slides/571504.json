@@ -1,0 +1,85 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571504"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T20:12:00Z"
+  },
+  "slides": [
+    {
+      "key": "571504",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "PostgreSQL エラスティック クラスターのメジャー バージョン アップグレード",
+        "subtitleJa": "クラスターを作り直さずインプレースで更新（パブリック プレビュー）",
+        "en": "Public Preview:  Major version upgrades (MVU) for Azure Database for PostgreSQL elastic clusters "
+      },
+      "meta": {
+        "publishedJst": "2026-10-03",
+        "modifiedJst": "2026-10-03",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "October" }],
+        "status": "In preview",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "分散 PostgreSQL にエラスティック クラスターを使う**データベース管理者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "移行なしで新しい PostgreSQL バージョンへ上げられ、ダウンタイムと運用負荷を抑えられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューのため、まず検証環境での評価を推奨", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "既存クラスターを、対応する新しい PostgreSQL バージョンへインプレースでアップグレードできる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "新規クラスターの作成、分散データの移行、接続エンドポイントの変更が不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既存のクラスター トポロジと構成を保ったままバージョンを管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "フレキシブル サーバーの MVU は元に戻せない。事前に PITR で復元した環境で検証する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/how-to-perform-major-version-upgrade", "locator": "注", "retrievedAt": "2026-10-14T20:12:00Z" }] },
+            { "text": "エラスティック クラスターが対応する PostgreSQL バージョンは 17 と 18", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters-limitations", "locator": "サポートされている PostgreSQL のバージョン", "retrievedAt": "2026-10-14T20:12:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象クラスターの PITR 復元環境でアップグレードを試し、アプリの互換性を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "elastic-cluster", "term": "エラスティック クラスター", "type": "product", "oneLine": { "text": "Citus 拡張機能を使い、PostgreSQL を水平シャーディングできるマネージド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters", "locator": "冒頭", "retrievedAt": "2026-10-14T20:12:00Z" }] } },
+        { "termKey": "citus", "term": "Citus", "type": "term", "oneLine": { "text": "複数の PostgreSQL インスタンスを接続する、PostgreSQL 向けのオープンソース拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters", "locator": "冒頭", "retrievedAt": "2026-10-14T20:12:00Z" }] } },
+        { "termKey": "in-place-upgrade", "term": "インプレース アップグレード", "type": "feature", "oneLine": { "text": "サーバー名や設定を保ったまま、データ移行や接続文字列の変更なしでバージョンを上げる方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-major-version-upgrade", "locator": "冒頭", "retrievedAt": "2026-10-14T20:12:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために全ユーザーへ提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T20:12:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571504",
+        "learn": [
+          { "title": "Azure Database for PostgreSQL フレキシブル サーバーでのメジャー バージョン アップグレード", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/how-to-perform-major-version-upgrade", "locale": "ja-jp" },
+          { "title": "Azure Database for PostgreSQL フレキシブル サーバーのエラスティック クラスター", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
