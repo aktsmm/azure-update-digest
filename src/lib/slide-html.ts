@@ -73,7 +73,7 @@ ul{margin:0;padding-left:20px;font-size:var(--fs);line-height:1.38}li{margin:1px
 .end .en-foot{display:flex;justify-content:space-between;padding:16px 96px;background:#243a5e;color:#e6eef9;font-size:16px}
 `;
 
-interface Slide {
+export interface Slide {
   key: string; kind: SlideKind; label: string;
   title: { ja: string; subtitleJa?: string; en: string };
   meta: { publishedJst: string; availability: { rawRing: string; year: number; month: string }[]; status: string | null; products: string[]; categories: string[] };

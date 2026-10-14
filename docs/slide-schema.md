@@ -149,7 +149,7 @@
 - **PDF**: `pages.yml` が `build:pdfs`（Chrome で描画。Git には入れない）→ `protect:pdfs` → `build:api` を実行する。公開は直近 3 か月分。
   - 最新の 1 件は `pdf/sample.pdf`（パスワード不要）。それ以外は `PDF_PASSWORD`（リポジトリ Secret）で暗号化した `pdf/<id>.pdf.enc`。
   - サイトの「PDF（N 件）」は、パスワードを確認してブラウザ内で復号し、`pdf-lib` で表紙・目次・概要・各更新・最終ページに結合する（日本語は JIS・Latin-1 のサブセットフォント）。
-- **PowerPoint（編集可能）**: 未実装。同じ JSON から別の成果物として作る想定。
+- **PowerPoint（編集可能）**: サイトの「PPTX（N）」が、選んだ範囲のスライド JSON から `src/web/pptx-build.ts`（`pptxgenjs`）でブラウザ内に生成する。表紙・目次・概要・各更新 1 枚・最終ページで、本文は編集できるネイティブ要素（テキスト・図形・ハイパーリンク）。出典 URL は発表者ノートにも入れる。パスワードは PDF と同じ（暗号化 PDF の復号で確認）。Windows の PowerPoint で開いて描画を確認している（`lines()` による折り返しの見積もりで、文字サイズを自動で選ぶ）。
 ## 10. 実データでの確認
 
 [サンプル](../examples/slide-deck.sample.json)は、実際の更新（574343 / 573861 / 568585 / 573875）を、Microsoft Learn で確認した内容で作っています。確認できなかった項目は、サンプルでも省いています（例: WAF の IPv6 プレビューの提供リージョン）。

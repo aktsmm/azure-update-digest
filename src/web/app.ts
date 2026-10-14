@@ -8,6 +8,7 @@ import { decryptBytes, deriveKey, type PdfCryptoInfo } from "../lib/pdf-crypto.j
 import type { SlideKind } from "../lib/slide-kind.js";
 
 declare const __PDF_MERGE_V__: string;
+declare const __PPTX_BUILD_V__: string;
 const app = document.getElementById("app")!;
 let items: DigestItem[] = [];
 let meta: SiteMeta;
@@ -170,9 +171,12 @@ function downloadBar(r: QueryResult, q: Query): string {
   const withSlide = r.items.filter((i) => slideEntries.has(i.key)).length;
   const sample = samplePdf ? `<a href="pdf/sample.pdf" target="_blank" rel="noopener noreferrer" title="最新のスライド 1 件（パスワード不要）">サンプル PDF</a>` : "";
   const pdf = pdfCrypto && slideEntries.size
-    ? `<button type="button" data-dl="pdf" ${withSlide ? "" : "disabled"} title="スライド作成済み（直近3か月）の更新をまとめた PDF。絞り込み後 ${r.items.length} 件中 ${withSlide} 件。パスワードが必要です">PDF（${withSlide} 件）</button>`
+    ? `<button type="button" data-dl="pdf" ${withSlide ? "" : "disabled"} title="スライド作成済み（直近3か月）の更新をまとめた PDF。絞り込み後 ${r.items.length} 件中 ${withSlide} 件。パスワードが必要です">PDF（${withSlide}）</button>`
     : "";
-  return `<span class="dl-actions" id="dl"><button type="button" data-dl="json" ${r.items.length ? "" : "disabled"} title="絞り込み結果（スライド JSON を含む）">JSON（${r.items.length} 件）</button>${pdf}${sample}<span class="meta" id="dl-status"></span></span>`;
+  const pptx = pdfCrypto && slideEntries.size
+    ? `<button type="button" data-dl="pptx" ${withSlide ? "" : "disabled"} title="同じ範囲を編集できる PowerPoint（.pptx）で。絞り込み後 ${r.items.length} 件中 ${withSlide} 件。パスワードが必要です">PPTX（${withSlide}）</button>`
+    : "";
+  return `<span class="dl-actions" id="dl"><button type="button" data-dl="json" ${r.items.length ? "" : "disabled"} title="絞り込み結果（スライド JSON を含む）">JSON（${r.items.length}）</button>${pdf}${pptx}${sample}<span class="meta" id="dl-status"></span></span>`;
 }
 
 function bindDownload(r: QueryResult, q: Query) {
@@ -224,6 +228,40 @@ function bindDownload(r: QueryResult, q: Query) {
       status.textContent = `PDF を保存しました（${entries.length} 件）`;
     } catch (e) {
       status.textContent = e instanceof WrongPasswordError ? "パスワードが違います。" : "PDF を作成できませんでした。時間をおいて再度お試しください。";
+    }
+  });
+  document.querySelector('[data-dl="pptx"]')?.addEventListener("click", async () => {
+    const entries = r.items.filter((i) => slideEntries.has(i.key));
+    if (!entries.length) return;
+    const pw = askPassword();
+    if (!pw) { status.textContent = "パスワードを入力してください。"; return; }
+    status.textContent = "PowerPoint 作成の準備中…";
+    try {
+      // the slide JSON is public, so the password is checked by decrypting one encrypted PDF
+      await fetchPdf(entries[0]!.key, pw);
+      await new Promise<void>((ok, ng) => {
+        if ((window as unknown as { PptxBuild?: unknown }).PptxBuild) return ok();
+        const s = document.createElement("script");
+        s.src = `pptx-build.js?v=${__PPTX_BUILD_V__}`;
+        s.onload = () => ok();
+        s.onerror = () => ng(new Error("script"));
+        document.head.append(s);
+      });
+      const slides: unknown[] = [];
+      for (const [n, i] of entries.entries()) {
+        status.textContent = `スライドを読み込み中… ${n + 1} / ${entries.length}`;
+        slides.push(...((await (await fetch(`slides/${i.key}.json`)).json()) as { slides: unknown[] }).slides);
+      }
+      const lib = (window as unknown as { PptxBuild: typeof import("./pptx-build.js") }).PptxBuild;
+      status.textContent = "PowerPoint を作成中…";
+      const bytes = await lib.buildDeckPptx({
+        slides: slides as never, categoryLabels: Object.fromEntries(meta.categories.map((c) => [c.id, c.label])),
+        periodLabel: q.mode === "dated" ? sel.period : null, totalInPeriod: r.items.length, createdUtc: new Date().toISOString(),
+      });
+      download(`${sel.file}.pptx`, new Blob([bytes], { type: "application/vnd.openxmlformats-officedocument.presentationml.presentation" }));
+      status.textContent = `PowerPoint を保存しました（${entries.length} 件）`;
+    } catch (e) {
+      status.textContent = e instanceof WrongPasswordError ? "パスワードが違います。" : "PowerPoint を作成できませんでした。時間をおいて再度お試しください。";
     }
   });
 }
