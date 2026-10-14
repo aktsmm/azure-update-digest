@@ -1,0 +1,104 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573744"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T21:36:00Z"
+  },
+  "slides": [
+    {
+      "key": "573744",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Anyscale on Azure が一般提供（GA）に",
+        "subtitleJa": "AKS 上で Ray の分散 Python ワークロードを Azure ネイティブ サービスとして実行",
+        "en": "Generally Available: Anyscale on Azure"
+      },
+      "meta": {
+        "publishedJst": "2026-10-08",
+        "modifiedJst": "2026-10-08",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "containers"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**AKS 上で Ray の分散学習・推論を動かす** データ／ML エンジニアと基盤担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "CPU と GPU 混在クラスターを Azure ネイティブ サービスとして一元管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Ray 基盤が必要な場合に、対応リージョンで導入を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "コントロール プレーンは Anyscale がホストし、Azure ポータルや CLI/SDK で操作", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/overview", "locator": "どのように機能するのか", "retrievedAt": "2026-10-14T21:36:00Z" }] },
+            { "text": "データ プレーンは自分の AKS クラスター上で動き、データはテナント内に残る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/overview", "locator": "どのように機能するのか", "retrievedAt": "2026-10-14T21:36:00Z" }] },
+            { "text": "Microsoft Entra ID シングル サインオンとマネージド ID でアクセス制御", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/overview", "locator": "主要プラットフォームの機能", "retrievedAt": "2026-10-14T21:36:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure CLI で Anyscale サービス プリンシパルを作成し、リソース プロバイダーを登録", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/quickstart-azure-cli", "locator": "Azure サブスクリプションの構成", "retrievedAt": "2026-10-14T21:36:00Z" }] },
+            { "text": "AKS クラスターを作成し、Azure ポータルで Anyscale クラウド リソースを作成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/quickstart-azure-cli", "locator": "Anyscale クラウド リソースを作成する", "retrievedAt": "2026-10-14T21:36:00Z" }] },
+            { "text": "Envoy Gateway などのゲートウェイを導入し、Platform Contributor ロールを付与", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/quickstart-azure-cli", "locator": "チームにアクセス権を割り当てる", "retrievedAt": "2026-10-14T21:36:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "AKS ベースのみ対応。クラウドの作成・削除は Azure ポータルが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/overview", "locator": "Limitations", "retrievedAt": "2026-10-14T21:36:00Z" }] },
+            { "text": "クロスリージョン レプリケーションやマルチリージョン クラスターは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/supported-regions", "locator": "地域ごとの振る舞いと制約", "retrievedAt": "2026-10-14T21:36:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する機能", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Blob Storage / ADLS、Container Registry、Load Balancer と連携", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/overview", "locator": "Azure サービス統合", "retrievedAt": "2026-10-14T21:36:00Z" }] },
+            { "text": "複数のクラウド リソースを追加でき、ジョブはリソース間でフェイルオーバー可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/overview", "locator": "マルチリソースクラウドサポート", "retrievedAt": "2026-10-14T21:36:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "データ準備、分散学習、ファインチューニング、推論を 1 つの Ray プログラムで構成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "制御プレーンは米国で動作し運用メタデータが流れるため、規制要件は事前確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/supported-regions", "locator": "データ駐留と制御プレーン", "retrievedAt": "2026-10-14T21:36:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "anyscale-on-azure", "term": "Anyscale on Azure", "type": "product", "oneLine": { "text": "Ray で分散 Python ワークロードを実行するマネージド プラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/overview", "locator": "冒頭", "retrievedAt": "2026-10-14T21:36:00Z" }] } },
+        { "termKey": "ray", "term": "Ray", "type": "term", "oneLine": { "text": "CPU と GPU の混在クラスターを単一の Python ランタイムにする分散コンピューティング ランタイム。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "aks", "term": "AKS", "type": "product", "oneLine": { "text": "Azure Kubernetes Service。Anyscale のデータ プレーンが動くクラスター。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/overview", "locator": "どのように機能するのか", "retrievedAt": "2026-10-14T21:36:00Z" }] } },
+        { "termKey": "control-plane", "term": "コントロール プレーン", "type": "term", "oneLine": { "text": "スケジュール、監視、ジョブ管理、コンソールを担う Anyscale ホストの層。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/overview", "locator": "どのように機能するのか", "retrievedAt": "2026-10-14T21:36:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T21:36:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "対応リージョンは米国・欧州・オーストラリア東部・東南アジアなどの 12 リージョンで、日本は含まれない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/supported-regions", "locator": "利用可能な地域と地域名", "retrievedAt": "2026-10-14T21:36:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573744",
+        "learn": [
+          { "title": "Azure上の Anyscale とは", "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/overview", "locale": "ja-jp" },
+          { "title": "Anyscale on Azure サポートリージョン", "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/supported-regions", "locale": "ja-jp" },
+          { "title": "クイックスタート: Azure に Anyscale をデプロイする", "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/quickstart-azure-cli", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
