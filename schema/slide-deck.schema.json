@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aktsmm/azure-update-digest/schema/slide-deck.schema.json",
+  "title": "Azure Update Digest — slide deck export (1 update = 1 slide)",
+  "description": "Common schema for the per-update slide JSON. Spec: docs/slide-schema.md. Every claim carries its origin / assertion strength / verification state so that cloud generation never presents inference as fact.",
+  "type": "object",
+  "required": ["schemaVersion", "selection", "slides"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "selection": { "$ref": "#/$defs/selection" },
+    "slides": { "type": "array", "items": { "$ref": "#/$defs/slide" } }
+  },
+  "$defs": {
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "instant": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$" },
+    "url": { "type": "string", "pattern": "^https://" },
+    "evidence": {
+      "type": "object",
+      "required": ["url"],
+      "additionalProperties": false,
+      "properties": {
+        "url": { "$ref": "#/$defs/url" },
+        "locator": { "type": "string", "description": "Section / heading / quoted anchor inside the source" },
+        "retrievedAt": { "$ref": "#/$defs/instant" }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "required": ["text", "origin", "assertion", "verification"],
+      "additionalProperties": false,
+      "properties": {
+        "text": { "type": "string", "minLength": 1 },
+        "origin": { "enum": ["mrc", "learn", "derived", "editorial"], "description": "Where the content comes from. derived = computed from the above by rule; editorial = written by the generator." },
+        "assertion": { "enum": ["fact", "inference", "recommendation"], "description": "recommendation is always rendered in the dashed 'suggestion' style." },
+        "verification": { "enum": ["verified", "source-only", "unverified", "stale"] },
+        "evidence": { "type": "array", "items": { "$ref": "#/$defs/evidence" } }
+      },
+      "allOf": [
+        { "if": { "properties": { "verification": { "const": "verified" } }, "required": ["verification"] }, "then": { "required": ["evidence"], "properties": { "evidence": { "minItems": 1 } } } },
+        { "if": { "properties": { "assertion": { "const": "fact" } }, "required": ["assertion"] }, "then": { "properties": { "origin": { "enum": ["mrc", "learn", "derived"] } } } }
+      ]
+    },
+    "precisionDate": {
+      "type": "object",
+      "required": ["precision"],
+      "additionalProperties": false,
+      "properties": {
+        "date": { "$ref": "#/$defs/date" },
+        "month": { "type": "string", "pattern": "^\\d{4}-\\d{2}$" },
+        "precision": { "enum": ["day", "month"] }
+      },
+      "allOf": [
+        { "if": { "properties": { "precision": { "const": "day" } }, "required": ["precision"] }, "then": { "required": ["date"] } },
+        { "if": { "properties": { "precision": { "const": "month" } }, "required": ["precision"] }, "then": { "required": ["month"], "not": { "required": ["date"] } } }
+      ],
+      "description": "Month-granularity timing stays month-granularity (never turned into a fake day)."
+    },
+    "selection": {
+      "type": "object",
+      "required": ["mode", "basis", "coverage", "snapshotAt"],
+      "additionalProperties": false,
+      "properties": {
+        "mode": { "enum": ["period", "ids"] },
+        "period": {
+          "type": "object", "required": ["start", "end"], "additionalProperties": false,
+          "properties": { "start": { "$ref": "#/$defs/date" }, "end": { "$ref": "#/$defs/date" } }
+        },
+        "basis": { "enum": ["created", "modified"] },
+        "filters": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "categories": { "type": "array", "items": { "type": "string" } },
+            "importance": { "enum": ["all", "notable-or-high", "high"] },
+            "text": { "type": "string" }
+          }
+        },
+        "ids": { "type": "array", "items": { "type": "string" } },
+        "coverage": { "enum": ["complete", "partial", "not-fetched"], "description": "Same meaning as the site: partial/not-fetched must never be presented as a complete period." },
+        "snapshotAt": { "$ref": "#/$defs/instant" }
+      },
+      "allOf": [
+        { "if": { "properties": { "mode": { "const": "period" } } }, "then": { "required": ["period"] } },
+        { "if": { "properties": { "mode": { "const": "ids" } } }, "then": { "required": ["ids"] } }
+      ]
+    },
+    "panel": {
+      "type": "object",
+      "required": ["id", "heading", "availability", "priority"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "heading": { "type": "string" },
+        "availability": { "enum": ["present", "not-stated", "not-applicable", "unverified"], "description": "not-stated / not-applicable panels are not rendered, which keeps thin source data from forcing invented content." },
+        "priority": { "enum": ["core", "detail", "appendix"], "description": "core = page 1; detail = page 2 (or notes) when the slide does not fit; appendix = notes / appendix only." },
+        "items": { "type": "array", "items": { "$ref": "#/$defs/claim" } }
+      },
+      "allOf": [
+        { "if": { "properties": { "availability": { "const": "present" } } }, "then": { "required": ["items"], "properties": { "items": { "minItems": 1 } } } }
+      ]
+    },
+    "region": {
+      "type": "object",
+      "required": ["stamp", "scope", "basis", "evidence"],
+      "additionalProperties": false,
+      "properties": {
+        "stamp": { "enum": ["global", "japan-both", "japan-east", "japan-west", "japan-none"] },
+        "scope": { "enum": ["feature", "service", "policy"], "description": "What the evidence is about." },
+        "basis": { "enum": ["confirmed", "service-level", "policy"], "description": "confirmed = the feature itself; service-level = the (GA) service it belongs to; policy = a platform policy that is not regional." },
+        "note": { "type": "string" },
+        "evidence": { "type": "array", "items": { "$ref": "#/$defs/evidence" } }
+      },
+      "allOf": [
+        { "properties": { "evidence": { "minItems": 1 } } },
+        { "if": { "properties": { "basis": { "const": "confirmed" } }, "required": ["basis"] }, "then": { "properties": { "scope": { "const": "feature" } } } }
+      ]
+    },
+    "slide": {
+      "type": "object",
+      "required": ["key", "kind", "label", "title", "meta", "audience", "action", "panels", "references"],
+      "additionalProperties": false,
+      "properties": {
+        "key": { "type": "string", "description": "canonicalKey (MRC baseId); also the site anchor update-{key}" },
+        "kind": { "enum": ["ga", "preview", "private-preview", "retirement", "announcement", "update"] },
+        "kindSource": { "enum": ["ring", "tags", "title", "manual"], "description": "How kind was decided (rule-based, not guessed)." },
+        "label": { "type": "string" },
+        "title": {
+          "type": "object", "required": ["ja", "en"], "additionalProperties": false,
+          "properties": { "ja": { "type": "string" }, "subtitleJa": { "type": "string" }, "en": { "type": "string", "description": "Exact MRC title (join key, shown small for traceability)" } }
+        },
+        "meta": {
+          "type": "object", "required": ["publishedJst", "availability", "status", "products", "categories"], "additionalProperties": false,
+          "properties": {
+            "publishedJst": { "$ref": "#/$defs/date", "description": "MRC created, converted to the Asia/Tokyo calendar date" },
+            "modifiedJst": { "$ref": "#/$defs/date" },
+            "availability": {
+              "type": "array",
+              "items": {
+                "type": "object", "required": ["rawRing", "year", "month"], "additionalProperties": false,
+                "properties": { "rawRing": { "type": "string", "description": "Original ring value (e.g. Effective). Its meaning is never inferred." }, "year": { "type": "integer" }, "month": { "type": "string" } }
+              }
+            },
+            "status": { "type": ["string", "null"] },
+            "products": { "type": "array", "items": { "type": "string" } },
+            "categories": { "type": "array", "items": { "type": "string" } },
+            "importance": { "enum": ["normal", "notable", "high"] }
+          }
+        },
+        "audience": {
+          "type": "object", "required": ["who", "change", "changeNature"], "additionalProperties": false,
+          "properties": {
+            "who": { "$ref": "#/$defs/claim", "description": "Who this concerns" },
+            "change": { "$ref": "#/$defs/claim", "description": "What is good about it (benefit) or what changes (neutral / breaking)" },
+            "changeNature": { "enum": ["benefit", "neutral", "breaking"] }
+          }
+        },
+        "action": {
+          "type": "object", "required": ["required", "summary"], "additionalProperties": false,
+          "properties": {
+            "required": { "enum": ["yes", "optional", "no", "unknown"] },
+            "summary": { "$ref": "#/$defs/claim" },
+            "deadline": { "$ref": "#/$defs/precisionDate" }
+          }
+        },
+        "beforeAfter": {
+          "type": "object", "additionalProperties": false,
+          "properties": { "before": { "$ref": "#/$defs/claim" }, "after": { "$ref": "#/$defs/claim" }, "note": { "type": "string" } },
+          "description": "before is shown only when a first-party source describes the earlier behaviour; otherwise omit it (the slide degrades to after-only)."
+        },
+        "timeline": {
+          "type": "array",
+          "items": { "type": "object", "required": ["label", "when"], "additionalProperties": false, "properties": { "label": { "type": "string" }, "when": { "$ref": "#/$defs/precisionDate" } } }
+        },
+        "panels": { "type": "array", "items": { "$ref": "#/$defs/panel" } },
+        "glossary": {
+          "type": "array", "maxItems": 6,
+          "items": {
+            "type": "object", "required": ["termKey", "term", "type", "oneLine"], "additionalProperties": false,
+            "properties": {
+              "termKey": { "type": "string" }, "term": { "type": "string" },
+              "type": { "enum": ["product", "feature", "term", "label"] },
+              "oneLine": { "$ref": "#/$defs/claim" }
+            }
+          }
+        },
+        "region": { "$ref": "#/$defs/region", "description": "Optional. Omit when the feature's (or its service's) Japan-region availability could not be confirmed from a first-party source; the renderer then shows no stamp." },
+        "references": {
+          "type": "object", "required": ["announcement"], "additionalProperties": false,
+          "properties": {
+            "announcement": { "$ref": "#/$defs/url" },
+            "learn": {
+              "type": "array", "maxItems": 3,
+              "items": { "type": "object", "required": ["title", "url", "locale"], "additionalProperties": false, "properties": { "title": { "type": "string" }, "url": { "$ref": "#/$defs/url" }, "locale": { "enum": ["ja-jp", "en-us"] } } }
+            }
+          }
+        },
+        "render": {
+          "type": "object", "additionalProperties": false,
+          "properties": { "continuationRequired": { "type": "boolean", "description": "true when the core blocks do not fit on one page at the minimum font size." } }
+        },
+        "inputFingerprint": { "type": "string", "description": "Hash of MRC fingerprint + fetched Learn text + glossary + schema/template/prompt versions. Regenerate only when it changes." }
+      }
+    }
+  }
+}

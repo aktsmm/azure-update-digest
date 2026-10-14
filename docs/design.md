@@ -255,4 +255,4 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 - 原文 URL の実在確認は自動化できません（9 章）。
 - 要約は 6 時間ごとに 30 件ずつ処理するため、バックフィル分の完了には時間がかかります（日次収集後は新着分のみ）。件数・頻度は `summarize.md` で調整できます。
 - 自動マージ PR の CI が、ジョブ 0 件のまま失敗扱いになることがありました（ワークフロー定義の問題ではなく起動時の一時的なもの）。自動マージは CI に依存せず独自に検証するため、影響はありません。
-- **将来**: PowerPoint / PDF 化。`DigestItem` と `runQuery` の結果（期間・フィルター条件・対象 ID・要約・URL・取得状態・`snapshotAt`）をそのまま再利用できる構造にしてあります。今回は実装していません。
+- **将来**: PowerPoint / PDF 化。`DigestItem` と `runQuery` の結果（期間・フィルター条件・対象 ID・要約・URL・取得状態・`snapshotAt`）をそのまま再利用できる構造にしてあります。1 更新 1 枚のスライド JSON の仕様は [slide-schema.md](slide-schema.md) を参照してください（生成コードはまだ実装していません）。

@@ -1,0 +1,330 @@
+{
+  "$schema": "../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["574343", "573861", "568585", "573875"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T12:16:25Z"
+  },
+  "slides": [
+    {
+      "key": "574343",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "WAF の「例外（Exceptions）」が一般提供（GA）に",
+        "subtitleJa": "誤検知した通信だけ、ルール単位で検査を回避できます（他の保護は有効なまま）",
+        "en": "Generally Available: Exceptions in WAF for Azure Application Gateway and Azure Front Door"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Application Gateway", "Azure Front Door", "Web Application Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Application Gateway（v2）/ Front Door の WAF を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "誤検知への対処を、保護を保ったまま精密にできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "誤検知で困っていれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "誤検知を抑える「除外」は、要求の一部（ヘッダー・Cookie・クエリ引数・本文の項目）を WAF の評価から外す方法",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        },
+        "after": {
+          "text": "特定の要求そのものの検査を、ルール / ルール グループ / ルールセット単位でバイパスできる。保護を保ったまま、より精密にチューニングできる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "条件: リクエスト URI / リモート IP / ヘッダーの名前と値", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "範囲: ルール / ルール グループ / マネージド ルールセット全体", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "WAF ポリシー → [Managed rules] → [例外] タブ → [例外の追加] でルールセットと範囲を選択し、一致変数・演算子・値を設定して保存",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "WAF ポリシーに例外を適用する", "retrievedAt": "2026-10-14T12:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "CRS 3.2 / DRS 2.1 以降、Application Gateway は v2。上限は 1 ポリシーあたり 60 例外、1 例外あたり 600 IP・10 URI・10 ヘッダー",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "Limitations", "retrievedAt": "2026-10-14T12:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "除外: 要求の一部だけ検査をスキップ / 例外: ルール単位で検査をバイパス / 許可アクションのカスタム ルール: 要求全体を広く許可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "Azure WAF 経由のトラフィックを許可するオプション", "retrievedAt": "2026-10-14T12:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "誤検知が出ているルールを特定し、ルール単位で例外を作る", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "例外はできるだけ狭くする（広いと意図せず攻撃にさらされる恐れがある）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "Tip", "retrievedAt": "2026-10-14T12:00:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "waf", "term": "WAF", "type": "feature", "oneLine": { "text": "Web アプリを一般的な脅威や攻撃から保護する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "冒頭", "retrievedAt": "2026-10-14T12:00:00Z" }] } },
+        { "termKey": "crs-drs", "term": "CRS / DRS", "type": "feature", "oneLine": { "text": "WAF が使う、Microsoft が管理・更新する検査ルールのセット（Core / Default Rule Set）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/web-application-firewall/ag/application-gateway-crs-rulegroups-rules", "locator": "冒頭", "retrievedAt": "2026-10-14T12:00:00Z" }] } },
+        { "termKey": "application-gateway", "term": "Application Gateway", "type": "product", "oneLine": { "text": "Web アプリへの通信を管理する、Web トラフィック用のロード バランサー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/application-gateway/overview", "locator": "冒頭", "retrievedAt": "2026-10-14T12:00:00Z" }] } },
+        { "termKey": "azure-front-door", "term": "Azure Front Door", "type": "product", "oneLine": { "text": "Web アプリの入口となる、グローバルでスケーラブルなサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/security/fundamentals/network-overview#azure-front-door", "locator": "Azure Front Door", "retrievedAt": "2026-10-14T12:00:00Z" }] } },
+        { "termKey": "false-positive", "term": "誤検知", "type": "term", "oneLine": { "text": "安全で予期される要求を、WAF がブロックしてしまうこと。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "冒頭", "retrievedAt": "2026-10-14T12:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T12:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Application Gateway は全リージョンで提供される基盤サービス、Front Door はグローバル",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-14T12:00:00Z" },
+          { "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "Azure Front Door (global)", "retrievedAt": "2026-10-14T12:00:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=574343",
+        "learn": [{ "title": "Azure Application Gateway WAF exceptions list", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    },
+    {
+      "key": "573861",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Application Gateway WAF が IPv6 トラフィックを検査",
+        "subtitleJa": "デュアルスタックで IPv4 と同じ保護を適用（パブリック プレビュー）",
+        "en": "Public Preview: IPv6 Support for Application Gateway WAF"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "October" }],
+        "status": "In preview",
+        "products": ["Application Gateway", "Web Application Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "IPv6 を使う／検討している Application Gateway v2 の利用者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "IPv6 環境でも WAF の保護を使える（検証向け）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。本番利用は追加の利用規約を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6", "locator": "Important", "retrievedAt": "2026-10-14T12:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "デュアルスタックのアプリで、IPv4 と IPv6 の両方に同じセキュリティ制御（マネージド ルールセット・カスタム ルール・診断）を適用できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "登録不要: マネージド ルールセットによる IPv6 検査 / IPv6 アドレス・範囲によるカスタム ルール / ログ・診断・監視", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6", "locator": "機能登録が必要な場合", "retrievedAt": "2026-10-14T12:00:00Z" }] },
+            { "text": "機能登録が必要: IPv6 の地域（ジオ）ベース カスタム ルール（AllowAppGwWafIpv6Geo を登録）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6", "locator": "機能を登録する", "retrievedAt": "2026-10-14T12:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "デュアルスタック必須。IPv6 専用の Application Gateway は未対応。既存の IPv4 専用ゲートウェイは変換できない（新規作成が必要）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6", "locator": "IPv6ジオベースのカスタムルールを有効にするワークフロー", "retrievedAt": "2026-10-14T12:00:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "IPv6 を使う予定があるか／デュアルスタック化できるかを確認し、まず検証環境で挙動と制約を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dual-stack", "term": "デュアルスタック", "type": "term", "oneLine": { "text": "IPv4 と IPv6 の両方のフロントエンド接続を受け付ける構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/ipv6-application-gateway-portal", "locator": "冒頭", "retrievedAt": "2026-10-14T12:00:00Z" }] } },
+        { "termKey": "application-gateway", "term": "Application Gateway", "type": "product", "oneLine": { "text": "Web アプリへの通信を管理する、Web トラフィック用のロード バランサー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/application-gateway/overview", "locator": "冒頭", "retrievedAt": "2026-10-14T12:00:00Z" }] } },
+        { "termKey": "preview-feature-registration", "term": "プレビュー機能の登録", "type": "term", "oneLine": { "text": "サブスクリプションに機能を登録して、プレビュー機能を使えるようにすること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6", "locator": "機能を登録する", "retrievedAt": "2026-10-14T12:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T12:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573861",
+        "learn": [{ "title": "IPv6 ジオベースカスタムルール for Azure Web Application Firewall(プレビュー版)", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    },
+    {
+      "key": "568585",
+      "kind": "retirement",
+      "kindSource": "tags",
+      "label": "廃止",
+      "title": {
+        "ja": "App Service の Java 8 / 11 / 17 サポートが 2027-09-01 に終了",
+        "subtitleJa": "終了日以降もアプリは動くが、更新・サポートが止まる。期限までに Java 25 へ",
+        "en": "Retirement: Support for Java 8, 11 and 17 will end on September 1, 2027"
+      },
+      "meta": {
+        "publishedJst": "2026-10-07",
+        "availability": [{ "rawRing": "Retirement", "year": 2027, "month": "September" }],
+        "status": null,
+        "products": ["App Service"],
+        "categories": ["compute"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "App Service で Java 8 / 11 / 17 を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "終了日以降は、セキュリティ更新とカスタマー サービスが提供されなくなる（アプリは動作し続ける）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "期限までに Java 25 へアップグレードする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2027-09-01", "precision": "day" }
+      },
+      "beforeAfter": {
+        "before": { "text": "終了日までは、Java 8 / 11 / 17 のアプリがセキュリティ更新とサポートを受けられる", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "after": { "text": "終了日以降はアプリは動作するが、セキュリティ更新なし・カスタマー サービスなし", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-10-07", "precision": "day" } },
+        { "label": "サポート終了", "when": { "date": "2027-09-01", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "App Service は、各言語コミュニティのサポート期限に従ってランタイムを廃止する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locator": "廃止", "retrievedAt": "2026-10-14T12:00:00Z" }] },
+            { "text": "サポート対象外の言語バージョンでは、サポートを受ける前に対応バージョンへの更新が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locator": "廃止 / 重要", "retrievedAt": "2026-10-14T12:00:00Z" }] }
+          ]
+        },
+        { "id": "migration", "heading": "移行先", "availability": "present", "priority": "core", "items": [{ "text": "Java 25", "origin": "mrc", "assertion": "fact", "verification": "source-only" }] },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [{ "text": "利用中の App Service の Java バージョンを棚卸しし、移行の工数とテスト期間を期限から逆算して計画する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-app-service", "term": "Azure App Service", "type": "product", "oneLine": { "text": "Web アプリ・モバイル バックエンド・REST API を、基盤の管理なしで動かせるプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/app-service/overview", "locator": "冒頭", "retrievedAt": "2026-10-14T12:00:00Z" }] } },
+        { "termKey": "label-end-of-support", "term": "サポート終了", "type": "label", "oneLine": { "text": "セキュリティ更新とカスタマー サポートが提供されなくなること。アプリ自体は変更なく動き続ける。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locator": "廃止", "retrievedAt": "2026-10-14T12:00:00Z" }] } },
+        { "termKey": "openjdk", "term": "OpenJDK", "type": "term", "oneLine": { "text": "Java の無償・マルチプラットフォームのディストリビューション。Microsoft ビルドも提供。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locator": "JDK のバージョンとメンテナンス", "retrievedAt": "2026-10-14T12:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "App Service のランタイム サポート ポリシー（全体に適用）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locator": "廃止", "retrievedAt": "2026-10-14T12:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568585",
+        "learn": [
+          { "title": "Azure App Service の言語ランタイム サポート ポリシー", "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locale": "ja-jp" },
+          { "title": "Java 25 に移行する理由", "url": "https://learn.microsoft.com/ja-jp/java/openjdk/reasons-to-move-to-java-25", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    },
+    {
+      "key": "573875",
+      "kind": "announcement",
+      "kindSource": "tags",
+      "label": "アナウンス",
+      "title": {
+        "ja": "Fabric の検索で、テーブルが個別の結果として表示される",
+        "subtitleJa": "2026-10-15 から、セマンティック モデル等のテーブルが検索結果に個別表示",
+        "en": "Announcing: Table discovery in OneLake Catalog search"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "October" }],
+        "status": null,
+        "products": ["Microsoft Fabric"],
+        "categories": ["other"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Fabric の利用者・管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "検索でテーブルが見つかる。見える範囲は親アイテムの権限で決まる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は、テナント設定「Users can find objects in search」（既定で有効）を確認し、準備ができていなければ無効化する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2026-10-15", "precision": "day" }
+      },
+      "beforeAfter": {
+        "before": { "text": "検索では、アイテム（セマンティック モデル、レイクハウスなど）が結果として表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/governance/onelake-catalog-explore", "locator": "アイテムリスト内のアイテムを検索する", "retrievedAt": "2026-10-14T12:00:00Z" }] },
+        "after": { "text": "アイテムの中のテーブルが個別の結果になり、テーブル名・説明、列名の完全一致でも探せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "適用範囲", "availability": "present", "priority": "core",
+          "items": [{ "text": "Fabric のグローバル検索 / OneLake カタログ UI / Search API / MCP サーバーの検索 / Fabric CLI の /find / discovery スキル（今後、対象の種別が増える予定）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }]
+        },
+        {
+          "id": "permissions", "heading": "知っておくべき点（権限）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "テーブルの表示は親アイテムの権限で決まる。Read 以上の権限があれば、中の全テーブルを見つけられる（クエリできないテーブルも）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "検索はデータへのアクセスを与えない。オブジェクト レベル セキュリティ付きのセマンティック モデルのテーブルは検索から除外", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [{ "text": "見つけられても困るテーブルがないか権限設計を確認し、利用者へ「検索で見える範囲が変わる」ことを周知する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-fabric", "term": "Microsoft Fabric", "type": "product", "oneLine": { "text": "データの取り込みから分析・レポートまでを一つにまとめた、分析プラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/fundamentals/microsoft-fabric-overview", "locator": "冒頭", "retrievedAt": "2026-10-14T12:00:00Z" }] } },
+        { "termKey": "onelake-catalog", "term": "OneLake カタログ", "type": "feature", "oneLine": { "text": "必要な Fabric アイテムを検索・探索して使うための場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/governance/onelake-catalog-explore", "locator": "冒頭", "retrievedAt": "2026-10-14T12:00:00Z" }] } },
+        { "termKey": "semantic-model", "term": "セマンティック モデル", "type": "term", "oneLine": { "text": "生データの上に、ビジネス ロジックや関係性を定義する、整理されたデータの層。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/data-warehouse/semantic-models", "locator": "冒頭", "retrievedAt": "2026-10-14T12:00:00Z" }] } },
+        { "termKey": "lakehouse", "term": "レイクハウス", "type": "term", "oneLine": { "text": "データ レイクの拡張性と、ウェアハウスのクエリ機能を組み合わせた Fabric のアイテム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/data-engineering/lakehouse-overview", "locator": "冒頭", "retrievedAt": "2026-10-14T12:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "OneLake は、リージョンをまたぐテナント全体の単一データ レイク",
+        "evidence": [{ "url": "https://learn.microsoft.com/fabric/fundamentals/microsoft-fabric-overview", "locator": "OneLake and lakehouse data hierarchy", "retrievedAt": "2026-10-14T12:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573875",
+        "learn": [{ "title": "OneLake カタログでデータを検索および探索する", "url": "https://learn.microsoft.com/ja-jp/fabric/governance/onelake-catalog-explore", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
