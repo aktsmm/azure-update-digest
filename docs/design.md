@@ -206,7 +206,8 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 | `slide-dispatch.yml` | スライド未作成の更新（直近 3 か月・新しい順・最大 30 件）を 1 件ずつ起動 | 月・木 03:00 JST（日・水 18:00 UTC） | `actions: write` |
 | `slide.lock.yml` | スライド JSON 生成 → PR（PDF は成果物） | 手動 / dispatch | 読み取り + safe-output |
 | `auto-merge-slides.yml` | スライド PR の検証（1 ファイルのみ・スキーマ・PDF 描画）と自動マージ → 公開 | 生成完了時 / 3 時間ごと（:23 UTC） | `contents: write`, `pull-requests: write` |
-| `maintain.lock.yml` | 隔週の自己修復: 健康チェックを読み、不具合を PR で修正／直せないものを Issue で報告（`.github/` の変更・Secret・モデル・権限は触らない） | 毎月 2・16 日 03:17 JST / 手動 | 読み取り + safe-output |
+| `maintain.lock.yml` | 隔週の自己修復: 健康チェックを読み、不具合を PR で修正／直せないものを Issue で報告（`.github/` の変更・Secret・モデル・権限は触らない。許可した範囲の PR は自動マージ） | 毎月 2・16 日 03:17 JST / 手動 | 読み取り + safe-output |
+| `auto-merge-maintenance.yml` | 保守 PR の自動マージ。許可パス（src / tests / config / schema / docs / scripts / README）のみ・400 行以内・削除なし・bot 作成・ラベル `maintenance`。PR のコードは読み取り専用の `check` ジョブだけで実行し、`merge` ジョブ（書き込み権限）は PR のコードを実行せず、検査した SHA を `--match-head-commit` で固定してマージ | 保守完了時 / 6 時間ごと / 手動 | check: 読み取り、merge: `contents: write`, `pull-requests: write` |
 | `watchdog.yml` | 固まったエージェント実行の取り消しと、失敗したデプロイの 1 回再実行（AI なし） | 30 分ごと | `actions: write` |
 | `pages.yml` | validate → build → GitHub Pages 公開 | 呼び出し / `data/**` 等の push / 手動 | `pages: write`, `id-token: write` |
 | `ci.yml` | typecheck / test / validate / build | PR | `contents: read` |
