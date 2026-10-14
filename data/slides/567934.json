@@ -1,0 +1,101 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["567934"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T19:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "567934",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Azure Deployment Environments が 2027-02-22 に廃止",
+        "subtitleJa": "2026-09-14 から終了手順が始まる。代替手段を決めて、期限までに移行を",
+        "en": "Retirement: Azure Deployment Environments will be retired on February 22, 2027"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "modifiedJst": "2026-10-09",
+        "availability": [{ "rawRing": "Retirement", "year": 2027, "month": "February" }],
+        "status": null,
+        "products": ["Azure Deployment Environments"],
+        "categories": ["other"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Azure Deployment Environments** を使う開発者・プラットフォーム エンジニア", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "廃止後はサービスを利用できなくなる。廃止日以降は作成・デプロイなどの書き込み操作がブロックされる見込み", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "退職日には何が起こるのですか?", "retrievedAt": "2026-10-14T19:10:00Z" }] },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "利用状況を棚卸しし、代替手段を決めて、期限までに移行する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2027-02-22", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "終了手順の開始", "when": { "date": "2026-09-14", "precision": "day" } },
+        { "label": "発表", "when": { "date": "2026-10-09", "precision": "day" } },
+        { "label": "廃止", "when": { "date": "2027-02-22", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "2027年2月22日に廃止。廃止後はサービスを利用できない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "廃止後も、確認・読み取り・ログ・削除の操作はクリーンアップ期間中に利用できる予定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "退職日には何が起こるのですか?", "retrievedAt": "2026-10-14T19:10:00Z" }] },
+            { "text": "Microsoft Dev Box は別日程（2028年9月18日）で廃止予定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "Important", "retrievedAt": "2026-10-14T19:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先の候補", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure Resource Manager テンプレート / Bicep による直接デプロイ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "Microsoft ソリューション", "retrievedAt": "2026-10-14T19:10:00Z" }] },
+            { "text": "Azure Verified Modules、Azure DevOps / GitHub のワークフロー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "Microsoft ソリューション", "retrievedAt": "2026-10-14T19:10:00Z" }] },
+            { "text": "すべてのワークロードに一対一で対応する代替手段はない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "切り替えガイダンスの概要", "retrievedAt": "2026-10-14T19:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "環境、テンプレート、カタログ、プロビジョニングの流れを棚卸しする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ガバナンス・アクセス制御・IaC 互換性を含め、移行手順をテストする", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "inventory", "heading": "影響範囲の洗い出し", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Service Retirement ブックと Azure Resource Graph で関連リソースを特定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "影響を受けるリソースはどのように特定すればよいですか?", "retrievedAt": "2026-10-14T19:10:00Z" }] },
+            { "text": "環境インスタンスは開発者ポータル、Azure CLI、データプレーン API で確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "影響を受けるリソースはどのように特定すればよいですか?", "retrievedAt": "2026-10-14T19:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "cleanup", "heading": "削除時の注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ADE メタデータを削除しても、デプロイ済みの全リソースが消えるとは限らない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "環境を削除すればすべての充電が止まるのでしょうか?", "retrievedAt": "2026-10-14T19:10:00Z" }] },
+            { "text": "Dev Box の依存がなくなるまで、共有の Dev Center は削除しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "共有の開発センターやプロジェクトを削除できますか?", "retrievedAt": "2026-10-14T19:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-deployment-environments", "term": "Azure Deployment Environments", "type": "product", "oneLine": { "text": "テンプレートを使い、開発チームがアプリ インフラストラクチャを素早く起動できるサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/overview-what-is-azure-deployment-environments", "locator": "冒頭", "retrievedAt": "2026-10-14T19:10:00Z" }] } },
+        { "termKey": "environment-definition", "term": "環境定義", "type": "feature", "oneLine": { "text": "デプロイ環境を構成する Azure インフラストラクチャ リソースを定義したテンプレート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/overview-what-is-azure-deployment-environments", "locator": "冒頭", "retrievedAt": "2026-10-14T19:10:00Z" }] } },
+        { "termKey": "microsoft-dev-box", "term": "Microsoft Dev Box", "type": "product", "oneLine": { "text": "開発に必要なツールを備えた、クラウドベースの開発ワークステーションを提供するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/overview-what-is-azure-deployment-environments", "locator": "Microsoft Dev Box と共有されるコンポーネント", "retrievedAt": "2026-10-14T19:10:00Z" }] } },
+        { "termKey": "dev-center", "term": "デベロッパー センター", "type": "term", "oneLine": { "text": "Dev Box と ADE の両方に共通する、企業内のリソースを整理するための単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/overview-what-is-azure-deployment-environments", "locator": "Microsoft Dev Box と共有されるコンポーネント", "retrievedAt": "2026-10-14T19:10:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=567934",
+        "learn": [
+          { "title": "Azure Deployment Environments リタイアメントガイド", "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locale": "ja-jp" },
+          { "title": "Azure Deployment Environments とは", "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/overview-what-is-azure-deployment-environments", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
