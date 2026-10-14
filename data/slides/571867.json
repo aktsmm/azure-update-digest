@@ -1,0 +1,85 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571867"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T21:24:04Z"
+  },
+  "slides": [
+    {
+      "key": "571867",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure SQL Database の SQL パフォーマンス監視がパブリック プレビュー",
+        "subtitleJa": "Microsoft マネージドの監視で、傾向・異常・ボトルネックをダッシュボードや KQL で確認",
+        "en": "Public Preview: SQL Performance Monitoring for Azure SQL Database"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "modifiedJst": "2026-09-30",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Azure SQL Database の**単一データベース**を運用・監視している方", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "サポートされる構成", "retrievedAt": "2026-10-14T21:24:00Z" }] },
+        "change": { "text": "監視エージェントやデータストアを構築せずに、性能の傾向とボトルネックを把握できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "Introduction", "retrievedAt": "2026-10-14T21:24:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューのため、まず対象データベースで有効化して評価する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "データベース単位で有効化すると、Azure が性能データを収集し、ダッシュボードや KQL で分析できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "How performance monitoring works", "retrievedAt": "2026-10-14T21:24:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "DTU・vCore（2 vCore 以上）・サーバーレスの単一データベースが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "Supported configurations", "retrievedAt": "2026-10-14T21:24:00Z" }] },
+            { "text": "データベースの拡張プロパティを true に設定して有効化する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "Enable performance monitoring collection", "retrievedAt": "2026-10-14T21:24:00Z" }] },
+            { "text": "有効化から通常 10 分以内にデータをクエリ可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "Enable performance monitoring collection", "retrievedAt": "2026-10-14T21:24:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "エラスティック プールのデータベースとセカンダリ レプリカは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "Supported configurations", "retrievedAt": "2026-10-14T21:24:00Z" }] },
+            { "text": "有効化は db_owner 相当の権限が必要。閲覧・クエリは Reader 以上が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "Prerequisites / Access prerequisites", "retrievedAt": "2026-10-14T21:24:00Z" }] },
+            { "text": "Managed Instance や SQL Server 等では、このプロパティでは有効化されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "Platform support", "retrievedAt": "2026-10-14T21:24:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Fabric Database Hub のダッシュボードで、複数データベースの状況を横断して確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "View performance data in Fabric Database Hub", "retrievedAt": "2026-10-14T21:24:00Z" }] },
+            { "text": "Azure Data Explorer の Web UI から KQL で独自に分析できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "Query performance data with Azure Data Explorer", "retrievedAt": "2026-10-14T21:24:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "Azure 上で提供される、SQL Server エンジンのマネージド データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "Applies to", "retrievedAt": "2026-10-14T21:24:00Z" }] } },
+        { "termKey": "fabric-database-hub", "term": "Fabric Database Hub", "type": "product", "oneLine": { "text": "データベース資産全体の問題や改善点を一か所で検出・調査できる Fabric の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/", "locator": "What is the Database Hub?", "retrievedAt": "2026-10-14T21:24:00Z" }] } },
+        { "termKey": "kql", "term": "KQL", "type": "term", "oneLine": { "text": "Kusto Query Language。Azure Data Explorer のデータを検索・分析するクエリ言語。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "Query performance data with Azure Data Explorer", "retrievedAt": "2026-10-14T21:24:00Z" }] } },
+        { "termKey": "azure-rbac", "term": "Azure RBAC", "type": "term", "oneLine": { "text": "ロールの割り当てで、Azure リソースへのアクセスを制御する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locator": "View and query performance data", "retrievedAt": "2026-10-14T21:24:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T21:24:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571867",
+        "learn": [
+          { "title": "Azure SQL Database のパフォーマンス監視を有効にする (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/enable-performance-monitoring-sql-database?view=azuresql", "locale": "ja-jp" },
+          { "title": "クエリパフォーマンスモニタリングテレメトリ(プレビュー)", "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
