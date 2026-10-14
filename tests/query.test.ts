@@ -8,7 +8,7 @@ const cats = JSON.parse(readFileSync("config/categories.json", "utf8"));
 const imp = JSON.parse(readFileSync("config/importance.json", "utf8"));
 
 const item = (key: string, createdJst: string, over: Partial<DigestItem> = {}): DigestItem => ({
-  key, id: key, title: `t${key}`, titleJa: null, createdJst, modifiedJst: createdJst, status: null, tags: [], products: [], productCategories: [], categories: ["compute"],
+  key, id: key, title: `t${key}`, titleJa: null, kind: "update", createdJst, modifiedJst: createdJst, status: null, tags: [], products: [], productCategories: [], categories: ["compute"],
   importance: { level: "normal", score: 0, topics: [] }, availabilities: [], availabilityDates: { general: null, preview: null, privatePreview: null },
   sourceUrl: "https://azure.microsoft.com/updates?id=" + key, summary: { state: "missing", text: null }, related: { status: "uninvestigated", items: [] }, fingerprint: "f", detailState: "ok", ...over,
 });
@@ -27,6 +27,13 @@ describe("query", () => {
     expect(r.coverage.status).toBe("complete");
     expect(Object.values(r.countsByImportance).reduce((a, b) => a + b, 0)).toBe(r.items.length);
     expect(r.highlights.map((i) => i.key)).toEqual(["4"]);
+  });
+  it("filters by kind and keeps counts consistent", () => {
+    const kinds = [item("a", "2026-03-01", { kind: "ga" }), item("b", "2026-03-02", { kind: "retirement" }), item("c", "2026-03-03", { kind: "retirement" })];
+    const r = runQuery(kinds, { ...defaultQuery({ start: "2026-03-01", end: "2026-03-31" }), kinds: ["retirement", "preview"] }, cov);
+    expect(r.items.map((i) => i.key).sort()).toEqual(["b", "c"]);
+    expect(r.periodTotal).toBe(3);
+    expect(runQuery(kinds, defaultQuery({ start: "2026-03-01", end: "2026-03-31" }), cov).items).toHaveLength(3);
   });
   it("distinguishes not-fetched from zero", () => {
     const r = runQuery(all, defaultQuery({ start: "2025-01-01", end: "2025-01-31" }), cov);

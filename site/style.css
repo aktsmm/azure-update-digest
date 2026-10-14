@@ -41,3 +41,13 @@ a { color:var(--accent); }
 .dl-actions { margin-left:auto; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
 .row input[type=search] { flex:1 1 150px; min-width:130px; }
 .card .orig { font-size:12px; color:#6b778a; margin:-4px 0 6px; }
+.card-head { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+.card-head h3 { margin:0 0 4px; }
+.kind { flex:none; font-size:12px; font-weight:700; color:#fff; border-radius:999px; padding:3px 12px; background:#6b778a; }
+.kind.k-ga { background:#1b7f3b; } .kind.k-preview { background:#7a45c7; } .kind.k-private-preview { background:#5b35a0; }
+.kind.k-retirement { background:#c62828; } .kind.k-announcement { background:#0b6bcb; } .kind.k-update { background:#6b778a; }
+.chips-label { font-size:12px; font-weight:600; color:#3d4a5c; margin-right:6px; align-self:center; }
+.kind-chip { border-color:#c9d4e6; }
+.kind-chip.k-ga:has(input:checked) { background:#e6f4ea; border-color:#1b7f3b; } .kind-chip.k-retirement:has(input:checked) { background:#fdecec; border-color:#c62828; }
+.kind-chip.k-preview:has(input:checked), .kind-chip.k-private-preview:has(input:checked) { background:#f1eafb; border-color:#7a45c7; }
+.kind-chip.k-announcement:has(input:checked) { background:#eaf3ff; border-color:#0b6bcb; } .kind-chip.k-update:has(input:checked) { background:#eef1f5; border-color:#6b778a; }
