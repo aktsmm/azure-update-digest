@@ -52,6 +52,7 @@ dist/             サイト。data/ から常に再生成可能                 
 ### スライドと API
 
 - スライド JSON は Git、PDF はデプロイ時に生成（Git には入れない）。公開は**直近 3 か月**。サイトのボタンで、選んだ範囲の JSON と PDF（表紙・目次・概要付き）をブラウザ内で作成します。詳細は [スライドスキーマ](docs/slide-schema.md)。
+- **PDF はパスワード保護**: デプロイ時にリポジトリ Secret `PDF_PASSWORD` で暗号化（AES-256-GCM / PBKDF2）して公開し、ブラウザでパスワードを入力して復号・結合します。Secret が無い場合は PDF を公開しません（JSON は従来どおり公開）。変更は `gh secret set PDF_PASSWORD` のあと、`pages.yml` を再実行します。
 - 静的 JSON API: [docs/api.md](docs/api.md)（`api/v1/`）。
 
 ## 取得の考え方
@@ -78,7 +79,7 @@ dist/             サイト。data/ から常に再生成可能                 
 
 - サイトに載せるもの: タイトル、メタデータ、原文リンク、独自の日本語要約、Learn 関連資料。**MRC の description 全文は表示しません**。
 - 注意: `data/raw/` には MRC の応答（description の抜粋・全文を含む）をそのまま保存しており、公開リポジトリで閲覧できます。公開を避けたい場合は raw を別の非公開ストアへ移す運用に変更してください。
-- 出典: Microsoft Release Communications。**ライセンスは CC BY-NC-SA 4.0**（`LICENSE`）。商用利用は不可で、利用時は出典と作者（yamapan / aktsmm）の表示、変更の明示、同一ライセンスでの継承が必要です。Microsoft の原文・Microsoft Learn の内容は対象外です（`NOTICE`）。
+- 出典: Microsoft Release Communications。**ライセンスは CC BY-NC-SA 4.0**（`LICENSE`）。商用利用は不可で、利用時は出典と作者（yamapan / aktsmm）の表示、変更の明示、同一ライセンスでの継承が必要です。**Microsoft Corporation とその関連会社には、社内利用・商用利用の追加許諾があります**（第三者には及びません）。Microsoft の原文・Microsoft Learn の内容は対象外です（`NOTICE`）。
 
 ## 開発
 
