@@ -3,7 +3,7 @@ import { defaultQuery, runQuery, type DigestItem, type Query, type QueryResult }
 import type { SiteMeta } from "../lib/site-data.js";
 import type { SlideEntry } from "./pdf-merge.js";
 import { orderSlides } from "../lib/slide-order.js";
-import { checkGate, type PdfGate } from "../lib/pdf-gate.js";
+import { decryptBytes, deriveKey, type PdfCryptoInfo } from "../lib/pdf-crypto.js";
 import type { SlideKind } from "../lib/slide-kind.js";
 
 declare const __PDF_MERGE_V__: string;
@@ -11,8 +11,9 @@ const app = document.getElementById("app")!;
 let items: DigestItem[] = [];
 let meta: SiteMeta;
 let slideEntries = new Map<string, SlideEntry>();
-let pdfGate: PdfGate | null = null;
-let verifiedPw = "";
+let pdfCrypto: PdfCryptoInfo | null = null;
+let samplePdf = false;
+let pdfKey: { pw: string; key: CryptoKey } | null = null;
 
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 const catLabel = (id: string) => meta.categories.find((c) => c.id === id)?.label ?? id;
@@ -92,11 +93,11 @@ function card(i: DigestItem): string {
     <h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a>${esc(i.title)}</h3>
     <div class="meta">作成 ${esc(i.createdJst)} ／ 更新 ${esc(i.modifiedJst)} ／ ID ${esc(i.key)}</div>
     ${badges(i)}${summary}
-    <div class="links"><a href="${safeUrl(i.sourceUrl)}" target="_blank" rel="noopener noreferrer">原文（Azure Updates）</a>${slideEntries.has(i.key) ? ` ／ <a href="pdf/${esc(i.key)}.pdf" target="_blank" rel="noopener noreferrer">スライド PDF</a>` : ""}${rel}</div>
+    <div class="links"><a href="${safeUrl(i.sourceUrl)}" target="_blank" rel="noopener noreferrer">原文（Azure Updates）</a>${rel}</div>
   </article>`;
 }
 
-function periodForm(q: Query, fixedMonth: string | null): string {
+function periodForm(q: Query, fixedMonth: string | null, dl: string): string {
   const chips = meta.categories.map((c) => `<label class="chip"><input type="checkbox" name="cat" value="${esc(c.id)}" ${q.categories.includes(c.id) ? "checked" : ""}>${esc(c.label)}</label>`).join("");
   return `<form class="panel" id="f">
     ${fixedMonth ? "" : `<div class="row">
@@ -109,6 +110,7 @@ function periodForm(q: Query, fixedMonth: string | null): string {
       <label>日付の基準 <select name="basis"><option value="created" ${q.basis === "created" ? "selected" : ""}>作成日</option><option value="modified" ${q.basis === "modified" ? "selected" : ""}>更新日</option></select></label>
       <label>重要度 <select name="imp"><option value="all">すべて</option><option value="notable" ${q.importance === "notable-or-high" ? "selected" : ""}>注目以上</option><option value="high" ${q.importance === "high" ? "selected" : ""}>重要のみ</option></select></label>
       <input type="search" name="q" placeholder="タイトル・要約・製品で検索" value="${esc(q.text)}">
+      ${dl}
     </div>
     <div class="chips" style="margin-top:8px">${chips}</div>
   </form>`;
@@ -158,11 +160,11 @@ function selectionLabel(q: Query, r: QueryResult) {
 
 function downloadBar(r: QueryResult, q: Query): string {
   const withSlide = r.items.filter((i) => slideEntries.has(i.key)).length;
-  const pdf = pdfGate && slideEntries.size
-    ? `<input type="password" id="pdf-pw" placeholder="PDF パスワード" autocomplete="off" aria-label="PDF パスワード"><button type="button" data-dl="pdf" ${withSlide ? "" : "disabled"}>PDF（スライド ${withSlide} 件）</button>`
+  const sample = samplePdf ? `<a href="pdf/sample.pdf" target="_blank" rel="noopener noreferrer" title="最新のスライド 1 件（パスワード不要）">サンプル PDF</a>` : "";
+  const pdf = pdfCrypto && slideEntries.size
+    ? `<button type="button" data-dl="pdf" ${withSlide ? "" : "disabled"} title="スライド作成済み（直近3か月）の更新をまとめた PDF。絞り込み後 ${r.items.length} 件中 ${withSlide} 件。パスワードが必要です">PDF（${withSlide} 件）</button>`
     : "";
-  const note = slideEntries.size ? `<span class="meta">まとめて PDF は、スライドを作成済みの更新（直近3か月分）だけをまとめます（絞り込み後 ${r.items.length} 件中 ${withSlide} 件）。</span>` : "";
-  return `<div class="panel row" id="dl"><strong>ダウンロード</strong><button type="button" data-dl="json" ${r.items.length ? "" : "disabled"}>JSON（${r.items.length} 件）</button>${pdf}${note}<span class="meta" id="dl-status"></span></div>`;
+  return `<span class="dl-actions" id="dl"><button type="button" data-dl="json" ${r.items.length ? "" : "disabled"} title="絞り込み結果（スライド JSON を含む）">JSON（${r.items.length} 件）</button>${pdf}${sample}<span class="meta" id="dl-status"></span></span>`;
 }
 
 function bindDownload(r: QueryResult, q: Query) {
@@ -189,8 +191,6 @@ function bindDownload(r: QueryResult, q: Query) {
     if (!entries.length) return;
     const pw = askPassword();
     if (!pw) { status.textContent = "パスワードを入力してください。"; return; }
-    if (!pdfGate || !(await checkGate(pw, pdfGate))) { verifiedPw = ""; status.textContent = "パスワードが違います。"; return; }
-    verifiedPw = pw;
     status.textContent = "PDF 作成の準備中…";
     try {
       await new Promise<void>((ok, ng) => {
@@ -210,19 +210,34 @@ function bindDownload(r: QueryResult, q: Query) {
           onProgress: (d, t) => { status.textContent = `PDF を結合中… ${d} / ${t}`; },
         },
         font,
-        async (key) => (await fetch(`pdf/${key}.pdf`)).arrayBuffer(),
+        (key) => fetchPdf(key, pw),
       );
       download(`${sel.file}.pdf`, new Blob([bytes as BlobPart], { type: "application/pdf" }));
       status.textContent = `PDF を保存しました（${entries.length} 件）`;
-    } catch {
-      status.textContent = "PDF を作成できませんでした。時間をおいて再度お試しください。";
+    } catch (e) {
+      status.textContent = e instanceof WrongPasswordError ? "パスワードが違います。" : "PDF を作成できませんでした。時間をおいて再度お試しください。";
     }
   });
 }
 
+class WrongPasswordError extends Error {}
+
 function askPassword(): string {
-  const field = document.getElementById("pdf-pw") as HTMLInputElement | null;
-  return field?.value || verifiedPw || "";
+  return pdfKey?.pw || window.prompt("PDF のパスワードを入力してください") || "";
+}
+
+/** Fetches an encrypted slide PDF and decrypts it; the key is derived once per password. */
+async function fetchPdf(key: string, pw: string): Promise<ArrayBuffer> {
+  if (!pdfCrypto) throw new Error("PDF is not published");
+  if (!pdfKey || pdfKey.pw !== pw) pdfKey = { pw, key: await deriveKey(pw, pdfCrypto) };
+  const res = await fetch(`pdf/${key}.pdf.enc`);
+  if (!res.ok) throw new Error("fetch");
+  try {
+    return await decryptBytes(pdfKey.key, await res.arrayBuffer());
+  } catch {
+    pdfKey = null;
+    throw new WrongPasswordError();
+  }
 }
 
 function renderList(q: Query, heading: string, fixedMonth: string | null, basePath: string) {
@@ -235,7 +250,7 @@ function renderList(q: Query, heading: string, fixedMonth: string | null, basePa
   const note = q.mode === "availability" ? "<p class='meta'>提供時期は公式の月単位表記のまま表示しています（日付への換算はしていません）。</p>" : "";
   app.innerHTML = `<h1>${esc(heading)}</h1>
     <p><strong>${esc(q.period.start)} 〜 ${esc(q.period.end)}</strong>（JST・${basisLabel}）: <strong>${r.items.length} 件</strong> ${filtered}</p>
-    ${coverageBanner(r)}${backfillPanel()}${periodForm(q, fixedMonth)}${downloadBar(r, q)}${note}${hl}
+    ${coverageBanner(r)}${backfillPanel()}${periodForm(q, fixedMonth, downloadBar(r, q))}${note}${hl}
     <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${r.items.map(card).join("")}${empty}`;
   bind(q, fixedMonth, basePath);
   bindDownload(r, q);
@@ -290,8 +305,9 @@ async function main() {
   }
   document.getElementById("footer")!.innerHTML = `${esc(meta.attribution)}<br>データ時点: ${esc(meta.snapshotAt ?? "未取得")}（UTC） ／ 件数 ${meta.itemCount} ／ 原文リンクは Azure Updates の公式 permalink 形式で、リンク先の存在は自動確認できません（開けない場合は MRC の ID をご確認ください）。<br>ライセンス: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a>（商用利用不可）© yamapan (aktsmm) ／ Microsoft の原文・Learn の内容は対象外<br><a href="https://github.com/aktsmm/azure-update-digest/blob/main/docs/design.md" target="_blank" rel="noopener noreferrer">設計・方式の詳細</a> ／ <a href="https://github.com/aktsmm/azure-update-digest#readme" target="_blank" rel="noopener noreferrer">README</a>`;
   try {
-    const s = (await (await fetch("data/slides.json")).json()) as { slides: SlideEntry[]; pdfGate?: PdfGate | null };
-    pdfGate = s.pdfGate ?? null;
+    const s = (await (await fetch("data/slides.json")).json()) as { slides: SlideEntry[]; pdfCrypto?: PdfCryptoInfo | null; sample?: string | null };
+    pdfCrypto = s.pdfCrypto ?? null;
+    samplePdf = !!s.sample;
     slideEntries = new Map(s.slides.map((e) => [e.key, e]));
   } catch { /* no slide PDFs published */ }
   window.addEventListener("hashchange", route);

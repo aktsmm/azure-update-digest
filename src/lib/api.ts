@@ -17,7 +17,6 @@ function publicItem(i: DigestItem, slides: Map<string, ApiSlideInfo>) {
       self: `${BASE}/updates/${i.key}.json`,
       source: i.sourceUrl,
       ...(s ? { slide: `slides/${i.key}.json` } : {}),
-      ...(s?.pdf ? { slidePdf: `pdf/${i.key}.pdf` } : {}),
     },
   };
 }
@@ -61,7 +60,7 @@ export function buildApi(items: DigestItem[], meta: SiteMeta, slides: Map<string
         update: `${BASE}/updates/{id}.json`,
         category: `${BASE}/categories/{category}.json`,
         slide: "slides/{id}.json",
-        slidePdf: "pdf/{id}.pdf",
+        samplePdf: "pdf/sample.pdf",
         slideIndex: "data/slides.json",
       },
     },
