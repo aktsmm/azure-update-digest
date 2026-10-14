@@ -1,0 +1,32 @@
+{
+  "args": {
+    "id": "530287"
+  },
+  "fetchedAt": "2026-10-14T12:31:03.444Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Private Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "530287",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Remote storage throughput and network bandwidth performance\nenhancements for the latest Azure Boost architecture are now in preview. Azure\nBoost is a Microsoft Azure system that offloads virtualization tasks—such as\nnetworking, storage, and host management—from the hypervisor and host OS to\npurpose-built hardware and software, freeing CPU resources for customer\nworkloads while enhancing security through physical isolation and hardware root\nof trust. By reducing maintenance impact and improving scalability, Azure Boost\nenables faster, more secure, and highly efficient cloud operations for\ndemanding workloads.  Performance\nenhancements of this latest architecture include up to 20 GBps remote storage\nthroughput, up to 1 M remote storage IOPS, and up to 400 Gbps network\nbandwidth. These enhancements will be available beginning with the D/E/Fsv7 Intel\n“Granite Rapids” VMs (in preview). Other new VMs will also begin using this\narchitecture and will provide similar performance capabilities. You can learn\nmore about these new Azure Boost performance enhancements by reading the blog. Learn more.",
+    "id": "530287",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "privatePreviewAvailabilityDate": "2025-11",
+    "productCategories": [],
+    "products": [],
+    "status": "In development",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Private Preview: Azure Boost remote storage throughput and network bandwidth enhancements"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "512813"
+  },
+  "fetchedAt": "2026-10-14T12:25:26.754Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "512813",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Azure\nContainer Apps support for premium ingress is now generally available. This\nfeature introduces environment-level ingress configuration options, with the\nprimary highlight being customizable ingress scaling. This capability supports\nthe scaling of the ingress proxy, enabling customers to better handle higher\ndemand workloads, such as large performance tests. By configuring your ingress\nproxy to run on workload profiles, you can scale out more ingress instances to\nhandle more load. Running the ingress proxy on a workload profile will incur\nassociated costs.  To further\nenhance the flexibility of your application, this release includes other\ningress-related settings, such as termination grace period, idle request\ntimeout, and header count. Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "512813",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Container Apps"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Premium Ingress in Azure Container Apps"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

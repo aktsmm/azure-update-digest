@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "557218"
+  },
+  "fetchedAt": "2026-10-14T12:17:19.133Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "557218",
+    "created": "2026-02-18T18:00:55.6125974Z",
+    "description": "Users often face security and\nmanageability challenges when diagnostic agents inherit broad user permissions,\nsuch as cluster-admin rights, and when each user must deploy their own\ninstance. Cluster mode for the agentic CLI for AKS, now in public preview, brings\nexpert-level AI diagnostics directly into your AKS cluster with tighter\nsecurity controls and faster performance. This gives teams a shared, always‑available AI assistant that understands\nreal cluster state, correlates signals across Kubernetes and Azure, and can\nguide troubleshooting or remediation using live data pulled in a secure and\nmanaged way. Cluster mode provides the following benefits over the existing\nclient-side experience: Fine-grained RBAC control with Azure and\nKubernetes RBAC Shared AKS Agent instances deployed to a\nnamespace of your choosing Faster CVE detection and fixes with a\ncentrally managed image, sourced from MCR Learn more.",
+    "id": "557218",
+    "modified": "2026-02-18T18:00:55.6125974Z",
+    "previewAvailabilityDate": "2026-02",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [],
+    "title": "Public Preview: Cluster mode for the agentic CLI for AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

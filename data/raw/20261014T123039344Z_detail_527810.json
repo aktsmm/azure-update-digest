@@ -1,0 +1,41 @@
+{
+  "args": {
+    "id": "527810"
+  },
+  "fetchedAt": "2026-10-14T12:30:39.344Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "527810",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Azure Kubernetes Service (AKS) visualization in\nNetwork Watcher Topology (Public Preview) delivers end-to-end visibility of AKS\nclusters directly within the Azure networking experience. Customers can now\nexplore their Kubernetes environments, including the control plane, node pools,\nand connected Azure resources, through an intuitive, interactive topology view. With this release, organizations can visualize AKS\nclusters as part of their broader network topology, closing the gap between\nKubernetes workloads and Azure infrastructure. Users can trace dependencies,\nunderstand traffic paths, and identify connectivity issues - all within a\nsingle unified map. This capability simplifies troubleshooting and\nperformance analysis by visually mapping relationships between pods, services,\nload balancers, and underlying VNets or subnets. It enables teams to\ncollaboratively diagnose issues and maintain consistent visibility across\nlayers. Integrating AKS visualization into Network Watcher\nTopology improves operational efficiency by reducing investigation time,\nminimizing tool switching, and providing actionable insights at a glance. It\nbridges the visibility gap between infrastructure and containerized workloads,\nempowering teams to maintain reliable, secure, and optimized AKS deployments. With AKS visualization in Topology, customers gain a\nunified, Azure-native view of their network landscape, ensuring awareness from\nthe network edge to the container.  Learn more.",
+    "id": "527810",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Management and governance",
+      "Networking"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)",
+      "Network Watcher"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Management",
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Public Preview: Azure Network Watcher Topology – AKS Visualization"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

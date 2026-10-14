@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "526169"
+  },
+  "fetchedAt": "2026-10-14T12:29:36.419Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "526169",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Azure Virtual Network Manager\naddress space overlap prevention in mesh is now generally available, bringing enhanced\nreliability and governance to multi-virtual network environments. Unintended\naddress overlap within mesh can lead to dropped traffic. This feature\nintroduces a built-in validation mechanism to proactively detect and prevent\nsuch conflicts. With\nthis capability: \n When adding a virtual network to a mesh, Azure Virtual Network Manager automatically verifies that the new virtual\n     network’s address space does not overlap with existing members. \n When updating an existing virtual network’s address\n     space or adding a new peering, Azure Virtual Network Manager ensures the\n     operation will not introduce an overlap. Any\naddress change triggers an update to Azure\nVirtual Network Manager, ensuring\nreal-time validation and consistent routing integrity across large-scale\nenvironments. This\nGA release empowers customers to maintain end-to-end network reliability,\nprevent configuration-induced outages, and uphold governance standards across\ndistributed Azure deployments. Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "526169",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Azure Virtual Network Manager"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Management",
+      "Services",
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Generally Available: Azure Virtual Network Manager address overlap prevention in mesh "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

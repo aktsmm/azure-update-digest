@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "522772"
+  },
+  "fetchedAt": "2026-10-14T12:37:17.564Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "522772",
+    "created": "2025-11-07T19:00:43.7305819Z",
+    "description": "The labels() function in KQL graph semantics is now generally available. This function enables you to retrieve, filter, and project label information for nodes and edges in your graph queries, making it easier to work with categorized graph data.The labels() function works with graph models in both Fabric Eventhouse and Azure Data Explorer, allowing you to:Filter graph elements by their labels to focus on specific node or edge typesProject label information in query results for better data understandingUse labels with collection functions like any(), all(), and map() for advanced pattern matchingAccess labels of intermediate nodes in variable-length paths using inner_nodes()Labels can be either static (fixed labels assigned to node or edge types) or dynamic (labels derived from data properties during graph construction), giving you flexibility in how you organize and query your graph data.Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "522772",
+    "modified": "2025-11-07T19:00:43.7305819Z",
+    "productCategories": [
+      "Analytics"
+    ],
+    "products": [
+      "Azure Data Explorer"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: labels() function in KQL graph semantics"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

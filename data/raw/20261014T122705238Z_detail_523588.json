@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "523588"
+  },
+  "fetchedAt": "2026-10-14T12:27:05.238Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "523588",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Announcing the general availability of the 2025 REST API for Azure Database for PostgreSQL. This release adds support for PostgreSQL 17 and 18, so you can adopt new versions without changing your automation patterns. You can also now set the default database name for elastic clusters. To improve the developer experience, we have renamed operation IDs for clearer navigation, and corrected HTTP response codes so scripts and retries behave as expected. Security guidance gets a boost with a new customer-managed key (CMK) encryption example that demonstrates automatic key version updates. Finally, the specification is easier to use with renamed files for accuracy, a reorganized structure that simplifies browsing and diffs, and enhanced local definition metadata—delivering a clearer, safer, and more capable API for your 2025 roadmaps. Learn more ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "523588",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Generally Available: 2025 REST API for Azure Database for PostgreSQL "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

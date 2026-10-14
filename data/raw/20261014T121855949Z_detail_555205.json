@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "555205"
+  },
+  "fetchedAt": "2026-10-14T12:18:55.949Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "555205",
+    "created": "2026-02-03T20:30:31.5612949Z",
+    "description": "Application Gateway Web Application Firewall (WAF) v2 now supports additional rate‑limiting GroupBy options based on the X‑Forwarded‑For (XFF) HTTP header. This enables customers running Application Gateway behind proxies or CDNs to apply rate limits using the original client IP rather than the TCP source IP. In this preview, rate‑limiting rules can be grouped by Client Address (XFF) or Geo Location (XFF), helping security teams more accurately mitigate abusive or high‑volume traffic patterns without unintentionally throttling legitimate users. The capability integrates with existing Application Gateway WAF v2 custom rate‑limit rules and policies. Learn more.",
+    "id": "555205",
+    "modified": "2026-02-03T20:30:31.5612949Z",
+    "previewAvailabilityDate": "2026-02",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Web Application Firewall"
+    ],
+    "status": "In development",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Public Preview: X-Forwarded-For (XFF) grouping for rate limiting on Application Gateway WAF v2"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

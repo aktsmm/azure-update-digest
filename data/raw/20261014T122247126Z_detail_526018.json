@@ -1,0 +1,41 @@
+{
+  "args": {
+    "id": "526018"
+  },
+  "fetchedAt": "2026-10-14T12:22:47.126Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "526018",
+    "created": "2025-11-24T17:15:03.3351852Z",
+    "description": "Announcing Azure Bastion now supports Microsoft Entra ID\nauthentication for RDP connections to Windows VMs directly in the portal. This update\nbrings two key benefits for RDP users connecting to their virtual machines: Enhanced Security: By eliminating local authentication\nmechanisms, this feature reduces potential attack surfaces, helping customers\nstrengthen their security posture. Seamless Access: With Microsoft Entra ID as the\nauthentication method, users enjoy a simple, one-click sign-on experience—no\nextra credentials required. This is a big\nstep forward in making secure and streamlined VM access easier than ever. Learn more:about Microsoft Entra ID.about Entra ID for RDP connections.",
+    "id": "526018",
+    "modified": "2025-11-24T17:15:03.3351852Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Identity",
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Microsoft Entra ID (formerly Azure AD)",
+      "Azure Bastion"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features",
+      "Services",
+      "Security"
+    ],
+    "title": "Public Preview: Entra ID support for RDP connections "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,43 @@
+{
+  "args": {
+    "id": "527713"
+  },
+  "fetchedAt": "2026-10-14T12:25:14.990Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      },
+      {
+        "month": "September",
+        "ring": "Private Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "527713",
+    "created": "2025-11-18T17:30:44.5701309Z",
+    "description": "Azure Files now supports Entra-only identities, enabling customers to retire on-premises domain controllers while maintaining secure SMB access to file shares. This feature delivers a fully cloud-native authentication model using Microsoft Entra Kerberos allowing secure access for identities /groups created and managed in MS Entra. Placing identity and access control in the cloud also enhances remote and distributed workforce scenarios—no VPN or hybrid trust required.While beneficial across all workloads, this capability is especially impactful for:Information Worker collaboration (departmental shares, project folders)VDI/AVD environments with FSLogix profilesIndustry workloads requiring secure, mobile accessContact azurefiles@microsoft.com if you have questions or are interested in adopting Entra-only identities for Azure Files.Learn more.",
+    "id": "527713",
+    "modified": "2025-11-18T17:30:44.5701309Z",
+    "previewAvailabilityDate": "2025-11",
+    "privatePreviewAvailabilityDate": "2025-09",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Files"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features",
+      "Security"
+    ],
+    "title": "Public Preview: Entra-only identities support with Azure Files SMB "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

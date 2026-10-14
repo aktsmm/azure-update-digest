@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "555603"
+  },
+  "fetchedAt": "2026-10-14T12:18:06.584Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "555603",
+    "created": "2026-02-09T19:45:45.6255032Z",
+    "description": "We're announcing public preview of an AKS managed add-on that simplifies the deployment and lifecycle management of Application Gateway for Containers and its ALB Controller. With the managed AKS add-on, you can enable Application Gateway for Containers with a single command for new or existing AKS clusters through Azure CLI, ARM, and Bicep. The managed add-on helps streamline operations by providing: Managed installation and updates of the ALB Controller (so you don't need to maintain Helm charts) Secure integration via managed identity with least-privilege permissions Simplified networking when using AKS managed virtual network configuration The add-on also integrates with AKS' managed Gateway API add-on for seamless management of Gateway API CRDs within your AKS cluster. Learn more: Deploy Application Gateway for Containers + AKS Add-on  Application Gateway for Containers overview ",
+    "id": "555603",
+    "modified": "2026-02-09T19:45:45.6255032Z",
+    "previewAvailabilityDate": "2026-02",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Application Gateway for Containers - AKS managed add-on "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "536712"
+  },
+  "fetchedAt": "2026-10-14T12:21:32.595Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "December",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "536712",
+    "created": "2025-12-09T13:15:11.4522782Z",
+    "description": "The Federal Information Processing Standard (FIPS) 140-2\nis a US government standard that defines minimum security requirements for\ncryptographic modules in information technology products and systems. Azure Application Gateway V2 now supports FIPS mode,\nwhich can be enabled during deployment or at any time afterward. When FIPS mode\nis turned on, the gateway uses only FIPS-compliant predefined and custom TLS\npolicies, enhancing security and helping meet FedRAMP security requirements. Learn more. ",
+    "generalAvailabilityDate": "2025-12",
+    "id": "536712",
+    "modified": "2025-12-09T13:15:11.4522782Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Services",
+      "Security",
+      "Features",
+      "Compliance"
+    ],
+    "title": "Generally Available: FIPS compliant mode for Application Gateway V2 SKUs "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

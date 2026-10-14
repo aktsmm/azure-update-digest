@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "520691"
+  },
+  "fetchedAt": "2026-10-14T12:38:08.757Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "520691",
+    "created": "2025-11-05T17:00:26.5227629Z",
+    "description": "Azure Cosmos DB for NoSQL now supports ORDER BY ST_DISTANCE for geospatial queries, now generally available. With this feature, you can sort query results by their distance from a given point or GeoJSON object directly within Azure Cosmos DB. You no longer need to calculate distances in application code or perform client-side sorting. This function makes it easier to deliver real-time, location-aware experiences for logistics, retail, mapping, and smart-city scenarios with less code and better performance, such as “find the nearest store,” “list drivers by proximity,” or “rank properties by distance.” By handling sorting within the database engine, queries become simpler, faster, and more efficient, reducing latency and round-trip overhead. ORDER BY ST_DISTANCE works seamlessly with existing spatial data types and indexing in Azure Cosmos DB, providing consistent performance and accuracy at global scale. Learn more. ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "520691",
+    "modified": "2025-11-05T17:00:26.5227629Z",
+    "productCategories": [
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Cosmos DB"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: ORDER BY ST_DISTANCE in Azure Cosmos DB for NoSQL Geospatial Queries "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

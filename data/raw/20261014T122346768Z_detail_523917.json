@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "523917"
+  },
+  "fetchedAt": "2026-10-14T12:23:46.768Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "523917",
+    "created": "2025-11-20T13:45:47.4956033Z",
+    "description": "Azure NetApp Files cache volumes are now available in public preview. The cache volumes feature is a new capability built on NetApp’s ONTAP FlexCache technology that provides a persistent, high-performance cache in Azure for data stored on ONTAP-based storage volumes outside of Azure NetApp Files. This feature enables organizations to cache active (“hot”) data closer to users and cloud applications, dramatically improving data access speeds and throughput over WAN connections. With cache volumes, you can burst on-premises datasets to Azure with near-local performance, which is ideal for scenarios such as running computational workloads in Azure or enabling globally distributed teams to collaborate without file transfer delays.    Cache volumes is available in these regions.  Learn more:   What's new in Azure NetApp Files Configure a cache volume for Azure NetApp Files ",
+    "id": "523917",
+    "modified": "2025-11-20T13:45:47.4956033Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure NetApp Files"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Azure NetApp Files cache volumes    "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

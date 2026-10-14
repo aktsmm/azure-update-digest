@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "522059"
+  },
+  "fetchedAt": "2026-10-14T12:37:01.714Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "522059",
+    "created": "2025-11-10T19:30:03.9585249Z",
+    "description": "Geo priority replication enhances the replication process\nfor GRS and GZRS storage accounts by enabling accelerated data replication\nbetween the primary and secondary regions. This feature is backed by a Service\nLevel Agreement (SLA), ensuring the Last Sync Time for Block Blob data remains\nat 15 minutes or less, 99.0% of the billing month. With this guaranteed sync\ntime, users can feel more confident about their data’s durability and\navailability, especially if an unexpected outage occurs in their primary region\nand a failover is required. Geo Priority Replication applies to Block Blob.  Learn\nmore. ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "522059",
+    "modified": "2025-11-10T19:30:03.9585249Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Blob Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Compliance",
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Generally Available: Geo Priority Replication for Azure Blob"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

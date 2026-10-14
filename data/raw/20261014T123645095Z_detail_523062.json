@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "523062"
+  },
+  "fetchedAt": "2026-10-14T12:36:45.095Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "523062",
+    "created": "2025-11-11T17:00:09.0850349Z",
+    "description": "Diagnosing and resolving issues in Kubernetes clusters can\nbe complex and time-consuming, especially when navigating logs, telemetry, and\ndiagnostics manually. To simplify this experience, Azure Kubernetes Service is\nintroducing a new agentic AI-powered CLI experience through the “az aks agent” command. This new capability brings agentic reasoning directly into\nthe Azure CLI, allowing developers and operators to interact with their\nclusters using natural language. By describing an issue or query, users can\ntrigger an intelligent agentic loop that gathers signals from multiple sources,\nanalyzes diagnostics, identifies health issues and root causes, and provides\nactionable recommendations. The CLI agent also integrates with the AKS MCP\nserver and can seamlessly create and manage an Azure OpenAI instance, though it\nsupports any LLM provider. Powered by HolmesGPT - an open-source project co-maintained by the AKS team and accepted as a CNCF sandbox project- this feature is now available in public preview. Learn more.",
+    "id": "523062",
+    "modified": "2025-11-11T20:30:22.4062054Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Agentic CLI for AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

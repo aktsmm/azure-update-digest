@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "526160"
+  },
+  "fetchedAt": "2026-10-14T12:36:07.253Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "526160",
+    "created": "2025-11-13T17:00:24.9154341Z",
+    "description": "Azure Virtual Network Manager\nIP Address Management (IPAM) – Pool Association Recommendation is now generally\navailable,\nbringing intelligent, large-scale automation to IP address management in Azure. As\norganizations expand their network footprint across regions and management\ngroups, identifying and associating virtual networks with the right IPAM pools\ncan become increasingly complex. Unassociated virtual networks may consume\noverlapping address spaces, raising the risk of conflicts during provisioning. With Pool\nAssociation Recommendation, customers can now automatically identify all\nvirtual networks within their Network Manager scope that are not yet\nassociated with an IPAM pool. The feature intelligently recommends the\nmost suitable pool for each virtual network by applying longest-prefix\nmatching within the pool hierarchy, ensuring optimal fit and capacity\nalignment. Administrators can bulk\nselect and associate virtual networks in a single action directly from the\nAzure portal—streamlining operations, reducing manual effort, and ensuring full\ncoverage at scale. This\ngeneral availability release empowers customers to manage address spaces more\nefficiently, minimize configuration drift, and maintain consistent governance\nacross large, distributed Azure environments. Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "526160",
+    "modified": "2025-11-13T17:00:24.9154341Z",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Azure Virtual Network Manager"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Services",
+      "Management"
+    ],
+    "title": "Generally Available: Azure Virtual Network Manager IP Address Management Pool Association Recommendation"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "523120"
+  },
+  "fetchedAt": "2026-10-14T12:23:25.435Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "523120",
+    "created": "2025-11-20T18:30:02.2785845Z",
+    "description": "Cluster-wide Cilium network\npolicy for AKS clusters using Azure CNI powered by Cilium is now Generally\nAvailable.   Managing consistent network policies across Kubernetes\nnamespaces has long been a challenge for platform teams, especially in\nmulti-tenant environments. With the general availability of cluster-wide Cilium\nnetwork policy for AKS clusters using Azure CNI powered by Cilium, customers\ncan now define and enforce network policies at the cluster level. This\nenhancement simplifies policy management and strengthens isolation between\ntenants by leveraging Cilium’s high-performance eBPF dataplane. Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "523120",
+    "modified": "2025-11-20T18:30:02.2785845Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Cluster-wide Cilium network policy with Azure CNI powered by Cilium for AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

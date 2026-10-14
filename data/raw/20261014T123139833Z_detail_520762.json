@@ -1,0 +1,42 @@
+{
+  "args": {
+    "id": "520762"
+  },
+  "fetchedAt": "2026-10-14T12:31:39.833Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      },
+      {
+        "month": "November",
+        "ring": "Private Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "520762",
+    "created": "2025-11-18T16:00:16.8047472Z",
+    "description": "Azure Copilot introduces specialized\nagents (gated preview) to help migrate,\noperate, and modernize workloads anywhere. Copilot evolves chat into an\nimmersive, full-screen command center (public preview) powered by GPT-5\nreasoning, artifact generation, and ARM-driven scenarios. Customers get\ncontextual, multi-modal, and personalized experiences, including chat history\nand inline actions. A compliance-first architecture and Bring Your Own Storage\n(public preview) let customers manage chat data securely and control data\nresidency. The new agents (gated preview) are as follows:\n Deployment\n     Agent:\n     Streamlines environment planning and guided infrastructure deployment.\n Migration\n     Agent:\n     Automates cloud migration, generates AI recommendations, and modernizes\n     apps.\n Optimization\n     Agent:\n     Finds cost and carbon savings and enables direct action.\n Observability\n     Agent:\n     Diagnoses full-stack app issues and suggests mitigation using Azure\n     Monitor.\n Resiliency\n     Agent:\n     Offers resiliency insights, auto-remediation, and ransomware protection.\n Troubleshooting\n     Agent:\n     Pinpoints issues, suggests fixes, and guides AKS troubleshooting.Learn more.",
+    "id": "520762",
+    "modified": "2025-11-18T16:00:16.8047472Z",
+    "previewAvailabilityDate": "2025-11",
+    "privatePreviewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Copilot"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Public Preview: Azure Copilot brings new intelligent agents to support end-to-end lifecycle management of workloads"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

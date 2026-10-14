@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "550863"
+  },
+  "fetchedAt": "2026-10-14T12:18:46.362Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "January",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "550863",
+    "created": "2026-02-04T20:00:42.437706Z",
+    "description": "Azure NetApp Files Elastic zone-redundant storage (ANF\nElastic ZRS) is an advanced high-availability service level for Azure NetApp\nFiles that provides continuous data access with zero data loss, even if an\nentire Azure Availability Zone goes offline. Built on Azure’s Zone-redundant\nstorage (ZRS) architecture and compute infrastructure, ANF Elastic ZRS\nsynchronously replicates file data across availability\nzones within one region. By eliminating single points of failure, it ensures\nmission-critical workloads remain online and protected without requiring\nspecial configuration or manual intervention. This makes it ideal for\napplications that demand uncompromising resilience and in-region data\nprotection. Azure NetApp Files Elastic\nZRS provides consistent performance for metadata-heavy workloads across VMs and\ncontainers, making it well suited for AI, analytics, and Kubernetes/OpenShift\nenvironments. Whether you’re running mission critical workloads, AKS and containerized\napps, cloud‑native applications, or general file shares, Azure NetApp Files\nElastic ZRS delivers continuity without compromise, cost‑effective scalability,\nand operational simplicity. You can create volumes as small as 1 GiB,\ngiving you the flexibility to optimize storage for workloads of any size. This new service is in Preview in these regions and we will be rapidly expanding.Learn more: Understand Elastic zone-redundant storage service levelCreate a NetApp Elastic account in Azure NetApp Files",
+    "id": "550863",
+    "modified": "2026-02-04T20:00:42.437706Z",
+    "previewAvailabilityDate": "2026-01",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure NetApp Files"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Services",
+      "Pricing & Offerings"
+    ],
+    "title": "Public Preview: Azure NetApp Files Elastic zone-redundant service level"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "523533"
+  },
+  "fetchedAt": "2026-10-14T12:26:41.779Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "523533",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "You can now stream data changes in near real time from Azure SQL Database directly into Azure Event Hubs. With the public preview of change event streaming (CES), you can streamline data integration and support enhanced analytics, event-driven architectures, and the modernization of monolithic applications.  By streaming operational data from SQL databases to Azure Event Hubs, you can seamlessly integrate this data into real-time dashboards, microservices, and various downstream systems, reducing the delays and complexities associated with traditional batch-based pipelines. Data is transferred from SQL only once and can be accessed by multiple consumers, minimizing polling on operational databases. Additionally, when data is available on a common message bus, it becomes more accessible for new consumers, unlocking faster innovation such as AI solution development.  CES offers near real-time latency, an “at least once” message delivery guarantee, and minimal impact on source workloads.  Learn more. ",
+    "id": "523533",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Azure SQL change event streaming "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

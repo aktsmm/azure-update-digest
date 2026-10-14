@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "525150"
+  },
+  "fetchedAt": "2026-10-14T12:31:53.778Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "525150",
+    "created": "2025-11-18T16:00:16.8047472Z",
+    "description": "The Large Volumes up to 7.2 PiB with Cool Access feature allows you to create Azure NetApp Files volumes up to 7.2 PiB on dedicated capacity, designed for workloads where most data are rarely accessed. This enhancement extends cool-access support beyond the previous 2 PiB limit, giving customers a new scale option for large deployments. By combining petabyte-scale capacity, cool-tier economics, and enterprise-grade performance, organizations can store massive datasets cost-effectively without compromising efficiency. This capability helps reduce storage costs for infrequently accessed data while maintaining predictable performance for active workloads. It’s ideal for industries managing large archives, backups, and compliance-driven datasets where 80–90% of data can reside in the cool tier. Use cases include archives, media libraries, healthcare imaging, compliance data lakes, AI/ML datasets, EDA projects, and large file shares—delivering multi-petabyte consolidation, transparent tiering, and lower TCO without sacrificing enterprise-grade performance. This feature is supported in all regions that support large volumes. Learn more: What’s New in Azure NetApp Files Create an SMB volume for Azure NetApp Files Create an NFS volume for Azure NetApp Files Create a dual-protocol volume for Azure NetApp Files Resource limits for Azure NetApp Files ",
+    "id": "525150",
+    "modified": "2025-11-18T16:00:16.8047472Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure NetApp Files"
+    ],
+    "status": "In development",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Large volumes up to 7.2 PiB     "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

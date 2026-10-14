@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "557694"
+  },
+  "fetchedAt": "2026-10-14T12:16:30.175Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "557694",
+    "created": "2026-02-26T19:45:06.0659425Z",
+    "description": "We’re excited to announce the addition of enhanced\nsecure authentication in Azure Storage that combines the flexibility of\nuser-delegation shared access signature (SAS) with the user-bound access of\nEntra ID. User-bound user delegation SAS is now in preview for all regions.  User delegation SAS is an existing feature that allows users\nto create secure SAS tokens that are tied to the delegator, meaning the\ndelegator must verify their identity with Entra to create the\ntoken. The resulting token can be traced to the delegator and can only be\nvalid for up to 7 days. This feature is an extension of user\ndelegation (UD) SAS, which is already generally available for\nAzure Blobs and in public preview for Azure Files, Azure Tables,\nand Azure Queues. User-bound user delegation SAS allows users to create a\nmore secure SAS token than account SAS, service SAS, or normal user\ndelegation SAS by restricting the usage of the SAS token\nto an end user identity. This will help enforce\nthat the user delegated SAS can only be used by intended users.  There is no additional cost to\nuse user-bound user delegation SAS. Pricing is based on the\nstandard read/write transaction costs for your storage account type. To learn\nmore, please see Azure\nStorage Pricing.  This preview is available in all public regions.Learn\nmore. ",
+    "id": "557694",
+    "modified": "2026-02-26T19:45:06.0659425Z",
+    "previewAvailabilityDate": "2026-02",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Blob Storage"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Public Preview: Restrict usage of user delegation SAS to an Entra ID identity "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

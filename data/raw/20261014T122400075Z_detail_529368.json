@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "529368"
+  },
+  "fetchedAt": "2026-10-14T12:24:00.075Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "529368",
+    "created": "2025-11-19T21:00:38.6551723Z",
+    "description": "CSI Dynamic Provisioning for Azure Managed Lustre (AMLFS) is now generally available. With dynamic provisioning, Kubernetes applications can request AMLFS-backed persistent volumes on demand using standard StorageClass and PersistentVolumeClaim objects—no pre‑provisioning of volumes is required. This simplifies day-to-day operations for AI/ML training, simulation, and high‑throughput analytics that rely on POSIX file semantics and shared access at scale.This GA supports Azure Kubernetes Service (AKS) clusters running Kubernetes 1.21 and later and uses the Azure Lustre CSI driver. Dynamic provisioning is supported in driver version v0.3.0 and later. Node pools must use the Ubuntu Linux OS SKU.Administrators define a StorageClass that references an AMLFS file system; developers then bind PVCs to create AMLFS volumes automatically. The driver integrates with the AMLFS client (Lustre 2.15.x) and follows the Kubernetes CSI specification.Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "529368",
+    "modified": "2025-11-19T21:00:38.6551723Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Managed Lustre"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Management",
+      "Open Source",
+      "Services",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: CSI Dynamic Provisioning for Azure Managed Lustre"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

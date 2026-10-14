@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "525505"
+  },
+  "fetchedAt": "2026-10-14T12:28:59.915Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "525505",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "We are introducing a new capability that allows you to host\nremote Model Context Protocol (MCP) servers built with the MCP SDKs on Functions. Some key benefits of hosting on the Functions platform include:  Built-in server authentication Automatic and bursty scaling  Pay-per-use Additionally, if you’ve\nalready built your MCP server, you don’t need to make any code changes to host\non Azure Functions.   Currently in public preview,\nthe new capability supports remote hosting of servers built with the Python,\nTypeScript, C#, and Java MCP SDKs on the Flex Consumption plan. Servers must be\nstateless and use the streamable-http transport.  Learn more:DocumentationGet startedSamples ",
+    "id": "525505",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Public Preview: Self-hosted remote MCP servers on Azure Functions "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

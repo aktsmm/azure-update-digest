@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "536747"
+  },
+  "fetchedAt": "2026-10-14T12:22:24.832Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "December",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "536747",
+    "created": "2025-12-03T17:00:27.0167531Z",
+    "description": "Bandwidth metrics for Azure Load\nBalancer are now published with metric dimension Protocol. When retrieving or\nviewing Byte, Packet, and SYN Count metrics in the Azure portal, you will now\nsee the dimension Protocol. TCP traffic is denoted by Protocol=6, while UDP\ntraffic is represented by Protocol=17. With the Protocol dimension, you\ngain more granular visibility into traffic patterns for alerting, monitoring,\nand troubleshooting requirements. The Protocol dimension is\navailable on Byte, Packet, and SYN Count metrics in all Azure public regions,\nChina cloud regions, and Government cloud regions. Learn\nmore. ",
+    "generalAvailabilityDate": "2025-12",
+    "id": "536747",
+    "modified": "2025-12-03T17:00:27.0167531Z",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Load Balancer"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Services"
+    ],
+    "title": "Generally Available: Azure Load Balancer bandwidth metrics now support Protocol dimension"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

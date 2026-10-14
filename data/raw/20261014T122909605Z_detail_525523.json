@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "525523"
+  },
+  "fetchedAt": "2026-10-14T12:29:09.605Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "525523",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Model\nContext Protocol (MCP) is a way for apps to provide capabilities and context to\na large language model. A key feature of MCP is the ability to define tools\nthat AI agents can leverage to accomplish whatever tasks they’ve been given.\nMCP servers can be run locally, but remote MCP servers are important for\nsharing tools that work at cloud scale. The Azure Functions MCP tool trigger is now generally available, allowing\nyou to build tools using remote MCP with Azure Functions. Azure Functions lets\nyou author focused, event-driven logic that scales automatically in response to\ndemand. You just write code reflecting unique requirements of your tools, and\nFunctions will take care of the rest. Learn more. ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "525523",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Generally Available: Model Context Protocol (MCP) tool trigger for Azure Functions "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

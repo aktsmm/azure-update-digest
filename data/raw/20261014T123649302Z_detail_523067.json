@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "523067"
+  },
+  "fetchedAt": "2026-10-14T12:36:49.302Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "523067",
+    "created": "2025-11-11T17:00:09.0850349Z",
+    "description": "Maintaining consistent and secure node configurations in\nKubernetes environments can be challenging due to issues like configuration\ndrift, manual changes, and complex upgrade paths. These challenges often lead\nto unpredictable behavior and increased operational overhead. Azure Kubernetes Service now supports Flatcar Container\nLinux in public preview. Flatcar is built on an immutable filesystem, which\nhelps ensure predictable node behavior by preventing unauthorized changes and\nsimplifying recovery from security incidents. As a Cloud Native Compute\nFoundation (CNCF) project, Flatcar also supports cross-cloud deployment, making\nit a strong choice for organizations seeking enhanced security and operational\nefficiency across diverse environments. Learn more.",
+    "id": "523067",
+    "modified": "2025-11-11T17:00:09.0850349Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Flatcar Container Linux for AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

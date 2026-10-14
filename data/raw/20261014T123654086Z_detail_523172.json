@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "523172"
+  },
+  "fetchedAt": "2026-10-14T12:36:54.086Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "523172",
+    "created": "2025-11-11T17:00:09.0850349Z",
+    "description": "Cloud-native workloads face increasingly sophisticated\nthreats—from rootkits and container escapes to unauthorized code execution—that\ndemand stronger security guarantees. To address these challenges, Microsoft has\nintroduced Azure Linux with OS Guard, now available in public preview. Built on the FedRAMP-certified Azure Linux 3.0 base, OS\nGuard is a next-generation immutable container host that enforces immutability,\ncode integrity, and mandatory access control. It leverages advanced\ntechnologies like dm-verity, SELinux, and Integrity Policy Enforcement\n(IPE)—recently upstreamed in Linux kernel 6.12—to ensure only trusted binaries\nfrom signed sources can run, while locking down user space against tampering.\nWith Trusted Launch enabled by default, OS Guard also secures boot components\nusing measured integrity backed by vTPM keys. Azure Linux is the trusted OS powering Microsoft’s own\nfleet, and OS Guard builds on that foundation to deliver enhanced protection\nfor cloud-native environments. Learn more.",
+    "id": "523172",
+    "modified": "2025-11-11T17:00:09.0850349Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Azure Linux OS Guard for AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

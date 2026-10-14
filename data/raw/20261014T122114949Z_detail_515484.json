@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "515484"
+  },
+  "fetchedAt": "2026-10-14T12:21:14.949Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "515484",
+    "created": "2025-12-12T11:30:27.0841562Z",
+    "description": "The retirement date for default outbound access has been extended to March 31, 2026. This change aligns with the broader Azure Virtual Network (VNet) update and replaces the previously communicated September 30, 2025 date. Starting March 31, 2026, newly created VNets will default to using private subnets. This means: Explicit outbound connectivity (e.g., via NAT Gateway, UDR, or other methods) must be configured to access public endpoints on the Internet or Microsoft services. Default outbound access will be disabled by default, but not removed. Customers who do not configure an outbound method will lose internet connectivity from their Batch nodes. Review your current Batch pool configurations, especially those using simplified node communication without public IPs.Plan to implement an explicit outbound method before the March 2026 deadline. Learn more:Read Default Internet outbound access for Simplified node communication Batch pools without public IP addresses will be retired on 30 September 2025.Read How and when default outbound access is providedRead Feature Update: Default behavior for newly created virtual networks will be private",
+    "id": "515484",
+    "modified": "2025-12-12T11:30:27.0841562Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Batch"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Update: The retirement date for default outbound access has been extended to March 31, 2026."
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

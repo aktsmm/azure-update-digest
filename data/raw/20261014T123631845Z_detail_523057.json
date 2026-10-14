@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "523057"
+  },
+  "fetchedAt": "2026-10-14T12:36:31.845Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "523057",
+    "created": "2025-11-11T17:45:46.9200485Z",
+    "description": "LocalDNS for AKS is\nnow generally available.   Large-scale Kubernetes clusters often face DNS resolution\ndelays and reliability issues, especially during upstream outages or high query\nvolumes. To address this, Azure Kubernetes Service (AKS) now offers LocalDNS, a\nfeature that is generally available. LocalDNS deploys a DNS proxy on each node, enabling faster\nand more reliable DNS resolution by handling queries locally. This eliminates\nbottlenecks, reduces latency, and ensures continued resolution even during\nupstream DNS outages through configurable serve-stale settings. With no application-level changes required, LocalDNS\ndelivers immediate performance improvements and supports advanced DNS\ncustomization for both internal and external domains. Learn more. ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "523057",
+    "modified": "2025-11-11T17:45:46.9200485Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: LocalDNS for AKS"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

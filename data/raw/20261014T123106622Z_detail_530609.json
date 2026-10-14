@@ -1,0 +1,40 @@
+{
+  "args": {
+    "id": "530609"
+  },
+  "fetchedAt": "2026-10-14T12:31:06.622Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "530609",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Announcing the public preview\nof the HTTP DDoS Ruleset for Application Gateway WAF v2. HTTP-layer DDoS attacks remain a leading cause of\napplication downtime, and traditional static controls often fall short against\nevolving botnets. The new HTTP DDoS Ruleset for Azure WAF introduces automated,\nadaptive Layer 7 protection that learns, detects, and defends with minimal\nconfiguration. Once assigned, the ruleset continuously baselines normal traffic\nfor each Application Gateway and, when attack surges are detected, selectively\nblocks offending clients with no emergency tuning required. The HTTP DDoS Ruleset features: Automated learning of\ntraffic baselines at both the gateway and per-IP level. Dynamic thresholds and\nsensitivity settings to balance protection and user experience. Two core rules: one for\nhigh-rate client anomalies and one for suspected bots, leveraging Microsoft\nThreat Intelligence. Currently, portal access for this feature is via the preview portal.  Learn\nmore. ",
+    "id": "530609",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway",
+      "Azure DDoS Protection",
+      "Web Application Firewall"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Security",
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Public Preview: Microsoft HTTP DDoS Ruleset 1.0 on Application Gateway WAF v2"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

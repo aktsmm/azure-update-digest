@@ -1,0 +1,40 @@
+{
+  "args": {
+    "id": "526188"
+  },
+  "fetchedAt": "2026-10-14T12:24:57.004Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "526188",
+    "created": "2025-11-18T18:00:28.886638Z",
+    "description": "Introducing smart tier Public Preview for account level\ntiering Announcing the public preview of smart\ntier for Azure Blob Storage and Azure Data Lake Storage (ADLS). Smart tier\nis a fully managed and automated data tiering solution, avoiding manual tier\nplacement for object storage standard online tiers. Smart tier automatically moves your data between hot, cool,\nand cold access tiers based on usage patterns, optimizing your costs for these\naccess tiers automatically. New data is stored in the hot tier. Any\nobject that isn’t accessed for 30 days is moved to the cool tier; after 90 days\nof inactivity, it transitions to the cold tier. If objects are accessed, they\nare transitioning back to the hot tier and restart their tiering\ncycle. Key Capabilities \n Seamless\n     Enablement: Activate smart tier at the storage account scope on new\n     and existing general purpose v2 storage accounts with zonal redundancies\n     today.  \n Automated\n     Lifecycle: Data movement between tiers is fully automated. Smart tier ensures\n     optimal tier placement for both your active and inactive objects.\n Simplified\n     Billing Model: Your data uses the existing hot, cool and cold tier\n     capacity prices. There are no charges for\n     tier transitions inside smart tier, early deletion or data retrieval fees.\n     A monitoring fee Is charged for objects stored in smart tier over 128 KiB\n     in size. Learn more.",
+    "id": "526188",
+    "modified": "2025-11-18T18:00:28.886638Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Storage",
+      "Analytics"
+    ],
+    "products": [
+      "Azure Blob Storage",
+      "Azure Data Lake Storage"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features",
+      "Management",
+      "Pricing & Offerings"
+    ],
+    "title": "Public Preview: Smart Tier account level tiering (Azure Blob Storage and ADLS)"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

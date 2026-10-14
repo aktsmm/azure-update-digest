@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "525500"
+  },
+  "fetchedAt": "2026-10-14T12:28:54.748Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "525500",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Azure Functions Flex Consumption is\nnow the recommended hosting plan for serverless workloads requiring advanced\nscaling, networking, and cost optimization. To support customers migrating from\nthe Azure Functions Consumption plan or from AWS Lambda, Microsoft has\npublished comprehensive migration guides and tooling:Azure Functions Consumption to\nFlex Consumption: The new documentation provides step-by-step instructions\nfor moving your Azure Functions apps from the Consumption plan to Flex\nConsumption. This includes guidance on updating your infrastructure as code\n(ARM/Bicep), configuration changes, and leveraging new AZ CLI commands to\nautomate the migration process.AWS Lambda to Azure Functions Flex\nConsumption: For customers migrating from AWS Lambda, this guide covers\nmapping Lambda concepts to Azure Functions, code porting strategies, and best\npractices for deploying to Azure Functions Flex Consumption. This includes\ninstructions for using GitHub Copilot in VS Code for help with code\nrefactoring, manual refactoring for specific changes, or other migration aids.\nThese resources are designed to minimize downtime and ensure a smooth\ntransition, enabling customers to take advantage of Flex Consumption’s improved\nscaling, networking, and cost controls.Learn more:Migrate\nConsumption plan apps to the Flex Consumption plan Migrate\nAWS Lambda workloads to Azure Functions",
+    "generalAvailabilityDate": "2025-11",
+    "id": "525500",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Announcing: Resources for migrating to Azure Functions Flex Consumption "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "527626"
+  },
+  "fetchedAt": "2026-10-14T12:33:54.009Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "527626",
+    "created": "2025-11-18T16:00:16.8047472Z",
+    "description": "Model Context Protocol (MCP) governance in\nAzure API Management (APIM) is now generally available.This release extends Azure API Management’s proven\ngovernance, security, and observability model to a new generation of AI-driven\nworkloads. Enterprises can now apply consistent policies, authentication, and\nmonitoring across both traditional APIs and AI systems that connect through\nMCP. What’s New:Expose APIs through MCP: Publish any managed API as an MCP-compliant endpoint so AI agents can\nsecurely discover and invoke enterprise capabilities using standard protocols. Proxy and govern external MCP services: Apply Azure API Management policies, authentication, and\nobservability to third-party MCP servers—such as those hosted on Azure\nFunctions, Container Apps etc. or externally hosted MCP servers. Unify access and governance: Use the same products, policies, and subscription model to manage\nboth API and MCP traffic, ensuring consistent control and visibility across\nyour organization. Discover and govern through API Center: Register MCP endpoints in Azure API Center to build a private catalog of\nenterprise MCP integrations, making them easy to discover, onboard, and reuse\nacross teams while maintaining centralized governance and compliance. Available across Azure API Management\nclassic and v2 tiers, including the Developer tier and the Self-hosted\nGateway. Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "527626",
+    "modified": "2025-11-18T16:00:16.8047472Z",
+    "productCategories": [
+      "Integration",
+      "Internet of Things",
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "API Management"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Generally Available: Govern Model Context Protocol (MCP) endpoints using Azure API Management"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

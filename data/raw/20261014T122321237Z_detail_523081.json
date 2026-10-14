@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "523081"
+  },
+  "fetchedAt": "2026-10-14T12:23:21.237Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "523081",
+    "created": "2025-11-20T18:30:02.2785845Z",
+    "description": "Local redirect policy with Azure\nCNI powered by Cilium for AKS is now generally available. Customers running high-scale AKS workloads often experience\nlatency and performance bottlenecks due to cross-node traffic routing. The new local\nredirect policy addresses this by enabling node-local service routing, ensuring\ntraffic is redirected to pods on the same node whenever possible. This results\nin lower latency, improved throughput, and enhanced reliability, especially\ncritical for AI training and microservice-based applications.  Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "523081",
+    "modified": "2025-11-20T18:30:02.2785845Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Local redirect policy in Azure CNI powered by Cilium for AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

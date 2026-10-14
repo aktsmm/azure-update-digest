@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "527236"
+  },
+  "fetchedAt": "2026-10-14T12:33:42.094Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "527236",
+    "created": "2025-11-18T16:00:16.8047472Z",
+    "description": "Red Hat OpenShift Virtualization is now generally available on Azure Red Hat OpenShift (ARO), enabling customers to manage virtual machines and containers from one cloud-native platform. This GA builds on feedback from the preview announced at Red Hat Summit and helps organizations modernize while preserving mission-critical workloads. It simplifies operations with integrated migration tools, Kubernetes-native automation, and cost optimization under consistent governance.The release adds support for Red Hat Migration Toolkit for Virtualization (MTV), integration with Ansible Automation Platform, and licensing benefits such as included RHEL entitlements and Windows Server licensing through Azure Hybrid Benefit. Organizations can move legacy apps to Azure with minimal disruption, leveraging Azure’s security, compliance, and hybrid features through the OpenShift console. Unifying VMs and containers helps teams speed delivery, apply DevOps practices, and reduce overhead.Learn more.FAQ:Q: Can I migrate existing virtual machines to ARO?A: Yes, use Red Hat MTV to automate and minimize downtime.Q: Can I run containers and VMs together?A: Yes, in a single OpenShift cluster.Q: What storage is recommended?A: Use OpenShift Data Foundation; Azure NetApp Files is in preview.Q: How are support and compliance handled?A: All ARO clusters receive joint Red Hat–Microsoft support with unified security.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "527236",
+    "modified": "2025-11-18T16:00:16.8047472Z",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Red Hat OpenShift"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Open Source",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: OpenShift Virtualization now available on Azure Red Hat OpenShift"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

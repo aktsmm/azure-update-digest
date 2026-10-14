@@ -1,0 +1,44 @@
+{
+  "args": {
+    "id": "488990"
+  },
+  "fetchedAt": "2026-10-14T12:25:20.202Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      },
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "488990",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Announcing a new mTLS enhancement in Azure Application Gateway for backend applications that perform client certificate and authorization header validation at the backend while still requiring web traffic inspection through the Web Application Firewall (WAF). This update introduces greater flexibility by allowing such applications to accept and inspect traffic through the Application Gateway even when a client certificate is not presented, supporting mixed authentication scenarios with both mTLS and token-based access.What ChangedPreviously, Application Gateway listeners operated in Strict mode, blocking any connection without a valid client certificate. This meant traffic relying solely on authorization tokens could not reach the backend.With this update, you can now enable Passthrough mode for mutual TLS (mTLS) connections, allowing:Requests without client certificates to pass through WAF for inspection.Backend applications to retain full control over certificate and token validation logic.Learn more. ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "488990",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Services",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Azure Application Gateway mTLS passthrough support"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

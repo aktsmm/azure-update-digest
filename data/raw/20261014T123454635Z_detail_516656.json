@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "516656"
+  },
+  "fetchedAt": "2026-10-14T12:34:54.635Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "516656",
+    "created": "2025-11-18T14:00:03.2444639Z",
+    "description": "Breakthrough mode in Azure NetApp Files enables extreme performance and scalability for demanding HPC and EDA workloads. It supports large volumes up to 2PiB, delivering throughput up to 50GiBps, depending on workload characteristics. Breakthrough mode uses six storage endpoints for each large volume ensuring consistent performance. Storage systems hosting breakthrough mode volumes are reserved for each customer to provide peak performance and not compete with other workloads. Key benefits include: High-capacity scaling for large-scale, latency-sensitive workloads Simplified network management with multiple storage endpoints per volume Dedicated capacity stamps to eliminate noisy neighbor interference and maintain predictable performance Supported in all regions where large volumes are supported. How to create a volume with large volume breakthrough mode enabled.  Create an NFS volume Create an SMB volume Create a dual protocol volumeLearn more.",
+    "id": "516656",
+    "modified": "2025-11-18T14:00:03.2444639Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure NetApp Files"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public preview: Support for large volume breakthrough mode"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

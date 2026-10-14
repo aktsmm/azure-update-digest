@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "525424"
+  },
+  "fetchedAt": "2026-10-14T12:38:23.341Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "525424",
+    "created": "2025-11-05T17:00:26.5227629Z",
+    "description": "Resiliency\ninsights is an assessment capability designed to measure your network's\nreliability for ExpressRoute workloads. At the core of this capability is the resiliency\nindex, a percentage score calculated based on factors such as route\nresilience, zone-redundant gateway usage, advisory recommendations, and\nresiliency validation tests. This index evaluates the control plane resiliency\nof the ExpressRoute connectivity between your Virtual Network Gateway and\non-premises network(s). By analysing and improving this index, you can enhance\nthe robustness and reliability of your connectivity to Azure workloads through\nExpressRoute.Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "525424",
+    "modified": "2025-11-05T17:00:26.5227629Z",
+    "productCategories": [
+      "Hybrid + multicloud",
+      "Networking"
+    ],
+    "products": [
+      "Azure ExpressRoute"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: ExpressRoute resiliency insights"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

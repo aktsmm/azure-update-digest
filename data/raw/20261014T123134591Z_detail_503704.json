@@ -1,0 +1,43 @@
+{
+  "args": {
+    "id": "503704"
+  },
+  "fetchedAt": "2026-10-14T12:31:34.591Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      },
+      {
+        "month": "September",
+        "ring": "Private Preview",
+        "year": 2024
+      }
+    ],
+    "baseId": "503704",
+    "created": "2025-11-18T16:00:16.8047472Z",
+    "description": "We’re bringing Azure Monitor’s dynamic threshold capabilities to Log search alerts!Using dynamic thresholds means you don't have to know the right threshold for each Log alert rule - Dynamic thresholds calculate the most appropriate thresholds for you.Key benefitsDynamic thresholds apply advanced machine learning and use a set of algorithms and methods to:Learn the historical behavior of log query results.Analyze these results over time and identify hourly / daily / weekly seasonal patterns.Calculate the most appropriate thresholds for log alert rules.Adapt automatically to changes in data patterns and adjust the threshold accordingly.At-scale monitoring - in rule monitoring multiple dimensions - the Dynamic threshold is calculated individually, per dimension combination.Learn more.",
+    "id": "503704",
+    "modified": "2025-11-18T16:00:16.8047472Z",
+    "previewAvailabilityDate": "2025-11",
+    "privatePreviewAvailabilityDate": "2024-09",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Public Preview: Dynamic threshold for Log search alerts"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

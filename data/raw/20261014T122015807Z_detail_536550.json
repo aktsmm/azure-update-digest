@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "536550"
+  },
+  "fetchedAt": "2026-10-14T12:20:15.807Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "January",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "536550",
+    "created": "2026-01-14T22:45:12.5056876Z",
+    "description": "Ubuntu 24.04 is now generally available on AKS in Kubernetes\nversion 1.32 and above. Containerd 2.0 is enabled by default. Ubuntu 24.04 is\ndefault with `Ubuntu` OS Sku in kubernetes version 1.35 and above. There are two ways that Ubuntu 24.04 can be enabled. In Kubernetes version 1.32 and above, you can use the\n‘Ubuntu2404’ OS Sku. This OS Sku can help you migrate existing clusters before\nyou reach the minimum kubernetes version for Ubuntu 24.04 as default on AKS. In Kubernetes version 1.35 and above, you can use ‘Ubuntu’\nOS Sku which defaults to Ubuntu 24.04. If you are already using `Ubuntu` OS Sku\nand upgrade to kubernetes version 1.35 or above, you’ll automatically migrate\nto Ubuntu 24.04. While migrating to Ubuntu 24.04, you can rollback to Ubuntu\n22.04 by using the new OS SKU “Ubuntu2204” in Kubernetes versions 1.25 to 1.36.\nThis functionality allows for more flexibility in testing and upgrading your OS\nversions without requiring a Kubernetes version upgrade.    Learn more.",
+    "generalAvailabilityDate": "2026-01",
+    "id": "536550",
+    "modified": "2026-01-14T22:45:12.5056876Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Ubuntu 24.04 support in AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

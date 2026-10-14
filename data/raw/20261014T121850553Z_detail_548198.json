@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "548198"
+  },
+  "fetchedAt": "2026-10-14T12:18:50.553Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "January",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "548198",
+    "created": "2026-02-03T20:30:31.5612949Z",
+    "description": "Namespace-scoped resource placement, now\nin preview for Azure Kubernetes Fleet Manager, delivers fine‑grained control\nover selection and propagation of individual namespace‑scoped resources across\nmultiple clusters.   This new capability means\nit is now possible to use Fleet Manager’s intelligent placement where a single\nnamespace hosts multiple applications with different lifecycles and distribution\nrequirements, or where teams using managed fleet namespaces need per‑workload\nscheduling based on specific cluster properties or capacity.  Those that are using\nFleet Manager’s existing cluster-scoped resource placement will find familiar\nconstructs including placement policies and staged rollouts, making it a simple\nstep to start using namespace-scoped resource placement. Learn more.",
+    "id": "548198",
+    "modified": "2026-02-03T20:30:31.5612949Z",
+    "previewAvailabilityDate": "2026-01",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Fleet Manager"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Azure Kubernetes Fleet Manager namespace-scoped resource placement "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "523754"
+  },
+  "fetchedAt": "2026-10-14T12:27:38.496Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "523754",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "You can now enable priority-based execution in Azure Cosmos DB to ensure that high-priority requests are favored during periods of contention. The system will throttle low-priority requests first, allowing high-priority operations to proceed on a best-effort basis.  Using the Azure Cosmos DB SDK, you can assign each request a priority level (high or low). Low priority requests are retried according to the configured retry policy, helping maintain responsiveness for critical workloads. Learn more. ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "523754",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Cosmos DB"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Priority-based execution in Azure Cosmos DB "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

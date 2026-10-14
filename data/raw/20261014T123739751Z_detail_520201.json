@@ -1,0 +1,41 @@
+{
+  "args": {
+    "id": "520201"
+  },
+  "fetchedAt": "2026-10-14T12:37:39.751Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Preview",
+        "year": 2025
+      },
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "520201",
+    "created": "2025-11-06T16:00:54.3723896Z",
+    "description": "Blob storage Object Replication metrics for pending operations and pending bytes are now generally available in all regions. These replication metrics will empower you to optimize the performance, troubleshoot replication delays, and maintain high availability across your Object Replication policies. The two metrics that will provide deeper visibility and insights into your object replication progress are: Pending Operations: Tracks the total number of operations pending replication from the source to the destination storage account of your OR policy Pending Bytes: Tracks the total volume of data pending replication from the source to the destination storage account of your OR policy Both metrics are emitted in time buckets (e.g. <5min, 5-10 min, 10-15 min, etc.) which show how long your operations have been pending replication to the destination account.  This assists with quickly identifying delays in the replication pipeline and makes it easier to monitor replication performance.  Learn more. ",
+    "generalAvailabilityDate": "2025-10",
+    "id": "520201",
+    "modified": "2025-11-06T16:00:54.3723896Z",
+    "previewAvailabilityDate": "2025-03",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Blob Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Object Replication Metrics"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

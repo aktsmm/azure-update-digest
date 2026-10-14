@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "553917"
+  },
+  "fetchedAt": "2026-10-14T12:18:53.757Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "553917",
+    "created": "2026-02-03T20:30:31.5612949Z",
+    "description": "Azure Container Storage v2.1.0 is now generally available. This release adds native Elastic SAN support and introduces a lightweight, on-demand installation model to simplify deployment and operations for Kubernetes workloads on Azure. Elastic SAN Storage Type SupportWith full support for Elastic SAN as a native storage type, you can provision scalable volume groups and consolidate large number of Kubernetes volumes under a single SAN resource, enabling faster attach and detach operations, higher throughput, and reduced management overhead for stateful workloads. The release also includes streamlined setup, improved defaults, and enhanced automation for Elastic SAN creation and volume group configuration.On demand, modular InstallationAzure Container Storage v2.1.0 now supports modular, on-demand installation, allowing you to deploy only the components required for your selected storage type. This reduces cluster footprint, accelerates deployment, and simplifies lifecycle management.Node Selector Support for component placementAdditionally, node selectors support enables precise control over where Azure Container Storage components run, helping optimize performance and resource usage in clusters with dedicated storage node pools or mixed topologies. Learn more ",
+    "generalAvailabilityDate": "2026-02",
+    "id": "553917",
+    "modified": "2026-02-03T20:30:31.5612949Z",
+    "productCategories": [
+      "Containers",
+      "Compute"
+    ],
+    "products": [
+      "Azure Container Storage",
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure Container Storage v2.1.0 now with Elastic SAN integration and on demand installation"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

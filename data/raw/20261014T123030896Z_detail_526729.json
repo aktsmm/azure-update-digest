@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "526729"
+  },
+  "fetchedAt": "2026-10-14T12:30:30.896Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "526729",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "ExpressRoute Scalable Gateway (ErGwScale) is our\nnext-generation offering that brings flexibility, performance, and operational\nsimplicity to Virtual Network Gateway deployments. With this release, you can\ndynamically scale gateway infrastructure to meet real-time traffic demands. What’s new \n Dynamic scaling: Deploy ErGwScale to achieve\n     up to 40 Gbps of connectivity for virtual machines and private\n     endpoints within your virtual network. \n Auto scaling: Configure minimum and maximum\n     scale units, and Azure automatically adjusts capacity based on bandwidth\n     and flow demand—delivering efficiency and eliminating manual tuning. \n Fixed scale option: For predictable workloads,\n     set a steady scale to maintain consistent bandwidth for stable traffic\n     patterns. \n FastPath + gateway coexistence: ErGwScale\n     complements FastPath for scenarios where FastPath isn’t supported—such as\n     high-bandwidth or complex routing cases—ensuring seamless performance. This offering introduces elastic\nscaling, zero-downtime upgrades, and enterprise-grade reliability, making\nit ideal for hybrid connectivity and demanding workloads.  Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "526729",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "Hybrid + multicloud",
+      "Networking"
+    ],
+    "products": [
+      "Azure ExpressRoute"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Services",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: ExpressRoute Scalable Gateway"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

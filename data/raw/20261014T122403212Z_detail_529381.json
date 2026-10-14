@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "529381"
+  },
+  "fetchedAt": "2026-10-14T12:24:03.212Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "529381",
+    "created": "2025-11-19T21:00:38.6551723Z",
+    "description": "Azure Managed Lustre now offers full integration with Azure MCP Server, and this capability is generally available. Azure MCP Server enables developers and infrastructure teams to manage Azure resources—including Azure Managed Lustre file systems—using natural language prompts, streamlining operations for AI training and high-performance computing (HPC) environments.With this integration, you can create, list, and manage Azure Managed Lustre file systems directly from supported IDEs (such as Visual Studio Code, Visual Studio, and IntelliJ) or via automation scripts, using the Model Context Protocol (MCP). The Azure Managed Lustre tools for MCP Server support advanced configuration options, including specifying network, capacity, maintenance windows, availability zones, and encryption settings. This makes it easier to provision and operate scalable, high-performance Lustre file systems for large-scale simulation, model training, and fine-tuning workloads.Azure MCP Server provides secure, role-based access and supports a wide range of Azure services, enabling unified management and automation for modern AI and HPC pipelines.Learn more.",
+    "generalAvailabilityDate": "2025-10",
+    "id": "529381",
+    "modified": "2025-11-19T21:00:38.6551723Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Managed Lustre"
+    ],
+    "status": "Launched",
+    "tags": [
+      "SDK and Tools",
+      "Microsoft Ignite",
+      "Features",
+      "Services",
+      "Management"
+    ],
+    "title": "Generally Available: Azure Managed Lustre Support for Azure MCP Server"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

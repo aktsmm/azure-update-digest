@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "529416"
+  },
+  "fetchedAt": "2026-10-14T12:34:29.067Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "529416",
+    "created": "2025-11-18T16:00:16.8047472Z",
+    "description": "Announcing the public preview of the new Azure Ebsv6 VM series, powered by 5th Generation Intel® Xeon® processors. The Ebsv6 and Ebdsv6 VMs deliver up to and industry leading 800,000 IOPS and 14 GBps of remote disk storage throughput, providing high-performance remote storage bandwidth for demanding workloads. This new generation provides up to 2x higher remote storage performance compared to the previous generation, enabling workload consolidation on fewer VMs. Key new features and improved VM specs compared to Ebsv5/Ebdsv5 Up to 192 vCPU and 1832 GiB memory 15-30% improvement in CPU performance  40% larger local SSD capacity with 3X read IOPS Azure Boost which enables up to: 800K IOPS and 14GB/s remote storage throughput with Premium v2 and Ultra Disk support 15% higher remote storage performance per vCPU with up to 6600 IOPS/vCPU 10% higher remote storage throughput per vCPU Up to 200 Gbps VM network bandwidth  Enhanced security through Total Memory Encryption (TME) technology The Ebsv6 VM series is optimized for large database workloads such as online transaction processing systems, data warehousing applications, and AI/ML workloads that require sequential streaming.These VMs will initially be available for Public Preview in the US East region. Please sign up for the public preview through this form.  Learn more.",
+    "id": "529416",
+    "modified": "2025-11-18T16:00:16.8047472Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Public Preview: Industry-leading storage performance Ebsv6 VM series"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

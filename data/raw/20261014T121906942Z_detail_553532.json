@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "553532"
+  },
+  "fetchedAt": "2026-10-14T12:19:06.942Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "553532",
+    "created": "2026-02-02T17:45:01.0885406Z",
+    "description": "Announcing the general availability of Default Rule Set (DRS) 2.2 for Web Application Firewall on Azure Application Gateway.The Azure-managed DRS provides active protection against common web vulnerabilities and exploits. It also includes Microsoft Threat Intelligence collection rules, authored in collaboration with our intelligence teams, to deliver broader coverage, targeted vulnerability mitigations, and continual improvements in false-positive reduction.DRS 2.2 is based on OWASP Core Rule Set 3.3.4, bringing refinements to existing detections and new protections, including rules that detect content types declared outside the actual content-type header and enhanced remote code execution (RCE) detections. An additional eight Microsoft Threat Intelligence rules expand coverage across SQL injection, XSS, and application-security attack patterns.To significantly reduce legitimate traffic being blocked, DRS 2.2 ships at Paranoia Level (PL) 1 by default. PL1 includes high-signal, lower-noise rules that rarely trigger false positives. PL2 rules are disabled by default because they are more aggressive and typically require fine-tuning. You can keep PL2 disabled or selectively enable individual PL2 rules where warranted. Learn more.",
+    "generalAvailabilityDate": "2026-02",
+    "id": "553532",
+    "modified": "2026-02-02T17:45:01.0885406Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway",
+      "Web Application Firewall"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Security",
+      "Features"
+    ],
+    "title": "Generally Available: Default Ruleset 2.2 in WAF for Azure Application Gateway"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,42 @@
+{
+  "args": {
+    "id": "525419"
+  },
+  "fetchedAt": "2026-10-14T12:37:14.360Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "525419",
+    "created": "2025-11-10T17:00:17.4493859Z",
+    "description": "Announcing Azure\nWeb\nApplication Firewall (WAF) support for Azure\nApplication\nGateway for Containers is now generally available. Application Gateway for Containers is the\nnext evolution of Application Gateway + Application Gateway Ingress Controller.\nWith the addition of Azure WAF support, Application Gateway for Containers\nworkloads can now protect workloads from web-based attacks like SQL injections,\ncross-site scripting, protocol anomalies, and more.  When using WAF to protect your\nApplication Gateway for Containers resources you get access to the\nAzure-managed Default\nRulesets (DRS),\nproviding protection not only from threats identified by the Open Web\nApplication Security Project (OWASP), but also additional protections provided\nby Microsoft’s Threat Intelligence Center (MSTIC). Application Gateway for\nContainers WAF users also have access to bot protection via bot\nmanager rulesets and\nprotection against DDoS attacks using rate\nlimiting custom rules.  Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "525419",
+    "modified": "2025-11-10T17:00:17.4493859Z",
+    "productCategories": [
+      "Networking",
+      "Security",
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Application Gateway",
+      "Azure Kubernetes Service (AKS)",
+      "Web Application Firewall"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Services",
+      "Security",
+      "Features"
+    ],
+    "title": "Generally Available: Application Gateway for Containers with Web Application Firewall (WAF)"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

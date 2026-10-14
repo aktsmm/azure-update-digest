@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "529519"
+  },
+  "fetchedAt": "2026-10-14T12:30:48.947Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "529519",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Azure continues to embrace open standards by adding new capabilities to the Azure Monitor OpenTelemetry Distro that powers Azure Monitor Application Insights. New Capabilities:Rate-limited sampling and\ntrace-based log sampling:  New sampling options in\nthe Distro provide an alternative to the existing fixed-rate (percentage-based)\nsampler. Rate-limited sampling helps you control data ingestion by capping the\nnumber of traces collected per second and trace-based log sampling drops any\nlogs correlated with sampled out traces, providing predictable cost management\nwhile maintaining reliable observability. Learn More.Performance Counters: Azure Monitor’s OpenTelemetry Distro now automatically collects system and process metrics, known as performance counters, that power key Application Insights experiences. These metrics provide deeper visibility into application performance and help you quickly diagnose and resolve performance issues. Learn More.New Telemetry Attributes: We’ve worked with the OpenTelemetry community to add Synthetic Source, Device IP Address, and Device OS/Browser to the semantic model. By bringing these fields into the official OpenTelemetry data model and Azure Monitor Distro, you can now seamlessly filter by synthetic traffic indicators, enrich client-source context, and segment telemetry by platform—making monitoring smarter, investigations faster, and insights more actionable. Learn More.",
+    "generalAvailabilityDate": "2025-10",
+    "id": "529519",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Features",
+      "SDK and Tools"
+    ],
+    "title": "Generally Available: Advanced sampling and richer data collection in Azure Monitor OpenTelemetry Distro"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

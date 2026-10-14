@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "525405"
+  },
+  "fetchedAt": "2026-10-14T12:28:26.755Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "525405",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "StandardV2 SKU NAT Gateway is now in public preview, delivering next-generation capabilities for scalable and resilient outbound connectivity. New offerings: Zone-Redundancy: Built for high availability in availability zone supported regions. Traffic survives single-zone failures with no extra configurations required. Enhanced performance: Supports up to 100 Gbps of throughput and 10 million packets per second, double the Standard SKU capacity. Dual-stack support: Supports up to 16 IPv6 and 16 IPv4 public IP addresses for future ready connectivity. Traffic insights with Flow logs: Provides IP-level traffic insights for troubleshooting and verifying compliance with organizational policies and requirements. StandardV2 Public IPs: StandardV2 NAT Gateway requires StandardV2 IPs; Standard SKU IPs are not supported. Pricing and availability: Same price as the Standard SKU NAT Gateway. Available in select regions, with broader rollout planned. Deploy through CLI, Powershell, Bicep and ARM. Portal support coming soon.  Learn more: StandardV2 NAT Gateway  StandardV2 Public IPs ",
+    "id": "525405",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Azure NAT Gateway"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features",
+      "Services"
+    ],
+    "title": "Public Preview: Standard V2 NAT Gateway and StandardV2 Public IPs"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

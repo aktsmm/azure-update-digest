@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "532197"
+  },
+  "fetchedAt": "2026-10-14T12:22:51.416Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "532197",
+    "created": "2025-11-24T17:00:10.983072Z",
+    "description": "Announcing that Azure MCP Server now supports Azure Database for MySQL. With this update, you can empower AI agents and applications to interact with your MySQL data using natural language through the open Model Context Protocol (MCP). Instead of writing complex queries, you can simply ask questions like “retrieve schema details for the customers table,” “show the last 7 days of failed orders,” or “summarize anomalies by region.” These interactions support Microsoft Entra authentication, eliminating password management and ensuring enterprise-grade security.  By integrating MySQL tools into the Azure MCP Server alongside other services such as Azure AI Search, Azure Cosmos DB, and Azure Storage, you gain a unified interface for building intelligent, context-aware workflows. This consistency reduces integration complexity, accelerates development, and enables you to create agentic solutions that span data exploration, analysis, and operational actions—all within the trusted Azure ecosystem.  You benefit from faster insights, simplified schema discovery, and the ability to automate MySQL-driven business logic without leaving your development environment.  Get started today by installing Azure MCP Server in Visual Studio Code, enabling GitHub Copilot, and setting up Microsoft Entra authentication for Azure Database for MySQL. Learn more. ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "532197",
+    "modified": "2025-11-24T17:00:10.983072Z",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure Database for MySQL"
+    ],
+    "status": "Launched",
+    "tags": [],
+    "title": "Generally Available: Azure MCP Server for Azure Database for MySQL "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

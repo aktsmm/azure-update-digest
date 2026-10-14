@@ -1,0 +1,41 @@
+{
+  "args": {
+    "id": "525874"
+  },
+  "fetchedAt": "2026-10-14T12:29:18.982Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "525874",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Application\nGateway for Containers now supports integration with Istio service mesh through\nan optional service mesh extension. This feature simplifies secure north-south\ncommunication between external clients and services within the service mesh. Single solution: Load balance traffic to services both inside and outside\nthe mesh through one ingress gateway.  Reduced operational overhead: Eliminate configuration bloat by\nautomating repetitive mutual authentication definitions.  Certificate trust and rotation: Managed certificate trust and rotation\nto maintain secure authentication with the service mesh.  Learn more: Application\nGateway for Containers + Istio service mesh Application Gateway\nfor Containers Overview",
+    "id": "525874",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Networking",
+      "Security",
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Application Gateway",
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features",
+      "Services"
+    ],
+    "title": "Public Preview: Application Gateway for Containers Istio Service Mesh integration"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

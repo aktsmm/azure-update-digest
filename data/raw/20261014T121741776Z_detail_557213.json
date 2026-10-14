@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "557213"
+  },
+  "fetchedAt": "2026-10-14T12:17:41.776Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "557213",
+    "created": "2026-02-18T16:30:06.2089913Z",
+    "description": "Node auto-provisioning enabled clusters previously did not\nhave support for Encryption\nat Host and disk encryption sets. This limited users with certain\nsecurity requirements for their cluster to not be able to use node\nauto-provisioning.    Node auto-provisioning now\nincludes support for both Encryption at Host and disk encryption\nsets. This enables customers to use node auto-provisioning while meeting\nrequired encryption controls and gaining its associated compute efficiency,\nresiliency, and cost-management benefits.  Learn\nmore.  ",
+    "generalAvailabilityDate": "2026-02",
+    "id": "557213",
+    "modified": "2026-02-18T16:30:06.2089913Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [],
+    "title": "Generally Available: Encryption at host & disk encryption sets support in node auto-provisioning "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

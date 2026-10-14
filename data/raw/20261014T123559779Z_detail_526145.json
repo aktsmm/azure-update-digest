@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "526145"
+  },
+  "fetchedAt": "2026-10-14T12:35:59.779Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "526145",
+    "created": "2025-11-13T18:30:39.769711Z",
+    "description": "Azure Virtual Network Manager\nUDR management now offers UseExisting mode, providing customers with greater\nflexibility and compliance control over user-defined routes (UDRs). With the UseExisting mode, Azure\nVirtual Network Manager detects and appends required routes to an existing\nroute table associated with a subnet, preserving the original route table’s\nname, group, and tags. If no route table exists, Azure Virtual Network Manager\nautomatically creates one as before. Customers seeking Azure Virtual Network\nManager-managed route tables can continue using the existing Managed Only mode\n(the default). This\ngeneral availability release empowers customers to: \n Maintain governance compliance by retaining\n     ownership of route table configurations \n Simplify operations with seamless\n     integration of AVNM automation into existing environments \n Enhance flexibility by choosing how\n     AVNM interacts with routing resources  The UseExisting mode makes it\neasier than ever to adopt Azure Virtual Network Manager UDR management at\nscale—combining centralized automation with customer-driven governance and\ncontrol. Learn more. ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "526145",
+    "modified": "2025-11-13T18:30:39.769711Z",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Azure Virtual Network Manager"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Services",
+      "Management"
+    ],
+    "title": "Generally Available: Azure Virtual Network Manager UseExisting Mode for UDR management "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

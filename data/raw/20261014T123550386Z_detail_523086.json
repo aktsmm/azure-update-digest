@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "523086"
+  },
+  "fetchedAt": "2026-10-14T12:35:50.386Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "523086",
+    "created": "2025-11-14T16:30:37.6947312Z",
+    "description": "Pod CIDR expansion in Azure CNI\nOverlay for AKS is now available in public preview. To meet the growing demands of dynamic and large-scale\nKubernetes workloads, Azure Kubernetes Service now offers Pod CIDR Expansion in\npublic preview for clusters using Azure CNI Overlay. While Azure CNI Overlay\nalready delivers scalable pod IP address management via a logical overlay\nnetwork, many enterprise customers require additional flexibility to support\nevolving business needs. This new capability allows users to expand existing pod CIDR\nranges, enhancing both scalability and adaptability for workloads that require\nmore IP space. The preview currently supports CIDR range expansion only,\nenabling organizations to better manage IP allocation without redeploying\nclusters. Learn more.",
+    "id": "523086",
+    "modified": "2025-11-14T16:30:37.6947312Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Pod CIDR expansion in Azure CNI Overlay for AKS"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

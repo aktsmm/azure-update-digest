@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "542813"
+  },
+  "fetchedAt": "2026-10-14T12:20:47.428Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "December",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "542813",
+    "created": "2025-12-18T18:45:03.573921Z",
+    "description": "Azure Storage Mover’s new Azure Blob container-to-container\nmigration feature is now in Public Preview, empowering organizations to move\ndata between two Blob containers within the same or different storage accounts, subscriptions or Azure regions securely, reliably, and at scale. With this release, customers can\neliminate manual pipelines and tools, automate migrations in the Azure portal,\nand gain real-time visibility into every job. Key benefits: 1. Fully Managed and Scalable Azure Storage Mover is a fully managed service, meaning\nMicrosoft handles the infrastructure, scaling, and reliability. This reduces\noperational overhead and ensures consistent performance across large-scale\ntransfers. 2. No Agent Required Unlike on-premises migrations, cloud-to-cloud transfers do\nnot require deploying an agent. This simplifies setup and reduces the need for\nadditional compute resources. 3. High-Speed, Parallel Transfers Storage Mover supports parallel file transfers, enabling\nfaster migration of large datasets. This is particularly useful when moving\ndata across regions or between storage accounts with high throughput\nrequirements. Get started today and simplify your cloud data estate with\nAzure Storage Mover’s Blob-to-Blob migration. Learn more.  ",
+    "id": "542813",
+    "modified": "2025-12-18T18:45:03.573921Z",
+    "previewAvailabilityDate": "2025-12",
+    "productCategories": [
+      "Migration",
+      "Storage"
+    ],
+    "products": [
+      "Azure Storage Mover"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Services"
+    ],
+    "title": "Public Preview: Azure Blob-to-Blob migration made simple with Azure Storage Mover"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

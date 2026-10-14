@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "526232"
+  },
+  "fetchedAt": "2026-10-14T12:30:05.888Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "526232",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Managing\nnamespace configurations across AKS clusters has traditionally required manual\nsetup and ongoing maintenance, creating complexity and potential for\nmisconfiguration. With the general availability of Managed Namespaces, AKS now\nenables users to easily deploy preconfigured namespaces with built-in lifecycle\nmanagement. This\nfeature simplifies the process of applying consistent controls across clusters,\nincluding ingress/egress network policies, RBAC, and resource limits/requests.\nBy offloading namespace lifecycle management to Azure, teams can accelerate\ndeployment, improve governance, and reduce operational overhead.Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "526232",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Generally Available: Managed namespaces on AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

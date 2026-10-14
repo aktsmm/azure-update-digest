@@ -1,0 +1,40 @@
+{
+  "args": {
+    "id": "523614"
+  },
+  "fetchedAt": "2026-10-14T12:31:50.537Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "523614",
+    "created": "2025-11-18T16:00:16.8047472Z",
+    "description": "Microsoft\nAzure now offers built-in Center for Internet Security (CIS) benchmarks in\npublic preview for all Azure endorsed Linux distributions through Azure Machine\nConfiguration’s new customizable security benchmarks capability, powered by azure-osconfig’s compliance engine. This capability allows organizations\nto easily customize and apply industry-standard security benchmarks which are\nin parity with the content published on CIS website. It supports both Level\n1(L1) and Level 2(L2) server profiles, enables exception and parameter\ncustomization, operates in audit-only mode at no additional cost, and extends\ncompliance management to hybrid scenarios via Azure Arc. Using this new capability,\nyou can introduce a flexible, compliance as code driven approach to your\norganization to maintain security and compliance across your hybrid\ninfrastructure. The solution is officially certified by CIS for CIS\nbenchmark assessment for all the supported benchmarks.  Learn more:Read our blog and\nrefer to the documentation.  For any questions or feedback fill out this\nshort form.  ",
+    "id": "523614",
+    "modified": "2025-11-18T16:00:16.8047472Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Policy"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Open Source",
+      "Microsoft Ignite",
+      "Operating System",
+      "Security",
+      "Compliance"
+    ],
+    "title": "Public Preview: Built-in CIS benchmarks for Azure endorsed Linux distros in Machine Config"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

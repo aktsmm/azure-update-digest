@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "522072"
+  },
+  "fetchedAt": "2026-10-14T12:37:07.285Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "522072",
+    "created": "2025-11-10T19:30:03.9585249Z",
+    "description": "Object replication priority replication will allow users to\nobtain prioritized replication from the source to the destination storage\naccount of their replication policy. When you enable priority replication, you\ncan benefit from the associated Service Level Agreement if your source and\ndestination account are located within the same continent. The SLA will\nguarantee 99.0% of operations are replicated from the source container to the\ndestination container of your OR policy within 15 minutes for the billing month.Learn\nmore.  ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "522072",
+    "modified": "2025-11-10T19:30:03.9585249Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Blob Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Compliance",
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Object Replication Priority Replication for Azure Blob"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

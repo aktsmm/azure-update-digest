@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "525549"
+  },
+  "fetchedAt": "2026-10-14T12:29:13.840Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "525549",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Now you can run bigger, faster workloads on fewer nodes using high-performance storage for Azure DocumentDB. This update delivers up to 64 TiB capacity, 80,000 IOPS, and 1,200 MB/s throughput per physical shard (node). Storage IOPS and throughput on Azure DocumentDB clusters with high-performance storage are always optimized by default—configured using the maximum values permitted by the selected compute and storage combination. This update provides the headroom required for I/O-intensive applications and very large datasets, helping you to consolidate data that previously needed many shards and to maintain low latency at peak traffic. Real-time analytics, personalization, and high-volume commerce scenarios benefit from predictable throughput and consistent performance as you scale.  To get started, you can create a cluster with high-performance storage in the Azure portal, then benchmark your workload to right-size shards and compute for your targets.  Learn more. ",
+    "id": "525549",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure DocumentDB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Public Preview: Azure DocumentDB high-performance storage "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

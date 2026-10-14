@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "553527"
+  },
+  "fetchedAt": "2026-10-14T12:19:04.770Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "553527",
+    "created": "2026-02-02T18:15:39.9638421Z",
+    "description": "As part of our ongoing commitment to security, Azure Front Door (Standard, Premium, Classic) and Azure CDN from Microsoft (Classic) services will no longer support  weak cipher suites TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 and TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 on April 1 2026 for both ‘client to service’ connections and ‘service to origin’ connections.Required actionTo ensure uninterrupted service and maintain strong encryption standards, take the following actions:Update your origins to disable DHE ciphers and use any of the recommended cipher suites. Follow our documentation to see how to update cipher suites for some of the common origin types used with Azure Front Door/Azure CDN.Inform your clients to only use the recommended ciphers while connecting to your domains hosted on Azure Front Door/Azure CDN. If you own any of the clients, update them to use the recommended ciphers.For Front Door Standard/Premium profiles, you can also use the Configure Azure Front Door TLS policy feature to disable the DHE ciphers in advance before 1 April 2026. For all Front Door (Standard, Premium, Classic) and Azure CDN from Microsoft (Classic) profiles, we will disable the DHE ciphers after April 1 2026.Help and supportFor more information and guidance regarding DHE cipher retire, refer to our documentation.If you have questions, get answers from community experts in Microsoft Q&A. If you have a support plan and need technical help, please submit a support request .",
+    "id": "553527",
+    "modified": "2026-02-02T18:15:39.9638421Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure Front Door"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Azure Front Door and Azure CDN profiles will end support for DHE cipher suites on April 1, 2026"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

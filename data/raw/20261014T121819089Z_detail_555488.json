@@ -1,0 +1,43 @@
+{
+  "args": {
+    "id": "555488"
+  },
+  "fetchedAt": "2026-10-14T12:18:19.089Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "November",
+        "ring": "Private Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "555488",
+    "created": "2026-02-06T22:45:47.8502569Z",
+    "description": "Azure Monitor pipeline transformations feature\nis now Public Preview! This feature enables users to shape telemetry before\nit’s ingested into Azure Monitor, helping them control ingestion costs, improve\ndata quality, and simplify analytics at scale.Built into the Azure Monitor pipeline for edge and\nmulti-cloud environments, transformations allow data types such as Syslog and\nCEF to be filtered, aggregated, standardized, and reshaped prior to ingestion.\nAutomatic schema standardization and built-in validation guardrails ensure\ncontinued compatibility with standard tables, allowing users to apply\ntransformations confidently without disrupting dataflow.Transformations also include prebuilt KQL templates\nfor common scenarios, along with advanced filtering and aggregation to reduce\nnoise, lower ingestion volume, and summarize high frequency data into\nmeaningful time windows. By shaping data closer to the source, Azure Monitor\npipeline transformations deliver cleaner data and faster insights for high\nvolume and complex telemetry environments. Learn more:Configure\nAzure Monitor pipeline transformations Azure\nMonitor pipeline transformations demo ",
+    "id": "555488",
+    "modified": "2026-02-06T22:45:47.8502569Z",
+    "previewAvailabilityDate": "2026-02",
+    "privatePreviewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Security",
+      "Features"
+    ],
+    "title": "Public Preview: Azure Monitor pipeline transformations "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

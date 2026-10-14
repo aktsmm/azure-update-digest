@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "523100"
+  },
+  "fetchedAt": "2026-10-14T12:35:55.313Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "523100",
+    "created": "2025-11-14T16:00:47.3874168Z",
+    "description": "eBPF host routing in Advanced Container Networking Services for AKS is now available in public preview. As containerized applications scale across distributed environments,\ntraditional networking approaches can introduce latency and reduce throughput.\nTo address this, Azure CNI powered by Cilium now offers eBPF Host Routing in\npublic preview for Azure Kubernetes Service. This feature uses eBPF technology to embed routing logic\ndirectly into the Linux kernel, eliminating the need for iptables and reducing\nreliance on the host network stack. By enabling Cilium to make direct routing\ndecisions, eBPF host routing delivers lower latency, fewer network hops, and\nhigher throughput for Kubernetes clusters. Learn more.",
+    "id": "523100",
+    "modified": "2025-11-14T16:00:47.3874168Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: eBPF host routing in Advanced Container Networking Services for AKS"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

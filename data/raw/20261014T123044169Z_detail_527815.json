@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "527815"
+  },
+  "fetchedAt": "2026-10-14T12:30:44.169Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "527815",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Agentless Connection Troubleshoot (public preview)\nintroduces a faster, simpler, and fully agentless way to diagnose network\nconnectivity issues across Azure resources. Previously, running connectivity\nchecks required installing the Network Watcher Extension on\nvirtual machines, adding setup overhead and potential deployment delays. With\nthis release, customers can now perform end-to-end connectivity tests without\ndeploying any agents or extensions, reducing friction and improving reliability. With Agentless Connection Troubleshoot, users can\ninstantly validate reachability, latency, and packet loss between Azure\nresources directly from the Azure portal, CLI, or API, with no dependency on VM\nconfiguration. This enables faster diagnostics while maintaining the same level\nof accuracy and depth as extension-based checks. This enhancement simplifies network troubleshooting by\nremoving manual setup steps and potential extension failures, ensuring\nconsistent results across environments. It also strengthens security posture by\nreducing in-guest dependencies and operational overhead. By making Connection Troubleshoot completely\nagentless, Azure empowers users to detect, triage, and resolve connectivity\nissues faster while improving operational efficiency and scalability. Customers\ncan now run comprehensive connectivity tests instantly, enabling frictionless,\nreliable, and secure network diagnostics across their Azure workloads. Learn more. ",
+    "id": "527815",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Management and governance",
+      "Networking"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)",
+      "Network Watcher"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features",
+      "Management"
+    ],
+    "title": "Public Preview: Azure Network Watcher – Agentless Connection Troubleshoot "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "530797"
+  },
+  "fetchedAt": "2026-10-14T12:34:42.772Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "530797",
+    "created": "2025-11-18T16:00:16.8047472Z",
+    "description": "Schedule Actions gives the ability to manage the lifecycle of VMs at high scale on a periodic basis. Subscription throttling and retries due to transient errors are handled automatically to ensure that your operations succeed without additional overhead.What is Scheduled Actions?Scheduled Actions is a separate resource provider named compute.schedule that sits above our REST API and makes calls on your subscription’s behalf at the time that you specify.Scheduled Actions supports the following VM operations:StopStartHibernateWhy use Scheduled Actions?To schedule power operations on VM resources at scale at up to 5000 concurrent operations.When a higher scale is needed and spreading out call volume is too cumbersome or it's not an optionTo not have to deal with the complexity of handling throttling issues from the compute stackTo offload complexity of determining if the error is transient in nature and needs to be retried. Scheduled Actions handles retries on transient errors.Learn more:Read the blog.Get started.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "530797",
+    "modified": "2025-11-18T16:00:16.8047472Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Scheduled Actions "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

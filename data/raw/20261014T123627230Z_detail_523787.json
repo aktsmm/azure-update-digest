@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "523787"
+  },
+  "fetchedAt": "2026-10-14T12:36:27.230Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "523787",
+    "created": "2025-11-12T17:00:15.7521975Z",
+    "description": "We are thrilled to announce the General Availability of a highly requested feature: Self-serve configuration of the lower_case_table_names server parameter during server creation. For MySQL version 8.0+ you can configure lower_case_table_names only when you're initializing the server. For restore operations or replica server creation, the parameter will automatically be copied from the source server and cannot be changed.   Learn more  ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "523787",
+    "modified": "2025-11-12T17:00:15.7521975Z",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure Database for MySQL"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "General Availability: Server Parameters support for lower_case_table_names in Azure Database for MySQL- Flexible Server "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

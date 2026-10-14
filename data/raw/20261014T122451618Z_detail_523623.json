@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "523623"
+  },
+  "fetchedAt": "2026-10-14T12:24:51.618Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "523623",
+    "created": "2025-11-18T18:00:28.886638Z",
+    "description": "Announcing Managed Instance on Azure App Service, now in Public Preview! This new capability makes it easy to move web apps to the cloud with minimal configuration—no code rewrites required. Whether your .NET apps run on-premises or in VMs, you can move to a fully managed PaaS environment, future-proof your infrastructure, and unlock cloud benefits.Why Managed Instance?Many organizations still\nrely on older .NET apps for critical tasks like billing, HR, compliance, and\nreporting. These apps often depend on Windows-specific features and custom\ntools, which makes rewriting them expensive and risky. With Managed Instance on Azure App Service,\nthey can keep operating with critical dependencies on local Windows services,\nthird-party vendor libraries, and custom runtimes without requiring any code\nchanges. The result is faster app modernization with lower overhead, and access to\ncloud-native scalability, built-in security and Azure’s AI capabilities.Key Benefits:Full App Service experience with turnkey scaling, resiliency, and integrated services.Greater control via RDP access through Bastion, custom configurations, and identity management.Compatibility for complex workloads, including classic .NET Framework apps, without code changes.As part of a holistic migration and modernization strategy, Managed Instance simplifies app modernization, reduces costs, and accelerates your journey to the cloud.",
+    "id": "523623",
+    "modified": "2025-11-18T18:00:28.886638Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute",
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "App Service"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Managed Instance on Azure App Service"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

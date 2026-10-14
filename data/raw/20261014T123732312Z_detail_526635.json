@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "526635"
+  },
+  "fetchedAt": "2026-10-14T12:37:32.312Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "526635",
+    "created": "2025-11-06T17:00:51.1957668Z",
+    "description": "Announcing the General Availability of\nUltra Disk’s new flexible provisioning model. This enhancement gives you\nthe freedom to configure capacity, IOPS, and throughput (MBPS) more independently—so\nyou can tailor performance to your workload needs and optimize total cost of\nownership. These improvements are available for both new and existing Ultra\nDisks.  Below is a comparison of the new enhancements versus the\nprevious state \n \n  \n   \n  \n  \n  Greater control \n  \n  \n  Previous \n  \n \n \n  \n  GiB capacity billing \n  \n  \n  Billed at 1 GiB granularity \n  \n  \n  Billed at tiers \n  \n \n \n  \n  Maximum IOPS per GiB \n  \n  \n  1,000 IOPS per GiB \n  \n  \n  300 IOPS per GiB \n  \n \n \n  \n  Minimum IOPS per disk \n  \n  \n  100 IOPS \n  \n  \n  Higher of 100 or 1 IOPS per GiB \n  \n \n \n  \n  Minimum MB/s per disk \n  \n  \n  1 MB/s \n  \n  \n  Higher of 1 MB/s or 4 KB/s per IOPS \n  \n  Learn more: about Ultra Disk capacity.about Ultra Disk performance. ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "526635",
+    "modified": "2025-11-06T17:00:51.1957668Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Disk Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Ultra Disk’s new flexible provisioning model"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

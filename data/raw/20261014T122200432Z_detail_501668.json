@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "501668"
+  },
+  "fetchedAt": "2026-10-14T12:22:00.432Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "501668",
+    "created": "2025-12-03T21:00:12.798141Z",
+    "description": "On June 30, 2026, AzureML SDK V1 will reach end of life. The following SDKs which work in tandem with the AzureML SDK V1 will also be retired.  azureml-train-core  azureml-pipeline  azureml-pipeline-core  azureml-pipeline-internal  azureml-pipeline-steps  After June 30, 2026, you can continue to use these SDKs, however they will not be supported and may stop working without notice.  Recommended action  To ensure that you are using a supported SDK for your workloads, it is recommended to migrate to AzureML SDK V1 before 30 Jun 2026.  Detailed guidance is documented here.Help and support  If you have questions, get answers from community experts in Microsoft Q&A. If you have a support plan and you need technical help, create a support case.  Links provided herein may take you to a third-party website and are provided for convenience only. Third-party websites are subject to the third-party's terms and privacy statements.  Learn more about service retirements that may impact your resources in the Azure Retirement Workbook. Please note that retirements may not be visible in the workbook for up to two weeks after being announced.",
+    "id": "501668",
+    "modified": "2025-12-03T21:00:12.798141Z",
+    "productCategories": [
+      "AI + machine learning",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Machine Learning"
+    ],
+    "tags": [
+      "Retirements",
+      "Features"
+    ],
+    "title": "Retirement: Remove dependency on these Azure ML SDKs before June 30, 2026"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

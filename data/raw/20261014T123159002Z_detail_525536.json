@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "525536"
+  },
+  "fetchedAt": "2026-10-14T12:31:59.002Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "525536",
+    "created": "2025-11-18T16:00:16.8047472Z",
+    "description": "OpenTelemetry based visualizations in Azure Monitor are in public preview, along with an enhanced, unified monitoring experience for Azure Virtual Machines and Arc Servers. This release consolidates key monitoring capabilities into a single view and introduces a simplified onboarding experience, helping customers more efficiently observe, diagnose, and optimize their environments.Previously, VM insights visualizations were powered by metric data from Log Analytics. Customers now have the option to power these visualizations using OpenTelemetry (OTel) system metrics, offering a more cost-efficient and performant solution. With this feature, you can:Optimize costs by migrating from Log Analytics based metrics to OpenTelemetry metricsImprove performance with faster metric query response timesLearn more.",
+    "id": "525536",
+    "modified": "2025-11-18T16:00:16.8047472Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features",
+      "Open Source"
+    ],
+    "title": "Public Preview: OpenTelemetry visualizations and enhanced monitoring experience in Azure Monitor for Azure VMs and Arc Servers"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

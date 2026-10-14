@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "537106"
+  },
+  "fetchedAt": "2026-10-14T12:21:10.287Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "December",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "537106",
+    "created": "2025-12-16T15:45:45.070746Z",
+    "description": "Cross-zone-region replication builds on the existing capabilities of cross-region replication and cross-zone replication. It enables you to replicate volumes across regions and across availability zones within the same region, combining disaster recovery and business continuance capabilities for volumes. To establish two protection volumes, you create a cross-zone replication relationship, and a cross-region replication relationship, two cross-region replication relationships or two cross-zone replication relationships. The source volume should be in an availability zone for the cross-zone replication relationship.  This feature is now GA and available in these Regions  Learn more: What's new in Azure NetApp Files   Azure Availability Zones Create a CZRR for Azure NetApp Files  ",
+    "generalAvailabilityDate": "2025-12",
+    "id": "537106",
+    "modified": "2025-12-16T15:45:45.070746Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure NetApp Files"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure NetApp Files cross-zone-region replication (CZRR) "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

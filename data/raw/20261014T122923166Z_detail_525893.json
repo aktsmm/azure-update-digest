@@ -1,0 +1,41 @@
+{
+  "args": {
+    "id": "525893"
+  },
+  "fetchedAt": "2026-10-14T12:29:23.166Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "525893",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Slow start is now\ngenerally available as a load balancing algorithm in Application Gateway for\nContainers. This feature improves stability and performance during backend\nscale-up by gradually increasing traffic to new pods over a configurable time\nwindow. Algorithm benefits: Smooth scale-up: Avoid sudden traffic spikes that can cause cold-start\ndelays or failures. Improved reliability: Ensure new pods are ready before handling peak load. Predictable performance: Maintain consistent response times\nduring scaling events and rolling updates. Learn more: Load\nBalancing Strategies with Application Gateway for Containers Application Gateway\nfor Containers Overview",
+    "generalAvailabilityDate": "2025-11",
+    "id": "525893",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "Networking",
+      "Security",
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Application Gateway",
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Services",
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Generally Available: Application Gateway for Containers – Slow start"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

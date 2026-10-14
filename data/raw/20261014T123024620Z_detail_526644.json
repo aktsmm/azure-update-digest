@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "526644"
+  },
+  "fetchedAt": "2026-10-14T12:30:24.620Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "526644",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Organizations\noperating Azure Container Registries (ACR) require least-privilege permissions\nover which Microsoft Entra identities can publish or consume container images.\nWith ACR repository permissions using attribute-based access control (ABAC),\nadministrators can now grant granular repository and namespace-level\npermissions. This enables secure container registry operations by ensuring that\nCI/CD pipelines and Kubernetes workloads can only perform image push, pull, or\ndelete operations on authorized repositories.  ABAC is available for both new and existing ACR\nregistries, across all SKUs, in all regions.Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "526644",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Container Registry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Generally Available: Azure Container Registry Repository Permissions with Attribute-based Access Control (ABAC)"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

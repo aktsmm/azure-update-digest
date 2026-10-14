@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "530073"
+  },
+  "fetchedAt": "2026-10-14T12:35:22.302Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "530073",
+    "created": "2025-11-17T16:30:12.680116Z",
+    "description": "Azure Site Recovery now offers alternative VM Size recommendations during ASR failover when the current target VM Size may have limited allocation availability due to capacity constraints. This feature enhances disaster recovery by providing guidance on suitable VM size alternatives, thereby increasing the likelihood of successful VM allocation during failover events. Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "530073",
+    "modified": "2025-11-17T16:30:12.680116Z",
+    "productCategories": [
+      "Management and governance",
+      "Migration"
+    ],
+    "products": [
+      "Azure Site Recovery"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Features",
+      "Compliance",
+      "Management"
+    ],
+    "title": "Generally Available: Capacity guidance for Azure Site Recovery"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

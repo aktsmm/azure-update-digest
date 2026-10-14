@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "526213"
+  },
+  "fetchedAt": "2026-10-14T12:29:57.348Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "526213",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Organizations running Windows-based\nworkloads on Azure Kubernetes Service (AKS) face increasing pressure to\nmodernize as support timelines for older Windows Server versions approach\nretirement. To help customers prepare, AKS now offers preview support for\nWindows Server 2025, bringing significant improvements over Windows Server\n2022.   Windows Server 2025 provides many\nimprovements as compared to Windows Server 2022:  Stable ABI: Allows you to run Windows\nServer 2022 containers on Windows Server 2025 New defaults: Generation 2 VM, containerd\n2.0, FIPS enablement Improved Nano server flexibility and added\nfunctionality: For example, Nano server now contains support\nfor 32-bit apps via a FoD Improved GPU support: CUDA workloads can now run\nin a container With upcoming retirements for Windows\nServer 2019 on March 1, 2026 and Windows Server 2022\non March 15, 2027, we recommend testing out the new Windows\nServer version to prepare for your migration. When migrating to Windows Server\n2025, you’ll need to recreate your node pools with the new OS and migrate existing workloads. Learn more.",
+    "id": "526213",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Public Preview: Windows Server 2025 on AKS"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

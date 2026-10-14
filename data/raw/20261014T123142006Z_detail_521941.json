@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "521941"
+  },
+  "fetchedAt": "2026-10-14T12:31:42.006Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "521941",
+    "created": "2025-11-18T16:00:16.8047472Z",
+    "description": "Azure Monitor now offers a unified, single-click onboarding experience for both Azure Kubernetes Service (AKS) clusters and virtual machines (VMs). This new experience simplifies setup by automatically deploying the latest Azure Monitor capabilities with optimized defaults.For AKS, the experience combines managed Prometheus metrics, container logs with Kubernetes events, and our newly GAed Dashboards with Grafana. As a part of the new experience, we are also introducing a new application monitoring addon and preconfigured AKS recommended alerts for faster troubleshooting.For VMs, the onboarding includes new OpenTelemetry-based metrics (now in public preview and free), legacy Log Analytics counters, and recommended VM alerts for comprehensive performance visibility.This unified experience provides a consistent, streamlined approach to monitoring across your compute environments, helping you get started with Azure Monitor in minutes.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "521941",
+    "modified": "2025-11-18T16:00:16.8047472Z",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Azure Monitor unified onboarding experience for AKS and VMs"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

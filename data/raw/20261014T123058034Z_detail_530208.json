@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "530208"
+  },
+  "fetchedAt": "2026-10-14T12:30:58.034Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "530208",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "We are announcing the public preview of NCv6 RTX PRO 6000 Blackwell\nServer Edition Virtual Machines, as the next enhancement of NC Series VMs\navailable on Azure.\nNvidia RTX PRO 6000 BSE GPUs are designed to accelerate a wide array of\nworkloads including video streaming, graphics rendering, product design,\ndigital twins, and AI development. The NCv6 VM family will be available in\nthree categories to best suit your workload needs:  Compute optimized - NClds_RTXPRO6000BSE_v6\n- designed for AI and LLM inferencing workloads Memory optimized - NCmds_RTXPRO6000BSE_v6\n- tailored for visualization and graphics workloads General purpose - NCds_RTXPRO6000BSE_v6\n- category ideal for VDI and general-purpose AI workloads. For workloads running NCv6, customer experience will be the\nsame as other NC and NV Series VMs such as T4, A100, and H100, with all\ncurrently supported workloads from those SKUs also supported on NCv6. Additionally,\nNCv6 VM SKUs will come with integrated NVIDIA vGPU licenses and support Multi\nInstance GPU (MIG), enabling greater flexibility and efficiency for a variety\nof use cases. Sign up for the public preview. Learn more.",
+    "id": "530208",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Services",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: NCv6 Virtual Machines"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

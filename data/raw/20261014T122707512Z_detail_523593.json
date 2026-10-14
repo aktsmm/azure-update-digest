@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "523593"
+  },
+  "fetchedAt": "2026-10-14T12:27:07.512Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "523593",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Migrating from Oracle to PostgreSQL is now simpler and faster with the new Oracle-to-PostgreSQL migration tooling, available directly in the Azure Database for PostgreSQL extension for Visual Studio Code.  This new tool helps you seamlessly convert your Oracle schemas and application code to PostgreSQL equivalents without leaving your development environment. You can extract Oracle schema files, validate conversions in a scratch PostgreSQL database, and review AI-assisted conversion recommendations—all through a step-by-step guided wizard inside Visual Studio Code.  The tool automatically identifies Oracle-specific constructs and transforms them into PostgreSQL-compatible syntax while flagging any items that require developer review. In the background, integration with Azure OpenAI Service brings intelligent code conversion to both database and application layers, reducing manual rework and accelerating migration readiness.  In addition to database schema conversion, the new Application Migration capability leverages GitHub Copilot Agent Mode together with specialized Oracle-to-PostgreSQL conversion tools to modernize client application code.  Whether you’re modernizing a single application or moving enterprise workloads, this tool helps you streamline end-to-end migration, ensure compatibility, and get to PostgreSQL faster. Learn more. ",
+    "id": "523593",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Public Preview: Oracle to PostgreSQL migration tooling in Visual Studio Code "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

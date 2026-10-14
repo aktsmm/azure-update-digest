@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "557224"
+  },
+  "fetchedAt": "2026-10-14T12:16:56.066Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "557224",
+    "created": "2026-02-23T18:15:17.6308579Z",
+    "description": "Windows Server Annual Channel (Preview) on AKS will be retired on May 15, 2026, please transition to Long Term Servicing Channel (LTSC) by that date.  We encourage you to transition to Long Term Servicing Channel (LTSC) prior to the retirement date to experience the benefits of LTSC including longer support cycles and increased stability.  From now to May 15, 2026 you can continue to use Windows Server Annual Channel (Preview) without disruption. On May 15, 2026, AKS will no longer produce new Windows Server Annual Channel node images or provide security patches. You will not be able to create new node pools with Windows Server Annual Channel. On May 15, 2027, AKS will remove all existing Windows Annual Channel node images, which will cause scaling and remediation (reimage and redeploy) operations to fail.Required Action: Customers must migrate their Windows Server Annual Channel node pools to Long Term Servicing Channel (LTSC) by following the migration guide. Learn more: Questions for community experts? Get answers in Microsoft Q&A or AKS GitHub issue. Have a support plan and need technical help? Create a support request.",
+    "id": "557224",
+    "modified": "2026-02-23T18:15:17.6308579Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Windows Server Annual Channel (preview) "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

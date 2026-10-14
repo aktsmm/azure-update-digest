@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "525923"
+  },
+  "fetchedAt": "2026-10-14T12:32:01.607Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "525923",
+    "created": "2025-11-18T16:00:16.8047472Z",
+    "description": "Introducing guardrails for agents in Microsoft Foundry Control Plane. Formerly called content filters, guardrails can now be applied at the agent level rather than only to model deployments. They include existing controls to help mitigate prompt injection attacks, harms and risks, and to support groundedness. Our newest risk that can be detected, task adherence, helps keep agents on task, detecting when an agent’s next proposed action starts to drift off task.A new control model also gives you more flexibility in how to configure guardrails and steer agent behavior. Choose what risk you want to monitor, pick where the system should intervene, and decide what action to take. Intervention points include prompts and outputs, and also now includes tool calls and tool responses. Available actions include annotation or blocking.Learn more.",
+    "id": "525923",
+    "modified": "2025-11-18T16:00:16.8047472Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite",
+      "Security"
+    ],
+    "title": "Public Preview: Agent mitigations and guardrail customization "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

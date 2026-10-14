@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "552318"
+  },
+  "fetchedAt": "2026-10-14T12:19:16.746Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "January",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "552318",
+    "created": "2026-01-28T19:15:24.5129856Z",
+    "description": "The general purpose Dasv7 and Dalsv7, memory-optimized Easv7, and compute-optimized Fasv7, Falsv7, Famsv7 VMs, are now generally available with and without local disk support. These VMs are available in the following Azure regions: Australia East, Central US, Germany West Central, Japan East, North Europe, South Central US, Southeast Asia, UK South, West Europe, West US 2, and West US 3. The large 160 vCPU Easv7-series and Eadsv7-series sizes are available in North Europe, South Central US, West Europe, and West US 2. More regions are coming in 2026.These virtual machines deliver significant enhancements over the previous generation, offering improved CPU performance, greater scalability, and expanded configuration options to meet the demands of a wide range of workloads. Key improvements include:  Up to 35% CPU performance improvement compared to similarly sized v6 VMs Significant performance gains on other workloads:   Up to 25% for Java-based workloads Up to 65% for in-memory cache applications Up to 80% for crypto workloads Up to 130% for web server applications   New VM series introduced: Fadsv7, Faldsv7, and Famdsv7 with local disk support. These enhancements make the AMD v7-series VMs a compelling choice for customers seeking high performance, cost efficiency, and workload flexibility on Azure. Learn more. ",
+    "generalAvailabilityDate": "2026-01",
+    "id": "552318",
+    "modified": "2026-01-28T19:15:24.5129856Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Services",
+      "Features",
+      "Pricing & Offerings"
+    ],
+    "title": "Generally Available: Azure AMD Turin Dasv7, Easv7, and Fasv7-series Virtual Machines    "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

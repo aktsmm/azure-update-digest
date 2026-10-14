@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "557532"
+  },
+  "fetchedAt": "2026-10-14T12:16:51.877Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "557532",
+    "created": "2026-02-25T18:30:06.4312032Z",
+    "description": "You can now configure geo‑redundant backups with Premium SSD v2 disks for Azure Database for PostgreSQL, giving you an additional layer of disaster recovery for mission‑critical workloads. With this release, your automated backups are securely stored in a paired Azure region, so you can restore your flexible server in another region if an outage occurs. This update is especially valuable if you run regulated, business‑critical, or customer‑facing applications that require stronger resilience and data protection beyond a single region.By combining geo‑redundant backups with the performance and scalability benefits of Premium SSD v2 disks, you get high‑throughput storage along with improved recovery options, without having to manage or operate standby infrastructure in the secondary region. You can simplify your disaster recovery strategy, reduce operational overhead, and improve confidence in your ability to recover from regional failures while continuing to benefit from a fully managed PostgreSQL service.With this public preview, you can configure and validate cross‑region backup and restore scenarios with SSD v2 disks, so you can plan for higher availability and business continuity ahead of production adoption. Learn more.",
+    "id": "557532",
+    "modified": "2026-02-25T18:30:06.4312032Z",
+    "previewAvailabilityDate": "2026-02",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Geo‑redundant backups for Premium SSD v2 in Azure Database for PostgreSQL "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

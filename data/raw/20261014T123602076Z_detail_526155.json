@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "526155"
+  },
+  "fetchedAt": "2026-10-14T12:36:02.076Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "526155",
+    "created": "2025-11-13T17:00:24.9154341Z",
+    "description": "Azure Virtual Network Manager peering\ncompliance is now generally available, providing a secure and compliant mechanism to\nprotect network connectivity managed by Azure Virtual Network Manager. In\nlarge-scale environments, it’s essential to prevent unintentional changes to\ncritical connectivity configurations. With peering compliance, any virtual\nnetwork peering created and managed through Azure Virtual Network Manager\ntopology is safeguarded from accidental modification or deletion by virtual\nnetwork owners outside of Azure Virtual Network Manager. This\nrelease allows users to enforce compliance by restricting direct edits to key\npeering properties and preventing deletion of peerings. Changes can only be\nmade through Azure Virtual Network Manager connectivity configurations,\nensuring consistency and governance across your environment.  With\nthis general availability release, customers gain stronger governance controls,\nreduced configuration drift, and higher confidence that network topologies\nremain secure and compliant across teams and subscriptions. Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "526155",
+    "modified": "2025-11-13T17:00:24.9154341Z",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Azure Virtual Network Manager"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Management",
+      "Services",
+      "Features"
+    ],
+    "title": "Generally Available: Azure Virtual Network Manager peering compliance "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

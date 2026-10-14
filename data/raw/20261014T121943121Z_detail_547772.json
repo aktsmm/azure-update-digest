@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "547772"
+  },
+  "fetchedAt": "2026-10-14T12:19:43.121Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "January",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "547772",
+    "created": "2026-01-22T17:30:31.5666491Z",
+    "description": "StandardV2 SKU NAT Gateway is now generally available, delivering enhanced resiliency, greater performance, and dual-stack connectivity, all at the same price as the Standard SKU.  StandardV2 Public IP addresses and prefixes are also generally available. StandardV2 NAT Gateway requires StandardV2 public IPs; Standard SKU public IPs are not supported.  What’s new with StandardV2 NAT Gateway:  Zone-redundancy: Automatically maintains outbound connectivity during single zone failures in availability zone-enabled regions.  Enhanced performance: Up to 100 Gbps of throughput and 10 million packets per second—double the Standard SKU capacity.  Dual-stack support: Attach up to 16 IPv6 and 16 IPv4 public IP addresses for future ready connectivity.  Traffic insights with flow logs: Gain detailed IP-level visibility of traffic for troubleshooting and compliance verification.  Pricing and availability  StandardV2 NAT Gateway is the same price as the Standard SKU.  Available in most public cloud regions, rollout planned for remaining regions in 2026. Learn more about remaining unsupported regions.  Deploy through Portal, CLI, Powershell, Bicep, and ARM. Terraform support coming soon.  Learn more:  StandardV2 NAT Gateway   StandardV2 NAT Gateway flow logs  StandardV2 public IPs  ",
+    "generalAvailabilityDate": "2026-01",
+    "id": "547772",
+    "modified": "2026-01-22T17:30:31.5666491Z",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Azure NAT Gateway"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Services",
+      "Regions & Datacenters"
+    ],
+    "title": "Generally Available: StandardV2 NAT Gateway with zone-redundancy and StandardV2 public IPs  "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

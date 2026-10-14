@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "557223"
+  },
+  "fetchedAt": "2026-10-14T12:17:25.071Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "557223",
+    "created": "2026-02-18T18:00:55.6125974Z",
+    "description": "Managing AKS MCP servers can be affected by the number of tools and the\namount of context required, which can increase latency and cost. The unified\ntooling for the AKS MCP Server introduces two new tools in public preview, call_az\nand call_kubectl, that enable agents to access cluster data through\nAzure APIs and kubectl. These tools consolidate existing capabilities and\nreduce the total number of tools in the AKS MCP by 30%.  The open-ended nature of these tools also\nbrings power back to your AI agent, allowing them to customize and call any\nkubectl or Azure API command of their choosing rather than being restrained by\ntightly-defined tools. The new tools are available starting from v0.0.12 of the\nAKS MCP server. Learn more.",
+    "id": "557223",
+    "modified": "2026-02-18T18:00:55.6125974Z",
+    "previewAvailabilityDate": "2026-02",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [],
+    "title": "Public Preview: Unified tooling in the AKS MCP server "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

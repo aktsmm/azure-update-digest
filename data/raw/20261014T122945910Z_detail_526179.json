@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "526179"
+  },
+  "fetchedAt": "2026-10-14T12:29:45.910Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "526179",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "You can now build and host reliable\nproduction-grade AI agents using the durable extension for\nMicrosoft Agent Framework. This integration combines the Microsoft Agent\nFramework with Azure Functions’ durable capabilities, delivering proven\norchestration and resilience for serverless AI agent hosting. You gain\nautomatic session management, built-in HTTP endpoints, and elastic scaling from\nzero to thousands of instances—all with pay-per-use pricing and automated\ninfrastructure management.  Key capabilities include: \n Stateful\n     agent sessions: Maintain persistent conversation\n     history across distributed instances with automatic failover for\n     uninterrupted operation. \n Durable\n     tool calls: Checkpoint progress during\n     long-running tool invocations, extending beyond typical timeout limits. \n Deterministic\n     multi-agent orchestration: Coordinate specialized agents\n     through predictable, code-driven workflows that survive failures and\n     restarts. \n Human-in-the-loop\n     workflows: Pause orchestrations for days or\n     weeks awaiting human approval at zero compute cost, then resume\n     seamlessly. \n Built-in\n     observability: Access deep insights via the durable\n     task scheduler dashboard with execution replay, conversation history, and\n     integrated performance metrics. The extension supports both C# and Python, enabling developers to\ndeploy AI agents confidently on Azure Functions with enterprise-grade\ndurability and scalability.  Learn more.",
+    "id": "526179",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Public Preview: Add durability to AI agents in Azure Functions using Microsoft Agent Framework"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

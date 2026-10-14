@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "523076"
+  },
+  "fetchedAt": "2026-10-14T12:23:14.327Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "523076",
+    "created": "2025-11-20T20:00:10.7324376Z",
+    "description": "Container network metrics\nfiltering in Azure Container Networking Services (ACNS) is now available in\npublic preview. In\ncontainerized environments, the ingestion of excessive network metrics can lead\nto inflated storage costs and cluttered dashboards, making it difficult to\nmaintain observability efficiency. Azure Container Networking Services (ACNS)\nnow offers container network metrics filtering, available in public preview, to\naddress this challenge. This new\ncapability enables users to define fine-grained filters at the Cilium level\nusing a Custom Resource Definition (CRD), allowing metrics collection to be\nscoped by namespace or pod. By filtering metrics before they reach Prometheus,\norganizations can significantly reduce data volume, lower operational overhead,\nand improve the clarity of their observability tools.Learn more.",
+    "id": "523076",
+    "modified": "2025-11-20T20:00:10.7324376Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Container network metrics filtering in Advanced Container Networking Services for (ACNS) for AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

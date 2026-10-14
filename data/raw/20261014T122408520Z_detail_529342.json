@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "529342"
+  },
+  "fetchedAt": "2026-10-14T12:24:08.520Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "529342",
+    "created": "2025-11-19T20:00:49.8540484Z",
+    "description": "The Auto-import feature for Azure Managed Lustre (AMLFS) is now available in public preview. Auto-import enables seamless, policy-driven synchronization of data from Azure Blob Storage containers into AMLFS clusters, automatically reflecting new, changed, or deleted blobs in the Lustre namespace. This feature supports hybrid workflows where data is generated in Blob and consumed in AMLFS.Customers can configure import policies per Blob container–AMLFS cluster pair, specifying which types of changes are imported and how conflicts are resolved. This flexibility supports a range of scenarios, including post-deployment ingestion, machine learning pipelines, and continuous data synchronization for analytics workloads. Auto-import helps unify object and file-based workflows, enabling near real-time data sharing and reducing operational overhead by eliminating the need for manual import scripts or intermediate file servers.Operational efficiency is further enhanced by allowing customers to select conflict resolution policies and control whether deletions in Blob are reflected in AMLFS. These capabilities provide native integration with Azure Blob Storage and the Azure ecosystem.\nLearn more.",
+    "id": "529342",
+    "modified": "2025-11-19T20:00:49.8540484Z",
+    "previewAvailabilityDate": "2025-09",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Managed Lustre"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite",
+      "Services"
+    ],
+    "title": "Public Preview: Auto-import for Azure Managed Lustre"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

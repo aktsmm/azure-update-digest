@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "525455"
+  },
+  "fetchedAt": "2026-10-14T12:28:30.926Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "525455",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Confidential\ncomputing support in Azure Container Apps is now in public preview. This\nrelease brings hardware-based Trusted Execution Environments (TEEs) to your\ncontainerized workloads. Azure already provides encryption of data at rest and\nin transit, and confidential computing provides an additional layer of\nprotection for data in use by encrypting data in memory and processing it only\nafter the cloud environment is verified. This helps customers prevent\nunauthorized access to data in use, even from the cloud operator, and is beneficial\nfor organizations that require further protection for sensitive data and\napplications.  Confidential\ncomputing is accessible through workload profiles in Azure Container Apps, and\nthe public preview is limited to select regions. Learn more.",
+    "id": "525455",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Container Apps"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Public Preview: Confidential computing in Azure Container Apps"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

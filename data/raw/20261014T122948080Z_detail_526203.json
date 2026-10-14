@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "526203"
+  },
+  "fetchedAt": "2026-10-14T12:29:48.080Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "526203",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Provisioning and maintaining system node pools in AKS\nrequires ongoing effort to ensure proper scaling, patching, and availability, tasks\nthat can divert resources from application development and delivery.\nManaged system node pools in AKS Automatic removes this operational burden by\nproviding a fully managed infrastructure layer that handles system components\nwithout customer intervention. This means teams no longer need to maintain\ninfrastructure for system workloads, allowing them to focus entirely on deploying\nand scaling applications. By isolating system workloads from customer\napplications, AKS Automatic improves reliability and ensures consistent\nperformance backed by SLAs. The result is faster time to value, reduced\ninfrastructure overhead, and a simplified path to Kubernetes adoption.Learn more.",
+    "id": "526203",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Public Preview: AKS Automatic managed system node pools"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "541410"
+  },
+  "fetchedAt": "2026-10-14T12:21:36.751Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "541410",
+    "created": "2025-12-05T21:45:02.3832493Z",
+    "description": "Zonal Placement for Azure Files Premium LRS is now GA in select regions! This capability gives you explicit control over zone locality by pinning storage accounts to a specific availability zone, enabling high availability, fault isolation, and predictable low-latency performance for mission-critical workloads. Why it matters: Align compute and storage in the same zone for 10–40% lower latency compared to cross-zone deployments. Design resilient architectures with zone-aware control for better fault isolation.Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "541410",
+    "modified": "2025-12-05T21:45:02.3832493Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Files"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Features",
+      "SDK and Tools"
+    ],
+    "title": "Generally Available: Zonal placement for Azure file shares Azure Files Premium LRS in select regions."
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "520710"
+  },
+  "fetchedAt": "2026-10-14T12:37:44.317Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "520710",
+    "created": "2025-11-06T15:45:17.7628368Z",
+    "description": "You can now configure read replicas (in-region and geo-replicas) with Premium SSD v2 storage tier in Azure Database for PostgreSQL flexible server. Read replicas enable you to scale out read-heavy workloads and improve performance by offloading read operations to replica servers, while write operations continue on the primary. In addition, geo-replicas can serve as read-write failover servers in the event of a disaster, enhancing your business continuity strategy.  Replication is performed asynchronously using the native physical replication technology in PostgreSQL, enabling you to replicate from a primary server to up to five replicas.  With Premium SSD v2, each managed disk delivers up to 80,000 IOPS. When combined with five read replicas, you can achieve up to 480,000 IOPS, helping you meet the demands of your most performance-intensive workloads. Learn more. ",
+    "id": "520710",
+    "modified": "2025-11-06T15:45:17.7628368Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Azure Database for PostgreSQL read replicas with Premium SSD v2 "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

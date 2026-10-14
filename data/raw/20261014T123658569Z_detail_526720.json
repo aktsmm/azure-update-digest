@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "526720"
+  },
+  "fetchedAt": "2026-10-14T12:36:58.569Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "526720",
+    "created": "2025-11-11T17:00:09.0850349Z",
+    "description": "Azure Firewall now\nsupports DNS flow trace logs — a new logging capability that gives you deep,\nend-to-end visibility into DNS traffic and name resolution paths. This\nenhancement provides richer telemetry to help you troubleshoot, validate, and\nsecure DNS flows across your network. DNS flow trace logs\nbuild on existing DNS Proxy functionality by logging critical metadata\nincluding query types, response codes, queried domains, upstream DNS servers,\nand the source and destination IPs of each request. These insights enable\nfaster diagnosis of application connectivity issues, improved auditing, and\nbetter security investigations. Key highlights                                                                  End-to-end DNS visibility — see each step of DNS resolution\nacross your environment Faster troubleshooting — pinpoint DNS failures and validate forwarding and\ncustom DNS configuration Cache insights  -- determine\nwhether the Azure Firewall cache was used for DNS resolution Learn more:Read the monitoring data reference documentation.Learn about Azure Firewall Prescaling.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "526720",
+    "modified": "2025-11-11T17:00:09.0850349Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure Firewall"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Generally Available: DNS flow trace logs for Azure Firewall "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "556003"
+  },
+  "fetchedAt": "2026-10-14T12:17:07.708Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "556003",
+    "created": "2026-02-18T18:00:55.6125974Z",
+    "description": "Azure Functions support for .NET 10 is generally\navailable, enabling production use of the latest .NET runtime for serverless\napplications. This support was introduced as part of the Azure Functions\nIgnite 2025 updates.  .NET 10 is supported using the isolated worker model\nacross all Linux and Windows Azure Functions hosting plans, except\nLinux Consumption. This release enables workloads to take advantage of the\nlatest .NET platform improvements while continuing to use the Azure Functions\nprogramming model.  As part of this release, .NET 10 is supported only with\nthe isolated worker model. The legacy in‑process model is not supported. As the\nLinux Consumption plan is being retired, workloads running on Linux Consumption\nshould be migrated to the Flex Consumption plan, which supports .NET 10\nusing the isolated worker model. Migration guidance is available in the Azure\nFunctions documentation.  Learn more: .NET\nisolated process guide for Azure Functions  Migrate\nConsumption plan apps to the Flex Consumption plan  ",
+    "generalAvailabilityDate": "2026-02",
+    "id": "556003",
+    "modified": "2026-02-18T18:00:55.6125974Z",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure Functions .NET 10 support "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

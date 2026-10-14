@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "529359"
+  },
+  "fetchedAt": "2026-10-14T12:23:56.915Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "529359",
+    "created": "2025-11-19T21:00:38.6551723Z",
+    "description": "Azure Managed Lustre now offers a new 20 MB/s/TiB performance tier in public preview, designed to meet the demands of large-scale AI and high-performance computing (HPC) workloads. This tier enables customers to provision file systems up to 25 PiB in a single namespace, delivering up to 512 GB/s of bandwidth and supporting up to 20 billion inodes for massive file counts.The 20 MB/s/TiB tier uses Lustre’s DNE2 multi-MDS architecture, adding one MDS per 5 PiB to enable directory striping across multiple metadata targets. This boosts metadata operations, delivering over 5× higher IOPS in mdtest benchmarks as striping scales. Ideal for AI training and HPC workloads, it ensures high metadata throughput and efficient handling of massive datasets.By offering a lower bandwidth density option, customers can optimize costs while scaling to larger namespaces, consolidating workloads into a single, high-performance file system and simplifying their architecture.To request access to the public preview, please fill out this form.",
+    "id": "529359",
+    "modified": "2025-11-19T21:00:38.6551723Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Managed Lustre"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features",
+      "Pricing & Offerings",
+      "Services"
+    ],
+    "title": "Public Preview: 20 MB/s/TiB Performance Tier for Azure Managed Lustre "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

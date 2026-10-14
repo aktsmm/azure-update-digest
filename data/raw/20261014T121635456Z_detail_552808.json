@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "552808"
+  },
+  "fetchedAt": "2026-10-14T12:16:35.456Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "552808",
+    "created": "2026-02-26T00:30:50.3640084Z",
+    "description": "We are announcing several\ncapabilities in public preview with Azure Monitor pipeline. Secure\n     Ingress to Azure Monitor pipeline from external endpoints (TLS/mTLS) with\n     Bring Your Own Certificates: BYOC empowers enterprises to maintain\n     control and flexibility over certificate management, meeting regulatory\n     and security requirements while integrating with existing PKI\n     infrastructure. With this release, Azure Monitor pipeline supports both\n     TLS and mutual TLS (mTLS) for TCP-based receivers, allowing customers\n     to:  Configure\n      mTLS with their own certificates for client and server\n      authentication  Configure\n      TLS with their own server certificates and client CA certificate Pod\n     placement: Azure Monitor pipeline provides native controls for\n     managing how Azure Monitor pipeline instances are scheduled across\n     Kubernetes cluster nodes. The execution Placement configuration\n     allows customers to:  Target\n      specific nodes based on their capabilities (e.g., high-resource nodes,\n      specific zones)  Control\n      instance distribution to prevent resource contention  Enforce\n      isolation policies for high-scale deployments Learn more:  \n Azure Monitor pipeline TLS configuration  \n Azure Monitor pipeline pod placement  ",
+    "id": "552808",
+    "modified": "2026-02-26T00:30:50.3640084Z",
+    "previewAvailabilityDate": "2026-02",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Secure ingestion and pod placement for Azure Monitor pipeline"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

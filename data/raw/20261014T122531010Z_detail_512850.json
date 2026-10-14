@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "512850"
+  },
+  "fetchedAt": "2026-10-14T12:25:31.010Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "512850",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Azure Container Apps support for rule-based routing is now\ngenerally available. This feature provides greater flexibility and\ncomposability to your Azure Container Apps by simplifying your architecture for\nmicroservice applications, A/B testing, blue-green deployments, and more.  Rule-based routing allows you to direct incoming HTTP\ntraffic to different apps within your Container Apps environment based on the\nrequested host name or path. This includes support for custom domains. Instead\nof having to configure a separate reverse proxy, such as NGINX, you can now\nprovide routing rules for your environment and incoming traffic will\nautomatically be routed to the specified target apps. Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "512850",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Container Apps"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Rule-based routing in Azure Container Apps"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

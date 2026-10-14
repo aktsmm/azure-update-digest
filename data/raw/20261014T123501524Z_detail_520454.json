@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "520454"
+  },
+  "fetchedAt": "2026-10-14T12:35:01.524Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "520454",
+    "created": "2025-11-18T13:45:04.7393983Z",
+    "description": "Azure Backup has introduced threat detection capabilities for Azure VM backups, powered by Microsoft Defender for Cloud (MDC). This new capability enables customers to assess the health of their Azure VM backup restore points (RPs) by identifying malicious or ransomware-infected backups.By leveraging signals from Microsoft Defender for Servers, Azure Backup detects indicators of compromise such as disruption patterns, heuristic behavior anomalies, and malware or ransomware signatures. This feature is now in public preview in limited regions.",
+    "id": "520454",
+    "modified": "2025-11-18T13:45:04.7393983Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Management and governance",
+      "Storage"
+    ],
+    "products": [
+      "Azure Backup"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Security",
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Threat Detection in Azure Backup powered by MDC"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

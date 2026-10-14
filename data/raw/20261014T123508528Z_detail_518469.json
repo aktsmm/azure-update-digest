@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "518469"
+  },
+  "fetchedAt": "2026-10-14T12:35:08.528Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "518469",
+    "created": "2025-11-18T08:00:28.4827466Z",
+    "description": "Azure Monitor metric\nalerts now support all Azure metrics - including platform,\nPrometheus, and custom metrics - giving you complete coverage for your monitoring\nneeds. In addition, metric alerts now offer powerful query capabilities with PromQL, the industry-standard query language, on Prometheus\nmetrics, OTel-based VM performance counters, and other OTel\ncustom metrics ingested into Azure Monitor Workspace (AMW). Key Capabilities:\n PromQL-based\n     conditions: Leverage the full power of PromQL for sophisticated metric\n     selection, aggregation, and transformation. \n Flexible\n     scoping: Choose between resource-centric alerts for\n     granular RBAC or workspace-centric alerts for\n     cross-resource visibility. \n Managed\n     Identity support: Securely authorize queries using Azure Managed\n     Identity. \n Customizable\n     notifications: Add dynamic custom properties and custom email subjects\n     for faster triage and context-rich alerting. With query-based metric alerts, you can detect\ncomplex patterns, reduce alert noise, and reuse\nexisting community-based Prometheus alert logic - all while\nmaintaining a unified monitoring experience in Azure. This feature empowers\nteams to proactively manage performance and reliability at scale, without\nsacrificing flexibility or security. ",
+    "id": "518469",
+    "modified": "2025-11-18T08:00:28.4827466Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Public Preview: Query-based metric alerts in Azure Monitor"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

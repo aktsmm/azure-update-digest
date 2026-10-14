@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "548066"
+  },
+  "fetchedAt": "2026-10-14T12:19:52.144Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "January",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "548066",
+    "created": "2026-01-22T00:00:08.7236625Z",
+    "description": "The functionality of application volume group for Oracle has been expanded with the ability to create data protection volumes in a volume group with the same anti-affinity layout as production volume groups. Customers benefit from this ability for creating disaster recovery volume layouts that support production failover to a zone or region of their choice.  This feature is available in all regions that support Azure NetApp Files.   Learn more: What's new in Azure NetApp Files Understand Azure NetApp Files application volume group for Oracle ",
+    "generalAvailabilityDate": "2026-01",
+    "id": "548066",
+    "modified": "2026-01-22T00:00:08.7236625Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure NetApp Files"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Application volume group for Oracle create data protection volume group (API) "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

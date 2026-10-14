@@ -24,10 +24,10 @@
       ],
       "created": "2025-12-31T21:00:35.4690918Z",
       "createdJst": "2026-01-01",
-      "description": "The Geo-Replication feature for Azure Service Bus in the\npremium tier is now generally available. The Service Bus Geo-Replication\nfeature is one of the options to insulate\nAzure Service Bus applicatio...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "b60e2742458651770e4535adade2f07f221f14b8a4f5ea9aea77ec129b526c71",
+      "description": "The Geo-Replication feature for Azure Service Bus in the\npremium tier is now generally available. The Service Bus Geo-Replication\nfeature is one of the options to insulate\nAzure Service Bus applications against outages and disasters, providing\nreplication of both metadata (entities, configuration, properties) and data\n(message data and message property / state changes).  The Geo-Replication feature ensures that the metadata and\ndata of a namespace are continuously replicated from a primary region to one or\nmore secondary regions. Moreover, it allows promoting any secondary region to\nprimary, at any time.   Promoting a secondary repoints the endpoint for the\nnamespace to the selected secondary region and switches the roles between the\nprimary and secondary region. The promotion is nearly instantaneous once\ninitiated and doesn’t require any changes on the client side.  More information on this feature can be found in the documentation.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "7e03db6cf9edf07131c81c19611fc640aeea6599e846b0bfdca73aa204ee98b5",
       "history": [
         {
           "changedFields": [
@@ -38,6 +38,14 @@
           "modifiedAfter": "2025-12-31T21:00:35.4690918Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#490149"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:20:25.287Z",
+          "fingerprint": "7e03db6cf9edf07131c81c19611fc640aeea6599e846b0bfdca73aa204ee98b5",
+          "modifiedAfter": "2025-12-31T21:00:35.4690918Z",
+          "modifiedBefore": "2025-12-31T21:00:35.4690918Z",
+          "rawRef": "20261014T122025287Z_detail_490149.json#490149"
         }
       ],
       "ids": [
@@ -89,10 +97,10 @@
       ],
       "created": "2026-01-27T17:00:06.6371234Z",
       "createdJst": "2026-01-28",
-      "description": "Announcing the preview of new Azure Dlsv7/Dsv7 General Purpose and Esv7 Memory Optimized Virtual Machines (VMs) powered by the latest Intel® Xeon® 6 processors (Granite Rapids). The latest Azure Intel...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "dc127bb51a856712529c3cd9b3050fd8ab1396314501dbeb1f2338f35b425107",
+      "description": "Announcing the preview of new Azure Dlsv7/Dsv7 General Purpose and Esv7 Memory Optimized Virtual Machines (VMs) powered by the latest Intel® Xeon® 6 processors (Granite Rapids). The latest Azure Intel-based v7 VMs are designed to power ever increasing compute demands in today’s data center environment and deliver exceptional performance across a wide range of workloads, from traditional enterprise applications to cutting edge AI.  These VMs deliver several important features and improvements compared previous generation (v6) Intel-based VMs including: Up to 15% better general compute performance, powered by Intel® Xeon® 6 CPUs with turbo frequencies up to 4.2 GHz and up to 2x higher memory bandwidth Expanded sizes and memory capacity: Dsv7 and Esv7 VMs now scale up to 372 vCPUs with Esv7 VMs enabling up to 2.8TiB of memory Increased networking and remote storage performance driven by latest Azure Boost capabilities: Up to 400 Gbps networking bandwidth with the largest size Up to 800k IOPS and 20 GBps throughput to Premium v2 and Ultra Disk remote storage with the largest size Join the Preview Dlsv7, Dsv7, and Esv7 VM sizes with and without local NVMe temp disks will be available to test in preview in the East US 2 region. To request access to the preview, please fill out the survey form here. We look forward to hearing from you.   ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "8944e3b0d8010bfe9a0848604c69de204fb3a455f353ba79e030d4c8212100bc",
       "history": [
         {
           "changedFields": [
@@ -103,6 +111,14 @@
           "modifiedAfter": "2026-01-27T17:00:06.6371234Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#529407"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:19:27.984Z",
+          "fingerprint": "8944e3b0d8010bfe9a0848604c69de204fb3a455f353ba79e030d4c8212100bc",
+          "modifiedAfter": "2026-01-27T17:00:06.6371234Z",
+          "modifiedBefore": "2026-01-27T17:00:06.6371234Z",
+          "rawRef": "20261014T121927984Z_detail_529407.json#529407"
         }
       ],
       "ids": [
@@ -150,10 +166,10 @@
       ],
       "created": "2026-01-14T22:45:12.5056876Z",
       "createdJst": "2026-01-15",
-      "description": "Ubuntu 24.04 is now generally available on AKS in Kubernetes\nversion 1.32 and above. Containerd 2.0 is enabled by default. Ubuntu 24.04 is\ndefault with `Ubuntu` OS Sku in kubernetes version 1.35 and a...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "90b7f15091ac61eb38520b0ed77030c42d6963c94fea4949f30a4a8ad6487660",
+      "description": "Ubuntu 24.04 is now generally available on AKS in Kubernetes\nversion 1.32 and above. Containerd 2.0 is enabled by default. Ubuntu 24.04 is\ndefault with `Ubuntu` OS Sku in kubernetes version 1.35 and above. There are two ways that Ubuntu 24.04 can be enabled. In Kubernetes version 1.32 and above, you can use the\n‘Ubuntu2404’ OS Sku. This OS Sku can help you migrate existing clusters before\nyou reach the minimum kubernetes version for Ubuntu 24.04 as default on AKS. In Kubernetes version 1.35 and above, you can use ‘Ubuntu’\nOS Sku which defaults to Ubuntu 24.04. If you are already using `Ubuntu` OS Sku\nand upgrade to kubernetes version 1.35 or above, you’ll automatically migrate\nto Ubuntu 24.04. While migrating to Ubuntu 24.04, you can rollback to Ubuntu\n22.04 by using the new OS SKU “Ubuntu2204” in Kubernetes versions 1.25 to 1.36.\nThis functionality allows for more flexibility in testing and upgrading your OS\nversions without requiring a Kubernetes version upgrade.    Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "c62fdfd57ace95ca28b60b70061f5b5012faa47b6ae494ab554090e8560586fd",
       "history": [
         {
           "changedFields": [
@@ -164,6 +180,14 @@
           "modifiedAfter": "2026-01-14T22:45:12.5056876Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#536550"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:20:15.807Z",
+          "fingerprint": "c62fdfd57ace95ca28b60b70061f5b5012faa47b6ae494ab554090e8560586fd",
+          "modifiedAfter": "2026-01-14T22:45:12.5056876Z",
+          "modifiedBefore": "2026-01-14T22:45:12.5056876Z",
+          "rawRef": "20261014T122015807Z_detail_536550.json#536550"
         }
       ],
       "ids": [
@@ -217,10 +241,10 @@
       ],
       "created": "2025-12-31T21:00:35.4690918Z",
       "createdJst": "2026-01-01",
-      "description": "The new cloud-native apps on\nKubernetes pricing calculator scenario allows teams to estimate the total cost\nof ownership for a production-ready AKS cluster with other key Azure services,\nincluding Azu...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "370d9265e8f7de00c3cb634de035965ce634f1026bff42f3f770982eafeae67a",
+      "description": "The new cloud-native apps on\nKubernetes pricing calculator scenario allows teams to estimate the total cost\nof ownership for a production-ready AKS cluster with other key Azure services,\nincluding Azure Container Registry, Azure Monitoring, Microsoft Defender for\nCloud, and more. The calculator scenario provides an architecture diagram and\ncost estimate with customizable inputs to fit your workload requirements. Whether\nyou are migrating legacy workloads or deploying new applications, including microservices,\nweb apps, AI, GPU workloads, and databases, this calculator scenario will help\nyou establish your cost baseline. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "7673a4de70057fc3aa95f4f0d8ca978823e934f113b5fa070a6dcfe8ae84f6d8",
       "history": [
         {
           "changedFields": [
@@ -231,6 +255,14 @@
           "modifiedAfter": "2025-12-31T21:00:35.4690918Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#536560"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:20:30.566Z",
+          "fingerprint": "7673a4de70057fc3aa95f4f0d8ca978823e934f113b5fa070a6dcfe8ae84f6d8",
+          "modifiedAfter": "2025-12-31T21:00:35.4690918Z",
+          "modifiedBefore": "2025-12-31T21:00:35.4690918Z",
+          "rawRef": "20261014T122030566Z_detail_536560.json#536560"
         }
       ],
       "ids": [
@@ -287,10 +319,10 @@
       ],
       "created": "2026-01-28T18:45:08.108476Z",
       "createdJst": "2026-01-29",
-      "description": "Azure Databricks Agent Bricks knowledge assistant empowers you to create, deploy, and manage AI agents directly within the Azure Databricks platform, using unified data and AI capabilities. This featu...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "b63ea83e96514e570fb74b781f47043b601f519cce50a7e005ec8ae2d7ea3162",
+      "description": "Azure Databricks Agent Bricks knowledge assistant empowers you to create, deploy, and manage AI agents directly within the Azure Databricks platform, using unified data and AI capabilities. This feature simplifies agent development by providing prebuilt components, secure integration with enterprise data, and scalable orchestration. With Agent Bricks, you can accelerate automation, enhance decision-making, and deliver personalized experiences all while maintaining compliance and governance standards under the Azure ecosystem. By combining the flexibility of open-source frameworks with the enterprise-grade security and reliability of Azure, Agent Bricks makes it easier for you to build high-quality, production-ready AI agents at scale with Azure Databricks. Learn more.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "be7f18e8bf64695f25be9d5758192fe9c4708c444491a851e53ae2d6c89fb626",
       "history": [
         {
           "changedFields": [
@@ -301,6 +333,14 @@
           "modifiedAfter": "2026-01-28T18:45:08.108476Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#542455"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:19:19.912Z",
+          "fingerprint": "be7f18e8bf64695f25be9d5758192fe9c4708c444491a851e53ae2d6c89fb626",
+          "modifiedAfter": "2026-01-28T18:45:08.108476Z",
+          "modifiedBefore": "2026-01-28T18:45:08.108476Z",
+          "rawRef": "20261014T121919912Z_detail_542455.json#542455"
         }
       ],
       "ids": [
@@ -353,10 +393,10 @@
       ],
       "created": "2026-01-09T14:30:36.5843225Z",
       "createdJst": "2026-01-09",
-      "description": "Available now in Public Preview, you can configure Azure Cosmos DB accounts with virtual networks or private endpoints to work with Microsoft Fabric mirroring. This feature allows you to preserve your...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "9000bd07e9c92801467f60b02ee83fe5b4a854c7ca3210f951426a9b404ab655",
+      "description": "Available now in Public Preview, you can configure Azure Cosmos DB accounts with virtual networks or private endpoints to work with Microsoft Fabric mirroring. This feature allows you to preserve your enhanced network security and seamlessly replicate your operational data in Cosmos DB using Mirroring into your Fabric Workspaces. Learn more.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "d0d48f5dad2c828ca6357b07d75284133f2beb321da84e74d84acbd3396531bf",
       "history": [
         {
           "changedFields": [
@@ -367,6 +407,14 @@
           "modifiedAfter": "2026-01-09T14:30:36.5843225Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#543086"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:20:20.988Z",
+          "fingerprint": "d0d48f5dad2c828ca6357b07d75284133f2beb321da84e74d84acbd3396531bf",
+          "modifiedAfter": "2026-01-09T14:30:36.5843225Z",
+          "modifiedBefore": "2026-01-09T14:30:36.5843225Z",
+          "rawRef": "20261014T122020988Z_detail_543086.json#543086"
         }
       ],
       "ids": [
@@ -415,10 +463,10 @@
       ],
       "created": "2026-01-27T14:00:07.6744924Z",
       "createdJst": "2026-01-27",
-      "description": "At Microsoft Ignite 2025, we announced the Public Preview of the Azure Command Launcher for Java, a new JVM launcher optimized specifically for Azure. This tool provides better default ergonomics for ...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "6d954037582fe989f45cd587af27623ee05440caefeb628b39391af8c981fda8",
+      "description": "At Microsoft Ignite 2025, we announced the Public Preview of the Azure Command Launcher for Java, a new JVM launcher optimized specifically for Azure. This tool provides better default ergonomics for Java applications running in containers and virtual machines, ensuring more efficient use of resources right from the start. By using Azure Command Launcher for Java to automatically set JVM parameters tailored for cloud deployments, your workloads have reduced wasted memory and CPU cycles, improving first-deploy performance, and enhancing cost efficiency. This is ideal for developers, Ops, and SREs, who want better JVM defaults without diving deep into JVM tuning guides, and  develop and deploy cloud-native microservices.       Key FeaturesAutomatically benefits from battle-tested defaults for cloud-native and container workloads.   Optimizes resource utilization by setting JVM parameters tailored for cloud deployments.   Improves likelihood of first-deploy performance and cost efficiency.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "b66fb428152e6e9e93d31182ca3d1050c82e1834a8ff64e763f95ac8cbf79d97",
       "history": [
         {
           "changedFields": [
@@ -429,6 +477,14 @@
           "modifiedAfter": "2026-01-27T14:00:07.6744924Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#543994"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:19:36.464Z",
+          "fingerprint": "b66fb428152e6e9e93d31182ca3d1050c82e1834a8ff64e763f95ac8cbf79d97",
+          "modifiedAfter": "2026-01-27T14:00:07.6744924Z",
+          "modifiedBefore": "2026-01-27T14:00:07.6744924Z",
+          "rawRef": "20261014T121936464Z_detail_543994.json#543994"
         }
       ],
       "ids": [
@@ -486,10 +542,10 @@
       ],
       "created": "2025-12-31T20:45:49.1863218Z",
       "createdJst": "2026-01-01",
-      "description": "Azure Premium SSD v2 is now available in Austria East and in a second Availability Zone in Japan West.  Azure Premium SSD v2, a next-generation general-purpose block storage solution, offers sub-milli...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "42ede1bb0325d2915e818856323e4505fca5f1c9d5e3f062f7d01e9c0c60ea60",
+      "description": "Azure Premium SSD v2 is now available in Austria East and in a second Availability Zone in Japan West.  Azure Premium SSD v2, a next-generation general-purpose block storage solution, offers sub-millisecond latencies and exceptional price performance for IO-intensive workloads at a low cost. Premium SSD v2 is suited for a broad range of enterprise production scenarios, including SQL Server, Oracle, MariaDB, SAP, Cassandra, MongoDB, big data/analytics, and gaming on virtual machines or stateful containers.   If Premium SSD v2 is unavailable in your preferred region and you would like to use it, please complete this survey.   Learn more:   Read the documentation.  For more information about Premium SSD v2 Disk Storage pricing, visit the Azure Managed Disks pricing page.    ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "4a9c7e24bfae1db2fa5594d86133b2dbd242ed6c4c1907b97d7c29481b71b54b",
       "history": [
         {
           "changedFields": [
@@ -500,6 +556,14 @@
           "modifiedAfter": "2025-12-31T20:45:49.1863218Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#544080"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:20:34.741Z",
+          "fingerprint": "4a9c7e24bfae1db2fa5594d86133b2dbd242ed6c4c1907b97d7c29481b71b54b",
+          "modifiedAfter": "2025-12-31T20:45:49.1863218Z",
+          "modifiedBefore": "2025-12-31T20:45:49.1863218Z",
+          "rawRef": "20261014T122034741Z_detail_544080.json#544080"
         }
       ],
       "ids": [
@@ -554,10 +618,10 @@
       ],
       "created": "2026-01-28T23:15:47.9149911Z",
       "createdJst": "2026-01-29",
-      "description": "In alignment with the end of community support, on October 1, 2026, support for Python 3.10 in Azure Functions will end. Your\napps that are hosted on Functions will continue to run, but security updat...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "6c78d341eab56c3a58b1e65d0c75dbbdd4739c312e66e5595c5a26aa476487bf",
+      "description": "In alignment with the end of community support, on October 1, 2026, support for Python 3.10 in Azure Functions will end. Your\napps that are hosted on Functions will continue to run, but security updates\nand performance optimizations will no longer be available and we'll no longer\nprovide customer service for Python 3.10. Learn more about Azure Functions stack\nversion support. Required\naction To avoid potential security\nvulnerabilities and take advantage of the latest features, follow the steps to\nupgrade your Functions apps to Python 3.13 by 1 October 2026. Help and\nsupport If\nyou have questions, get answers from community experts in Microsoft Q&A. If you have\na support plan and you need technical help, open the Azure portal\nand select the question mark icon at the top of the page.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "3460de338aa782a9ada779a557917dadd1b710d06f49233677636754aa03666d",
       "history": [
         {
           "changedFields": [
@@ -568,6 +632,14 @@
           "modifiedAfter": "2026-01-28T23:15:47.9149911Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#545771"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:19:13.571Z",
+          "fingerprint": "3460de338aa782a9ada779a557917dadd1b710d06f49233677636754aa03666d",
+          "modifiedAfter": "2026-01-28T23:15:47.9149911Z",
+          "modifiedBefore": "2026-01-28T23:15:47.9149911Z",
+          "rawRef": "20261014T121913571Z_detail_545771.json#545771"
         }
       ],
       "ids": [
@@ -622,10 +694,10 @@
       ],
       "created": "2026-01-22T17:30:31.5666491Z",
       "createdJst": "2026-01-23",
-      "description": "StandardV2 SKU NAT Gateway is now generally available, delivering enhanced resiliency, greater performance, and dual-stack connectivity, all at the same price as the Standard SKU.  StandardV2 Public I...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "e7f4e94516b392c860a7f53a811c7b0bc87e364fdabc5d320c998d8876ef6fe3",
+      "description": "StandardV2 SKU NAT Gateway is now generally available, delivering enhanced resiliency, greater performance, and dual-stack connectivity, all at the same price as the Standard SKU.  StandardV2 Public IP addresses and prefixes are also generally available. StandardV2 NAT Gateway requires StandardV2 public IPs; Standard SKU public IPs are not supported.  What’s new with StandardV2 NAT Gateway:  Zone-redundancy: Automatically maintains outbound connectivity during single zone failures in availability zone-enabled regions.  Enhanced performance: Up to 100 Gbps of throughput and 10 million packets per second—double the Standard SKU capacity.  Dual-stack support: Attach up to 16 IPv6 and 16 IPv4 public IP addresses for future ready connectivity.  Traffic insights with flow logs: Gain detailed IP-level visibility of traffic for troubleshooting and compliance verification.  Pricing and availability  StandardV2 NAT Gateway is the same price as the Standard SKU.  Available in most public cloud regions, rollout planned for remaining regions in 2026. Learn more about remaining unsupported regions.  Deploy through Portal, CLI, Powershell, Bicep, and ARM. Terraform support coming soon.  Learn more:  StandardV2 NAT Gateway   StandardV2 NAT Gateway flow logs  StandardV2 public IPs  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "f3f288c4f124d2a2673ec1eae192528aff0fcc0c8e58533680fc7fc5244cfeb4",
       "history": [
         {
           "changedFields": [
@@ -636,6 +708,14 @@
           "modifiedAfter": "2026-01-22T17:30:31.5666491Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#547772"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:19:43.121Z",
+          "fingerprint": "f3f288c4f124d2a2673ec1eae192528aff0fcc0c8e58533680fc7fc5244cfeb4",
+          "modifiedAfter": "2026-01-22T17:30:31.5666491Z",
+          "modifiedBefore": "2026-01-22T17:30:31.5666491Z",
+          "rawRef": "20261014T121943121Z_detail_547772.json#547772"
         }
       ],
       "ids": [
@@ -690,10 +770,10 @@
       ],
       "created": "2026-01-22T00:00:08.7236625Z",
       "createdJst": "2026-01-22",
-      "description": "The functionality of application volume group for Oracle has been expanded with the ability to create data protection volumes in a volume group with the same anti-affinity layout as production volume ...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "af535811544bf861ab2527a54431584ba59ca69cc4daaab50616ee96241ef56a",
+      "description": "The functionality of application volume group for Oracle has been expanded with the ability to create data protection volumes in a volume group with the same anti-affinity layout as production volume groups. Customers benefit from this ability for creating disaster recovery volume layouts that support production failover to a zone or region of their choice.  This feature is available in all regions that support Azure NetApp Files.   Learn more: What's new in Azure NetApp Files Understand Azure NetApp Files application volume group for Oracle ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "2dba657f119cb7cd4c53d55575bda59f7254924aa4de6c58115fde5ea0ab7000",
       "history": [
         {
           "changedFields": [
@@ -704,6 +784,14 @@
           "modifiedAfter": "2026-01-22T00:00:08.7236625Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#548066"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:19:52.144Z",
+          "fingerprint": "2dba657f119cb7cd4c53d55575bda59f7254924aa4de6c58115fde5ea0ab7000",
+          "modifiedAfter": "2026-01-22T00:00:08.7236625Z",
+          "modifiedBefore": "2026-01-22T00:00:08.7236625Z",
+          "rawRef": "20261014T121952144Z_detail_548066.json#548066"
         }
       ],
       "ids": [
@@ -756,10 +844,10 @@
       ],
       "created": "2026-01-21T18:00:07.6397609Z",
       "createdJst": "2026-01-22",
-      "description": "Customers\nupgrading AKS clusters often need a clear and flexible path to adopt new OS\nversions without disrupting workloads. Ubuntu 24.04 is now generally\navailable on AKS starting with Kubernetes ver...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "8eb4e06d3d9debf439e1105a0ef84ad5bc6236b6fda05c3defd31bcc78b46705",
+      "description": "Customers\nupgrading AKS clusters often need a clear and flexible path to adopt new OS\nversions without disrupting workloads. Ubuntu 24.04 is now generally\navailable on AKS starting with Kubernetes version 1.32, with containerd 2.0 enabled by default.  It can be\nenabled using the new Ubuntu2404 OS SKU in Kubernetes 1.32 and above, or by using the\nstandard Ubuntu OS SKU in Kubernetes 1.35 and above, where Ubuntu 24.04 becomes the default.  Existing\nclusters already using the Ubuntu OS SKU will automatically migrate to Ubuntu 24.04 when upgraded to\nKubernetes 1.35 or later.  For\nrollback or testing scenarios, AKS also now supports the Ubuntu2204 OS SKU\nacross Kubernetes versions 1.25 through 1.36, allowing practitioners to switch OS versions without\nrequiring a Kubernetes version change. These options provide more control over\nOS lifecycle management and simplify migration planning for cluster operators. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "fc32300b439f7177d57d341b924b3705f59eae3d7f5995a26b45f897be96d09f",
       "history": [
         {
           "changedFields": [
@@ -770,6 +858,14 @@
           "modifiedAfter": "2026-01-21T18:00:07.6397609Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#548096"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:20:06.979Z",
+          "fingerprint": "fc32300b439f7177d57d341b924b3705f59eae3d7f5995a26b45f897be96d09f",
+          "modifiedAfter": "2026-01-21T18:00:07.6397609Z",
+          "modifiedBefore": "2026-01-21T18:00:07.6397609Z",
+          "rawRef": "20261014T122006979Z_detail_548096.json#548096"
         }
       ],
       "ids": [
@@ -823,10 +919,10 @@
       ],
       "created": "2026-01-22T22:30:50.7369873Z",
       "createdJst": "2026-01-23",
-      "description": "Organizations deploying workloads on Kubernetes often need a consistent way\nto enforce pod security configurations across clusters. Azure Kubernetes\nService (AKS) now supports Pod Security Standards w...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "b8bcdcc9bbfa1eca4be83ceb79dd1b63ee2400eec9259bb3f246a9ee5c0b96e5",
+      "description": "Organizations deploying workloads on Kubernetes often need a consistent way\nto enforce pod security configurations across clusters. Azure Kubernetes\nService (AKS) now supports Pod Security Standards within Deployment Safeguards,\nenabling centralized management of Baseline, Restricted, and Privileged standards\nat scale. This capability allows teams to ensure that deployment manifests\ncomply with selected security standards, help technical practitioners\nstrengthen workload security, reduce configuration drift, and simplify the\nrollout of cluster-wide security controls. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "4ae82c793a714fbb2271d85da2575d36cc2e0d09f15a5e4914af4b4be18a4ace",
       "history": [
         {
           "changedFields": [
@@ -837,6 +933,14 @@
           "modifiedAfter": "2026-01-22T22:30:50.7369873Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#548101"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:19:40.881Z",
+          "fingerprint": "4ae82c793a714fbb2271d85da2575d36cc2e0d09f15a5e4914af4b4be18a4ace",
+          "modifiedAfter": "2026-01-22T22:30:50.7369873Z",
+          "modifiedBefore": "2026-01-22T22:30:50.7369873Z",
+          "rawRef": "20261014T121940881Z_detail_548101.json#548101"
         }
       ],
       "ids": [
@@ -891,10 +995,10 @@
       ],
       "created": "2026-01-21T22:15:11.6053296Z",
       "createdJst": "2026-01-22",
-      "description": "Azure File Sync enables seamless tiering of data from on-premises Windows Servers to Azure Files for hybrid use cases and simplified migration. It also enables you to leverage the performance, flexibi...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "97ca5909e1378d6b3600e4e45864ae184eefd6ee52bfb19ea41d78b2f6b89946",
+      "description": "Azure File Sync enables seamless tiering of data from on-premises Windows Servers to Azure Files for hybrid use cases and simplified migration. It also enables you to leverage the performance, flexibility and compatibility of your on-premises File Server while leveraging the scale and cost effectiveness of Azure Files.The expansion into Israel Central brings the service closer to organizations in these regions, offering lower latency, better performance, and support for local data residency requirements.If Azure File Sync is not yet available in your preferred region, please fill out this survey to express interest.  Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "0df2bf9401d53ad37f6b730eec1a84544cb4691623e7585d5196773f976497f6",
       "history": [
         {
           "changedFields": [
@@ -905,6 +1009,14 @@
           "modifiedAfter": "2026-01-21T22:15:11.6053296Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#548974"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:20:00.830Z",
+          "fingerprint": "0df2bf9401d53ad37f6b730eec1a84544cb4691623e7585d5196773f976497f6",
+          "modifiedAfter": "2026-01-21T22:15:11.6053296Z",
+          "modifiedBefore": "2026-01-21T22:15:11.6053296Z",
+          "rawRef": "20261014T122000830Z_detail_548974.json#548974"
         }
       ],
       "ids": [
@@ -960,10 +1072,10 @@
       ],
       "created": "2026-01-16T17:00:49.7115757Z",
       "createdJst": "2026-01-17",
-      "description": "User delegation SAS for Azure Tables, Azure Files, and Azure Queues is now available in public preview. User delegation (UDK) SAS is already generally available for blobs, and this release extends tha...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "27d808a16753d39cc3d9186bc7044254d2f6743acec8bbb961512d6e2b22b4f3",
+      "description": "User delegation SAS for Azure Tables, Azure Files, and Azure Queues is now available in public preview. User delegation (UDK) SAS is already generally available for blobs, and this release extends that support to tables, files, and queues.User delegation SAS allows users to create a more secure SAS token than account or service SAS by tying the SAS token to the delegator. This extension of UDK SAS will allow users to set SAS tokens at the table, table entity, queue, queue entity, file container, and individual file level. Any SAS token set at the higher level will provide access to all table/queue/file entities within, and any SAS token set at the base level will only provide access to that individual entity. There is no additional cost to use user delegation SAS. Pricing is based on the standard read/write transaction costs for your storage account type. To learn more, please see Azure Storage Pricing. This preview is available in all public regions.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "78bb459c724cc9acdd20eb9a4b1c893de66affa8d7d86a5a89b4779d99b6793f",
       "history": [
         {
           "changedFields": [
@@ -974,6 +1086,14 @@
           "modifiedAfter": "2026-01-16T17:00:49.7115757Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#548987"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:20:11.473Z",
+          "fingerprint": "78bb459c724cc9acdd20eb9a4b1c893de66affa8d7d86a5a89b4779d99b6793f",
+          "modifiedAfter": "2026-01-16T17:00:49.7115757Z",
+          "modifiedBefore": "2026-01-16T17:00:49.7115757Z",
+          "rawRef": "20261014T122011473Z_detail_548987.json#548987"
         }
       ],
       "ids": [
@@ -1028,10 +1148,10 @@
       ],
       "created": "2026-01-28T17:00:53.5295974Z",
       "createdJst": "2026-01-29",
-      "description": "PostgreSQL minor versions 18.1, 17.7, 16.11, 15.15, 14.20, and 13.23 are now supported by Azure Database for PostgreSQL – Flexible Server.    These minor version upgrades are automatically performed a...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "ec6346da3a0aeecb39ff39d5e81a2dd8d6c1ed28584c5d8a1a11884745468223",
+      "description": "PostgreSQL minor versions 18.1, 17.7, 16.11, 15.15, 14.20, and 13.23 are now supported by Azure Database for PostgreSQL – Flexible Server.    These minor version upgrades are automatically performed as part of the monthly planned maintenance in Azure Database for PostgreSQL – Flexible Server. This upgrade automation ensures that your databases are always running the latest optimized versions without requiring manual intervention.  Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "58ab252d77adf288a6cdcc585cb8db9d4d458f441730bb0c8b35493a64b40906",
       "history": [
         {
           "changedFields": [
@@ -1042,6 +1162,14 @@
           "modifiedAfter": "2026-01-28T17:00:53.5295974Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#550164"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:19:24.055Z",
+          "fingerprint": "58ab252d77adf288a6cdcc585cb8db9d4d458f441730bb0c8b35493a64b40906",
+          "modifiedAfter": "2026-01-28T17:00:53.5295974Z",
+          "modifiedBefore": "2026-01-28T17:00:53.5295974Z",
+          "rawRef": "20261014T121924055Z_detail_550164.json#550164"
         }
       ],
       "ids": [
@@ -1094,10 +1222,10 @@
       ],
       "created": "2026-01-22T17:00:03.7427168Z",
       "createdJst": "2026-01-23",
-      "description": "Reporting capabilities are now live in Playwright Workspaces. The latest update brings you an integrated, flexible and collaborative reporting experience designed to make debugging tests in Playwright...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "e53db681d96d238575d6b4ecf08c582a6e8a20aa6a9ea9c0d43f4eecaa088561",
+      "description": "Reporting capabilities are now live in Playwright Workspaces. The latest update brings you an integrated, flexible and collaborative reporting experience designed to make debugging tests in Playwright Workspaces easier, faster and more efficient. Customers can bring their own Azure storage accounts to store and govern their test artifacts. Playwright Workspaces is a fully managed service for end-to-end web testing, built on top of Playwright. With Playwright Workspaces, you can significantly speed up test execution by running tests in parallel using managed cloud-based browsers. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "322c798d4755c88b88a7fc823ef452763b7be5a2964e2f9d92f8616cb7b20e5e",
       "history": [
         {
           "changedFields": [
@@ -1108,6 +1236,14 @@
           "modifiedAfter": "2026-01-22T17:00:03.7427168Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#550379"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:19:47.299Z",
+          "fingerprint": "322c798d4755c88b88a7fc823ef452763b7be5a2964e2f9d92f8616cb7b20e5e",
+          "modifiedAfter": "2026-01-22T17:00:03.7427168Z",
+          "modifiedBefore": "2026-01-22T17:00:03.7427168Z",
+          "rawRef": "20261014T121947299Z_detail_550379.json#550379"
         }
       ],
       "ids": [
@@ -1160,10 +1296,10 @@
       ],
       "created": "2026-01-27T17:00:06.6371234Z",
       "createdJst": "2026-01-28",
-      "description": "Azure NetApp Files now\nenables fast virtual machine (VM) provisioning, instant cloning, and live\nmigration in OpenShift Virtualization. It offers seamlessly scalable storage\nwith predictable performan...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "e27ad1721ffbe3ddcd166e786eee21ec357e365750a3350935cc27f2c580cbc6",
+      "description": "Azure NetApp Files now\nenables fast virtual machine (VM) provisioning, instant cloning, and live\nmigration in OpenShift Virtualization. It offers seamlessly scalable storage\nwith predictable performance and enterprise data management for VM workloads\nfrom infrastructure VMs to business-critical databases. Support for Azure\nNetApp Files in OpenShift Virtualization is now in preview and is available in\nall Azure regions where Azure NetApp Files and Azure Red Hat OpenShift are\noffered. Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "2aac721c18971b26acdc780c597ef5e8319ca1e347e26ea57f3a0f9c9217eee2",
       "history": [
         {
           "changedFields": [
@@ -1174,6 +1310,14 @@
           "modifiedAfter": "2026-01-27T17:00:06.6371234Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#550466"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:19:32.222Z",
+          "fingerprint": "2aac721c18971b26acdc780c597ef5e8319ca1e347e26ea57f3a0f9c9217eee2",
+          "modifiedAfter": "2026-01-27T17:00:06.6371234Z",
+          "modifiedBefore": "2026-01-27T17:00:06.6371234Z",
+          "rawRef": "20261014T121932222Z_detail_550466.json#550466"
         }
       ],
       "ids": [
@@ -1220,10 +1364,10 @@
       ],
       "created": "2026-01-22T00:00:08.7236625Z",
       "createdJst": "2026-01-22",
-      "description": "Azure Load Testing capability in Azure App Testing is now generally available in Switzerland North. Customers can now use Azure Load Testing, a fully managed load-testing service to generate high scal...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "5f0637f17e654f59d8efdcf2b12b7095a15147e344a171b747589761bd973fb4",
+      "description": "Azure Load Testing capability in Azure App Testing is now generally available in Switzerland North. Customers can now use Azure Load Testing, a fully managed load-testing service to generate high scale load and run simulations, easily identify performance bottlenecks through a rich dashboard of client-side and server-side metrics, get AI powered actionable insights, and integrate load tests into their CI/CD workflows. Customers can get started without any knowledge of load-testing tools, or use their existing Apache JMeter or Locust scripts.Learn more:about Azure Load Testing.go to feedback forum.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "7280d07e2c25f6f49acf04e3e70c2f488e3fd1a347be1794c077a4c6e704af4a",
       "history": [
         {
           "changedFields": [
@@ -1234,6 +1378,14 @@
           "modifiedAfter": "2026-01-22T00:00:08.7236625Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#550685"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:19:56.645Z",
+          "fingerprint": "7280d07e2c25f6f49acf04e3e70c2f488e3fd1a347be1794c077a4c6e704af4a",
+          "modifiedAfter": "2026-01-22T00:00:08.7236625Z",
+          "modifiedBefore": "2026-01-22T00:00:08.7236625Z",
+          "rawRef": "20261014T121956645Z_detail_550685.json#550685"
         }
       ],
       "ids": [
@@ -1290,10 +1442,10 @@
       ],
       "created": "2026-01-30T18:30:02.6205929Z",
       "createdJst": "2026-01-31",
-      "description": "On July 31, 2026, we'll retire preview feature “Send virtual machine client data to Event Hubs and Storage (Preview)” and it'll no longer be supported by Microsoft. You will not be able to create any ...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "547285cc4252fbcdabcddaf02cd1608e8926f70d30eca6dd5997773470555372",
+      "description": "On July 31, 2026, we'll retire preview feature “Send virtual machine client data to Event Hubs and Storage (Preview)” and it'll no longer be supported by Microsoft. You will not be able to create any new data collection rules using this feature, and any existing configurations using this capability will stop sending data. You will need to switch to alternatives described here to continue using AMA or other Azure solutions that provide more reliable, scalable and performant solutions to send data to respective destinations. Note: The Azure Monitor agent (AMA) itself continues to be generally available and supported, without any impact from the retirement of this specific preview feature. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "3c229a950028a8850bc40d38bec529772d5506ca51e407224000083c32bab50a",
       "history": [
         {
           "changedFields": [
@@ -1304,6 +1456,14 @@
           "modifiedAfter": "2026-01-30T18:30:02.6205929Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#551523"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:19:10.313Z",
+          "fingerprint": "3c229a950028a8850bc40d38bec529772d5506ca51e407224000083c32bab50a",
+          "modifiedAfter": "2026-01-30T18:30:02.6205929Z",
+          "modifiedBefore": "2026-01-30T18:30:02.6205929Z",
+          "rawRef": "20261014T121910313Z_detail_551523.json#551523"
         }
       ],
       "ids": [
@@ -1357,10 +1517,10 @@
       ],
       "created": "2026-01-28T19:15:24.5129856Z",
       "createdJst": "2026-01-29",
-      "description": "The general purpose Dasv7 and Dalsv7, memory-optimized Easv7, and compute-optimized Fasv7, Falsv7, Famsv7 VMs, are now generally available with and without local disk support. These VMs are available ...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "f7a782d8cdb4eb0746b775a0ca92672e9105a325abd3cbafe1fa0b293d41f33b",
+      "description": "The general purpose Dasv7 and Dalsv7, memory-optimized Easv7, and compute-optimized Fasv7, Falsv7, Famsv7 VMs, are now generally available with and without local disk support. These VMs are available in the following Azure regions: Australia East, Central US, Germany West Central, Japan East, North Europe, South Central US, Southeast Asia, UK South, West Europe, West US 2, and West US 3. The large 160 vCPU Easv7-series and Eadsv7-series sizes are available in North Europe, South Central US, West Europe, and West US 2. More regions are coming in 2026.These virtual machines deliver significant enhancements over the previous generation, offering improved CPU performance, greater scalability, and expanded configuration options to meet the demands of a wide range of workloads. Key improvements include:  Up to 35% CPU performance improvement compared to similarly sized v6 VMs Significant performance gains on other workloads:   Up to 25% for Java-based workloads Up to 65% for in-memory cache applications Up to 80% for crypto workloads Up to 130% for web server applications   New VM series introduced: Fadsv7, Faldsv7, and Famdsv7 with local disk support. These enhancements make the AMD v7-series VMs a compelling choice for customers seeking high performance, cost efficiency, and workload flexibility on Azure. Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "dc954c6678223f928a18bab32c435afe5bac9b7b93b6c892cfdbfc6d58a0a700",
       "history": [
         {
           "changedFields": [
@@ -1371,6 +1531,14 @@
           "modifiedAfter": "2026-01-28T19:15:24.5129856Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100511726Z_list_2026-01_o0.json#552318"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T12:19:16.746Z",
+          "fingerprint": "dc954c6678223f928a18bab32c435afe5bac9b7b93b6c892cfdbfc6d58a0a700",
+          "modifiedAfter": "2026-01-28T19:15:24.5129856Z",
+          "modifiedBefore": "2026-01-28T19:15:24.5129856Z",
+          "rawRef": "20261014T121916746Z_detail_552318.json#552318"
         }
       ],
       "ids": [

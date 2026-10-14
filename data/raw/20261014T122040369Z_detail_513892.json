@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "513892"
+  },
+  "fetchedAt": "2026-10-14T12:20:40.369Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "513892",
+    "created": "2025-12-29T17:30:40.7931753Z",
+    "description": "In 2026, Azure Resource Manager will be deprecating the Custom Resource Provider (CuRP) service.We will retire the feature by October 31, 2026. We will be performing a scream test on October 27, 2025, as part of this deprecation. On July 31, 2026, creates, updates, patches, and actions to custom resources and resource providers will be blocked. You will only be able to read and delete your custom resources and resource providers.We understand that this deprecation may be an inconvenience to you and your team. Here are some potential CuRP alternatives you can use to support your existing workflows.If your CuRP scenario:Only involves triggering an endpoint without the need for persistent resource management, consider Deployment Scripts.Only involves triggering an endpoint without the need for persistent resource management, and you use Bicep, consider Bicep Extensions.Involves triggering several different endpoints or services for your solution, consider Azure Functions.If you have any questions, please ask your Microsoft account manager to email curpdeprecation@microsoft.com with your name, company name, email contact, and subscription ID.",
+    "id": "513892",
+    "modified": "2025-12-29T17:30:40.7931753Z",
+    "productCategories": [
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Resource Manager"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Deprecation of Custom Resource Providers"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

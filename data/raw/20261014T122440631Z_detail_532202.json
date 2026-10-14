@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "532202"
+  },
+  "fetchedAt": "2026-10-14T12:24:40.631Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "532202",
+    "created": "2025-11-19T17:00:30.4577207Z",
+    "description": "Azure Application Gateway has introduced general availability support\nfor TLS and TCP protocol termination. This enhancement enables you to load\nbalance and securely process non-HTTP(S) traffic for applications that rely on\nTCP or TLS protocols. The gateway terminates the incoming connection at the\nproxy and establishes a new connection to the backend servers. The TLS\ncertificate management is available for both HTTPS and TLS protocols on a\nresource, simplifying the certificate operations and providing a single\nendpoint for clients. With this\nrelease, the TLS/TCP proxy also brings support for Client\nIP preservation using the PROXY protocol header, as well as support for\nport 22 on listeners. This capability\nis available on Application Gateway Standard v2 and WAF v2 SKUs. Learn\nmore. ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "532202",
+    "modified": "2025-11-19T17:00:30.4577207Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Services",
+      "Management"
+    ],
+    "title": "Generally Available: TLS and TCP termination on Azure Application Gateway"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

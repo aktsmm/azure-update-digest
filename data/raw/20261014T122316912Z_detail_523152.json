@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "523152"
+  },
+  "fetchedAt": "2026-10-14T12:23:16.912Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "523152",
+    "created": "2025-11-20T18:45:04.8845617Z",
+    "description": "MCP support for AI toolchain operator add-on is\nnow Generally Available.    The AI Toolchain Operator add-on now supports\nKAITO inference workspaces with integrated tool calling and Model Context\nProtocol (MCP), addressing key challenges around dynamic model interaction and\nreal-time data integration.   Previously, developers faced friction deploying\nLLM-based services that needed external tool access, such as APIs or custom\nfunctions, often requiring bespoke orchestration. Now, you can benefit from\nseamless integration of KAITO’s vLLM-based tool calling with supported models,\nalong with MCP support for connecting models to external systems in real time –\nto enable smarter, more context-aware AI services directly within AKS. Learn more:about Integrate tool calling with LLM Inference with the AI toolchain operator add-on on Azure Kubernetes Service (AKS)about Integrate an MCP server with an LLM Inference Service on Azure Kubernetes Service (AKS)",
+    "generalAvailabilityDate": "2025-11",
+    "id": "523152",
+    "modified": "2025-11-20T18:45:04.8845617Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: MCP support for AI toolchain operator add-on in AKS"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

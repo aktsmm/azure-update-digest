@@ -1,0 +1,31 @@
+{
+  "args": {
+    "id": "545784"
+  },
+  "fetchedAt": "2026-10-14T12:17:45.910Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "545784",
+    "created": "2026-02-17T17:00:32.6930852Z",
+    "description": "Announcing the General Availability of instant access\nsupport for incremental snapshots of Premium SSD v2 (Pv2) and Ultra Disk. This\nnew capability enables you to restore new disks immediately after creating\nsnapshots of Pv2 and Ultra disks. Newly restored disks deliver high performance\ninstantly, while data hydration continues rapidly in the background.  Instant access snapshots accelerate backup and recovery\nworkflows, enabling faster environment refreshes and rapid scaling. Common use\ncases include:  Create\n     instant backups before software updates and revert quickly if\n     needed.  Quickly\n     scale stateful applications by creating multiple copies of primary data\n     for new instances, such as adding read-only SQL Server replicas.  Rapid\n     nightly refresh of training or testing environments from the production. Instant access support for incremental snapshots of Pv2 and Ultra Disk is available in all public regions\nwhere Premium\nSSD v2 and Ultra\nDisk are supported. For pricing details, please visit Managed\nDisk Pricing. Learn more: Watch the\n     demo Get\n     started by creating instant access snapshots for your Premium SSD v2 and\n     Ultra Disk here.  ",
+    "generalAvailabilityDate": "2026-02",
+    "id": "545784",
+    "modified": "2026-02-17T17:00:32.6930852Z",
+    "productCategories": [],
+    "products": [],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Instant access support for incremental snapshots of Azure Premium SSD v2 and Ultra Disk"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

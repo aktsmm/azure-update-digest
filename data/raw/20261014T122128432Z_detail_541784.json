@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "541784"
+  },
+  "fetchedAt": "2026-10-14T12:21:28.432Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "December",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "541784",
+    "created": "2025-12-11T18:00:36.6592964Z",
+    "description": "Azure Sphere OS version 25.12 is now available for evaluation in the Retail Eval feed. Whilst this release encompasses no customer-facing changes, it represents significant under-the-hood build system changes, as such, this release will operate for an extended evaluation period, until February 2026, enabling additional time for customer evaluation testing.Following this period, a second evaluation release, 26.02, will be launched to the Retail Eval feed for the standard 14-day testing period, and subsequently promoted to the Retail feed. This means that 25.12 will not be promoted to the Retail feed, and that the next Retail release will be 26.02.During this time, please verify that your applications and devices operate properly with both the 25.12, and subsequent 26.02 release, before it is deployed broadly to devices in the Retail feed. The 25.12 OS Retail Eval release includes significant underlying build system updates.Learn more:For more information on Azure Sphere OS feeds and setting up an evaluation device group, see Azure Sphere OS feeds and Set up devices for OS evaluation.For self-help inquiries or technical support, review the Azure Sphere support options.",
+    "generalAvailabilityDate": "2025-12",
+    "id": "541784",
+    "modified": "2025-12-11T18:00:36.6592964Z",
+    "productCategories": [
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Sphere"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Operating System"
+    ],
+    "title": "Generally Available: Azure Sphere OS version 25.12 is now available for evaluation"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

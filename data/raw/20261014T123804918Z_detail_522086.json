@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "522086"
+  },
+  "fetchedAt": "2026-10-14T12:38:04.918Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "522086",
+    "created": "2025-11-05T22:30:04.4225583Z",
+    "description": "Planned Failover is a customer-managed failover that\nprovides the ability to failover your geo-redundant storage account while\nkeeping geo-redundancy and data durability. You can seamlessly swap the\nprimary and secondary storage endpoints of your geo-redundant\naccount. After the Planned Failover is completed, all new\nwrite operations will be directed to the original secondary region,\nwhich will serve as the new primary region. Planned Failover can be\nutilized in a variety of scenarios including disaster recovery drills,\npartial outages where storage remains healthy or proactive disaster\npreparation. It is now generally available for GPv2 storage accounts and\nis compatible with Blob, ADLS Gen2, Table, File, and Queue data.  Learn\nmore.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "522086",
+    "modified": "2025-11-05T22:30:04.4225583Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Blob Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Compliance",
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Planned Failover for Azure Storage"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

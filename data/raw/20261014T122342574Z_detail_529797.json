@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "529797"
+  },
+  "fetchedAt": "2026-10-14T12:23:42.574Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "529797",
+    "created": "2025-11-20T15:00:59.6915394Z",
+    "description": "Announcing that\nTrusted Launch supported Arm64 Images are now available in the Azure\nMarketplace. You can now get the dual benefit of cost and performance efficiencies\nof Arm64 in addition to the security benefits of Trusted Launch.  Arm64 VMs bring cost\nsavings, energy efficiency, and high performance to cloud workloads.  Trusted Launch VMs provide\nfoundational compute security to Azure VMs by enabling\nSecure Boot and vTPM capabilities. Trusted Launch protects OS against\nrootkits, boot kits and enables attestation by measuring the boot chain of VM.  The Cobalt 100 based Arm64 VMs\n(Dpsv6/Dplsv6/Epsv6) support the Trusted Launch security type, and users can\nimprove the security of their Cobalt 100 VMs by deploying with Trusted Launch\nimages from the marketplace.\nSupported images include Ubuntu 24.04, Debian 13, Rocky 9, Azure Linux 3, RedHat\nEnterprise Linux 10, and more. Learn more:about Trusted Launch.about Cobalt 100 VMs.",
+    "generalAvailabilityDate": "2025-10",
+    "id": "529797",
+    "modified": "2025-11-20T15:00:59.6915394Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Operating System",
+      "Compliance",
+      "Security",
+      "Features"
+    ],
+    "title": "Generally Available: Trusted Launch is now supported for Arm64 Marketplace Images "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

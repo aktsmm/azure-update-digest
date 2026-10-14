@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "557203"
+  },
+  "fetchedAt": "2026-10-14T12:17:37.617Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "557203",
+    "created": "2026-02-18T16:45:58.1348655Z",
+    "description": "Customers previously could not\nenable LocalDNS on clusters that used Node auto‑provisioning in AKS, limiting\ntheir ability to use this feature in those environments. LocalDNS is now\ngenerally available for AKS clusters with Node auto‑provisioning, providing DNS\nresolution capabilities within the cluster.   Learn\nmore. ",
+    "generalAvailabilityDate": "2026-02",
+    "id": "557203",
+    "modified": "2026-02-18T16:45:58.1348655Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [],
+    "title": "Generally Available: Node auto-provisioning enabled clusters in AKS now support LocalDNS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

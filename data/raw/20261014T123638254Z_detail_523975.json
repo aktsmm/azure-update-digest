@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "523975"
+  },
+  "fetchedAt": "2026-10-14T12:36:38.254Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "523975",
+    "created": "2025-11-11T17:16:01.2080516Z",
+    "description": "Azure Backup vaulted protection\nfor ADLS Gen2 delivers secure, off‑site backups to help organizations meet\nresilience and compliance goals. Vaulted backups maintain an independent copy\nof your data, isolated from the source account - providing protection against\naccidental deletion, malicious activity, and ransomware.  Capabilities at a Glance: Off‑site protection: Recover data safely\nby restoring to alternate storage accounts to support clean recovery\nworkflows. Automated & flexible scheduling: Configure\ndaily or weekly backup policies and trigger on‑demand backups when\nneeded. Long‑term retention: Store backups for up\nto 10 years to meet compliance and archival requirements. Security‑first design: Soft‑delete,\nimmutability, encryption, and multi‑user authorization protect backup data in\nthe vault. Scope and availability at GA: Vaulted backups can be configured for block blobs in Azure Data Lake Storage Gen2 accounts. General availability will start with a subset of the regions from Public Preview list. We will continue expanding to additional regions over the coming\nmonths. Learn more:Configure\n     Vaulted Backup for ADLSSupport\n     matrix & limitsPricing ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "523975",
+    "modified": "2025-11-11T17:16:01.2080516Z",
+    "productCategories": [
+      "Storage",
+      "Management and governance"
+    ],
+    "products": [
+      "Archive Storage",
+      "Azure Backup"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Features",
+      "Pricing & Offerings"
+    ],
+    "title": "Generally Available: Vaulted Backup for Azure Data Lake Storage (ADLS)"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

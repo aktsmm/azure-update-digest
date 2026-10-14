@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "526237"
+  },
+  "fetchedAt": "2026-10-14T12:30:11.273Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "526237",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Running\ncontainerized workloads in shared environments can raise concerns around\nsecurity and workload isolation. To address this, AKS now supports pod\nsandboxing, enabling customers to run containers in per-workload pod VMs. Each\npod VM is isolated from others and from the host, providing a strong compute\nisolation boundary. This\nfeature enhances workload security by reducing the risk of cross-pod\ninterference and host-level vulnerabilities, making it ideal for multi-tenant\nscenarios or sensitive applications.Learn more.",
+    "generalAvailabilityDate": "2025-11",
+    "id": "526237",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Generally Available: Pod sandboxing on AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

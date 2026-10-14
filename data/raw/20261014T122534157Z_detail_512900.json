@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "512900"
+  },
+  "fetchedAt": "2026-10-14T12:25:34.157Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "512900",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Azure\nContainer Apps now supports deployment labels in public preview as a new\ndeployment mode. This feature simplifies environment management and enables\nadvanced deployment strategies for your applications by allowing you to assign\nmeaningful names—such as dev, staging, or prod—to specific container revisions. Deployment\nlabels provide a flexible way to manage traffic routing and revision control\nwithout renaming revisions or manually adjusting configurations. These include: Streamline environment management by grouping revisions under\ndescriptive labels. Route traffic intelligently based on labels for A/B testing,\nstaged rollouts, and blue-green deployments. Promote or roll back revisions quickly using label history,\nensuring smooth transitions and minimal downtime. With\ndeployment labels, you gain greater control over your application lifecycle\nwhile reducing complexity in multi-environment scenarios.   Learn more.",
+    "id": "512900",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Container Apps"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Deployment labels in Azure Container Apps"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

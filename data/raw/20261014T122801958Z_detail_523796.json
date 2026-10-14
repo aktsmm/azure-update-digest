@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "523796"
+  },
+  "fetchedAt": "2026-10-14T12:28:01.958Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "523796",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Azure Cosmos DB now supports float 16 data types for vector indexes. With this update, you can store and query vectors using half-precision floating-point numbers. Using float16 cuts storage usage in half compared to float32, while maintaining high retrieval accuracy for most AI workloads.  Float16 can be especially useful for large-scale scenarios when you need to store many vector embeddings. By reducing vector size, you can lower indexing and storage costs, making it easier to scale semantic search and AI agent memory retrieval. Learn more.  ",
+    "generalAvailabilityDate": "2025-11",
+    "id": "523796",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "productCategories": [
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Cosmos DB"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Features"
+    ],
+    "title": "Generally Available: Float16 data type for vector indexes in Azure Cosmos DB "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

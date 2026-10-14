@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "548101"
+  },
+  "fetchedAt": "2026-10-14T12:19:40.881Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "January",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "548101",
+    "created": "2026-01-22T22:30:50.7369873Z",
+    "description": "Organizations deploying workloads on Kubernetes often need a consistent way\nto enforce pod security configurations across clusters. Azure Kubernetes\nService (AKS) now supports Pod Security Standards within Deployment Safeguards,\nenabling centralized management of Baseline, Restricted, and Privileged standards\nat scale. This capability allows teams to ensure that deployment manifests\ncomply with selected security standards, help technical practitioners\nstrengthen workload security, reduce configuration drift, and simplify the\nrollout of cluster-wide security controls. Learn more.",
+    "generalAvailabilityDate": "2026-01",
+    "id": "548101",
+    "modified": "2026-01-22T22:30:50.7369873Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Deployment safeguards – pod security standard support in AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

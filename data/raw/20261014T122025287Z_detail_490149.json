@@ -1,0 +1,41 @@
+{
+  "args": {
+    "id": "490149"
+  },
+  "fetchedAt": "2026-10-14T12:20:25.287Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2024
+      },
+      {
+        "month": "December",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "490149",
+    "created": "2025-12-31T21:00:35.4690918Z",
+    "description": "The Geo-Replication feature for Azure Service Bus in the\npremium tier is now generally available. The Service Bus Geo-Replication\nfeature is one of the options to insulate\nAzure Service Bus applications against outages and disasters, providing\nreplication of both metadata (entities, configuration, properties) and data\n(message data and message property / state changes).  The Geo-Replication feature ensures that the metadata and\ndata of a namespace are continuously replicated from a primary region to one or\nmore secondary regions. Moreover, it allows promoting any secondary region to\nprimary, at any time.   Promoting a secondary repoints the endpoint for the\nnamespace to the selected secondary region and switches the roles between the\nprimary and secondary region. The promotion is nearly instantaneous once\ninitiated and doesn’t require any changes on the client side.  More information on this feature can be found in the documentation.  ",
+    "generalAvailabilityDate": "2025-12",
+    "id": "490149",
+    "modified": "2025-12-31T21:00:35.4690918Z",
+    "previewAvailabilityDate": "2024-07",
+    "productCategories": [
+      "Integration"
+    ],
+    "products": [
+      "Service Bus"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Geo-Replication for Azure Service Bus Premium"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

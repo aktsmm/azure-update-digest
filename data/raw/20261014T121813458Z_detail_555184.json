@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "555184"
+  },
+  "fetchedAt": "2026-10-14T12:18:13.458Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "Private Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "555184",
+    "created": "2026-02-06T23:00:02.6705187Z",
+    "description": "Today, Azure Disk Backup protects data by taking regular, crash-consistent snapshots of Azure Disks. These snapshots are stored within your subscription and tenant in a resource group, referred to as the Operational Tier in Azure Backup. This enables fast, operational recovery for scenarios such as accidental deletion or data corruption and is commonly used alongside Azure VM Backup, which provides application-aware protection for virtual machines.  Backup best practices recommend a 3-2-1 strategy, including storing a copy of backups offsite in an isolated location securing against a tenant-level compromise. With the introduction of Vault Tier backups, Azure Disk Backup now complements Azure VM Backup by extending disk-level protection with vault-based isolation, independent access controls, and immutability. This enables recovery of trusted data during ransomware attacks or tenant compromises, bringing disk backups in line with Azure VM Backup grade cyber-recovery security.  As part of this Private Preview, Azure Disk Backup introduces two key capabilities: Vault Tier Backup: Protect disk backups in a vault (offsite) to meet cyber-recovery, ransomware resilience, and compliance requirements. Regional Disaster Recovery: Restore disk backups to a paired Azure region, enabling new disaster-recovery scenarios alongside Azure VM Backup and Azure Site Recovery. If you’re interested in participating, sign up for the Private Preview here.",
+    "id": "555184",
+    "modified": "2026-02-06T23:00:02.6705187Z",
+    "privatePreviewAvailabilityDate": "2026-02",
+    "productCategories": [
+      "Management and governance",
+      "Storage"
+    ],
+    "products": [
+      "Azure Backup"
+    ],
+    "status": "In development",
+    "tags": [
+      "Features"
+    ],
+    "title": "Private Preview: Vaulted Backups for Azure Disk "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

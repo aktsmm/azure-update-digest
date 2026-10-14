@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "489855"
+  },
+  "fetchedAt": "2026-10-14T12:25:24.449Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "489855",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "Announcing the preview of JSON Web Token (JWT) validation in Azure Application Gateway — enabling authentication and token validation right at the Application gateway before traffic reaches your backend applications or APIs.Why It mattersProtect at the perimeter: Block requests with missing or invalid tokens (401/403) at the edge, ensuring only trusted traffic reaches your services.Boost performance: Offload token validation from your microservices or web apps to improve scalability and response times.Simplify operations: Apply consistent authentication policies centrally across multiple applications and routes.What’s included in the previewIssuer (iss) validationAudience (aud) matching - supports Client ID and/or custom App ID URIsExpiration (exp) enforcementSignature verification using JWKSLearn more.",
+    "id": "489855",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Security",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: JWT Validation in Azure Application Gateway"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

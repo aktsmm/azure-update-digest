@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "527805"
+  },
+  "fetchedAt": "2026-10-14T12:30:37.084Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "527805",
+    "created": "2025-11-18T17:01:02.7161876Z",
+    "description": "VNet Flow Log captures IP\ntraffic flowing through VNets, Subnets, & NICs for monitoring, troubleshooting,\nnetwork optimization, security, and compliance needs. This release introduces advanced filtering\ncapabilities in VNet Flow Logs, empowering users with unprecedented granular\ncontrol over network traffic logging. With support for nine distinct criteria including\nIP addresses, ports, protocols, encryption state, allowed/denied actions, flow\nstates, and traffic directions.  This empowers organization to surgically capture only\nthe traffic that truly matters most to their operations. This flexibility\nenables selective recording of intra/inter-VNet traffic, CIDR-based flows,\ninbound/outbound traffic or traffic flowing through specific ports and much more\nall through intuitive logical operations of AND and OR.  By prioritizing critical flows and tailoring\nmonitoring to user preferences, organizations gain faster, more actionable\ninsights while maintaining robust network visibility This release aids significant operational efficiencies\nby dramatically reducing log volume and noise. By targeting only relevant\ntraffic logs, organizations can streamline troubleshooting, minimize data\nprocessing overhead, and lower total cost of ownership (TCO) through reduced\nstorage requirements. The simplified log management not only preserves\nessential visibility but also ensures compliance and security monitoring remain\nuncompromised. environments. Learn more. ",
+    "id": "527805",
+    "modified": "2025-11-18T17:01:02.7161876Z",
+    "previewAvailabilityDate": "2025-11",
+    "productCategories": [
+      "Management and governance",
+      "Networking"
+    ],
+    "products": [
+      "Network Watcher"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Features",
+      "Management",
+      "Compliance"
+    ],
+    "title": "Public Preview: Azure VNet Flow Log - Filtering "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
