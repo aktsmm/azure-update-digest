@@ -1,0 +1,147 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["574343"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T14:41:30Z"
+  },
+  "slides": [
+    {
+      "key": "574343",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "WAF の「例外（Exceptions）」が一般提供（GA）に",
+        "subtitleJa": "誤検知した通信だけ、ルール単位で検査を回避できます（他の保護は有効なまま）",
+        "en": "Generally Available: Exceptions in WAF for Azure Application Gateway and Azure Front Door"
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "modifiedJst": "2026-10-09",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Application Gateway", "Azure Front Door", "Web Application Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Application Gateway（v2）/ Front Door の **WAF を運用している方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "誤検知への対処を、他の保護を保ったまま精密にできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "誤検知で困っていれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "誤検知を抑える「除外」は、要求の一部（ヘッダー・Cookie・クエリ引数・本文の項目）を WAF の評価から外す方法",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        },
+        "after": {
+          "text": "特定の要求そのものの検査を、ルール / ルール グループ / ルールセット単位でバイパスできる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "条件: リクエスト URI / リモート IP / ヘッダーの名前と値", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "範囲: ルール / ルール グループ / マネージド ルールセット全体", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "WAF ポリシー → [管理されたルール] → [例外] タブ → [例外の追加] で対象ルールセットとスコープを選択",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "WAF ポリシーに例外を適用する", "retrievedAt": "2026-10-14T14:45:00Z" }]
+            },
+            {
+              "text": "一致変数・演算子・値を設定し、[追加] → [保存] で適用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "WAF ポリシーに例外を適用する", "retrievedAt": "2026-10-14T14:45:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "次世代の WAF エンジンで、CRS 3.2 / DRS 2.1 以降のみ対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "冒頭", "retrievedAt": "2026-10-14T14:45:00Z" }]
+            },
+            {
+              "text": "上限: 1 ポリシー 60 例外。1 例外あたり 600 IP / 10 URI / 10 ヘッダー",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "Limitations", "retrievedAt": "2026-10-14T14:45:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "除外: 要求の一部だけ検査をスキップ / 例外: ルール単位で検査をバイパス",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "Azure WAF 経由のトラフィックを許可するオプション", "retrievedAt": "2026-10-14T14:45:00Z" }]
+            },
+            {
+              "text": "許可アクションのカスタム ルール: DRS / CRS / Bot Protection の検査を一括でバイパス",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "許可アクションを含むカスタム ルール", "retrievedAt": "2026-10-14T14:45:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "例: 1 つのルールが有効なモバイル アプリ要求をブロックする場合、そのルールだけに例外を作る",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "例外 (より詳細な制御)", "retrievedAt": "2026-10-14T14:45:00Z" }]
+            },
+            {
+              "text": "例外はできるだけ狭くする（広いと意図せず攻撃にさらされる恐れがある）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "Tip", "retrievedAt": "2026-10-14T14:45:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "waf", "term": "WAF", "type": "feature", "oneLine": { "text": "Web アプリを一般的な脅威や攻撃から保護する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "冒頭", "retrievedAt": "2026-10-14T14:45:00Z" }] } },
+        { "termKey": "false-positive", "term": "誤検知", "type": "term", "oneLine": { "text": "安全で予期される要求を、WAF がブロックしてしまうこと。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "冒頭", "retrievedAt": "2026-10-14T14:45:00Z" }] } },
+        { "termKey": "application-gateway", "term": "Application Gateway", "type": "product", "oneLine": { "text": "WAF ポリシーを関連付けて Web アプリを保護できる Azure のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "冒頭", "retrievedAt": "2026-10-14T14:45:00Z" }] } },
+        { "termKey": "azure-front-door", "term": "Azure Front Door", "type": "product", "oneLine": { "text": "特定のリージョンにデプロイせず、世界中の複数リージョンで動作するグローバル サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "Types of nonregional services", "retrievedAt": "2026-10-14T14:45:00Z" }] } },
+        { "termKey": "exclusion", "term": "除外（Exclusions）", "type": "feature", "oneLine": { "text": "要求の特定の属性を WAF の評価から省き、残りは通常どおり検査する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-exclusion", "locator": "冒頭", "retrievedAt": "2026-10-14T14:45:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T14:45:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Application Gateway は全リージョンで提供される基盤サービス、Front Door はグローバル",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-14T14:45:00Z" },
+          { "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "Azure Front Door (global)", "retrievedAt": "2026-10-14T14:45:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=574343",
+        "learn": [
+          { "title": "Azure Application Gateway WAF exceptions list", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locale": "ja-jp" },
+          { "title": "Azure Front Door の除外リストを使用する Web Application Firewall", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-exclusion", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
