@@ -1,0 +1,78 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573385"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T20:45:00Z"
+  },
+  "slides": [
+    {
+      "key": "573385",
+      "kind": "announcement",
+      "kindSource": "tags",
+      "label": "アナウンス",
+      "title": {
+        "ja": "GitHub Copilot 向け Azure canvases が発表",
+        "subtitleJa": "Copilot の会話の横で Azure の確認・コスト分析・スキル構築ができる共有ワークスペース",
+        "en": "Announcing: Azure canvases for GitHub Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-10-01",
+        "modifiedJst": "2026-10-01",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "September" }],
+        "status": null,
+        "products": ["Azure Copilot"],
+        "categories": ["ai", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**GitHub Copilot で Azure 作業を行う開発者・運用担当者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Azure のツールやダッシュボードを会話の横で使え、進捗と次のステップが見える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "今すぐの対応は不要。試す場合は下記クイックスタートの Hosted Skills キャンバスから", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "適用範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure のツール・ダッシュボード・ガイド付きワークフローを Copilot の会話の隣に表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Azure リソースの確認、コスト分析、ホステッド スキルの構築などに利用", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "permissions", "heading": "知っておくべき点（前提条件）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure Functions のキャンバスは現在プレビュー。GA 前に機能や構成名が変わる可能性", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-hosted-skills-canvas", "locator": "Important", "retrievedAt": "2026-10-14T20:45:00Z" }] },
+            { "text": "スタンドアロンの GitHub Copilot アプリが必要（VS Code 拡張機能とは別）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-hosted-skills-canvas", "locator": "Prerequisites", "retrievedAt": "2026-10-14T20:45:00Z" }] },
+            { "text": "Copilot Business / Enterprise では、管理者がアプリのポリシーを有効化する必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-hosted-skills-canvas", "locator": "Prerequisites", "retrievedAt": "2026-10-14T20:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "利用予定なら、Copilot アプリのポリシーと開発環境の前提を事前に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "canvas", "term": "キャンバス", "type": "feature", "oneLine": { "text": "表示されるコントロールと結果を提供し、Copilot がワークフローの完成を支援する画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-hosted-skills-canvas", "locator": "冒頭", "retrievedAt": "2026-10-14T20:45:00Z" }] } },
+        { "termKey": "hosted-skill", "term": "ホステッド スキル", "type": "feature", "oneLine": { "text": "Azure Functions 上で動かす、Copilot 向けのスキル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-hosted-skills-canvas", "locator": "冒頭", "retrievedAt": "2026-10-14T20:45:00Z" }] } },
+        { "termKey": "copilot-app", "term": "GitHub Copilot アプリ", "type": "product", "oneLine": { "text": "VS Code 拡張機能とは別の、スタンドアロンの Copilot アプリケーション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-hosted-skills-canvas", "locator": "Prerequisites", "retrievedAt": "2026-10-14T20:45:00Z" }] } },
+        { "termKey": "public-preview", "term": "プレビュー", "type": "label", "oneLine": { "text": "全 Azure 顧客が評価できるが、GA 前で変更の可能性があり、通常 SLA は保証されない段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T20:45:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573385",
+        "learn": [
+          { "title": "クイックスタート: Azure Functions のホスト スキル キャンバスでホステッド スキルをビルド・テストする", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-hosted-skills-canvas", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
