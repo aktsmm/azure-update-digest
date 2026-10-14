@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "560530"
+  },
+  "fetchedAt": "2026-10-14T10:45:50.314Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "560530",
+    "created": "2026-04-20T17:30:53.189513Z",
+    "description": "Azure Monitor now supports native ingestion of OpenTelemetry Protocol (OTLP) signals. Send telemetry directly from OpenTelemetry-instrumented applications by using the Azure Monitor Agent (AMA) to receive OTLP from your apps and export it to Azure Monitor. This is supported on Azure VMs, VM scale sets, and Azure Arc-enabled platforms.Instrument your workloads with OpenTelemetry SDKs and configure AMA. Then you can use Application Insights to monitor, triage, and troubleshoot app performance with the ingested OTLP data. Visualize OTLP metrics with pre-built Grafana dashboards and Prometheus query language in Azure, and query ingested logs and traces with OpenTelemetry semantics in Log Analytics.Learn more.",
+    "id": "560530",
+    "modified": "2026-04-20T17:30:53.189513Z",
+    "previewAvailabilityDate": "2026-04",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Open Source"
+    ],
+    "title": "Public Preview: Azure Monitor supports native OTLP ingestion using the Azure Monitor Agent "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

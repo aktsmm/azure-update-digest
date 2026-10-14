@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "564644"
+  },
+  "fetchedAt": "2026-10-14T10:39:35.031Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "564644",
+    "created": "2026-05-29T15:15:43.6800866Z",
+    "description": "Azure Site Recovery\n(ASR) now supports replication of virtual machines using Performance Plus\nenabled managed disks. With this update, virtual machines using Premium SSD,\nStandard SSD or Standard HDD managed disks with Performance Plus capability for\nhigher IOPS and throughput for their workloads can be protected with ASR for\ndisaster recovery in the Azure-to-Azure scenario. This support further ensures\nperformance consistency between primary and secondary regions during\nreplication, test failover and full failover for such disks. Learn more.",
+    "generalAvailabilityDate": "2026-05",
+    "id": "564644",
+    "modified": "2026-05-29T15:15:43.6800866Z",
+    "productCategories": [
+      "Management and governance",
+      "Migration"
+    ],
+    "products": [
+      "Azure Site Recovery"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Management"
+    ],
+    "title": "Generally Available: Azure Site Recovery Support for Performance Plus Managed Disks"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

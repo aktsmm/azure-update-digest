@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "558102"
+  },
+  "fetchedAt": "2026-10-14T10:53:43.585Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "558102",
+    "created": "2026-03-04T21:15:02.2751745Z",
+    "description": "Over the years, we’ve made significant investments to improve the responsiveness of the Azure Policy service. As a result, policy assignment creation and updates for Resource Manager mode policies now get enforced within 5 minutes.In light of cache refresh optimizations that are now in place, we’re removing the ‘login/logout workaround’ that triggered faster propagation of policy changes in your environment.Starting April 30, 2026, the ‘login/logout’ workaround will no longer be available, enabling further enhancements in performance and reliability for all customers.",
+    "id": "558102",
+    "modified": "2026-03-04T21:15:02.2751745Z",
+    "productCategories": [
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Policy"
+    ],
+    "tags": [
+      "Compliance"
+    ],
+    "title": "Retirement: Azure Policy faster enforcement and retirement of login/logout workaround"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

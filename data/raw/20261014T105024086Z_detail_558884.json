@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "558884"
+  },
+  "fetchedAt": "2026-10-14T10:50:24.086Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "558884",
+    "created": "2026-03-25T17:30:45.7754801Z",
+    "description": "You can now stream row‑level data changes—inserts, updates, and deletes—from Azure SQL Managed Instance to Azure Event Hubs in near real time with change event streaming (CES). SQL publishes changes as transactions commit, reducing latency while minimizing operational overhead on your workload.CES simplifies real‑time integration by eliminating the need for change data capture, change tracking, custom polling, or external connectors. You configure streaming once at the database layer, and SQL handles reliability, retries, and log coordination. Events are emitted in structured JSON using the CloudEvents standard, allowing a single stream to fan out to multiple downstream consumers without increasing load on your SQL Managed Instance.With CES, you can build event‑driven microservices, enable real‑time analytics, keep caches and search indexes in sync, and continuously ingest data into streaming and analytics platforms—all without changing your application code. We encourage you to try the public preview and share feedback as we continue to refine the feature.Learn more.",
+    "id": "558884",
+    "modified": "2026-03-25T17:30:45.7754801Z",
+    "previewAvailabilityDate": "2026-03",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database",
+      "Azure SQL Managed Instance"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Azure SQL Managed Instance change event streaming "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

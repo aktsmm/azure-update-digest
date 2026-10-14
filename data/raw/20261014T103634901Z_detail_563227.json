@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563227"
+  },
+  "fetchedAt": "2026-10-14T10:36:34.901Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563227",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Microsoft Foundry IQ adds public preview support for OneLake Catalog as a knowledge source, so agents can ground responses on lakehouse tables, files, and shortcuts already governed in Microsoft Fabric. Data engineers register the OneLake catalog once and Foundry IQ ingests the cataloged items, respecting Fabric permissions and sensitivity labels at query time. Analysts get agent answers that cite the same curated datasets used in dashboards and reports, instead of duplicate copies sitting in a separate vector store. The integration removes a common gap between BI data and AI applications, letting customers reuse their Fabric investment for agent grounding. Setup uses the same connection flow as other Foundry IQ knowledge sources. Learn more.",
+    "id": "563227",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: OneLake Catalog integration for Foundry IQ Knowledge Sources"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

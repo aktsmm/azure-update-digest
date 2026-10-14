@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "559886"
+  },
+  "fetchedAt": "2026-10-14T10:45:43.023Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "559886",
+    "created": "2026-04-21T20:30:49.5079707Z",
+    "description": "Azure Monitor pipeline is now generally available.Azure Monitor pipeline provides a centralized control point for telemetry ingestion and transformation, designed specifically for secure, high‑throughput, enterprise‑scale scenarios. It's built on open-source technologies from the OpenTelemetry ecosystem and includes the components needed to receive telemetry from local clients, process that telemetry, and forward it to Azure Monitor. With Azure Monitor pipeline control, you can: Ensure logs land directly in Azure‑native schemas – automatic schematization into tables such as Syslog and CommonSecurityLog Prevent data loss during intermittent connectivity across sites – local buffering in persistent storage with automated backfill  Reduce ingestion costs before data reaches the cloud – centralized filtering, aggregation, and transformation  Ingest telemetry at sustained high volumes in the range of hundreds and thousands of events per second – horizontally and vertically scalable pipeline architecture  Secure telemetry ingestion without managing certificates on each host individually – centralized TLS/mTLS with automated certificate provisioning and zero‑downtime rotation Maintain visibility into ingestion infrastructure health – pipeline performance and health monitoring  Plan deployments confidently at large scale – infrastructure sizing guidance for expected telemetry volume Learn more: Azure Monitor pipeline overview | Microsoft Learn Azure Monitor pipeline blog ",
+    "generalAvailabilityDate": "2026-04",
+    "id": "559886",
+    "modified": "2026-04-21T20:30:49.5079707Z",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure Monitor pipeline"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

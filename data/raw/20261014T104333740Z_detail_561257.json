@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "561257"
+  },
+  "fetchedAt": "2026-10-14T10:43:33.740Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "561257",
+    "created": "2026-04-30T18:00:11.3409793Z",
+    "description": "Support for prefix-scoped access for User Delegation\nSAS for Azure Blob Storage is generally available in all\nAzure regions. SAS tokens for Blob Storage have historically supported\ntwo levels of scope: container and individual blob. With this release, you can\nnow scope access to a prefix or virtual directory within\na container, granting access to all blobs beneath the path. This is especially valuable for applications that organize\ndata by tenant, workspace, project, or department within a shared\ncontainer. Instead of granting access to an entire container or\ngenerating many blob-level tokens, you can now issue a single SAS token scoped\nto a set of blobs through a prefix.  Prefix-scoped access is supported for both Blob and Data\nLake storage accounts. Learn\nmore:  \n Prefix\n     Scoped Access for User Delegation SAS Blog  \n Create\n     a user delegation SAS documentation  ",
+    "generalAvailabilityDate": "2026-04",
+    "id": "561257",
+    "modified": "2026-04-30T18:00:11.3409793Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Blob Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Prefix-scoped access for User Delegation SAS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

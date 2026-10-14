@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "559547"
+  },
+  "fetchedAt": "2026-10-14T10:47:41.331Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "559547",
+    "created": "2026-04-07T19:30:53.5106906Z",
+    "description": "Azure Red Hat OpenShift (ARO) now supports NVIDIA H100 and\nH200 GPU-based Azure Virtual Machine SKUs, enabling customers to run\nlarge-scale AI, machine learning, and high-performance computing (HPC)\nworkloads on a fully managed OpenShift service. This update allows\norganizations to deploy GPU-accelerated containers using enterprise Kubernetes\nwith built-in security, lifecycle management, and Azure integration.\nWith H100 and H200 GPUs, customers can take advantage of next-generation\nperformance for training and inferencing large language models, data analytics,\nand advanced simulation workloads. Running these GPUs on ARO provides a\nconsistent OpenShift experience across on-premises and cloud environments while\nleveraging Azure infrastructure for scalability, availability, and governance.\nThis capability helps customers standardize AI and accelerated computing\nworkloads on OpenShift while reducing operational overhead through a managed\nservice, making it easier to move from experimentation to production on Azure.  ",
+    "generalAvailabilityDate": "2026-04",
+    "id": "559547",
+    "modified": "2026-04-07T19:30:53.5106906Z",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Red Hat OpenShift"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Open Source",
+      "Regions & Datacenters"
+    ],
+    "title": "Generally Available: Azure Red Hat OpenShift adds NVIDIA H100 and H200 GPU support"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

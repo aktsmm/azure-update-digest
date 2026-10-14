@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "562764"
+  },
+  "fetchedAt": "2026-10-14T10:32:35.050Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "562764",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Building AI applications on Azure Cosmos DB just got simpler. With integrated embeddings, now in public preview, Azure Cosmos DB for NoSQL can automatically generate and maintain embeddings for your data, without the need to build a separate pipeline. Now you can configure your container's vector embedding policy with one or more source properties, a target property, and a Microsoft Foundry model endpoint. Cosmos DB handles the rest: as items are created or updated, embeddings are generated and kept in sync automatically. Before this announcement, developers had to write integration code to call embedding APIs, build change-tracking logic to keep embeddings current, and manage the glue code that connects data changes to embedding generation. Integrated embeddings removes this entire layer of complexity, letting you focus on your application logic.  Azure OpenAI embedding models via Microsoft Foundry are supported in the initial release. Learn more.",
+    "id": "562764",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Cosmos DB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Integrated embeddings for Azure Cosmos DB for NoSQL"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

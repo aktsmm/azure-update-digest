@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "561947"
+  },
+  "fetchedAt": "2026-10-14T10:42:10.874Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "561947",
+    "created": "2026-05-12T18:30:55.4534273Z",
+    "description": "Starting May 1, 2026, all Azure Service Bus Premium\nnamespaces deployed in regions with Availability\nZone support now qualify for a 99.99% uptime SLA.\nPremium is the tier customers choose for their most important workloads, and\nthis update brings the SLA in line with the zone-redundant infrastructure those\nnamespaces already run on. Previously, the 99.99% SLA required partitioned\nnamespaces to be enabled. That requirement has been removed - any Premium\nnamespace in an AZ region now receives the higher SLA automatically. Availability Zones are physically separate datacenters\nwithin an Azure region, each with independent power, cooling, and networking. A\nPremium namespace deployed in an AZ region is automatically replicated across\nmultiple zones, so the messaging service stays available even if a full\ndatacenter goes offline. No configuration changes are required for existing\ndeployments to benefit from the higher SLA. Partitioned namespaces remain fully supported for workloads\nthat need higher throughput through multi-broker distribution. The change is\npurely about SLA eligibility - partitioning is no longer a prerequisite for the\n99.99% commitment. Learn more: SLA\nfor Azure Service Bus  Service\nBus Premium tier documentation. Azure\nService Bus blog ",
+    "generalAvailabilityDate": "2026-05",
+    "id": "561947",
+    "modified": "2026-05-12T18:30:55.4534273Z",
+    "productCategories": [
+      "Integration"
+    ],
+    "products": [
+      "Service Bus"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Compliance"
+    ],
+    "title": "Update: 99.99% uptime for all Azure Service Bus Premium namespaces in Availability Zone regions"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

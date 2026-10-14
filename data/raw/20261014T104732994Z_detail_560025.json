@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "560025"
+  },
+  "fetchedAt": "2026-10-14T10:47:32.994Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "February",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "560025",
+    "created": "2026-04-08T17:30:02.4404486Z",
+    "description": "Azure Migrate\nnow supports assessments for Azure Files, allowing customers and partners to\nefficiently plan migrations of on-premises SMB and NFS file shares (Windows and\nLinux) to Azure Files. This feature enables discovery of file shares,\nvisibility into capacity and sources, and provides Azure Files SKU\nrecommendations for informed migration decisions.   Key benefits\ninclude:  \n Discover and review on-premises SMB/NFS shares  \n Group, tag, and filter shares for better\n     planning  \n Generate business cases comparing Azure Files and\n     on-premises costs  \n Assess shares with Azure Files SKU recommendations\n     based on region, redundancy, media type, and performance  This\nenhancement streamlines migration planning, reduces guesswork, and speeds up\ntransitions to Azure Files, especially for complex environments.   Azure Files is\nideal for modernisation, backup, and lift-and-shift needs. Integrating\nassessments into Azure Migrate ensures a seamless migration journey using the\ntrusted Azure platform.   Getting started:To get started,\nuse Azure Migrate to set up discovery and run Azure Files assessments\ndirectly from the Azure portal.  Learn\nmore. ",
+    "id": "560025",
+    "modified": "2026-04-08T17:30:02.4404486Z",
+    "previewAvailabilityDate": "2026-02",
+    "productCategories": [
+      "Management and governance",
+      "Migration"
+    ],
+    "products": [
+      "Azure Migrate"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Azure Files assessments are now available using Azure Migrate"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

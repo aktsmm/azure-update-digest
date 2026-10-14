@@ -1,0 +1,41 @@
+{
+  "args": {
+    "id": "558662"
+  },
+  "fetchedAt": "2026-10-14T10:53:02.387Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "December",
+        "ring": "Private Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "558662",
+    "created": "2026-03-16T18:30:34.1207616Z",
+    "description": "Microsoft Entra ID-based access for Azure Blob Storage SFTP\nis now in public preview. This new capability empowers you to use Microsoft\nEntra ID identities (including guest users via Entra External Identities) to\nsecurely connect to Azure Blob Storage via SFTP without needing local user\ncreation and management. Key capabilities include: Single Sign-On and Multi-Factor Authentication:\nUsers authenticate with their existing corporate credentials, with MFA support\nto protect against credential theft. Conditional Access Policies: Apply sophisticated\naccess controls based on user location, device compliance, risk level, and\nother contextual factors. Unified Identity Lifecycle: SFTP access is\nautomatically updated or revoked through your existing identity management\nprocesses when users leave or change roles. External Identity Support: Securely collaborate\nwith partners and vendors using Entra External Identities (B2B) without\ncreating local accounts. Native Azure RBAC, ABAC, and ACL Integration:\nSFTP access seamlessly integrates with Azure's comprehensive authorization\nframework, respecting the same permissions as REST API, Azure CLI, and other\naccess methods. Questions or\nfeedback? We would love to hear from you! Reach out to our team at blobsftp@microsoft.com.Get started: Register for the\npreview feature in your subscription, assign RBAC roles to a user or group, and\ngenerate an SSH certificate to connect via SFTP.  Learn\nmore. ",
+    "id": "558662",
+    "modified": "2026-03-16T18:30:34.1207616Z",
+    "previewAvailabilityDate": "2026-03",
+    "privatePreviewAvailabilityDate": "2025-12",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Blob Storage"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Entra ID-Based Access for Azure Blob Storage SFTP"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

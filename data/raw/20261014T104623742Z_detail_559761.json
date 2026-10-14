@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "559761"
+  },
+  "fetchedAt": "2026-10-14T10:46:23.742Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "559761",
+    "created": "2026-04-15T17:15:38.5873423Z",
+    "description": "Cross-tenant customer-managed\nkeys (CMK) for Premium SSD v2 and Ultra Disks are\nnow generally available. This capability allows managed disks to be\nencrypted using a customer-managed key stored in an Azure Key Vault\nlocated in a different Microsoft Entra tenant than the disk resource. This\nenables scenarios where resource ownership and key ownership are intentionally\nseparated across tenants, for example, in multi-tenant or service provider\nenvironments.  Service providers building\nsoftware-as-a-service (SaaS) solutions on Azure can now offer customers the\nability to manage their own encryption keys with Premium SSD v2 and Ultra\ndisks. With cross-tenant CMK support, customers can store and control their keys\nwithin their own Microsoft Entra tenant using Azure Key Vault.  As a result,\ncustomers maintain full ownership and control of their encryption keys, while\nalso strengthening data governance, security, and compliance across tenant\nboundaries.Learn\nmore.",
+    "generalAvailabilityDate": "2026-04",
+    "id": "559761",
+    "modified": "2026-04-15T17:15:38.5873423Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Disk Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Compliance",
+      "Security"
+    ],
+    "title": "Generally Available: Encrypt Premium SSD v2 and Ultra Disks with Cross Tenant Customer Managed Keys"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

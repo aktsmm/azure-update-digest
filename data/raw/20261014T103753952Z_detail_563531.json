@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563531"
+  },
+  "fetchedAt": "2026-10-14T10:37:53.952Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563531",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure AI Search now offers a serverless option for native indexers in public preview, removing the requirement to provision and manage indexer compute for ingestion workflows. Indexer execution scales with workload demand, so customers stop paying for idle capacity during off-peak hours and stop over-provisioning to handle bursts. The MVP supports document ingestion and enrichment patterns commonly used in RAG pipelines, Foundry Knowledge Bases, and AI-driven applications backed by Azure AI Search. Existing native indexer definitions continue to work; customers opt into serverless execution on a per-indexer basis and keep their current data sources, skillsets, and target indexes. The release is aimed at enterprise developers and platform engineers running large or bursty ingestion jobs who want lower operational overhead and usage-aligned cost.Learn more.",
+    "id": "563531",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Serverless indexers in Azure AI Search"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

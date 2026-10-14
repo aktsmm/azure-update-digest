@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "557922"
+  },
+  "fetchedAt": "2026-10-14T10:50:54.071Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "557922",
+    "created": "2026-03-24T17:30:29.8186836Z",
+    "description": "As Kubernetes environments scale\nacross regions and clusters, IP‑based networking becomes difficult to manage\nand provides limited application‑level visibility and security controls. Azure\nKubernetes Application Network introduces application‑layer abstractions for\nKubernetes traffic, including mutual TLS for pod‑to‑pod communication,\napplication‑aware authorization policies, and detailed traffic telemetry across\ningress and in‑cluster communication, with built‑in multi‑region connectivity\nconfigured in a single step. This enables teams to apply identity‑aware\nsecurity and gain deeper traffic insight without deploying or operating a full\nservice mesh, reducing operational overhead while improving consistency and\nauditability. Learn more.  ",
+    "id": "557922",
+    "modified": "2026-03-24T17:30:29.8186836Z",
+    "previewAvailabilityDate": "2026-03",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Microsoft Azure Kubernetes Application Network "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

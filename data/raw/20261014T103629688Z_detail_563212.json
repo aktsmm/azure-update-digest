@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563212"
+  },
+  "fetchedAt": "2026-10-14T10:36:29.688Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563212",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Microsoft Foundry adds region-agnostic reservations for\nGlobal Provisioned Throughput Units (PTUs) at general availability, letting\ncustomers commit to PTU capacity once and consume it from any supported region.\nPreviously, a reserved PTU commitment was tied to a single region, which\ncreated friction for customers that operated multi-region applications or\nwanted to shift workloads as traffic patterns changed. With region-agnostic\nreservations, finance teams can sign one reservation contract and engineering\nteams can deploy models in whichever Azure region best fits a given workload,\nwith the reservation discount applied automatically. Reservations cover\nsupported Foundry Models including Azure Direct first-party models such as\nGPT-5 and GPT-4.1. Existing region-bound reservations continue to honor their\noriginal terms. Learn more. ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563212",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Region-agnostic reservations for Global PTU in Microsoft Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

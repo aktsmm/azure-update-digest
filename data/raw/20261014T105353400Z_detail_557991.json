@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "557991"
+  },
+  "fetchedAt": "2026-10-14T10:53:53.400Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "557991",
+    "created": "2026-03-02T19:15:14.5977479Z",
+    "description": "Today we’re announcing the General Availability of Azure Databricks Lakebase, a managed PostgreSQL environment with next generation separation of storage and compute for OLTP, providing instant availability, instant clones, and scale-to-zero. Lakebase lets you build intelligent, transactional applications and AI agents on the same governed data foundation you already use for analytics, BI, and machine learning in Azure Databricks. With Lakebase, operational data is written directly to lakehouse storage instead of siloed OLTP systems and shadow databases. This eliminates brittle ETL pipelines, reduces data duplication, and enables real‑time insights and AI on fresh operational data without complex data movement. Developers can use familiar Postgres tools and libraries while Azure handles security, identity, networking, and compliance. Lakebase offers autoscaling, scale‑to‑zero, point‑in‑time recovery, and instant database branching so teams can move faster from prototype to production while maintaining enterprise‑grade reliability. Running on Azure Databricks, Lakebase unifies operational and analytical workloads on open data formats, making it easier to power AI‑driven customer experiences, real‑time operational analytics, and modern line‑of‑business applications—all with the global scale and enterprise trust of the Microsoft cloud. Learn more. ",
+    "generalAvailabilityDate": "2026-03",
+    "id": "557991",
+    "modified": "2026-03-02T19:15:14.5977479Z",
+    "productCategories": [
+      "AI + machine learning",
+      "Analytics"
+    ],
+    "products": [
+      "Azure Databricks"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure Databricks Lakebase "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

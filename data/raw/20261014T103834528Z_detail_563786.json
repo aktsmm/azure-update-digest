@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "563786"
+  },
+  "fetchedAt": "2026-10-14T10:38:34.528Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563786",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "You can now proactively validate Major Version Upgrade (MVU) readiness for Azure Database for PostgreSQL flexible server before initiating the actual upgrade process. New pre-upgrade validation checks allow you to independently run upgrade compatibility validations and identify potential blockers ahead of time, helping reduce failed upgrade attempts and improve operational predictability. The validation process checks your server against Azure PostgreSQL upgrade policies and PostgreSQL pg_upgrade -check compatibility requirements. It surfaces actionable guidance for issues such as unsupported extensions, replication slots, prepared transactions, configuration mismatches, and other upgrade constraints. You can resolve identified issues, rerun validations as needed, and proceed with the upgrade only when your environment is ready. By shifting validation from inline execution during upgrade to a proactive pre-flight step, this capability helps improve first-time upgrade success rates, reduce troubleshooting effort, and simplify upgrade planning for production workloads.Learn more.",
+    "id": "563786",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Pre-upgrade validation checks for Azure Database for PostgreSQL"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

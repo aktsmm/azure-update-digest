@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "562502"
+  },
+  "fetchedAt": "2026-10-14T10:32:04.462Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "562502",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure Functions now supports Go as a first-class language option in public preview. With this release, developers can author event-driven serverless apps in Go using the Azure Functions Go programming model and SDK, while still benefiting from Azure Functions capabilities such as triggers, bindings, and integrated observability. Go support helps teams that standardize on Go deliver cloud-native APIs, automation, and integration workloads without introducing a second language stack. Developers can use familiar Go tooling and patterns while building Functions that respond to HTTP requests, scheduled events, messaging systems, and storage events. In preview, Go language is supported on the Azure Functions Flex Consumption plan. This enables rapid scaling, pay-per-use economics, and streamlined deployment for Go workloads on Azure. Learn more.",
+    "id": "562502",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build"
+    ],
+    "title": "Public Preview: Go language support on Azure Functions"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

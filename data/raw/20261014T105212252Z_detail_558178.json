@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "558178"
+  },
+  "fetchedAt": "2026-10-14T10:52:12.252Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "558178",
+    "created": "2026-03-18T17:00:05.1025868Z",
+    "description": "The MSSQL extension for Visual Studio Code now introduces Data API builder in public preview with built-in GitHub Copilot integration, bringing a guided back-end generation experience directly into your development workflow. You can generate REST, GraphQL, and MCP endpoints from your SQL database schema inside Visual Studio Code without manually configuring infrastructure or connection strings.  You select tables, define CRUD operations, and configure per-entity settings such as authorization roles, and primary keys, and route behavior through a dedicated API design interface. The generated Data API builder configuration file stays synchronized with your selections, can be previewed directly in the extension, and can be added to your workspace for full transparency and version control. You can modify the configuration manually or use GitHub Copilot to plan and generate updates.  With just a few steps, the extension provisions and runs a local Data API builder container using your existing database connection context. This guided experience helps you move from validated schema to a working back end in minutes, enabling you to build modern, AI-ready, secure applications faster without switching tools or losing control. Learn more. ",
+    "id": "558178",
+    "modified": "2026-03-18T17:00:05.1025868Z",
+    "previewAvailabilityDate": "2026-03",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Data API builder with built-in GitHub Copilot in MSSQL extension "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "562564"
+  },
+  "fetchedAt": "2026-10-14T10:32:19.006Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562564",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Customers running regulated or sensitive containerized workloads often need stronger protection for data while it is actively being processed, especially in scenarios that require higher isolation and stricter compliance controls. Confidential Compute in Azure Container Apps provides hardware-backed Trusted Execution Environments (TEEs) through workload profiles, extending protection to data in use in addition to data at rest and in transit. With this capability now generally available, teams can run higher-trust workloads in Azure Container Apps with stronger isolation for sensitive data and a clearer path to meeting stricter compliance and data sovereignty requirements. This release enables Azure Container Apps workloads to use hardware-enforced isolation mechanisms that protect sensitive data while it is being processed and help prevent unauthorized access to in-memory data, including from the underlying infrastructure. Teams can now deploy confidential workloads on a serverless container platform with stronger protections for data in use. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562564",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Container Apps"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Confidential Compute support on Azure Container Apps"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

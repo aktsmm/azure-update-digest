@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "560015"
+  },
+  "fetchedAt": "2026-10-14T10:44:29.941Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "560015",
+    "created": "2026-04-24T18:15:17.6031683Z",
+    "description": "WireGuard in‑transit encryption is now generally\navailable for Azure Kubernetes Service (AKS) clusters using Azure CNI\npowered by Cilium and Advanced Container Networking Services (ACNS). This capability enables transparent, node‑level encryption\nfor inter‑node pod traffic using WireGuard’s modern cryptography, helping\nprotect data in transit as it traverses the underlying network\ninfrastructure  without requiring application changes. Key\ncapabilities: \n In‑transit encryption for inter‑node pod\n     traffic within an AKS cluster \n No application or workload changes required \n Fully managed key generation and rotation, handled\n     automatically by AKS \n Minimal operational overhead, with no sidecars or\n     additional control planes Learn\nmore.",
+    "generalAvailabilityDate": "2026-04",
+    "id": "560015",
+    "modified": "2026-04-24T18:15:17.6031683Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Generally Available: WireGuard In‑Transit Encryption for Azure Kubernetes Service (AKS)"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

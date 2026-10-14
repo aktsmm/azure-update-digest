@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "564407"
+  },
+  "fetchedAt": "2026-10-14T10:38:52.330Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "564407",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure AI Search makes OneLake catalog integration generally available for knowledge sources, so customers can register a OneLake item once and reuse it across multiple knowledge sources and agents. The integration honors existing OneLake item-level permissions, sensitivity labels, and lineage, so when a Fabric admin restricts access in OneLake the change flows through to every dependent agent on the next query. Developers pick a catalog entry instead of pasting a path, and the knowledge source picks up schema metadata, freshness signals, and item ownership without extra configuration. Teams already organizing data in OneLake can extend that catalog to Foundry agents and search workloads with no duplicate registration. The integration is available in all regions where Azure AI Search and OneLake operate together. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "564407",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: OneLake catalog integration for Azure AI Search knowledge sources"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

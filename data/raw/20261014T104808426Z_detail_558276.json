@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "558276"
+  },
+  "fetchedAt": "2026-10-14T10:48:08.426Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "558276",
+    "created": "2026-04-02T16:30:09.2101811Z",
+    "description": "AzureDnsZone\nendpoints (preview) for Azure Blob storage accounts will enter\nretirement in March 2027. Customers leveraging AzureDnsZone endpoints (preview)\nshould transition to Standard endpoints for all new and existing blob storage\naccount deployments by April 1, 2027. Standard endpoints are\nGenerally Available and fully supported for production workloads.   As a preview customer, we thank\nyou for your feedback on the preview.   What do I need to do?  \n Your existing storage accounts will not be impacted\n     and will not be deleted.   \n Over the coming months, we will remove the ability to\n     create new storage accounts with AzureDnsZone endpoints.   Follow our instructions to update your deployments to Standard endpoints. Standard endpoints are generally available and offer full support for production workloads.\"How do I identify my storage\naccounts with AzureDnsZone endpoints?  To identify your storage accounts\nwith AzureDnsZone endpoints, you can use the following Azure Resource Graph\nquery:  resources\n| where type =~ \"microsoft.storage/storageaccounts\"\n| where ['kind'] == \"StorageV2\"\n| parse-where properties with * \"dnsEndpointType\\\":\\\"\"\ndnsEndpointType '\",' *\n| where dnsEndpointType == \"AzureDnsZone\"  Help and support:  If you have questions, you\ncan get answers from community experts in Microsoft Q&A. If\nyou have a support plan and need technical assitance, please create a support\nrequest. ",
+    "id": "558276",
+    "modified": "2026-04-02T16:30:09.2101811Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Blob Storage"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: AzureDnsEndpoints for Azure storage accounts will be retired March 2027"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

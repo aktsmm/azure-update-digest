@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "558836"
+  },
+  "fetchedAt": "2026-10-14T10:49:52.020Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "558836",
+    "created": "2026-03-25T20:00:39.2632249Z",
+    "description": "We're excited to announce that private endpoint support for Azure Cosmos DB Mirroring in Microsoft Fabric is now generally available. You can now unlock powerful analytics on your operational data while keeping your enhanced network security posture intact.Now you can configure virtual network restrictions, set up private endpoints, and help ensure your data stays protected within private network boundaries as data replicates to your Fabric workspace. You can use the Azure Cosmos DB network access control list capability to authorize specific Fabric workspace IDs for trusted connections to your Cosmos DB account.This capability is essential for regulated industries and organizations handling sensitive data where network isolation is required. Security teams can maintain strict network controls, while you have the freedom to build real-time dashboards, train AI models, and run advanced analytics on your operational data within a secure boundary.Visit our documentation to download the PowerShell automation script and configure your environment.Learn more.",
+    "generalAvailabilityDate": "2026-03",
+    "id": "558836",
+    "modified": "2026-03-25T20:00:39.2632249Z",
+    "productCategories": [
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Cosmos DB"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Cosmos DB Mirroring in Microsoft Fabric with private endpoints "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

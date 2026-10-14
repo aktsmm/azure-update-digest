@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563616"
+  },
+  "fetchedAt": "2026-10-14T10:38:18.833Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563616",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Microsoft Foundry refreshes the Foundry Memory public preview with a redesigned storage model, new retrieval controls, and tighter integration with the Foundry Agent Service tool surface. Agents using Memory can now write, search, and update user-scoped and session-scoped memories through a single tool, with built-in semantic deduplication and TTL controls that keep memory stores from drifting over time. The refresh adds region availability, content safety filtering on memory writes, and improved observability so memory reads and writes appear as first-class spans in Foundry tracing. Customers running pilots on the previous Memory preview continue to work; the refresh ships as an opt-in upgrade in the Foundry portal and through the agent tool catalog. The release targets agents that need stable user context across multi-turn and multi-session interactions. Learn more.",
+    "id": "563616",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Foundry Memory preview refresh"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "557527"
+  },
+  "fetchedAt": "2026-10-14T10:53:19.732Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "557527",
+    "created": "2026-03-11T18:00:35.4377847Z",
+    "description": "You can now enhance data security for your Azure Database\nfor PostgreSQL workloads by\nusing customer managed keys (CMKs) with Premium SSD\nv2 disks. Available in public preview, this update gives\nyou greater control over how your data at rest is encrypted, allowing you to\nuse your own keys stored in Azure Key Vault while continuing to take advantage\nof the high performance and scalability of Premium SSD v2 storage. CMKs\nare especially valuable if you operate in regulated industries\nor need to meet internal compliance requirements\nthat specify customer‑controlled encryption and separation of duties. With this preview, you can manage\nkey rotation and access policies according to your organization’s standards,\nwhile Azure continues to handle the underlying database operations and\nperformance optimization. The result is a stronger security posture\nwithout compromising performance, availability, or ease of management for your\nPostgreSQL deployments on Azure.   Learn\nmore.  ",
+    "id": "557527",
+    "modified": "2026-03-11T18:00:35.4377847Z",
+    "previewAvailabilityDate": "2026-03",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Customer‑managed encryption keys now supported on Premium SSD v2 disks for Azure Database for PostgreSQL "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

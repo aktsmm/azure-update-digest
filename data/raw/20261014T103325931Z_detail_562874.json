@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "562874"
+  },
+  "fetchedAt": "2026-10-14T10:33:25.931Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "562874",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Integrating\napps with SaaS and line-of-business systems today means writing custom API\nclient code, managing credentials, and handling retries, pagination, and\nwebhooks for every service. Connector\nNamespace is a fully managed service providing pre-built\nconnectors to services like SharePoint, Salesforce, Outlook, and SAP. Each\nconnector exposes typed actions and event triggers through a shared connection\nmodel, while the platform handles auth, credential rotation, polling, webhook\ndelivery, and remote MCP hosting.Key\nfeatures: \n Managed connections: reusable,\n     authenticated bindings with built-in credential storage and rotation \n Strongly-typed SDKs for C#,\n     Node.js, and Python, plus HTTP access  \n Managed connector MCP servers\n     hosting: deploy connector-as-MCP-server so agents can invote them as\n     tools with custom wrappers \n Hosted MCP servers: deploy from a\n     catalog of supported servers with managed dependencies,\n     configuration, auth, and more \n Flexible compute: use with\n     Azure Functions, Container Apps, App Service, or your own infra \n Enterprise security: VNet, private\n     endpoints, RBAC, and Azure Monitor built in.  With\nConnector Namespace, you integrate apps and AI agents through a consistent\nmodel, reuse connections, go from connector to MCP server in minutes, and let\nthe platform handle auth and reliability so you ship faster with fewer moving\nparts. Learn\nmore. ",
+    "id": "562874",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Integration",
+      "Internet of Things"
+    ],
+    "products": [
+      "Logic Apps"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build"
+    ],
+    "title": "Public preview: Connector Namespace"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

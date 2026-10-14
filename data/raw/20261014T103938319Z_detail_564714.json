@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "564714"
+  },
+  "fetchedAt": "2026-10-14T10:39:38.319Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "564714",
+    "created": "2026-05-28T05:30:31.9108097Z",
+    "description": "Application Gateway for Containers service mesh integration\nwith Istio is now generally available. This capability simplifies secure\nnorth-south traffic into workloads running in an Istio service mesh by\nautomating mutual TLS (mTLS) connectivity between Application Gateway for\nContainers and mesh-enabled services.  With general availability, customers can use this\nintegration with both upstream open-source Istio and the\nIstio-based service mesh add-on for Azure Kubernetes Service (AKS).\nThis gives teams flexibility to adopt a managed AKS experience while using\nApplication Gateway for Containers as their ingress path for services inside\nand outside the mesh.  \n Single ingress solution: Route traffic to\n     services both inside and outside the mesh through one gateway.  \n Reduced operational overhead: Simplify ingress\n     configuration and avoid repetitive mTLS definitions.  \n Managed certificate lifecycle: Automate\n     certificate trust and rotation for secure communication with mesh\n     workloads.  \n Flexible deployment options: Support both\n     upstream Istio and the AKS Istio-based service mesh add-on.  Learn more:  \n Application\n     Gateway for Containers + Istio service mesh  \n Application Gateway for\n     Containers overview  \n Original\n     public preview announcement  ",
+    "generalAvailabilityDate": "2026-05",
+    "id": "564714",
+    "modified": "2026-05-28T05:30:31.9108097Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Application Gateway for Containers – Service Mesh integration with Istio"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

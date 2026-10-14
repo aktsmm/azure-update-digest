@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "557927"
+  },
+  "fetchedAt": "2026-10-14T10:50:58.355Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "557927",
+    "created": "2026-03-24T17:30:29.8186836Z",
+    "description": "Following the deprecation\nof ingress‑nginx, Kubernetes operators need a supported, standards‑aligned\nmigration path for ingress without the complexity of a full service mesh.\nApplication Routing with Meshless Istio enables adoption of the Kubernetes\nGateway API for ingress management while avoiding sidecar‑based architectures,\nand Microsoft is extending support for existing ingress‑nginx‑based Application\nRouting while contributing to the open‑source ingress2gateway project. This\nallows teams to modernize ingress configurations incrementally, maintain\noperational continuity, and align with evolving Kubernetes standards.Learn more.",
+    "id": "557927",
+    "modified": "2026-03-24T17:30:29.8186836Z",
+    "previewAvailabilityDate": "2026-03",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Application routing with meshless Istio in AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

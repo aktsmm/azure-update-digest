@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "562259"
+  },
+  "fetchedAt": "2026-10-14T10:41:12.377Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562259",
+    "created": "2026-05-19T17:00:29.3909817Z",
+    "description": "Azure NetApp Files cache volumes is now Generally Available. Azure NetApp Files now support cache volumes, which are cloud-based caches of an external origin volume, containing only the most actively accessed data on the volume. This brings data and files closer to the user for faster throughput with a smaller footprint. Azure NetApp Files cache volumes simplify file distribution, reduces WAN latency, and lowers WAN/ExpressRoute bandwidth costs. Cache volumes is available in these regions.Learn more: \n What's\n     new in Azure NetApp Files \n Configure\n     a cache volume for Azure NetApp Files \n Understand\n     Azure NetApp Files cache volumes \n Change\n     the service level of an Azure NetApp Files cache volume \n Manage\n     file access logs in Azure NetApp Files cache volume \n Break\n     file locks for an Azure NetApp Files cache volume \n Reset\n     SMB password for an Azure NetApp Files cache volume    ",
+    "generalAvailabilityDate": "2026-05",
+    "id": "562259",
+    "modified": "2026-05-19T17:00:29.3909817Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure NetApp Files"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure NetApp Files cache volumes "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

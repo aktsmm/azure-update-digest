@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "562010"
+  },
+  "fetchedAt": "2026-10-14T10:42:19.254Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562010",
+    "created": "2026-05-12T17:30:34.911185Z",
+    "description": "Azure Virtual Network Manager rule impact\nanalyzer is now generally available, empowering you\nto simulate the impact of your security admin rules on your virtual\nnetworks before deploying your rules. With this capability, you\ncan simulate the effects of your security admin rules on\nyour virtual networks’ existing traffic\nflows and modify rules as needed to ensure your\ndesired traffic flows are maintained and reduce the risk of\nunexpected connectivity issues. This feature is available in the Azure portal\nand is powered by Azure Network Watcher traffic analytics\nand virtual network flow logs, providing data-driven\ninsights into how security admin rule deployments could\naffect your existing virtual network traffic. Learn\nmore. ",
+    "generalAvailabilityDate": "2026-05",
+    "id": "562010",
+    "modified": "2026-05-12T17:30:34.911185Z",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Azure Virtual Network Manager"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Management",
+      "Security",
+      "Services"
+    ],
+    "title": "Generally Available: Azure Virtual Network Manager rule impact analyzer "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

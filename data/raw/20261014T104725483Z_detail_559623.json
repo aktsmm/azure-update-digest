@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "559623"
+  },
+  "fetchedAt": "2026-10-14T10:47:25.483Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "559623",
+    "created": "2026-04-08T17:45:09.303049Z",
+    "description": "PgBouncer 1.25.1 is now generally available in Azure Database for PostgreSQL. As a built-in connection pooling feature, PgBouncer helps you scale to thousands of connections with low overhead by efficiently managing idle and short-lived connections.With this update, you benefit from the latest cumulative improvements from recent community releases, including performance enhancements, protocol improvements, and important security and stability fixes. This update helps you run applications more efficiently, reduce connection overhead, and improve overall reliability of your database workloads.Because PgBouncer is fully integrated into flexible server, you don’t need to install or manage it separately. You can simply enable it on port 6432 and start optimizing your application connectivity. Learn more.",
+    "generalAvailabilityDate": "2026-04",
+    "id": "559623",
+    "modified": "2026-04-08T17:45:09.303049Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: PgBouncer 1.25.1 support in Azure Database for PostgreSQL – Flexible Server "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

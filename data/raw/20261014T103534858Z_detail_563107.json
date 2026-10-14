@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563107"
+  },
+  "fetchedAt": "2026-10-14T10:35:34.858Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563107",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "BM25 full-text search is now available in public preview for Azure HorizonDB. Now you can get production-quality keyword search powered by BM25, the same relevance ranking algorithm used by Elasticsearch, Solr, and Azure AI Search, running entirely inside your PostgreSQL database as a native extension. You no longer need to deploy and manage a separate search service to get high-quality text search. The full-text search extension replaces PostgreSQL's built-in ts_rank with BM25 scoring, which delivers significantly better relevance through term frequency saturation, document length normalization, and inverse document frequency weighting. It's faster than native PostgreSQL full-text search with Generalized Inverted Index (GIN) indexes on complex, multi-keyword queries. The extension also supports fuzzy matching for typo tolerance, phrase search with configurable word proximity, and Boolean query syntax (AND, OR, NOT) capabilities that previously required an external search engine. By combining pgvector with DiskANN for vector similarity search, you can now build hybrid search applications that deliver both keyword precision and semantic understanding in a single SQL query using Reciprocal Rank Fusion (RRF). Your data stays in one place, you use familiar PostgreSQL, and you eliminate the operational burden of syncing data to an external search service. Learn more.",
+    "id": "563107",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure HorizonDB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: BM25 full-text search in Azure HorizonDB"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

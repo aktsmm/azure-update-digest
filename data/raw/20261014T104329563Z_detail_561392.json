@@ -1,0 +1,32 @@
+{
+  "args": {
+    "id": "561392"
+  },
+  "fetchedAt": "2026-10-14T10:43:29.563Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "561392",
+    "created": "2026-05-01T21:45:13.8055981Z",
+    "description": "We support customer choice, including the choice to transfer\nyour data between Azure and environments outside of Azure. Azure has offered free egress\nand at-cost data\ntransfer for customers and CSP partners in Europe transferring data via the\ninternet between Azure to another data processing service provider. This\nsituation is common where multiple services of different providers are used in\nparallel, in an interoperable manner.  We have made some changes for customers with billing address\nin the United Kingdom (UK) transferring data from UK datacenters, including the\nscoped networks, transfer window, and scoped services. If\nyour application is built to transfer data cross-cloud, or you are leaving any\nnumber of single Azure services, please follow the steps for egress\nor in-parallel\ndata transfer to contact Azure Support to claim a credit. Please be aware\nof the eligibility requirements for this credit.",
+    "generalAvailabilityDate": "2026-05",
+    "id": "561392",
+    "modified": "2026-05-01T21:45:13.8055981Z",
+    "productCategories": [],
+    "products": [],
+    "status": "Launched",
+    "tags": [
+      "Management",
+      "Pricing & Offerings"
+    ],
+    "title": "Update: Egress and data transfer with Azure in the United Kingdom"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

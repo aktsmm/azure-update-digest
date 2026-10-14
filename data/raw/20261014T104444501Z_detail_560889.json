@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "560889"
+  },
+  "fetchedAt": "2026-10-14T10:44:44.501Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2024
+      }
+    ],
+    "baseId": "560889",
+    "created": "2026-04-24T16:45:30.1612616Z",
+    "description": "Azure Elastic SAN now supports CRC‑32C checksum verification when enabled on the client for connections to Elastic SAN volumes. CRC protection can be enabled at creation time or on an existing Elastic SAN.Elastic SAN also provides a volume group–level enforcement setting for CRC protection. When this property is enabled, all volumes in the volume group inherit it, and Elastic SAN rejects any client connections that do not have CRC‑32C enabled for header or data digests.When the enforcement property is disabled, checksum verification depends solely on the client configuration. Elastic SAN will accept connections regardless of whether CRC‑32C is enabled on the client. Learn more.",
+    "generalAvailabilityDate": "2024-11",
+    "id": "560889",
+    "modified": "2026-04-24T16:45:30.1612616Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Elastic SAN"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure Elastic SAN support for CRC Protection "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

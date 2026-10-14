@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "560521"
+  },
+  "fetchedAt": "2026-10-14T10:46:07.585Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "560521",
+    "created": "2026-04-17T17:15:04.2918355Z",
+    "description": "Azure Backup\nnow provides a simplified experience to configure backup for Azure\nKubernetes Service (AKS) clusters using a single Azure CLI command.Enabling\nbackup for AKS clusters through CLI requires multiple manual steps, including\ninstallation of the Backup extension, provisioning of storage resources,\ncreation of backup vaults and policies, enabling Trusted Access between the\ncluster and vault, and initialization of the backup instance. To simplify\nthis backup configuration, Microsoft provides an alternate approach to enable\nbackup protection for an AKS cluster by running a single command. This command\nautomatically performs the required configuration workflow by: Installing the Backup extension (if\nrequired) Creating or reusing backup storage\nresources Creating or reusing a backup vault\nand policy Enabling Trusted Access between the\nbackup vault and AKS cluster Initializing and creating the backup\ninstance You can\noptionally provide a backup configuration file to use existing backup vaults,\npolicies, or storage accounts during configuration. Learn\nmore ",
+    "generalAvailabilityDate": "2026-04",
+    "id": "560521",
+    "modified": "2026-04-17T17:15:04.2918355Z",
+    "productCategories": [
+      "Management and governance",
+      "Storage",
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Backup",
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Configure AKS backup using a single Azure CLI command"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

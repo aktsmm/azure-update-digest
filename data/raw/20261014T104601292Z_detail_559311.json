@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "559311"
+  },
+  "fetchedAt": "2026-10-14T10:46:01.292Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "559311",
+    "created": "2026-04-17T19:00:12.8775967Z",
+    "description": "Azure Functions runtime v3 was retired on December\n13, 2022. As part of ongoing efforts to reduce reliance on legacy\ninfrastructure and focus investments on supported platforms, Azure will enforce\nthis retirement for Linux Consumption–based Function Apps still running\nruntime v3. After September 30, 2026,\nFunction Apps using runtime v3 on Linux Consumption will no longer start or process\nexecutions, and existing deployments in this configuration will stop\nfunctioning.   To avoid service disruption,\ncustomers must migrate affected apps to Azure Functions runtime v4 before the enforcement date. Since Linux\nConsumption is itself retiring in September 2028, customers are\nencouraged to migrate to Azure Functions Flex Consumption,\nwhich supports runtime v4 and ongoing platform updates.  Learn more: Migrate apps from Azure Functions version 3.x to\nversion 4.x Migrate Azure Functions Linux Consumption plan\napps to the Flex Consumption plan",
+    "id": "559311",
+    "modified": "2026-04-17T19:00:12.8775967Z",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Azure Functions runtime v3 on Linux Consumption will stop running September 30, 2026"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

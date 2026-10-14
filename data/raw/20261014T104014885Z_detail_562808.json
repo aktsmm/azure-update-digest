@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "562808"
+  },
+  "fetchedAt": "2026-10-14T10:40:14.885Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "562808",
+    "created": "2026-05-21T18:45:42.3463074Z",
+    "description": "Flex Consumption introduces a site-scoped certificate model in\npublic preview in all the regions where Flex Consumption is available. Unlike\nwebspace-scoped certificates on other hosting plans which are shared across\napps in the same region + resource group, Flex certificates are scoped to an\nindividual function app. Each function app can hold up to 3 private\n(.pfx) and 3 public (.cer) certificates uploaded directly, imported from Azure\nKey Vault, or issued as free App Service Managed Certificates to enable custom\ndomains, client-certificate authentication, and mutual TLS scenarios on Flex\nConsumption. To access certificates from\ncode Flex Consumption\nuses a per-certificate \"Accessible to app code\" toggle\nin the portal instead of the WEBSITE_LOAD_CERTIFICATES app setting used on other plans. Because Flex\nConsumption runs on Linux, code reads certificates from file paths (/var/ssl/certs for public, /var/ssl/private for private) rather than from a Windows certificate\nstore.  Currently, the Azure portal is the\nrecommended path for configuring certificates during preview. Apps migrating\nfrom another plan should add their certificates to the new Flex Consumption app\nrather than carrying webspace-scoped certificates across.  Learn more: Configure\nsite-scoped certificates  Infrastructure\nas code instructions  Cross-plan\ncertificate comparison ",
+    "id": "562808",
+    "modified": "2026-05-21T18:45:42.3463074Z",
+    "previewAvailabilityDate": "2026-05",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: TLS/SSL certificate support for Azure Functions Flex Consumption "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

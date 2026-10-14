@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "563127"
+  },
+  "fetchedAt": "2026-10-14T10:35:46.971Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563127",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "The MSSQL extension for Visual Studio Code now offers data API builder with built-in GitHub Copilot integration as generally available, bringing guided back-end generation into your development workflow. You can generate REST, GraphQL, and Model Context Protocol (MCP) endpoints from your SQL database schema inside Visual Studio Code without manually configuring infrastructure or connection strings. You select tables, define CRUD operations, and configure settings such as authorization roles, primary keys, route behavior, and column-level exposure through an API design interface. The generated data API builder configuration file stays synchronized with your selections, can be previewed in the extension, and added to your workspace for transparency and version control. You can modify it manually or use GitHub Copilot to plan and generate updates. This release also streamlines endpoint design, configuration review, and guided generation. You can now go beyond table-level selection and choose which columns are exposed in the generated API. Columns are exposed by default, but you can turn off exposure for sensitive, unsupported, or unnecessary fields such as password hashes, social security numbers, internal flags, or stale data. With a few steps, the extension runs a local data API builder container using your database connection. This workflow helps you move from validated schema to a working back end, so you can build faster without switching tools. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563127",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Data API builder with built-in GitHub Copilot in MSSQL extension"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,40 @@
+{
+  "args": {
+    "id": "561148"
+  },
+  "fetchedAt": "2026-10-14T10:44:09.507Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "561148",
+    "created": "2026-04-28T17:45:04.6636535Z",
+    "description": "Announcing the public preview of the HTTP DDoS Ruleset on Azure Front Door Premium.HTTP-layer DDoS attacks remain a leading cause of application downtime, and traditional static controls often fall short against evolving botnets. The new HTTP DDoS Ruleset for Azure WAF introduces automated, adaptive Layer 7 protection that learns, detects, and defends with minimal configuration. Once assigned, the ruleset continuously baselines normal traffic for each Azure Front Door Profile and, when attack surges are detected, selectively blocks offending clients with no emergency tuning required.The HTTP DDoS Ruleset features:Automated learning of traffic baselines at both the profile and per-client level.Dynamic thresholds and sensitivity settings to balance protection and user experience.Two core rules: one for high-rate client anomalies and one for suspected bots, leveraging Microsoft Threat Intelligence.Learn more.",
+    "id": "561148",
+    "modified": "2026-04-28T17:45:04.6636535Z",
+    "previewAvailabilityDate": "2026-04",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure DDoS Protection",
+      "Azure Front Door",
+      "Web Application Firewall"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Security",
+      "Services"
+    ],
+    "title": "Public Preview: Microsoft HTTP DDoS Ruleset for Azure WAF on Azure Front Door Premium"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563102"
+  },
+  "fetchedAt": "2026-10-14T10:35:30.620Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563102",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Advanced filtering for DiskANN vector search in Azure HorizonDB is now available in public preview. With this release, you can combine vector similarity search with metadata filters such as category, date range, price, or tenant ID without the performance penalties that typically come with filtered vector queries. DiskANN advanced filtering delivers lower latency on filtered vector search compared to traditional approaches, enabling you to build AI-powered retrieval applications that are both precise and fast at scale.  \n\nWhether you are building an agentic application, a product recommendation engine, or an enterprise search experience, you can now apply complex filters alongside vector similarity in a single query and get results in milliseconds, even across millions of vectors. This capability runs natively inside your Azure HorizonDB instance alongside your relational data, eliminating the need for a separate vector database or external search service. You retain full transactional consistency, use familiar PostgreSQL SQL, and benefit from DiskANN's industry-leading performance on disk-resident indexes. Advanced filtering works seamlessly with pgvector, Azure AI integrations, and the broader HorizonDB AI retrieval stack, including BM25 full-text search and graph traversal. Learn more.",
+    "id": "563102",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure HorizonDB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Advanced filtering for DiskANN vector search in Azure HorizonDB"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

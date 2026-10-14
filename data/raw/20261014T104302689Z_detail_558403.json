@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "558403"
+  },
+  "fetchedAt": "2026-10-14T10:43:02.689Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "558403",
+    "created": "2026-05-05T17:30:03.000965Z",
+    "description": "We previously announced the availability of Application Gateway for\nContainers and the Application Gateway for Containers AKS\nAdd-on for Azure Kubernetes Service (AKS). At that time, one\nlimitation was that Application Gateway for Containers could not be provisioned\ninto an AKS Automatic cluster.  Application Gateway for Containers can now be used with\nAKS Automatic through the Application Gateway for Containers AKS\nAdd-on.  With this update, customers using AKS Automatic can deploy\nApplication Gateway for Containers by enabling the AKS Add-on, allowing\nApplication Gateway for Containers to be managed and integrated as part of the\nAKS Automatic experience. This removes the need to manually provision or manage\nsupporting infrastructure and aligns with the simplified operational model of\nAKS Automatic.  This enhancement enables customers to:  \n Use Application Gateway for Containers as\n     the managed ingress and load balancing solution for AKS Automatic clusters  \n Benefit from a fully managed, Azure-native\n     experience through the AKS Add-on  \n Reduce operational overhead\n     while adopting Gateway API–based application delivery  You can get started by enabling the Application\nGateway for Containers AKS Add-on on your AKS\nAutomatic clusters.  Learn more:  \n Deploy Application\n     Gateway for Containers + AKS Add-on   \n Application\n     Gateway for Containers overview  \n Original public\n     preview announcement  ",
+    "id": "558403",
+    "modified": "2026-05-05T17:30:03.000965Z",
+    "previewAvailabilityDate": "2026-05",
+    "productCategories": [
+      "Networking",
+      "Security",
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Application Gateway",
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Application Gateway for Containers managed add-on + AKS Automatic "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

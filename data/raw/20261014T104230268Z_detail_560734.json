@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "560734"
+  },
+  "fetchedAt": "2026-10-14T10:42:30.268Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "560734",
+    "created": "2026-05-07T18:00:38.9821329Z",
+    "description": "Azure has announced the general availability of the new Dl/D/E v7 Virtual Machines, powered by the latest Intel® Xeon® 6 (Granite Rapids) processors. These general‑purpose and memory‑optimized VMs deliver up to 20% better general compute performance compared to previous generation Intel‑based v6 VMs, alongside major improvements in scale, networking, and storage.The v7 families support three memory-to-vCPU ratios (2:1, 4:1, and 8:1) and offer configurations with or without local NVMe temp disks. Customers can scale up to 372 vCPUs and 2.8 TiB of memory on Esv7/Edsv7 sizes, enabling larger and more demanding workloads.Built on Azure Boost, the v7 VMs deliver up to 400 Gbps networking, up to 800k IOPS and 20 GBps of remote storage throughput, and up to 9.6M IOPS on local NVMe. Intel® AMX enables built‑in AI acceleration for inference workloads, while Intel® TME enhances memory security.Dl/D/E v7 VMs are ideal for web and application servers, containerized workloads, databases, analytics, and in‑memory workloads such as SAP and Redis.These VMs are now generally available in Central US, with additional regions coming soon.",
+    "generalAvailabilityDate": "2026-05",
+    "id": "560734",
+    "modified": "2026-05-07T18:00:38.9821329Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Pricing & Offerings"
+    ],
+    "title": "Generally Available: Azure Dl/D/E v7 Virtual Machines"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

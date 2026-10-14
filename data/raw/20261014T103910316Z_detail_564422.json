@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "564422"
+  },
+  "fetchedAt": "2026-10-14T10:39:10.316Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "564422",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure AI Translator batch document translation ships generally available improvements for PDF translation. The service uses Azure AI Document Intelligence to recover structure from both digital-native and scanned PDFs, then translates the recognized text and re-renders the document with the original reading order, tables, headings, and image placement preserved. The improved pipeline reduces formatting drift in long, multi-column reports and forms, and continues to flow through the standard batch translation REST API with source and target Azure Blob Storage containers. Authentication options stay the same, including shared access signature tokens and managed identity. Pricing follows the existing character-based document translation rates. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "564422",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Improved PDF batch document translation in Azure AI Translator"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

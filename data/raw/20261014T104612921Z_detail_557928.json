@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "557928"
+  },
+  "fetchedAt": "2026-10-14T10:46:12.921Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "557928",
+    "created": "2026-04-16T20:30:13.2444082Z",
+    "description": "On June 30, 2027, we'll retire Ubuntu 22.04 on Azure\nKubernetes Service. To avoid disruptions, transition to\nUbuntu 24.04 or later by that date. Newer\nsupported versions include kernel\nupdates and security improvements.   Until June 30, 2027, you can continue to use Ubuntu 22.04 on\nAKS without disruption. If you don't migrate by June 30, 2027, you won't be\nable to create new node pools, AKS won't produce new node images, and you'll no\nlonger receive security patches for existing node pools. If you'd like to\nenable long-term support with Kubernetes version 1.33+, first update your node\npools to Ubuntu 24.04.   On April 30, 2028 AKS will remove Ubuntu 22.04 node images\nand existing code, causing scaling and remediation operations to\nfail.   Migration Options:  \n Default Operating System SKU (OSSku): If you're using\n     'Ubuntu,' you'll automatically migrate to Ubuntu 24.04 when you upgrade\n     your Kubernetes version to 1.35 or later.   \n Versioned OSSku: If you're using 'Ubuntu2204,' update\n     your OSSku to 'Ubuntu' for Kubernetes 1.35 or later, or 'Ubuntu2404' for\n     Kubernetes 1.32 or later.   Learn\nmore:   \n Get answers from community experts in Microsoft\n     Q&A or AKS\n     GitHub.    \n For support plan and need technical help,\n     follow the documentation  \n Find out about service retirements that may impact\n     your resources in the Azure\n     Retirement Workbook. Retirements may not be visible in the workbook\n     for up to two weeks after being announced.   ",
+    "id": "557928",
+    "modified": "2026-04-16T20:30:13.2444082Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Azure Kubernetes Service support for Ubuntu 22.04 "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

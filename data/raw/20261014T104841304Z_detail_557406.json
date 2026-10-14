@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "557406"
+  },
+  "fetchedAt": "2026-10-14T10:48:41.304Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "557406",
+    "created": "2026-03-31T20:00:35.9196595Z",
+    "description": "Import data from external sources (Preview) – S3, Snowflake, Azure SQL Db along with external Data Connections (Preview) in Azure Machine Learning are being deprecated. These features will no longer be available after September 30, 2026.   What this means for you: Existing external data connections won’t be available. You won’t be able to create new data imports or add new external data connections. Your pre-existing imported assets will continue to be available, but any scheduled refresh will no longer work.  Recommended Actions: To avoid any disruptions to your\nML pipelines, we recommend you migrate external\ndata imports to Microsoft Fabric and\nuse AzureML datastores to make the data available\nin AzureML.   Help and support : If you have\nquestions, get answers from community experts in Microsoft Q&A. If you need technical help, create\na support case.    ",
+    "id": "557406",
+    "modified": "2026-03-31T20:00:35.9196595Z",
+    "productCategories": [
+      "AI + machine learning",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Machine Learning"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: External Data Import & Data Connections in Azure Machine Learning will be retired on September 30, 2026 "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "559756"
+  },
+  "fetchedAt": "2026-10-14T10:46:28.898Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "559756",
+    "created": "2026-04-14T21:15:15.0637793Z",
+    "description": "We are pausing the introduction of a minimum billable object size for the cool, cold, and archive access tiers. As a result, billing behavior will not change on July 1, 2026, for either new or existing storage accounts.  We will provide an update on our revised approach and timeline in a future Azure Update. No action is required from customers at this time. ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "559756",
+    "modified": "2026-06-08T23:45:02.9471363Z",
+    "productCategories": [
+      "Storage",
+      "Analytics"
+    ],
+    "products": [
+      "Azure Blob Storage",
+      "Azure Data Lake Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Pricing & Offerings"
+    ],
+    "title": "Update: Minimum billable object size for cooler storage tiers"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

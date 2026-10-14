@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563326"
+  },
+  "fetchedAt": "2026-10-14T10:37:16.430Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563326",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure AI\nTranslator publishes generally available SDKs that target the latest text\ntranslation REST API across four languages: C#/.NET, Java, JavaScript, and\nPython. The SDKs expose Translator API v4 SDK to GA across all four supported\nprogramming languages, giving developers a single client surface to choose\nbetween traditional neural machine translation and LLM-based translation per\nrequest. Teams building multilingual products and support content have had to\nmanage two parallel translation paths, with different SDKs, request shapes, and\nquality profiles, making it hard to mix models within one workflow. With the\nnew SDK, developers can set the translation model, output tone, target gender,\nand adaptive settings on every call from the same Translator client. The\nrelease simplifies integration code, makes feature parity across .NET, Python,\nJava, and JavaScript clients consistent, and aligns the SDK surface with\nTranslator API v4 capabilities including LLM model selection and the latest\nadaptive translation features.  Learn\nmore. ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563326",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure AI Translator SDKs for the latest text translation API"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

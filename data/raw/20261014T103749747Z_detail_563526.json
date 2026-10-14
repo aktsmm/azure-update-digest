@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563526"
+  },
+  "fetchedAt": "2026-10-14T10:37:49.747Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563526",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure AI Speech is rolling out an updated Neural HD text-to-speech model, moving customers from DragonHDLatest to HDv2.5. The update raises audio quality scores, adds style and paralinguistic tag support for English voices, and reduces word error rate in secondary locales such as Spanish, French, German, and Japanese. Customer-facing voice experiences (call center agents, IVR menus, assistant readouts) sound more natural and expressive without changes to the calling code; the existing endpoints and SSML markup continue to work. Speech teams operating multilingual deployments get more consistent quality across markets, which reduces the gap between primary and secondary languages. HDv2.5 is rolling out in public preview across existing Neural HD regions; rollout completes alongside the broader Speech monthly update cycle. Learn more.",
+    "id": "563526",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Neural HD voice update (HDv2.5) in Azure AI Speech"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

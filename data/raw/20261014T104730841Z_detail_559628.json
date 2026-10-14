@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "559628"
+  },
+  "fetchedAt": "2026-10-14T10:47:30.841Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "559628",
+    "created": "2026-04-08T17:45:09.303049Z",
+    "description": "We’re introducing regional level consolidated maintenance notifications for Azure Database for PostgreSQL to simplify how you stay informed about upcoming maintenance. Instead of one notification per server, now you receive a single notification per region that consolidates maintenance details for all your PostgreSQL servers across subscriptions.This enhancement reduces notification noise while giving you a clearer view of upcoming maintenance activities in your environment. You can more easily plan and coordinate across teams, ensuring minimal disruption to your workloads.No action is required. This improvement will be automatically applied.Learn more. ",
+    "generalAvailabilityDate": "2026-04",
+    "id": "559628",
+    "modified": "2026-04-08T17:45:09.303049Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Enhancements to maintenance notifications in Azure Service Health "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

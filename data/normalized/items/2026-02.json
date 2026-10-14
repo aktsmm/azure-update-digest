@@ -1061,10 +1061,10 @@
       ],
       "created": "2026-02-27T21:45:03.1344369Z",
       "createdJst": "2026-02-28",
-      "description": "The upstream Ingress-NGINX project is being deprecated and will stop receiving updates after March 2026. Microsoft will continue providing critical security patches through 30 November 2026, after whi...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "fbb23b2af92c0573484077a6b7e7b7dc60af2ee0a6eec8fb788a4bff44ff1584",
+      "description": "The upstream Ingress-NGINX project is being deprecated and will stop receiving updates after March 2026. Microsoft will continue providing critical security patches through 30 November 2026, after which the NGINX ingress controller will no longer be supported within the Application Routing add-on. Supported alternatives include Gateway API with Application Routing (in development), Application Gateway for Containers, and Istio Service Mesh.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "7304df5212d2645da4de6030ec765ec7584c7fc7aceaf1ec3ce3377da78fb1dd",
       "history": [
         {
           "changedFields": [
@@ -1075,6 +1075,14 @@
           "modifiedAfter": "2026-02-27T21:45:03.1344369Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100505248Z_list_2026-02_o0.json#555839"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:54:05.876Z",
+          "fingerprint": "7304df5212d2645da4de6030ec765ec7584c7fc7aceaf1ec3ce3377da78fb1dd",
+          "modifiedAfter": "2026-02-27T21:45:03.1344369Z",
+          "modifiedBefore": "2026-02-27T21:45:03.1344369Z",
+          "rawRef": "20261014T105405876Z_detail_555839.json#555839"
         }
       ],
       "ids": [
@@ -2440,10 +2448,10 @@
       ],
       "created": "2026-02-27T17:30:41.1734092Z",
       "createdJst": "2026-02-28",
-      "description": "Azure Red Hat OpenShift is now generally available in three additional Azure regions: Malaysia West, New Zealand North, and Mexico Central. This expansion strengthens Azure Red Hat OpenShift’s presenc...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "e409c657c36e3f27f654145a4648dcc129555f54f24427b9e67ea0f3fce77c56",
+      "description": "Azure Red Hat OpenShift is now generally available in three additional Azure regions: Malaysia West, New Zealand North, and Mexico Central. This expansion strengthens Azure Red Hat OpenShift’s presence across Asia Pacific and Latin America, enabling customers to deploy managed OpenShift clusters closer to their users and data to help reduce latency and support data residency and regional regulatory compliance requirements, while maintaining a consistent, enterprise-grade Kubernetes experience on Azure.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "58c2308202c6139ef5f8e280c79bb08479c3fa0c1a8abab19d1715852ff14e93",
       "history": [
         {
           "changedFields": [
@@ -2454,6 +2462,14 @@
           "modifiedAfter": "2026-02-27T17:30:41.1734092Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100505248Z_list_2026-02_o0.json#557897"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:54:09.698Z",
+          "fingerprint": "58c2308202c6139ef5f8e280c79bb08479c3fa0c1a8abab19d1715852ff14e93",
+          "modifiedAfter": "2026-02-27T17:30:41.1734092Z",
+          "modifiedBefore": "2026-02-27T17:30:41.1734092Z",
+          "rawRef": "20261014T105409698Z_detail_557897.json#557897"
         }
       ],
       "ids": [
@@ -2509,10 +2525,10 @@
       ],
       "created": "2026-02-27T23:15:13.5682826Z",
       "createdJst": "2026-02-28",
-      "description": "The DCesv6, DCedsv6,\nECesv6, and ECedsv6 series are Azure’s next generation\nof confidential Virtual Machines (VMs) based on 5th Gen\nIntel® Xeon® processors with Intel® Trust Domain Extensions (Intel® ...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "e2b9481653dff2cf8b90c20d4a8a117d7f71269340452186a723e0a08f340b7d",
+      "description": "The DCesv6, DCedsv6,\nECesv6, and ECedsv6 series are Azure’s next generation\nof confidential Virtual Machines (VMs) based on 5th Gen\nIntel® Xeon® processors with Intel® Trust Domain Extensions (Intel® TDX). These\nnew confidential VMs help organizations to move their most\nsensitive workloads to the cloud—without requiring any application code\nchanges. Available today for production deployments across both general-purpose\n(DCesv6, DCedsv6) and memory-optimized (ECesv6, ECedsv6) VM families, this\nrelease delivers a powerful combination of performance, scalability, and\nhardware-enforced security. Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "a81dbc1969c138f2b10b0ca9f738ee27f28b96716f0c206df50b872983556576",
       "history": [
         {
           "changedFields": [
@@ -2523,6 +2539,14 @@
           "modifiedAfter": "2026-02-27T23:15:13.5682826Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100505248Z_list_2026-02_o0.json#558051"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:54:01.442Z",
+          "fingerprint": "a81dbc1969c138f2b10b0ca9f738ee27f28b96716f0c206df50b872983556576",
+          "modifiedAfter": "2026-02-27T23:15:13.5682826Z",
+          "modifiedBefore": "2026-02-27T23:15:13.5682826Z",
+          "rawRef": "20261014T105401442Z_detail_558051.json#558051"
         }
       ],
       "ids": [
@@ -2575,10 +2599,10 @@
       ],
       "created": "2026-02-27T23:15:13.5682826Z",
       "createdJst": "2026-02-28",
-      "description": "Azure Premium SSD v2 is now available in a third Availability Zone in New Zealand North.    Azure Premium SSD v2 disk, a next-generation general-purpose block storage option for Azure virtual machines...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "9c0df3fd99f5d8d1a2e720c1d2e6bf64de544d10d27297b2600b2c580a1868e0",
+      "description": "Azure Premium SSD v2 is now available in a third Availability Zone in New Zealand North.    Azure Premium SSD v2 disk, a next-generation general-purpose block storage option for Azure virtual machines, offers sub-millisecond latencies and exceptional price performance for IO-intensive workloads at a low cost. Premium SSD v2 is suited for a broad range of enterprise production scenarios, including SQL Server, Oracle, MariaDB, SAP, Cassandra, MongoDB, big data/analytics, and gaming on virtual machines or stateful containers.   If Premium SSD v2 is unavailable in your preferred region and you would like to use it, please complete this survey.   Learn more:   Read the documentation.  For more information about Premium SSD v2 Disk Storage pricing, visit the Azure Disks pricing page. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "cb57053f679b56fe0585e2a533e90ba29fe49bf3753507142ca7ba25ba9347ed",
       "history": [
         {
           "changedFields": [
@@ -2589,6 +2613,14 @@
           "modifiedAfter": "2026-02-27T23:15:13.5682826Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100505248Z_list_2026-02_o0.json#558078"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:54:03.722Z",
+          "fingerprint": "cb57053f679b56fe0585e2a533e90ba29fe49bf3753507142ca7ba25ba9347ed",
+          "modifiedAfter": "2026-02-27T23:15:13.5682826Z",
+          "modifiedBefore": "2026-02-27T23:15:13.5682826Z",
+          "rawRef": "20261014T105403722Z_detail_558078.json#558078"
         }
       ],
       "ids": [

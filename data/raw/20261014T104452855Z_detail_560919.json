@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "560919"
+  },
+  "fetchedAt": "2026-10-14T10:44:52.855Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "560919",
+    "created": "2026-04-23T18:30:11.7114431Z",
+    "description": "Capacity Autoscaling support is now generally available on\nElastic SAN. Customers can avoid the constraints of overprovisioning and manual\ncapacity management by setting a policy to automatically expand SAN Capacity\nbased on usage. Autoscaling provides the ability to specify scaling increments\nfor cost control and predictability. This capability is especially helpful for\ncustomers navigating rapid growth scenarios and unplanned usage spikes. Learn\nmore. ",
+    "generalAvailabilityDate": "2026-03",
+    "id": "560919",
+    "modified": "2026-04-23T18:30:11.7114431Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Elastic SAN"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Capacity Autoscaling on Azure Elastic SAN  "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

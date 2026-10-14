@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "562868"
+  },
+  "fetchedAt": "2026-10-14T10:33:20.702Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562868",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "As\norganizations adopt AI agents and MCP-based tooling, integration teams often\nneed to build and maintain custom API layers just to make existing\nworkflows callable by agents. This additional plumbing increases\ndevelopment effort, operational complexity, and time to production.  With the\nGA release of the Azure Logic Apps MCP Server, developers can now expose\nexisting Logic Apps workflows as MCP-compatible tools that AI agents can\ndirectly discover and invoke — without writing custom API code. This\nallows teams to:  \n Expose existing Logic Apps\n     workflows as AI-callable MCP tools in minutes  \n Enable discovery and invocation\n     from agent platforms such as Microsoft Foundry and Copilot Studio  \n Reuse existing enterprise\n     automation and integration logic within AI workflows  \n Reduce the complexity and\n     overhead of building custom integration layers for agents  By\nenabling Logic Apps workflows to participate directly in MCP-based\nagent ecosystems, the Logic Apps MCP Server helps organizations accelerate\nagentic automation while maximizing reuse of existing enterprise\nintegrations.  ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562868",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Integration",
+      "Internet of Things"
+    ],
+    "products": [
+      "Logic Apps"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build"
+    ],
+    "title": "Generally Available: Azure Logic Apps MCP Server. "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

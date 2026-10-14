@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "548497"
+  },
+  "fetchedAt": "2026-10-14T10:51:27.318Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "548497",
+    "created": "2026-03-19T16:30:27.9756937Z",
+    "description": "On May 31, 2027, Microsoft Azure will retire the follow NP-series virtual machine (VMs) sizes: Standard_NP10s, Standard_NP20s, and Standard_NP40s. To ensure continuity and optimal performance, we recommend transitioning to one of the following Azure GPU VM families based on your workload needs:NDv2 VMs – designed for the needs of the most demanding GPU-accelerated AI, machine learning, simulation, and HPC workloads.NCads_H100_v5 VMs – real-world Azure Applied AI training and batch inference workloads.NCasT4_v3 – ideal for deploying AI services, such as real-time inferencing of user-generated requests, or for interactive graphics and visualization workloads.  For more information, please refer to the NP-series retirement page. How does the retirement of the NP-series virtual machines affect me? After May 31, 2027, any remaining NP-series virtual machines (VMs) subscriptions will be set to a deallocated state. They’ll stop working and no longer incur billing charges. NP-series will be no longer under SLA or have support included.  Additionally, 1-year and 3-year RI purchases will end April 2, 2026.Required action: To avoid service disruption, please resize or deallocate your NP-series VMs and change your VM sizes to a product that meets your workload requirements.    ",
+    "id": "548497",
+    "modified": "2026-03-19T16:30:27.9756937Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: NP-series Azure Virtual Machines will be retired on May 31, 2027 "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

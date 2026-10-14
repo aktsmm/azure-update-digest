@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "562799"
+  },
+  "fetchedAt": "2026-10-14T10:32:55.811Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562799",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Global secondary indexes (GSIs) for Azure Cosmos DB are now generally available, giving you a powerful way to accelerate query performance without adding complexity to your application code. GSIs are read-only containers that automatically stay in sync with your source container using the change feed. Each GSI has its own throughput, partition key, and indexing policy, so you can optimize them for any query pattern. With GSIs, you can convert expensive cross-partition queries into efficient single-partition lookups by storing data under a different partition key. Using GSIs means lower Request Unit (RU) consumption, reduced latency, and better performance isolation for your workloads. You can isolate a subset of your workload, such as creating vector or full-text search indexes in the GSI to support AI applications, without impacting transactional operations on the source container. Adding a GSI to a new or existing container allows you to maintain query efficiency even as your workload requirements evolve.Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562799",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Cosmos DB"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure Cosmos DB global secondary indexes"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

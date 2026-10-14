@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "559981"
+  },
+  "fetchedAt": "2026-10-14T10:47:47.948Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "559981",
+    "created": "2026-04-07T17:15:12.2534237Z",
+    "description": "Developers\nbuilding MCP servers on Azure Functions can expose tools but not resources.\nNow, Azure Functions supports MCP resource triggers, enabling\ndevelopers to expose resources directly from an Azure Functions–hosted Model\nContext Protocol (MCP) server. Resources can include static or dynamic files,\napplication metadata, and MCP App UI content such as HTML-based widgets\nrendered natively by MCP hosts. This capability is available in the Azure\nFunctions MCP extension for Python, TypeScript, .NET, and Java.    With MCP\nresource triggers, developers can now build and host MCP servers on Azure\nFunctions that provide richer context, interactive experiences, and structured\ndata alongside tools.  Learn more. ",
+    "generalAvailabilityDate": "2026-03",
+    "id": "559981",
+    "modified": "2026-04-07T17:15:12.2534237Z",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Services"
+    ],
+    "title": "Generally Available: Azure Functions now supports MCP resource triggers"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

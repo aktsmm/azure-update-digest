@@ -1,0 +1,43 @@
+{
+  "args": {
+    "id": "560241"
+  },
+  "fetchedAt": "2026-10-14T10:46:36.280Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "560241",
+    "created": "2026-04-14T21:15:15.0637793Z",
+    "description": "Azure Site Recovery now supports replication and disaster recovery for Windows Azure Virtual Machines running on NVMe-enabled Generation 2 VM families, such as the Da/Ea/Fa v6-series, Ddsv6, Edsv6 and Ebsv5/Ebdsv5 in the Azure-to-Azure scenario. This enhancement allows customers to enable disaster recovery for their Azure VMs running high performance, I/O-intensive workloads (limited to ASR churn support) with the NVMe disk controller. This capability is supported across all Azure public cloud regions.Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "560241",
+    "modified": "2026-04-14T21:15:15.0637793Z",
+    "previewAvailabilityDate": "2026-04",
+    "productCategories": [
+      "Management and governance",
+      "Migration"
+    ],
+    "products": [
+      "Azure Site Recovery"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Management"
+    ],
+    "title": "Generally Available: Azure Site Recovery support for Windows Azure VMs with NVMe disk controllers"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

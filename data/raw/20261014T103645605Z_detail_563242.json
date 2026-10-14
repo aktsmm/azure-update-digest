@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563242"
+  },
+  "fetchedAt": "2026-10-14T10:36:45.605Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563242",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure AI Search now supports managed identity authentication for the billing operations it issues against Microsoft Foundry resources, replacing the prior key-based flow. Customers assign a system-assigned or user-assigned identity to the search service, grant it the appropriate role on the Foundry account, and skill executions that call Foundry models for embeddings, chat completions, or extraction bill through that identity. Security teams remove another long-lived secret from their environment, simplify rotation, and gain Entra-based audit trails for cross-service calls. The change is available in all regions where Azure AI Search and Microsoft Foundry are colocated, and applies to indexer skillsets that invoke Foundry models. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563242",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Managed identity for Foundry billing calls from Azure AI Search"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

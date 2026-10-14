@@ -1,0 +1,29 @@
+{
+  "args": {
+    "id": "502936"
+  },
+  "fetchedAt": "2026-10-14T10:44:19.619Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "502936",
+    "created": "2026-04-27T16:15:55.7068873Z",
+    "description": "Prompt Flow will be retired from Microsoft Foundry and Azure Machine\nLearning on April 20, 2027 and replaced by a single, modern orchestration\nplatform: Microsoft\nAgent Framework. This change unlocks powerful new capabilities,\nincluding a unified, future-proof foundation for building intelligent\nagents and workflows with support for advanced agent architectures.  Key dates:  \n April 3, 2026: General Availability (GA) of\n     Microsoft Agent Framework.  \n April 20, 2026: Public announcement of Prompt\n     Flow deprecation.  \n April 20, 2027: Full\n     retirement of Prompt Flow from Azure ML, Microsoft Foundry, and\n     VS Code.  What you need to do:  For most\norchestration scenarios, Microsoft Agent Framework is the recommended\nmigration path, with Microsoft Foundry options to review if you also depend on\nevaluation or tracing. We recommend a phased migration approach: rebuild key\nworkloads, validate them thoroughly, and move deployments to\nsupported alternatives ahead of retirement.  Why migrate early?  You’ll gain access to richer tooling, improved\nreliability, and the latest Foundry innovations.  Learn more:  \n Migration\n     guide  \n Migration\n     code samples  ",
+    "id": "502936",
+    "modified": "2026-04-27T16:15:55.7068873Z",
+    "productCategories": [],
+    "products": [],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Prompt Flow in Azure ML and Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

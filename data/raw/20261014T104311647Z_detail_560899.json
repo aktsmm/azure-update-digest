@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "560899"
+  },
+  "fetchedAt": "2026-10-14T10:43:11.647Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "General Availability",
+        "year": 2025
+      }
+    ],
+    "baseId": "560899",
+    "created": "2026-05-05T16:00:38.4579403Z",
+    "description": "Azure Elastic SAN now supports single volume snapshots,\nenabling incremental, point‑in‑time backups of individual SAN volumes.\nSnapshots capture only changes since the previous snapshot and reside within\nthe SAN, allowing customers to quickly deploy new volumes from a restore point\nor export data to managed disk snapshots for long‑term retention. Snapshots are\ncapacity efficient, consume SAN storage instead of incurring separate billing,\nand inherit the redundancy configuration of the parent SAN.\nSnapshots consume provisioned SAN capacity rather than incurring separate\nbilling and can be exported to managed disk snapshots for longer‑term retention\nbeyond the lifecycle of the source volume. Snapshot redundancy is automatically\naligned with the redundancy configuration of the parent Elastic SAN. Learn more.",
+    "generalAvailabilityDate": "2025-03",
+    "id": "560899",
+    "modified": "2026-05-05T16:00:38.4579403Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Elastic SAN"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Single Volume Snapshots on Azure Elastic SAN"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

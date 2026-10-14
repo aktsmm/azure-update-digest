@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563257"
+  },
+  "fetchedAt": "2026-10-14T10:36:55.035Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563257",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Content Understanding in Microsoft Foundry now supports an extractionMode setting that lets you choose how documents are analyzed. Pick a layout-aware mode for structured documents where tables, sections, and reading order matter, or a faster text-only mode when you only need clean Markdown for downstream RAG indexing. The same Analyze API call returns field values with confidence scores and source grounding, so downstream automation can branch on whether human review is required. extractionMode is exposed in both the Foundry portal analyzer schema and the REST API, and is part of the GA `2025-11-01` API version. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563257",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Content Understanding extractionMode for documents"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

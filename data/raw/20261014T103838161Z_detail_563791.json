@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "563791"
+  },
+  "fetchedAt": "2026-10-14T10:38:38.161Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563791",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "You can now convert Oracle database schema objects to Azure Database for PostgreSQL-compatible schema directly in the PostgreSQL extension for Visual Studio Code. The experience provides a project-based workflow for Oracle to Microsoft for PostgreSQL offerings, using Azure Database for PostgreSQL flexible server as a scratch database for validation and testing during schema conversion. The workflow automatically flags items that can't be converted as Review Tasks, so you can address them before applying the generated artifacts. With this release, you can move schema conversion into a guided Visual Studio Code experience instead of managing the process across separate tools. You can load Oracle schemas, run conversion, validate converted objects, review flagged items, and then apply the generated PostgreSQL artifacts with more visibility into what was converted and what still needs attention. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563791",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Oracle schema conversion to Azure PostgreSQL in Visual Studio Code"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "563776"
+  },
+  "fetchedAt": "2026-10-14T10:38:28.255Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563776",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure Database for PostgreSQL - Flexible Server now supports cross-tenant customer-managed keys (CMK), in public preview, allowing you to encrypt your data at rest using an Azure Key Vault key that resides in a separate Microsoft Entra tenant from the database service. This capability is designed for software as a service (SaaS) providers and enterprises that need to maintain strict separation of duties and ownership of encryption keys, enabling their customers to retain full control over key lifecycle management while PostgreSQL runs in a service provider's tenant. With cross-tenant CMK: \n\nYour PostgreSQL data is encrypted using a key you own and manage. The database service never has access to your key material. You can rotate or revoke keys at any time without downtime. Authentication between PostgreSQL Flexible Server and the customer-owned key vault is handled using federated identity with Microsoft Entra ID access across tenants. Learn more.",
+    "id": "563776",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Database PostgreSQL - Flexible Server cross-tenant customer-managed keys"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

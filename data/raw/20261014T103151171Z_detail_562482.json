@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "562482"
+  },
+  "fetchedAt": "2026-10-14T10:31:51.171Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "562482",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure Functions now supports building AI agents as a first-class workload using a markdown-first programming model in public preview. With this release, developers can author event-driven serverless agents in natural language. The serverless agents runtime helps developers build agents that respond to conversations, react to events, and take actions across enterprise systems without writing framework boilerplate or per-service integration code. Developers can use any Azure Functions trigger — HTTP, timer, queue, Service Bus, Event Hub, Cosmos DB, blob, Event Grid, and new connector-backed triggers (Teams messages, Outlook mail, calendar events) — to run an agent. Agents can also call connectors as tools, consume remote MCP servers, run sandboxed code and browser automation in Azure Container Apps dynamic sessions, and optionally expose a built-in chat UI, HTTP chat API, and MCP server endpoint with no extra code. In preview, the serverless agents runtime is supported on the Azure Functions Flex Consumption plan. This enables scale-to-zero economics, managed identity, VNet integration, and Application Insights observability for agent workloads on Azure.Learn more. ",
+    "id": "562482",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build"
+    ],
+    "title": "Public Preview: Serverless agents runtime for Azure Functions"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

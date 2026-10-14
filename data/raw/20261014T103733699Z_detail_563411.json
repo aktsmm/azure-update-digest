@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563411"
+  },
+  "fetchedAt": "2026-10-14T10:37:33.699Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563411",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Microsoft Foundry IQ now supports external MCP servers as federated knowledge sources in public preview, expanding retrieval beyond data customers index themselves. Teams can register MCP servers from systems like Salesforce, Atlassian, Confluence, and ServiceNow, then query them alongside indexed sources in a single agentic retrieval call. Foundry IQ handles cross-source selection automatically, choosing which sources to consult per query and merging results with citations. Because the federation uses MCP, partners and customers can plug in any compliant server without building a custom connector. Source-system permissions still gate the data, so an agent only retrieves records the calling user can see. This release helps organizations make agents useful against systems of record without copying data into a separate index. Learn more.",
+    "id": "563411",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: MCP Server Knowledge Source in Microsoft Foundry IQ"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "562774"
+  },
+  "fetchedAt": "2026-10-14T10:32:39.054Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "562774",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "The safe key rotation feature helps you confidently rotate your Azure Cosmos DB account keys by providing visibility into when each key was last used. Without this insight, you risk rotating a key that may still be actively used by your applications, which can lead to unexpected service disruptions. With safe key rotation, you can identify active and inactive keys before taking action, enabling you to make informed decisions and improve your security posture. This capability supports safer migrations, including transitioning to Microsoft Entra ID, by ensuring keys are no longer in use before disabling access. By reducing operational risk and increasing transparency, safe key rotation helps you maintain application reliability while strengthening key management practices.Learn more.",
+    "id": "562774",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Cosmos DB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Safe key rotation for Azure Cosmos DB"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

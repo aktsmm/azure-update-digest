@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "557929"
+  },
+  "fetchedAt": "2026-10-14T10:53:04.824Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "557929",
+    "created": "2026-03-16T18:15:54.3746863Z",
+    "description": "Azure Kubernetes\nService support for Flatcar Container Linux for AKS (preview) will be retired\non June 8, 2026, transition to a supported alternative by that date. From now to June 7, 2026, you can continue to use Flatcar Container Linux for AKS (preview)\nwithout disruption. Starting on June 8, 2026, AKS will no longer support Flatcar\nContainer Linux for AKS (preview). You will no longer be able to create new\nnode pools. AKS will not produce new node images and will no longer provide\nsecurity patches for existing node pools. AKS will remove Flatcar Container\nLinux for AKS (preview) node images and existing code on September 8, 2026,\nmeaning that scaling and remediation operations will fail. Required Action:  Use Ubuntu if you're looking for a portable, general purpose OS with cross-cloud\nsupport. Use Azure Linux if you're looking for a general purpose OS that is Microsoft-created\nand optimized for Azure. Learn more.",
+    "id": "557929",
+    "modified": "2026-03-16T18:15:54.3746863Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Flatcar Container Linux for AKS (preview) "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563596"
+  },
+  "fetchedAt": "2026-10-14T10:38:09.362Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563596",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Hosted agents in Foundry Agent Service are now generally available, running on Azure Developer Compute with microVM-level isolation. You bring a container-based agent built with the Microsoft Agent Framework or any third-party SDK, and the platform operates it: no manual start and stop, no always-warm instances to pay for, and no hosting infrastructure to patch. Every agent session executes in its own isolated sandbox with a clean environment and strong compute boundaries between tenants, so there is no shared state or cross-session data leakage, which matters for financial, healthcare, and legal workloads. Pre-built snapshots deliver session starts in under 100 milliseconds, Microsoft Entra identity and virtual network support reach internal data and APIs privately, and regional data residency is available across roughly 20 Azure regions. Agents are suspended between conversation turns, so you pay only for active execution. To get started, deploy your container-based agent to Foundry Agent Service. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563596",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Hosted agents in Foundry Agent Service"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

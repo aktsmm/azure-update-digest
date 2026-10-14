@@ -1,0 +1,41 @@
+{
+  "args": {
+    "id": "561262"
+  },
+  "fetchedAt": "2026-10-14T10:31:39.344Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "September",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "561262",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Teams building agentic applications, multi-tenant platforms,\ndevelopment environments, and CI/CD systems have often had to stitch together\ncustom infrastructure to run untrusted code safely, preserve state across\nsessions, and handle bursty demand without paying for idle capacity. Azure\nContainer Apps Sandboxes addresses that challenge with a new first-class resource\ntype in Azure Container Apps that provides fast, secure, ephemeral compute\nenvironments with built-in suspend and resume capabilities. Each sandbox runs in its own hardware-isolated microVM\nboundary, supports standard OCI container images, and starts in sub-second\ntime. It can preserve memory, disk state, and preloaded libraries in a\nsnapshot, so workloads resume quickly from the same point without incurring a\ncold start reload penalty. For technical practitioners, this means they can now\nrun AI-generated or otherwise untrusted workloads in strongly isolated\nenvironments, preserve execution context across long-running tasks, and scale\nfrom zero to thousands of concurrent sandboxes using the same Azure foundation\nthat also powers offerings such as GitHub Sandbox, hosted agents in Foundry\nAgent Service, and Azure Container Apps Express. Learn more.",
+    "generalAvailabilityDate": "2026-09",
+    "id": "561262",
+    "modified": "2026-09-23T18:50:55.8011094Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Container Apps"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure Container Apps Sandboxes"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

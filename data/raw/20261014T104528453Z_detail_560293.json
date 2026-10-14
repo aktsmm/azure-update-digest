@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "560293"
+  },
+  "fetchedAt": "2026-10-14T10:45:28.453Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "560293",
+    "created": "2026-04-22T17:30:14.1183372Z",
+    "description": "New capabilities make it easier to mirror real-world Azure Database for PostgreSQL workloads at scale in Microsoft Fabric and operate them with confidence.You can mirror native PostgreSQL data types such as JSON, JSONB and other commonly used types, so richer application schemas flow directly into Fabric without workarounds. Mirroring setup is simpler because the replication user no longer needs to own database tables, allowing you to enable mirroring on existing databases without changing ownership or security models.Operating mirroring is more transparent as well. Improved error messaging and dedicated PostgreSQL User-Defined Functions (UDFs) help you quickly determine whether tables can be mirrored, view mirroring status, and identify blocking conditions directly from PostgreSQL. In addition, mirroring now supports Azure Database for PostgreSQL flexible server with high availability (HA) enabled on PostgreSQL versions earlier than 17, letting you combine HA and analytics without waiting for an engine upgrade.These improvements reduce friction and help you trust your PostgreSQL data as it powers analytics and AI experiences in Fabric. Learn more. ",
+    "generalAvailabilityDate": "2026-04",
+    "id": "560293",
+    "modified": "2026-04-22T17:30:14.1183372Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud",
+      "Analytics"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL",
+      "Microsoft Fabric"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Enhanced Mirroring Azure Database for PostgreSQL in Microsoft Fabric "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

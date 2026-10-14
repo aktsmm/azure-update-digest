@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "562919"
+  },
+  "fetchedAt": "2026-10-14T10:33:57.907Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562919",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Provisioning and maintaining system node pools in AKS requires ongoing work to handle scaling, patching, and availability. Managed system node pools in AKS Automatic remove that responsibility. The platform provisions and operates the infrastructure for core Kubernetes system components, so teams do not need to create, scale, or update system node pools.System workloads run separately from application workloads, reducing contention and improving application reliability. Platform-managed updates also keep system components current without manual intervention. For teams running production workloads on AKS, this removes a layer of cluster management and simplifies day-to-day operations.Learn more",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562919",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build"
+    ],
+    "title": "Generally available: Generally available: Managed system node pools in AKS Automatic"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "557395"
+  },
+  "fetchedAt": "2026-10-14T10:49:11.201Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Retirement",
+        "year": 2029
+      }
+    ],
+    "baseId": "557395",
+    "created": "2026-03-31T16:45:33.5681052Z",
+    "description": "On March 31, 2029, we’ll be retiring manually registered\nAzure VPN clients for point-to-site connections with Microsoft Entra ID\nauthentication for ​Azure\nGovernment and ​Microsoft\nAzure operated by 21Vianet clouds.  Recommended action: To prevent disruptions, migrate\nmanually registered Azure VPN clients to a Microsoft-registered VPN\nclient for point-to-site connections with Microsoft Entra ID\nauthentication before 31 March 2029.  To improve security,\nwe’ll only be supporting Microsoft-registered\nVPN clients after that date. Learn more: If you have general questions, ask community\nexperts in Microsoft\nQ&A.  If you have a support plan and you need\ntechnical help, open the Azure\nportal and select the question mark icon at the top of the page.    ",
+    "id": "557395",
+    "modified": "2026-03-31T16:45:33.5681052Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "VPN Gateway"
+    ],
+    "tags": [
+      "Retirements",
+      "Security"
+    ],
+    "title": "Retirement: Manually registered Azure VPN Clients for ​Azure Government and ​Microsoft Azure operated by 21Vianet clouds will be retired on March 31, 2029"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

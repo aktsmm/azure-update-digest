@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "561067"
+  },
+  "fetchedAt": "2026-10-14T10:44:04.811Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "561067",
+    "created": "2026-04-28T17:45:04.6636535Z",
+    "description": "Managing IP address space across multiple regions can be difficult to scale and prone to configuration mistakes.With cross-region IPAM pool association, you can associate a single IPAM pool with virtual networks across multiple Azure regions. This helps centralize address planning, simplify governance, and maintain consistent CIDR allocation across global environments.Key benefits:Centralized address management: Use one multi-region IPAM pool instead of creating and maintaining separate pools for each region.Consistent governance: Apply CIDR allocation policies across regions, with the flexibility to define regional restrictions when needed.Backward compatibility: Existing single-region IPAM pools continue to work as they do today, with no required changes.This capability helps\ncustomers support global-scale Azure deployments by reducing operational\noverhead while preserving strong control over IP address allocation across\ntheir Azure footprint. Learn\nmore. ",
+    "generalAvailabilityDate": "2026-04",
+    "id": "561067",
+    "modified": "2026-04-28T17:45:04.6636535Z",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Azure Virtual Network Manager"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Management",
+      "Services"
+    ],
+    "title": "Generally Available: Cross-region IPAM pool association in Azure Virtual Network Manager"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

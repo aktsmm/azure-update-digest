@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "557892"
+  },
+  "fetchedAt": "2026-10-14T10:50:45.338Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "557892",
+    "created": "2026-03-24T18:15:48.9582197Z",
+    "description": "Networking issues in Kubernetes\nenvironments can be difficult to diagnose due to limited visibility into\ntraffic flows and insufficient context around failures. Container network logs\nin Azure Kubernetes Service (AKS), now generally available, provide context‑rich\nvisibility into network flows by capturing detailed per‑flow metadata such as\nIPs, ports, namespaces, pod and service names, flow direction, and policy\nverdicts across L3/L4 and supported Layer 7 protocols including HTTP, gRPC, and\nKafka. This capability supports both stored logs for continuous, filter-based\ncollection and on-demand logs for targeted snapshots. The new network monitoring experience in\nAzure Monitor for AKS makes this data easier to consume through out-of-the-box\nvisualizations, pre-built Azure Monitor and Grafana dashboards, and single‑click\nonboarding in the Azure portal. These enhancements help technical practitioners\naccelerate troubleshooting, improve insight into traffic patterns, and simplify\nanalysis of issues such as packet loss, DNS failures, and connection errors.Learn more.",
+    "generalAvailabilityDate": "2026-03",
+    "id": "557892",
+    "modified": "2026-03-24T18:15:48.9582197Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Container network logs in AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

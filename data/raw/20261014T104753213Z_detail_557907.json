@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "557907"
+  },
+  "fetchedAt": "2026-10-14T10:47:53.213Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "557907",
+    "created": "2026-04-07T17:00:23.912259Z",
+    "description": "When clusters\nexhaust available pod IP addresses, teams have historically been forced to\nrebuild environments to restore capacity, creating operational disruption. Pod\nCIDR expansion allows overlay‑based AKS clusters to increase their pod IP range\nin place without cluster recreation. This enables teams to scale workloads\nwhile maintaining availability and simplifies long‑term IP planning as\nenvironments grow.  Learn more. ",
+    "generalAvailabilityDate": "2026-03",
+    "id": "557907",
+    "modified": "2026-04-07T17:00:23.912259Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Pod CIDR expansion in AKS"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

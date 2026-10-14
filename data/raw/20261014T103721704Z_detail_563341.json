@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563341"
+  },
+  "fetchedAt": "2026-10-14T10:37:21.704Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563341",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure AI Translator now supports synchronous single-document image translation at general availability. Customers can submit a standalone image file (JPEG, PNG, and similar formats) through one synchronous API call and receive the translated result immediately, with original layout fidelity preserved. The service combines OCR and translation behind a single endpoint, so teams no longer need to build and maintain a custom OCR plus translation pipeline. Pricing is clear on a per-image basis, and the feature inherits the enterprise security posture and regional coverage of Document Translation. Common scenarios include real-time translation for mobile apps, retail signage, restaurant menus, kiosks, and form-based experiences. Early customers include Stanley Black and Decker, USCIS, and UD Trucks. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563341",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Document translation for image files (synchronous, single document)"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

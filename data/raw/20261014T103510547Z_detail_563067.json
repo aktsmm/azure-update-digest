@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563067"
+  },
+  "fetchedAt": "2026-10-14T10:35:10.547Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563067",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "You can build real-time, event-driven applications with change streams in Azure DocumentDB, now in public preview and featuring multi-node support. You can capture live data changes with controlled polling, helping you power instant analytics, automation, and synchronization across distributed systems while reducing operational overhead. You can start streams from any point in the last 30 days to support replay, recovery, and backfill scenarios, giving you greater flexibility in handling delayed or missed events. You gain deeper visibility into changes with enhanced update descriptions, and pre-image support provides access to the document state before updates for auditing and compliance needs. You can also fine-tune performance with improved polling through configurable MaxAwaitTimeMs, allowing better control over latency and resource usage. With native support across major drivers including —Python, C#, Node.js, and Go— along with integrations for Apache Kafka and Azure Functions, you can seamlessly integrate change streams into your workflows and scale your applications with confidence.Learn more.",
+    "id": "563067",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure DocumentDB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Change streams (multi-shard) in Azure DocumentDB"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

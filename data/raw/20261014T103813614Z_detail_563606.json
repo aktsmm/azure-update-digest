@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563606"
+  },
+  "fetchedAt": "2026-10-14T10:38:13.614Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563606",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure AI Search adds Microsoft Purview admin access auditing for sensitivity-labeled content in public preview. Admin operations that touch Purview-labeled documents inside Azure AI Search, knowledge retrieval, and Foundry IQ knowledge bases now flow into Microsoft Purview's unified audit log alongside Microsoft 365 events. Security and compliance teams running AI Search in regulated industries get end-to-end visibility for the same admin actions they already track in SharePoint, Exchange, and OneDrive, instead of having a blind spot on the search and agentic retrieval surface. The capability covers index management, source configuration, and access changes on labeled content, and respects existing Purview retention and access controls. Existing AI Search resources gain auditing without code changes. Learn more.",
+    "id": "563606",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Purview admin access auditing for sensitivity-labeled content in Azure AI Search"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

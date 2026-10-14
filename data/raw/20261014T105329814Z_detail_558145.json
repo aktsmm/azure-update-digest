@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "558145"
+  },
+  "fetchedAt": "2026-10-14T10:53:29.814Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "558145",
+    "created": "2026-03-11T18:00:35.4377847Z",
+    "description": "You can now provision and manage Azure Database for\nPostgreSQL elastic clusters using Terraform, Bicep, and Ansible, with\nfull General Availability support. With\nnative infrastructure-as-code support, you can consistently create,\nscale, and manage elastic clusters as part of automated deployment\npipelines, reducing manual configuration and operational overhead.\nThis update is especially useful if you are building multitenant or\nhorizontally scalable PostgreSQL workloads and want repeatable, auditable\ninfrastructure deployments across environments.  By integrating elastic clusters into Terraform, Bicep,\nand Ansible, you gain greater control, reliability, and velocity when managing\ndistributed PostgreSQL deployments. You can standardize your infrastructure\ndefinitions, simplify environment replication, and seamlessly\nintegrate elastic clusters into your CI/CD and governance processes.   Learn more:  Elastic\nclusters in Azure Database for PostgreSQL  Quickstart:\nCreate elastic clusters with Bicep template  azurerm\npostgresql database | Terraform Registry  Manage\nPostgre SQL Database Instance – Ansible Community Documentation  ",
+    "generalAvailabilityDate": "2026-03",
+    "id": "558145",
+    "modified": "2026-03-11T18:00:35.4377847Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Terraform, Bicep, Ansible support for elastic clusters on Azure Database for PostgreSQL "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

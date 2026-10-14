@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "560957"
+  },
+  "fetchedAt": "2026-10-14T10:43:20.278Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "560957",
+    "created": "2026-05-04T17:45:58.1858461Z",
+    "description": "The Durable Task Scheduler Consumption SKU is now generally available. Run durable workflows and AI agent orchestrations on Azure with pay-per-use pricing. No storage to manage, no capacity to plan, and no idle costs.The Consumption SKU charges only for actions dispatched, making it ideal for bursty workloads like AI agent orchestration, event-driven pipelines, and API-triggered workflows.It supports up to 500 actions/second, 30-day data retention, a built-in monitoring dashboard, and identity-based security with Entra ID and RBAC. Works across Azure Functions, Azure Container Apps, AKS, and any compute environment using the Durable Task SDKs.Learn more.",
+    "generalAvailabilityDate": "2026-04",
+    "id": "560957",
+    "modified": "2026-05-04T17:45:58.1858461Z",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure Functions durable task scheduler Consumption SKU"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

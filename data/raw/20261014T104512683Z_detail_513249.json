@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "513249"
+  },
+  "fetchedAt": "2026-10-14T10:45:12.683Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "513249",
+    "created": "2026-04-22T17:45:10.5979041Z",
+    "description": "You can now monitor the synchronization status of\nyour logical replication slots in Azure Database for PostgreSQL – Flexible\nServer using the new logical_replication_slot_sync_status metric, now in\npublic preview. This Azure Monitor metric shows whether each logical\nreplication slot is synchronized, catching up, or in an unknown state—helping\nyou validate replication health and slot readiness.  This feature is especially useful when using logical\ndecoding or change data capture (CDC) tools\nlike Debezium or Kafka. With per-slot visibility and the ability to\nset up alerts, you can ensure your logical replication setup remains consistent\nand responsive during planned maintenance, migrations, or system events.  Learn\nmore. ",
+    "id": "513249",
+    "modified": "2026-04-22T17:45:10.5979041Z",
+    "previewAvailabilityDate": "2026-04",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Logical replication slot sync Status metric for Azure PostgreSQL Flexible Server "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

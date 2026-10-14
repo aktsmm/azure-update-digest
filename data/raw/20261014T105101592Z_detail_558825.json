@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "558825"
+  },
+  "fetchedAt": "2026-10-14T10:51:01.592Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "558825",
+    "created": "2026-03-24T17:30:29.8186836Z",
+    "description": "Azure Monitor now offers one-click enablement of Prometheus\nrecommended alerts directly in the Azure Portal for Azure Arc-enabled\nKubernetes clusters. These alerts, based on enhanced Prometheus community\nrules, provide comprehensive coverage across cluster, node, and pod levels.\nPreviously, enabling these alerts required manual template downloads and CLI\ndeployment.  To use these alerts, your cluster must have Azure\nMonitor managed service for Prometheus enabled. They serve as the\nreplacement for the legacy Container\ninsights recommended alerts (custom metrics) (preview).  By enabling these alerts, customers will:  \n Receive timely notifications on critical cluster\n     issues.  \n Accelerate triage and troubleshooting with\n     preconfigured signal coverage.  \n Improve cluster reliability and performance with\n     minimal configuration.  ",
+    "generalAvailabilityDate": "2026-03",
+    "id": "558825",
+    "modified": "2026-03-24T17:30:29.8186836Z",
+    "productCategories": [
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Monitor"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure Monitor Prometheus community recommended alerts for Azure Arc-enabled Kubernetes"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

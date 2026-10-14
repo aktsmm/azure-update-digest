@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "562971"
+  },
+  "fetchedAt": "2026-10-14T10:34:21.937Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562971",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "The Azure Cosmos DB all versions and deletes change feed mode is now generally available, giving you complete visibility into every change that happens in your containers. Unlike the default latest version mode, which surfaces only the most recent state of an item, all versions and deletes captures every create, update, and delete operation in the order it occurred, including intermediate changes between reads and TTL expirations. This mode opens up scenarios that were previously difficult to build. You can replicate data between locations without implementing soft deletes, trigger logic on every incremental change even when multiple updates happen between polls, and set up auditing workflows that fire on delete operations. Each change includes metadata identifying the operation type, so your application can handle creates, updates, and deletes with distinct processing logic. To get started, enable continuous backups on your Azure Cosmos DB for NoSQL account, which automatically creates the all versions and deletes change log. You can then consume it through the change feed pull model or change feed processor in supported SDKs. Changes are available to read within your configured continuous backup retention period. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562971",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Cosmos DB"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure Cosmos DB all versions and deletes change feed mode"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

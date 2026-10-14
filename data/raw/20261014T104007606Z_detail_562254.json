@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "562254"
+  },
+  "fetchedAt": "2026-10-14T10:40:07.606Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562254",
+    "created": "2026-05-21T21:45:32.2389902Z",
+    "description": "The Object REST API (an S3-compatible REST API) on Azure NetApp Files bridges the gap between traditional file-based storage and modern cloud services, enabling you to use your existing data in new ways. With the Object REST API, you can seamlessly integrate Azure NetApp Files data with Microsoft Fabric, Azure AI services, and other Azure offerings without the need to move or replicate data. This unlocks new use cases such as advanced analytics, machine learning, and real-time business intelligence, while reducing costs and accelerating innovation. The Object REST API introduces native S3-compatible read/write access, allowing modern applications to interact with your data directly and efficiently. Enterprises benefit from simplified integration, enhanced productivity, and improved data security, as data remains in place and protected by Azure NetApp Files’ robust security measures. This feature is ideal for organizations looking to leverage AI-driven insights, streamline workflows, and maintain compliance with industry standards.  This feature is now generally available in all Azure NetApp Files regions. Learn more:  \n What's\n     new in Azure NetApp Files  \n Understand\n     Azure NetApp Files object REST API access  \n Configure\n     object REST API access in Azure NetApp Files  \n Connect\n     OneLake to an Azure NetApp Files volume using object REST API  \n Connect\n     Azure Databricks to an Azure NetApp Files object REST API-enabled volume  ",
+    "generalAvailabilityDate": "2026-05",
+    "id": "562254",
+    "modified": "2026-05-21T21:45:32.2389902Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure NetApp Files"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure NetApp Files object REST API "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "562554"
+  },
+  "fetchedAt": "2026-10-14T10:32:13.356Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562554",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure\nContainer Apps enhances its OpenTelemetry (OTel) capabilities by expanding\nsupport for third-party observability platforms. This update introduces\nadditional endpoint options for commonly used monitoring tools such as New\nRelic, Dynatrace, and Elastic, extending the existing managed OpenTelemetry\nexperience with simpler setup for additional third-party observability\nplatforms.  This\nupdate makes it easier to send logs, metrics, and traces to more destinations\nwithout deploying or managing your own agents. Teams can now use a more\nconsistent OpenTelemetry-based pipeline across Azure Monitor, Datadog, New\nRelic, Dynatrace, Elastic, and OTLP-compatible endpoints, with less\nconfiguration overhead and more flexibility to route telemetry where they need\nit, including support for OTLP/HTTP endpoints, enabling integration with\nany OpenTelemetry-compatible backend.  Learn more. ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562554",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Container Apps"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Additional support for OpenTelemetry destinations (New Relic, Dynatrace, Elastic) "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

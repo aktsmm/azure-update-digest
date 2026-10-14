@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "560162"
+  },
+  "fetchedAt": "2026-10-14T10:46:50.737Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "560162",
+    "created": "2026-04-13T18:45:30.1773132Z",
+    "description": "Today, we are announcing Azure Bastion now supports managed\nidentities for graphical session recording. Azure Bastion graphical session recording now supports write\naccess to storage accounts using managed identities. With this update, users\nhave the option to configure managed identities during session recording setup\nand specify the storage account container for storing VM recordings. Once the\nmanaged identity is authenticated to WRITE recordings to the storage container,\nAzure Bastion will authenticate without requiring a SAS token. \n Stronger\n     security posture: Removes shared, time‑bound SAS URLs in favor of\n     identity‑based authorization tied to the Bastion resource. \n Reduced\n     operational overhead: Eliminates token creation, rotation, and\n     expiry management, making session recording easier to operate at scale. Learn\nmore. ",
+    "id": "560162",
+    "modified": "2026-04-13T18:45:30.1773132Z",
+    "previewAvailabilityDate": "2026-04",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure Bastion"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Security",
+      "Services"
+    ],
+    "title": "Public Preview: Managed identity support for graphical session recording"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

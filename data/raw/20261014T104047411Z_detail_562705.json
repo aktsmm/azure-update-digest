@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "562705"
+  },
+  "fetchedAt": "2026-10-14T10:40:47.411Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562705",
+    "created": "2026-05-20T16:45:53.1895772Z",
+    "description": "Azure Site-to-Site VPN with digital certificate\nauthentication provides an alternative to the traditional pre-shared key (PSK)\nmodel by using a certificate-based asymmetric trust model. In this\nconfiguration, Azure and the on-premises VPN device authenticate each other by\nusing separate inbound and outbound certificates. The outbound authentication\ncertificate is stored in Azure Key Vault and is accessed by the VPN Gateway\nthrough a user-assigned managed identity with the required Role-Based Access\nControl (RBAC) permissions. Because X.509 certificates use asymmetric keys and\na trusted certificate chain to validate identity, this approach helps reduce\nthe risk of impersonation and Internet Key Exchange (IKE) negotiation\ntampering. Learn more.",
+    "generalAvailabilityDate": "2026-05",
+    "id": "562705",
+    "modified": "2026-05-20T16:45:53.1895772Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "VPN Gateway"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: site-to-site VPN connections with certificate authentication"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

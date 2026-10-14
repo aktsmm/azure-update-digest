@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "561432"
+  },
+  "fetchedAt": "2026-10-14T10:43:24.464Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "561432",
+    "created": "2026-05-04T17:45:58.1858461Z",
+    "description": "We have identified an issue impacting Multi-line (Multiple\nNumber Assignment) feature for Teams Phone enablement related to the\nusage of AlternateId in customer internal implementations for\nAzure Communication Services (ACS). AlternateId is an Microsoft internal\nusage parameter for phone numbers related to Multi-line in Teams Phone. To\nensure compatibility with the phone system, AlternateId should not be\nused by any customer for ACS. We have detected that some customer\nconfigurations are currently using non-phone MRI values for\nAlternateId in internal provisioning workflows. This configuration is not\nsupported and can result in call failures or unintended\nbehavior as Multi-line capabilities are enabled within your tenant. Action Required: If your organization is using AlternateId: \n Ensure that usage of AlternateId is\n     ceased immediately \n Continued\n     use of unsupported AlternateId values may result in service disruption. Temporary Mitigation (If More Time\nis Needed): If you are unable to complete the required remediation\nimmediately, you may request to be added to a Multi-line feature\nblocklist by contacting Microsoft Support. Being added to this blocklist will temporarily prevent\nMulti-line enablement for your tenant while you work to correct your\nAlternateId implementation. Important: This blocklist will expire\non June 15, 2026. If you need assistance with remediation or require temporary\nblocklisting, please contact Microsoft Support. ",
+    "generalAvailabilityDate": "2026-05",
+    "id": "561432",
+    "modified": "2026-05-04T17:45:58.1858461Z",
+    "productCategories": [
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "Azure Communication Services"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Cleanup legacy AlternateId usage to ensure continued service"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

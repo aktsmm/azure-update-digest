@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "563187"
+  },
+  "fetchedAt": "2026-10-14T10:36:21.330Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563187",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Deployment templates in Azure Machine Learning add CLI and SDK support in public preview, so platform teams can create, update, delete, and manage templates from infrastructure-as-code pipelines instead of only the portal. The new commands work with az ml deployment-template create, list, show, update, and delete, and the Python SDK exposes the same operations through the azure-ai-ml client. Teams can check deployment templates into Git, review them in pull requests, and manage them through Azure DevOps or GitHub Actions exactly like other Azure resources. They can deploy the model packaged with deployment templates by using az ml online-deployment create or the equivalent operation in the SDK. This enables repeatable, auditable rollouts of standardized model deployments across many projects in an organization without manual portal steps. Learn more",
+    "id": "563187",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Machine Learning"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: CLI and SDK support for Deployment Templates"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

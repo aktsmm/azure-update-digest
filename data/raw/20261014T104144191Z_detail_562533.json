@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "562533"
+  },
+  "fetchedAt": "2026-10-14T10:41:44.191Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562533",
+    "created": "2026-05-15T22:00:42.0539372Z",
+    "description": "Role names in Microsoft Foundry have been updated to align with the product brand. The following built-in roles are now renamed:Azure AI Account Owner → Foundry Account OwnerAzure AI Owner → Foundry OwnerAzure AI User → Foundry UserAzure AI Project Manager → Foundry Project ManagerIn addition, role management capabilities have been enhanced to support evolving Foundry scenarios. Foundry Account Owner and Foundry Owner roles now include the ability to assign select dependent roles needed for common workflows, such as deploying hosted agents and accessing trace data. These roles can assign the following roles to themselves and others (conditional access):Foundry UserContainer Registry Contributor and Data Access Configuration AdministratorContainer Registry Repository WriterLog Analytics ReaderPermissions for Foundry User and Foundry Project Manager remain unchanged.Learn More.",
+    "generalAvailabilityDate": "2026-05",
+    "id": "562533",
+    "modified": "2026-05-15T22:00:42.0539372Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Management"
+    ],
+    "title": "Update: Microsoft Foundry built-in RBAC role naming and enhancements"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

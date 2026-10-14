@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "559322"
+  },
+  "fetchedAt": "2026-10-14T10:49:17.715Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "559322",
+    "created": "2026-03-30T21:45:47.4558873Z",
+    "description": "Ephemeral OS Disk with full caching is now available in public preview for Azure VM/VMSS, bringing significantly faster and more reliable OS disk performance to your workloads. By caching the entire OS disk image on local VM storage (cache disk, resource disk, or NVMe disk), you get better IO performance with consistently low latency — and greater resilience, even during remote storage disruptions. This capability is extremely useful for stateless, IO-sensitive workloads including AI workloads, quorum-based databases, data analytics, and large-scale stateless services on General Purpose VM families. You can get started today on most General Purpose VM SKUs (excluding 2-core and 4-core VMs) across Central US. To use the feature, set the enableFullCaching flag to true for Ephemeral OS disks in your ARM templates or REST API definitions when creating new VMs or VM Scale Sets.Learn more.",
+    "id": "559322",
+    "modified": "2026-03-30T21:45:47.4558873Z",
+    "previewAvailabilityDate": "2026-03",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machine Scale Sets",
+      "Virtual Machines"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Ephemeral OS Disk with full caching for VM/VMSS"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

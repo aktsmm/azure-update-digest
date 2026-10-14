@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "562848"
+  },
+  "fetchedAt": "2026-10-14T10:33:05.543Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562848",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Organizations\nusing workspace-based API management models previously needed a dedicated\nworkspace gateway and Premium tier deployment to take advantage of API\nManagement workspaces increasing both cost and operational complexity.  With\nthis update, Azure API Management customers can now associate workspaces\ndirectly with the built-in gateway, extending workspace support\nacross additional tiers and all regions supported by API Management. This\nhelps organizations:  \n Use workspaces in any API\n     Management tier (except for Consumption)  \n Create workspaces in any\n     region supported by API Management  \n Take advantage of built-in\n     gateway capabilities that are not available in workspace\n     gateways, such as multi-region deployments, custom hostnames, or\n     Private Link connectivity  By\nbringing workspaces to the built-in gateway, Azure API Management makes it\neasier and more cost-effective for organizations to adopt team-based API\ngovernance and delegated API management models at scale.  This\nfeature is currently rolling out to v2 tiers of API Management and\nwill start rolling out to classic tiers around\nJuly or August.  Learn more. ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562848",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Integration",
+      "Internet of Things",
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "API Management"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build"
+    ],
+    "title": "Generally Available: Azure API Management workspaces now support the built-in gateway"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

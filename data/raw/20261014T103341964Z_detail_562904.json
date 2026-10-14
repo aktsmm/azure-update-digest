@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "562904"
+  },
+  "fetchedAt": "2026-10-14T10:33:41.964Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562904",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Managing Kubernetes clusters across hybrid and multi-cloud environments is fragmented by default: different consoles, different tools, different operational models. Azure Kubernetes Fleet Manager now supports Azure Arc-enabled Kubernetes in GA, so any CNCF-compliant distribution can join a fleet as a member cluster.Once Arc-enabled clusters are joined as members, teams get centralized visibility into cluster health across their entire Kubernetes estate. From there, Fleet Manager's intelligent workload placement distributes namespaces, configurations, and applications across any member cluster, regardless of where it runs.For customers running mixed estates today, this reduces reliance on third-party multi-cluster tools (and the ongoing licensing that comes with them) while keeping a consistent operational model across AKS, on-premises, and other clouds.Learn more",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562904",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Fleet Manager"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build"
+    ],
+    "title": "Generally Available: Azure Kubernetes Fleet Manager for Arc-enabled clusters"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

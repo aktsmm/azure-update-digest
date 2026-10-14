@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "562350"
+  },
+  "fetchedAt": "2026-10-14T10:41:52.900Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562350",
+    "created": "2026-05-14T17:30:02.4952113Z",
+    "description": "Azure Files now supports Managed Identities for SMB\naccess, enabling applications and services to authenticate without storing\nstatic credentials or account keys. This feature aligns with Zero Trust\nprinciples, allowing workloads to use Entra-issued tokens for secure,\nshort-lived access to file shares.  By leveraging Managed Identities, organizations can\neliminate service principal secrets and reduce credential sprawl, simplifying\ncompliance and improving security posture.\nThis capability is especially impactful for cloud-native\nworkloads that require persistent storage, including:  \n AKS\n     clusters with persistent volumes with managed and workload\n     identities  \n CI/CD\n     pipelines and automation scripts  \n Native\n     Application or VM (device) identity access  Managed Identities provide seamless integration with Azure\nRBAC, enabling fine-grained access control and centralized policy enforcement\nwithout manual key rotation. Please reach out\nto azurefiles@microsoft.com or customers interested in adopting\nManaged Identities for secure SMB access with Azure Files. Learn\nmore. ",
+    "generalAvailabilityDate": "2026-04",
+    "id": "562350",
+    "modified": "2026-05-14T17:30:02.4952113Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Files"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Compliance",
+      "Microsoft Build",
+      "Security",
+      "Services"
+    ],
+    "title": "Generally Available: Managed Identity Support for Azure Files SMB Is now GA"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

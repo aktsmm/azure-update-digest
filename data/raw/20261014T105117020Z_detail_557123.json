@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "557123"
+  },
+  "fetchedAt": "2026-10-14T10:51:17.020Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Retirement",
+        "year": 2031
+      }
+    ],
+    "baseId": "557123",
+    "created": "2026-03-20T17:15:50.3317724Z",
+    "description": "The Azure Sphere service is retiring and will stop supporting all customer application, OS, bug and security updates, along with DAA certificate issuance, on July 31, 2031. Why is this happening?  Azure Sphere pioneered secure IoT connectivity, combining bespoke hardware, a secure Linux-based OS, and a cloud-based security service, elevating industry standards for microcontroller security. As the IoT landscape advances, customers are now able to access secure microcontrollers from a wide range of silicon vendors and pair these with Microsoft next-generation solutions for greater flexibility and scalability. Recommended Action:Evaluate hardware redesign to replace MT3620 silicon in future product iterations. Consider PSA/SESIP Level 3+, or similar, certified silicon as a guideline for silicon with similar security properties. Express OEM license renewal and purchasing intent through distributor, Avnet, for MT3620 components before 31 July 2026 if additional stock is needed. Evaluate alternative Azure IoT and 3rd-party solutions alongside a new MCU.Help and support: If you have questions, contact your Microsoft accounts team or Microsoft Support for personalized assistance. Learn more:  Alternative Azure IoT service documentation and solutions",
+    "id": "557123",
+    "modified": "2026-03-20T17:15:50.3317724Z",
+    "productCategories": [
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Sphere"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Azure Sphere will be retired on July 31, 2031"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

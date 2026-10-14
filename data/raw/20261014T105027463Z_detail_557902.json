@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "557902"
+  },
+  "fetchedAt": "2026-10-14T10:50:27.463Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "557902",
+    "created": "2026-03-24T23:00:18.1861028Z",
+    "description": "Network\nobservability can generate large volumes of metrics, making it difficult for\nteams to focus on data that is operationally relevant. Container network\nmetrics filtering in Azure Container Networking Services (ACNS) allows\noperators to control which container‑level network metrics are collected using\nKubernetes custom resources, with filters applied dynamically. This helps teams\nreduce monitoring noise, manage data volumes, and keep dashboards focused on\nactionable signals. Learn more. ",
+    "generalAvailabilityDate": "2026-03",
+    "id": "557902",
+    "modified": "2026-03-24T23:00:18.1861028Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Container network metrics filtering for AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

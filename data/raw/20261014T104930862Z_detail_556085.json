@@ -1,0 +1,29 @@
+{
+  "args": {
+    "id": "556085"
+  },
+  "fetchedAt": "2026-10-14T10:49:30.862Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Retirement",
+        "year": 2029
+      }
+    ],
+    "baseId": "556085",
+    "created": "2026-03-30T17:45:08.2587317Z",
+    "description": "On March 31, 2029, Azure Cosmos DB for PostgreSQL will be retired, and you'll need to migrate to Azure Database\nfor PostgreSQL Elastic Cluster by that date. Azure Database for PostgreSQL Elastic Cluster delivers the same\ndistributed PostgreSQL capabilities as Azure Cosmos DB for PostgreSQL, with\nfull feature parity built on the Citus extension. It adds a simpler and more\ntransparent pricing model, broader compute choices, and support for newer\nPostgreSQL versions, while providing built-in high availability, automated\nbackups, point-in-time restore, and disaster recovery. Elastic Cluster also\noffers elastic scaling, integrated monitoring, and the security and compliance\nfeatures of Azure Database for PostgreSQL—giving you a more streamlined,\nfuture-ready platform without requiring application code changes. Required\naction:To avoid any disruptions in service, please\nmigrate your existing Azure Cosmos DB for PostgreSQL databases to Azure\nDatabase for PostgreSQL, and use Elastic Cluster option using the provided tool\nfor seamless migration. Review your current Azure Cosmos DB for\nPostgreSQL clusters, versions, and any required extensions. Provision an Azure Database for PostgreSQL\nElastic Cluster destination environment Use the provided migration tool to move\nschema and data, validate application behavior, and complete cutover. Decommission your source clusters after\nsuccessful validation of your new environment. ",
+    "id": "556085",
+    "modified": "2026-03-30T17:45:08.2587317Z",
+    "productCategories": [],
+    "products": [],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Azure Cosmos DB for PostgreSQL will retire on March 31, 2029"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

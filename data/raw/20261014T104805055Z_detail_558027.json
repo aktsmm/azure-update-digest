@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "558027"
+  },
+  "fetchedAt": "2026-10-14T10:48:05.055Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "558027",
+    "created": "2026-04-02T16:45:52.7122053Z",
+    "description": "Starting March 31, 2027,\nPython applications hosted on Azure App Service on\nWindows and Azure Functions on Windows will no longer run. After\nthis date:  \n Your application configuration and content will\n     remain intact  \n Your apps will stop running  \n Technical support for these workloads will no longer\n     be available  Python on App Service for Windows\nhas not been supported since December 2021. This change\nformally retires the runtime.  What you need to do: To avoid service\ndisruption, you must migrate your Python applications to Linux before 31\nMarch 2027.   Microsoft fully supports Python\non:  \n Azure App Service on Linux  \n Azure Functions on Linux  We recommend creating a\nnew Linux based application and redeploying your Python\nworkloads well in advance of the retirement date.  ",
+    "id": "558027",
+    "modified": "2026-04-02T16:45:52.7122053Z",
+    "productCategories": [
+      "Compute",
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "App Service"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Python support for Azure App Service and Azure Functions on Windows will be retired on March 31, 2027 "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

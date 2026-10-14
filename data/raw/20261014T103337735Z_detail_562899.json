@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "562899"
+  },
+  "fetchedAt": "2026-10-14T10:33:37.735Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562899",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Organizations\noften need to expose APIs, developer portals, and management endpoints under\ndifferent branded or organizational domain names- — for example,\napi.contoso.com for external partners, apis.hrportal.contoso.com for an\ninternal HR platform, and dev.europe.contoso.com for a regional\ndeveloper portal. Until now, achieving this level of\nseparation frequently required additional API Management\ninstances, increasing operational complexity and cost.  With\nthis update, Azure API Management Premium v2 enables multiple custom domains\nwithin a single instance across gateway, developer portal, and management\nendpoints. This allows organizations to:  \n Configure distinct hostnames for\n     different endpoints and audiences  \n Align API experiences with\n     business units, products, or regional brands  \n Simplify domain-scoped networking\n     and security policies  \n Reduce the need for separate APIM\n     instances solely for domain separation  For\nenterprises managing large and distributed API estates, this provides greater\nflexibility in how APIs and developer experiences are exposed\nwhile improving operational efficiency\nand maintaining centralized governance.  Learn\nmore. ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562899",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Integration",
+      "Internet of Things",
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "API Management"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build"
+    ],
+    "title": "Generally Available: Azure API Management Premium v2 now supports multiple custom domains"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

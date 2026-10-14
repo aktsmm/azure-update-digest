@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "543279"
+  },
+  "fetchedAt": "2026-10-14T10:52:45.951Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "543279",
+    "created": "2026-03-16T18:45:11.5147114Z",
+    "description": "Azure Batch had retired\nLow-Priority VMs on September 30, 2025 and will begin a system-initiated\nmigration to Spot VMs beginning March 1, 2026. This change aligns Batch with the broader\nAzure Spot infrastructure and simplifies the platform’s VM offering. Impact: \n The migration will occur automatically and be\n     completed within several days. \n No interruption to existing workloads is\n     expected. \n Customers will see Spot-based billing beginning\n     with the March invoice.  Action required: No action is required if you choose to continue\nusing Spot VMs after the migration. If you prefer not to transition, you\nmay migrate your Batch workloads to dedicated (on-demand) compute\nnodes before end of February. After this deadline: Low-priority VMs can no longer be created. Existing Low-priority VMs will be billed at Spot\npricing.  Details: \n All current Low-Priority VMs will automatically run\n     as Spot VMs after migration. \n Batch-managed pool allocation will handle the\n     transition seamlessly. \n Existing API/SDK references to Low-Priority VM\n     properties will automatically allocate Spot capacity without changes to\n     customer code or configuration.  Learn more. ",
+    "id": "543279",
+    "modified": "2026-03-16T18:45:11.5147114Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Batch"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Migration of Azure Batch Low-Priority VMs to Spot VMs in early March"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

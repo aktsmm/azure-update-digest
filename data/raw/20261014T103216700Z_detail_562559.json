@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "562559"
+  },
+  "fetchedAt": "2026-10-14T10:32:16.700Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562559",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "In\naddition to platform-level logs, Azure Container Apps now adds a dedicated\nAzure Monitor diagnostic setting category, ContainerAppHTTPLogs,\nthat exposes detailed HTTP access logs for incoming traffic and is designed for\nhigh-volume request data. With this capability, customers can now troubleshoot\ningress and request-flow issues with much greater precision, making it easier\nto investigate failed requests, latency, retries, WebSocket disconnects,\nrouting behavior, and backend connectivity problems.  This\ngives teams a dedicated, scalable traffic logging surface for scenarios where\nplatform-level signals alone were not enough to quickly understand\nrequest-level behavior. The result is faster issue resolution, less operational\nfriction, and stronger confidence in running and scaling high-traffic,\nbusiness-critical applications on Azure Container Apps.  Learn more. ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562559",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Container Apps"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Monitor HTTP traffic in Azure Container Apps "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

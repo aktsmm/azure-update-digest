@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "557862"
+  },
+  "fetchedAt": "2026-10-14T10:49:45.874Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "557862",
+    "created": "2026-03-25T20:00:39.2632249Z",
+    "description": "In‑place node pool upgrades can introduce risk by applying changes\ndirectly to running environments. Blue‑green agent pool upgrades create a\nparallel node pool with the new configuration, allowing validation before\nworkloads are shifted and providing a clear rollback path. This reduces upgrade\nrisk and supports more controlled cluster lifecycle management. Learn more.",
+    "id": "557862",
+    "modified": "2026-03-25T20:00:39.2632249Z",
+    "previewAvailabilityDate": "2026-03",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Blue-green agent pool upgrade in AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

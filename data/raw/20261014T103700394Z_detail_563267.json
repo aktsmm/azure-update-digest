@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563267"
+  },
+  "fetchedAt": "2026-10-14T10:37:00.394Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563267",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure AI Search now emits audit events for Microsoft Purview sensitivity labels carried alongside indexed documents. When the SharePoint in Microsoft 365 indexer is configured to preserve and honor sensitivity labels, query-time filtering decisions and label changes flow into Microsoft Purview activity logs. Security and compliance teams can review who queried labeled content, when label values changed, and how those changes affected search visibility. The capability builds on the existing sensitivity label ingestion preview and requires no schema changes to existing indexes. Configure auditing through your Microsoft Purview tenant settings. Learn more.",
+    "id": "563267",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Microsoft Purview sensitivity label auditing in Azure AI Search"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

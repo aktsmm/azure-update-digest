@@ -1,0 +1,40 @@
+{
+  "args": {
+    "id": "557852"
+  },
+  "fetchedAt": "2026-10-14T10:40:04.408Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "557852",
+    "created": "2026-05-21T21:45:32.2389902Z",
+    "description": "As part of\nAzure’s ongoing security improvements, App Service, Functions, and Logic Apps\nwill no longer accept connections using TLS 1.0 or TLS 1.1 after May 31, 2027.\nAny client, application, or service that continues to use these legacy TLS\nversions will be unable to connect to these services after his date. Customers should\nreview the applications and services that connect to App Service, Functions, or\nLogic Apps and ensure they support TLS 1.2 or later prior to this date. View the resources in your subscription that still allow TLS 1.0 or 1.1 in the Azure Retirement Workbook.Next steps Test client compatibility\nwith TLS 1.2 or later. Review the TLS\nversion deprecation overview for configuration guidance and see the service‑specific\nQ&A links below for common questions. Learn more:\n App\n     Service TLS deprecation Q&A  \n Functions\n     TLS deprecation Q&A  \n Logic\n     Apps TLS deprecation Q&A ",
+    "id": "557852",
+    "modified": "2026-05-21T21:45:32.2389902Z",
+    "productCategories": [
+      "Compute",
+      "Mobile",
+      "Web",
+      "Containers",
+      "Internet of Things",
+      "Integration"
+    ],
+    "products": [
+      "App Service",
+      "Azure Functions",
+      "Logic Apps"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement:  TLS 1.0 and TLS 1.1 in Azure App Service, Azure Functions, and Azure Logic Apps"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

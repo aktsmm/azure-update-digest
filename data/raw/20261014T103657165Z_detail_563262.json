@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563262"
+  },
+  "fetchedAt": "2026-10-14T10:36:57.165Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563262",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "The Azure AI Search SharePoint in Microsoft 365 indexer now indexes ASPX site content and SharePoint Lists in addition to document libraries. The indexer connects through a Microsoft Entra application registration with application or delegated permissions, picks up new and changed items incrementally, and removes deleted items on the next run. Inclusion and exclusion rules let you scope ingestion to specific sites, libraries, lists, or folders, and additional columns can be brought through as searchable fields. The same indexer continues to support basic ACL preservation and Microsoft Purview sensitivity label ingestion in preview.Learn more.",
+    "id": "563262",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: SharePoint in Microsoft 365 indexer supports ASPX pages and Lists"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "561510"
+  },
+  "fetchedAt": "2026-10-14T10:42:13.050Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "561510",
+    "created": "2026-05-12T17:30:34.911185Z",
+    "description": "We’ve rolled out two important improvements to enhance\naccuracy and control in pattern-based workflows: Revoke fix: Resolved an issue where revoke\nactions were not consistently applied, ensuring changes now take effect\nreliably and as intended. Support for AND in pattern parsing: You can now\ncombine conditions using AND, enabling more precise and expressive pattern\ndefinitions. These updates help you manage indicators and patterns with\ngreater confidence and precision. ",
+    "generalAvailabilityDate": "2026-04",
+    "id": "561510",
+    "modified": "2026-05-12T17:30:34.911185Z",
+    "productCategories": [
+      "Hybrid + multicloud",
+      "Security"
+    ],
+    "products": [
+      "Microsoft Sentinel"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Sentinel TI - improved pattern parsing & revoke reliability"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

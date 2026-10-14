@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "557857"
+  },
+  "fetchedAt": "2026-10-14T10:47:44.553Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "557857",
+    "created": "2026-04-07T17:45:41.0970467Z",
+    "description": "Organizations\nthat use HTTP proxies to control outbound traffic often need to change or\nremove those settings as network requirements evolve, which can be disruptive\nin running clusters. Azure Kubernetes Service allows administrators to disable\nHTTP proxy variables for nodes and pods while retaining proxy configuration in\nthe control plane, with changes triggering node pool reimaging to ensure a\nconsistent cluster state. This gives operators clearer control over outbound\nnetworking behavior and simplifies ongoing maintenance without requiring full\ncluster rebuilds.  Learn more. ",
+    "generalAvailabilityDate": "2026-04",
+    "id": "557857",
+    "modified": "2026-04-07T17:45:41.0970467Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Disable HTTP proxy in AKS "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

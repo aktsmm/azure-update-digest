@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "558247"
+  },
+  "fetchedAt": "2026-10-14T10:48:14.580Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "558247",
+    "created": "2026-04-01T21:00:19.8626472Z",
+    "description": "Service Fabric will end support\nfor all clusters running on Windows Server 2022 on March 31, 2027. Customers\nmust upgrade to Windows Server 2025 by this date to remain in a\nsupported state. This change aligns Service\nFabric’s Windows OS image support model with mainstream OS support timelines,\nconsistent with Linux and other Azure platforms. Service Fabric\nwill no longer support Windows Server OS images beyond their mainstream support\nend date. This change strengthens security\nposture, reduces operational complexity, and enables continued innovation\non modern platforms. Note: While Virtual Machine Scale\nSets will continue to function on Windows Server 2022 beyond March 31,\n2027, Service Fabric support will not. Required Action: Upgrade all Service Fabric clusters running Windows Server 2022 to Windows Server 2025 before March 31, 2027 to remain in a supported state. This support end date applies to all Service Fabric environments.How to upgrade: OS image upgrades are performed by\nscaling cluster node types and do not impact applications when\nexecuted using supported procedures: While some documentation\nreferences upgrade from Windows Server 2019 to 2022, the same process applies\nall supported Windows Server OS image upgrades, including Windows Server 2025.Learn more: Scale up a Service Fabric primary node type - Microsoft Learn  Scale up a Service Fabric non-primary node type - Microsoft LearnFor questions, visit Azure Service Fabric - Microsoft Q&A.  Documentation ",
+    "id": "558247",
+    "modified": "2026-04-01T21:00:19.8626472Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Service Fabric"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Service Fabric support for Windows Server 2022 ends on March 31, 2027 - upgrade to Windows Server 2025"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

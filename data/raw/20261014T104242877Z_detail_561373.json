@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "561373"
+  },
+  "fetchedAt": "2026-10-14T10:42:42.877Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "561373",
+    "created": "2026-05-06T19:45:54.2869239Z",
+    "description": "Azure Backup now supports ‘Bulk Restore’ for Azure virtual machines (VMs), enabling customers to restore multiple VMs (upto 100) in a single operation. This feature simplifies large-scale recovery scenarios while preserving control and granularity at an individual VM level. Customers can select multiple VMs, choose restore points, apply common restore parameters and track restore progress centrally. This feature is optimized for scenarios such as outages, ransomware recovery, improving recovery speed and operational efficiency. Learn More.",
+    "id": "561373",
+    "modified": "2026-05-06T19:45:54.2869239Z",
+    "previewAvailabilityDate": "2026-05",
+    "productCategories": [
+      "Management and governance",
+      "Storage"
+    ],
+    "products": [
+      "Azure Backup"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Bulk Restore for Azure Virtual Machines using Azure Backup"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

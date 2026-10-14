@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "561942"
+  },
+  "fetchedAt": "2026-10-14T10:42:07.464Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "561942",
+    "created": "2026-05-12T18:30:55.4534273Z",
+    "description": "Confidential computing for Azure Service Bus Premium is now\ngenerally available in Korea Central and UAE North. This\ncapability enables Service Bus to process messages inside hardware-based\ntrusted execution environments (TEEs), adding protection for data in use on top\nof existing encryption at rest and in transit. The TEE prevents unauthorized\naccess to data while it is being processed, bringing hardware-level isolation\nto message handling. Confidential computing works alongside the security features\nyou can already use with Service Bus today, such as TLS encryption for data in\ntransit, encryption at rest with support for customer-managed keys (CMK),\nprivate endpoints, and managed identities. For workloads with the strictest\nrequirements, pairing confidential computing with customer-managed keys backed\nby Azure Key Vault Managed HSM provides defense in depth across data at rest,\nin transit, and in use. Confidential computing is enabled at the namespace level\nduring creation. After it is enabled, all queues, topics, and subscriptions in\nthe namespace benefit from hardware-isolated message processing. No application\nchanges are required, so existing clients and messaging patterns continue to\nwork. Learn more: Confidential\nComputing for Azure Service Bus Premium blog Documentation ",
+    "generalAvailabilityDate": "2026-05",
+    "id": "561942",
+    "modified": "2026-05-12T18:30:55.4534273Z",
+    "productCategories": [
+      "Integration"
+    ],
+    "products": [
+      "Service Bus"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Generally Available: Confidential computing for Azure Service Bus Premium"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

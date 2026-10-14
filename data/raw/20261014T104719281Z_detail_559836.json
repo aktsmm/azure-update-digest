@@ -1,0 +1,42 @@
+{
+  "args": {
+    "id": "559836"
+  },
+  "fetchedAt": "2026-10-14T10:47:19.281Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "559836",
+    "created": "2026-04-10T17:00:41.2372907Z",
+    "description": "Developers can now route Stripe events directly into Azure Event Grid and build scalable, event-driven architectures without managing webhook infrastructure or custom brokers.This means that Event Grid acts as a fully managed event broker between Stripe and other Azure services.Now Event Grid can automatically deliver Stripe events to Azure subscribers including:Azure FunctionsLogic AppsEvent HubsService BusFurthermore, because Event Grid has a native connector to Microsoft Fabric, you can now ingest Stripe events into Fabric as continuous streams, where they can be transformed, enriched, and analyzed in real time.Learn more.",
+    "generalAvailabilityDate": "2026-05",
+    "id": "559836",
+    "modified": "2026-04-10T17:00:41.2372907Z",
+    "previewAvailabilityDate": "2026-04",
+    "productCategories": [
+      "Integration",
+      "Internet of Things"
+    ],
+    "products": [
+      "Event Grid"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Event Grid as a destination for Stripe events"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

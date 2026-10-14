@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "559494"
+  },
+  "fetchedAt": "2026-10-14T10:41:24.405Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "559494",
+    "created": "2026-05-19T16:00:11.1747817Z",
+    "description": "Azure\nStorage Actions, our fully managed platform that transforms how\norganizations automate data management tasks for Azure Blob and Data Lake\nStorage, now supports mock runs - a new way to simulate task execution at full\nscale without modifying any data. Mock runs enable you to validate your task conditions by\nscanning and evaluating billions of objects against your storage accounts,\ngenerating a detailed report showing exactly which blobs would be affected and\nwhat operations would be performed without making any changes. Mock runs\nvalidate across every blob in scope, giving you complete confidence before\ncommitting to irreversible blob operations. Combining full-scale validation\nwith detailed CSV reporting, mock runs eliminate guesswork and drive safe, predictable\nautomation. Supported use cases include validating retention and expiry\npolicies, previewing cost optimization through down tiering or up tiering,\nconfirming compliance enforcement such as legal holds and immutability, and\nverifying large-scale cleanup or tagging operations before execution. You can\ncreate a mock run by selecting it as the trigger type when creating a storage\ntask assignment, review the results, and then seamlessly transition the\nassignment to a real run without recreating it.  Learn more: Mock\nruns documentation Azure\nStorage Actions overview ",
+    "generalAvailabilityDate": "2026-05",
+    "id": "559494",
+    "modified": "2026-05-19T16:00:11.1747817Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Storage Actions"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Mock runs for Azure Storage Actions – Validate before you execute"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "558116"
+  },
+  "fetchedAt": "2026-10-14T10:51:08.438Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "558116",
+    "created": "2026-03-20T19:15:35.2206794Z",
+    "description": "In mid-March 2026, the following updates and\nenhancements were made to Azure SQL:   \n Reduce\n     the consumption of storage space, I/O, and memory and improve performance\n     without investing time and effort into index maintenance jobs.  \n Configure\n     soft delete retention for your Azure SQL Server to prevent accidental\n     deletion and self-restore in case of deletion.  \n Azure\n     SQL Database Hyperscale Premium‑series expands scalability with new 160\n     and 192 vCore options representing a 25% and 50%\n     increase respectively over the current 128 vCore limit, enabling\n     significantly larger compute and memory configurations for the most demanding\n     workloads.  \n DiskANN\n     for vector indexing and vector search has been\n     significantly improved, addressing previous constraints.\n     The vector index now supports fully real-time updates, integrated\n     pre-filtering and post-filtering, and improved memory efficiency at\n     scale through vector quantization. These advancements make it well\n     suited for operational retrieval‑augmented generation (RAG)\n     workloads.  Learn more: Auto index\ncompaction Business\ncontinuity in Azure SQL Database Azure\nSQL Database Hyperscale Premium-series DiskAN\nVector Index improvements ",
+    "id": "558116",
+    "modified": "2026-03-20T19:15:35.2206794Z",
+    "previewAvailabilityDate": "2026-03",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database",
+      "Azure SQL Managed Instance"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Azure SQL updates for mid-March 2026"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

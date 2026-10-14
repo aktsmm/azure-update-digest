@@ -1,0 +1,42 @@
+{
+  "args": {
+    "id": "562240"
+  },
+  "fetchedAt": "2026-10-14T10:40:58.784Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562240",
+    "created": "2026-05-20T15:15:40.0758408Z",
+    "description": "Azure Event Grid namespaces are expanding MQTT capabilities\nto help organizations build more connected, scalable, and MQTT V5 standards-based\nreal-time solutions. These updates make it easier to deliver responsive device\nexperiences, simplify backend integration, and accelerate modern IoT\napplication development. MQTT\nRetain support: Deliver a better subscriber experience by\nensuring new subscribers can immediately receive the latest known state for a\ntopic, without waiting for the next message. Shared\nSubscriptions: Scale message processing more efficiently by\ndistributing traffic across multiple consumers in the same subscription group,\nhelping support higher throughput and more resilient architectures. HTTP\nPublish of MQTT messages: Bring HTTP-based applications into\nMQTT workflows with a simple publishing path that helps connect backend\nservices, business applications, and device ecosystems more seamlessly.  Learn\nmore.  ",
+    "generalAvailabilityDate": "2026-04",
+    "id": "562240",
+    "modified": "2026-05-20T15:15:40.0758408Z",
+    "previewAvailabilityDate": "2026-04",
+    "productCategories": [
+      "Integration",
+      "Internet of Things"
+    ],
+    "products": [
+      "Event Grid"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure Event Grid releases for April 2026"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

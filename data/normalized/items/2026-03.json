@@ -19,10 +19,10 @@
       ],
       "created": "2026-03-16T18:30:34.1207616Z",
       "createdJst": "2026-03-17",
-      "description": "Microsoft Azure will retire support for NVv3 or NVv4-series VMs on September 30th, 2026, including NVv3 Series (NVIDIA Tesla M60 GPU): Standard_NV12s_v3, Standard_NV12hs_v3, Standard_NV24s_v3, Standar...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "2a5159560324d83137ae48ad4f59f3514da7a1a7880d2fe4f8fa03ef707aa620",
+      "description": "Microsoft Azure will retire support for NVv3 or NVv4-series VMs on September 30th, 2026, including NVv3 Series (NVIDIA Tesla M60 GPU): Standard_NV12s_v3, Standard_NV12hs_v3, Standard_NV24s_v3, Standard_NV24ms_v3, Standard_NV32ms_v3, Standard_NV48s_v3 NVv4 Series (AMD Radeon Instinct MI25 GPU): Standard_NV4as_v4, Standard_NV4ahs_v4, Standard_NV8as_v4, Standard_NV8ahs_v4, Standard_NV16as_v4, Standard_NV16ahs_v4, Standard_NV32as_v4, Standard_NV32ahs_v4  Azure Batch will follow Microsoft Azure support retirement dates for NVv3 or NVv4-series VM support in Batch pools. Please refer to the original Azure retirement NVv3 series retirement - Azure Virtual Machines | Microsoft Learn and NVv4 series retirement - Azure Virtual Machines | Microsoft Learn.From now\nuntil September 30th, 2026, you'll need to either migrate your Batch\npools to a newer VM series in the same NC product line, or you may migrate to a\ndifferent Batch-supported\nVM size suitable for your workload. After the target retirement dates,\nno new Batch pools specifying the NVv3 or NVv4-series VM\nfamily will be able to be successfully created. In addition, existing pools\nwith NVv3 or NVv4-series VMs will no longer be able to\nscale out and will be subject to forced resize to zero nodes.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "ec1a56195ff80060cf491f219f58f158ef77fedb176556081a9f481b3440486d",
       "history": [
         {
           "changedFields": [
@@ -33,6 +33,14 @@
           "modifiedAfter": "2026-03-16T18:30:34.1207616Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#516070"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:52:55.254Z",
+          "fingerprint": "ec1a56195ff80060cf491f219f58f158ef77fedb176556081a9f481b3440486d",
+          "modifiedAfter": "2026-03-16T18:30:34.1207616Z",
+          "modifiedBefore": "2026-03-16T18:30:34.1207616Z",
+          "rawRef": "20261014T105255254Z_detail_516070.json#516070"
         }
       ],
       "ids": [
@@ -86,10 +94,10 @@
       ],
       "created": "2026-03-16T18:45:11.5147114Z",
       "createdJst": "2026-03-17",
-      "description": "Azure Batch had retired\nLow-Priority VMs on September 30, 2025 and will begin a system-initiated\nmigration to Spot VMs beginning March 1, 2026. This change aligns Batch with the broader\nAzure Spot inf...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "7557cda50ce2d42adb1db6224cd62d11ac19071e62f3c80b04b73945f4246d30",
+      "description": "Azure Batch had retired\nLow-Priority VMs on September 30, 2025 and will begin a system-initiated\nmigration to Spot VMs beginning March 1, 2026. This change aligns Batch with the broader\nAzure Spot infrastructure and simplifies the platform’s VM offering. Impact: \n The migration will occur automatically and be\n     completed within several days. \n No interruption to existing workloads is\n     expected. \n Customers will see Spot-based billing beginning\n     with the March invoice.  Action required: No action is required if you choose to continue\nusing Spot VMs after the migration. If you prefer not to transition, you\nmay migrate your Batch workloads to dedicated (on-demand) compute\nnodes before end of February. After this deadline: Low-priority VMs can no longer be created. Existing Low-priority VMs will be billed at Spot\npricing.  Details: \n All current Low-Priority VMs will automatically run\n     as Spot VMs after migration. \n Batch-managed pool allocation will handle the\n     transition seamlessly. \n Existing API/SDK references to Low-Priority VM\n     properties will automatically allocate Spot capacity without changes to\n     customer code or configuration.  Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "07f7458f6fb20fe153a5227dabcd0ab648c1fcd0c3d11b8d60c138fc3676c2b6",
       "history": [
         {
           "changedFields": [
@@ -100,6 +108,14 @@
           "modifiedAfter": "2026-03-16T18:45:11.5147114Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#543279"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:52:45.951Z",
+          "fingerprint": "07f7458f6fb20fe153a5227dabcd0ab648c1fcd0c3d11b8d60c138fc3676c2b6",
+          "modifiedAfter": "2026-03-16T18:45:11.5147114Z",
+          "modifiedBefore": "2026-03-16T18:45:11.5147114Z",
+          "rawRef": "20261014T105245951Z_detail_543279.json#543279"
         }
       ],
       "ids": [
@@ -152,10 +168,10 @@
       ],
       "created": "2026-03-19T16:30:27.9756937Z",
       "createdJst": "2026-03-20",
-      "description": "On May 31, 2027, Microsoft Azure will retire the follow NP-series virtual machine (VMs) sizes: Standard_NP10s, Standard_NP20s, and Standard_NP40s. To ensure continuity and optimal performance, we reco...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "301c55ddbe1f5e0ec97ab922cc38369e50f2bf539aa52156462deda1631b837b",
+      "description": "On May 31, 2027, Microsoft Azure will retire the follow NP-series virtual machine (VMs) sizes: Standard_NP10s, Standard_NP20s, and Standard_NP40s. To ensure continuity and optimal performance, we recommend transitioning to one of the following Azure GPU VM families based on your workload needs:NDv2 VMs – designed for the needs of the most demanding GPU-accelerated AI, machine learning, simulation, and HPC workloads.NCads_H100_v5 VMs – real-world Azure Applied AI training and batch inference workloads.NCasT4_v3 – ideal for deploying AI services, such as real-time inferencing of user-generated requests, or for interactive graphics and visualization workloads.  For more information, please refer to the NP-series retirement page. How does the retirement of the NP-series virtual machines affect me? After May 31, 2027, any remaining NP-series virtual machines (VMs) subscriptions will be set to a deallocated state. They’ll stop working and no longer incur billing charges. NP-series will be no longer under SLA or have support included.  Additionally, 1-year and 3-year RI purchases will end April 2, 2026.Required action: To avoid service disruption, please resize or deallocate your NP-series VMs and change your VM sizes to a product that meets your workload requirements.    ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "1d19ee45ff25516df67f743e7d55d3ed799f7996320f83490683f55d3efb0e2f",
       "history": [
         {
           "changedFields": [
@@ -166,6 +182,14 @@
           "modifiedAfter": "2026-03-19T16:30:27.9756937Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#548497"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:51:27.318Z",
+          "fingerprint": "1d19ee45ff25516df67f743e7d55d3ed799f7996320f83490683f55d3efb0e2f",
+          "modifiedAfter": "2026-03-19T16:30:27.9756937Z",
+          "modifiedBefore": "2026-03-19T16:30:27.9756937Z",
+          "rawRef": "20261014T105127318Z_detail_548497.json#548497"
         }
       ],
       "ids": [
@@ -218,10 +242,10 @@
       ],
       "created": "2026-03-19T16:30:27.9756937Z",
       "createdJst": "2026-03-20",
-      "description": "On May 31, 2027, Microsoft Azure will retire the following HBv2-series virtual machine (VMs) sizes: Standard_HB120rs_v2, Standard_HB120-96rs_v2, Standard_HB120-64rs_v2, Standard_HB120-32rs_v2, and Sta...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "6c4d421fefd365285c335527bd39dfaf5b385e6a606d557acad1eba56d006ab8",
+      "description": "On May 31, 2027, Microsoft Azure will retire the following HBv2-series virtual machine (VMs) sizes: Standard_HB120rs_v2, Standard_HB120-96rs_v2, Standard_HB120-64rs_v2, Standard_HB120-32rs_v2, and Standard_HB120-16rs_v2.  To ensure continuity and improved performance, we recommend transitioning to one of the current‑generation Azure HPC VM families:Azure HBv5‑series VMs — the newest in the HB‑series — which offer significantly higher performance and better price‑performance than HBv4 across most compute‑ and memory‑intensive workloads.Azure HX‑series VMs — optimized for high‑memory HPC workloads, providing twice the memory capacity of HBv4 and ideal for simulations, large models, and memory‑bound applications. How does the retirement of HBv2-series virtual machines affect me? After May 31, 2027, any remaining HBv2-series virtual machines (VMs) subscriptions will be set to a deallocated state. They’ll stop working and no longer incur billing charges. HBv2-series will be no longer under SLA or have support included.  Additionally, 1-year and 3-year RI purchases will end April 2, 2026.Required action:You need to resize or deallocate your HBv2-series VMs. We recommend migrating these workloads from the HBv2-series VMs to newer HPC-optimized SKUs such as HBv5, HBv4, HX, and HBv3-series virtual machines (or an alternative that meets your workload requirements).",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "b07a2f7943c279e7ef4f42f5708f9ab8a98e02c0eab3f41dbe7c2c9577e9002b",
       "history": [
         {
           "changedFields": [
@@ -232,6 +256,14 @@
           "modifiedAfter": "2026-03-19T16:30:27.9756937Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#548525"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:51:32.487Z",
+          "fingerprint": "b07a2f7943c279e7ef4f42f5708f9ab8a98e02c0eab3f41dbe7c2c9577e9002b",
+          "modifiedAfter": "2026-03-19T16:30:27.9756937Z",
+          "modifiedBefore": "2026-03-19T16:30:27.9756937Z",
+          "rawRef": "20261014T105132487Z_detail_548525.json#548525"
         }
       ],
       "ids": [
@@ -284,10 +316,10 @@
       ],
       "created": "2026-03-19T16:30:27.9756937Z",
       "createdJst": "2026-03-20",
-      "description": "On May 31, 2027, Microsoft Azure will retire the following HC-series virtual machine (VMs) sizes: Standard_HC44rs, Standard_HC44-16rs, and Standard_HC44-32rs. To ensure continuity and improved perform...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "7f37d9fe2acb7970029f15c654af0a827babe661d2ae05a4fa6a835fedaa9fe4",
+      "description": "On May 31, 2027, Microsoft Azure will retire the following HC-series virtual machine (VMs) sizes: Standard_HC44rs, Standard_HC44-16rs, and Standard_HC44-32rs. To ensure continuity and improved performance, we recommend transitioning to one of the current‑generation Azure HPC VM families: Azure HBv5‑series VMs — the newest in the HB‑series — which offer significantly higher performance and better price‑performance than HBv4 across most compute‑ and memory‑intensive workloads.Azure HX‑series VMs — optimized for high‑memory HPC workloads, providing twice the memory capacity of HBv4 and ideal for simulations, large models, and memory‑bound applications. How does the retirement of HC-series virtual machines affect me? From now until May 31, 2027, you can continue to use HC-series VMs. After May 31, 2027, any remaining HC-series virtual machines (VMs) subscriptions will be set to a deallocated state. They’ll stop working and no longer incur billing charges. HC-series will be no longer under SLA or have support included.  Additionally, 1-year and 3-year RI purchases will end April 2, 2026.  Required action:You need to resize or deallocate your HC-series VMs. We recommend migrating these workloads from the original HC-series VMs to newer HPC-optimized SKUs such as HBv5, HBv4, HX, and HBv3-series virtual machines (or an alternative that meets your workload requirements). ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "aaf0d9f1bf7ab179609974f8a8f49a2896621a1965f0bf61094c1511ccce6284",
       "history": [
         {
           "changedFields": [
@@ -298,6 +330,14 @@
           "modifiedAfter": "2026-03-19T16:30:27.9756937Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#548543"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:51:37.678Z",
+          "fingerprint": "aaf0d9f1bf7ab179609974f8a8f49a2896621a1965f0bf61094c1511ccce6284",
+          "modifiedAfter": "2026-03-19T16:30:27.9756937Z",
+          "modifiedBefore": "2026-03-19T16:30:27.9756937Z",
+          "rawRef": "20261014T105137678Z_detail_548543.json#548543"
         }
       ],
       "ids": [
@@ -350,10 +390,10 @@
       ],
       "created": "2026-03-16T18:45:11.5147114Z",
       "createdJst": "2026-03-17",
-      "description": "Azure Batch periodically retires support for operating systems that reach end-of-life status. Support for Windows Server 2016 concluded on January 11, 2022, with extended support scheduled to end on J...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "e6f90caf2569c72d9810f7133a875889d782e4c84ad62e6a1d695680ce6a48b9",
+      "description": "Azure Batch periodically retires support for operating systems that reach end-of-life status. Support for Windows Server 2016 concluded on January 11, 2022, with extended support scheduled to end on January 12, 2027. Marketplace images for Windows Server 2016, published under the MicrosoftWindowsServer offer with the name WindowsServer, will no longer be available. The relevant Marketplace image SKUs include:2016-datacenter-gensecond2016-datacenter2016-datacenter-gs2016-datacenter-smalldisk2016-datacenter-smalldisk-g22016-datacenter-with-containers2016-datacenter-with-containers-gsIf your workload still uses Batch pools based on these Windows Server 2016 Marketplace images, migrate your workload to a supported Windows Server image no later than January 12, 2027. If your workload requires Windows Server 2016 after January 12, 2027, you may be able to migrate to a Windows Server 2016 custom image with appropriate licensing and Azure ESU. Please visit this article for more information about this option. However, Azure Batch support for Windows Server 2016 will end on January 12, 2027. We recommend upgrading to the latest version of Windows Server, if possible.Required action:To avoid service disruptions, migrate your Batch pools with affected Marketplace images to a supported image before January 12, 2027. Please refer to the article on how to update pool properties for migration guidance. We recommend testing the migration before updating production configurations.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "ce4631e951afe3e1aed5111335a484959bb15c0cec3acb8e3220d9af03902ccf",
       "history": [
         {
           "changedFields": [
@@ -364,6 +404,14 @@
           "modifiedAfter": "2026-03-16T18:45:11.5147114Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#549077"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:52:50.206Z",
+          "fingerprint": "ce4631e951afe3e1aed5111335a484959bb15c0cec3acb8e3220d9af03902ccf",
+          "modifiedAfter": "2026-03-16T18:45:11.5147114Z",
+          "modifiedBefore": "2026-03-16T18:45:11.5147114Z",
+          "rawRef": "20261014T105250206Z_detail_549077.json#549077"
         }
       ],
       "ids": [
@@ -418,10 +466,10 @@
       ],
       "created": "2026-03-30T21:30:50.093344Z",
       "createdJst": "2026-03-31",
-      "description": "On March 31, 2027 Azure Monitor will be deprecating the sidecar for remote-write of Prometheus metrics to Azure Monitor Workspace. This is as part of our ongoing efforts to improve reliability and red...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "501f06f3746c39ffd171d5b6a5167595ca2c4c17e39bcdea91f971cd8821fc4e",
+      "description": "On March 31, 2027 Azure Monitor will be deprecating the sidecar for remote-write of Prometheus metrics to Azure Monitor Workspace. This is as part of our ongoing efforts to improve reliability and reduce complexity.We recommend configuring your self-hosted Prometheus or Prometheus Operator to remote-write directly to Azure Monitor Workspace. All authentication methods are supported in the Prometheus remote-write configuration, and direct remote-write is fully compatible with the Prometheus Operator. You can find detailed configuration guidance in the official documentation. This approach removes the need for the sidecar and simplifies your setup.We encourage you to transition to direct Prometheus remote-write as soon as possible to take advantage of the improved experience and ensure uninterrupted service.If you have any questions or need assistance during this transition, please feel free to contact ciprometheus@microsoft.com with your name, company name, email contact and subscription IDs.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "653a4567ddaf07a572f681467dfb4ff9966ba0bc466aa97e35b648f572de4498",
       "history": [
         {
           "changedFields": [
@@ -432,6 +480,14 @@
           "modifiedAfter": "2026-03-30T21:30:50.093344Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#550519"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:49:23.477Z",
+          "fingerprint": "653a4567ddaf07a572f681467dfb4ff9966ba0bc466aa97e35b648f572de4498",
+          "modifiedAfter": "2026-03-30T21:30:50.093344Z",
+          "modifiedBefore": "2026-03-30T21:30:50.093344Z",
+          "rawRef": "20261014T104923477Z_detail_550519.json#550519"
         }
       ],
       "ids": [
@@ -488,10 +544,10 @@
       ],
       "created": "2026-03-30T17:45:08.2587317Z",
       "createdJst": "2026-03-31",
-      "description": "On March 31, 2029, Azure Cosmos DB for PostgreSQL will be retired, and you'll need to migrate to Azure Database\nfor PostgreSQL Elastic Cluster by that date. Azure Database for PostgreSQL Elastic Clust...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "6ff26527ac90ed1f2d3d4af18be6f9e13a8f6a75093d308e40712d3259f59dbc",
+      "description": "On March 31, 2029, Azure Cosmos DB for PostgreSQL will be retired, and you'll need to migrate to Azure Database\nfor PostgreSQL Elastic Cluster by that date. Azure Database for PostgreSQL Elastic Cluster delivers the same\ndistributed PostgreSQL capabilities as Azure Cosmos DB for PostgreSQL, with\nfull feature parity built on the Citus extension. It adds a simpler and more\ntransparent pricing model, broader compute choices, and support for newer\nPostgreSQL versions, while providing built-in high availability, automated\nbackups, point-in-time restore, and disaster recovery. Elastic Cluster also\noffers elastic scaling, integrated monitoring, and the security and compliance\nfeatures of Azure Database for PostgreSQL—giving you a more streamlined,\nfuture-ready platform without requiring application code changes. Required\naction:To avoid any disruptions in service, please\nmigrate your existing Azure Cosmos DB for PostgreSQL databases to Azure\nDatabase for PostgreSQL, and use Elastic Cluster option using the provided tool\nfor seamless migration. Review your current Azure Cosmos DB for\nPostgreSQL clusters, versions, and any required extensions. Provision an Azure Database for PostgreSQL\nElastic Cluster destination environment Use the provided migration tool to move\nschema and data, validate application behavior, and complete cutover. Decommission your source clusters after\nsuccessful validation of your new environment. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "0a709a6a3023af7c1cfcf2679ee2d8d02ae6939f8e1ce4b5b18fc19b7780ef7e",
       "history": [
         {
           "changedFields": [
@@ -502,6 +558,14 @@
           "modifiedAfter": "2026-03-30T17:45:08.2587317Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#556085"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:49:30.862Z",
+          "fingerprint": "0a709a6a3023af7c1cfcf2679ee2d8d02ae6939f8e1ce4b5b18fc19b7780ef7e",
+          "modifiedAfter": "2026-03-30T17:45:08.2587317Z",
+          "modifiedBefore": "2026-03-30T17:45:08.2587317Z",
+          "rawRef": "20261014T104930862Z_detail_556085.json#556085"
         }
       ],
       "ids": [
@@ -550,10 +614,10 @@
       ],
       "created": "2026-03-17T17:30:11.8113182Z",
       "createdJst": "2026-03-18",
-      "description": "Microsoft is announcing the retirement of the AV36P and AV52 Nodes on June 30, 2029. UPDATE: On August 30, 2027, as a result of the latest Broadcom VCF licensing change, the AVS license-included SKUs ...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "f693cdd59fb5cda7620c045cb7d94204d8ed3fe362e395fe17c49508d47f0632",
+      "description": "Microsoft is announcing the retirement of the AV36P and AV52 Nodes on June 30, 2029. UPDATE: On August 30, 2027, as a result of the latest Broadcom VCF licensing change, the AVS license-included SKUs will be retired. AV36P and AV52 License-included customers will now need to purchase portable VCF licenses from Broadcom and transition to the AV36P and AV52 VCF BYOL SKUs by this date to avoid service disputation on August 31, 2027.At this time, we recommend that you review your current RI expiration timeline and then work with your Microsoft Account Team on your next steps. All migrations off AV36P VCF BYOL and AV52 VCF BYOL will need to be completed by June 30, 2029. Key dates for existing AV36P and AV52 subscriptions:June 30, 2026: Last day to buy a 3-year RI for AV36P or AV52 VCF BYOL*August 30, 2027 Last day of AVS License-included service, customers must transition to AVS VCF BYOL by this date.June 30, 2028: Last day to buy a 1-year RI for AV36P or AV52 VCF BYOL*June 30, 2029: Retirement of AV36P and AV52 VCF BYOL*AVS VCF BYOL requires a portable VCF license from Broadcom.Required action:Transition from your AV36P and AV52 nodes to a new AVS node type before the end of your current AV36P and AV52 RI term. Identify available AVS node types on the Azure Product by Region page and visit the AVS Documentation page to learn about HCX migrations between AVS node types.Help and support:  If you have questions, please reach out to your Microsoft Account Team.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "195258e05e5b981943606e7df23e9ad9956832cc2ccfd902ce1aed3464e5fbed",
       "history": [
         {
           "changedFields": [
@@ -564,6 +628,14 @@
           "modifiedAfter": "2026-03-17T17:30:11.8113182Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557094"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:52:39.560Z",
+          "fingerprint": "195258e05e5b981943606e7df23e9ad9956832cc2ccfd902ce1aed3464e5fbed",
+          "modifiedAfter": "2026-03-17T17:30:11.8113182Z",
+          "modifiedBefore": "2026-03-17T17:30:11.8113182Z",
+          "rawRef": "20261014T105239560Z_detail_557094.json#557094"
         }
       ],
       "ids": [
@@ -616,10 +688,10 @@
       ],
       "created": "2026-03-20T17:15:50.3317724Z",
       "createdJst": "2026-03-21",
-      "description": "The Azure Sphere service is retiring and will stop supporting all customer application, OS, bug and security updates, along with DAA certificate issuance, on July 31, 2031. Why is this happening?  Azu...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "fcf1d38cadf4b1ce9578baaead2c9a87fa4725addacd37e096ad1174247f3110",
+      "description": "The Azure Sphere service is retiring and will stop supporting all customer application, OS, bug and security updates, along with DAA certificate issuance, on July 31, 2031. Why is this happening?  Azure Sphere pioneered secure IoT connectivity, combining bespoke hardware, a secure Linux-based OS, and a cloud-based security service, elevating industry standards for microcontroller security. As the IoT landscape advances, customers are now able to access secure microcontrollers from a wide range of silicon vendors and pair these with Microsoft next-generation solutions for greater flexibility and scalability. Recommended Action:Evaluate hardware redesign to replace MT3620 silicon in future product iterations. Consider PSA/SESIP Level 3+, or similar, certified silicon as a guideline for silicon with similar security properties. Express OEM license renewal and purchasing intent through distributor, Avnet, for MT3620 components before 31 July 2026 if additional stock is needed. Evaluate alternative Azure IoT and 3rd-party solutions alongside a new MCU.Help and support: If you have questions, contact your Microsoft accounts team or Microsoft Support for personalized assistance. Learn more:  Alternative Azure IoT service documentation and solutions",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "6078541acd637671a27e564ee17cb52055b70dea1e7635f896cc21daa3530cfc",
       "history": [
         {
           "changedFields": [
@@ -630,6 +702,14 @@
           "modifiedAfter": "2026-03-20T17:15:50.3317724Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557123"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:51:17.020Z",
+          "fingerprint": "6078541acd637671a27e564ee17cb52055b70dea1e7635f896cc21daa3530cfc",
+          "modifiedAfter": "2026-03-20T17:15:50.3317724Z",
+          "modifiedBefore": "2026-03-20T17:15:50.3317724Z",
+          "rawRef": "20261014T105117020Z_detail_557123.json#557123"
         }
       ],
       "ids": [
@@ -682,10 +762,10 @@
       ],
       "created": "2026-03-17T17:45:45.6987595Z",
       "createdJst": "2026-03-18",
-      "description": "Announcing general availability (GA) of the next-gen Foundry Agent Service—a redesigned API format and runtime experience designed to help teams build and operate agents that can move from prototype t...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "8a7f472563060258dd34b03bf38e64a5463ecb1f1a492c9eea94c2023f3c18f9",
+      "description": "Announcing general availability (GA) of the next-gen Foundry Agent Service—a redesigned API format and runtime experience designed to help teams build and operate agents that can move from prototype to production with confidence. This GA moment is anchored in a simple promise: enterprise-grade AI agents—secure by design, observable by default.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "43286fa3b49bbc2edf7a8bbdb79518e4f332a535f47d900eb9749fc23abd79b4",
       "history": [
         {
           "changedFields": [
@@ -696,6 +776,14 @@
           "modifiedAfter": "2026-03-17T17:45:45.6987595Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557141"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:52:30.158Z",
+          "fingerprint": "43286fa3b49bbc2edf7a8bbdb79518e4f332a535f47d900eb9749fc23abd79b4",
+          "modifiedAfter": "2026-03-17T17:45:45.6987595Z",
+          "modifiedBefore": "2026-03-17T17:45:45.6987595Z",
+          "rawRef": "20261014T105230158Z_detail_557141.json#557141"
         }
       ],
       "ids": [
@@ -747,10 +835,10 @@
       ],
       "created": "2026-03-11T18:00:35.4377847Z",
       "createdJst": "2026-03-12",
-      "description": "You can now enhance data security for your Azure Database\nfor PostgreSQL workloads by\nusing customer managed keys (CMKs) with Premium SSD\nv2 disks. Available in public preview, this update gives\nyou g...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "b3c7c20ebb9aff5233af74a7bc8c7190609c221248bc838ea241f84f4db0c3f8",
+      "description": "You can now enhance data security for your Azure Database\nfor PostgreSQL workloads by\nusing customer managed keys (CMKs) with Premium SSD\nv2 disks. Available in public preview, this update gives\nyou greater control over how your data at rest is encrypted, allowing you to\nuse your own keys stored in Azure Key Vault while continuing to take advantage\nof the high performance and scalability of Premium SSD v2 storage. CMKs\nare especially valuable if you operate in regulated industries\nor need to meet internal compliance requirements\nthat specify customer‑controlled encryption and separation of duties. With this preview, you can manage\nkey rotation and access policies according to your organization’s standards,\nwhile Azure continues to handle the underlying database operations and\nperformance optimization. The result is a stronger security posture\nwithout compromising performance, availability, or ease of management for your\nPostgreSQL deployments on Azure.   Learn\nmore.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "a885958a23068502c485852b2a2bd2bd22ebcea05fc37e2821e7f1f2c209a0f2",
       "history": [
         {
           "changedFields": [
@@ -761,6 +849,14 @@
           "modifiedAfter": "2026-03-11T18:00:35.4377847Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557527"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:53:19.732Z",
+          "fingerprint": "a885958a23068502c485852b2a2bd2bd22ebcea05fc37e2821e7f1f2c209a0f2",
+          "modifiedAfter": "2026-03-11T18:00:35.4377847Z",
+          "modifiedBefore": "2026-03-11T18:00:35.4377847Z",
+          "rawRef": "20261014T105319732Z_detail_557527.json#557527"
         }
       ],
       "ids": [
@@ -810,10 +906,10 @@
       ],
       "created": "2026-03-25T20:00:39.2632249Z",
       "createdJst": "2026-03-26",
-      "description": "In‑place node pool upgrades can introduce risk by applying changes\ndirectly to running environments. Blue‑green agent pool upgrades create a\nparallel node pool with the new configuration, allowing val...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "deee768225bc9f24106ba8cad11069537bfcd9999c6273de132c08b1a4694880",
+      "description": "In‑place node pool upgrades can introduce risk by applying changes\ndirectly to running environments. Blue‑green agent pool upgrades create a\nparallel node pool with the new configuration, allowing validation before\nworkloads are shifted and providing a clear rollback path. This reduces upgrade\nrisk and supports more controlled cluster lifecycle management. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "9e736cfc48c44520b091f4b435301555be9f88983cf7947d5e3871727a360b1b",
       "history": [
         {
           "changedFields": [
@@ -824,6 +920,14 @@
           "modifiedAfter": "2026-03-25T20:00:39.2632249Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557862"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:49:45.874Z",
+          "fingerprint": "9e736cfc48c44520b091f4b435301555be9f88983cf7947d5e3871727a360b1b",
+          "modifiedAfter": "2026-03-25T20:00:39.2632249Z",
+          "modifiedBefore": "2026-03-25T20:00:39.2632249Z",
+          "rawRef": "20261014T104945874Z_detail_557862.json#557862"
         }
       ],
       "ids": [
@@ -872,10 +976,10 @@
       ],
       "created": "2026-03-24T18:30:36.2493256Z",
       "createdJst": "2026-03-25",
-      "description": "Organizations running applications across multiple\nKubernetes clusters often face challenges with performance, global service\ndiscovery, and observability due to the complexity of distributed microser...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "9825e74c786d28060d3dcde4b232a6e799cec106d995398f3a8e241ff0750031",
+      "description": "Organizations running applications across multiple\nKubernetes clusters often face challenges with performance, global service\ndiscovery, and observability due to the complexity of distributed microservice\nenvironments. Azure Kubernetes Fleet Manager now provides Cross Cluster\nNetworking, delivering a managed Cilium cluster mesh that simplifies\nconfiguration and centralizes management of multi‑cluster networking. This\ncapability enables unified connectivity across AKS clusters, creates a global\nservice registry for cross‑cluster service discovery, and supports intelligent\nrouting.  For technical practitioners, this\nreduces operational overhead by removing the need to manually configure a\nCilium mesh, improves scalability and resilience for multi‑cluster deployments,\nand offers unified observability through shared network metrics and flow logs.\nIt also provides efficient packet processing and reduced latency through eBPF‑based\nnetworking.  Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "04e6fe01a9bd2cd27f57f600ee6175cc69f7c30d2d095afe74496e10538e9f23",
       "history": [
         {
           "changedFields": [
@@ -886,6 +990,14 @@
           "modifiedAfter": "2026-03-24T18:30:36.2493256Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557877"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:50:37.879Z",
+          "fingerprint": "04e6fe01a9bd2cd27f57f600ee6175cc69f7c30d2d095afe74496e10538e9f23",
+          "modifiedAfter": "2026-03-24T18:30:36.2493256Z",
+          "modifiedBefore": "2026-03-24T18:30:36.2493256Z",
+          "rawRef": "20261014T105037879Z_detail_557877.json#557877"
         }
       ],
       "ids": [
@@ -935,10 +1047,10 @@
       ],
       "created": "2026-03-24T18:30:36.2493256Z",
       "createdJst": "2026-03-25",
-      "description": "Teams running GPU‑backed\nworkloads often lack integrated visibility into GPU utilization alongside\nKubernetes metrics. AKS managed GPU metrics automatically expose performance\nand utilization data fro...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "7556729a30048e0f527edeccae007e178d88e868d89723ec87124d73fd400275",
+      "description": "Teams running GPU‑backed\nworkloads often lack integrated visibility into GPU utilization alongside\nKubernetes metrics. AKS managed GPU metrics automatically expose performance\nand utilization data from NVIDIA GPU‑enabled node pools into managed Prometheus\nand Grafana environments. This brings GPU telemetry into the same observability\nstack as cluster metrics, supporting capacity planning and operational\nmonitoring without manual exporter setup.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "6019d5ed3f094d7bbec2501ea2a031633559b026d5f5278f9e94d55613c633d6",
       "history": [
         {
           "changedFields": [
@@ -949,6 +1061,14 @@
           "modifiedAfter": "2026-03-24T18:30:36.2493256Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557882"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:50:42.090Z",
+          "fingerprint": "6019d5ed3f094d7bbec2501ea2a031633559b026d5f5278f9e94d55613c633d6",
+          "modifiedAfter": "2026-03-24T18:30:36.2493256Z",
+          "modifiedBefore": "2026-03-24T18:30:36.2493256Z",
+          "rawRef": "20261014T105042090Z_detail_557882.json#557882"
         }
       ],
       "ids": [
@@ -998,10 +1118,10 @@
       ],
       "created": "2026-03-24T21:45:26.0157634Z",
       "createdJst": "2026-03-25",
-      "description": "Troubleshooting Kubernetes networking issues is often slowed by logs and\nmetrics scattered across multiple tools, forcing engineers to manually\ncorrelate signals during incidents. The container networ...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "184be61771f65d05b934a3ecde037dcafc68536077dd1045ecb309cb875e6c94",
+      "description": "Troubleshooting Kubernetes networking issues is often slowed by logs and\nmetrics scattered across multiple tools, forcing engineers to manually\ncorrelate signals during incidents. The container networking agent provides a\nlightweight, web‑based interface that translates natural‑language problem\ndescriptions into read‑only diagnostics using live cluster telemetry and\norchestrates safe diagnostic workflows. By consolidating networking insights\nand summarizing findings with structured remediation guidance, the agent\nreduces investigation time and improves troubleshooting consistency without\nmaking configuration changes.  Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "986b1357f838920aeb7ea8f60aa6e4e91cc5fd65cd7e1ee6eb3f6f8a8040986e",
       "history": [
         {
           "changedFields": [
@@ -1012,6 +1132,14 @@
           "modifiedAfter": "2026-03-24T21:45:26.0157634Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557887"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:50:31.650Z",
+          "fingerprint": "986b1357f838920aeb7ea8f60aa6e4e91cc5fd65cd7e1ee6eb3f6f8a8040986e",
+          "modifiedAfter": "2026-03-24T21:45:26.0157634Z",
+          "modifiedBefore": "2026-03-24T21:45:26.0157634Z",
+          "rawRef": "20261014T105031650Z_detail_557887.json#557887"
         }
       ],
       "ids": [
@@ -1060,10 +1188,10 @@
       ],
       "created": "2026-03-24T18:15:48.9582197Z",
       "createdJst": "2026-03-25",
-      "description": "Networking issues in Kubernetes\nenvironments can be difficult to diagnose due to limited visibility into\ntraffic flows and insufficient context around failures. Container network logs\nin Azure Kuberne...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "c3e4c88f98b19291d3e7fe6cbc059f4661adda93c582a3fac57ce41a1de64881",
+      "description": "Networking issues in Kubernetes\nenvironments can be difficult to diagnose due to limited visibility into\ntraffic flows and insufficient context around failures. Container network logs\nin Azure Kubernetes Service (AKS), now generally available, provide context‑rich\nvisibility into network flows by capturing detailed per‑flow metadata such as\nIPs, ports, namespaces, pod and service names, flow direction, and policy\nverdicts across L3/L4 and supported Layer 7 protocols including HTTP, gRPC, and\nKafka. This capability supports both stored logs for continuous, filter-based\ncollection and on-demand logs for targeted snapshots. The new network monitoring experience in\nAzure Monitor for AKS makes this data easier to consume through out-of-the-box\nvisualizations, pre-built Azure Monitor and Grafana dashboards, and single‑click\nonboarding in the Azure portal. These enhancements help technical practitioners\naccelerate troubleshooting, improve insight into traffic patterns, and simplify\nanalysis of issues such as packet loss, DNS failures, and connection errors.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "883f4e2450e6dda5f7b0bcd5f5dd2f5c7d10f48ec4460bd827f652304274011c",
       "history": [
         {
           "changedFields": [
@@ -1074,6 +1202,14 @@
           "modifiedAfter": "2026-03-24T18:15:48.9582197Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557892"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:50:45.338Z",
+          "fingerprint": "883f4e2450e6dda5f7b0bcd5f5dd2f5c7d10f48ec4460bd827f652304274011c",
+          "modifiedAfter": "2026-03-24T18:15:48.9582197Z",
+          "modifiedBefore": "2026-03-24T18:15:48.9582197Z",
+          "rawRef": "20261014T105045338Z_detail_557892.json#557892"
         }
       ],
       "ids": [
@@ -1127,10 +1263,10 @@
       ],
       "created": "2026-03-24T23:00:18.1861028Z",
       "createdJst": "2026-03-25",
-      "description": "Network\nobservability can generate large volumes of metrics, making it difficult for\nteams to focus on data that is operationally relevant. Container network\nmetrics filtering in Azure Container Netwo...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "10e3e996b05a9d543d2be50284e05a3b9c084d0a34be3546e5866d07fcde3f64",
+      "description": "Network\nobservability can generate large volumes of metrics, making it difficult for\nteams to focus on data that is operationally relevant. Container network\nmetrics filtering in Azure Container Networking Services (ACNS) allows\noperators to control which container‑level network metrics are collected using\nKubernetes custom resources, with filters applied dynamically. This helps teams\nreduce monitoring noise, manage data volumes, and keep dashboards focused on\nactionable signals. Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "258128f0d312e73f27781693bd0700bd63246a93b458bcd43f6c9077f01455c2",
       "history": [
         {
           "changedFields": [
@@ -1141,6 +1277,14 @@
           "modifiedAfter": "2026-03-24T23:00:18.1861028Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557902"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:50:27.463Z",
+          "fingerprint": "258128f0d312e73f27781693bd0700bd63246a93b458bcd43f6c9077f01455c2",
+          "modifiedAfter": "2026-03-24T23:00:18.1861028Z",
+          "modifiedBefore": "2026-03-24T23:00:18.1861028Z",
+          "rawRef": "20261014T105027463Z_detail_557902.json#557902"
         }
       ],
       "ids": [
@@ -1194,10 +1338,10 @@
       ],
       "created": "2026-03-24T18:15:48.9582197Z",
       "createdJst": "2026-03-25",
-      "description": "Containerized workloads often\nrequire higher and more consistent storage performance without managing large\nnumbers of individual disks. Azure Container Storage integration with Elastic\nSAN allows Kub...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "af4b374300fdef2bd0c51208534a4f21523d276750715d55f8c727f479e5558e",
+      "description": "Containerized workloads often\nrequire higher and more consistent storage performance without managing large\nnumbers of individual disks. Azure Container Storage integration with Elastic\nSAN allows Kubernetes clusters to consume storage from a shared pool of\ncapacity and performance. This simplifies provisioning, improves utilization,\nand supports workloads with variable storage demands using a centrally managed\nstorage model. Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "df3270e09aff57c55beaacb57aa591f44ea269af417ae3f3a65ab5d9983366de",
       "history": [
         {
           "changedFields": [
@@ -1208,6 +1352,14 @@
           "modifiedAfter": "2026-03-24T18:15:48.9582197Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557912"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:50:49.822Z",
+          "fingerprint": "df3270e09aff57c55beaacb57aa591f44ea269af417ae3f3a65ab5d9983366de",
+          "modifiedAfter": "2026-03-24T18:15:48.9582197Z",
+          "modifiedBefore": "2026-03-24T18:15:48.9582197Z",
+          "rawRef": "20261014T105049822Z_detail_557912.json#557912"
         }
       ],
       "ids": [
@@ -1263,10 +1415,10 @@
       ],
       "created": "2026-03-18T18:30:05.9257189Z",
       "createdJst": "2026-03-19",
-      "description": "Azure Red Hat OpenShift now supports managed identities and workload identities as a generally available capability, enabling you to run OpenShift clusters and applications on Azure without long lived...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "33e05ada64b21074ad865ece0ff116f960dc5367e2c99e6b1468575ea168056a",
+      "description": "Azure Red Hat OpenShift now supports managed identities and workload identities as a generally available capability, enabling you to run OpenShift clusters and applications on Azure without long lived service principal credentials. This aligns Azure Red Hat OpenShift with the short-lived token and least privilege identity patterns used across Azure, while keeping OpenShift integrated with existing Azure identity, access, and governance models.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "adde1fdfb588b36360e771e4f2591f91ebae50368f9101e319a789dc72783378",
       "history": [
         {
           "changedFields": [
@@ -1277,6 +1429,14 @@
           "modifiedAfter": "2026-03-18T18:30:05.9257189Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557917"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:51:48.248Z",
+          "fingerprint": "adde1fdfb588b36360e771e4f2591f91ebae50368f9101e319a789dc72783378",
+          "modifiedAfter": "2026-03-18T18:30:05.9257189Z",
+          "modifiedBefore": "2026-03-18T18:30:05.9257189Z",
+          "rawRef": "20261014T105148248Z_detail_557917.json#557917"
         }
       ],
       "ids": [
@@ -1332,10 +1492,10 @@
       ],
       "created": "2026-03-24T17:30:29.8186836Z",
       "createdJst": "2026-03-25",
-      "description": "As Kubernetes environments scale\nacross regions and clusters, IP‑based networking becomes difficult to manage\nand provides limited application‑level visibility and security controls. Azure\nKubernetes ...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "89e0f90f773e820be69029ee40765d333ca8ea2e4a77f8f96b6280c42ca2e3c0",
+      "description": "As Kubernetes environments scale\nacross regions and clusters, IP‑based networking becomes difficult to manage\nand provides limited application‑level visibility and security controls. Azure\nKubernetes Application Network introduces application‑layer abstractions for\nKubernetes traffic, including mutual TLS for pod‑to‑pod communication,\napplication‑aware authorization policies, and detailed traffic telemetry across\ningress and in‑cluster communication, with built‑in multi‑region connectivity\nconfigured in a single step. This enables teams to apply identity‑aware\nsecurity and gain deeper traffic insight without deploying or operating a full\nservice mesh, reducing operational overhead while improving consistency and\nauditability. Learn more.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "8f8d30d3f7c1784233a17bba2e0bc2dfeaaaf0df6475fc1d86c536f8c80a7325",
       "history": [
         {
           "changedFields": [
@@ -1346,6 +1506,14 @@
           "modifiedAfter": "2026-03-24T17:30:29.8186836Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557922"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:50:54.071Z",
+          "fingerprint": "8f8d30d3f7c1784233a17bba2e0bc2dfeaaaf0df6475fc1d86c536f8c80a7325",
+          "modifiedAfter": "2026-03-24T17:30:29.8186836Z",
+          "modifiedBefore": "2026-03-24T17:30:29.8186836Z",
+          "rawRef": "20261014T105054071Z_detail_557922.json#557922"
         }
       ],
       "ids": [
@@ -1394,10 +1562,10 @@
       ],
       "created": "2026-03-24T17:30:29.8186836Z",
       "createdJst": "2026-03-25",
-      "description": "Following the deprecation\nof ingress‑nginx, Kubernetes operators need a supported, standards‑aligned\nmigration path for ingress without the complexity of a full service mesh.\nApplication Routing with ...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "56b4b9376a2a5e49a34056fdd765677b2f97eb6581591eef85615cd40f684e41",
+      "description": "Following the deprecation\nof ingress‑nginx, Kubernetes operators need a supported, standards‑aligned\nmigration path for ingress without the complexity of a full service mesh.\nApplication Routing with Meshless Istio enables adoption of the Kubernetes\nGateway API for ingress management while avoiding sidecar‑based architectures,\nand Microsoft is extending support for existing ingress‑nginx‑based Application\nRouting while contributing to the open‑source ingress2gateway project. This\nallows teams to modernize ingress configurations incrementally, maintain\noperational continuity, and align with evolving Kubernetes standards.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "d0e7e82088138066ff1d18f237af9f43386638581121fe5bc6bf86cd747a4630",
       "history": [
         {
           "changedFields": [
@@ -1408,6 +1576,14 @@
           "modifiedAfter": "2026-03-24T17:30:29.8186836Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557927"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:50:58.355Z",
+          "fingerprint": "d0e7e82088138066ff1d18f237af9f43386638581121fe5bc6bf86cd747a4630",
+          "modifiedAfter": "2026-03-24T17:30:29.8186836Z",
+          "modifiedBefore": "2026-03-24T17:30:29.8186836Z",
+          "rawRef": "20261014T105058355Z_detail_557927.json#557927"
         }
       ],
       "ids": [
@@ -1456,10 +1632,10 @@
       ],
       "created": "2026-03-16T18:15:54.3746863Z",
       "createdJst": "2026-03-17",
-      "description": "Azure Kubernetes\nService support for Flatcar Container Linux for AKS (preview) will be retired\non June 8, 2026, transition to a supported alternative by that date. From now to June 7, 2026, you can co...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "505a399132d3c15ac8c49bb60a9a982330f218b776c235c480f06519aafd63f5",
+      "description": "Azure Kubernetes\nService support for Flatcar Container Linux for AKS (preview) will be retired\non June 8, 2026, transition to a supported alternative by that date. From now to June 7, 2026, you can continue to use Flatcar Container Linux for AKS (preview)\nwithout disruption. Starting on June 8, 2026, AKS will no longer support Flatcar\nContainer Linux for AKS (preview). You will no longer be able to create new\nnode pools. AKS will not produce new node images and will no longer provide\nsecurity patches for existing node pools. AKS will remove Flatcar Container\nLinux for AKS (preview) node images and existing code on September 8, 2026,\nmeaning that scaling and remediation operations will fail. Required Action:  Use Ubuntu if you're looking for a portable, general purpose OS with cross-cloud\nsupport. Use Azure Linux if you're looking for a general purpose OS that is Microsoft-created\nand optimized for Azure. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "7223a2e8229b2a7696ae466f149f65bc5f11d6907c16123952ddb400ce475761",
       "history": [
         {
           "changedFields": [
@@ -1470,6 +1646,14 @@
           "modifiedAfter": "2026-03-16T18:15:54.3746863Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557929"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:53:04.824Z",
+          "fingerprint": "7223a2e8229b2a7696ae466f149f65bc5f11d6907c16123952ddb400ce475761",
+          "modifiedAfter": "2026-03-16T18:15:54.3746863Z",
+          "modifiedBefore": "2026-03-16T18:15:54.3746863Z",
+          "rawRef": "20261014T105304824Z_detail_557929.json#557929"
         }
       ],
       "ids": [
@@ -1523,10 +1707,10 @@
       ],
       "created": "2026-03-02T19:15:14.5977479Z",
       "createdJst": "2026-03-03",
-      "description": "Today we’re announcing the General Availability of Azure Databricks Lakebase, a managed PostgreSQL environment with next generation separation of storage and compute for OLTP, providing instant availa...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "8bf39aa9bffba302a7721d3e57c5052356bd7b4816563c05edc7f57627d0f5dc",
+      "description": "Today we’re announcing the General Availability of Azure Databricks Lakebase, a managed PostgreSQL environment with next generation separation of storage and compute for OLTP, providing instant availability, instant clones, and scale-to-zero. Lakebase lets you build intelligent, transactional applications and AI agents on the same governed data foundation you already use for analytics, BI, and machine learning in Azure Databricks. With Lakebase, operational data is written directly to lakehouse storage instead of siloed OLTP systems and shadow databases. This eliminates brittle ETL pipelines, reduces data duplication, and enables real‑time insights and AI on fresh operational data without complex data movement. Developers can use familiar Postgres tools and libraries while Azure handles security, identity, networking, and compliance. Lakebase offers autoscaling, scale‑to‑zero, point‑in‑time recovery, and instant database branching so teams can move faster from prototype to production while maintaining enterprise‑grade reliability. Running on Azure Databricks, Lakebase unifies operational and analytical workloads on open data formats, making it easier to power AI‑driven customer experiences, real‑time operational analytics, and modern line‑of‑business applications—all with the global scale and enterprise trust of the Microsoft cloud. Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "5798c44b005cbdc8f2b6451e50d053c1518f528fc5c0a7dfc94ba00b09334250",
       "history": [
         {
           "changedFields": [
@@ -1537,6 +1721,14 @@
           "modifiedAfter": "2026-03-02T19:15:14.5977479Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#557991"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:53:53.400Z",
+          "fingerprint": "5798c44b005cbdc8f2b6451e50d053c1518f528fc5c0a7dfc94ba00b09334250",
+          "modifiedAfter": "2026-03-02T19:15:14.5977479Z",
+          "modifiedBefore": "2026-03-02T19:15:14.5977479Z",
+          "rawRef": "20261014T105353400Z_detail_557991.json#557991"
         }
       ],
       "ids": [
@@ -1590,10 +1782,10 @@
       ],
       "created": "2026-03-17T17:45:45.6987595Z",
       "createdJst": "2026-03-18",
-      "description": "We are updating the managed ruleset support policy for Azure Web Application Firewall (WAF) following the general availability of Default Rule Set (DRS) 2.2 on Azure Application Gateway and Azure Fron...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "ba8a63a088dcc9ff2d5c3450dbdbb8ba3ee8180ef0cd78629b1c28af9d11a5d5",
+      "description": "We are updating the managed ruleset support policy for Azure Web Application Firewall (WAF) following the general availability of Default Rule Set (DRS) 2.2 on Azure Application Gateway and Azure Front Door. This update provides a clearer, more predictable lifecycle for managed rulesets while ensuring customers continue to benefit from the latest security protections.Starting with DRS 2.2, Azure WAF supports the latest three managed ruleset versions (N, N-1, and N-2) at any given time. When a new ruleset version is released, the version that becomes N-3 enters a final one-year support period. During this final year, the N-3 version may receive only critical security updates as needed.With the release of DRS 2.2, the following ruleset versions are entering their final support year ending on February 26, 2027: CRS 3.1 and CRS 3.0 in Azure Application Gateway and DRS 1.2, DRS 1.1 and DRS 1.0 in Azure Front Door. Customers should upgrade to a supported ruleset version to maintain full protection coverage and ongoing improvements, including enhanced detections and reduced false positives. Learn more: Application\nGateway Azure WAF documentation Front\nDoor Azure WAF documentation ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "5e9aa2832de06ab6f503db998efd4a41928828c9d6de54c6106f77b48a16ab16",
       "history": [
         {
           "changedFields": [
@@ -1604,6 +1796,14 @@
           "modifiedAfter": "2026-03-17T17:45:45.6987595Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558016"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:52:36.343Z",
+          "fingerprint": "5e9aa2832de06ab6f503db998efd4a41928828c9d6de54c6106f77b48a16ab16",
+          "modifiedAfter": "2026-03-17T17:45:45.6987595Z",
+          "modifiedBefore": "2026-03-17T17:45:45.6987595Z",
+          "rawRef": "20261014T105236343Z_detail_558016.json#558016"
         }
       ],
       "ids": [
@@ -1661,10 +1861,10 @@
       ],
       "created": "2026-03-02T19:15:14.5977479Z",
       "createdJst": "2026-03-03",
-      "description": "Azure\nDatabricks workspaces have two network configurations – Azure\nDatabricks-managed VNet and VNet Injection. The ability to update the Network\nConfiguration of your workspace is now generally avail...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "c4a969cc641e9c08c42ac69ebff4b5416e594ef85f1e6ccc5172f89712e7e460",
+      "description": "Azure\nDatabricks workspaces have two network configurations – Azure\nDatabricks-managed VNet and VNet Injection. The ability to update the Network\nConfiguration of your workspace is now generally available. This enhancement\nprovides greater flexibility and control over your Azure Databricks Network\nConfiguration, enabling you to meet evolving security, compliance\nrequirements.  With this capability, you can transition an Azure Databricks-managed\nVNet to your own VNet via VNet injection.  Additionally, you can\nmodify the VNet configuration of an existing VNet-injected workspace. Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "2c82f1c06c42f0bbe882c7ee67ad4c98d9884d30e751fd3430f4adf7b6e93615",
       "history": [
         {
           "changedFields": [
@@ -1675,6 +1875,14 @@
           "modifiedAfter": "2026-03-02T19:15:14.5977479Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558060"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:53:57.137Z",
+          "fingerprint": "2c82f1c06c42f0bbe882c7ee67ad4c98d9884d30e751fd3430f4adf7b6e93615",
+          "modifiedAfter": "2026-03-02T19:15:14.5977479Z",
+          "modifiedBefore": "2026-03-02T19:15:14.5977479Z",
+          "rawRef": "20261014T105357137Z_detail_558060.json#558060"
         }
       ],
       "ids": [
@@ -1728,10 +1936,10 @@
       ],
       "created": "2026-03-03T01:00:04.7633571Z",
       "createdJst": "2026-03-03",
-      "description": "The new Draft & Deploy feature for Azure Firewall Policy\nintroduces a streamlined, two-phase approach to managing firewall policies,\nsignificantly reducing deployment time and disruption. Traditionall...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "4ed1e94c8c9e68c6950af08d3b6921e87bc4e8f003dd4eb0325126214bd6ed30",
+      "description": "The new Draft & Deploy feature for Azure Firewall Policy\nintroduces a streamlined, two-phase approach to managing firewall policies,\nsignificantly reducing deployment time and disruption. Traditionally, any\npolicy update would trigger a full deployment of both the policy and the\nattached firewall, taking 2–4 minutes per change.   With Draft & Deploy, users can\ncollaboratively make multiple changes in a draft version cloned from the\ncurrent policy without affecting the live environment. Once finalized, all\nchanges can be deployed at once, replacing the existing policy.  Learn\nmore.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "705abc714c57feea53d275134a7c6947c74369c67d51837ef52184a239ab4d55",
       "history": [
         {
           "changedFields": [
@@ -1742,6 +1950,14 @@
           "modifiedAfter": "2026-03-03T01:00:04.7633571Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558072"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:53:47.842Z",
+          "fingerprint": "705abc714c57feea53d275134a7c6947c74369c67d51837ef52184a239ab4d55",
+          "modifiedAfter": "2026-03-03T01:00:04.7633571Z",
+          "modifiedBefore": "2026-03-03T01:00:04.7633571Z",
+          "rawRef": "20261014T105347842Z_detail_558072.json#558072"
         }
       ],
       "ids": [
@@ -1798,10 +2014,10 @@
       ],
       "created": "2026-03-20T19:00:50.812324Z",
       "createdJst": "2026-03-21",
-      "description": "Starting March 31, 2027 Elastic query using Shard_Map_Manager external data source type reaches end of support.Existing workloads can continue to run using Azure SQL Elastic query - Shard_Map_Manager ...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "2a5608f23a36902e3acf982905e6868357cb7b8084c9707d62eea92bec6c180a",
+      "description": "Starting March 31, 2027 Elastic query using Shard_Map_Manager external data source type reaches end of support.Existing workloads can continue to run using Azure SQL Elastic query - Shard_Map_Manager mode, but will no longer receive updates or support from Microsoft.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "eb8bc0e6de2f94d0715d79f04763047d5dbc978038254a7e6bcfab72089474d0",
       "history": [
         {
           "changedFields": [
@@ -1812,6 +2028,14 @@
           "modifiedAfter": "2026-03-20T19:00:50.812324Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558086"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:51:11.818Z",
+          "fingerprint": "eb8bc0e6de2f94d0715d79f04763047d5dbc978038254a7e6bcfab72089474d0",
+          "modifiedAfter": "2026-03-20T19:00:50.812324Z",
+          "modifiedBefore": "2026-03-20T19:00:50.812324Z",
+          "rawRef": "20261014T105111818Z_detail_558086.json#558086"
         }
       ],
       "ids": [
@@ -1866,10 +2090,10 @@
       ],
       "created": "2026-03-04T21:15:02.2751745Z",
       "createdJst": "2026-03-05",
-      "description": "Over the years, we’ve made significant investments to improve the responsiveness of the Azure Policy service. As a result, policy assignment creation and updates for Resource Manager mode policies now...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "70d4f968a1da7dcc88030d1aa6569e2f405396f390b2afd8848c9f171d9efe11",
+      "description": "Over the years, we’ve made significant investments to improve the responsiveness of the Azure Policy service. As a result, policy assignment creation and updates for Resource Manager mode policies now get enforced within 5 minutes.In light of cache refresh optimizations that are now in place, we’re removing the ‘login/logout workaround’ that triggered faster propagation of policy changes in your environment.Starting April 30, 2026, the ‘login/logout’ workaround will no longer be available, enabling further enhancements in performance and reliability for all customers.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "1b1487edf1155dd3bd12aee019bb6001048381663f6c50b33f2f19e33024b85a",
       "history": [
         {
           "changedFields": [
@@ -1880,6 +2104,14 @@
           "modifiedAfter": "2026-03-04T21:15:02.2751745Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558102"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:53:43.585Z",
+          "fingerprint": "1b1487edf1155dd3bd12aee019bb6001048381663f6c50b33f2f19e33024b85a",
+          "modifiedAfter": "2026-03-04T21:15:02.2751745Z",
+          "modifiedBefore": "2026-03-04T21:15:02.2751745Z",
+          "rawRef": "20261014T105343585Z_detail_558102.json#558102"
         }
       ],
       "ids": [
@@ -1933,10 +2165,10 @@
       ],
       "created": "2026-03-20T19:15:35.2206794Z",
       "createdJst": "2026-03-21",
-      "description": "In mid-March 2026, the following updates and\nenhancements were made to Azure SQL:   \n Reduce\n     the consumption of storage space, I/O, and memory and improve performance\n     without investing time ...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "577306e85015eab31c211e6fdab6a057b1e9f7e4e75bbca41ba074778ed34aab",
+      "description": "In mid-March 2026, the following updates and\nenhancements were made to Azure SQL:   \n Reduce\n     the consumption of storage space, I/O, and memory and improve performance\n     without investing time and effort into index maintenance jobs.  \n Configure\n     soft delete retention for your Azure SQL Server to prevent accidental\n     deletion and self-restore in case of deletion.  \n Azure\n     SQL Database Hyperscale Premium‑series expands scalability with new 160\n     and 192 vCore options representing a 25% and 50%\n     increase respectively over the current 128 vCore limit, enabling\n     significantly larger compute and memory configurations for the most demanding\n     workloads.  \n DiskANN\n     for vector indexing and vector search has been\n     significantly improved, addressing previous constraints.\n     The vector index now supports fully real-time updates, integrated\n     pre-filtering and post-filtering, and improved memory efficiency at\n     scale through vector quantization. These advancements make it well\n     suited for operational retrieval‑augmented generation (RAG)\n     workloads.  Learn more: Auto index\ncompaction Business\ncontinuity in Azure SQL Database Azure\nSQL Database Hyperscale Premium-series DiskAN\nVector Index improvements ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "71f63a665f3df91b6edeec4ac4051cf7c1254b71cb9e048b2ee5d41c319f7450",
       "history": [
         {
           "changedFields": [
@@ -1947,6 +2179,14 @@
           "modifiedAfter": "2026-03-20T19:15:35.2206794Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558116"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:51:08.438Z",
+          "fingerprint": "71f63a665f3df91b6edeec4ac4051cf7c1254b71cb9e048b2ee5d41c319f7450",
+          "modifiedAfter": "2026-03-20T19:15:35.2206794Z",
+          "modifiedBefore": "2026-03-20T19:15:35.2206794Z",
+          "rawRef": "20261014T105108438Z_detail_558116.json#558116"
         }
       ],
       "ids": [
@@ -1995,10 +2235,10 @@
       ],
       "created": "2026-03-18T18:30:05.9257189Z",
       "createdJst": "2026-03-19",
-      "description": "In mid-March 2026, the\nfollowing updates and enhancements were made to Azure SQL:  \n Publish SQL database projects directly from\n     Visual Studio Code to streamline database deployment\n     workflow...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "06108110514fdcb13ebf0cc05a0b5437f69dcfe6c15f72e421b5befe4c98bab7",
+      "description": "In mid-March 2026, the\nfollowing updates and enhancements were made to Azure SQL:  \n Publish SQL database projects directly from\n     Visual Studio Code to streamline database deployment\n     workflows.  \n View and edit SQL table data directly in the MSSQL\n     extension for Visual Studio Code using an interactive\n     grid.  \n Azure SQL Database now\n     supports versionless keys\n     for transparent data encryption (TDE), giving you a simpler\n     and more reliable way to manage your own encryption keys.  Learn more: Publish\nSQL database projects from Visual Studio Code MSSQL\nExtension for VS Code Versionless keys for\nTransparent Data Encryption in Azure SQL Database ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "ade7018cd65c2ac33c264ec7df99bcbcf1fdd99d31688d075601a3d8de1f298c",
       "history": [
         {
           "changedFields": [
@@ -2009,6 +2249,14 @@
           "modifiedAfter": "2026-03-18T18:30:05.9257189Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558121"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:51:53.526Z",
+          "fingerprint": "ade7018cd65c2ac33c264ec7df99bcbcf1fdd99d31688d075601a3d8de1f298c",
+          "modifiedAfter": "2026-03-18T18:30:05.9257189Z",
+          "modifiedBefore": "2026-03-18T18:30:05.9257189Z",
+          "rawRef": "20261014T105153526Z_detail_558121.json#558121"
         }
       ],
       "ids": [
@@ -2061,10 +2309,10 @@
       ],
       "created": "2026-03-18T18:15:04.6151584Z",
       "createdJst": "2026-03-19",
-      "description": "GitHub Copilot is now generally available in SQL Server Management Studio (SSMS) 22, bringing AI‑powered assistance directly into the application that you use every day.  With GitHub Copilot in SSMS, ...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "96edda58e9057b8846a4c58c53ae26c2f4ab8b386c7af6d568ce19701c765581",
+      "description": "GitHub Copilot is now generally available in SQL Server Management Studio (SSMS) 22, bringing AI‑powered assistance directly into the application that you use every day.  With GitHub Copilot in SSMS, you can use natural language to develop, explain, fix, and optimize T‑SQL, troubleshoot queries, and better understand your databases without leaving your workflow. GitHub Copilot includes intelligent code completions in the query editor, helping you write T-SQL faster and with greater confidence. In addition, you can use database instructions to explain business rules and conventions that Copilot should follow, helping it to provide more precise, relevant assistance.  Using the context of your connection, Copilot delivers database‑specific guidance exactly when you need it. This release helps you work more efficiently, reduce context switching, and tackle complex database tasks with greater confidence. By using the same GitHub Copilot subscription already available in Visual Studio and Visual Studio Code, you get a consistent AI experience across your daily tools—now extended to SQL databases. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "0e49f95c0508e9dc9e352e55e5dfc4dd57dbfc4f35b55977ac511f554b305f12",
       "history": [
         {
           "changedFields": [
@@ -2075,6 +2323,14 @@
           "modifiedAfter": "2026-03-18T18:15:04.6151584Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558134"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:51:56.606Z",
+          "fingerprint": "0e49f95c0508e9dc9e352e55e5dfc4dd57dbfc4f35b55977ac511f554b305f12",
+          "modifiedAfter": "2026-03-18T18:15:04.6151584Z",
+          "modifiedBefore": "2026-03-18T18:15:04.6151584Z",
+          "rawRef": "20261014T105156606Z_detail_558134.json#558134"
         }
       ],
       "ids": [
@@ -2122,10 +2378,10 @@
       ],
       "created": "2026-03-11T18:00:35.4377847Z",
       "createdJst": "2026-03-12",
-      "description": "You can now monitor your Azure Database for PostgreSQL with rich, built-in Grafana dashboards—right from the Azure portal. This native integration with Azure Monitor means you no longer need to set up...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "012cdbd6a6954670c3e8458f9c19026f56ce23c76ff8aefa203b4b9a9f9ad9a1",
+      "description": "You can now monitor your Azure Database for PostgreSQL with rich, built-in Grafana dashboards—right from the Azure portal. This native integration with Azure Monitor means you no longer need to set up or manage a separate Grafana instance to get deep visibility into your database performance. With just a few clicks, you can see prebuilt dashboards showing real-time metrics like CPU usage, storage, active connections, query throughput, and more. You can also correlate metrics with PostgreSQL logs, helping you troubleshoot slow queries and spikes instantly. Grafana Explore is available too, so you can dive deeper into your data when needed. These dashboards help you answer critical questions faster: Is my database healthy? What’s causing performance issues? Do I need to scale? You can customize dashboards, save them to your subscription, and share them across teams. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "121c46796b75efaf6f341457ac17fd953f4afe1a9fdf39d5b64ef56ac25681e8",
       "history": [
         {
           "changedFields": [
@@ -2136,6 +2392,14 @@
           "modifiedAfter": "2026-03-11T18:00:35.4377847Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558140"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:53:24.924Z",
+          "fingerprint": "121c46796b75efaf6f341457ac17fd953f4afe1a9fdf39d5b64ef56ac25681e8",
+          "modifiedAfter": "2026-03-11T18:00:35.4377847Z",
+          "modifiedBefore": "2026-03-11T18:00:35.4377847Z",
+          "rawRef": "20261014T105324924Z_detail_558140.json#558140"
         }
       ],
       "ids": [
@@ -2188,10 +2452,10 @@
       ],
       "created": "2026-03-11T18:00:35.4377847Z",
       "createdJst": "2026-03-12",
-      "description": "You can now provision and manage Azure Database for\nPostgreSQL elastic clusters using Terraform, Bicep, and Ansible, with\nfull General Availability support. With\nnative infrastructure-as-code support,...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "810d4a7bc2b8d43d62b84762e46350159bf5c1fd9a5d6ed5afd214d2f83bb674",
+      "description": "You can now provision and manage Azure Database for\nPostgreSQL elastic clusters using Terraform, Bicep, and Ansible, with\nfull General Availability support. With\nnative infrastructure-as-code support, you can consistently create,\nscale, and manage elastic clusters as part of automated deployment\npipelines, reducing manual configuration and operational overhead.\nThis update is especially useful if you are building multitenant or\nhorizontally scalable PostgreSQL workloads and want repeatable, auditable\ninfrastructure deployments across environments.  By integrating elastic clusters into Terraform, Bicep,\nand Ansible, you gain greater control, reliability, and velocity when managing\ndistributed PostgreSQL deployments. You can standardize your infrastructure\ndefinitions, simplify environment replication, and seamlessly\nintegrate elastic clusters into your CI/CD and governance processes.   Learn more:  Elastic\nclusters in Azure Database for PostgreSQL  Quickstart:\nCreate elastic clusters with Bicep template  azurerm\npostgresql database | Terraform Registry  Manage\nPostgre SQL Database Instance – Ansible Community Documentation  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "2254fae1721f57696ad9b32943ad0ba160450f925b832249e83514a4ad4bdf52",
       "history": [
         {
           "changedFields": [
@@ -2202,6 +2466,14 @@
           "modifiedAfter": "2026-03-11T18:00:35.4377847Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558145"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:53:29.814Z",
+          "fingerprint": "2254fae1721f57696ad9b32943ad0ba160450f925b832249e83514a4ad4bdf52",
+          "modifiedAfter": "2026-03-11T18:00:35.4377847Z",
+          "modifiedBefore": "2026-03-11T18:00:35.4377847Z",
+          "rawRef": "20261014T105329814Z_detail_558145.json#558145"
         }
       ],
       "ids": [
@@ -2254,10 +2526,10 @@
       ],
       "created": "2026-03-18T18:15:04.6151584Z",
       "createdJst": "2026-03-19",
-      "description": "Announcing SQL MCP Server, our Model Context Protocol (MCP) connector for production databases. SQL MCP Server is a feature rich component of data API builder (DAB) that gives you a simple, predictabl...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "7f2c7f6754abff22f0d6eea97aa43e072a05ad654a7fa2e13ead4824d31b827b",
+      "description": "Announcing SQL MCP Server, our Model Context Protocol (MCP) connector for production databases. SQL MCP Server is a feature rich component of data API builder (DAB) that gives you a simple, predictable, secure way to bring AI agents into your data workflows without compromising the database or relying on natural language. SQL MCP Server runs locally, on premises, or in any cloud as a containerized service. Learn more.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "7a1787f2515810ea17e3d3a3c5b188284e58704945d5cbe185209112086e0834",
       "history": [
         {
           "changedFields": [
@@ -2268,6 +2540,14 @@
           "modifiedAfter": "2026-03-18T18:15:04.6151584Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558150"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:52:00.620Z",
+          "fingerprint": "7a1787f2515810ea17e3d3a3c5b188284e58704945d5cbe185209112086e0834",
+          "modifiedAfter": "2026-03-18T18:15:04.6151584Z",
+          "modifiedBefore": "2026-03-18T18:15:04.6151584Z",
+          "rawRef": "20261014T105200620Z_detail_558150.json#558150"
         }
       ],
       "ids": [
@@ -2315,10 +2595,10 @@
       ],
       "created": "2026-03-18T18:15:04.6151584Z",
       "createdJst": "2026-03-19",
-      "description": "Bring the benefits of schema-as-code to your database development workflow. SQL database projects enable you to source control your database schema, perform reliable deployments to any environment, an...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "0b0111e0cdb127e93468c7c5c744cc7d7c4ab87d1c53e5f9b462b709faf5dc5d",
+      "description": "Bring the benefits of schema-as-code to your database development workflow. SQL database projects enable you to source control your database schema, perform reliable deployments to any environment, and integrate code quality checks into your development process, all from within SQL Server Management Studio (SSMS).   A SQL database project is a local representation of SQL objects that comprise the schema for a single database, such as tables, stored procedures, or functions. The development cycle of a SQL database project enables database development to be integrated into a continuous integration and continuous deployment (CI/CD) workflow, a familiar development best practice. With this release, you can use Microsoft.Build.Sql SDK-style projects in SSMS, giving you a consistent experience with Visual Studio Code SQL projects.  Whether you're managing a single database or orchestrating complex deployments across multiple environments, SQL projects in SSMS provide the foundation for modern database DevOps practices.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "f92358c308bb5d5ae2ae76db9d7c337b991577d7987cae9f4443de4e39af9fdc",
       "history": [
         {
           "changedFields": [
@@ -2329,6 +2609,14 @@
           "modifiedAfter": "2026-03-18T18:15:04.6151584Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558155"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:52:04.992Z",
+          "fingerprint": "f92358c308bb5d5ae2ae76db9d7c337b991577d7987cae9f4443de4e39af9fdc",
+          "modifiedAfter": "2026-03-18T18:15:04.6151584Z",
+          "modifiedBefore": "2026-03-18T18:15:04.6151584Z",
+          "rawRef": "20261014T105204992Z_detail_558155.json#558155"
         }
       ],
       "ids": [
@@ -2376,10 +2664,10 @@
       ],
       "created": "2026-03-11T17:45:49.9056495Z",
       "createdJst": "2026-03-12",
-      "description": "The MSSQL extension for Visual Studio Code now introduces Query Profiler in public preview, bringing real-time insight into your database activity directly inside Visual Studio Code. With Query Profil...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "da8c185f939c0b14b9a5160097672508b864ccebacbd98a91ac9e45b99d9aa6b",
+      "description": "The MSSQL extension for Visual Studio Code now introduces Query Profiler in public preview, bringing real-time insight into your database activity directly inside Visual Studio Code. With Query Profiler, you can capture query and database activity as it happens, helping you quickly understand what your app and backend processes are doing, identify slow operations, and spot performance bottlenecks while you build. Powered by Extended Events, Query Profiler delivers low-overhead performance monitoring designed to minimize impact on your database. Query Profiler supports SQL Server (on-premises or in private or public cloud environments) and Azure SQL Database. You can monitor active sessions, review execution details, and better understand how your application interacts with your database during development and testing. Instead of switching between monitoring tools and your editor, you get a streamlined, developer-focused profiling experience integrated with your existing connections and query workflow. Whether you are debugging performance issues or validating changes before deployment, Query Profiler gives you clear, actionable insight into what your database is doing in real time. This public preview allows you to explore the experience early and share feedback. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "738e292aee452c59517cfc7b74675ee5630cc8f346eb9ca509f338438d1a9c92",
       "history": [
         {
           "changedFields": [
@@ -2390,6 +2678,14 @@
           "modifiedAfter": "2026-03-11T17:45:49.9056495Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558164"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:53:34.230Z",
+          "fingerprint": "738e292aee452c59517cfc7b74675ee5630cc8f346eb9ca509f338438d1a9c92",
+          "modifiedAfter": "2026-03-11T17:45:49.9056495Z",
+          "modifiedBefore": "2026-03-11T17:45:49.9056495Z",
+          "rawRef": "20261014T105334230Z_detail_558164.json#558164"
         }
       ],
       "ids": [
@@ -2437,10 +2733,10 @@
       ],
       "created": "2026-03-18T18:15:04.6151584Z",
       "createdJst": "2026-03-19",
-      "description": "The MSSQL extension for Visual Studio Code now introduces GitHub Copilot integration in Schema Designer, expanding the visual schema design experience with AI-assisted capabilities. Based on developer...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "1edb02dbca56047b2be9ab0a87daa7eb86622ae9ff0d9443a1b5a0470edb4813",
+      "description": "The MSSQL extension for Visual Studio Code now introduces GitHub Copilot integration in Schema Designer, expanding the visual schema design experience with AI-assisted capabilities. Based on developer feedback and evolving workflows, you can now understand, design, and modify database schemas using natural language.  You can describe the tables or changes you want, and GitHub Copilot plans and generates proposed updates inside Schema Designer. Each schema change is previewed visually, color-coded, and tracked in a dedicated Change Tracking panel with familiar source control-style labels such as Add (A), Modify (M), and Delete (D). You can clearly differentiate between your own edits and AI-generated suggestions, inspect detailed modifications, and review changes before they are applied. With built-in review workflows and clear visual diffs, you stay in control while iterating safely with undo and redo support.  Whether you’re starting a new project or updating an existing one, this guided experience helps you move confidently from an idea to a validated data model. From there, you can continue into the new Data API Builder public preview in the MSSQL extension, where GitHub Copilot plans and generates back-end endpoints from your schema. Together, these experiences give you an end-to-end path from database design to a working back end in minutes so you can build modern, AI-ready, secure applications faster without switching tools or losing control. Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "e32a4520278d55bf6b981bed80e5ad44d7f917e9edcc5c688d504f54e8ba8ac9",
       "history": [
         {
           "changedFields": [
@@ -2451,6 +2747,14 @@
           "modifiedAfter": "2026-03-18T18:15:04.6151584Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558169"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:52:09.351Z",
+          "fingerprint": "e32a4520278d55bf6b981bed80e5ad44d7f917e9edcc5c688d504f54e8ba8ac9",
+          "modifiedAfter": "2026-03-18T18:15:04.6151584Z",
+          "modifiedBefore": "2026-03-18T18:15:04.6151584Z",
+          "rawRef": "20261014T105209351Z_detail_558169.json#558169"
         }
       ],
       "ids": [
@@ -2498,10 +2802,10 @@
       ],
       "created": "2026-03-18T17:00:05.1025868Z",
       "createdJst": "2026-03-19",
-      "description": "The MSSQL extension for Visual Studio Code now introduces Data API builder in public preview with built-in GitHub Copilot integration, bringing a guided back-end generation experience directly into yo...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "22145ac5bd0815ac44660d45aebc75d547c0025cb5e8033ff366de95d4969c39",
+      "description": "The MSSQL extension for Visual Studio Code now introduces Data API builder in public preview with built-in GitHub Copilot integration, bringing a guided back-end generation experience directly into your development workflow. You can generate REST, GraphQL, and MCP endpoints from your SQL database schema inside Visual Studio Code without manually configuring infrastructure or connection strings.  You select tables, define CRUD operations, and configure per-entity settings such as authorization roles, and primary keys, and route behavior through a dedicated API design interface. The generated Data API builder configuration file stays synchronized with your selections, can be previewed directly in the extension, and can be added to your workspace for full transparency and version control. You can modify the configuration manually or use GitHub Copilot to plan and generate updates.  With just a few steps, the extension provisions and runs a local Data API builder container using your existing database connection context. This guided experience helps you move from validated schema to a working back end in minutes, enabling you to build modern, AI-ready, secure applications faster without switching tools or losing control. Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "dc42ba5a798f4aeb0f5ea31b00adb4a22350ed90ff377f8bfea1e0644ab37541",
       "history": [
         {
           "changedFields": [
@@ -2512,6 +2816,14 @@
           "modifiedAfter": "2026-03-18T17:00:05.1025868Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558178"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:52:12.252Z",
+          "fingerprint": "dc42ba5a798f4aeb0f5ea31b00adb4a22350ed90ff377f8bfea1e0644ab37541",
+          "modifiedAfter": "2026-03-18T17:00:05.1025868Z",
+          "modifiedBefore": "2026-03-18T17:00:05.1025868Z",
+          "rawRef": "20261014T105212252Z_detail_558178.json#558178"
         }
       ],
       "ids": [
@@ -2559,10 +2871,10 @@
       ],
       "created": "2026-03-18T17:00:05.1025868Z",
       "createdJst": "2026-03-19",
-      "description": "Azure SQL Database now supports versionless keys for transparent data encryption (TDE), giving you a simpler and more reliable way to manage your own encryption keys. You no longer need to reference a...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "83f8ef2e9766da3c787135debefb635fb8cde96a9a3cea916c35b6a51ce20c42",
+      "description": "Azure SQL Database now supports versionless keys for transparent data encryption (TDE), giving you a simpler and more reliable way to manage your own encryption keys. You no longer need to reference a specific key version from Azure Key Vault or Managed HSM when configuring TDE with customer-managed keys. Instead, you point to a versionless key URI, and Azure SQL automatically starts using the latest version.  Versionless keys help you reduce operational overhead and the risk of misconfiguration. You keep full control over your keys and rotation policies, while making encryption at rest easier to operate at scale.  Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "c38fed5c5b23ea89573c1130ab17a5e458295426ddd0bae889b675d7a10d5768",
       "history": [
         {
           "changedFields": [
@@ -2573,6 +2885,14 @@
           "modifiedAfter": "2026-03-18T17:00:05.1025868Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558183"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:52:17.479Z",
+          "fingerprint": "c38fed5c5b23ea89573c1130ab17a5e458295426ddd0bae889b675d7a10d5768",
+          "modifiedAfter": "2026-03-18T17:00:05.1025868Z",
+          "modifiedBefore": "2026-03-18T17:00:05.1025868Z",
+          "rawRef": "20261014T105217479Z_detail_558183.json#558183"
         }
       ],
       "ids": [
@@ -2625,10 +2945,10 @@
       ],
       "created": "2026-03-18T18:45:54.5925446Z",
       "createdJst": "2026-03-19",
-      "description": "Effective March 31, 2027, the Emissions Impact Dashboard for Azure hosted by Power BI will be\nretired. After this date, the dashboard will no longer be accessible and\ntechnical support will be discont...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "6d72dd46ba68b617082312b62a58523c0eced7789cea4095e696859cebec8b08",
+      "description": "Effective March 31, 2027, the Emissions Impact Dashboard for Azure hosted by Power BI will be\nretired. After this date, the dashboard will no longer be accessible and\ntechnical support will be discontinued. We strongly encourage customers\nto export their emissions data to retain historical reporting. Customers can explore Azure\nCarbon Optimizer in advance of the retirement date as an alternative solution.  Learn more: Carbon optimization\nin Azure Azure\nCarbon Optimization community feedback ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "577d9bc9a962cf8359167d685407aac7a26bf1ef6f1eb04e479065e89b384a13",
       "history": [
         {
           "changedFields": [
@@ -2639,6 +2959,14 @@
           "modifiedAfter": "2026-03-18T18:45:54.5925446Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558278"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:51:43.017Z",
+          "fingerprint": "577d9bc9a962cf8359167d685407aac7a26bf1ef6f1eb04e479065e89b384a13",
+          "modifiedAfter": "2026-03-18T18:45:54.5925446Z",
+          "modifiedBefore": "2026-03-18T18:45:54.5925446Z",
+          "rawRef": "20261014T105143017Z_detail_558278.json#558278"
         }
       ],
       "ids": [
@@ -2687,10 +3015,10 @@
       ],
       "created": "2026-03-11T17:45:49.9056495Z",
       "createdJst": "2026-03-12",
-      "description": "Azure SRE Agent is now generally\navailable. This AI-powered operations agent helps teams improve uptime, reduce\nincident impact, and cut operational toil by accelerating diagnosis and\nautomating respo...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "b6c4aaf235c65e39942d1e1e3d4a19f2ff04bb8d9fd72921e472e1808528b3b8",
+      "description": "Azure SRE Agent is now generally\navailable. This AI-powered operations agent helps teams improve uptime, reduce\nincident impact, and cut operational toil by accelerating diagnosis and\nautomating response workflows. The GA release introduces deep context grounding\nwith source code and tools, advanced reasoning with both OpenAI and Anthropic\nClaude models, built-in Python code execution for generating reports and\ndashboards, and memory that learns from every interaction. Teams can customize\nthe agent's autonomy level—from recommended actions to automated responses\nwithin defined guardrails. Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "8734f4bae7af8d066db55665c0e589eeedad3096fa93d18d67c674504e19631d",
       "history": [
         {
           "changedFields": [
@@ -2701,6 +3029,14 @@
           "modifiedAfter": "2026-03-11T17:45:49.9056495Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558321"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:53:38.439Z",
+          "fingerprint": "8734f4bae7af8d066db55665c0e589eeedad3096fa93d18d67c674504e19631d",
+          "modifiedAfter": "2026-03-11T17:45:49.9056495Z",
+          "modifiedBefore": "2026-03-11T17:45:49.9056495Z",
+          "rawRef": "20261014T105338439Z_detail_558321.json#558321"
         }
       ],
       "ids": [
@@ -2756,10 +3092,10 @@
       ],
       "created": "2026-03-12T21:15:25.9320773Z",
       "createdJst": "2026-03-13",
-      "description": "Azure Storage Mover now enables direct, secure data\nmigration from AWS S3 data in Virtual Private Cloud to Azure Blob Storage with\nprivate networking. This update removes the need for manual pipelines...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "669733fc916bb596f7f7de0113dcc290ef84efb4ebf6c25bbb1384ecd366c48d",
+      "description": "Azure Storage Mover now enables direct, secure data\nmigration from AWS S3 data in Virtual Private Cloud to Azure Blob Storage with\nprivate networking. This update removes the need for manual pipelines or\nthird-party tools, supports automation through the Azure portal, and provides\nreal-time job monitoring. We had previously announced the General\navailability of data transfer from AWS to Azure over public\nnetworks.  Key benefits:  \n Automated, scalable workflows: orchestrate and\n     monitor jobs with centralized dashboards.Secure, compliant transfers: integrated with Azure’s\n     governance frameworks.  \n Accelerate modernization: unlock AI, analytics, and\n     cloud innovation as soon as data lands in Azure.  Get started today and simplify\nyour multicloud data estate with Azure Storage Mover’s Cloud-to-Cloud\nmigration. Learn\nmore.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "029d92150140867e483ad6c97027f3e907154aaa1f9854441ab9e639a4f6b95b",
       "history": [
         {
           "changedFields": [
@@ -2770,6 +3106,14 @@
           "modifiedAfter": "2026-03-12T21:15:25.9320773Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558651"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:53:08.988Z",
+          "fingerprint": "029d92150140867e483ad6c97027f3e907154aaa1f9854441ab9e639a4f6b95b",
+          "modifiedAfter": "2026-03-12T21:15:25.9320773Z",
+          "modifiedBefore": "2026-03-12T21:15:25.9320773Z",
+          "rawRef": "20261014T105308988Z_detail_558651.json#558651"
         }
       ],
       "ids": [
@@ -2817,10 +3161,10 @@
       ],
       "created": "2026-03-12T21:15:25.9320773Z",
       "createdJst": "2026-03-13",
-      "description": "Summary rules run batch aggregation inside your Log\nAnalytics workspace and re-ingest the summarized results into a custom\ndestination table. When a bin fails, that can create gaps in your summarized\n...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "91ba4b6b30d2334e81a5413f47952445b372c4a6ac64593b64a4aab827433b8f",
+      "description": "Summary rules run batch aggregation inside your Log\nAnalytics workspace and re-ingest the summarized results into a custom\ndestination table. When a bin fails, that can create gaps in your summarized\ndataset. “Retry bin” helps you remediate bin-level failures without\nredefining rules or rebuilding tables.“Retry bin” capability lets you re-run a specific\nfailed time bin in case the service’s built-in retry policy is\nexhausted. To retry, you provide a retryBinStartTime value; the\nrule’s existing configuration (query, binSize, destination table, etc.)\nremains unchanged.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "4dca1c827d790c5c79617d5ae84d446117001ed4a78554519ef21f99d272c06a",
       "history": [
         {
           "changedFields": [
@@ -2831,6 +3175,14 @@
           "modifiedAfter": "2026-03-12T21:15:25.9320773Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558656"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:53:15.421Z",
+          "fingerprint": "4dca1c827d790c5c79617d5ae84d446117001ed4a78554519ef21f99d272c06a",
+          "modifiedAfter": "2026-03-12T21:15:25.9320773Z",
+          "modifiedBefore": "2026-03-12T21:15:25.9320773Z",
+          "rawRef": "20261014T105315421Z_detail_558656.json#558656"
         }
       ],
       "ids": [
@@ -2888,10 +3240,10 @@
       ],
       "created": "2026-03-16T18:30:34.1207616Z",
       "createdJst": "2026-03-17",
-      "description": "Microsoft Entra ID-based access for Azure Blob Storage SFTP\nis now in public preview. This new capability empowers you to use Microsoft\nEntra ID identities (including guest users via Entra External Id...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "06ae37b373b90b7628332c19bafbebc052cf0581e75680e5e25bd7d5275f526d",
+      "description": "Microsoft Entra ID-based access for Azure Blob Storage SFTP\nis now in public preview. This new capability empowers you to use Microsoft\nEntra ID identities (including guest users via Entra External Identities) to\nsecurely connect to Azure Blob Storage via SFTP without needing local user\ncreation and management. Key capabilities include: Single Sign-On and Multi-Factor Authentication:\nUsers authenticate with their existing corporate credentials, with MFA support\nto protect against credential theft. Conditional Access Policies: Apply sophisticated\naccess controls based on user location, device compliance, risk level, and\nother contextual factors. Unified Identity Lifecycle: SFTP access is\nautomatically updated or revoked through your existing identity management\nprocesses when users leave or change roles. External Identity Support: Securely collaborate\nwith partners and vendors using Entra External Identities (B2B) without\ncreating local accounts. Native Azure RBAC, ABAC, and ACL Integration:\nSFTP access seamlessly integrates with Azure's comprehensive authorization\nframework, respecting the same permissions as REST API, Azure CLI, and other\naccess methods. Questions or\nfeedback? We would love to hear from you! Reach out to our team at blobsftp@microsoft.com.Get started: Register for the\npreview feature in your subscription, assign RBAC roles to a user or group, and\ngenerate an SSH certificate to connect via SFTP.  Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "c16c5a91bb64b1cbf3f44d8214ad381848ad4b2ada02b32fb73a2892c05d82d8",
       "history": [
         {
           "changedFields": [
@@ -2902,6 +3254,14 @@
           "modifiedAfter": "2026-03-16T18:30:34.1207616Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558662"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:53:02.387Z",
+          "fingerprint": "c16c5a91bb64b1cbf3f44d8214ad381848ad4b2ada02b32fb73a2892c05d82d8",
+          "modifiedAfter": "2026-03-16T18:30:34.1207616Z",
+          "modifiedBefore": "2026-03-16T18:30:34.1207616Z",
+          "rawRef": "20261014T105302387Z_detail_558662.json#558662"
         }
       ],
       "ids": [
@@ -2948,10 +3308,10 @@
       ],
       "created": "2026-03-18T17:00:05.1025868Z",
       "createdJst": "2026-03-19",
-      "description": "Azure Databricks now offers a Lakeflow Connect Free Tier that gives each workspace 100 free DBUs per workspace per day for ingestion from SaaS applications and databases. This allows you to bring roug...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "b08237ae118c717ee51b439424f3ef1c6cc589d5b1e27073abfdcaabba22b7af",
+      "description": "Azure Databricks now offers a Lakeflow Connect Free Tier that gives each workspace 100 free DBUs per workspace per day for ingestion from SaaS applications and databases. This allows you to bring roughly 100 million records of data per workspace per day into your Lakehouse at no charge before standard Lakeflow Connect pricing applies. With the Lakeflow Connect Free Tier, organizations can easily ingest data into the lakehouse, govern it with Unity Catalog, and power analytics and AI applications such as Genie. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "321d6f7e285fc417d5a29ce1b8970d8549b29bd9d1829f1c96e4e5de23ad2153",
       "history": [
         {
           "changedFields": [
@@ -2962,6 +3322,14 @@
           "modifiedAfter": "2026-03-18T17:00:05.1025868Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558810"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:52:23.758Z",
+          "fingerprint": "321d6f7e285fc417d5a29ce1b8970d8549b29bd9d1829f1c96e4e5de23ad2153",
+          "modifiedAfter": "2026-03-18T17:00:05.1025868Z",
+          "modifiedBefore": "2026-03-18T17:00:05.1025868Z",
+          "rawRef": "20261014T105223758Z_detail_558810.json#558810"
         }
       ],
       "ids": [
@@ -3014,10 +3382,10 @@
       ],
       "created": "2026-03-24T17:30:29.8186836Z",
       "createdJst": "2026-03-25",
-      "description": "Azure Monitor now offers one-click enablement of Prometheus\nrecommended alerts directly in the Azure Portal for Azure Arc-enabled\nKubernetes clusters. These alerts, based on enhanced Prometheus commun...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "4b3fe33618d65132d0579b86209bdff22ffc2365ef9d8cf46a21bb64bbf1e026",
+      "description": "Azure Monitor now offers one-click enablement of Prometheus\nrecommended alerts directly in the Azure Portal for Azure Arc-enabled\nKubernetes clusters. These alerts, based on enhanced Prometheus community\nrules, provide comprehensive coverage across cluster, node, and pod levels.\nPreviously, enabling these alerts required manual template downloads and CLI\ndeployment.  To use these alerts, your cluster must have Azure\nMonitor managed service for Prometheus enabled. They serve as the\nreplacement for the legacy Container\ninsights recommended alerts (custom metrics) (preview).  By enabling these alerts, customers will:  \n Receive timely notifications on critical cluster\n     issues.  \n Accelerate triage and troubleshooting with\n     preconfigured signal coverage.  \n Improve cluster reliability and performance with\n     minimal configuration.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "3b5aea148f4262d4a38c17753659d44d87dc6322a30555124b5c39d7fc0c9489",
       "history": [
         {
           "changedFields": [
@@ -3028,6 +3396,14 @@
           "modifiedAfter": "2026-03-24T17:30:29.8186836Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558825"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:51:01.592Z",
+          "fingerprint": "3b5aea148f4262d4a38c17753659d44d87dc6322a30555124b5c39d7fc0c9489",
+          "modifiedAfter": "2026-03-24T17:30:29.8186836Z",
+          "modifiedBefore": "2026-03-24T17:30:29.8186836Z",
+          "rawRef": "20261014T105101592Z_detail_558825.json#558825"
         }
       ],
       "ids": [
@@ -3080,10 +3456,10 @@
       ],
       "created": "2026-03-25T20:00:39.2632249Z",
       "createdJst": "2026-03-26",
-      "description": "We're excited to announce that private endpoint support for Azure Cosmos DB Mirroring in Microsoft Fabric is now generally available. You can now unlock powerful analytics on your operational data whi...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "93c205b9dd42e9dfe044b77b7f1fa20adff968884fcbff0bedacd2f3c77ad122",
+      "description": "We're excited to announce that private endpoint support for Azure Cosmos DB Mirroring in Microsoft Fabric is now generally available. You can now unlock powerful analytics on your operational data while keeping your enhanced network security posture intact.Now you can configure virtual network restrictions, set up private endpoints, and help ensure your data stays protected within private network boundaries as data replicates to your Fabric workspace. You can use the Azure Cosmos DB network access control list capability to authorize specific Fabric workspace IDs for trusted connections to your Cosmos DB account.This capability is essential for regulated industries and organizations handling sensitive data where network isolation is required. Security teams can maintain strict network controls, while you have the freedom to build real-time dashboards, train AI models, and run advanced analytics on your operational data within a secure boundary.Visit our documentation to download the PowerShell automation script and configure your environment.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "ad5da87e35ae738568ac547da932b909bbd99eced7e321709468488d4d17fee5",
       "history": [
         {
           "changedFields": [
@@ -3094,6 +3470,14 @@
           "modifiedAfter": "2026-03-25T20:00:39.2632249Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558836"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:49:52.020Z",
+          "fingerprint": "ad5da87e35ae738568ac547da932b909bbd99eced7e321709468488d4d17fee5",
+          "modifiedAfter": "2026-03-25T20:00:39.2632249Z",
+          "modifiedBefore": "2026-03-25T20:00:39.2632249Z",
+          "rawRef": "20261014T104952020Z_detail_558836.json#558836"
         }
       ],
       "ids": [
@@ -3146,10 +3530,10 @@
       ],
       "created": "2026-03-25T17:45:33.5422578Z",
       "createdJst": "2026-03-26",
-      "description": "We are excited to announce the public preview of Fabric Mirroring integration for Azure Database for MySQL – Flexible Server. You can now replicate MySQL operational data into Microsoft Fabric in near...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "9c52e855b6be6f3934f3908f7bb175e2f7425db6cc564bcf673cb703d1c7c53d",
+      "description": "We are excited to announce the public preview of Fabric Mirroring integration for Azure Database for MySQL – Flexible Server. You can now replicate MySQL operational data into Microsoft Fabric in near real time, without building or maintaining ETL pipelines. Mirrored data lands in OneLake in Delta Parquet format and is immediately available for analytics across Fabric experiences. Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "6aaf5da4e9bd6e53e90857785e1affd0c24ba93e40aa2439933eeb3338dc0670",
       "history": [
         {
           "changedFields": [
@@ -3160,6 +3544,14 @@
           "modifiedAfter": "2026-03-25T17:45:33.5422578Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558841"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:49:56.210Z",
+          "fingerprint": "6aaf5da4e9bd6e53e90857785e1affd0c24ba93e40aa2439933eeb3338dc0670",
+          "modifiedAfter": "2026-03-25T17:45:33.5422578Z",
+          "modifiedBefore": "2026-03-25T17:45:33.5422578Z",
+          "rawRef": "20261014T104956210Z_detail_558841.json#558841"
         }
       ],
       "ids": [
@@ -3206,10 +3598,10 @@
       ],
       "created": "2026-03-25T17:30:45.7754801Z",
       "createdJst": "2026-03-26",
-      "description": "You can now leverage pgoutput for online (minimal-downtime) migrations with improved reliability and performance. By aligning with PostgreSQL’s native logical replication framework, this update improv...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "5cd8c426158b726a5b21d917fe7c357a513a35df8384e9e7ce169d6ce7d7cb8d",
+      "description": "You can now leverage pgoutput for online (minimal-downtime) migrations with improved reliability and performance. By aligning with PostgreSQL’s native logical replication framework, this update improves ecosystem compatibility with modern PostgreSQL deployments and reduces dependency on legacy decoding mechanisms, helping ensure continued alignment as PostgreSQL versions evolve.Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "66f9db9c6f0b6c648097290e1ea2deb076736d52e061599232f7703ce34b05f6",
       "history": [
         {
           "changedFields": [
@@ -3220,6 +3612,14 @@
           "modifiedAfter": "2026-03-25T17:30:45.7754801Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100456502Z_list_2026-03_o0.json#558846"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:50:01.524Z",
+          "fingerprint": "66f9db9c6f0b6c648097290e1ea2deb076736d52e061599232f7703ce34b05f6",
+          "modifiedAfter": "2026-03-25T17:30:45.7754801Z",
+          "modifiedBefore": "2026-03-25T17:30:45.7754801Z",
+          "rawRef": "20261014T105001524Z_detail_558846.json#558846"
         }
       ],
       "ids": [
@@ -3272,10 +3672,10 @@
       ],
       "created": "2026-03-25T17:30:45.7754801Z",
       "createdJst": "2026-03-26",
-      "description": "We’re excited to announce that Google AlloyDB is now supported as a source for migration into Azure Database for PostgreSQL. You can migrate and consolidate PostgreSQL estates from Google AlloyDB to A...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "2010b6630cbf8cfc52193a3da2dd3555bb0f36176a1d591ad99c7cee04bd1d5d",
+      "description": "We’re excited to announce that Google AlloyDB is now supported as a source for migration into Azure Database for PostgreSQL. You can migrate and consolidate PostgreSQL estates from Google AlloyDB to Azure using secure, reliable workflows designed for minimal downtime, while maintaining native PostgreSQL compatibility end to end.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "1bd92a165477b4f4c76068a24b7bec55dba06ee25683c83a0ca827e860009eae",
       "history": [
         {
           "changedFields": [
@@ -3286,6 +3686,14 @@
           "modifiedAfter": "2026-03-25T17:30:45.7754801Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100502915Z_list_2026-03_o50.json#558851"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:50:09.715Z",
+          "fingerprint": "1bd92a165477b4f4c76068a24b7bec55dba06ee25683c83a0ca827e860009eae",
+          "modifiedAfter": "2026-03-25T17:30:45.7754801Z",
+          "modifiedBefore": "2026-03-25T17:30:45.7754801Z",
+          "rawRef": "20261014T105009715Z_detail_558851.json#558851"
         }
       ],
       "ids": [
@@ -3338,10 +3746,10 @@
       ],
       "created": "2026-03-25T17:30:45.7754801Z",
       "createdJst": "2026-03-26",
-      "description": "We’re excited to announce that EDB PostgreSQL is now supported as a source for migration into Azure Database for PostgreSQL. You can migrate and consolidate PostgreSQL estates from EDB Postgres Extend...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "e3a4468face9f78404511178b0176d8bb3410d8e9e316d0cd99f49d51bb737ca",
+      "description": "We’re excited to announce that EDB PostgreSQL is now supported as a source for migration into Azure Database for PostgreSQL. You can migrate and consolidate PostgreSQL estates from EDB Postgres Extended Server to Azure using secure, reliable workflows designed for minimal downtime, while maintaining native PostgreSQL compatibility end to end.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "0cecb56816191f116d638b7f37c2ed70f60f0004bcfc28b95e293ecc8362a1d7",
       "history": [
         {
           "changedFields": [
@@ -3352,6 +3760,14 @@
           "modifiedAfter": "2026-03-25T17:30:45.7754801Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100502915Z_list_2026-03_o50.json#558865"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:50:13.940Z",
+          "fingerprint": "0cecb56816191f116d638b7f37c2ed70f60f0004bcfc28b95e293ecc8362a1d7",
+          "modifiedAfter": "2026-03-25T17:30:45.7754801Z",
+          "modifiedBefore": "2026-03-25T17:30:45.7754801Z",
+          "rawRef": "20261014T105013940Z_detail_558865.json#558865"
         }
       ],
       "ids": [
@@ -3404,10 +3820,10 @@
       ],
       "created": "2026-03-25T17:30:45.7754801Z",
       "createdJst": "2026-03-26",
-      "description": "You can now modify the cron.timezone server parameter in Azure Database for PostgreSQL. This parameter controls the time zone used by pg_cron when evaluating scheduled jobs. By configuring cron.timezo...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "c1b70510689ad73652cce19e73a50391d9569e24c20a88fe7ddab14c72b0f747",
+      "description": "You can now modify the cron.timezone server parameter in Azure Database for PostgreSQL. This parameter controls the time zone used by pg_cron when evaluating scheduled jobs. By configuring cron.timezone, you can ensure scheduled jobs run according to your preferred time zone rather than relying on the server’s default setting. This update is especially useful for applications that need job execution aligned with regional business hours or specific operational time zones. You can update the parameter through the Azure portal, Azure CLI, Azure Resource Manager, or REST API, and the change will apply to newly scheduled pg_cron jobs.Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "1eefd2c6d3b87c1c57a72eb28e230e09caf0991a519d28b38f9c588df547a326",
       "history": [
         {
           "changedFields": [
@@ -3418,6 +3834,14 @@
           "modifiedAfter": "2026-03-25T17:30:45.7754801Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100502915Z_list_2026-03_o50.json#558870"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:50:19.313Z",
+          "fingerprint": "1eefd2c6d3b87c1c57a72eb28e230e09caf0991a519d28b38f9c588df547a326",
+          "modifiedAfter": "2026-03-25T17:30:45.7754801Z",
+          "modifiedBefore": "2026-03-25T17:30:45.7754801Z",
+          "rawRef": "20261014T105019313Z_detail_558870.json#558870"
         }
       ],
       "ids": [
@@ -3470,10 +3894,10 @@
       ],
       "created": "2026-03-26T16:00:10.8422337Z",
       "createdJst": "2026-03-27",
-      "description": "In late-March 2026, the following updates and\nenhancements were made to Azure SQL:  \n Configure built-in SQL code analysis rules and\n     severity settings without editing project XML.  \n Use Fabric c...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "faffd523f551b99395453112ae9bf8ffab65d3da2dc4297a44920da1abfa05da",
+      "description": "In late-March 2026, the following updates and\nenhancements were made to Azure SQL:  \n Configure built-in SQL code analysis rules and\n     severity settings without editing project XML.  \n Use Fabric connectivity\n     and provisioning options to connect with your Fabric\n     workspaces and databases from the MSSQL extension while also creating a\n     new database.  \n Use Data-tier Application in the MSSQL extension\n     to import and export .dacpac and .bacpac files.  Learn more: Configure\nrules with SQL code analysis MSSQL\nExtension for VS Code ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "1746ffdbe6dedc423b7df1d6cc68a621a084933f2bb94cea54565b62113cf542",
       "history": [
         {
           "changedFields": [
@@ -3484,6 +3908,14 @@
           "modifiedAfter": "2026-03-26T16:00:10.8422337Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100502915Z_list_2026-03_o50.json#558879"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:49:40.992Z",
+          "fingerprint": "1746ffdbe6dedc423b7df1d6cc68a621a084933f2bb94cea54565b62113cf542",
+          "modifiedAfter": "2026-03-26T16:00:10.8422337Z",
+          "modifiedBefore": "2026-03-26T16:00:10.8422337Z",
+          "rawRef": "20261014T104940992Z_detail_558879.json#558879"
         }
       ],
       "ids": [
@@ -3536,10 +3968,10 @@
       ],
       "created": "2026-03-25T17:30:45.7754801Z",
       "createdJst": "2026-03-26",
-      "description": "You can now stream row‑level data changes—inserts, updates, and deletes—from Azure SQL Managed Instance to Azure Event Hubs in near real time with change event streaming (CES). SQL publishes changes a...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "b2c29f09b84fe9ff176c79b6f980bbfb0e2959289c1f49d85639a94987a25d1d",
+      "description": "You can now stream row‑level data changes—inserts, updates, and deletes—from Azure SQL Managed Instance to Azure Event Hubs in near real time with change event streaming (CES). SQL publishes changes as transactions commit, reducing latency while minimizing operational overhead on your workload.CES simplifies real‑time integration by eliminating the need for change data capture, change tracking, custom polling, or external connectors. You configure streaming once at the database layer, and SQL handles reliability, retries, and log coordination. Events are emitted in structured JSON using the CloudEvents standard, allowing a single stream to fan out to multiple downstream consumers without increasing load on your SQL Managed Instance.With CES, you can build event‑driven microservices, enable real‑time analytics, keep caches and search indexes in sync, and continuously ingest data into streaming and analytics platforms—all without changing your application code. We encourage you to try the public preview and share feedback as we continue to refine the feature.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "f19b155b459cb976841d46e780740e195c87f1982dea5f5056962cc2e7c42c3b",
       "history": [
         {
           "changedFields": [
@@ -3550,6 +3982,14 @@
           "modifiedAfter": "2026-03-25T17:30:45.7754801Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100502915Z_list_2026-03_o50.json#558884"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:50:24.086Z",
+          "fingerprint": "f19b155b459cb976841d46e780740e195c87f1982dea5f5056962cc2e7c42c3b",
+          "modifiedAfter": "2026-03-25T17:30:45.7754801Z",
+          "modifiedBefore": "2026-03-25T17:30:45.7754801Z",
+          "rawRef": "20261014T105024086Z_detail_558884.json#558884"
         }
       ],
       "ids": [
@@ -3598,10 +4038,10 @@
       ],
       "created": "2026-03-19T17:00:53.0406938Z",
       "createdJst": "2026-03-20",
-      "description": "You can now enable OneLake catalog federation in Azure Databricks to query Microsoft Fabric OneLake data without copying or moving it. By connecting Unity Catalog to a OneLake catalog, Azure Databrick...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "ea8ec987058d36981570bd90814eff3012efbad094a44269fa51356ab42feda0",
+      "description": "You can now enable OneLake catalog federation in Azure Databricks to query Microsoft Fabric OneLake data without copying or moving it. By connecting Unity Catalog to a OneLake catalog, Azure Databricks automatically syncs schemas and tables so Fabric Lakehouse items appear side‑by‑side with your existing Azure Databricks data assets. Your queries continue to run on Azure Databricks compute while reading the data stored in OneLake, giving you a zero‑copy experience that reduces data sprawl and simplifies architecture.This interoperability lets more teams reuse the same trusted OneLake data products across engines, avoid building parallel pipelines, and spend less time managing refreshes and reconciliations. It also keeps OneLake as the single source of truth while expanding how broadly those data products can be used across your organization. You can start modernizing your Fabric–Azure Databricks analytics patterns with fewer copies and more consistent governance.Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "796e4bb5538fa22ac1d0ae30ce0a4e2278ee5a539e5df7dee5c841f89c5ede9f",
       "history": [
         {
           "changedFields": [
@@ -3612,6 +4052,14 @@
           "modifiedAfter": "2026-03-19T17:00:53.0406938Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100502915Z_list_2026-03_o50.json#558927"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:51:24.042Z",
+          "fingerprint": "796e4bb5538fa22ac1d0ae30ce0a4e2278ee5a539e5df7dee5c841f89c5ede9f",
+          "modifiedAfter": "2026-03-19T17:00:53.0406938Z",
+          "modifiedBefore": "2026-03-19T17:00:53.0406938Z",
+          "rawRef": "20261014T105124042Z_detail_558927.json#558927"
         }
       ],
       "ids": [
@@ -3659,10 +4107,10 @@
       ],
       "created": "2026-03-24T17:15:45.4044114Z",
       "createdJst": "2026-03-25",
-      "description": "Azure Monitor now supports native ingestion of OpenTelemetry Protocol (OTLP) signals, enabling you to send telemetry data directly from OpenTelemetry-instrumented applications and platforms to Azure M...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "313ea4ddebfd579257430870bb865efe0eca7357c378834c3ab62a7c363eb5da",
+      "description": "Azure Monitor now supports native ingestion of OpenTelemetry Protocol (OTLP) signals, enabling you to send telemetry data directly from OpenTelemetry-instrumented applications and platforms to Azure Monitor. You can configure your OpenTelemetry Collector to send data directly to Azure Monitor cloud ingestion endpoints to ingest OTLP metrics, logs and traces using Microsoft Entra for authentication. You can enable OTLP data ingestion in Azure Monitor using Application Insights OR by manually creating the required data collection endpoints, rules and workspaces. The Application Insights-based approach is recommended for most scenarios as it automates resource creation and includes built-in application performance management experiences.Ingested OTLP metrics are stored in Azure Monitor Workspaces and can be queried and alerted upon with Prometheus query language (PromQL). OTLP logs and traces are stored in Log Analytics workspaces using new OpenTelemetry tables and semantics.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "283209227a5e3f62ec4073c0b6e600b3e350d4d8417566817c6eef83a873471d",
       "history": [
         {
           "changedFields": [
@@ -3673,6 +4121,14 @@
           "modifiedAfter": "2026-03-24T17:15:45.4044114Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100502915Z_list_2026-03_o50.json#559273"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:51:05.790Z",
+          "fingerprint": "283209227a5e3f62ec4073c0b6e600b3e350d4d8417566817c6eef83a873471d",
+          "modifiedAfter": "2026-03-24T17:15:45.4044114Z",
+          "modifiedBefore": "2026-03-24T17:15:45.4044114Z",
+          "rawRef": "20261014T105105790Z_detail_559273.json#559273"
         }
       ],
       "ids": [
@@ -3720,10 +4176,10 @@
       ],
       "created": "2026-03-30T21:45:47.4558873Z",
       "createdJst": "2026-03-31",
-      "description": "Ephemeral OS Disk with full caching is now available in public preview for Azure VM/VMSS, bringing significantly faster and more reliable OS disk performance to your workloads. By caching the entire O...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "fa49a7f0d54b0d908f199125609e01fecae32e1c094be2e925c08560dc8fe7cf",
+      "description": "Ephemeral OS Disk with full caching is now available in public preview for Azure VM/VMSS, bringing significantly faster and more reliable OS disk performance to your workloads. By caching the entire OS disk image on local VM storage (cache disk, resource disk, or NVMe disk), you get better IO performance with consistently low latency — and greater resilience, even during remote storage disruptions. This capability is extremely useful for stateless, IO-sensitive workloads including AI workloads, quorum-based databases, data analytics, and large-scale stateless services on General Purpose VM families. You can get started today on most General Purpose VM SKUs (excluding 2-core and 4-core VMs) across Central US. To use the feature, set the enableFullCaching flag to true for Ephemeral OS disks in your ARM templates or REST API definitions when creating new VMs or VM Scale Sets.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "3500c5d6fcd83458226b8b1cf14c1f4161f64ae765a869ff30eca53913449d65",
       "history": [
         {
           "changedFields": [
@@ -3734,6 +4190,14 @@
           "modifiedAfter": "2026-03-30T21:45:47.4558873Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100502915Z_list_2026-03_o50.json#559322"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:49:17.715Z",
+          "fingerprint": "3500c5d6fcd83458226b8b1cf14c1f4161f64ae765a869ff30eca53913449d65",
+          "modifiedAfter": "2026-03-30T21:45:47.4558873Z",
+          "modifiedBefore": "2026-03-30T21:45:47.4558873Z",
+          "rawRef": "20261014T104917715Z_detail_559322.json#559322"
         }
       ],
       "ids": [
@@ -3782,10 +4246,10 @@
       ],
       "created": "2026-03-30T16:30:50.9886051Z",
       "createdJst": "2026-03-31",
-      "description": "Azure Premium SSD v2 is now available in South India (a region without Availability Zone).Azure Premium SSD v2 disk, a next-generation general-purpose block storage option for Azure virtual machines, ...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "f346c3455a9ed89baa96735955ff3c582eadd1d283738df861dc57afb5651096",
+      "description": "Azure Premium SSD v2 is now available in South India (a region without Availability Zone).Azure Premium SSD v2 disk, a next-generation general-purpose block storage option for Azure virtual machines, offers sub-millisecond latencies and exceptional price performance for IO-intensive workloads at a low cost. Premium SSD v2 is suited for a broad range of enterprise production scenarios, including SQL Server, Oracle, MariaDB, SAP, Cassandra, MongoDB, big data/analytics, and gaming on virtual machines or stateful containers.If Premium SSD v2 is unavailable in your preferred region and you would like to use it, please complete this survey. Learn more:Read the documentation.For more information about Premium SSD v2 Disk Storage pricing, visit the Azure Disks pricing page. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "65b21d37d485df0edf7f8a92f890a99c6d67a4fb207b8aacf1d190cb20fa447f",
       "history": [
         {
           "changedFields": [
@@ -3796,6 +4260,14 @@
           "modifiedAfter": "2026-03-30T16:30:50.9886051Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100502915Z_list_2026-03_o50.json#559526"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:49:35.819Z",
+          "fingerprint": "65b21d37d485df0edf7f8a92f890a99c6d67a4fb207b8aacf1d190cb20fa447f",
+          "modifiedAfter": "2026-03-30T16:30:50.9886051Z",
+          "modifiedBefore": "2026-03-30T16:30:50.9886051Z",
+          "rawRef": "20261014T104935819Z_detail_559526.json#559526"
         }
       ],
       "ids": [
@@ -3852,10 +4324,10 @@
       ],
       "created": "2026-03-30T21:30:50.093344Z",
       "createdJst": "2026-03-31",
-      "description": "Azure Red Hat OpenShift (ARO) is now generally available in\nthe Indonesia Central Azure region, expanding regional availability for\ncustomers running mission‑critical OpenShift workloads on Azure. Thi...",
-      "descriptionSource": "list",
-      "detailState": "none",
-      "fingerprint": "03db39ab3f6590c14ba9e09cf46216f8010d431b25ef0a8a20eadfb448f423f7",
+      "description": "Azure Red Hat OpenShift (ARO) is now generally available in\nthe Indonesia Central Azure region, expanding regional availability for\ncustomers running mission‑critical OpenShift workloads on Azure. This release\nenables organizations in Indonesia and the broader Southeast Asia region to\ndeploy fully managed Red Hat OpenShift clusters with integrated Azure security,\nnetworking, and operations. With GA availability in Indonesia Central, customers can\nmodernize applications, run regulated and latency‑sensitive workloads closer to\nend users, and meet local data residency requirements. ARO provides a\nconsistent OpenShift experience across on‑premises and cloud environments while\noffloading day‑2 operations such as upgrades, patching, and cluster management\nto Microsoft and Red Hat. This regional expansion helps customers accelerate\napplication modernization and hybrid cloud strategies on Azure using a jointly\noperated, enterprise‑grade OpenShift service. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "f94113b066188f2e0ec9f127ea137c4224756b890d759886e49713bb3ce7acc9",
       "history": [
         {
           "changedFields": [
@@ -3866,6 +4338,14 @@
           "modifiedAfter": "2026-03-30T21:30:50.093344Z",
           "modifiedBefore": null,
           "rawRef": "20261014T100502915Z_list_2026-03_o50.json#559552"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-14T10:49:26.715Z",
+          "fingerprint": "f94113b066188f2e0ec9f127ea137c4224756b890d759886e49713bb3ce7acc9",
+          "modifiedAfter": "2026-03-30T21:30:50.093344Z",
+          "modifiedBefore": "2026-03-30T21:30:50.093344Z",
+          "rawRef": "20261014T104926715Z_detail_559552.json#559552"
         }
       ],
       "ids": [

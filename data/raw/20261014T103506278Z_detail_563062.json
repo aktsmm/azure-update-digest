@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563062"
+  },
+  "fetchedAt": "2026-10-14T10:35:06.278Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563062",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure DocumentDB is excited to announce the general availability of graceful failovers that promote replica clusters while guaranteeing zero data loss.  \n\nThis feature is an addition to the already existing force promote feature, which immediately promotes a replica cluster in the event of availability loss.Force promote favors availability over consistency and thus does not wait for unreplicated data to make its way to the replica cluster before being promoted. With the graceful promote feature, you can now promote a regional cluster to the primary in the event of changing application traffic patterns. This feature is ideal when there is no availability loss on the primary but simply a change in traffic that requires database requests to be made to the closer regional cluster.Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563062",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure DocumentDB"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Graceful failover with zero data loss guarantee"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

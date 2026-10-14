@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "562759"
+  },
+  "fetchedAt": "2026-10-14T10:32:29.505Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "562759",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "You can now automate embedding generation from multiple data sources into Azure Cosmos DB and other Azure destinations. Building AI applications often requires stitching together data extraction, embedding generation, and writing to vector databases into a custom pipeline. You have to write extraction logic for each source, integrate with embedding APIs, and build your own sync mechanism to keep embeddings current as source data changes. OmniVec, now in public preview as an open-source project, handles this pipeline end to end, deployed in your own Azure subscription. You configure your data sources, select an embedding model, and deploy with a single azd up command. OmniVec pulls data from sources like Azure Cosmos DB, Azure Blob Storage, PostgreSQL, and SQL Server; generates embeddings; and writes them to Azure Cosmos DB and other destinations on Azure. OmniVec handles content extraction, chunking, and incremental sync out of the box. It supports Microsoft Foundry as well as self-hosted models. You get a web UI, CLI, and REST API for managing sources, models, destinations, and pipelines. The project is MIT-licensed and available on GitHub.Learn more.",
+    "id": "562759",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Cosmos DB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: OmniVec, an open-source embedding toolkit for Azure"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

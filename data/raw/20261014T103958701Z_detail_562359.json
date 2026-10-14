@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "562359"
+  },
+  "fetchedAt": "2026-10-14T10:39:58.701Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562359",
+    "created": "2026-05-21T22:00:20.0659083Z",
+    "description": "Azure Files announces general availability of Entra-only identities for SMB\naccess, enabling organizations to securely access file shares using\ncloud-native identities without requiring Active Directory or hybrid identity\ninfrastructure. With Microsoft Entra ID as the authentication authority, users\ncan access Azure Files using Kerberos-based authentication backed entirely by\ncloud identities - eliminating dependency on domain controllers and simplifying\nstorage and identity architecture.  Key capabilities \n Cloud-native\n     authentication with Entra ID: Secure SMB access using Kerberos without\n     Active Directory or domain controllers \n Simplified\n     permissions management: Configure granular NTFS ACLs for Entra users\n     and groups directly through the Azure portal \n Role-based\n     access control (RBAC): Assign share-level access using built-in roles\n     for least-privilege administration \n Secure\n     access from anywhere: Enable identity-based access over the internet\n     without VPN dependencies \n Support\n     for modern workloads: Power Azure Virtual Desktop (AVD),\n     general-purpose file sharing, and distributed collaboration scenarios Please reach out to azurefiles@microsoft.com if you have any\nquestions about adopting Entra-only Identities for secure SMB access with Azure\nFiles. Learn\nmore. ",
+    "generalAvailabilityDate": "2026-05",
+    "id": "562359",
+    "modified": "2026-05-21T22:00:20.0659083Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Files"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Build",
+      "Security"
+    ],
+    "title": "Generally Available: Entra-only identities with Azure Files"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

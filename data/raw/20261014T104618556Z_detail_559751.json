@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "559751"
+  },
+  "fetchedAt": "2026-10-14T10:46:18.556Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "559751",
+    "created": "2026-04-15T17:30:33.2820175Z",
+    "description": "Microsoft Azure will retire support for HBv2-series,\nHC-series, and NP-series VMs in Azure Batch pools on May 31, 2027,\nincluding:   \n HBv2-series: 120 AMD EPYC 7V12 vCPUs, 480 GB RAM, 200\n     Gb/s HDR InfiniBand  \n HC-series: 44 Intel Xeon Platinum 8168 vCPUs, 352 GB\n     RAM, 100 Gb/s EDR InfiniBand  \n NP-series: Xilinx Alveo U250 FPGA-accelerated\n     VMs  These VM series have been superseded by newer generations\nwith improved performance and better price-performance.  Recommended migration targets: \n HBv2-series\n     → HBv3-series or HBv4-series (3rd/4th Gen AMD EPYC, 200/400 Gb/s NDR\n     InfiniBand)  \n HC-series\n     → HX-series (4th Gen Intel Xeon Scalable processors)  \n NP-series\n     → No direct replacement. Evaluate GPU-based NC/ND-series VMs or partner\n     FPGA solutions.  Recommended action: Migrate your Batch pools to supported VM sizes before May\n31, 2027. After that date, new Batch pools with these VM sizes cannot be\ncreated, and existing pools will be subject to forced resize to zero nodes.\nExisting pools cannot be updated in-place; creating a new pool is required.\nReview the Batch pool VM sizes documentation and the update pool properties\nguide for instructions.  ",
+    "id": "559751",
+    "modified": "2026-04-15T17:30:33.2820175Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Batch"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: End of life reminder of HBv2/HC-Series/NP-Series Azure Virtual Machine in Azure Batch Pool"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

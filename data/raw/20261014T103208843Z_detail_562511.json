@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "562511"
+  },
+  "fetchedAt": "2026-10-14T10:32:08.843Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562511",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure Functions on Container Apps has traditionally used platform-managed scaling, where triggers are automatically translated into KEDA scale rules. With the new allowScalingRuleOverride property, customers can now choose to override platform-managed scaling and define their own custom KEDA scaling rules.When scaling override is enabled, the platform skips automatic KEDA rule generation and applies customer-defined scaling rules while continuing to run on the same native Functions on Container Apps architecture, available in API version 2026-03-02-preview and later.This enhancement is especially useful for scenarios where there are gaps in platform trigger support, where automatically generated KEDA rules may lead to unintended scaling behavior, or where workloads require custom queue thresholds, HTTP concurrency tuning, or standardized scaling policies across services.Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562511",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Container Apps"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Build"
+    ],
+    "title": "Generally Available: Override Scale Rules in Azure Functions on Azure Container Apps"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

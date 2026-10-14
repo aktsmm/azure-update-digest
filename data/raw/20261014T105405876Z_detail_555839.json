@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "555839"
+  },
+  "fetchedAt": "2026-10-14T10:54:05.876Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "555839",
+    "created": "2026-02-27T21:45:03.1344369Z",
+    "description": "The upstream Ingress-NGINX project is being deprecated and will stop receiving updates after March 2026. Microsoft will continue providing critical security patches through 30 November 2026, after which the NGINX ingress controller will no longer be supported within the Application Routing add-on. Supported alternatives include Gateway API with Application Routing (in development), Application Gateway for Containers, and Istio Service Mesh.Learn more.",
+    "id": "555839",
+    "modified": "2026-02-27T21:45:03.1344369Z",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "tags": [
+      "Retirements",
+      "Open Source"
+    ],
+    "title": "Retirement: Managed NGINX Ingress with Application Routing Add-on Retiring November 2026"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

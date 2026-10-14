@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "562516"
+  },
+  "fetchedAt": "2026-10-14T10:41:47.539Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562516",
+    "created": "2026-05-15T18:15:26.3457558Z",
+    "description": "The Azure Blob Storage SDK for Rust is now generally\navailable. The Rust SDK allows you to connect to an Azure Blob Storage account\nand perform operations on containers and blobs, including uploading,\ndownloading, listing, and managing blobs. This release brings production-grade\ncapabilities for secure, reliable access to Blob Storage from Rust, such as\nMicrosoft Entra ID authentication, automatic retries on transient failures, and\ndistributed tracing through OpenTelemetry. You now have stable APIs backed by\nsemver guarantees, a pluggable async runtime, and the same familiar design\npatterns used across the Azure SDKs for .NET, Java, Python, JavaScript, Go, and\nC++. Learn\nmore. ",
+    "generalAvailabilityDate": "2026-05",
+    "id": "562516",
+    "modified": "2026-05-15T18:15:26.3457558Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Blob Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "SDK and Tools"
+    ],
+    "title": "Generally Available: Azure Blob Storage SDK for Rust"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

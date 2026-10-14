@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "559535"
+  },
+  "fetchedAt": "2026-10-14T10:48:58.810Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "March",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "559535",
+    "created": "2026-03-31T17:30:08.6418325Z",
+    "description": "User delegation SAS for Azure Tables, Azure Files, and Azure\nQueues is now generally available.  User delegation SAS allows users to create a more secure SAS\ntoken than account or service SAS by tying the SAS token to the delegator. This\nextension of UDK SAS will allow users to set SAS tokens at the table, table\nentity, queue, queue entity, file container, and individual file level. Any SAS\ntoken set at the higher level will provide access to all table/queue/file\nentities within, and any SAS token set at the base level will only provide\naccess to that individual entity. There is no additional cost to use user delegation SAS.\nPricing is based on the standard read/write transaction costs for your storage\naccount type.  Learn more: Azure\nStorage Pricing Create\na user delegation SAS | Microsoft Learn ",
+    "generalAvailabilityDate": "2026-03",
+    "id": "559535",
+    "modified": "2026-03-31T17:30:08.6418325Z",
+    "productCategories": [
+      "Storage",
+      "Databases"
+    ],
+    "products": [
+      "Azure Files",
+      "Queue Storage",
+      "Table Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Generally Available: User delegation SAS for Azure Tables, Azure Files, and Azure Queues"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

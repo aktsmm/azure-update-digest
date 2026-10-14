@@ -1,0 +1,32 @@
+{
+  "args": {
+    "id": "559695"
+  },
+  "fetchedAt": "2026-10-14T10:48:48.260Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "559695",
+    "created": "2026-03-31T17:45:46.9375071Z",
+    "description": "Azure Event Grid offers a variety of features in\nPublic Preview – intended to help you better manage large-scale, distributed\nsystems with improved interoperability and control.  Public Preview Features:  \n Cross-Tenant\n     Webhook Delivery: Enables secure cross-tenant delivery using managed\n     identity in Event Grid namespaces.  \n Network Security Perimeter:\n     Defines access boundaries with inbound and outbound communication rules\n     for enhanced security.  \n Managed\n     Identity for Webhooks: Automates secure authentication between Event\n     Grid and webhook endpoints.  \n MQTT OAuth\n     2.0 Authentication: Uses JWTs from OIDC-compliant providers for secure\n     client access.  \n MQTT\n     Custom Webhook Authentication: Dynamically authorizes clients via\n     external webhooks or Azure Functions.  \n MQTT\n     Assigned Client Identifiers: Assigns static client IDs for better\n     session consistency and traceability.  ",
+    "id": "559695",
+    "modified": "2026-03-31T17:45:46.9375071Z",
+    "previewAvailabilityDate": "2025-05",
+    "productCategories": [],
+    "products": [],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Build"
+    ],
+    "title": "Public Preview: Azure Event Grid provides new capabilities for smarter, more secure event-driven architectures"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

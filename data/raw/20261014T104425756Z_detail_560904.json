@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "560904"
+  },
+  "fetchedAt": "2026-10-14T10:44:25.756Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "Preview",
+        "year": 2025
+      }
+    ],
+    "baseId": "560904",
+    "created": "2026-04-24T18:30:50.2928579Z",
+    "description": "Azure Backup now supports Elastic SAN, offering a fully\nmanaged solution for backing up and restoring Elastic SAN volumes. This\nintegration helps protect data against accidental deletions, ransomware\nattacks, and application updates by exporting Elastic SAN volumes to\nindependent Managed Disk Incremental Snapshots. These snapshots are stored in\nlocally redundant storage and are independent of the Elastic SAN volume\nlifecycle. The solution supports up to 450 restore points with 24 hours\nbackup frequency. It is currently available in select Azure regions and\nsupports volumes up to 4 TiB. Long-term vaulted backups and hourly backups are\nnot supported in this preview.   This public preview does not incur Azure Backup Protected\nInstance fees. However, standard charges apply for Managed Disk Incremental\nSnapshots.  To get started, visit the Azure Business Continuity Center\nand configure protection for your Elastic SAN volumes.   ",
+    "id": "560904",
+    "modified": "2026-04-24T18:30:50.2928579Z",
+    "previewAvailabilityDate": "2025-05",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Elastic SAN"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Azure Backup for Elastic SAN "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

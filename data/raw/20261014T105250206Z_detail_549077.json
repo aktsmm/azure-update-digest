@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "549077"
+  },
+  "fetchedAt": "2026-10-14T10:52:50.206Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "January",
+        "ring": "Retirement",
+        "year": 2027
+      }
+    ],
+    "baseId": "549077",
+    "created": "2026-03-16T18:45:11.5147114Z",
+    "description": "Azure Batch periodically retires support for operating systems that reach end-of-life status. Support for Windows Server 2016 concluded on January 11, 2022, with extended support scheduled to end on January 12, 2027. Marketplace images for Windows Server 2016, published under the MicrosoftWindowsServer offer with the name WindowsServer, will no longer be available. The relevant Marketplace image SKUs include:2016-datacenter-gensecond2016-datacenter2016-datacenter-gs2016-datacenter-smalldisk2016-datacenter-smalldisk-g22016-datacenter-with-containers2016-datacenter-with-containers-gsIf your workload still uses Batch pools based on these Windows Server 2016 Marketplace images, migrate your workload to a supported Windows Server image no later than January 12, 2027. If your workload requires Windows Server 2016 after January 12, 2027, you may be able to migrate to a Windows Server 2016 custom image with appropriate licensing and Azure ESU. Please visit this article for more information about this option. However, Azure Batch support for Windows Server 2016 will end on January 12, 2027. We recommend upgrading to the latest version of Windows Server, if possible.Required action:To avoid service disruptions, migrate your Batch pools with affected Marketplace images to a supported image before January 12, 2027. Please refer to the article on how to update pool properties for migration guidance. We recommend testing the migration before updating production configurations.",
+    "id": "549077",
+    "modified": "2026-03-16T18:45:11.5147114Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Batch"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Support for Windows Server 2016 Marketplace images on Azure Batch pools will end on January 12, 2027"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

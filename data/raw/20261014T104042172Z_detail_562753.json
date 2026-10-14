@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "562753"
+  },
+  "fetchedAt": "2026-10-14T10:40:42.172Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562753",
+    "created": "2026-05-20T17:00:39.7793213Z",
+    "description": "Azure Storage Mover now supports Blob container-to-Blob\ncontainer data transfers, enabling customers to move data seamlessly across\nregions, subscriptions, and accounts with a fully managed experience.  Customers can now use Azure Storage Mover to migrate data\ndirectly between Azure Blob containers with: \n Agentless,\n     fully managed transfers—no infrastructure deployment required \n Support\n     for large-scale parallel data movement, optimized for high throughput\n     migrations \n Integrated\n     job management, including progress tracking, resumability, and reliability\n     controls across migrations. \n Support\n     for both flat namespace (FNS) and hierarchical namespace (HNS)\n     accounts  Azure Storage Mover is optimized for high-throughput data\ntransfer scenarios: \n Proven\n     performance with multi-GB/s transfer speeds depending on\n     workload characteristics and region topology  \n Ability\n     to handle large object counts and deep directory structures, enabling\n     enterprise-grade migrations at scale  \n Support\n     for parallel job execution to maximize throughput across\n     multiple workloads  Getting started: Blob-to-Blob migrations can be configured directly in the\nAzure portal with just a few steps, allowing customers to quickly initiate\ntransfers without deploying or managing infrastructure.  Learn\nmore. ",
+    "generalAvailabilityDate": "2026-05",
+    "id": "562753",
+    "modified": "2026-05-20T17:00:39.7793213Z",
+    "productCategories": [
+      "Migration",
+      "Storage"
+    ],
+    "products": [
+      "Azure Storage Mover"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Management",
+      "Services"
+    ],
+    "title": "Generally Available: Azure Storage Mover Blob-to-Blob migration"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

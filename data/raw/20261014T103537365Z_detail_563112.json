@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563112"
+  },
+  "fetchedAt": "2026-10-14T10:35:37.365Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "563112",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure DocumentDB now supports the Model Context Protocol (MCP), available in public preview. With the MCP toolkit, you can connect AI agents and LLM-powered applications directly to your DocumentDB database, enabling natural language queries, document retrieval, and data operations without writing custom integration code. You can build agentic workflows that read and write to your DocumentDB collections, perform vector similarity search, and retrieve contextually relevant documents as part of a retrieval-augmented generation (RAG) pipeline. These capabilities are exposed through a standardized protocol that works with any MCP-compatible AI client.Learn more.",
+    "id": "563112",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure DocumentDB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: MCP toolkit for Azure DocumentDB"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "560188"
+  },
+  "fetchedAt": "2026-10-14T10:45:47.168Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "560188",
+    "created": "2026-04-21T18:15:14.8646419Z",
+    "description": "Azure NetApp Files advanced ransomware protection (ANF ARP) is now in GA (General Availability).  ANF ARP is designed to help organizations proactively detect, respond to, and recover from ransomware threats on cloud volumes. ANF ARP monitors Azure NetApp Files volumes for suspicious activity using file extension profiling, entropy, and IOPS patterns. When a threat is detected, the system creates a point-in-time snapshot, enabling rapid evaluation and recovery. Notifications are sent via Azure Activity log and attack reports are retained for 30 days.  There is no specific additional charge for ANF ARP but see Considerations section when sizing your deployment to accommodate ANF ARP. Azure NetApp Files advanced ransomware protection is available in all Azure NetApp Files regions. Learn more: \n Azure\n     updates \n What's\n     new in Azure NetApp Files \n Configure\n     Azure NetApp Files advanced ransomware protection ",
+    "generalAvailabilityDate": "2026-04",
+    "id": "560188",
+    "modified": "2026-04-21T18:15:14.8646419Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure NetApp Files"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Generally Available: Azure NetApp Files advanced ransomware protection "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

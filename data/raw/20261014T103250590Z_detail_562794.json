@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "562794"
+  },
+  "fetchedAt": "2026-10-14T10:32:50.590Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "562794",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "We are announcing the public preview of the Agentic Retrieval Toolkit for Azure Cosmos DB. Motivated by GraphRAG and multiple-hop reasoning problems, this new capability helps you build advanced retrieval-augmented generation (RAG) applications that go beyond single-pass retrieval by dynamically identifying information gaps and iteratively retrieving additional context. The toolkit combines hybrid search across vector and full-text indexes, diversity-aware document selection, and multiple-round reasoning to produce more complete, grounded responses. With agentic retrieval, you can improve answer quality for complex, multiple-step questions where relevant information is spread across many documents or data sources. The retrieval pipeline adapts in real time by generating follow-up queries, retrieving new evidence, and refining responses until it has sufficient coverage. This approach reduces redundancy, increases recall, and delivers higher-fidelity results for copilots, agents, and knowledge-intensive applications built on Azure Cosmos DB. Learn more.",
+    "id": "562794",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "previewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Cosmos DB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Public Preview: Agentic Retrieval Toolkit for Azure Cosmos DB"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

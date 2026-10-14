@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "560298"
+  },
+  "fetchedAt": "2026-10-14T10:45:31.707Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "April",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "560298",
+    "created": "2026-04-22T17:30:14.1183372Z",
+    "description": "You can now migrate your Azure Database for PostgreSQL server from a virtual network‑integrated deployment to a network configuration that supports Private Endpoint connectivity. If you originally deployed your server inside a virtual network but now want more flexibility in how you manage networking, Private Endpoints give you a simpler and more scalable model. With this migration, you can continue to access your server privately over the Azure backbone network, reduce dependency on delegated subnets, and better align your database networking with evolving architecture or organizational standards.You can directly initiate the migration through Azure CLI, API, or SDK. While the operation involves a period of downtime, it enables you to adopt Private Endpoint connectivity without needing to recreate your server or move data manually. After the migration, you can configure Private Endpoints or firewall rules based on your desired access model and update your infrastructure-as-code templates accordingly.Disclaimer:\nThis migration currently supports PostgreSQL servers that are not configured\nwith high availability or read replicas. Additional post‑migration configuration,\nincluding updating Terraform templates and setting up Private Endpoints\nor firewall rules, is required. Learn\nmore. ",
+    "id": "560298",
+    "modified": "2026-04-22T17:30:14.1183372Z",
+    "previewAvailabilityDate": "2026-04",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Migrating from virtual network-integrated to Private Endpoint–capable network configuration "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

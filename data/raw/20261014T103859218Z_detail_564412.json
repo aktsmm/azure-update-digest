@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "564412"
+  },
+  "fetchedAt": "2026-10-14T10:38:59.218Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "564412",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure AI\nTranslator batch document translation now translates text inside images\nembedded in Word `.docx` files as a generally available capability. The service\ndetects image regions, runs OCR, translates the recognized text, and re-renders\nit back into the document while preserving the original layout, font, and\nsurrounding formatting. Image-aware translation works through the existing\nbatch translation REST API and SDK paths, with the same source and target Azure\nBlob Storage container pattern. Pricing is calculated per image translated,\nalongside standard character-based pricing for the surrounding document text.\nOutput documents are written to the target container in their translated form\nfor downstream review.  Learn more. ",
+    "generalAvailabilityDate": "2026-06",
+    "id": "564412",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Image translation inside Office documents for batch document translation"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

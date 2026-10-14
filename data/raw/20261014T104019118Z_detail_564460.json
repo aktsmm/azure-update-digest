@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "564460"
+  },
+  "fetchedAt": "2026-10-14T10:40:19.118Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "564460",
+    "created": "2026-05-21T18:45:42.3463074Z",
+    "description": "User Groups and IP Address Pools for Point-to-Site\nconnections in VPN Gateway enable customers to assign distinct IP address pools\nto remote users based on their credentials. With this capability, customers can organize remote users\ninto separate groups and assign a unique IP address range to each group,\nenabling more granular access control for Azure workloads. User groups within a\nVPN Gateway can be defined based on Microsoft Entra ID group membership,\ncertificate common name domains, or custom RADIUS attributes. This feature helps customers strengthen security, enabling\nfiner-grained access segmentation and policy enforcement for Azure workloads. Learn more.",
+    "generalAvailabilityDate": "2026-05",
+    "id": "564460",
+    "modified": "2026-05-21T18:45:42.3463074Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "VPN Gateway"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: User Groups and IP address pools for P2S connections"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

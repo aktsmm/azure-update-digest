@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "563247"
+  },
+  "fetchedAt": "2026-10-14T10:36:49.814Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "563247",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "Azure AI Search makes the GenAI prompt skill generally available, letting indexers call chat completion models during enrichment without custom code. Authors point the skill at a Foundry-hosted model, write a prompt template that references field values, and receive structured output written back to the index. The same chat completion capability is also available inside knowledge sources, so retrieval-augmented agents can run a quick model call against retrieved chunks before returning results. Customers use the skill for content classification, summarization, entity normalization, and field cleanup in the ingestion pipeline, replacing prior workflows that required separate functions or Logic Apps. Authentication supports managed identity, so calls stay inside the customer tenant. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "563247",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: GenAI prompt skill and chat completion in Azure AI Search knowledge sources"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

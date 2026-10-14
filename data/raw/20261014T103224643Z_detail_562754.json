@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "562754"
+  },
+  "fetchedAt": "2026-10-14T10:32:24.643Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "562754",
+    "created": "2026-06-02T19:00:47.5410367Z",
+    "description": "We are announcing the general availability of the Azure Cosmos DB Linux emulator (vNext), a cross-platform, Docker-based emulator for local development and testing against Azure Cosmos DB for NoSQL. The vNext emulator runs as a lightweight Docker container on Linux, macOS, and Windows, with native support for both x64 and ARM64 architectures. You can use it to develop and test your applications locally without incurring Azure service costs or needing an internet connection. Since public preview, the emulator has shipped continuous updates that have significantly improved SDK compatibility and expanded Cosmos DB feature coverage. With this release, you get a local development experience that includes support for core operations, a wide range of query capabilities, and added support for vector search and Azure Cosmos DB Shell integration. The emulator also includes health probe endpoints for readiness checks, and OpenTelemetry integration for observability. Learn more.",
+    "generalAvailabilityDate": "2026-06",
+    "id": "562754",
+    "modified": "2026-06-02T19:00:47.5410367Z",
+    "productCategories": [
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Cosmos DB"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Build",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure Cosmos DB Linux emulator (vNext)"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
