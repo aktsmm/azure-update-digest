@@ -1,0 +1,138 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573691"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T18:58:00Z"
+  },
+  "slides": [
+    {
+      "key": "573691",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "PostgreSQL フレキシブル サーバーが East US 3 で利用可能に",
+        "subtitleJa": "East US 3 リージョンにデプロイできるようになり、一般提供（GA）が始まりました",
+        "en": "Generally Available: Azure Database for PostgreSQL flexible server in East US 3 "
+      },
+      "meta": {
+        "publishedJst": "2026-10-09",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**East US 3 リージョン**で PostgreSQL を使いたい／近接配置したい方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "East US 3 に Azure Database for PostgreSQL フレキシブル サーバーを作成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "East US 3 を使う予定があれば、リージョン選択肢として検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "できること", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "East US 3 リージョンにフレキシブル サーバーをデプロイできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "フル マネージドで、ゾーン内／ゾーン間の高可用性を選べる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "冒頭・アーキテクチャと高可用性", "retrievedAt": "2026-10-14T18:58:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ポータルで「リソースの作成」→ データベース → PostgreSQL → リージョンを選択",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/quickstart-create-server", "locator": "Azure portal を使用してサーバーを作成する", "retrievedAt": "2026-10-14T18:58:00Z" }]
+            },
+            {
+              "text": "CLI は az postgres flexible-server create の --location で指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/quickstart-create-server", "locator": "Azure CLI を使用してサーバーを作成する", "retrievedAt": "2026-10-14T18:58:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure サブスクリプションと、リソース作成の権限が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/quickstart-create-server", "locator": "前提条件", "retrievedAt": "2026-10-14T18:58:00Z" }]
+            },
+            {
+              "text": "ネットワーク方式（パブリック／プライベート）は作成後に変更不可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/quickstart-create-server", "locator": "ネットワークの構成", "retrievedAt": "2026-10-14T18:58:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連機能", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "高可用性: 無効 99.9% / 同一ゾーン 99.95% / ゾーン冗長 99.99%",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/quickstart-create-server", "locator": "高可用性", "retrievedAt": "2026-10-14T18:58:00Z" }]
+            },
+            {
+              "text": "バックアップ保有期間は既定 7 日、最大 35 日まで設定可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "自動バックアップ", "retrievedAt": "2026-10-14T18:58:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "リージョン選択はコンプライアンス・価格・ユーザーとの近接性で検討",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/quickstart-create-server", "locator": "サーバーの詳細", "retrievedAt": "2026-10-14T18:58:00Z" }]
+            },
+            {
+              "text": "既存の PostgreSQL アプリは最小限のリファクタリングで移行できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "Migration", "retrievedAt": "2026-10-14T18:58:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "postgresql-flexible-server", "term": "Azure Database for PostgreSQL", "type": "product", "oneLine": { "text": "設定やメンテナンスを細かく制御できる、フル マネージドのデータベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "冒頭", "retrievedAt": "2026-10-14T18:58:00Z" }] } },
+        { "termKey": "region", "term": "リージョン", "type": "term", "oneLine": { "text": "サーバー作成時に選ぶ、Azure の提供拠点。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/quickstart-create-server", "locator": "サーバーの詳細", "retrievedAt": "2026-10-14T18:58:00Z" }] } },
+        { "termKey": "high-availability", "term": "高可用性（HA）", "type": "feature", "oneLine": { "text": "スタンバイ サーバーを用意し、障害時に切り替えて稼働を続ける仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "アーキテクチャと高可用性", "retrievedAt": "2026-10-14T18:58:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T18:58:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "本サービスは東日本・西日本を含む多数のリージョンで提供されています",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "Azureリージョン（東日本・西日本）", "retrievedAt": "2026-10-14T18:58:00Z" },
+          { "url": "https://learn.microsoft.com/azure/reliability/regions-list", "locator": "Japan East / Japan West", "retrievedAt": "2026-10-14T18:58:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573691",
+        "learn": [
+          { "title": "Azure Database for PostgreSQL フレキシブル サーバーとは", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locale": "ja-jp" },
+          { "title": "クイック スタート: PostgreSQL フレキシブル サーバーを作成する", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/quickstart-create-server", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
