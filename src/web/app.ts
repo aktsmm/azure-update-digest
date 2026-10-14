@@ -171,10 +171,10 @@ function downloadBar(r: QueryResult, q: Query): string {
   const withSlide = r.items.filter((i) => slideEntries.has(i.key)).length;
   const sample = samplePdf ? `<a href="pdf/sample.pdf" target="_blank" rel="noopener noreferrer" title="最新のスライド 1 件（パスワード不要）">サンプル PDF</a>` : "";
   const pdf = pdfCrypto && slideEntries.size
-    ? `<button type="button" data-dl="pdf" ${withSlide ? "" : "disabled"} title="スライド作成済み（直近3か月）の更新をまとめた PDF。絞り込み後 ${r.items.length} 件中 ${withSlide} 件。パスワードが必要です">PDF（${withSlide}）</button>`
+    ? `<button type="button" data-dl="pdf" ${withSlide ? "" : "disabled"} title="スライド作成済み（直近3か月）の更新をまとめた PDF。絞り込み後 ${r.items.length} 件中 ${withSlide} 件。ダウンロードにはパスワードが必要です">PDF（${withSlide}）</button>`
     : "";
   const pptx = pdfCrypto && slideEntries.size
-    ? `<button type="button" data-dl="pptx" ${withSlide ? "" : "disabled"} title="同じ範囲を編集できる PowerPoint（.pptx）で。絞り込み後 ${r.items.length} 件中 ${withSlide} 件。パスワードが必要です">PPTX（${withSlide}）</button>`
+    ? `<button type="button" data-dl="pptx" ${withSlide ? "" : "disabled"} title="同じ範囲を編集できる PowerPoint（.pptx）で。絞り込み後 ${r.items.length} 件中 ${withSlide} 件。ダウンロードにはパスワードが必要です">PPTX（${withSlide}）</button>`
     : "";
   return `<span class="dl-actions" id="dl"><button type="button" data-dl="json" ${r.items.length ? "" : "disabled"} title="絞り込み結果（スライド JSON を含む）">JSON（${r.items.length}）</button>${pdf}${pptx}${sample}<span class="meta" id="dl-status"></span></span>`;
 }
@@ -269,7 +269,7 @@ function bindDownload(r: QueryResult, q: Query) {
 class WrongPasswordError extends Error {}
 
 function askPassword(): string {
-  return pdfKey?.pw || window.prompt("PDF のパスワードを入力してください") || "";
+  return pdfKey?.pw || window.prompt("パスワードを入力してください") || "";
 }
 
 /** Fetches an encrypted slide PDF and decrypts it; the key is derived once per password. */
