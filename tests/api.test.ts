@@ -34,8 +34,9 @@ describe("buildApi", () => {
     expect(get("api/v1/latest.json").period).toEqual({ start: "2026-09-15", end: "2026-10-14" });
     expect(get("api/v1/latest.json").items.map((i: any) => i.key)).toEqual(["1", "2"]);
   });
-  it("links slide and PDF only when they exist", () => {
-    expect(get("api/v1/updates/1.json").item.urls.slidePdf).toBe("pdf/1.pdf");
+  it("links the slide JSON only when it exists (PDFs are password-protected and not part of the API)", () => {
+    expect(get("api/v1/updates/1.json").item.urls.slide).toBe("slides/1.json");
+    expect(get("api/v1/updates/1.json").item.urls.slidePdf).toBeUndefined();
     expect(get("api/v1/updates/1.json").slide).toEqual({ key: "1" });
     expect(get("api/v1/updates/2.json").item.urls.slide).toBeUndefined();
     expect(get("api/v1/updates/2.json").slide).toBeNull();

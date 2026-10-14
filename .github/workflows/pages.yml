@@ -44,9 +44,11 @@ jobs:
       - name: Render per-update slide PDFs and the PDF font
         env:
           CHROME_PATH: /usr/bin/google-chrome
+          PDF_PASSWORD: ${{ secrets.PDF_PASSWORD }}
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
           npm run build:pdfs
+          npm run encrypt:pdfs
           pip install -q fonttools brotli
           mkdir -p dist/fonts
           curl -L --fail -o NotoSansJP-VF.ttf "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf"

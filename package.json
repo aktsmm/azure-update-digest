@@ -15,6 +15,7 @@
     "slide-input": "tsx src/cli/slide-input.ts",
     "validate:slides": "tsx src/cli/validate-slides.ts",
     "pdf": "tsx src/cli/render-pdf.ts",
+    "encrypt:pdfs": "tsx src/cli/encrypt-pdfs.ts",
     "build:api": "tsx src/cli/build-api.ts",
     "build:pdfs": "tsx src/cli/build-slide-pdfs.ts",
     "build": "npm run normalize && npm run build:site",

@@ -17,7 +17,6 @@ function publicItem(i: DigestItem, slides: Map<string, ApiSlideInfo>) {
       self: `${BASE}/updates/${i.key}.json`,
       source: i.sourceUrl,
       ...(s ? { slide: `slides/${i.key}.json` } : {}),
-      ...(s?.pdf ? { slidePdf: `pdf/${i.key}.pdf` } : {}),
     },
   };
 }
@@ -45,7 +44,7 @@ export function buildApi(items: DigestItem[], meta: SiteMeta, slides: Map<string
       itemCount: sorted.length,
       slideCount: slides.size,
       attribution: meta.attribution,
-      license: { name: "CC BY-NC-SA 4.0", spdx: "CC-BY-NC-SA-4.0", url: "https://creativecommons.org/licenses/by-nc-sa/4.0/", author: "yamapan (aktsmm)", commercialUse: false, excludes: "Microsoft Release Communications and Microsoft Learn content remain Microsoft's" },
+      license: { name: "CC BY-NC-SA 4.0", spdx: "CC-BY-NC-SA-4.0", url: "https://creativecommons.org/licenses/by-nc-sa/4.0/", author: "yamapan (aktsmm)", commercialUse: false, additionalPermission: "Microsoft Corporation and its affiliates may also use the material for internal business and commercial purposes", excludes: "Microsoft Release Communications and Microsoft Learn content remain Microsoft's" },
       notes: [
         "Static JSON files; there is no query endpoint. Filter on the client side.",
         "Original announcement text is not republished. Summaries and slides are written in Japanese from Microsoft Release Communications metadata and Microsoft Learn; each slide claim carries its evidence URLs.",
@@ -61,7 +60,6 @@ export function buildApi(items: DigestItem[], meta: SiteMeta, slides: Map<string
         update: `${BASE}/updates/{id}.json`,
         category: `${BASE}/categories/{category}.json`,
         slide: "slides/{id}.json",
-        slidePdf: "pdf/{id}.pdf",
         slideIndex: "data/slides.json",
       },
     },
