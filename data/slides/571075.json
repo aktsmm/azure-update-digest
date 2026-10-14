@@ -1,0 +1,89 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571075"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T21:01:07Z"
+  },
+  "slides": [
+    {
+      "key": "571075",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "VM Scale Sets の自動ゾーン配置がパブリック プレビューに",
+        "subtitleJa": "容量と SKU の可用性に基づき、Azure が可用性ゾーンを自動で選択します",
+        "en": "Public Preview: Automatic Zone Placement for Virtual Machine Scale Sets"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "modifiedJst": "2026-09-30",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Virtual Machines"],
+        "categories": ["compute"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "複数リージョンにゾーン対応の **VM Scale Sets** を展開している方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "リージョンごとのゾーン一覧を管理せず、共通の構成でデプロイできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locator": "自動ゾーン配置を使用する場合", "retrievedAt": "2026-10-14T21:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。試す場合は AFEC 登録と API バージョンの確認が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locator": "前提条件", "retrievedAt": "2026-10-14T21:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "配置要件を設定すると、Azure が容量と SKU の可用性に合うゾーンを選ぶ",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locator": "冒頭", "retrievedAt": "2026-10-14T21:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "既定は 3 ゾーンへ均等分散。最低 2 ゾーン、1 ゾーン最大 50%", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locator": "既定では、自動ゾーン配置", "retrievedAt": "2026-10-14T21:00:00Z" }] },
+            { "text": "統一・フレキシブル両方のオーケストレーション モードに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locator": "冒頭", "retrievedAt": "2026-10-14T21:00:00Z" }] },
+            { "text": "対象ゾーン、ゾーン数、ゾーンあたりの上限割合などを調整可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locator": "設定プロパティ", "retrievedAt": "2026-10-14T21:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "新規インスタンスの配置のみが対象。既存インスタンスは移動・再作成されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locator": "Note", "retrievedAt": "2026-10-14T21:00:00Z" }] },
+            { "text": "近接配置グループ、容量予約グループ、専用ホスト グループは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locator": "制限事項", "retrievedAt": "2026-10-14T21:00:00Z" }] },
+            { "text": "容量不足時は一部インスタンスのみ割り当てられ、残りは失敗する場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locator": "部分的な割り当てエラー", "retrievedAt": "2026-10-14T21:00:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "特定ゾーンへの固定が必須なら、従来のユーザー指定ゾーンを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locator": "自動ゾーン配置を使用する場合", "retrievedAt": "2026-10-14T21:00:00Z" }] },
+            { "text": "既存の偏りの是正には、自動ゾーン バランス（プレビュー）を併用する", "origin": "learn", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "automatic-zone-placement", "term": "自動ゾーン配置", "type": "feature", "oneLine": { "text": "容量と SKU の可用性に基づき、スケール セットの可用性ゾーンを Azure が選択する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locator": "冒頭", "retrievedAt": "2026-10-14T21:00:00Z" }] } },
+        { "termKey": "afec", "term": "AFEC", "type": "term", "oneLine": { "text": "Azure Feature Exposure Control。サブスクリプションでプレビュー機能を有効にするための登録フラグ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locator": "AFEC にサブスクリプションを登録する", "retrievedAt": "2026-10-14T21:00:00Z" }] } },
+        { "termKey": "auto-zone-balance", "term": "自動ゾーン バランス", "type": "feature", "oneLine": { "text": "既存のゾーンの不均衡を事前に是正するための、別のプレビュー機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locator": "Note", "retrievedAt": "2026-10-14T21:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T21:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571075",
+        "learn": [
+          { "title": "スケール セットの自動ゾーン配置を構成する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-zone-placement", "locale": "ja-jp" },
+          { "title": "仮想マシン スケール セットで自動ゾーン バランスを有効にする (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/auto-zone-balance-enable", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
