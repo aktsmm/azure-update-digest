@@ -1,0 +1,137 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": { "mode": "ids", "basis": "created", "ids": ["571836"], "coverage": "complete", "snapshotAt": "2026-10-14T22:30:00Z" },
+  "slides": [
+    {
+      "key": "571836",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Local の切断運用 (ALDO) 上の SQL Server が GA",
+        "subtitleJa": "Azure に常時接続できない規制・エアギャップ環境でも SQL Server を実行できます",
+        "en": "Generally Available: SQL Server on Azure Local Disconnected (ALDO) "
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": [],
+        "categories": ["other"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "規制・セキュリティ要件で Azure に**常時接続できない環境**で SQL Server を運用する方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "クラウド接続なしで、データ・AI モデル・SQL Server を同じ境界内に置ける", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "切断環境で SQL Server を使う予定があれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "SQL Server は Azure Local 上の Windows Server / Linux VM で実行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "SQL Server on Azure Local overview", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            },
+            {
+              "text": "ワークロード・ローカル制御プレーン・管理データはオンプレミスに残る",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/deploy-disconnected?view=sql-server-ver17", "locator": "冒頭", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "導入の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "切断運用の Azure Local を展開 → VM を作成し SQL Server をインストール",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "How disconnected deployments work", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            },
+            {
+              "text": "ローカル ツールで管理・監視し、可用性・バックアップ・DR を設計",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "How disconnected deployments work", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure Arc の SQL Server 拡張機能は非対応（Azure 側の管理機能は使えない）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/deploy-disconnected?view=sql-server-ver17", "locator": "When to use disconnected operations", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            },
+            {
+              "text": "SQL Server ライセンスと切断運用プラットフォームのライセンスは別途必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/deploy-disconnected?view=sql-server-ver17", "locator": "Prerequisites", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "接続モードとの違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "接続モード: Azure Arc で一元的に管理 / 切断運用: Azure への継続接続は不要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "Deployment modes", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            },
+            {
+              "text": "切断運用の管理 Azure Local のバックアップは SQL Server を対象外（別途設定）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/deploy-disconnected?view=sql-server-ver17", "locator": "Back up and recover SQL Server", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "防衛・政府・製造・エネルギー・リモート エッジなど、主権とセキュリティが重要な環境",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            },
+            {
+              "text": "SQL Server 2025 とローカル モデル エンドポイントを組み合わせたローカル AI",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/deploy-disconnected?view=sql-server-ver17", "locator": "Build local AI applications", "retrievedAt": "2026-10-14T22:30:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-local", "term": "Azure Local", "type": "product",
+          "oneLine": { "text": "Azure の機能を自社環境のインフラに拡張するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "冒頭", "retrievedAt": "2026-10-14T22:30:00Z" }] }
+        },
+        {
+          "termKey": "aldo", "term": "ALDO（切断運用）", "type": "feature",
+          "oneLine": { "text": "Azure やインターネットへの接続が制限・不可の環境向けに、ローカルで Azure Local を運用する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "Disconnected operations", "retrievedAt": "2026-10-14T22:30:00Z" }] }
+        },
+        {
+          "termKey": "air-gapped", "term": "エアギャップ環境", "type": "term",
+          "oneLine": { "text": "外部ネットワークから隔離された、規制・セキュリティ要件の厳しい環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "Disconnected operations", "retrievedAt": "2026-10-14T22:30:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T22:30:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571836",
+        "learn": [
+          { "title": "切断された環境で Azure Local に SQL Server をデプロイする", "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/deploy-disconnected?view=sql-server-ver17", "locale": "ja-jp" },
+          { "title": "SQL Server on Azure Local overview", "url": "https://learn.microsoft.com/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
