@@ -1,0 +1,127 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571499"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T20:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "571499",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "SQL Server on Azure VM が Azure Bleu で一般提供",
+        "subtitleJa": "フランスのソブリン クラウドで、データ所在地とソブリンティ要件を満たしつつ SQL Server を運用できます",
+        "en": "Generally Available: SQL Server on Azure Virtual Machines in Azure Bleu "
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "modifiedJst": "2026-10-06",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["SQL Server on Azure Virtual Machines"],
+        "categories": ["compute", "databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Bleu（フランスのソブリン クラウド）** で SQL Server を VM 上で動かしたい方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "データ所在地・ソブリンティ要件を満たしたまま、SQL Server ワークロードをデプロイ・管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Azure Bleu を利用中・検討中の場合に採用を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Azure Bleu 上で SQL Server on Azure Virtual Machines をデプロイ・管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Azure VM 上で動く SQL Server。オンプレミスのハード管理なしでフル バージョンを利用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview", "locator": "概要", "retrievedAt": "2026-10-14T20:00:00Z" }]
+            },
+            {
+              "text": "SQL IaaS Agent 拡張機能に登録（無料）すると自動バックアップや自動修正などが使える",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview", "locator": "機能面の利点", "retrievedAt": "2026-10-14T20:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ポータル・PowerShell・ARM テンプレートで VM を作成し、拡張機能に登録する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview", "locator": "作業の開始", "retrievedAt": "2026-10-14T20:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure Bleu は Orange と Capgemini の合弁事業で、SecNumCloud 要件を満たす設計",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds", "locator": "ローカルによる所有と運用", "retrievedAt": "2026-10-14T20:00:00Z" }]
+            },
+            {
+              "text": "物理的・論理的に隔離され、現地担当者が管理する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds", "locator": "ローカルによる所有と運用", "retrievedAt": "2026-10-14T20:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ナショナル パートナー クラウドは、独立運用の環境で Azure の機能を提供する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds", "locator": "統合された Microsoft の機能", "retrievedAt": "2026-10-14T20:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "公共部門・防衛・重要インフラのワークロードに適したクラウド環境",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds", "locator": "実装シナリオ", "retrievedAt": "2026-10-14T20:00:00Z" }]
+            },
+            {
+              "text": "Always On 可用性グループなどの SQL Server の高可用性機能も利用できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview", "locator": "高可用性とディザスター リカバリー", "retrievedAt": "2026-10-14T20:00:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sql-vm", "term": "SQL Server on Azure Virtual Machines", "type": "product", "oneLine": { "text": "オンプレミスのハードウェアを管理せず、クラウドでフル バージョンの SQL Server を使えるサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview", "locator": "概要", "retrievedAt": "2026-10-14T20:00:00Z" }] } },
+        { "termKey": "azure-bleu", "term": "Azure Bleu", "type": "product", "oneLine": { "text": "フランスの SecNumCloud 要件を満たす設計の、Orange と Capgemini の合弁事業によるクラウド。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds", "locator": "ローカルによる所有と運用", "retrievedAt": "2026-10-14T20:00:00Z" }] } },
+        { "termKey": "npc", "term": "ナショナル パートナー クラウド", "type": "term", "oneLine": { "text": "現地の所有・管理下で Azure などの機能を提供する、独立運用のクラウド環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds", "locator": "冒頭", "retrievedAt": "2026-10-14T20:00:00Z" }] } },
+        { "termKey": "iaas-agent", "term": "SQL IaaS Agent 拡張機能", "type": "feature", "oneLine": { "text": "登録すると自動バックアップや自動修正などの機能を使えるようになる拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview", "locator": "機能面の利点", "retrievedAt": "2026-10-14T20:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T20:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571499",
+        "learn": [
+          { "title": "Azure Windows Virtual MachinesでSQL Serverとは", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview", "locale": "ja-jp" },
+          { "title": "ナショナル パートナー クラウド", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sovereign-clouds/partner/overview-national-partner-clouds", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
