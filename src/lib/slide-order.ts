@@ -1,6 +1,6 @@
 import type { SlideKind } from "./slide-kind.js";
 
-export const KIND_ORDER: SlideKind[] = ["preview", "private-preview", "ga", "retirement", "announcement", "update"];
+export const KIND_ORDER: SlideKind[] = ["preview", "ga", "retirement", "announcement", "update"];
 
 export interface Orderable { key: string; kind: SlideKind; publishedJst: string }
 

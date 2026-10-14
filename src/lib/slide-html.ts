@@ -27,7 +27,7 @@ html,body{margin:0;padding:0;background:#fff;font-family:"Noto Sans CJK JP","Not
 .t{font-size:28px;font-weight:700;color:#0b2a4a;line-height:1.25}.t small{display:block;font-size:18px;font-weight:600;margin-top:2px}
 .en{font-size:12.5px;color:#8a95a6;margin-top:2px}.dt{font-size:13.5px;color:#3d4a5c;font-weight:600;margin-left:12px}
 .badge{color:#fff;font-weight:700;font-size:22px;padding:3px 22px;border-radius:999px;white-space:nowrap}
-.k-ga{background:#1b7f3b}.k-preview,.k-private-preview{background:#7a4fd0}.k-retirement{background:#c62828}.k-announcement{background:#0b6bcb}.k-update{background:#5b6777}
+.k-ga{background:#1b7f3b}.k-preview{background:#7a4fd0}.k-retirement{background:#c62828}.k-announcement{background:#0b6bcb}.k-update{background:#5b6777}
 .imp{display:flex;gap:8px}
 .imp .c{flex:1;border-radius:6px;padding:calc(var(--fs) * .25) 10px;font-size:var(--fs);line-height:1.35;border:1.5px solid #c9d4e6;background:#fff}
 .imp .c b.l{display:block;font-size:calc(var(--fs) * .8);color:#5b6777;font-weight:600}
@@ -141,7 +141,7 @@ export function coverHtml(d: Deck): string {
 }
 
 export function tocHtml(d: Deck): string {
-  const order: SlideKind[] = ["preview", "private-preview", "ga", "retirement", "announcement", "update"];
+  const order: SlideKind[] = ["preview", "ga", "retirement", "announcement", "update"];
   const sorted = [...d.slides].sort((a, b) => order.indexOf(a.kind) - order.indexOf(b.kind) || (a.meta.publishedJst < b.meta.publishedJst ? 1 : -1) || (a.key < b.key ? -1 : 1));
   return `<section class="page plain"><h2>目次・概要</h2><div class="toc">${sorted.map((s, i) => `<div><span class="n">${i + 1}.</span>【${esc(s.label)}】${esc(s.title.ja)}</div>`).join("")}</div></section>`;
 }

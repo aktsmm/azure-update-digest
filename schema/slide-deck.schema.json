@@ -122,7 +122,7 @@
       "additionalProperties": false,
       "properties": {
         "key": { "type": "string", "description": "canonicalKey (MRC baseId); also the site anchor update-{key}" },
-        "kind": { "enum": ["ga", "preview", "private-preview", "retirement", "announcement", "update"] },
+        "kind": { "enum": ["ga", "preview", "retirement", "announcement", "update"] },
         "kindSource": { "enum": ["ring", "tags", "title", "manual"], "description": "How kind was decided (rule-based, not guessed)." },
         "label": { "type": "string" },
         "title": {

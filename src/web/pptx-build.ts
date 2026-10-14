@@ -21,7 +21,7 @@ export interface PptxOptions {
 const W = 13.333, H = 7.5, M = 0.35;
 const FONT = "Yu Gothic";
 const C = { navy: "243A5E", blue: "0078D4", cyan: "50E6FF", tint: "EAF3FC", gray: "3D4A5C", mute: "6B778A", line: "B8C7DC", white: "FFFFFF", red: "C62828", green: "1B7F3B" };
-const KIND_COLOR: Record<string, string> = { ga: "1B7F3B", preview: "7A4FD0", "private-preview": "5B35A0", retirement: "C62828", announcement: "0B6BCB", update: "5B6777" };
+const KIND_COLOR: Record<string, string> = { ga: "1B7F3B", preview: "7A4FD0", retirement: "C62828", announcement: "0B6BCB", update: "5B6777" };
 const STAMP: Record<string, { text: string; color: string }> = {
   global: { text: "グローバル（リージョン不問）", color: "0B6BCB" },
   "japan-both": { text: "東日本・西日本対応", color: "1B7F3B" },
@@ -32,7 +32,7 @@ const STAMP: Record<string, { text: string; color: string }> = {
 const ACT: Record<string, string> = { yes: "要対応", optional: "任意", no: "対応不要", unknown: "情報" };
 const TYPE_JA: Record<string, string> = { product: "製品", feature: "機能", term: "用語", label: "ラベル" };
 const MONTH: Record<string, string> = { January: "1", February: "2", March: "3", April: "4", May: "5", June: "6", July: "7", August: "8", September: "9", October: "10", November: "11", December: "12" };
-const KIND_ORDER = ["preview", "private-preview", "ga", "retirement", "announcement", "update"];
+const KIND_ORDER = ["preview", "ga", "retirement", "announcement", "update"];
 
 type Run = { text: string; options?: TextOpts };
 

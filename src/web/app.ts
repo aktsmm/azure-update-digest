@@ -18,7 +18,7 @@ let samplePdf = false;
 let pdfKey: { pw: string; key: CryptoKey } | null = null;
 
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
-const KIND_FILTERS: SlideKind[] = ["ga", "preview", "private-preview", "retirement", "announcement", "update"];
+const KIND_FILTERS: SlideKind[] = ["ga", "preview", "retirement", "announcement", "update"];
 const catLabel = (id: string) => meta.categories.find((c) => c.id === id)?.label ?? id;
 const impLabel = (id: string) => meta.importanceLevels.find((c) => c.id === id)?.label ?? id;
 const safeUrl = (u: string) => (/^https:\/\//.test(u) ? esc(u) : "#");
