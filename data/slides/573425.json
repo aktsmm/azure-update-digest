@@ -1,0 +1,94 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573425"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T20:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "573425",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "PostgreSQL の Azure Backup が物理バックアップ（v2）に対応",
+        "subtitleJa": "flexible server と elastic cluster を最大 64 TB まで保護（パブリック プレビュー）",
+        "en": "Public Preview: Azure Backup for PostgreSQL flexible server and elastic cluster (v2)"
+      },
+      "meta": {
+        "publishedJst": "2026-10-06",
+        "modifiedJst": "2026-10-06",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "October" }],
+        "status": "In preview",
+        "products": ["Azure Backup", "Azure Database for PostgreSQL"],
+        "categories": ["storage", "databases", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "大容量の **Azure Database for PostgreSQL** を長期保持でバックアップしたい運用担当者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "1 TB 超でも日次の増分バックアップができ、サーバーとして直接復元できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューのため評価向け。課金は 2026年10月15日から有効", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "v1 は論理バックアップ（pg_dump）で最大 1 TB、週 1 回、常にフル バックアップ",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "v1 と v2 の比較表", "retrievedAt": "2026-10-14T20:10:00Z" }]
+        },
+        "after": {
+          "text": "v2 は物理バックアップで最大 64 TB、日次・週次、2 回目以降は増分",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "v1 と v2 の比較表", "retrievedAt": "2026-10-14T20:10:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象は flexible server と elastic cluster（v1 は flexible server のみ）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "v1 と v2 の比較表", "retrievedAt": "2026-10-14T20:10:00Z" }] },
+            { "text": "Premium SSD v1 で最大 32 TB、Premium SSD v2 で最大 64 TB", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "v1 と v2 の比較表", "retrievedAt": "2026-10-14T20:10:00Z" }] },
+            { "text": "日次・週次・オンデマンド。保持は 7 日〜10 年を独立ルールで設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "柔軟なバックアップポリシー", "retrievedAt": "2026-10-14T20:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "v1 から v2 への移行は一方向。PostgreSQL 15 以降が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "v1エクスペリエンスからv2エクスペリエンスへの移行", "retrievedAt": "2026-10-14T20:10:00Z" }] },
+            { "text": "Burstable 層は移行不可。汎用またはメモリ最適化へ変更が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "v1エクスペリエンスからv2エクスペリエンスへの移行", "retrievedAt": "2026-10-14T20:10:00Z" }] },
+            { "text": "復元先は事前に作成が必要。数 TB では復元に数時間〜数日", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "復元フロー", "retrievedAt": "2026-10-14T20:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "保護機能: WORM 不変性、ソフト削除、マルチユーザー認証、CMK に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "主な機能", "retrievedAt": "2026-10-14T20:10:00Z" }] },
+            { "text": "v1 の 1 TB 制限や週 1 回の頻度が課題なら、検証環境で v2 を試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-backup", "term": "Azure Backup", "type": "product", "oneLine": { "text": "データをバックアップ ボールトに保管して保護するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "主な機能", "retrievedAt": "2026-10-14T20:10:00Z" }] } },
+        { "termKey": "pg-flex", "term": "PostgreSQL flexible server", "type": "product", "oneLine": { "text": "Azure Database for PostgreSQL のサーバー形態。v2 では elastic cluster も対象。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "v1 と v2 の比較表", "retrievedAt": "2026-10-14T20:10:00Z" }] } },
+        { "termKey": "physical-backup", "term": "物理バックアップ", "type": "feature", "oneLine": { "text": "マネージド ディスクのスナップショットに基づくバックアップ方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "冒頭", "retrievedAt": "2026-10-14T20:10:00Z" }] } },
+        { "termKey": "restore-as-server", "term": "Restore as Server", "type": "feature", "oneLine": { "text": "回復ポイントを、事前作成したサーバーへ直接復元する方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "サーバーとして復元", "retrievedAt": "2026-10-14T20:10:00Z" }] } },
+        { "termKey": "worm", "term": "WORM 不変バックアップ", "type": "term", "oneLine": { "text": "保持期間が終わるまで、回復ポイントの変更や削除を防ぐ仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "WORM不変バックアップ", "retrievedAt": "2026-10-14T20:10:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T20:10:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573425",
+        "learn": [
+          { "title": "Azure PostgreSQL フレキシブル サーバーおよび Elastic Clusters の Vaulted Backup (v2) (プレビュー) について", "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
