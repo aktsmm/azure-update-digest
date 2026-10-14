@@ -38,7 +38,7 @@ if (problems.length) {
 const FS_STEPS = [16, 15.5, 15, 14.5, 14, 13.5, 13];
 
 async function overflowOf(page: Page, key: string): Promise<number> {
-    const JS = `(() => { const s = document.querySelector('section[data-key="${key}"]'); const ft = s.querySelector('.ft'); const over = [...s.querySelectorAll('.main, .side')].map(e => e.scrollHeight - e.clientHeight); const hOver = s.scrollHeight - s.clientHeight; const ftOver = ft.getBoundingClientRect().bottom - s.getBoundingClientRect().bottom; return Math.max(0, hOver, Math.round(ftOver), ...over); })()`;
+    const JS = `(() => { const s = document.querySelector('section[data-key="${key}"]'); const ft = s.querySelector('.ft'); const ftTop = ft.getBoundingClientRect().top; const cardOver = Math.max(0, ...[...s.querySelectorAll('.card')].map(c => c.getBoundingClientRect().bottom - ftTop)); const over = [...s.querySelectorAll('.main, .side')].map(e => e.scrollHeight - e.clientHeight); const hOver = s.scrollHeight - s.clientHeight; const ftOver = ft.getBoundingClientRect().bottom - s.getBoundingClientRect().bottom; return Math.max(0, hOver, Math.round(ftOver), Math.round(cardOver), ...over); })()`;
     return Number(await page.evaluate(JS));
   }
 
@@ -69,7 +69,14 @@ try {
     pages.push(slideHtml(s, { fs: chosen.fs, includeDetail: chosen.detail }));
     if (continuation) {
       const detailOnly = { ...s, panels: s.panels.filter((p) => p.priority === "detail") };
-      pages.push(slideHtml(detailOnly as typeof s, { fs: 15, includeDetail: true, continuation: true }));
+      let cfs: number | null = null;
+      for (const fs of FS_STEPS) {
+        await page.setContent(`<!doctype html><meta charset="utf-8"><style>${(await import("../lib/slide-html.js")).PDF_CSS}</style>${slideHtml(detailOnly as typeof s, { fs, includeDetail: true, continuation: true })}`);
+        await page.evaluate(() => document.fonts.ready);
+        if ((await overflowOf(page, s.key)) <= 0) { cfs = fs; break; }
+      }
+      if (cfs === null) { report[s.key]!.overflow = 1; cfs = FS_STEPS.at(-1)!; }
+      pages.push(slideHtml(detailOnly as typeof s, { fs: cfs, includeDetail: true, continuation: true }));
     }
   }
 
