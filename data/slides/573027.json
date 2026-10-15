@@ -1,0 +1,106 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573027"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T17:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "573027",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure NetApp Files の大容量ボリューム ブレークスルー モードが GA に",
+        "subtitleJa": "最大 2 PiB・最大 80 GiB/s。専用キャパシティで HPC / EDA の性能を安定させます",
+        "en": "Generally Available: Support for large volume breakthrough mode"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "modifiedJst": "2026-09-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure NetApp Files"],
+        "categories": ["storage"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "HPC や EDA など高スループットが必要な **Azure NetApp Files の利用者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "専用キャパシティで他の負荷の影響を受けにくく、安定した高性能を得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "性能要件が通常の大容量ボリュームを超えるときに検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "大容量ボリュームの性能上限は全サービス レベルで 12,800 MiB/秒",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes", "locator": "大量の容量には以下の制限があります", "retrievedAt": "2026-10-15T17:00:00Z" }]
+        },
+        "after": {
+          "text": "ブレークスルー モードでは定義済みの上限に縛られず、ワークロード次第で単一ボリュームで最大 80 GiB/s",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes", "locator": "大量の容量には以下の制限があります", "retrievedAt": "2026-10-15T17:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "1 ボリュームにつき 6 つのストレージ エンドポイントを使い、性能を安定させる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "顧客ごとに予約された専用キャパシティで、他のワークロードと競合しない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "容量は 2,400 GiB ～ 2,400 TiB（2 PiB）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes-requirements-considerations", "locator": "ブレークスルー モードの要件と考慮事項", "retrievedAt": "2026-10-15T17:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始める流れ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "初回利用前にウェイトリストのリクエストを送信し、機能登録を受ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes-requirements-considerations", "locator": "ブレークスルー モードに登録する", "retrievedAt": "2026-10-15T17:00:00Z" }] },
+            { "text": "登録状態は Get-AzProviderFeature（ANFBreakthroughMode）や az feature show で確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes-requirements-considerations", "locator": "ブレークスルー モードに登録する", "retrievedAt": "2026-10-15T17:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "移行アシスタントは非対応。スナップショットを新ボリュームへ復元不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes-requirements-considerations", "locator": "ブレークスルー モードの要件と考慮事項", "retrievedAt": "2026-10-15T17:00:00Z" }] },
+            { "text": "専用キャパシティの発注・プロビジョニング済みのリージョンで利用可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "通常ボリューム: 最大 100 TiB / 大容量: 50 TiB～1 PiB、12,800 MiB/秒上限 / ブレークスルー: 上限なし（最大 80 GiB/s）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes", "locator": "大量の容量には以下の制限があります", "retrievedAt": "2026-10-15T17:00:00Z" }] },
+            { "text": "通常ボリュームを大容量ボリュームへ変換することはできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes-requirements-considerations", "locator": "要件と考慮事項", "retrievedAt": "2026-10-15T17:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "HPC / EDA など、大容量を超えるスループットと並行性が必要なケース", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes", "locator": "ワークロードの種類とユースケース", "retrievedAt": "2026-10-15T17:00:00Z" }] },
+            { "text": "データベース ワークロードは通常ボリュームで足りることが多い", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes", "locator": "大容量ボリュームのパフォーマンスへの影響", "retrievedAt": "2026-10-15T17:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-netapp-files", "term": "Azure NetApp Files", "type": "product", "oneLine": { "text": "NAS クライアントに高性能でコスト効率の高いストレージを提供する Azure のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes", "locator": "冒頭", "retrievedAt": "2026-10-15T17:00:00Z" }] } },
+        { "termKey": "large-volume", "term": "大容量ボリューム", "type": "feature", "oneLine": { "text": "通常ボリュームの上限を超えて容量・性能を拡張できるボリューム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes", "locator": "ワークロードの種類とユースケース", "retrievedAt": "2026-10-15T17:00:00Z" }] } },
+        { "termKey": "breakthrough-mode", "term": "ブレークスルー モード", "type": "feature", "oneLine": { "text": "専用容量の 6 つのエンドポイントで、大容量ボリュームの性能をさらに高める機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes", "locator": "大容量ボリュームのパフォーマンスへの影響", "retrievedAt": "2026-10-15T17:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-15T17:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573027",
+        "learn": [
+          { "title": "Azure NetApp Files での大容量ボリュームを理解する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes", "locale": "ja-jp" },
+          { "title": "大量の Azure NetApp Files に関する要件と考慮事項", "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/large-volumes-requirements-considerations", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
