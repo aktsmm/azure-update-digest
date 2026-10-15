@@ -1,0 +1,85 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571846"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T22:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "571846",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure SQL 2026 年 9 月下旬の更新",
+        "subtitleJa": "ローカル タイム ゾーン対応や MI リンクの複数 DB 複製など（パブリック プレビュー）",
+        "en": "Public Preview: Azure SQL updates for late-September 2026 "
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure SQL Database", "Azure SQL Managed Instance"],
+        "categories": ["databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Azure SQL Database / SQL Managed Instance** の利用者、SQL Server から MI へ複製する担当者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "タイム ゾーン対応や複数 DB の一括リンク複製など、運用の手間が減る", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューのため、必要な機能のみ検証環境で評価", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "1 つの SQL Managed Instance リンクで、可用性グループ内の複数データベースを複製できる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-10-14T22:40:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "今回の更新内容", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Fabric の Database Hub: 各種データベースを一元的に探索・管理・監視・最適化", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Hyperscale エラスティック プールのデータベース数上限を 50 に拡大", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "SQL Database のローカル タイム ゾーン対応 / MSSQL 拡張機能のランディング ページ刷新", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意（複数 DB リンク）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "SQL Server 2022 CU27 以降 / 2025 CU9 以降の Enterprise・Developer が必要（2019 以前は非対応）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locator": "要件", "retrievedAt": "2026-10-14T22:40:00Z" }] },
+            { "text": "プレビュー中は既定で無効。sys.sp_multidb_milink で有効化が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locator": "sys.sp_multidb_milink", "retrievedAt": "2026-10-14T22:40:00Z" }] },
+            { "text": "可用性グループ内の全 DB を複製。一部のみの選択は不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locator": "The link replicates all databases", "retrievedAt": "2026-10-14T22:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象 DB 数と移行先 MI の空き容量、SQL Server の CU 適用状況を事前に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mi-link", "term": "Managed Instance リンク", "type": "feature", "oneLine": { "text": "分散可用性グループを使い、SQL Server から MI へ変更を準リアルタイムで複製する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-10-14T22:40:00Z" }] } },
+        { "termKey": "set-time-zone", "term": "SET TIME ZONE", "type": "term", "oneLine": { "text": "Azure SQL Database でセッションのタイム ゾーンを設定する T-SQL 文。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/t-sql/statements/set-time-zone-transact-sql?view=fabric-sqldb", "locator": "冒頭", "retrievedAt": "2026-10-14T22:40:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T22:40:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571846",
+        "learn": [
+          { "title": "Always On 可用性グループを Azure SQL Managed Instance に拡張する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locale": "ja-jp" },
+          { "title": "SET TIME ZONE (Transact-SQL)", "url": "https://learn.microsoft.com/ja-jp/sql/t-sql/statements/set-time-zone-transact-sql?view=fabric-sqldb", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
