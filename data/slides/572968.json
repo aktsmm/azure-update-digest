@@ -1,0 +1,140 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["572968"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T17:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "572968",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "ルクセンブルクの Azure Extended Zone が一般提供（GA）に",
+        "subtitleJa": "低遅延とデータ所在地の要件に向けた、Azure の小規模な拡張環境",
+        "en": "Generally Available: Luxembourg - Azure Extended Zones"
+      },
+      "meta": {
+        "publishedJst": "2026-09-29",
+        "modifiedJst": "2026-09-29",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": [],
+        "categories": ["other"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "ルクセンブルクの近くで**低遅延・データ所在地を満たしたい**ワークロードの管理者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ユーザーに近く、データ所在地の境界内でアプリを実行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "対象地域の要件があれば、アクセス要求を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "拡張ゾーンは Microsoft グローバル ネットワークの一部で、ユーザーの近くに置かれる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/overview", "locator": "冒頭", "retrievedAt": "2026-10-15T17:40:00Z" }]
+            },
+            {
+              "text": "コントロール プレーンはリージョンに残り、データ プレーンを拡張ゾーンに配置",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/overview", "locator": "Azure Extended Zones のサービス提供", "retrievedAt": "2026-10-15T17:40:00Z" }]
+            },
+            {
+              "text": "Azure portal などの Azure ツールでリソースを作成・管理できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/overview", "locator": "冒頭", "retrievedAt": "2026-10-15T17:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "利用の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Microsoft.EdgeZones リソース プロバイダーをサブスクリプションに登録",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/request-access", "locator": "Microsoft.EdgeZones リソース プロバイダーのサブスクリプションを登録する", "retrievedAt": "2026-10-15T17:40:00Z" }]
+            },
+            {
+              "text": "対象の拡張ゾーンへ登録し、状態が Registered になれば利用可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/request-access", "locator": "Azure 拡張ゾーンに登録する", "retrievedAt": "2026-10-15T17:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "既定では無効。サブスクリプション所有者が、課金対象アカウントで拡張ゾーンごとに登録が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/request-access", "locator": "冒頭 / 注", "retrievedAt": "2026-10-15T17:40:00Z" }]
+            },
+            {
+              "text": "提供されるのは Azure サービスの一部のみ（親リージョンは全サービス利用可）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/faq", "locator": "すべての Azure サービスは Azure 拡張ゾーンで提供されていますか?", "retrievedAt": "2026-10-15T17:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "対応サービス・請求", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "VM・AKS・仮想ネットワーク・マネージド ディスクなどが利用可能（一部はプレビュー）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/overview", "locator": "サービス提供の表", "retrievedAt": "2026-10-15T17:40:00Z" }]
+            },
+            {
+              "text": "請求は Azure の他の部分と同じ体験。予約や節約プランにも対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/faq", "locator": "課金・予約インスタンスと節約プラン", "retrievedAt": "2026-10-15T17:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "メディア編集のような低遅延の処理や、特定地域内にデータを収めたい用途",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/overview", "locator": "主なシナリオ", "retrievedAt": "2026-10-15T17:40:00Z" }]
+            },
+            {
+              "text": "親リージョンが別の国の場合、顧客データは関連地域の外に置かれ得る",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/faq", "locator": "顧客データはどこに格納され、処理されますか?", "retrievedAt": "2026-10-15T17:40:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-extended-zones", "term": "Azure Extended Zones", "type": "product", "oneLine": { "text": "大都市圏や特定の管轄区域に置ける、Azure の小さなフットプリントの拡張環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/overview", "locator": "冒頭", "retrievedAt": "2026-10-15T17:40:00Z" }] } },
+        { "termKey": "data-residency", "term": "データ所在地", "type": "term", "oneLine": { "text": "アプリケーション データを特定の地域内に収めたいという要件。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/overview", "locator": "主なシナリオ", "retrievedAt": "2026-10-15T17:40:00Z" }] } },
+        { "termKey": "latency", "term": "低遅延（待機時間）", "type": "term", "oneLine": { "text": "ユーザーの近くでリソースを動かし、応答の遅れを小さくすること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/overview", "locator": "主なシナリオ", "retrievedAt": "2026-10-15T17:40:00Z" }] } },
+        { "termKey": "parent-region", "term": "親リージョン", "type": "term", "oneLine": { "text": "拡張ゾーンが関連付けられる Azure リージョン。コントロール プレーンが残る。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/faq", "locator": "データの格納場所", "retrievedAt": "2026-10-15T17:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-15T17:40:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=572968",
+        "learn": [
+          { "title": "Azure Extended Zone とは?", "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/overview", "locale": "ja-jp" },
+          { "title": "Azure 拡張ゾーンへのアクセスを要求する", "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/request-access", "locale": "ja-jp" },
+          { "title": "Azure Extended Zones に関する FAQ", "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/faq", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
