@@ -1,0 +1,137 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571632"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-16T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "571632",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "SQL Managed Instance の flexible memory などが一般提供（GA）に",
+        "subtitleJa": "vCore 数を変えずにメモリ量を調整でき、Business Critical は高いログ書き込み上限に対応",
+        "en": "Generally Available: Azure SQL Managed Instance updates for late-September 2026"
+      },
+      "meta": {
+        "publishedJst": "2026-09-29",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure SQL Managed Instance"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure SQL Managed Instance** で、メモリ不足や書き込み負荷が高いワークロードを運用している方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "vCore を増やさずメモリを調整でき、書き込み集中型ワークロードの性能向上も期待できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "メモリや書き込み性能に課題があれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "既定ではメモリは vCore 数で決まる静的な値。vCore を変えずに割り当て量を変更できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "フレキシブルメモリ", "retrievedAt": "2026-10-16T00:00:00Z" }]
+            },
+            {
+              "text": "Premium シリーズ上の次世代汎用（ローカル冗長）と Business Critical で GA",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "フレキシブルメモリ", "retrievedAt": "2026-10-16T00:00:00Z" }]
+            },
+            { "text": "Business Critical で、より高いトランザクション ログ書き込み上限に対応", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Azure portal の [Compute + storage] でメモリ割り当てを変更する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "フレキシブルメモリ", "retrievedAt": "2026-10-16T00:00:00Z" }]
+            },
+            {
+              "text": "REST API では properties.memorySizeInGB に GB 単位で指定する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "フレキシブルメモリ", "retrievedAt": "2026-10-16T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "メモリは vCore に応じた範囲で選択（4 vCore なら 28～48 GB）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "フレキシブルメモリ", "retrievedAt": "2026-10-16T00:00:00Z" }]
+            },
+            {
+              "text": "変更は全データベースに適用され、最後にフェールオーバーが発生する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "フレキシブルメモリ", "retrievedAt": "2026-10-16T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Standard シリーズ（Gen5）は仮想コアあたり 5.1 GB。メモリ増には vCore の追加が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "最大メモリ", "retrievedAt": "2026-10-16T00:00:00Z" }]
+            },
+            {
+              "text": "Business Critical は仮想コアあたり 16 MiB/秒、Premium シリーズで最大 192 MiB/秒",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "ログ書き込みのスループット制限", "retrievedAt": "2026-10-16T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "既定の割り当てより多くのメモリが必要なワークロードに有用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "フレキシブルメモリ", "retrievedAt": "2026-10-16T00:00:00Z" }]
+            },
+            { "text": "変更時はフェールオーバーを伴うため、実施時間帯を計画する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sql-mi", "term": "Azure SQL Managed Instance", "type": "product", "oneLine": { "text": "SQL Server のエンジンを土台にした、Azure 上のマネージド データベース サービス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "vcore", "term": "vCore（仮想コア）", "type": "term", "oneLine": { "text": "インスタンスのコンピューティング サイズを表す単位で、メモリや各種上限の基準になる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "最大メモリ", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "flexible-memory", "term": "flexible memory", "type": "feature", "oneLine": { "text": "vCore 数を変えずに、インスタンスに割り当てるメモリ量を変更できる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "フレキシブルメモリ", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "business-critical", "term": "Business Critical", "type": "term", "oneLine": { "text": "読み取り専用に使える追加のセカンダリ レプリカを備えたサービス レベル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "Business Critical サービス レベル", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "log-rate", "term": "ログ書き込みスループット", "type": "term", "oneLine": { "text": "トランザクション ログを書き込める速度の上限で、インスタンスごとに制限がある。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "ログ書き込みのスループット制限", "retrievedAt": "2026-10-16T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-16T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "SQL Managed Instance は全リージョンで提供される基盤サービス",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-16T00:00:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571632",
+        "learn": [{ "title": "Azure SQL Managed Instance のリソース制限の概要", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
