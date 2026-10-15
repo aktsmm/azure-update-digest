@@ -89,7 +89,7 @@ function badges(i: DigestItem): string {
 // keys the user unchecked; everything is selected by default and the choice survives filter changes
 const deselected = new Set<string>();
 
-function card(i: DigestItem): string {
+function card(i: DigestItem, idx = -1): string {
   const summary =
     i.summary.state === "generated" ? `<p class="summary">${esc(i.summary.text ?? "")}</p>`
     : i.summary.state === "stale" ? `<p class="summary missing">要約未生成（原文の更新により再生成待ち）</p>`
@@ -99,7 +99,7 @@ function card(i: DigestItem): string {
     i.related.items.length > 0 ? `<div>関連資料（Microsoft Learn）<ul>${i.related.items.map((r) => `<li><a href="${safeUrl(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a></li>`).join("")}</ul></div>`
     : `<div class="meta">関連資料: ${relNames[i.related.status]}</div>`;
   return `<article class="card" id="update-${esc(i.key)}">
-    <div class="card-head"><label class="sel" title="ダウンロード（JSON・PDF・PPTX）に含める"><input type="checkbox" data-sel="${esc(i.key)}" ${deselected.has(i.key) ? "" : "checked"} aria-label="ダウンロードに含める"></label><h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a>${esc(i.titleJa ?? i.title)}</h3><span class="kind k-${i.kind}">${esc(KIND_LABEL[i.kind])}</span></div>
+    <div class="card-head"><label class="sel" title="ダウンロード（JSON・PDF・PPTX）に含める"><input type="checkbox" data-sel="${esc(i.key)}" ${deselected.has(i.key) ? "" : "checked"} aria-label="ダウンロードに含める"></label>${idx >= 0 ? `<span class="no" title="この一覧の上から ${idx + 1} 番目">${idx + 1}</span>` : ""}<h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a>${esc(i.titleJa ?? i.title)}</h3><span class="kind k-${i.kind}">${esc(KIND_LABEL[i.kind])}</span></div>
     ${i.titleJa ? `<div class="orig">${esc(i.title)}</div>` : ""}
     <div class="meta">作成 ${esc(i.createdJst)} ／ 更新 ${esc(i.modifiedJst)} ／ ID ${esc(i.key)}</div>
     ${badges(i)}${summary}
@@ -345,12 +345,12 @@ function renderList(q: Query, heading: string, fixedMonth: string | null, basePa
   const filtered = r.items.length !== r.periodTotal ? `（期間内 ${r.periodTotal} 件中、絞り込み後 ${r.items.length} 件）` : "";
   const empty = r.items.length === 0
     ? `<div class="empty">${r.coverage.status === "complete" ? "条件に一致する更新はありません。" : "取得範囲外・一部取得のため、0件とは断定できません。取得状態を確認してください。"}</div>` : "";
-  const hl = q.mode === "dated" && r.highlights.length ? `<h2>重要更新（${r.highlights.length}件）</h2>${r.highlights.map(card).join("")}` : "";
+  const hl = q.mode === "dated" && r.highlights.length ? `<h2>重要更新（${r.highlights.length}件）</h2>${r.highlights.map((i, n) => card(i, n)).join("")}` : "";
   const note = q.mode === "availability" ? "<p class='meta'>提供時期は公式の月単位表記のまま表示しています（日付への換算はしていません）。</p>" : "";
   app.innerHTML = `${basePath === "/" ? `${hero()}<h2>${esc(heading)}</h2>` : `<h1>${esc(heading)}</h1>`}
     <p><strong>${esc(q.period.start)} 〜 ${esc(q.period.end)}</strong>（JST・${basisLabel}）: <strong>${r.items.length} 件</strong> ${filtered}</p>
     ${coverageBanner(r)}${backfillPanel()}${periodForm(q, fixedMonth, downloadBar(r, q))}${note}${hl}
-    <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${r.items.map(card).join("")}${empty}`;
+    <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${r.items.map((i, n) => card(i, n)).join("")}${empty}`;
   bind(q, fixedMonth, basePath);
   bindDownload(r, q);
 }
