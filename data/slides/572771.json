@@ -1,0 +1,95 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["572771"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T18:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "572771",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Azure Functions の Node.js 22 サポートが 2027-04-30 に終了",
+        "subtitleJa": "終了日以降もアプリは動くが、更新・サポートが止まる。期限までに Node.js 24 へ",
+        "en": "Retirement: Support for Node.js 22 ends on April 30, 2027"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "modifiedJst": "2026-09-23",
+        "availability": [{ "rawRing": "Retirement", "year": 2027, "month": "April" }],
+        "status": null,
+        "products": ["Azure Functions"],
+        "categories": ["compute", "security", "containers"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Azure Functions で Node.js 22 を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "終了日以降は、セキュリティ パッチと更新、カスタマー サポートが提供されなくなる（アプリは動作し続ける）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "期限までに Node.js 24 へアップグレードする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2027-04-30", "precision": "day" }
+      },
+      "beforeAfter": {
+        "after": { "text": "終了日以降はアプリは動作するが、セキュリティ パッチ・更新なし、Node.js 22 のサポートなし", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-09-23", "precision": "day" } },
+        { "label": "サポート終了", "when": { "date": "2027-04-30", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "サポート終了後も、アプリの作成・デプロイや実行は引き続き可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/language-support-policy", "locator": "提供終了のプロセス / 提供終了フェーズ", "retrievedAt": "2026-10-15T18:05:00Z" }] },
+            { "text": "新機能・セキュリティ パッチ・性能最適化の対象外。インスタンス数が制限される場合もある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/language-support-policy", "locator": "提供終了フェーズ", "retrievedAt": "2026-10-15T18:05:00Z" }] },
+            { "text": "サポート対象外のバージョンでは、サポートを受ける前にアップグレードが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/language-support-policy", "locator": "提供終了フェーズ / 重要", "retrievedAt": "2026-10-15T18:05:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Node.js 24", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ポータルの[全般設定]タブの [Node.js バージョン] から更新できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locator": "Node.js バージョンを変更するには", "retrievedAt": "2026-10-15T18:05:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Node.js 22 を使う関数アプリを棚卸しし、期限から逆算して移行・テストを計画する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "更新後は package.json の依存関係と host.json のバンドルの互換性を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locator": "トラブルシューティング / 関数アプリが起動しない", "retrievedAt": "2026-10-15T18:05:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-functions", "term": "Azure Functions", "type": "product", "oneLine": { "text": "インフラの管理なしでアプリを構築できる、サーバーレス ソリューション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T18:05:00Z" }] } },
+        { "termKey": "label-end-of-support", "term": "サポート終了", "type": "label", "oneLine": { "text": "バグ修正・セキュリティ更新・パッチが提供されなくなること。アプリ自体は動き続ける。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/language-support-policy", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-15T18:05:00Z" }] } },
+        { "termKey": "language-stack", "term": "言語スタック", "type": "term", "oneLine": { "text": "Functions でコードを書くプログラミング言語とそのバージョン。サポートは特定バージョンに限られる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locator": "冒頭", "retrievedAt": "2026-10-15T18:05:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "Azure Functions の言語スタック サポート ポリシー（全体に適用）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/language-support-policy", "locator": "提供終了のプロセス", "retrievedAt": "2026-10-15T18:05:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=572771",
+        "learn": [
+          { "title": "Azure Functions で言語スタックのバージョンを更新する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locale": "ja-jp" },
+          { "title": "Azure Functions 言語スタックのサポート ポリシー", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/language-support-policy", "locale": "ja-jp" },
+          { "title": "Azure Functionsでサポートされている言語", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/supported-languages", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
