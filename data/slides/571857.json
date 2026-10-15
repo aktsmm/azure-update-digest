@@ -1,0 +1,87 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571857"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T22:47:10Z"
+  },
+  "slides": [
+    {
+      "key": "571857",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "SQL Database Hyperscale サーバーレスの自動一時停止・再開",
+        "subtitleJa": "アイドル中はコンピューティング課金が止まり、ストレージ料金のみに（パブリック プレビュー）",
+        "en": "Public Preview: Azure SQL Database Hyperscale Serverless auto-pause and auto-resume"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "アイドル時間が長い・予測できる **Hyperscale サーバーレス** データベースの利用者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "非アクティブ時にコンピューティング課金を止め、コストを抑えられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。既存・新規どちらのデータベースでも有効化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "非アクティブ時に自動一時停止し、アクティビティが戻ると自動再開する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-overview?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-10-14T22:50:00Z" }] },
+            { "text": "一時停止中はコンピューティング コストがゼロで、ストレージ コストのみ発生する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-overview?view=azuresql", "locator": "コスト", "retrievedAt": "2026-10-14T22:50:00Z" }] },
+            { "text": "一時停止の条件は、遅延期間中にセッション数 0 かつユーザー ワークロードの CPU 0", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-auto-pause-resume?view=azuresql", "locator": "自動一時停止", "retrievedAt": "2026-10-14T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "最小の自動一時停止遅延は 60 分（既定も 60 分）。無効化は -1", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-auto-pause-resume?view=azuresql", "locator": "制限事項", "retrievedAt": "2026-10-14T22:50:00Z" }] },
+            { "text": "プレビュー中、名前付きレプリカは自動一時停止・再開に未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-auto-pause-resume?view=azuresql", "locator": "制限事項", "retrievedAt": "2026-10-14T22:50:00Z" }] },
+            { "text": "ジオレプリケーション・LTR・DNS エイリアスの利用中は自動一時停止されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-auto-pause-resume?view=azuresql", "locator": "自動一時停止を防ぐ機能", "retrievedAt": "2026-10-14T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "再開時の初回接続はエラー 40613 になり得るため、接続の再試行ロジックを備える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-auto-pause-resume?view=azuresql", "locator": "自動再開接続のトラブルシューティング", "retrievedAt": "2026-10-14T22:50:00Z" }] },
+            { "text": "まず検証環境で、アイドル時間の長さと再開遅延の許容度を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "Azure 上で提供される SQL Server ベースのマネージド データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-overview?view=azuresql", "locator": "適用対象", "retrievedAt": "2026-10-14T22:50:00Z" }] } },
+        { "termKey": "serverless-compute", "term": "サーバーレス コンピューティング", "type": "term", "oneLine": { "text": "需要に応じてコンピューティングを自動スケールし、使用量を秒単位で課金する単一データベース向けの層。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-overview?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-10-14T22:50:00Z" }] } },
+        { "termKey": "auto-pause-delay", "term": "自動一時停止の遅延", "type": "term", "oneLine": { "text": "データベースが非アクティブのまま自動で一時停止されるまでの時間を定める設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-overview?view=azuresql", "locator": "パフォーマンスの構成", "retrievedAt": "2026-10-14T22:50:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T22:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "サーバーレスは中国・ドイツの一部リージョンを除き世界中で提供（日本リージョンは対象）",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-sql/database/region-availability?view=azuresql", "locator": "Serverless region availability", "retrievedAt": "2026-10-14T22:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571857",
+        "learn": [
+          { "title": "Azure SQL Database のサーバーレス コンピューティング レベルにおける自動一時停止と自動再開", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-auto-pause-resume?view=azuresql", "locale": "ja-jp" },
+          { "title": "Azure SQL Database のサーバーレス コンピューティング レベル", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-overview?view=azuresql", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
