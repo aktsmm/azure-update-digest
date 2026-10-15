@@ -194,7 +194,7 @@ function bindDownload(r: QueryResult, q: Query) {
     };
     set("json", "JSON", n); set("pdf", "PDF", s); set("pptx", "PPTX", s);
     const c = document.getElementById("selcount");
-    if (c) c.textContent = `選択中 ${n} / ${r.items.length} 件`;
+    if (c) c.textContent = `出力対象 ${n} / ${r.items.length} 件`;
   };
   document.querySelectorAll<HTMLInputElement>("input[data-sel]").forEach((cb) => cb.addEventListener("change", () => {
     const key = cb.dataset.sel!;
@@ -317,6 +317,28 @@ async function fetchPdf(key: string, pw: string): Promise<ArrayBuffer> {
   }
 }
 
+function jstStamp(iso: string | null): string {
+  if (!iso || Number.isNaN(Date.parse(iso))) return "未取得";
+  return new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Tokyo", dateStyle: "short", timeStyle: "short" }).format(new Date(iso));
+}
+
+// counts come from the same period/filter module as the list, so the hero never disagrees with the headings
+function hero(): string {
+  const today = toJstDate(Date.now());
+  const run = (days: number) => runQuery(items, defaultQuery({ start: addDays(today, -(days - 1)), end: today }), meta.coverage, meta.snapshotAt);
+  const day = run(1), week = run(7);
+  const partial = day.coverage.status === "complete" && week.coverage.status === "complete" ? "" : "（一部のみ取得）";
+  return `<section class="hero"><div class="hero-main">
+      <p class="eyebrow">UNOFFICIAL UPDATE DIGEST</p>
+      <h1>Azure の更新を、埋もれさせない。</h1>
+      <p>Microsoft Release Communications の Azure 更新を毎日収集し、日本語の要約とスライドで追えるように整理します。重要な更新（廃止・セキュリティ・GA・リージョン追加・価格変更）を先頭に、新着を月別に遡れます。</p>
+      <div class="pills"><span class="pill">最終更新 <strong>${esc(jstStamp(meta.snapshotAt))}</strong>（JST）</span><span class="pill">取得状態 <strong>${meta.backfill.complete ? "全期間 取得済み" : "初期取得中"}</strong></span></div>
+    </div><div class="hero-stats">
+      <div class="stat"><span class="stat-label">追跡中の更新</span><strong>${meta.itemCount}</strong><span class="meta">累計・重複除去後</span></div>
+      <div class="stat"><span class="stat-label">新規（作成日基準）</span><strong>${day.items.length} / ${week.items.length}</strong><span class="meta">今日 / 過去7日${esc(partial)}</span></div>
+    </div></section>`;
+}
+
 function renderList(q: Query, heading: string, fixedMonth: string | null, basePath: string) {
   const r = runQuery(items, q, meta.coverage, meta.snapshotAt);
   const basisLabel = q.mode === "availability" ? "提供・廃止予定（月単位）" : q.basis === "created" ? "作成日基準" : "更新日基準";
@@ -325,7 +347,7 @@ function renderList(q: Query, heading: string, fixedMonth: string | null, basePa
     ? `<div class="empty">${r.coverage.status === "complete" ? "条件に一致する更新はありません。" : "取得範囲外・一部取得のため、0件とは断定できません。取得状態を確認してください。"}</div>` : "";
   const hl = q.mode === "dated" && r.highlights.length ? `<h2>重要更新（${r.highlights.length}件）</h2>${r.highlights.map(card).join("")}` : "";
   const note = q.mode === "availability" ? "<p class='meta'>提供時期は公式の月単位表記のまま表示しています（日付への換算はしていません）。</p>" : "";
-  app.innerHTML = `<h1>${esc(heading)}</h1>
+  app.innerHTML = `${basePath === "/" ? `${hero()}<h2>${esc(heading)}</h2>` : `<h1>${esc(heading)}</h1>`}
     <p><strong>${esc(q.period.start)} 〜 ${esc(q.period.end)}</strong>（JST・${basisLabel}）: <strong>${r.items.length} 件</strong> ${filtered}</p>
     ${coverageBanner(r)}${backfillPanel()}${periodForm(q, fixedMonth, downloadBar(r, q))}${note}${hl}
     <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${r.items.map(card).join("")}${empty}`;
