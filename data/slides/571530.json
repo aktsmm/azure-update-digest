@@ -1,0 +1,86 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571530"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T18:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "571530",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "SAP 向け Mdsv4 / Msv4 シリーズ VM がパブリック プレビューに",
+        "subtitleJa": "第 6 世代 Intel Xeon と最新の Azure Boost を採用したメモリ最適化 VM",
+        "en": "Public Preview: Mdsv4 and Msv4 Series Virtual Machines for SAP"
+      },
+      "meta": {
+        "publishedJst": "2026-09-19",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Virtual Machines"],
+        "categories": ["compute"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "SAP などの大規模メモリ ワークロードを Azure VM で動かす**インフラ / SAP 担当者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "メモリ最適化 VM に第 6 世代 Intel Xeon 搭載の新シリーズが加わる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。プレビューは本番利用を想定しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-15T18:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "SAP ワークロードなどのメモリ集約型向けに、性能・スケーラビリティ・効率・信頼性を高めた Mdsv4 / Msv4 を試せる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Mdsv4 / Msv4: 16～256 vCPU、256～3892 GiB のメモリ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/memory-optimized/mdsv4-series", "locator": "ホストの仕様", "retrievedAt": "2026-10-15T18:40:00Z" }] },
+            { "text": "NVMe のリモート ディスクで最大 225,000 IOPS / 5.5 GBps", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/memory-optimized/msv4-series", "locator": "冒頭", "retrievedAt": "2026-10-15T18:40:00Z" }] },
+            { "text": "ローカル一時ストレージ: Mdsv4 はあり（最大 2 本）、Msv4 はなし", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/memory-optimized/msv4-series", "locator": "ローカル ストレージ", "retrievedAt": "2026-10-15T18:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "第 2 世代 VM のみ。第 1 世代 VM・休止状態・入れ子仮想化は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/memory-optimized/mdsv4-series", "locator": "機能のサポート", "retrievedAt": "2026-10-15T18:40:00Z" }] },
+            { "text": "ライブ マイグレーションは制限付き、メモリ保持更新は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/memory-optimized/mdsv4-series", "locator": "機能のサポート", "retrievedAt": "2026-10-15T18:40:00Z" }] },
+            { "text": "書き込みアクセラレータは非対応。エフェメラル OS ディスクは Msv4 で非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/memory-optimized/msv4-series", "locator": "機能のサポート", "retrievedAt": "2026-10-15T18:40:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "必要なメモリ量とローカル ディスクの要否で Mdsv4 / Msv4 を選び、検証環境で性能と制約を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "virtual-machines", "term": "Azure Virtual Machines", "type": "product", "oneLine": { "text": "Azure 上で仮想マシンを作成して実行するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/memory-optimized/mdsv4-series", "locator": "冒頭", "retrievedAt": "2026-10-15T18:40:00Z" }] } },
+        { "termKey": "memory-optimized", "term": "メモリ最適化 VM", "type": "feature", "oneLine": { "text": "メモリとストレージに最適化された VM シリーズ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/memory-optimized/mdsv4-series", "locator": "冒頭", "retrievedAt": "2026-10-15T18:40:00Z" }] } },
+        { "termKey": "iops", "term": "IOPS", "type": "term", "oneLine": { "text": "1 秒あたりの入力/出力操作数。ディスク性能の指標。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/memory-optimized/mdsv4-series", "locator": "テーブル定義", "retrievedAt": "2026-10-15T18:40:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-15T18:40:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571530",
+        "learn": [
+          { "title": "Mdsv4 中メモリ サイズ シリーズ (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/memory-optimized/mdsv4-series", "locale": "ja-jp" },
+          { "title": "Msv4 中メモリ サイズ シリーズ (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/memory-optimized/msv4-series", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
