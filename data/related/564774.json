@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "canonicalKey": "564774",
+  "status": "verified",
+  "sourceQuery": "Azure Batch pool VM size retirement migrate",
+  "checkedAt": "2026-10-15T05:30:00Z",
+  "candidates": [
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/batch/batch-pool-vm-sizes",
+      "title": "Azure Batch プールのコンピューティング ノード用の VM サイズとイメージを選択する",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "Batch プールで使用する VM サイズの選択方法を説明しており、移行先の検討に役立つ。",
+      "checkedAt": "2026-10-15T05:30:00Z"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirements-and-capacity-restrictions",
+      "title": "VM サイズ シリーズの提供終了、容量拡張の制限、モダナイゼーション ガイダンス",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "Av2、F、G、Lsv2 などの VM シリーズ廃止と移行先のガイダンスを扱う。",
+      "checkedAt": "2026-10-15T05:30:00Z"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/batch/batch-pool-update-properties",
+      "title": "Batch プール プロパティを更新する",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "既存の Batch プールの VM サイズを更新する手順に関連する。",
+      "checkedAt": "2026-10-15T05:30:00Z"
+    }
+  ]
+}

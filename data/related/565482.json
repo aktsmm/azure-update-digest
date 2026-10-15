@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "canonicalKey": "565482",
+  "status": "verified",
+  "sourceQuery": "Azure Load Balancer inbound NAT rule v2 virtual machine scale sets migrate NAT pool",
+  "checkedAt": "2026-10-15T05:30:00Z",
+  "candidates": [
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/load-balancer/load-balancer-nat-pool-migration",
+      "title": "インバウンド NAT 規則バージョン 1 からバージョン 2 に移行する",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "NAT プール（v1）から Inbound NAT rules v2 への移行手順を説明している。",
+      "checkedAt": "2026-10-15T05:30:00Z"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/load-balancer/inbound-nat-rules",
+      "title": "受信 NAT のルール",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "Inbound NAT rules の概念と v1 / v2 の違いを説明している。",
+      "checkedAt": "2026-10-15T05:30:00Z"
+    }
+  ]
+}
