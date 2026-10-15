@@ -45,6 +45,7 @@ a { color:var(--accent); }
 .card-head h3 { margin:0 0 4px; flex:1; min-width:0; }
 .card-head .sel { display:inline-flex; padding:4px 2px 0 0; cursor:pointer; }
 .card-head .sel input { width:18px; height:18px; margin:0; cursor:pointer; }
+.card-head .no { flex:none; min-width:2em; padding:0 6px; text-align:center; font-size:.8rem; font-weight:700; line-height:1.7; color:#fff; background:var(--accent); border-radius:999px; margin-top:2px; }
 .selbar { display:inline-flex; gap:4px; align-items:center; font-size:.85rem; }
 .hero { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(0,1fr); gap:16px; margin:16px 0 8px; padding:20px 22px; border:1px solid var(--line); border-radius:14px; background:linear-gradient(135deg,#eaf3fd,#fff); }
 .hero h1 { font-size:1.7rem; margin:4px 0 8px; line-height:1.3; }
