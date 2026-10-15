@@ -1,0 +1,125 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["563536"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T18:33:00Z"
+  },
+  "slides": [
+    {
+      "key": "563536",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Foundry Agent Service に「Foundry Routines」が登場",
+        "subtitleJa": "スケジュール・タイマー・イベントでエージェントを自動実行（パブリック プレビュー）",
+        "en": "Public Preview: Foundry Routines in Foundry Agent Service"
+      },
+      "meta": {
+        "publishedJst": "2026-09-19",
+        "modifiedJst": "2026-09-19",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "June" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Foundry Agent Service で公開済みの**エージェントを定期・イベント起動したい開発者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "Logic Apps や Functions などの外部の仕組みなしで、トリガーを Foundry 内で管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向けで本番 SLA の対象外。自動実行が必要なら検証環境で試す", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "スケジュールやイベントでの起動には、Logic Apps・Azure Functions・Webhook・キューなどの外部構成が必要だった",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        },
+        "after": {
+          "text": "トリガー・実行・可観測性を、管理された Foundry ワークスペース内で完結できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "トリガー: 定期（schedule）/ 一回限り（timer）/ イベント（teams・github_issue）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/use-routines", "locator": "既知の問題と制限事項", "retrievedAt": "2026-10-15T18:33:00Z" }]
+            },
+            {
+              "text": "アクション: 1 つの Foundry エージェントの呼び出し。実行記録を後から確認できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/use-routines", "locator": "冒頭 / 既知の問題と制限事項", "retrievedAt": "2026-10-15T18:33:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "対象はプロンプト／ホステッド エージェント。ワークフロー エージェントは非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/use-routines", "locator": "Prerequisites", "retrievedAt": "2026-10-15T18:33:00Z" }]
+            },
+            {
+              "text": "1 ルーチンにつきトリガー 1 つ・アクション 1 つ。顧客管理キー（CMK）暗号化は非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/use-routines", "locator": "既知の問題と制限事項", "retrievedAt": "2026-10-15T18:33:00Z" }]
+            },
+            {
+              "text": "スケジュールは最短 5 分に 1 回。西日本など一部リージョンでは利用不可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/use-routines", "locator": "既知の問題と制限事項", "retrievedAt": "2026-10-15T18:33:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "自動実行したいエージェントが対応種別か、利用リージョンが対象かを先に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "routine", "term": "ルーチン", "type": "feature",
+          "oneLine": { "text": "スケジュール・特定の時刻・外部イベントに応じてエージェントを起動する、名前付きの自動化規則。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/use-routines", "locator": "冒頭", "retrievedAt": "2026-10-15T18:33:00Z" }] }
+        },
+        {
+          "termKey": "trigger", "term": "トリガー", "type": "term",
+          "oneLine": { "text": "ルーチンを起動するきっかけ（スケジュール、時刻、イベント）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/use-routines", "locator": "冒頭", "retrievedAt": "2026-10-15T18:33:00Z" }] }
+        },
+        {
+          "termKey": "action", "term": "アクション", "type": "term",
+          "oneLine": { "text": "ルーチンが呼び出すエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/use-routines", "locator": "冒頭", "retrievedAt": "2026-10-15T18:33:00Z" }] }
+        },
+        {
+          "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label",
+          "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-15T18:33:00Z" }] }
+        }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "西日本は対象外。東日本は除外リージョンに含まれない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/use-routines", "locator": "既知の問題と制限事項（リージョン別の可用性）", "retrievedAt": "2026-10-15T18:33:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=563536",
+        "learn": [{ "title": "ルーチンを使用してエージェントを自動化する", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/use-routines", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
