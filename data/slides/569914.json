@@ -1,0 +1,103 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569914"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T16:54:32Z"
+  },
+  "slides": [
+    {
+      "key": "569914",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Azure IoT Central が 2029-09-20 に廃止",
+        "subtitleJa": "期日までは現状のまま利用可能。IoT Hub / DPS / Fabric への移行計画を早めに",
+        "en": "Retirement: Azure IoT Central will be retired on September 20, 2029"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "Retirement", "year": 2029, "month": "September" }],
+        "status": null,
+        "products": ["Azure IoT Central"],
+        "categories": ["other"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Azure IoT Central のアプリケーションを利用している方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "2029-09-20 以降、IoT Central アプリケーションは利用できなくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "主な日付", "retrievedAt": "2026-10-15T16:55:00Z" }] },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "2029-09-20 までに Azure IoT Hub / DPS などへ移行する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2029-09-20", "precision": "day" }
+      },
+      "beforeAfter": {
+        "before": { "text": "既存アプリは 2029-09-20 まで現状のまま動作する（新規作成は 2026-09-23 から不可）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "主な日付", "retrievedAt": "2026-10-15T16:55:00Z" }] },
+        "after": { "text": "2029-09-20 以降は IoT Central アプリケーションを利用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "主な日付", "retrievedAt": "2026-10-15T16:55:00Z" }] }
+      },
+      "timeline": [
+        { "label": "新規アプリ作成が不可に", "when": { "date": "2026-09-23", "precision": "day" } },
+        { "label": "発表", "when": { "date": "2026-09-30", "precision": "day" } },
+        { "label": "廃止", "when": { "date": "2029-09-20", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Microsoft は Azure ネイティブの IoT プラットフォームサービスへ投資を集中する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "Azure IoTの進化の次のステップ", "retrievedAt": "2026-10-15T16:55:00Z" }] },
+            { "text": "廃止日までは現状のまま継続利用でき、段階的に移行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "始め方", "retrievedAt": "2026-10-15T16:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "推奨は Azure IoT Hub と DPS、Microsoft Fabric の組み合わせ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "現代のAzure IoTプラットフォーム", "retrievedAt": "2026-10-15T16:55:00Z" }] },
+            { "text": "接続は IoT Hub、プロビジョニングは DPS、分析は Fabric に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "現代のAzure IoTプラットフォーム（対応表）", "retrievedAt": "2026-10-15T16:55:00Z" }] },
+            { "text": "機器の在庫・ガバナンスは Azure Device Registry（プレビュー）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "現代のAzure IoTプラットフォーム（対応表）", "retrievedAt": "2026-10-15T16:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "デバイステンプレート、ルール、エクスポート、ダッシュボード、ユーザーなどを棚卸しする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "始め方", "retrievedAt": "2026-10-15T16:55:00Z" }] },
+            { "text": "移行プレイブックで IoT Central のシナリオを Azure IoT サービスに対応付ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "始め方", "retrievedAt": "2026-10-15T16:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "support", "heading": "支援リソース", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Fabric Real-Time Intelligence 向けのソリューションアクセラレーターが利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "Fabricソリューションアクセラレータ", "retrievedAt": "2026-10-15T16:55:00Z" }] },
+            { "text": "移行パートナーや Microsoft アカウントチームにも相談できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "移行パートナー", "retrievedAt": "2026-10-15T16:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-iot-central", "term": "Azure IoT Central", "type": "product", "oneLine": { "text": "完全に管理されたアプリケーション体験を提供する IoT サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/howto-migrate-to-azure-native-iot", "locator": "冒頭", "retrievedAt": "2026-10-15T16:55:00Z" }] } },
+        { "termKey": "azure-iot-hub", "term": "Azure IoT Hub / DPS", "type": "product", "oneLine": { "text": "安全で大規模なデバイス接続とプロビジョニングの基盤を提供するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "Azure IoTの進化の次のステップ", "retrievedAt": "2026-10-15T16:55:00Z" }] } },
+        { "termKey": "azure-device-registry", "term": "Azure Device Registry", "type": "feature", "oneLine": { "text": "デバイスを ARM リソースとして Azure の管理下に置くための仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "Azure IoTの進化の次のステップ", "retrievedAt": "2026-10-15T16:55:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止（リタイア）", "type": "label", "oneLine": { "text": "機能や製品が提供されなくなり、更新やサポートも終了する最終段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Retirement", "retrievedAt": "2026-10-15T16:55:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "サービス全体の廃止で、リージョンを問わず適用",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locator": "主な日付", "retrievedAt": "2026-10-15T16:55:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569914",
+        "learn": [
+          { "title": "Azure IoT Central は進化しています", "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/iot-central-evolution", "locale": "ja-jp" },
+          { "title": "IoT CentralからAzureネイティブのIoTプラットフォームサービスアーキテクチャへ移行する", "url": "https://learn.microsoft.com/ja-jp/azure/iot-central/core/howto-migrate-to-azure-native-iot", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
