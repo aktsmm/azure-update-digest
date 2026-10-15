@@ -1,0 +1,128 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["572219"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T18:26:00Z"
+  },
+  "slides": [
+    {
+      "key": "572219",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Functions が PowerShell 7.6 に対応（GA）",
+        "subtitleJa": "PowerShell 7.6 でローカル開発し、Functions のプランへデプロイできます",
+        "en": "Generally Available: Azure Functions support for PowerShell 7.6"
+      },
+      "meta": {
+        "publishedJst": "2026-09-22",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure Functions"],
+        "categories": ["compute", "security", "containers"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**PowerShell で Azure Functions を開発・運用している方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "PowerShell 7.6 でアプリを開発・デプロイできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "7.6 を使いたい場合に、バージョンを更新する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "対応プランは Windows Consumption、Premium、Dedicated、Flex Consumption",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locator": "PowerShell のバージョン", "retrievedAt": "2026-10-15T18:30:00Z" }]
+            },
+            {
+              "text": "Functions ランタイム 4.x で PowerShell 7.6（.NET 10）が選べる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locator": "PowerShell のバージョン", "retrievedAt": "2026-10-15T18:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ポータル: 構成 → 全般設定 → PowerShell のバージョンを選び保存",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locator": "PowerShell のバージョンの変更", "retrievedAt": "2026-10-15T18:30:00Z" }]
+            },
+            {
+              "text": "ローカル: local.settings.json に FUNCTIONS_WORKER_RUNTIME_VERSION を 7.6 で設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locator": "特定のバージョンでのローカルな実行", "retrievedAt": "2026-10-15T18:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Linux Consumption では 7.6 は使えない。7.4 が最後の対応版",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locator": "Important", "retrievedAt": "2026-10-15T18:30:00Z" }]
+            },
+            {
+              "text": "ローカル実行には .NET 10 が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locator": "特定のバージョンでのローカルな実行", "retrievedAt": "2026-10-15T18:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "PowerShell 7.4 は .NET 8 で動作し、7.6 は .NET 10 で動作する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locator": "PowerShell のバージョン", "retrievedAt": "2026-10-15T18:30:00Z" }]
+            },
+            {
+              "text": "FUNCTIONS_WORKER_RUNTIME_VERSION の「~7」は 7.0.x を指す",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locator": "特定のバージョンでのローカルな実行", "retrievedAt": "2026-10-15T18:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "更新前に、ステージング スロットで動作を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "スロットを使う場合は、更新を対象のスロットに適用する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locator": "概要", "retrievedAt": "2026-10-15T18:30:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-functions", "term": "Azure Functions", "type": "product", "oneLine": { "text": "PowerShell などで書いた関数を、トリガーに応じて実行するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locator": "冒頭", "retrievedAt": "2026-10-15T18:30:00Z" }] } },
+        { "termKey": "powershell", "term": "PowerShell", "type": "term", "oneLine": { "text": "Functions では、トリガー時に実行される PowerShell スクリプトとして関数を書ける。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locator": "冒頭", "retrievedAt": "2026-10-15T18:30:00Z" }] } },
+        { "termKey": "language-stack", "term": "言語スタック", "type": "term", "oneLine": { "text": "Functions がサポートする言語とそのバージョン。サポートは特定のバージョンに限られる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locator": "冒頭", "retrievedAt": "2026-10-15T18:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-15T18:30:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=572219",
+        "learn": [
+          { "title": "Azure Functions PowerShell 開発者ガイド", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locale": "ja-jp" },
+          { "title": "Azure Functions で言語スタックのバージョンを更新する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
