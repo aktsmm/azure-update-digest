@@ -63,6 +63,14 @@ describe("classification", () => {
     expect(classifyCategories({ ...base, productCategories: ["Compute", "Containers"] }, cats)).toEqual(["compute", "containers"]);
     expect(classifyCategories(base, cats)).toEqual(["other"]);
   });
+  it("classifies integration / IoT / developer tools from productCategories and untagged titles from the title", () => {
+    const base = { title: "x", tags: [], products: [], productCategories: [], availabilities: [], status: null };
+    expect(classifyCategories({ ...base, productCategories: ["Integration"] }, cats)).toEqual(["integration"]);
+    expect(classifyCategories({ ...base, productCategories: ["Internet of Things"] }, cats)).toEqual(["iot"]);
+    expect(classifyCategories({ ...base, productCategories: ["DevOps"] }, cats)).toEqual(["devtools"]);
+    expect(classifyCategories({ ...base, title: "Generally Available: SQL Server 2025" }, cats)).toEqual(["databases"]);
+    expect(classifyCategories({ ...base, title: "Microsoft Marketplace multiparty offers" }, cats)).toEqual(["other"]);
+  });
   it("scores retirement high and unknown rings as normal", () => {
     const base = { title: "Retirement: X will be retired on May 1, 2027", tags: ["Retirements"], products: [], productCategories: [], availabilities: [{ ring: "Retirement", year: 2027, month: "May" }], status: null };
     expect(scoreImportance(base, imp).level).toBe("high");

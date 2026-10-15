@@ -131,7 +131,7 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 
 ### 7.2 表示カテゴリ
 
-`config/categories.json` で定義（Compute / Networking / Storage / Databases / AI / Security / Containers / 運用・ガバナンス / その他）。複数所属可で、どれにも当たらなければ「その他」です。マッピングは設定ファイルなので、コード変更なしに調整できます。
+`config/categories.json` で定義（Compute / Networking / Storage / Databases / AI / Security / Containers / 運用・ガバナンス / Integration / IoT / Developer tools / Web & Mobile / その他。MRC の productCategories の実データで「その他」に落ちていた分から追加）。複数所属可で、どれにも当たらなければ「その他」です。マッピングは設定ファイルなので、コード変更なしに調整できます。
 
 ### 7.3 重要度
 
