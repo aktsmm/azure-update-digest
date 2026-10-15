@@ -1,0 +1,148 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573041"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T17:13:00Z"
+  },
+  "slides": [
+    {
+      "key": "573041",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure NetApp Files の SMB で Entra Kerberos 認証（プレビュー）",
+        "subtitleJa": "ドメインコントローラーへの経路なしで、ハイブリッド / クラウド専用 ID が SMB 共有にアクセス",
+        "en": "Public Preview : Microsoft entra kerberos authentication for Azure NetApp Files"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure NetApp Files"],
+        "categories": ["storage"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Azure NetApp Files の **SMB ボリュームを使う／検討している方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "AD DS への経路なしで、Entra ID の Kerberos チケットで認証できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "評価向け。NFS・デュアルプロトコルは対象外で、AD DS が必要",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/understand-entra-id", "locator": "Note", "retrievedAt": "2026-10-15T17:13:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "ハイブリッド / クラウド専用 ID が、クラウド発行の Kerberos チケットで SMB 認証できる。クライアントに AD DS ドメインコントローラーへのネットワーク経路は不要",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "対象は SMB ボリュームのみ。ハイブリッド ID とクラウド専用 ID の両方に対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/understand-entra-id", "locator": "サポートされる認証シナリオ", "retrievedAt": "2026-10-15T17:13:00Z" }]
+            },
+            {
+              "text": "認証は Entra Kerberos が担当。オンプレ AD DS の Azure 拡張は不要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/understand-entra-id", "locator": "サポートされる認証シナリオ", "retrievedAt": "2026-10-15T17:13:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "NFS・デュアルプロトコル・NFSv4.1 Kerberos は引き続き AD DS が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/understand-entra-id", "locator": "Note", "retrievedAt": "2026-10-15T17:13:00Z" }]
+            },
+            {
+              "text": "未対応: ファイル アクセス ログ、キャッシュボリューム、アプリケーションボリュームグループ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/configure-entra-kerberos-authentication-for-hybrid-cloud-identities", "locator": "サポートされていない機能", "retrievedAt": "2026-10-15T17:13:00Z" }]
+            },
+            {
+              "text": "NetApp アカウントごとに Entra ID 接続は 1 つ。AD DS 接続とは併用不可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/configure-entra-kerberos-authentication-for-hybrid-cloud-identities", "locator": "考慮事項", "retrievedAt": "2026-10-15T17:13:00Z" }]
+            }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "prerequisites", "heading": "利用開始の前提", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "機能 ANFEntraID の登録が必要。Entra アプリ登録と Key Vault の証明書も用意する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/configure-entra-kerberos-authentication-for-hybrid-cloud-identities", "locator": "機能を登録する / Requirements", "retrievedAt": "2026-10-15T17:13:00Z" }]
+            },
+            {
+              "text": "標準 SKU の NAT ゲートウェイ経由で Microsoft Graph へ HTTPS（TCP 443）接続が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/understand-entra-id", "locator": "ネットワークの要件", "retrievedAt": "2026-10-15T17:13:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "compare", "heading": "AD DS との使い分け", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "DC の展開・保守やオンプレとの接続を避けたいクラウド中心の環境に向く",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/understand-entra-id", "locator": "Azure NetApp FilesでMicrosoft Entra ID認証を使うタイミング", "retrievedAt": "2026-10-15T17:13:00Z" }]
+            },
+            {
+              "text": "認証で DC に直接接続する運用や NFS が必要なら AD DS を継続",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/understand-entra-id", "locator": "AD DSの考慮事項", "retrievedAt": "2026-10-15T17:13:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "SMB のみか、NAT ゲートウェイを用意できるかを確認し、検証環境で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-netapp-files", "term": "Azure NetApp Files", "type": "product", "oneLine": { "text": "Azure ネイティブの、エンタープライズ クラスの高パフォーマンス ファイル ストレージ サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/azure-netapp-files-introduction", "locator": "冒頭", "retrievedAt": "2026-10-15T17:13:00Z" }] } },
+        { "termKey": "entra-kerberos", "term": "Microsoft Entra Kerberos", "type": "feature", "oneLine": { "text": "Entra ID が Kerberos 認証を担い、AD DS の拡張や DC への接続を不要にする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/understand-entra-id", "locator": "Note", "retrievedAt": "2026-10-15T17:13:00Z" }] } },
+        { "termKey": "hybrid-identity", "term": "ハイブリッド ID", "type": "term", "oneLine": { "text": "オンプレミスの AD DS で作成され、Microsoft Entra ID と同期されるユーザー アカウント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/understand-entra-id", "locator": "サポートされる認証シナリオ", "retrievedAt": "2026-10-15T17:13:00Z" }] } },
+        { "termKey": "cloud-only-identity", "term": "クラウド専用 ID", "type": "term", "oneLine": { "text": "Microsoft Entra ID にのみ存在し、オンプレミスのフットプリントがないユーザー アカウント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/understand-entra-id", "locator": "サポートされる認証シナリオ", "retrievedAt": "2026-10-15T17:13:00Z" }] } },
+        { "termKey": "smb-volume", "term": "SMB ボリューム", "type": "term", "oneLine": { "text": "SMB プロトコルでクライアントと共有できる、Azure NetApp Files のボリューム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/azure-netapp-files-introduction", "locator": "冒頭", "retrievedAt": "2026-10-15T17:13:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのため全ユーザーへ提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-15T17:13:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "機能ページのサポート リージョン一覧に東日本・西日本が含まれる",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/understand-entra-id", "locator": "サポートされているリージョン", "retrievedAt": "2026-10-15T17:13:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573041",
+        "learn": [
+          { "title": "Azure NetApp Files での Microsoft Entra Kerberos について理解する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/understand-entra-id", "locale": "ja-jp" },
+          { "title": "Azure NetApp Files での Microsoft Entra Kerberos 認証を構成する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/configure-entra-kerberos-authentication-for-hybrid-cloud-identities", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
