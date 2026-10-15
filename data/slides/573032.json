@@ -1,0 +1,159 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573032"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T17:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "573032",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure NetApp Files のクール アクセス QoS 改善が GA に",
+        "subtitleJa": "Premium / Ultra で、クール層のデータ量に応じてスループットが自動調整されます",
+        "en": "Generally Available: Storage with cool access enhancement"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure NetApp Files"],
+        "categories": ["storage"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure NetApp Files の Premium / Ultra** でクール アクセスを使う（使いたい）方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ホット層の性能を保ちつつ、手動調整なしでクール アクセスの効果を得やすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "更新前から使う既存ボリュームは、新規容量プールへ移すと新 QoS が適用される", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "更新前にクール アクセスを有効にしたボリュームは、TiB あたり Premium 36 / Ultra 68 MiB/秒の旧 QoS 制限が適用される",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locator": "Premium および Ultra サービス レベルのスループット", "retrievedAt": "2026-10-15T17:10:00Z" }]
+        },
+        "after": {
+          "text": "クール層のデータ量に基づき一定間隔で調整。ホット層は 64 / 128、クール層は 16 MiB/秒（TiB あたり）で計算",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locator": "Premium および Ultra サービス レベルのスループット", "retrievedAt": "2026-10-15T17:10:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "クール層のデータ量に基づき、スループット上限が一定間隔で調整される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locator": "Premium および Ultra サービス レベルのスループット", "retrievedAt": "2026-10-15T17:10:00Z" }]
+            },
+            {
+              "text": "Premium の上限 = ホット TiB × 64 + クール TiB × 16 MiB/秒",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locator": "スループット制限の計算表", "retrievedAt": "2026-10-15T17:10:00Z" }]
+            },
+            {
+              "text": "例: ホット 8 TiB・クール 2 TiB なら最大 544 MiB/秒",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locator": "Premium サービス レベルの例", "retrievedAt": "2026-10-15T17:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "容量プールの作成時に「クール アクセスを有効にする」をオン（既存プールは右クリックで有効化）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/manage-cool-access", "locator": "クール アクセス用に容量プールを構成する", "retrievedAt": "2026-10-15T17:10:00Z" }]
+            },
+            {
+              "text": "ボリュームでクール アクセスと階層化ポリシー（Auto / SnapshotOnly）を設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/manage-cool-access", "locator": "クール アクセス用にボリュームを構成する", "retrievedAt": "2026-10-15T17:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "自動 QoS が有効で、クール データが 100 GiB 超のボリュームが対象",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locator": "Premium および Ultra サービス レベルのスループット", "retrievedAt": "2026-10-15T17:10:00Z" }]
+            },
+            {
+              "text": "容量プールのクール アクセス設定は、プール単位では無効に戻せない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/manage-cool-access", "locator": "クール アクセスが有効な容量プールについての考慮事項", "retrievedAt": "2026-10-15T17:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "フレキシブル レベルは、クール アクセスでも設定したスループット制限を維持",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/manage-cool-access", "locator": "クール アクセスの一般的な考慮事項", "retrievedAt": "2026-10-15T17:10:00Z" }]
+            },
+            {
+              "text": "スループットは容量プール単位でなく、ボリューム単位で計算される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locator": "Note", "retrievedAt": "2026-10-15T17:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "非アクティブなデータをクール層へ移してコストを抑える用途に向く",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locator": "冒頭", "retrievedAt": "2026-10-15T17:10:00Z" }]
+            },
+            {
+              "text": "クライアントの最大待機時間は、どのサービス レベルでも保証されない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/manage-cool-access", "locator": "クール アクセスの一般的な考慮事項", "retrievedAt": "2026-10-15T17:10:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-netapp-files", "term": "Azure NetApp Files", "type": "product", "oneLine": { "text": "Standard・Premium・Ultra などのサービス レベルを持つ、Azure のファイル ストレージ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locator": "冒頭", "retrievedAt": "2026-10-15T17:10:00Z" }] } },
+        { "termKey": "cool-access", "term": "クール アクセス", "type": "feature", "oneLine": { "text": "非アクティブなデータをクール層へ移し、コストを削減する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locator": "冒頭", "retrievedAt": "2026-10-15T17:10:00Z" }] } },
+        { "termKey": "hot-cool-tier", "term": "ホット層 / クール層", "type": "term", "oneLine": { "text": "ホット層は Azure NetApp Files ストレージ、クール層は Azure ストレージ アカウント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locator": "冒頭", "retrievedAt": "2026-10-15T17:10:00Z" }] } },
+        { "termKey": "qos", "term": "QoS", "type": "term", "oneLine": { "text": "ボリュームごとの最大スループット制限を決める仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locator": "Premium および Ultra サービス レベルのスループット", "retrievedAt": "2026-10-15T17:10:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-15T17:10:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Premium / Ultra のクール アクセス スループットの対応リージョンに東日本・西日本を含む",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locator": "サポートされているリージョン", "retrievedAt": "2026-10-15T17:10:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573032",
+        "learn": [
+          { "title": "クール アクセスを使用する Azure NetApp Files ストレージ", "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/cool-access-introduction", "locale": "ja-jp" },
+          { "title": "クール アクセスで Azure NetApp Files ストレージを管理する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-netapp-files/manage-cool-access", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
