@@ -178,11 +178,7 @@ function downloadBar(r: QueryResult, q: Query): string {
   const pptx = pdfCrypto && slideEntries.size
     ? `<button type="button" data-dl="pptx" title="選択した更新を編集できる PowerPoint（.pptx）で。ダウンロードにはパスワードが必要です"></button>`
     : "";
-  return `<span class="dl-actions" id="dl"><button type="button" data-dl="json" title="選択した更新（スライド JSON を含む）"></button>${pdf}${pptx}${sample}<span class="meta" id="dl-status"></span></span>`;
-}
-
-function selectionBar(): string {
-  return `<div class="selbar"><span id="selcount"></span><button type="button" data-sel-all>すべて選択</button><button type="button" data-sel-none>すべて解除</button><span class="meta">チェックを外した更新は JSON・PDF・PPTX に含まれません</span></div>`;
+  return `<span class="dl-actions" id="dl"><span class="selbar"><span id="selcount"></span><button type="button" class="mini" data-sel-all title="表示中の更新をすべて選択">全選択</button><button type="button" class="mini" data-sel-none title="表示中の更新をすべて解除">全解除</button></span><button type="button" data-dl="json" title="選択した更新（スライド JSON を含む）"></button>${pdf}${pptx}${sample}<span class="meta" id="dl-status"></span></span>`;
 }
 
 function bindDownload(r: QueryResult, q: Query) {
@@ -332,7 +328,7 @@ function renderList(q: Query, heading: string, fixedMonth: string | null, basePa
   app.innerHTML = `<h1>${esc(heading)}</h1>
     <p><strong>${esc(q.period.start)} 〜 ${esc(q.period.end)}</strong>（JST・${basisLabel}）: <strong>${r.items.length} 件</strong> ${filtered}</p>
     ${coverageBanner(r)}${backfillPanel()}${periodForm(q, fixedMonth, downloadBar(r, q))}${note}${hl}
-    <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${selectionBar()}${r.items.map(card).join("")}${empty}`;
+    <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${r.items.map(card).join("")}${empty}`;
   bind(q, fixedMonth, basePath);
   bindDownload(r, q);
 }
