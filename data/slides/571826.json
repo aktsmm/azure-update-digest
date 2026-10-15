@@ -1,0 +1,138 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571826"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T18:43:09Z"
+  },
+  "slides": [
+    {
+      "key": "571826",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Foundry エージェントの有効化・無効化を Agent 365 で管理（GA）",
+        "subtitleJa": "管理者が Admin Center から、開発者の手を借りずに Foundry エージェントの利用可否を切り替えられます",
+        "en": "Generally Available: Enable and disable controls for Microsoft Foundry agents in Agent 365"
+      },
+      "meta": {
+        "publishedJst": "2026-09-19",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "組織の **IT / ガバナンス管理者**（Foundry エージェントを管理する方）", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "Foundry エージェントを他のエージェントと同じ画面で一元的に制御できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Foundry エージェントを管理する管理者は運用手順に反映", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Admin Center の Agent 365 ガバナンスで、Foundry エージェントの有効化・無効化を開発者の介入なしに実行できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Agent 365 ガバナンスで、組織全体の Foundry エージェントの利用可否を制御", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "無効化するとエンドポイントがオフラインになり、全チャネルの要求を拒否",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-agent-infrastructure-entra-admin", "locator": "Disable と Enable", "retrievedAt": "2026-10-15T18:50:00Z" }]
+            },
+            {
+              "text": "エージェントとそのバージョンはそのまま残り、有効化で再びオンラインに",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-agent-infrastructure-entra-admin", "locator": "Disable と Enable", "retrievedAt": "2026-10-15T18:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Microsoft Admin Center を開き、Agent 365 のガバナンス コントロールを使う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "管理センターの [エージェント] → [すべてのエージェント] で対象を選択して操作",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-actions", "locator": "Foundry エージェントを開始または停止する", "retrievedAt": "2026-10-15T18:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Entra のグローバル管理者または AI 管理者ロールが必要。PIM 利用時は先にロールを有効化",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-agent-infrastructure-entra-admin", "locator": "前提条件", "retrievedAt": "2026-10-15T18:50:00Z" }]
+            },
+            {
+              "text": "Azure 側の操作には Azure のロール割り当て（無効化・有効化は Foundry ユーザー）が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-agent-infrastructure-entra-admin", "locator": "適切なロールを割り当てる", "retrievedAt": "2026-10-15T18:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ブロック: 組織全体でユーザーが使えなくする / 開始・停止: 基盤の Azure インフラを起動・停止",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-actions", "locator": "エージェント アクション", "retrievedAt": "2026-10-15T18:50:00Z" }]
+            },
+            {
+              "text": "削除は Azure リソースを完全に削除するため、無効化や停止を優先",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-agent-infrastructure-entra-admin", "locator": "冒頭", "retrievedAt": "2026-10-15T18:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "問題のあるエージェントを、削除せず一時的に利用停止したい場面で使う", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "ブロック・削除・復元・所有者変更などの操作も順次拡大中",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-foundry", "term": "Microsoft Foundry", "type": "product", "oneLine": { "text": "Foundry Agent Service などでエージェントを構築し、コントロール プレーンで管理できるプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-agent-infrastructure-entra-admin", "locator": "冒頭", "retrievedAt": "2026-10-15T18:50:00Z" }] } },
+        { "termKey": "agent-365", "term": "Agent 365", "type": "product", "oneLine": { "text": "Foundry エージェントなどの統合インベントリ（レジストリ）を表示し、管理センターで管理できる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-actions", "locator": "冒頭", "retrievedAt": "2026-10-15T18:50:00Z" }] } },
+        { "termKey": "admin-center", "term": "Microsoft 365 管理センター", "type": "product", "oneLine": { "text": "テナント全体のエージェントの表示・アクセス・配布・廃棄を管理できる管理画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-actions", "locator": "冒頭", "retrievedAt": "2026-10-15T18:50:00Z" }] } },
+        { "termKey": "pim", "term": "PIM", "type": "feature", "oneLine": { "text": "Privileged Identity Management。管理者ロールの割り当てを必要な時だけ有効化する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-agent-infrastructure-entra-admin", "locator": "前提条件", "retrievedAt": "2026-10-15T18:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-15T18:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "テナント単位の管理センターによるガバナンス機能で、リージョン別ではない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-actions", "locator": "エージェント アクション", "retrievedAt": "2026-10-15T18:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571826",
+        "learn": [
+          { "title": "Microsoft 365 管理センターで利用できるエージェントのガバナンスとライフサイクル アクション", "url": "https://learn.microsoft.com/ja-jp/microsoft-365/admin/manage/agent-actions", "locale": "ja-jp" },
+          { "title": "Microsoft Entra管理者としてエージェント インフラストラクチャを管理する", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-agent-infrastructure-entra-admin", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
