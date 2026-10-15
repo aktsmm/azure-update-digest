@@ -1,0 +1,102 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571919"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T18:11:00Z"
+  },
+  "slides": [
+    {
+      "key": "571919",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "AKS 向け Flex Nodes",
+        "subtitleJa": "ハイブリッド／エッジのマシンを AKS のワーカーノードに（パブリック プレビュー）",
+        "en": "Public Preview: Flex Nodes for AKS"
+      },
+      "meta": {
+        "publishedJst": "2026-09-23",
+        "modifiedJst": "2026-09-23",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "containers"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "ハイブリッドやエッジの**自社インフラを AKS に接続したいプラットフォーム／アプリ チーム**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "コントロール プレーンは Azure、ワーカーノードだけを手元で動かせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューは運用環境向けではない。検証環境で評価する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "Important", "retrievedAt": "2026-10-15T18:11:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ユーザー管理の VM／ベア メタルを、AKS クラスターのノードとして追加できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "概要", "retrievedAt": "2026-10-15T18:11:00Z" }] },
+            { "text": "Flex ノード エージェントがホストをクラスターに参加させ、構成を維持する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "フレックス ノードのしくみ", "retrievedAt": "2026-10-15T18:11:00Z" }] },
+            { "text": "認証は Arc マネージド ID、マネージド ID、サービス プリンシパルから選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "Flex ノードの認証オプション", "retrievedAt": "2026-10-15T18:11:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プレビューは SLA の対象外で、運用環境での使用は想定されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "Important", "retrievedAt": "2026-10-15T18:11:00Z" }] },
+            { "text": "標準ノード プールは置き換えず、併用する位置づけ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "Flex ノードと標準 AKS ノード プール", "retrievedAt": "2026-10-15T18:11:00Z" }] },
+            { "text": "外部ホスト側のネットワーク、ファイアウォール、DNS は利用者が構成・運用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/plan-flex-nodes-deployment", "locator": "必要なネットワーク接続を計画する", "retrievedAt": "2026-10-15T18:11:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites", "heading": "前提・計画", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ホストは Linux マシン。Azure CLI と Linux 互換の Bash 環境を用意する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/plan-flex-nodes-deployment", "locator": "始める前の準備", "retrievedAt": "2026-10-15T18:11:00Z" }] },
+            { "text": "ホスト ID、AKS API アクセス、ノード間の接続方法を事前に決める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/plan-flex-nodes-deployment", "locator": "デプロイの決定を行う", "retrievedAt": "2026-10-15T18:11:00Z" }] }
+          ]
+        },
+        {
+          "id": "scenarios", "heading": "主なシナリオ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "AKS の Azure リージョン外にある容量を接続し、データ所在地の要件に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "AKS リージョン外の容量", "retrievedAt": "2026-10-15T18:11:00Z" }] },
+            { "text": "ラボやテスト環境の amd64／arm64 ホストを AKS ノードとして利用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "ラボ環境とテスト環境", "retrievedAt": "2026-10-15T18:11:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ホストと AKS 間の接続方式とサポート責任の範囲を、検証環境で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "flex-nodes", "term": "Flex ノード", "type": "feature", "oneLine": { "text": "ユーザーが管理する VM やベア メタル ホストに AKS を拡張する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "概要", "retrievedAt": "2026-10-15T18:11:00Z" }] } },
+        { "termKey": "flex-node-agent", "term": "Flex ノード エージェント", "type": "feature", "oneLine": { "text": "ホストをクラスターに参加させ、AKS が要求する構成に保つソフトウェア。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "Flexノードコンポーネント", "retrievedAt": "2026-10-15T18:11:00Z" }] } },
+        { "termKey": "control-plane", "term": "コントロール プレーン", "type": "term", "oneLine": { "text": "標準ノード プールと Flex ノードにワークロードをスケジュールし管理する AKS 側の要素。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "Flexノードコンポーネント", "retrievedAt": "2026-10-15T18:11:00Z" }] } },
+        { "termKey": "arc-identity", "term": "Azure Arc のマネージド ID", "type": "term", "oneLine": { "text": "Azure 以外のサーバーにもシークレットレスの ID を取得させる認証方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "Flex ノードの認証オプション", "retrievedAt": "2026-10-15T18:11:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-15T18:11:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "AKS は全リージョンで提供される基盤サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/reliability/availability-service-by-category", "locator": "基本サービス", "retrievedAt": "2026-10-15T18:11:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571919",
+        "learn": [
+          { "title": "外部コンピューティングを AKS 用のフレックス ノードとしてアタッチする (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locale": "ja-jp" },
+          { "title": "AKS のフレックス ノードを計画する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/aks/plan-flex-nodes-deployment", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
