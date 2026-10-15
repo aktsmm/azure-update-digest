@@ -86,6 +86,9 @@ function badges(i: DigestItem): string {
   return `<div class="badges">${b.join("")}</div>`;
 }
 
+// keys the user unchecked; everything is selected by default and the choice survives filter changes
+const deselected = new Set<string>();
+
 function card(i: DigestItem): string {
   const summary =
     i.summary.state === "generated" ? `<p class="summary">${esc(i.summary.text ?? "")}</p>`
@@ -96,7 +99,7 @@ function card(i: DigestItem): string {
     i.related.items.length > 0 ? `<div>関連資料（Microsoft Learn）<ul>${i.related.items.map((r) => `<li><a href="${safeUrl(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a></li>`).join("")}</ul></div>`
     : `<div class="meta">関連資料: ${relNames[i.related.status]}</div>`;
   return `<article class="card" id="update-${esc(i.key)}">
-    <div class="card-head"><h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a>${esc(i.titleJa ?? i.title)}</h3><span class="kind k-${i.kind}">${esc(KIND_LABEL[i.kind])}</span></div>
+    <div class="card-head"><label class="sel" title="ダウンロード（JSON・PDF・PPTX）に含める"><input type="checkbox" data-sel="${esc(i.key)}" ${deselected.has(i.key) ? "" : "checked"} aria-label="ダウンロードに含める"></label><h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a>${esc(i.titleJa ?? i.title)}</h3><span class="kind k-${i.kind}">${esc(KIND_LABEL[i.kind])}</span></div>
     ${i.titleJa ? `<div class="orig">${esc(i.title)}</div>` : ""}
     <div class="meta">作成 ${esc(i.createdJst)} ／ 更新 ${esc(i.modifiedJst)} ／ ID ${esc(i.key)}</div>
     ${badges(i)}${summary}
@@ -168,38 +171,70 @@ function selectionLabel(q: Query, r: QueryResult) {
 }
 
 function downloadBar(r: QueryResult, q: Query): string {
-  const withSlide = r.items.filter((i) => slideEntries.has(i.key)).length;
   const sample = samplePdf ? `<a href="pdf/sample.pdf" target="_blank" rel="noopener noreferrer" title="最新のスライド 1 件（パスワード不要）">サンプル PDF</a>` : "";
   const pdf = pdfCrypto && slideEntries.size
-    ? `<button type="button" data-dl="pdf" ${withSlide ? "" : "disabled"} title="スライド作成済み（直近3か月）の更新をまとめた PDF。絞り込み後 ${r.items.length} 件中 ${withSlide} 件。ダウンロードにはパスワードが必要です">PDF（${withSlide}）</button>`
+    ? `<button type="button" data-dl="pdf" title="選択した更新のうちスライド作成済み（直近3か月）のものをまとめた PDF。ダウンロードにはパスワードが必要です"></button>`
     : "";
   const pptx = pdfCrypto && slideEntries.size
-    ? `<button type="button" data-dl="pptx" ${withSlide ? "" : "disabled"} title="同じ範囲を編集できる PowerPoint（.pptx）で。絞り込み後 ${r.items.length} 件中 ${withSlide} 件。ダウンロードにはパスワードが必要です">PPTX（${withSlide}）</button>`
+    ? `<button type="button" data-dl="pptx" title="選択した更新を編集できる PowerPoint（.pptx）で。ダウンロードにはパスワードが必要です"></button>`
     : "";
-  return `<span class="dl-actions" id="dl"><button type="button" data-dl="json" ${r.items.length ? "" : "disabled"} title="絞り込み結果（スライド JSON を含む）">JSON（${r.items.length}）</button>${pdf}${pptx}${sample}<span class="meta" id="dl-status"></span></span>`;
+  return `<span class="dl-actions" id="dl"><button type="button" data-dl="json" title="選択した更新（スライド JSON を含む）"></button>${pdf}${pptx}${sample}<span class="meta" id="dl-status"></span></span>`;
+}
+
+function selectionBar(): string {
+  return `<div class="selbar"><span id="selcount"></span><button type="button" data-sel-all>すべて選択</button><button type="button" data-sel-none>すべて解除</button><span class="meta">チェックを外した更新は JSON・PDF・PPTX に含まれません</span></div>`;
 }
 
 function bindDownload(r: QueryResult, q: Query) {
   const status = document.getElementById("dl-status")!;
   const sel = selectionLabel(q, r);
+  const chosen = () => r.items.filter((i) => !deselected.has(i.key));
+  const withSlides = () => chosen().filter((i) => slideEntries.has(i.key));
+  const refresh = () => {
+    const n = chosen().length, s = withSlides().length;
+    const set = (dl: string, label: string, count: number) => {
+      const b = document.querySelector<HTMLButtonElement>(`[data-dl="${dl}"]`);
+      if (b) { b.textContent = `${label}（${count}）`; b.disabled = count === 0; }
+    };
+    set("json", "JSON", n); set("pdf", "PDF", s); set("pptx", "PPTX", s);
+    const c = document.getElementById("selcount");
+    if (c) c.textContent = `選択中 ${n} / ${r.items.length} 件`;
+  };
+  document.querySelectorAll<HTMLInputElement>("input[data-sel]").forEach((cb) => cb.addEventListener("change", () => {
+    const key = cb.dataset.sel!;
+    if (cb.checked) deselected.delete(key); else deselected.add(key);
+    // the same update can appear in both the highlights and the list
+    document.querySelectorAll<HTMLInputElement>(`input[data-sel="${CSS.escape(key)}"]`).forEach((o) => { o.checked = cb.checked; });
+    refresh();
+  }));
+  const setAll = (on: boolean) => {
+    for (const i of r.items) { if (on) deselected.delete(i.key); else deselected.add(i.key); }
+    document.querySelectorAll<HTMLInputElement>("input[data-sel]").forEach((cb) => { cb.checked = !deselected.has(cb.dataset.sel!); });
+    refresh();
+  };
+  document.querySelector("[data-sel-all]")?.addEventListener("click", () => setAll(true));
+  document.querySelector("[data-sel-none]")?.addEventListener("click", () => setAll(false));
+  refresh();
+  const fileName = () => (chosen().length === r.items.length ? sel.file : `${sel.file}_selected`);
   document.querySelector('[data-dl="json"]')?.addEventListener("click", async () => {
     status.textContent = "作成中…";
     const slides: unknown[] = [];
-    for (const i of r.items) {
+    const picked = chosen();
+    for (const i of picked) {
       if (!slideEntries.has(i.key)) continue;
       try { slides.push(...((await (await fetch(`slides/${i.key}.json`)).json()) as { slides: unknown[] }).slides); } catch { /* slide JSON is optional */ }
     }
     const body = {
       schema: 1,
       selection: { period: q.period, basis: q.basis, mode: q.mode, categories: q.categories, importance: q.importance, text: q.text, snapshotAt: meta.snapshotAt, coverage: r.coverage.status },
-      items: r.items,
+      items: picked,
       slides,
     };
-    download(`${sel.file}.json`, new Blob([JSON.stringify(body, null, 2)], { type: "application/json" }));
-    status.textContent = `JSON を保存しました（更新 ${r.items.length} 件、スライド ${slides.length} 件）`;
+    download(`${fileName()}.json`, new Blob([JSON.stringify(body, null, 2)], { type: "application/json" }));
+    status.textContent = `JSON を保存しました（更新 ${picked.length} 件、スライド ${slides.length} 件）`;
   });
   document.querySelector('[data-dl="pdf"]')?.addEventListener("click", async () => {
-    const entries = orderSlides(r.items.flatMap((i) => (slideEntries.has(i.key) ? [slideEntries.get(i.key)!] : [])).map((e) => ({ ...e, kind: e.kind as SlideKind })));
+    const entries = orderSlides(withSlides().map((i) => slideEntries.get(i.key)!).map((e) => ({ ...e, kind: e.kind as SlideKind })));
     if (!entries.length) return;
     const pw = askPassword();
     if (!pw) { status.textContent = "パスワードを入力してください。"; return; }
@@ -218,20 +253,20 @@ function bindDownload(r: QueryResult, q: Query) {
       const bytes = await lib.buildDeckPdf(
         {
           entries, categoryLabels: Object.fromEntries(meta.categories.map((c) => [c.id, c.label])),
-          periodLabel: q.mode === "dated" ? sel.period : null, totalInPeriod: r.items.length, createdUtc: new Date().toISOString(),
+          periodLabel: q.mode === "dated" ? sel.period : null, totalInPeriod: chosen().length, createdUtc: new Date().toISOString(),
           onProgress: (d, t) => { status.textContent = `PDF を結合中… ${d} / ${t}`; },
         },
         font,
         (key) => fetchPdf(key, pw),
       );
-      download(`${sel.file}.pdf`, new Blob([bytes as BlobPart], { type: "application/pdf" }));
+      download(`${fileName()}.pdf`, new Blob([bytes as BlobPart], { type: "application/pdf" }));
       status.textContent = `PDF を保存しました（${entries.length} 件）`;
     } catch (e) {
       status.textContent = e instanceof WrongPasswordError ? "パスワードが違います。" : "PDF を作成できませんでした。時間をおいて再度お試しください。";
     }
   });
   document.querySelector('[data-dl="pptx"]')?.addEventListener("click", async () => {
-    const entries = r.items.filter((i) => slideEntries.has(i.key));
+    const entries = withSlides();
     if (!entries.length) return;
     const pw = askPassword();
     if (!pw) { status.textContent = "パスワードを入力してください。"; return; }
@@ -256,9 +291,9 @@ function bindDownload(r: QueryResult, q: Query) {
       status.textContent = "PowerPoint を作成中…";
       const bytes = await lib.buildDeckPptx({
         slides: slides as never, categoryLabels: Object.fromEntries(meta.categories.map((c) => [c.id, c.label])),
-        periodLabel: q.mode === "dated" ? sel.period : null, totalInPeriod: r.items.length, createdUtc: new Date().toISOString(),
+        periodLabel: q.mode === "dated" ? sel.period : null, totalInPeriod: chosen().length, createdUtc: new Date().toISOString(),
       });
-      download(`${sel.file}.pptx`, new Blob([bytes], { type: "application/vnd.openxmlformats-officedocument.presentationml.presentation" }));
+      download(`${fileName()}.pptx`, new Blob([bytes], { type: "application/vnd.openxmlformats-officedocument.presentationml.presentation" }));
       status.textContent = `PowerPoint を保存しました（${entries.length} 件）`;
     } catch (e) {
       status.textContent = e instanceof WrongPasswordError ? "パスワードが違います。" : "PowerPoint を作成できませんでした。時間をおいて再度お試しください。";
@@ -297,7 +332,7 @@ function renderList(q: Query, heading: string, fixedMonth: string | null, basePa
   app.innerHTML = `<h1>${esc(heading)}</h1>
     <p><strong>${esc(q.period.start)} 〜 ${esc(q.period.end)}</strong>（JST・${basisLabel}）: <strong>${r.items.length} 件</strong> ${filtered}</p>
     ${coverageBanner(r)}${backfillPanel()}${periodForm(q, fixedMonth, downloadBar(r, q))}${note}${hl}
-    <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${r.items.map(card).join("")}${empty}`;
+    <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${selectionBar()}${r.items.map(card).join("")}${empty}`;
   bind(q, fixedMonth, basePath);
   bindDownload(r, q);
 }
