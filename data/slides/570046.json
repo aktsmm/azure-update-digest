@@ -1,0 +1,113 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570046"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T16:49:17Z"
+  },
+  "slides": [
+    {
+      "key": "570046",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Microsoft HPC Pack の全バージョンが廃止",
+        "subtitleJa": "2027年8月27日にサポート終了。終了までは限定的な廃止期間サポートのみ",
+        "en": "Retirement: Microsoft HPC Pack"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "Retirement", "year": 2027, "month": "August" }],
+        "status": null,
+        "products": ["Microsoft HPC Pack"],
+        "categories": ["other"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**HPC Pack でオンプレミス / ハイブリッドの HPC クラスターやジョブ スケジューラを運用している利用者**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/high-performance-computing/hpc-pack-2019-retirement-migration-guide?view=hpc19-ps", "locator": "誰が影響を受けますか?", "retrievedAt": "2026-10-15T16:49:17Z" }] },
+        "change": { "text": "終了後は更新・修正・技術サポートがなくなる。既存環境は動作を続けるがサポート対象外", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "HPC Pack を使っている場合、期限までに Azure Batch など移行先の評価・計画を進める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2027-08-27", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-09-30", "precision": "day" } },
+        { "label": "サポート終了", "when": { "date": "2027-08-27", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "サポート終了日は 2027年8月27日。それまでは 1 年間の廃止期間", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "廃止期間はセキュリティ / CVE 対応と既存ドキュメントに基づく案内が範囲", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "新機能、非セキュリティ修正、移行支援は範囲外。終了後も既存環境は動作する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "マネージドな並列 / HPC スケジューリングには Azure Batch を検討", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "機能が 1 対 1 で対応する移行先はない。アカウント チームに相談する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "Batch は独立タスクや MPI ジョブの大規模実行に向く。スケジューラ互換が必要なら CycleCloud が候補",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/batch/batch-technical-overview", "locator": "バッチおよびHPCワークロードにはAzureサービスを選択します", "retrievedAt": "2026-10-15T16:49:17Z" }]
+            }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "現在のクラスターを棚卸しし、重要なワークロードと依存関係を特定する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/high-performance-computing/hpc-pack-2019-retirement-migration-guide?view=hpc19-ps", "locator": "必要なアクション", "retrievedAt": "2026-10-15T16:49:17Z" }]
+            },
+            { "text": "スケジューラ設定・ストレージ・ネットワーク要件を踏まえて移行先を選び、検証する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "label-retirement", "term": "廃止", "type": "label",
+          "oneLine": { "text": "提供終了日以降は更新・技術サポートがなくなり、利用は非推奨となる段階。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "termKey": "hpc",
+          "term": "HPC（ハイ パフォーマンス コンピューティング）", "type": "term",
+          "oneLine": { "text": "大規模な並列計算やバッチ ジョブを高速に実行するための計算手法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/batch/batch-technical-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T16:49:17Z" }] }
+        },
+        {
+          "termKey": "azure-batch", "term": "Azure Batch", "type": "product",
+          "oneLine": { "text": "大規模な並列・HPC バッチ ジョブを Azure で実行するためのサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/batch/batch-technical-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T16:49:17Z" }] }
+        },
+        {
+          "termKey": "cycle-cloud", "term": "Azure CycleCloud", "type": "product",
+          "oneLine": { "text": "既存のスケジューラを使い、Azure 上に HPC クラスターを展開・管理するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/high-performance-computing/hpc-pack-2019-retirement-migration-guide?view=hpc19-ps", "locator": "オプション 1: Azure CycleCloud", "retrievedAt": "2026-10-15T16:49:17Z" }] }
+        }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "製品全体のサポート終了であり、リージョンに依存しない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/high-performance-computing/hpc-pack-2019-retirement-migration-guide?view=hpc19-ps", "locator": "何が変わるのですか?", "retrievedAt": "2026-10-15T16:49:17Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570046",
+        "learn": [
+          { "title": "HPC Pack 2019 の提供終了", "url": "https://learn.microsoft.com/ja-jp/powershell/high-performance-computing/hpc-pack-2019-retirement-migration-guide?view=hpc19-ps", "locale": "ja-jp" },
+          { "title": "Azure Batch とは", "url": "https://learn.microsoft.com/ja-jp/azure/batch/batch-technical-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
