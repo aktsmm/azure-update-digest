@@ -1,0 +1,144 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571872"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T22:55:00Z"
+  },
+  "slides": [
+    {
+      "key": "571872",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "VS Code の SQL Formatter が一般提供（GA）に",
+        "subtitleJa": "T-SQL を好みのスタイルで自動整形し、プロジェクト全体で書式を統一できます",
+        "en": "Generally Available: SQL Formatter "
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "modifiedJst": "2026-09-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "VS Code で T-SQL を書く **SQL 開発者・チーム**（Azure SQL Database など）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "手作業の整形なしに、読みやすく統一された SQL を保てる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "SQL の書式を揃えたいチームは導入を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "MSSQL 拡張機能に組み込みの整形機能で、文書全体または選択範囲を整形",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17", "locator": "オンデマンド形式", "retrievedAt": "2026-10-14T22:55:00Z" }]
+            },
+            {
+              "text": "T-SQL を解析し、構文木に基づいてスクリプトを生成（ScriptDOM を利用）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17", "locator": "冒頭", "retrievedAt": "2026-10-14T22:55:00Z" }]
+            },
+            {
+              "text": "キーワードの大文字小文字、位置合わせ、カンマ位置などを設定で調整可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17", "locator": "サポートされている設定", "retrievedAt": "2026-10-14T22:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "エディターで右クリック →「ドキュメントのフォーマット」/「選択範囲のフォーマット」。Shift+Alt+F でも実行可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17", "locator": "オンデマンド形式", "retrievedAt": "2026-10-14T22:55:00Z" }]
+            },
+            {
+              "text": "保存時に自動整形するには settings.json で [sql] の editor.formatOnSave を true に設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17", "locator": "保存時の書式", "retrievedAt": "2026-10-14T22:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・設定", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "設定は mssql.format.* で、設定 UI またはユーザー / ワークスペースの settings.json から構成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17", "locator": "書式設定オプションを構成する", "retrievedAt": "2026-10-14T22:55:00Z" }]
+            },
+            {
+              "text": "T-SQL を完全に解析できない場合の通知は showParseErrorNotification で制御",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17", "locator": "General", "retrievedAt": "2026-10-14T22:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する設定", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "既定のフォーマッターは [sql] の editor.defaultFormatter に ms-mssql.mssql を指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17", "locator": "デフォルトのフォーマッターを設定する", "retrievedAt": "2026-10-14T22:55:00Z" }]
+            },
+            {
+              "text": "sqlEngineType で対象を all / standalone / sqlAzure から選択可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17", "locator": "General", "retrievedAt": "2026-10-14T22:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "複数人で同じコードベースを扱うとき、読み取り・確認・保守が容易になる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17", "locator": "冒頭", "retrievedAt": "2026-10-14T22:55:00Z" }]
+            },
+            { "text": "チームの設定をワークスペースの settings.json で共有する運用が有効", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "VS Code の MSSQL 拡張機能が開発を支援する対象の、Azure 上の SQL データベース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code?view=sql-server-ver17", "locator": "冒頭", "retrievedAt": "2026-10-14T22:55:00Z" }] } },
+        { "termKey": "mssql-extension", "term": "MSSQL 拡張機能", "type": "product", "oneLine": { "text": "VS Code 上で DB 接続、T-SQL 実行、スキーマ管理などができる拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code?view=sql-server-ver17", "locator": "冒頭", "retrievedAt": "2026-10-14T22:55:00Z" }] } },
+        { "termKey": "sql-formatter", "term": "SQL Formatter", "type": "feature", "oneLine": { "text": "オンデマンドや保存時に T-SQL を整形する、MSSQL 拡張機能の組み込み機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17", "locator": "冒頭", "retrievedAt": "2026-10-14T22:55:00Z" }] } },
+        { "termKey": "t-sql", "term": "T-SQL", "type": "term", "oneLine": { "text": "SQL Server や Azure SQL で使われる SQL 言語の Transact-SQL。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17", "locator": "冒頭", "retrievedAt": "2026-10-14T22:55:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T22:55:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure SQL Database は全リージョンで提供される基盤サービス。整形は VS Code 側の機能で、リージョン制限の記載はない",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-14T22:55:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571872",
+        "learn": [
+          { "title": "Visual Studio Code 用の MSSQL 拡張機能で Transact-SQL を書式設定する", "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17", "locale": "ja-jp" },
+          { "title": "Visual Studio Code のための MSSQL 拡張機能", "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code?view=sql-server-ver17", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
