@@ -1,0 +1,94 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["572770"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T18:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "572770",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Azure Functions の PowerShell 7.4 サポートが 2026-11-10 に終了",
+        "subtitleJa": "終了後もアプリは動くが、パッチとサポートが止まる。期限までに PowerShell 7.6 へ",
+        "en": "Retirement: Support for PowerShell 7.4 ends on November 10, 2026"
+      },
+      "meta": {
+        "publishedJst": "2026-09-24",
+        "modifiedJst": "2026-09-24",
+        "availability": [{ "rawRing": "Retirement", "year": 2026, "month": "November" }],
+        "status": null,
+        "products": ["Azure Functions"],
+        "categories": ["compute", "security", "containers"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Azure Functions で PowerShell 7.4 の関数アプリを運用している**開発者・運用担当者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "終了日以降はセキュリティ パッチと更新、カスタマー サポートが提供されなくなる（アプリは動作し続ける）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "2026-11-10 までに PowerShell 7.6 へアップグレードする。Linux 従量課金プランは先に Flex 従量課金プランへ移行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2026-11-10", "precision": "day" }
+      },
+      "beforeAfter": {
+        "after": { "text": "終了日以降はアプリは動作するが、セキュリティ パッチ・更新・カスタマー サポートが提供されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-09-24", "precision": "day" } },
+        { "label": "PowerShell 7.4 サポート終了", "when": { "date": "2026-11-10", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "サポート終了後も作成・デプロイ・実行は可能だが、新機能やセキュリティ パッチは対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/language-support-policy", "locator": "提供終了フェーズ", "retrievedAt": "2026-10-15T18:00:00Z" }] },
+            { "text": "サポート対象外のバージョンでは、サポートを受ける前にアップグレードが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/language-support-policy", "locator": "提供終了フェーズ / 重要", "retrievedAt": "2026-10-15T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "PowerShell 7.6", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Linux 従量課金プランのアプリは、先に Flex 従量課金プランへ移行が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locator": "スタック構成を更新する / PowerShell", "retrievedAt": "2026-10-15T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure portal の [設定]>[構成]>[全般設定] で PowerShell Core バージョンを更新する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locator": "スタック構成を更新する / PowerShell", "retrievedAt": "2026-10-15T18:00:00Z" }] },
+            { "text": "プランの種類を確認し、移行とテストの期間を期限から逆算して計画する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-functions", "term": "Azure Functions", "type": "product", "oneLine": { "text": "サーバーの管理なしでコードを実行できる、サーバーレスのソリューション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T18:00:00Z" }] } },
+        { "termKey": "flex-consumption", "term": "Flex 従量課金プラン", "type": "feature", "oneLine": { "text": "Linux ベースで、Azure Functions に推奨されるサーバーレス ホスティング プラン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-plan", "locator": "冒頭", "retrievedAt": "2026-10-15T18:00:00Z" }] } },
+        { "termKey": "label-end-of-support", "term": "サポート終了", "type": "label", "oneLine": { "text": "バグ修正・セキュリティ更新・パッチが Microsoft から提供されなくなること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/language-support-policy", "locator": "ランタイム バージョンがサポート終了になるとどうなりますか?", "retrievedAt": "2026-10-15T18:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "Azure Functions の言語スタック サポート ポリシー（全体に適用）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/language-support-policy", "locator": "提供終了のプロセス", "retrievedAt": "2026-10-15T18:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=572770",
+        "learn": [
+          { "title": "Azure Functions で言語スタックのバージョンを更新する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locale": "ja-jp" },
+          { "title": "Azure Functions 言語スタックのサポート ポリシー", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/language-support-policy", "locale": "ja-jp" },
+          { "title": "Azure Functions PowerShell 開発者ガイド", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
