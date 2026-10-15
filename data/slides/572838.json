@@ -1,0 +1,93 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["572838"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T18:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "572838",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Azure Functions の .NET 8 / .NET 9 サポートが 2026-11-10 に終了",
+        "subtitleJa": "終了後もアプリは動くが、セキュリティ更新が止まる。期限までに .NET 10 へ",
+        "en": "Retirement: Support for .NET 8 and .NET 9 ends on November 10, 2026—upgrade your apps to .NET 10"
+      },
+      "meta": {
+        "publishedJst": "2026-09-24",
+        "availability": [{ "rawRing": "Retirement", "year": 2026, "month": "November" }],
+        "status": null,
+        "products": ["Azure Functions"],
+        "categories": ["compute", "security", "containers"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Azure Functions で .NET 8 / .NET 9 を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "終了日以降もアプリは動作するが、セキュリティ更新は提供されなくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "構成に応じて、期限までに .NET 10 へアップグレードする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2026-11-10", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-09-24", "precision": "day" } },
+        { "label": "サポート終了", "when": { "date": "2026-11-10", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "終了後も関数アプリは動くが、セキュリティ更新は提供されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "非対応バージョンの実行は、セキュリティやパフォーマンスの問題につながる可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "インプロセス モデルのサポートも 2026 年 11 月 10 日に終了する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/migrate-dotnet-to-isolated-model", "locator": "冒頭の重要", "retrievedAt": "2026-10-15T18:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "分離ワーカー モデルのアプリ: 直接 .NET 10 へ更新", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "インプロセス モデルのアプリ: 分離ワーカー モデルへ移行後、.NET 10 へ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Linux 従量課金プランのアプリ: 先に Flex 従量課金プランへ移行", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "関数アプリの .NET バージョンと実行モデル、ホスティング プランを棚卸しして、移行経路を決める", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "移行とテストの工数を、2026-11-10 から逆算して計画する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-functions", "term": "Azure Functions", "type": "product", "oneLine": { "text": "イベントに応じてコードを実行できる、Azure のサーバーレス コンピューティング サービス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "in-process-model", "term": "インプロセス モデル", "type": "term", "oneLine": { "text": "関数が Functions ホストと同じプロセスで動く .NET の実行モデル。分離ワーカー モデルへの移行が必要。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/migrate-dotnet-to-isolated-model", "locator": "冒頭", "retrievedAt": "2026-10-15T18:00:00Z" }] } },
+        { "termKey": "isolated-worker-model", "term": "分離ワーカー モデル", "type": "term", "oneLine": { "text": "関数を Functions ホストとは別のワーカー プロセスで動かす、.NET の実行モデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/migrate-dotnet-to-isolated-model", "locator": "冒頭", "retrievedAt": "2026-10-15T18:00:00Z" }] } },
+        { "termKey": "flex-consumption", "term": "Flex 従量課金プラン", "type": "feature", "oneLine": { "text": "Azure Functions のホスティング プランの一つ。Linux 従量課金プランのアプリの移行先。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-end-of-support", "term": "サポート終了", "type": "label", "oneLine": { "text": "セキュリティ更新が提供されなくなること。アプリ自体は動き続ける。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "Azure Functions の言語スタック サポート終了（全体に適用）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locator": "冒頭（言語ランタイムのサポート ポリシー）", "retrievedAt": "2026-10-15T18:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=572838",
+        "learn": [
+          { "title": "C# アプリをインプロセス モデルから分離ワーカー モデルに移行する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/migrate-dotnet-to-isolated-model", "locale": "ja-jp" },
+          { "title": "Azure Functions で言語スタックのバージョンを更新する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
