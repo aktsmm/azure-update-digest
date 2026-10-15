@@ -42,7 +42,12 @@ a { color:var(--accent); }
 .row input[type=search] { flex:1 1 150px; min-width:130px; }
 .card .orig { font-size:12px; color:#6b778a; margin:-4px 0 6px; }
 .card-head { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
-.card-head h3 { margin:0 0 4px; }
+.card-head h3 { margin:0 0 4px; flex:1; min-width:0; }
+.card-head .sel { display:inline-flex; padding:4px 2px 0 0; cursor:pointer; }
+.card-head .sel input { width:18px; height:18px; margin:0; cursor:pointer; }
+.selbar { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:4px 0 10px; font-size:.9rem; }
+.selbar #selcount { font-weight:600; }
+.selbar button { padding:2px 10px; }
 .kind { flex:none; font-size:12px; font-weight:700; color:#fff; border-radius:999px; padding:3px 12px; background:#6b778a; }
 .kind.k-ga { background:#1b7f3b; } .kind.k-preview { background:#7a45c7; }
 .kind.k-retirement { background:#c62828; } .kind.k-announcement { background:#0b6bcb; } .kind.k-update { background:#6b778a; }
