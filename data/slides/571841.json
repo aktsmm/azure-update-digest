@@ -1,0 +1,92 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571841"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T16:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "571841",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Local の接続モードで SQL Server が一般提供（GA）に",
+        "subtitleJa": "Azure Local 上の SQL Server を Azure Arc 経由で一元管理。データはローカルのまま",
+        "en": "Generally Available: SQL Server support on Azure Local connected mode"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": [],
+        "categories": ["other"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Local 上で SQL Server を動かしている／動かしたい**方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "Azure Arc 経由で管理・ガバナンス・監視・セキュリティ・ライセンスを一元化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Azure Local で SQL Server を使う計画があれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "SQL Server は Azure Local 上の Windows Server / Linux VM で動作し、データはローカルに残る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "Azure Local 上の SQL Server の概要", "retrievedAt": "2026-10-15T16:40:00Z" }] },
+            { "text": "接続モードでは SQL Server を Azure Arc に接続し、Azure が管理機能を提供する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "接続モード", "retrievedAt": "2026-10-15T16:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure Local をデプロイ → VM 作成と SQL Server のインストール → Azure Arc に接続", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/deploy?view=sql-server-ver17", "locator": "デプロイのワークフロー", "retrievedAt": "2026-10-15T16:40:00Z" }] },
+            { "text": "必要に応じて監視・ガバナンス・セキュリティ・ライセンスを設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "接続型展開の仕組み", "retrievedAt": "2026-10-15T16:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure Local 対応ハードウェア、Azure サブスクリプション、Azure との接続、SQL Server ライセンスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/deploy?view=sql-server-ver17", "locator": "前提条件", "retrievedAt": "2026-10-15T16:40:00Z" }] },
+            { "text": "Linux の従量課金は、パッシブ レプリカを自動検出せず全インスタンスをアクティブとして課金", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/deploy?view=sql-server-ver17", "locator": "Azure Arcを通じてライセンスを設定する", "retrievedAt": "2026-10-15T16:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "切断運用は Azure 接続なしで動作するが、Arc の SQL Server 拡張機能（インベントリ等）は使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "限定的なオペレーション", "retrievedAt": "2026-10-15T16:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "データ レジデンシー対応、低遅延アプリ、既存 SQL Server をクラウド移行せず近代化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "Azure Local で SQL Server を使うタイミング", "retrievedAt": "2026-10-15T16:40:00Z" }] },
+            { "text": "SQL Server 2025 からローカル モデルの推論エンドポイントを呼び出せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/deploy?view=sql-server-ver17", "locator": "ローカルAIアプリケーションを構築する", "retrievedAt": "2026-10-15T16:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-local", "term": "Azure Local", "type": "product", "oneLine": { "text": "Azure の機能をお客様が所有する環境に拡張する、分散インフラストラクチャ ソリューション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/overview", "locator": "冒頭", "retrievedAt": "2026-10-15T16:40:00Z" }] } },
+        { "termKey": "azure-arc", "term": "Azure Arc", "type": "product", "oneLine": { "text": "Azure Local でリソースを管理するための統合コントロール プレーン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/overview", "locator": "冒頭", "retrievedAt": "2026-10-15T16:40:00Z" }] } },
+        { "termKey": "sql-server", "term": "SQL Server", "type": "product", "oneLine": { "text": "Azure Local 上の VM で動作し、ワークロードとデータをローカルに保てるデータベース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "冒頭", "retrievedAt": "2026-10-15T16:40:00Z" }] } },
+        { "termKey": "connected-mode", "term": "接続モード", "type": "feature", "oneLine": { "text": "Azure Local が Azure との接続を維持し、Azure が管理機能を提供する運用モード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "接続モード", "retrievedAt": "2026-10-15T16:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-15T16:40:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571841",
+        "learn": [
+          { "title": "Azure Local 上の SQL Server の概要", "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locale": "ja-jp" },
+          { "title": "Azure Local に SQL Server をデプロイする", "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/deploy?view=sql-server-ver17", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
