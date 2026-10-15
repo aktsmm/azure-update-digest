@@ -1,0 +1,99 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571795"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-14T23:11:00Z"
+  },
+  "slides": [
+    {
+      "key": "571795",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Arc から Azure SQL Database へ直接移行",
+        "subtitleJa": "Hyperscale も移行先に選択可能（パブリック プレビュー）",
+        "en": "Public Preview: Migrate directly from Azure Arc to Azure SQL Database, including Hyperscale"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "modifiedJst": "2026-09-30",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Azure Arc 対応の **SQL Server を Azure SQL Database へ移行したい**担当者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "評価から移行の監視まで Arc のポータル内で完結できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビュー機能。移行を検討中なら検証環境で試す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migrate-to-azure-sql-database?view=sql-server-ver17", "locator": "Note", "retrievedAt": "2026-10-14T23:11:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "評価から移行までに Arc の外へ出て、別サービスの学習やランタイム設定が必要だった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "Arc の移行体験で移行先を選び、DMS と SHIR の設定をガイド付きで進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "移行は 4 段階: ソース評価 → ターゲット選択 → データ移行 → 監視", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migrate-to-azure-sql-database?view=sql-server-ver17", "locator": "Azure SQL Databaseに移行する", "retrievedAt": "2026-10-14T23:11:00Z" }] },
+            { "text": "移行方法は「DMS による移行 (プレビュー)」。ウィザードで統合ランタイムを設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migrate-to-azure-sql-database?view=sql-server-ver17", "locator": "移行方法を選択してください", "retrievedAt": "2026-10-14T23:11:00Z" }] },
+            { "text": "スキーマのみ・データのみ・両方を選択して移行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migrate-to-azure-sql-database?view=sql-server-ver17", "locator": "移行するデータベーステーブルを選択します", "retrievedAt": "2026-10-14T23:11:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "オフライン移行のみ。オンライン移行は未対応で、開始時からダウンタイムが発生", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migration-sql-database-prepare?view=sql-server-ver17", "locator": "Prerequisites の重要", "retrievedAt": "2026-10-14T23:11:00Z" }] },
+            { "text": "オンライン状態のデータベースのみ移行可。空でない移行先テーブルは上書き", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migrate-to-azure-sql-database?view=sql-server-ver17", "locator": "ソースデータベースとターゲットデータベースを選択する", "retrievedAt": "2026-10-14T23:11:00Z" }] },
+            { "text": "Azure Data Factory 用に作成した既存の SHIR は流用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migration-sql-database-prepare?view=sql-server-ver17", "locator": "セルフホステッド統合ランタイムを構成する", "retrievedAt": "2026-10-14T23:11:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites", "heading": "前提条件", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Arc 対応 SQL Server と最新の Azure 拡張機能、移行先 Azure SQL Database", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migration-sql-database-prepare?view=sql-server-ver17", "locator": "Prerequisites", "retrievedAt": "2026-10-14T23:11:00Z" }] },
+            { "text": "Microsoft.DataMigration リソース プロバイダーの登録が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migration-sql-database-prepare?view=sql-server-ver17", "locator": "Prerequisites", "retrievedAt": "2026-10-14T23:11:00Z" }] }
+          ]
+        },
+        {
+          "id": "permissions", "heading": "権限・ランタイム", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "移行先 DB の共同作成者ロールとリソース グループの閲覧者ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migration-sql-database-prepare?view=sql-server-ver17", "locator": "権限の構成", "retrievedAt": "2026-10-14T23:11:00Z" }] },
+            { "text": "スキーマ移行には SHIR 5.37 以降を使用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migration-sql-database-prepare?view=sql-server-ver17", "locator": "セルフホステッド統合ランタイムを構成する", "retrievedAt": "2026-10-14T23:11:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ダウンタイムを許容できるかを検証環境で測り、評価の警告とブロック問題を先に解消する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "完全管理型のプラットフォーム・アズ・ア・サービス (PaaS) データベース エンジン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migrate-to-azure-sql-database?view=sql-server-ver17", "locator": "概要", "retrievedAt": "2026-10-14T23:11:00Z" }] } },
+        { "termKey": "dms", "term": "Azure Database Migration Service", "type": "product", "oneLine": { "text": "選択したスキーマ オブジェクトとテーブル データを移行先へコピーするサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migrate-to-azure-sql-database?view=sql-server-ver17", "locator": "概要", "retrievedAt": "2026-10-14T23:11:00Z" }] } },
+        { "termKey": "shir", "term": "セルフホステッド統合ランタイム (SHIR)", "type": "feature", "oneLine": { "text": "DMS がソースの SQL Server インスタンスへ接続するためのランタイム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migrate-to-azure-sql-database?view=sql-server-ver17", "locator": "統合ランタイムの設定", "retrievedAt": "2026-10-14T23:11:00Z" }] } },
+        { "termKey": "offline-migration", "term": "オフライン移行", "type": "term", "oneLine": { "text": "移行開始後にソースへ加えた変更が反映されず、アプリのダウンタイムを伴う移行方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migrate-to-azure-sql-database?view=sql-server-ver17", "locator": "データの移行", "retrievedAt": "2026-10-14T23:11:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-14T23:11:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571795",
+        "learn": [
+          { "title": "Azure SQL Database への移行 (プレビュー) - Azure Arc での SQL Server の移行", "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migrate-to-azure-sql-database?view=sql-server-ver17", "locale": "ja-jp" },
+          { "title": "Azure SQL Database への移行を準備する - Azure Arc での SQL Server の移行", "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migration-sql-database-prepare?view=sql-server-ver17", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
