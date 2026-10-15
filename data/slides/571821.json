@@ -1,0 +1,89 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571821"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T18:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "571821",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Foundry のホステッドエージェントに送信接続のエグレス制御",
+        "subtitleJa": "宛先ホスト単位で許可・拒否を設定（パブリック プレビュー）",
+        "en": "Public Preview: Network egress controls for hosted agents in Microsoft Foundry"
+      },
+      "meta": {
+        "publishedJst": "2026-09-19",
+        "modifiedJst": "2026-09-19",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "July" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Foundry の**ホステッドエージェントの送信通信を制限したい**開発者・セキュリティ担当", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "外部アプライアンスなしで、エージェントの送信先をホスト単位で制御できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。プレビューは本番・ライブ運用での利用を意図していない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/add-hosted-agent-guardrails", "locator": "ネットワーク エグレス制御 (プレビュー)", "retrievedAt": "2026-10-15T18:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "宛先ホストに基づく順序付きルールを RAI ポリシーに定義し、エージェントのサンドボックス内で送信前に適用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ルールは上から評価され、最初に一致したものが優先。ワイルドカード（*.contoso.com）も利用可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/add-hosted-agent-guardrails", "locator": "エグレス ルールの評価方法", "retrievedAt": "2026-10-15T18:50:00Z" }] },
+            { "text": "アクションは許可・拒否・変換（ヘッダー変更）・書き換え（宛先変更）の4種", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/add-hosted-agent-guardrails", "locator": "エグレス ルールの評価方法", "retrievedAt": "2026-10-15T18:50:00Z" }] },
+            { "text": "監査モードは拒否をログのみ、強制モードは拒否をブロック。決定は Application Insights に出力", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/add-hosted-agent-guardrails", "locator": "強制モードを選択する / エグレスの決定を表示する", "retrievedAt": "2026-10-15T18:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ホステッドエージェントのみ対象。プロンプト ベースのエージェントやモデルのデプロイには影響しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/add-hosted-agent-guardrails", "locator": "ネットワーク エグレス制御 (プレビュー)", "retrievedAt": "2026-10-15T18:50:00Z" }] },
+            { "text": "ポリシーあたり最大 480 ルール。シークレット参照のヘッダー値は未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/add-hosted-agent-guardrails", "locator": "ルールの上限 / プレビューの制限事項と今後の予定", "retrievedAt": "2026-10-15T18:50:00Z" }] },
+            { "text": "Azure Firewall などの代替ではなく補完。API バージョン 2026-05-15-preview で構成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/add-hosted-agent-guardrails", "locator": "プレビューの制限事項と今後の予定 / ネットワーク エグレス制御 (プレビュー)", "retrievedAt": "2026-10-15T18:50:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "まず監査モードと既定の拒否で通信先を洗い出し、ルール調整後に強制へ切り替える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/add-hosted-agent-guardrails", "locator": "強制モードを選択する / エグレス制御の一般的な使用用途", "retrievedAt": "2026-10-15T18:50:00Z" }] },
+            { "text": "拒否されたリクエストにはエグレス プロキシが HTTP 403 を返す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/add-hosted-agent-guardrails", "locator": "エグレスの決定を表示する", "retrievedAt": "2026-10-15T18:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "hosted-agent", "term": "ホステッドエージェント", "type": "feature", "oneLine": { "text": "自分のコードをコンテナー イメージにまとめ、Agent Service 上で実行するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/foundry/agents/concepts/hosted-agents", "locator": "Key concepts", "retrievedAt": "2026-10-15T18:50:00Z" }] } },
+        { "termKey": "egress", "term": "エグレス制御", "type": "feature", "oneLine": { "text": "ホステッドエージェントが行う送信接続を制御し、許可された宛先にのみ到達させる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/add-hosted-agent-guardrails", "locator": "冒頭", "retrievedAt": "2026-10-15T18:50:00Z" }] } },
+        { "termKey": "rai-policy", "term": "RAI ポリシー", "type": "term", "oneLine": { "text": "エージェント定義から参照する、ガードレールを定義する責任ある AI のポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/add-hosted-agent-guardrails", "locator": "冒頭", "retrievedAt": "2026-10-15T18:50:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-15T18:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "ホステッドエージェントのサポート リージョンに Japan East / Japan West が含まれる（親サービスの情報）",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/foundry/agents/concepts/hosted-agents", "locator": "Region availability", "retrievedAt": "2026-10-15T18:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571821",
+        "learn": [{ "title": "ホストされているエージェントにガードレールを追加する", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/add-hosted-agent-guardrails", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
