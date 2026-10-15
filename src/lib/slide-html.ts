@@ -89,7 +89,7 @@ export interface Slide {
 
 const TYPE_JA: Record<string, string> = { product: "製品", feature: "機能", term: "用語", label: "ラベル" };
 const ACT_LABEL: Record<string, string> = { yes: "要対応", optional: "任意", no: "対応不要", unknown: "情報" };
-export const CATEGORY_JA: Record<string, string> = { compute: "コンピュート", networking: "ネットワーク", storage: "ストレージ", databases: "データベース", ai: "AI", security: "セキュリティ", containers: "コンテナー", "ops-governance": "運用・ガバナンス", other: "その他" };
+export const CATEGORY_JA: Record<string, string> = { compute: "コンピュート", networking: "ネットワーク", storage: "ストレージ", databases: "データベース", ai: "AI", security: "セキュリティ", containers: "コンテナー", "ops-governance": "運用・ガバナンス", integration: "インテグレーション", iot: "IoT", devtools: "開発ツール", "web-mobile": "Web・モバイル", other: "その他" };
 
 export interface SlideOptions { fs: number; /** font size of the right column (glossary, suggestion); defaults to fs */ sfs?: number; includeDetail: boolean; continuation?: boolean }
 
