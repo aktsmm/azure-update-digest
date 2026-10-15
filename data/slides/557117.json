@@ -1,0 +1,93 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["557117"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T17:45:00Z"
+  },
+  "slides": [
+    {
+      "key": "557117",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Azure Communication Services の単体サービスが 2028-09-30 に廃止",
+        "subtitleJa": "Email・SMS・Chat など 11 サービスが終了。通話系 SDK は Teams 併用のみに変更",
+        "en": "Retirement: Azure Communication Services (ACS) standalone services will be retired on September 30, 2028"
+      },
+      "meta": {
+        "publishedJst": "2026-09-25",
+        "availability": [{ "rawRing": "Retirement", "year": 2028, "month": "September" }],
+        "status": null,
+        "products": ["Azure Communication Services"],
+        "categories": ["other"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "ACS の Email / SMS / Chat / Rooms / 通話 SDK などを使っている**ACS 利用者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "廃止対象は 2028-09-30 以降利用不可。通話系 SDK は最新 SDK と Teams 併用のみサポート", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "対象サービスの移行と SDK の更新を 2028-09-30 までに計画する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "必要な対応", "retrievedAt": "2026-10-15T17:50:00Z" }] },
+        "deadline": { "date": "2028-09-30", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-09-25", "precision": "day" } },
+        { "label": "廃止予定サービスの新規オンボーディング制限開始", "when": { "date": "2026-10-23", "precision": "day" } },
+        { "label": "廃止・破壊的変更の適用", "when": { "date": "2028-09-30", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "廃止: Email、SMS、WhatsApp、Chat、Rooms、番号管理、ダイレクト ルーティング、Job Router、UI ライブラリ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "破壊的変更: 通話 SDK、通話診断、Call Automation、録音、字幕などは Teams 併用時のみ対応", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "2026-10-23 以降、廃止予定サービスの新規オンボーディングと拡張を制限", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "何が変わっているのか、なぜ変わっているのか?", "retrievedAt": "2026-10-15T17:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Email: Microsoft 365 ハイボリューム メール / Exchange Online", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "移行に関する推奨事項", "retrievedAt": "2026-10-15T17:50:00Z" }] },
+            { "text": "Chat: Microsoft Graph Chat API、Job Router / WhatsApp: Dynamics 365 コンタクト センター", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "移行に関する推奨事項", "retrievedAt": "2026-10-15T17:50:00Z" }] },
+            { "text": "PSTN・ダイレクト ルーティング・Rooms: Teams の各種連携機能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "移行に関する推奨事項", "retrievedAt": "2026-10-15T17:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "SMS と UI ライブラリには Microsoft の代替が示されておらず、パートナー等の検討が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "移行に関する推奨事項", "retrievedAt": "2026-10-15T17:50:00Z" }] },
+            { "text": "利用中の ACS 機能を棚卸しし、廃止か破壊的変更かを区別して移行計画を立てる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-communication-services", "term": "Azure Communication Services", "type": "product", "oneLine": { "text": "音声、ビデオ、チャット、SMS、メールなどをアプリに追加するマルチチャネル通信 API。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/overview", "locator": "冒頭", "retrievedAt": "2026-10-15T17:50:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止（リタイア）", "type": "label", "oneLine": { "text": "サービスや SDK が Azure から完全に削除され、期日以降は利用できなくなること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "退職", "retrievedAt": "2026-10-15T17:50:00Z" }] } },
+        { "termKey": "breaking-change", "term": "破壊的変更", "type": "term", "oneLine": { "text": "既存のアプリや連携の変更が必要になる変更。サービス自体は期日後も利用できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "破壊的な変更", "retrievedAt": "2026-10-15T17:50:00Z" }] } },
+        { "termKey": "direct-routing", "term": "ダイレクト ルーティング", "type": "feature", "oneLine": { "text": "SIP とセッション ボーダー コントローラーで、独自の PSTN 通信事業者や電話番号に接続する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/overview", "locator": "冒頭", "retrievedAt": "2026-10-15T17:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Communication Services は非リージョン（グローバル）サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "List of nonregional services", "retrievedAt": "2026-10-15T17:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=557117",
+        "learn": [
+          { "title": "Azure Communication Servicesの退職および変更に関する詳細ガイド", "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locale": "ja-jp" },
+          { "title": "Azure Communication Services とは", "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
