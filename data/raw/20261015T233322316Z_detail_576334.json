@@ -1,0 +1,31 @@
+{
+  "args": {
+    "id": "576334"
+  },
+  "fetchedAt": "2026-10-15T23:33:22.316Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "576334",
+    "created": "2026-10-15T16:54:20.9981512Z",
+    "description": "Automatic zone balance for Virtual Machine Scale Sets is now generally available. This feature continuously monitors scale sets deployed across availability zones and automatically redistributes VM instances when zonal imbalances occur. This helps reduce the risk that a single-zone outage disproportionately affects an application.Automatic zone balance uses a create-before-delete approach: Azure creates a replacement VM in an under-provisioned zone and validates its health before removing an instance from an over-provisioned zone. Built-in safeguards respect instance protection policies, coordinate with Azure Autoscale, avoid active or recently completed scale-set operations, apply cooldown periods, and replace only one VM at a time. This capability is best suited for stateless workloads and requires at least two availability zones, zonal instances, and application health monitoring. It can be enabled through the Azure portal, Azure CLI, PowerShell, or REST API.Learn more.",
+    "generalAvailabilityDate": "2026-10",
+    "id": "576334",
+    "modified": "2026-10-15T16:54:20.9981512Z",
+    "productCategories": [],
+    "products": [],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Availabile: Automatic zone balance for Virtual Machine Scale Sets"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

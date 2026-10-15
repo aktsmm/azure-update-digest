@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "571025"
+  },
+  "fetchedAt": "2026-10-15T23:33:16.239Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "571025",
+    "created": "2026-10-15T17:39:51.2291921Z",
+    "description": "Standard service endpoint, a\nnew capability in the Azure Private Link family, provides a scalable and secure\napproach for connecting Azure IaaS workloads to Azure PaaS services. Standard service\nendpoint addresses the manageability, and the scale limitations of traditional\nservice endpoints by using Public IP addresses as network identifiers and\nintegrating with network security perimeter. This enables organizations to\nachieve large-scale IaaS-to-PaaS connectivity while maintaining strong network\naccess controls and simplified operations. With standard service endpoint,\ncustomers can associate a public IP instance with multiple subnets and virtual\nnetworks across subscriptions within the same tenant and region. When combined\nwith network security perimeter, organizations can create a logical security\nboundary around supported Azure services, including Azure Storage, Azure SQL\nDatabase, Azure Cosmos DB, and Azure Key Vault. Access can then be restricted\nso that only approved networks and workloads are allowed to communicate with\nthese resources, helping reduce operational complexity while strengthening\nsecurity posture. Standard service endpoint is a\npaid Azure feature and is billed at a fixed rate per virtual network (VNet) per\nhour. Learn more: Documentation  Azure\nPrivate Link pricing ",
+    "generalAvailabilityDate": "2026-10",
+    "id": "571025",
+    "modified": "2026-10-15T17:39:51.2291921Z",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Azure Private Link"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Pricing & Offerings",
+      "SDK and Tools"
+    ],
+    "title": "Generally Available: Standard service endpoint "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

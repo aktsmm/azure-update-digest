@@ -1,0 +1,146 @@
+{
+  "args": {
+    "filter": "modified ge 2026-10-13T23:43:26Z and modified lt 2026-10-15T23:33:06Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-15T23:33:06.283Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571025",
+        "created": "2026-10-15T17:39:51.2291921Z",
+        "description": "Standard service endpoint, a\nnew capability in the Azure Private Link family, provides a scalable and secure\napproach for connecting Azure IaaS workloads to Azure PaaS services. Standard service\nendpo...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "571025",
+        "modified": "2026-10-15T17:39:51.2291921Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Private Link"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Pricing & Offerings",
+          "SDK and Tools"
+        ],
+        "title": "Generally Available: Standard service endpoint "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "576214",
+        "created": "2026-10-14T19:13:31.7366427Z",
+        "description": "Azure Site Recovery (ASR) now supports disaster recovery for Azure ARC-enabled Windows VMWare virtual machines and on-premise physical servers. Customers can protect ARC-managed machines with ASR whil...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "576214",
+        "modified": "2026-10-14T19:13:31.7366427Z",
+        "productCategories": [
+          "Management and governance",
+          "Migration"
+        ],
+        "products": [
+          "Azure Site Recovery"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Management",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Site Recovery Support for Azure ARC-enabled Windows VMWare/Physical servers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "576334",
+        "created": "2026-10-15T16:54:20.9981512Z",
+        "description": "Automatic zone balance for Virtual Machine Scale Sets is now generally available. This feature continuously monitors scale sets deployed across availability zones and automatically redistributes VM in...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "576334",
+        "modified": "2026-10-15T16:54:20.9981512Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Availabile: Automatic zone balance for Virtual Machine Scale Sets"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "576377",
+        "created": "2026-10-14T19:17:47.0248415Z",
+        "description": "Hardware Audit Logging for Azure Cloud HSM provides hardware-generated audit records for supported HSM management operations, helping organizations strengthen security monitoring, compliance reporting...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "576377",
+        "modified": "2026-10-14T19:17:47.0248415Z",
+        "productCategories": [],
+        "products": [],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Cloud HSM hardware audit logging"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "576542",
+        "created": "2026-10-15T19:05:18.076741Z",
+        "description": "Azure Files customers can now copy and synchronize file share data across storage accounts, Azure regions, and subscriptions within the same tenant using Azure Storage Mover. Schedule incremental tran...",
+        "id": "576542",
+        "modified": "2026-10-15T19:05:18.076741Z",
+        "previewAvailabilityDate": "2026-10",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Files"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Files cross-region data copy and synchronization with Azure Storage Mover"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 5,
+    "totalCount": 5
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}
