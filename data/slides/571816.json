@@ -1,0 +1,107 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571816"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T18:55:10Z"
+  },
+  "slides": [
+    {
+      "key": "571816",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Foundry エージェントを Microsoft 365 Copilot / Teams に発行可能（GA）",
+        "subtitleJa": "Foundry ポータルから直接発行。公開後も Entra と Agent 365 の管理下に置けます",
+        "en": "Generally Available: Publishing Microsoft Foundry agents to Microsoft 365 Copilot and Teams"
+      },
+      "meta": {
+        "publishedJst": "2026-09-19",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "July" }],
+        "status": "Launched",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Foundry でエージェントを作る**開発者**と、Microsoft 365 を管理する IT 管理者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "別の配信パイプラインやボット登録なしで、Copilot / Teams にエージェントを届けられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Foundry のエージェントを社内で配布したい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": { "text": "Foundry 開発者には Microsoft 365 へ展開するネイティブな手段がなく、個別のデプロイ パイプライン、ボット登録、アプリ マニフェストが必要だった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "Foundry ポータルから Microsoft 365 Copilot と Teams へ直接発行でき、ユーザーが普段使う画面で見つけられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "発行時に Foundry が Teams アプリ マニフェストを作成し、エージェント カタログへ送信する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "発行するとどうなりますか?", "retrievedAt": "2026-10-15T18:55:10Z" }] },
+            { "text": "安定したエンドポイントを公開。新バージョンは再発行せずに切り替えられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "新しいエージェント バージョンのロールアウト", "retrievedAt": "2026-10-15T18:55:10Z" }] },
+            { "text": "公開後も Microsoft Entra と Agent 365 の管理が適用され、管理者が一元的に把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Foundry ポータル）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "[発行] → [Teams と Microsoft Copilot] を選び、必要なメタデータを入力する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "ポータルで発行する", "retrievedAt": "2026-10-15T18:55:10Z" }] },
+            { "text": "公開範囲は「自分のみ」か「組織内のユーザー」。後者は管理者の承認が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "エージェントを表示して呼び出しできるユーザー", "retrievedAt": "2026-10-15T18:55:10Z" }] },
+            { "text": "直接発行のほか、マニフェストをダウンロードして Teams にサイドロードも可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "発行方法を選択します", "retrievedAt": "2026-10-15T18:55:10Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Foundry ユーザー ロールと Azure Bot Service の作成権限（共同作成者など）が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "前提条件", "retrievedAt": "2026-10-15T18:55:10Z" }] },
+            { "text": "パブリック ネットワーク アクセスを無効にしたプロジェクトは、REST API で発行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "冒頭の注意", "retrievedAt": "2026-10-15T18:55:10Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "直接発行は Teams パッケージを自動作成。ダウンロード ZIP は調整して手動でサイドロード", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "発行方法を選択します", "retrievedAt": "2026-10-15T18:55:10Z" }] },
+            { "text": "「自分のみ」は承認不要。「組織内のユーザー」は承認後にテナント全体へ表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "エージェントを表示して呼び出しできるユーザー", "retrievedAt": "2026-10-15T18:55:10Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "まず「自分のみ」で動作を確認し、その後に組織内へ公開範囲を広げる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "発行するとデータが Microsoft 365 / Teams に流れる。事前にコンプライアンスとデータ所在地を評価する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "冒頭の警告", "retrievedAt": "2026-10-15T18:55:10Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-foundry", "term": "Microsoft Foundry", "type": "product", "oneLine": { "text": "エージェントを構築・テストし、Copilot や Teams へ発行できるプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "冒頭", "retrievedAt": "2026-10-15T18:55:10Z" }] } },
+        { "termKey": "foundry-agent", "term": "Foundry エージェント", "type": "feature", "oneLine": { "text": "Foundry で構築・テストし、Copilot や Teams の UI から使えるようにするエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "冒頭", "retrievedAt": "2026-10-15T18:55:10Z" }] } },
+        { "termKey": "azure-bot-service", "term": "Azure Bot Service", "type": "product", "oneLine": { "text": "発行時に作成され、Microsoft 365 や Teams とのメッセージ交換を担うリソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "前提条件", "retrievedAt": "2026-10-15T18:55:10Z" }] } },
+        { "termKey": "publish-scope", "term": "発行スコープ", "type": "term", "oneLine": { "text": "エージェントを誰に見せ、誰が呼び出せるかを決める設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locator": "エージェントを表示して呼び出しできるユーザー", "retrievedAt": "2026-10-15T18:55:10Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-15T18:55:10Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Foundry Agent Service は Japan East / Japan West を含む複数リージョンで提供",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/azure/foundry/agents/concepts/limits-quotas-regions", "locator": "Supported regions", "retrievedAt": "2026-10-15T18:55:10Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571816",
+        "learn": [
+          { "title": "Foundry ポータルでエージェントをMicrosoft CopilotおよびMicrosoft Teamsに発行する", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/publish-copilot", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
