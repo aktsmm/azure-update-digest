@@ -1,0 +1,164 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["576377"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-15T16:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "576377",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Cloud HSM のハードウェア監査ログが一般提供（GA）に",
+        "subtitleJa": "HSM が生成する署名付き監査レコードを Log Analytics へ。改ざんの有無を自分で検証できます",
+        "en": "Generally Available: Azure Cloud HSM hardware audit logging"
+      },
+      "meta": {
+        "publishedJst": "2026-10-15",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": [],
+        "categories": ["other"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Cloud HSM を使い、監査・コンプライアンス対応が必要な方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "HSM 管理操作の監査記録を、署名・証明書付きで真正性まで検証できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "監査要件があれば診断設定で有効化を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "サポート対象の HSM 管理操作について、ハードウェア生成の監査レコードを取得し、署名付きバッチの真正性と完全性を独自に検証できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "HSM ファームウェアが管理操作の改ざん検知可能な記録を生成（HsmOperations）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "冒頭", "retrievedAt": "2026-10-15T16:10:00Z" }]
+            },
+            {
+              "text": "パーティションごとにバッチで取得し、HSM が証明書キーで署名",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "冒頭", "retrievedAt": "2026-10-15T16:10:00Z" }]
+            },
+            {
+              "text": "署名と HSM 公開証明書も出力され、監査証跡の検証に使える",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "冒頭", "retrievedAt": "2026-10-15T16:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ストレージ アカウントと Log Analytics ワークスペースを作成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "HSM 操作ログを設定する", "retrievedAt": "2026-10-15T16:10:00Z" }]
+            },
+            {
+              "text": "Cloud HSM の診断設定で HsmOperations カテゴリを有効にして送信",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "診断設定を有効にする", "retrievedAt": "2026-10-15T16:10:00Z" }]
+            },
+            {
+              "text": "CloudHsmHardwareOperationAuditLogs テーブルを Log Analytics で照会",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "構成の確認", "retrievedAt": "2026-10-15T16:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "デプロイ済みの Cloud HSM が必要。Log Analytics の保持期間は 30 日以上",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "前提条件", "retrievedAt": "2026-10-15T16:10:00Z" }]
+            },
+            {
+              "text": "有効化前のログは遡って取得されない。取り込みに数分〜約 20 分、初回は最大 90 分",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "構成の確認", "retrievedAt": "2026-10-15T16:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "HsmServiceOperations: サービスが受けた要求の記録。トラブル対応の補助用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "冒頭", "retrievedAt": "2026-10-15T16:10:00Z" }]
+            },
+            {
+              "text": "HSM が記録する操作の監査は HsmOperations が主なソース",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "冒頭", "retrievedAt": "2026-10-15T16:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "記録対象: サインイン、ユーザー管理、キーの作成・削除・インポート・エクスポート、バックアップ・復元",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "冒頭", "retrievedAt": "2026-10-15T16:10:00Z" }]
+            },
+            {
+              "text": "ユーザー ID などを含み得るため、送信先へのアクセスを制限する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "Important", "retrievedAt": "2026-10-15T16:10:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-cloud-hsm", "term": "Azure Cloud HSM", "type": "product",
+          "oneLine": { "text": "FIPS 140-3 レベル 3 検証済みの、顧客専用（シングルテナント）の HSM サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/overview", "locator": "冒頭", "retrievedAt": "2026-10-15T16:10:00Z" }] }
+        },
+        {
+          "termKey": "hsm", "term": "HSM", "type": "term",
+          "oneLine": { "text": "暗号化キーを安全に保管し、暗号化操作を実行するハードウェア セキュリティ モジュール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/overview", "locator": "冒頭", "retrievedAt": "2026-10-15T16:10:00Z" }] }
+        },
+        {
+          "termKey": "hsm-operations", "term": "HsmOperations", "type": "feature",
+          "oneLine": { "text": "HSM ファームウェアが生成する、管理操作の改ざん検知可能なログ カテゴリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "冒頭", "retrievedAt": "2026-10-15T16:10:00Z" }] }
+        },
+        {
+          "termKey": "diagnostic-settings", "term": "診断設定", "type": "term",
+          "oneLine": { "text": "リソース ログの送信先を指定する Azure Monitor の設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "診断設定を有効にする", "retrievedAt": "2026-10-15T16:10:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-15T16:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=576377",
+        "learn": [
+          { "title": "チュートリアル: Azure Cloud HSM の HSM 操作監査ログの構成とクエリ", "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locale": "ja-jp" },
+          { "title": "Azure Cloud HSM とは", "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
