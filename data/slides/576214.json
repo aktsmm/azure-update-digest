@@ -1,0 +1,145 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["576214"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-16T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "576214",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "ASR が Azure Arc 対応の VMware VM・物理サーバーに対応（GA）",
+        "subtitleJa": "Arc 管理を維持したまま、Windows の VMware VM／物理サーバーを DR 保護できます",
+        "en": "Generally Available: Azure Site Recovery Support for Azure ARC-enabled Windows VMWare/Physical servers"
+      },
+      "meta": {
+        "publishedJst": "2026-10-15",
+        "modifiedJst": "2026-10-15",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Site Recovery"],
+        "categories": ["ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Azure Arc を使う **Windows の VMware VM／オンプレミス物理サーバー** を ASR で保護したい方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Arc のガバナンス・監視を保ったまま ASR で DR を構成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Arc 対応マシンを ASR で保護する予定があれば確認", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "Arc を使うこれらのマシンでは、ASR 保護時に互換性の問題が生じる場合があった",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/feature-updates-whats-new", "locator": "アップデート（2026年10月）", "retrievedAt": "2026-10-15T16:30:00Z" }]
+        },
+        "after": {
+          "text": "ASR が Arc サービスを検出し、既存の Arc 構成との互換性を保ったまま保護を有効化できる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/feature-updates-whats-new", "locator": "アップデート（2026年10月）", "retrievedAt": "2026-10-15T16:30:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ASR がソース マシン上の Arc サービスの存在を検出する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/feature-updates-whats-new", "locator": "アップデート（2026年10月）", "retrievedAt": "2026-10-15T16:30:00Z" }]
+            },
+            {
+              "text": "保護の有効化中も既存の Arc 構成との互換性を維持する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/feature-updates-whats-new", "locator": "アップデート（2026年10月）", "retrievedAt": "2026-10-15T16:30:00Z" }]
+            },
+            { "text": "ガバナンス・インベントリ・監視・管理は引き続き Azure Arc で行える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "not-stated", "priority": "core"
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象は Arc 対応の Windows VMware 仮想マシンとオンプレミスの物理サーバー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "オンプレミスの VMware VM と物理サーバーは Azure へレプリケート可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-overview", "locator": "レプリケートできるのは何ですか？", "retrievedAt": "2026-10-15T16:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Arc 対応 Windows Server 用の ASR 構成ツールは、Hyper-V 対応マシンが対象（プレビュー記載）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/windows-server/manage/azure-arc/azure-site-recovery-for-windows-server", "locator": "冒頭", "retrievedAt": "2026-10-15T16:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Arc で管理中のオンプレミス Windows に DR を追加したい場合に有効", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "レプリケーション設定前に、依存関係・復旧要件・ネットワークを計画する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T16:30:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "asr", "term": "Azure Site Recovery（ASR）", "type": "product",
+          "oneLine": { "text": "継続的なレプリケーションとフェールオーバーで、ディザスター リカバリーを支援するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T16:30:00Z" }] }
+        },
+        {
+          "termKey": "arc", "term": "Azure Arc", "type": "product",
+          "oneLine": { "text": "ガバナンス、インベントリ、監視、管理に使う Azure のサービス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "termKey": "dr", "term": "ディザスター リカバリー（DR）", "type": "term",
+          "oneLine": { "text": "障害時にワークロードを別の場所で復旧し、事業継続を図る仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-overview", "locator": "冒頭", "retrievedAt": "2026-10-15T16:30:00Z" }] }
+        },
+        {
+          "termKey": "failover", "term": "フェールオーバー", "type": "term",
+          "oneLine": { "text": "プライマリ サイトで障害が発生した際に、セカンダリ ロケーションへ切り替えること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-overview", "locator": "Site Recovery サービス", "retrievedAt": "2026-10-15T16:30:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-15T16:30:00Z" }] }
+        }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Site Recovery は全リージョンで提供される基盤サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-15T16:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=576214",
+        "learn": [
+          { "title": "Site Recovery機能の更新", "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/feature-updates-whats-new", "locale": "ja-jp" },
+          { "title": "Site Recovery について", "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-overview", "locale": "ja-jp" },
+          { "title": "VMware VM と物理サーバーの DR サポート マトリックス", "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/vmware-physical-azure-support-matrix", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
