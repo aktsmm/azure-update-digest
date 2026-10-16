@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "canonicalKey": "550519",
+  "status": "verified",
+  "sourceQuery": "Azure Azure Monitor managed Prometheus remote write",
+  "checkedAt": "2026-10-16T17:02:31Z",
+  "candidates": [
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/prometheus-remote-write",
+      "title": "Connect self-managed Prometheus to Azure Monitor managed service for Prometheus",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "Covers remote-write from self-managed Prometheus to Azure Monitor.",
+      "checkedAt": "2026-10-16T17:02:13Z"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/containers/prometheus-remote-write-managed-identity",
+      "title": "Send Prometheus data to Azure Monitor by using managed identity authentication",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "Remote-write to Azure Monitor with managed identity authentication.",
+      "checkedAt": "2026-10-16T17:02:13Z"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/containers/prometheus-remote-write-azure-workload-identity",
+      "title": "Send Prometheus data to Azure Monitor by using Microsoft Entra Workload ID authentication",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "Remote-write to Azure Monitor with Workload ID authentication.",
+      "checkedAt": "2026-10-16T17:02:13Z"
+    }
+  ]
+}
