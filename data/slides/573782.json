@@ -98,6 +98,30 @@
           { "title": "パブリック プレビューの制限事項 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-preview-limitations", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "本番環境で使えますか？",
+            "a": "プレビューは運用環境での使用を目的としていません。SLA は限定的またはなく、サポートはベスト エフォートです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-preview-limitations", "locator": "Support", "retrievedAt": "2026-10-16T08:00:00Z" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "パブリック プレビューの対象リージョンは米国東部のみです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-preview-limitations", "locator": "既知の制限", "retrievedAt": "2026-10-16T08:00:00Z" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "プレビュー中、AKS クラスター リソースの料金は発生しません。基になる Arc 対応マシンなどには通常料金が適用されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-preview-limitations", "locator": "Billing", "retrievedAt": "2026-10-16T08:00:00Z" }]
+          },
+          {
+            "q": "GA 後、プレビューのクラスターはそのまま使えますか？",
+            "a": "インプレース アップグレードされない場合があり、クラスターの削除と再作成が必要になる可能性があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks-hybrid-edge/bare-metal/aks-bare-metal-preview-limitations", "locator": "一般提供への移行", "retrievedAt": "2026-10-16T08:00:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
