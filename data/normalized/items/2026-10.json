@@ -1983,6 +1983,87 @@
     {
       "availabilities": [
         {
+          "month": "July",
+          "ring": "Preview",
+          "year": 2026
+        },
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": "2026-07",
+        "privatePreview": null
+      },
+      "canonicalKey": "574296",
+      "categories": [
+        "security"
+      ],
+      "created": "2026-10-16T16:50:27.1967037Z",
+      "createdJst": "2026-10-17",
+      "description": "External key management for Azure Key Vault Managed HSM is now generally available in all Azure public regions. For organizations with regulatory or sovereignty requirements to retain physical control of key-encryption keys, it lets Azure services that support customer-managed keys with Managed HSM use keys held in a customer-operated hardware security module (HSM) outside Microsoft infrastructure. Managed HSM delegates key wrap and unwrap operations through a customer-operated proxy; the external key material stays outside Microsoft infrastructure.Access requires enablement through your Microsoft account team. Connectivity to the proxy over the public internet is available with the GA feature. Azure Private Link integration is in public preview. Customers or their HSM providers are responsible for the external HSM, proxy, and network availability; these components are outside the Managed HSM service-level agreement (SLA).Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "477fadf32eac664e277a485a4ff665d80e92bee2978ad5336b512f6628fe49d9",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-16T23:16:12.003Z",
+          "fingerprint": "42d5d98e9714cd2164d452c7ebf9ee5eb4c623019cb264286dcca4e94f30a3ba",
+          "modifiedAfter": "2026-10-16T16:50:27.1967037Z",
+          "modifiedBefore": null,
+          "rawRef": "20261016T231612003Z_list_sweep_o0.json#574296"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-16T23:16:21.150Z",
+          "fingerprint": "477fadf32eac664e277a485a4ff665d80e92bee2978ad5336b512f6628fe49d9",
+          "modifiedAfter": "2026-10-16T16:50:27.1967037Z",
+          "modifiedBefore": "2026-10-16T16:50:27.1967037Z",
+          "rawRef": "20261016T231621150Z_detail_574296.json#574296"
+        }
+      ],
+      "ids": [
+        "574296"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "security"
+        ]
+      },
+      "latestId": "574296",
+      "modified": "2026-10-16T16:50:27.1967037Z",
+      "modifiedJst": "2026-10-17",
+      "productCategories": [
+        "Security"
+      ],
+      "products": [
+        "Key Vault"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=574296",
+      "status": "Launched",
+      "tags": [
+        "Feature",
+        "Security"
+      ],
+      "title": "Generally Available: External key management for Azure Key Vault Managed HSM"
+    },
+    {
+      "availabilities": [
+        {
           "month": "October",
           "ring": "General Availability",
           "year": 2026
@@ -2421,6 +2502,76 @@
         "Feature"
       ],
       "title": "Public Preview: Azure Files cross-region data copy and synchronization with Azure Storage Mover"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-10",
+        "privatePreview": null
+      },
+      "canonicalKey": "576556",
+      "categories": [
+        "databases",
+        "ai"
+      ],
+      "created": "2026-10-16T16:59:02.962308Z",
+      "createdJst": "2026-10-17",
+      "description": "Private network gateway for Azure Databricks is\nnow in Public Preview, enabling serverless compute to connect to resources in\nyour virtual network (VNet) and transitively connected networks through a\nsingle managed gateway. Customers can use the gateway to access multiple\nprivate resources, route serverless egress through their own firewalls or\nnetwork security appliances, and use stable, identifiable source IP addresses. This simplifies secure connectivity for\nserverless workloads while giving organizations greater control over network\ntraffic and access to private resources. Private network gateway integrates with existing network\nconnectivity configurations (NCCs) and complements Azure Private Link,\nproviding additional flexibility for securing serverless network connectivity. Learn\nmore.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "16baa3b75b2dfaf605bfe31703eb913f6edefe6e87c13ce7c28e593d447afe5c",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-16T23:16:12.003Z",
+          "fingerprint": "5157481e4ad4076a17a5ccaf33133b6f51a7806768a0bfadc3f45703ea6aa3bc",
+          "modifiedAfter": "2026-10-16T16:59:02.962308Z",
+          "modifiedBefore": null,
+          "rawRef": "20261016T231612003Z_list_sweep_o0.json#576556"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-16T23:16:16.662Z",
+          "fingerprint": "16baa3b75b2dfaf605bfe31703eb913f6edefe6e87c13ce7c28e593d447afe5c",
+          "modifiedAfter": "2026-10-16T16:59:02.962308Z",
+          "modifiedBefore": "2026-10-16T16:59:02.962308Z",
+          "rawRef": "20261016T231616662Z_detail_576556.json#576556"
+        }
+      ],
+      "ids": [
+        "576556"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "576556",
+      "modified": "2026-10-16T16:59:02.962308Z",
+      "modifiedJst": "2026-10-17",
+      "productCategories": [
+        "AI + machine learning",
+        "Analytics"
+      ],
+      "products": [
+        "Azure Databricks"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=576556",
+      "status": "In preview",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Public Preview: Azure Databricks Private network gateway"
     }
   ],
   "month": "2026-10",

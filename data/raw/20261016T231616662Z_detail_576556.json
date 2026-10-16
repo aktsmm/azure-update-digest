@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "576556"
+  },
+  "fetchedAt": "2026-10-16T23:16:16.662Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "576556",
+    "created": "2026-10-16T16:59:02.962308Z",
+    "description": "Private network gateway for Azure Databricks is\nnow in Public Preview, enabling serverless compute to connect to resources in\nyour virtual network (VNet) and transitively connected networks through a\nsingle managed gateway. Customers can use the gateway to access multiple\nprivate resources, route serverless egress through their own firewalls or\nnetwork security appliances, and use stable, identifiable source IP addresses. This simplifies secure connectivity for\nserverless workloads while giving organizations greater control over network\ntraffic and access to private resources. Private network gateway integrates with existing network\nconnectivity configurations (NCCs) and complements Azure Private Link,\nproviding additional flexibility for securing serverless network connectivity. Learn\nmore.  ",
+    "id": "576556",
+    "modified": "2026-10-16T16:59:02.962308Z",
+    "previewAvailabilityDate": "2026-10",
+    "productCategories": [
+      "AI + machine learning",
+      "Analytics"
+    ],
+    "products": [
+      "Azure Databricks"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Databricks Private network gateway"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

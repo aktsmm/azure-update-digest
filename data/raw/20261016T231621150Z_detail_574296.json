@@ -1,0 +1,42 @@
+{
+  "args": {
+    "id": "574296"
+  },
+  "fetchedAt": "2026-10-16T23:16:21.150Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "574296",
+    "created": "2026-10-16T16:50:27.1967037Z",
+    "description": "External key management for Azure Key Vault Managed HSM is now generally available in all Azure public regions. For organizations with regulatory or sovereignty requirements to retain physical control of key-encryption keys, it lets Azure services that support customer-managed keys with Managed HSM use keys held in a customer-operated hardware security module (HSM) outside Microsoft infrastructure. Managed HSM delegates key wrap and unwrap operations through a customer-operated proxy; the external key material stays outside Microsoft infrastructure.Access requires enablement through your Microsoft account team. Connectivity to the proxy over the public internet is available with the GA feature. Azure Private Link integration is in public preview. Customers or their HSM providers are responsible for the external HSM, proxy, and network availability; these components are outside the Managed HSM service-level agreement (SLA).Learn\nmore.",
+    "generalAvailabilityDate": "2026-10",
+    "id": "574296",
+    "modified": "2026-10-16T16:50:27.1967037Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "Security"
+    ],
+    "products": [
+      "Key Vault"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Security",
+      "Feature"
+    ],
+    "title": "Generally Available: External key management for Azure Key Vault Managed HSM"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
