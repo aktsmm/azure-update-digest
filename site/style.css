@@ -30,6 +30,8 @@ button:hover { background:var(--accent); color:#fff; }
 .card h3 { font-size:1.02rem; margin:0 0 4px; } .card h3 a.anchor { color:var(--muted); text-decoration:none; margin-right:6px; font-weight:400; }
 .meta { font-size:.85rem; color:var(--muted); } .badges { display:flex; flex-wrap:wrap; gap:6px; margin:4px 0; }
 .badge { font-size:.78rem; padding:1px 8px; border-radius:999px; border:1px solid var(--line); background:#f1f4f9; }
+.badge.slide-yes { background:#e6f4ea; border-color:#1b7f3b; color:#14602c; }
+.badge.slide-no { background:#fff; color:var(--muted); border-style:dashed; }
 .badge.high { background:#fde8e8; border-color:#f3b4b4; color:var(--high); } .badge.notable { background:#fff1dc; border-color:#f0cf9a; color:var(--notable); }
 .summary { margin:6px 0; } .summary.missing { color:var(--muted); font-style:italic; }
 .links { display:flex; flex-wrap:wrap; gap:4px 16px; font-size:.9rem; } .links ul { margin:2px 0 0 18px; padding:0; }
