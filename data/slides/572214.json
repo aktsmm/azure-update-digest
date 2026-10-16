@@ -1,0 +1,92 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["572214"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-16T06:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "572214",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "VS Code の Copilot で Azure アプリ構築をガイド付きで",
+        "subtitleJa": "アイデアから Azure へのデプロイまで、構造化されたワークフローで進める（パブリック プレビュー）",
+        "en": "Public Preview: Introducing a Guided Copilot Experience for Building Azure Apps in VS Code"
+      },
+      "meta": {
+        "publishedJst": "2026-09-22",
+        "modifiedJst": "2026-09-22",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Visual Studio Code"],
+        "categories": ["devtools"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**VS Code で GitHub Copilot を使って Azure アプリを作る開発者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "自由形式のチャットより予測しやすい手順で、構築からデプロイまで進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。プレビュー機能は本番ワークロード向けではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-16T06:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "自由形式のチャットでは、インフラ生成の抜けやデプロイ失敗、文脈の喪失が起こることがある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "チェックポイントとガードレールのある、アイデアから Azure 上での稼働までの一貫した流れを提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "VS Code の GitHub Copilot で、アイデアからデプロイ済み Azure アプリまで案内するガイド付き体験", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Azure Tools 拡張機能をインストールして利用する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "パブリック プレビューは変更の可能性があり、通常 SLA はなく、本番向けではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-16T06:50:00Z" }] },
+            { "text": "Azure サブスクリプションと GitHub Copilot のサブスクリプションが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-azure/get-started", "locator": "前提条件", "retrievedAt": "2026-10-16T06:50:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "検証用プロジェクトで、従来のチャット利用と比べた手順の安定性を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "Copilot の応答は、コストやセキュリティを含め実行前に確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-azure/introduction", "locator": "ベスト プラクティス", "retrievedAt": "2026-10-16T06:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "vscode", "term": "Visual Studio Code", "type": "product", "oneLine": { "text": "Azure 向け GitHub Copilot を利用できる開発環境のひとつ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-azure/introduction", "locator": "サポートされている開発環境", "retrievedAt": "2026-10-16T06:50:00Z" }] } },
+        { "termKey": "github-copilot-azure", "term": "Azure 向け GitHub Copilot", "type": "product", "oneLine": { "text": "自然言語で Azure の説明・デプロイ・情報取得・トラブルシューティングを行える拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-azure/introduction", "locator": "冒頭", "retrievedAt": "2026-10-16T06:50:00Z" }] } },
+        { "termKey": "azure-skills", "term": "Azure スキル", "type": "feature", "oneLine": { "text": "azure-prepare や azure-deploy など、構造化されたマルチステップ ワークフローを可能にする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-azure/introduction", "locator": "しくみ", "retrievedAt": "2026-10-16T06:50:00Z" }] } },
+        { "termKey": "agent-mode", "term": "エージェント モード", "type": "term", "oneLine": { "text": "Azure の質問や複数ステップのタスクの実行に使う Copilot のモード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-azure/introduction", "locator": "ベスト プラクティス", "retrievedAt": "2026-10-16T06:50:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、全 Azure 顧客が評価とフィードバックを行うための提供段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-16T06:50:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=572214",
+        "learn": [
+          { "title": "Azure 向け GitHub Copilot とは", "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-azure/introduction", "locale": "ja-jp" },
+          { "title": "Azure 向け GitHub Copilot の使い始め方", "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-azure/get-started", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "利用に必要な前提条件は？", "a": "Azure サブスクリプション、GitHub Copilot サブスクリプション、Visual Studio Code が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-azure/get-started", "locator": "前提条件", "retrievedAt": "2026-10-16T06:50:00Z" }] },
+          { "q": "本番環境で使ってよい？", "a": "パブリック プレビューは通常 SLA がなく、明示がない限り本番ワークロード向けではありません。", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-16T06:50:00Z" }] },
+          { "q": "Copilot の出力はそのまま信頼できる？", "a": "実行前に正確性・コスト・セキュリティを確認し、シークレットをソース コードに保存しないよう案内されています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-azure/introduction", "locator": "ベスト プラクティス", "retrievedAt": "2026-10-16T06:50:00Z" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
