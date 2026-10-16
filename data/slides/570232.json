@@ -95,11 +95,37 @@
           "oneLine": { "text": "独自の Prometheus サーバーを維持せずに、Prometheus メトリックを収集・格納・分析できるマネージド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/prometheus-metrics-overview", "locator": "冒頭", "retrievedAt": "2026-10-14T19:32:07Z" }] }
         }
       ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "AKS は、全リージョンで提供される基盤サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-16T08:05:00Z" }]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=570232",
         "learn": [
           { "title": "Azure Kubernetes Service 監視データ リファレンス", "url": "https://learn.microsoft.com/ja-jp/azure/aks/monitor-aks-reference", "locale": "ja-jp" },
           { "title": "Azure Monitor と Prometheus", "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/prometheus-metrics-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分の環境は対象ですか？",
+            "a": "2 つのメトリックを Pod 名ディメンションで絞り込み・グループ化している場合が対象です。集計 Pod 数のみの利用なら対応は不要です。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=570232" }]
+          },
+          {
+            "q": "いつまでに何をすればよいですか？",
+            "a": "2027-09-30 までにダッシュボード、ワークブック、アラート、自動化を更新します。Pod 単位の監視には Managed Prometheus が推奨されています。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=570232" }]
+          },
+          {
+            "q": "日本リージョンでも対象になりますか？",
+            "a": "AKS は基盤サービスとして全リージョンで提供されるため、日本リージョンの AKS も対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-16T08:05:00Z" }]
+          }
         ]
       },
       "render": { "continuationRequired": false }
