@@ -1,0 +1,184 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571025"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-16T05:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "571025",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Private Link の「標準サービス エンドポイント」が一般提供（GA）に",
+        "subtitleJa": "パブリック IP をネットワーク識別子にして、IaaS から PaaS への接続を大規模かつ簡潔に管理できます",
+        "en": "Generally Available: Standard service endpoint"
+      },
+      "meta": {
+        "publishedJst": "2026-10-16",
+        "modifiedJst": "2026-10-16",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Private Link"],
+        "categories": ["networking"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": {
+          "text": "多数の VNet / サブネットから Storage・SQL・Cosmos DB・Key Vault に接続している**ネットワーク管理者**",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        },
+        "change": {
+          "text": "アクセス ルール数を抑え、境界ベースでアクセス制御を一元管理できる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "主な利点", "retrievedAt": "2026-10-16T05:30:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "サービス エンドポイントの管理規模に課題があれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "基本サービス エンドポイントはスケール制約があり、サブネットごとの ACL 管理が必要",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "標準サービスエンドポイントの仕組み / 接続オプションの比較", "retrievedAt": "2026-10-16T05:30:00Z" }]
+        },
+        "after": {
+          "text": "1 つのパブリック IP を多数のサブネット・VNet の識別子にでき、必要な ACL エントリを大幅に削減できる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "標準サービスエンドポイントの仕組み", "retrievedAt": "2026-10-16T05:30:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "サブネットのサービス エンドポイントにパブリック IP を「ネットワーク識別子」として関連付ける",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "標準サービスエンドポイントの仕組み", "retrievedAt": "2026-10-16T05:30:00Z" }]
+            },
+            {
+              "text": "PaaS をネットワーク セキュリティ境界に入れ、IP ベースの受信ルールで許可する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "標準サービスエンドポイントの仕組み", "retrievedAt": "2026-10-16T05:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "パブリック IP 作成 → サブネットのエンドポイントに関連付け → PaaS を境界に保護 → 一致する IP ルールを追加",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "標準サービスエンドポイントの仕組み", "retrievedAt": "2026-10-16T05:30:00Z" }]
+            },
+            {
+              "text": "ポータル・Azure CLI・PowerShell の手順が公開されている",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "標準サービスエンドポイントの仕組み", "retrievedAt": "2026-10-16T05:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "対象は Storage / Key Vault / SQL Database / Cosmos DB。有料機能で、VNet 単位の時間課金",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "サポートされているサービス / Pricing", "retrievedAt": "2026-10-16T05:30:00Z" }]
+            },
+            {
+              "text": "同一テナント・同一リージョン内で IP を共有可。オンプレミスからの通信は不可。Network Contributor 以上が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "Limitations / よく寄せられる質問", "retrievedAt": "2026-10-16T05:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "基本: 無料・約 10 サービス・非スケーラブル / 標準: 有料・4 サービス・スケーラブル / Private Link: 70+ サービス",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "接続オプションの比較", "retrievedAt": "2026-10-16T05:30:00Z" }]
+            },
+            {
+              "text": "標準でもプライベート接続・オンプレミス接続・データ流出保護は非対応（Private Link は対応）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "接続オプションの比較", "retrievedAt": "2026-10-16T05:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "強制モード前に診断ログで 1〜2 週間、トラフィックを確認して許可漏れを防ぐ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "ネットワークセキュリティペリメーターのベストプラクティス", "retrievedAt": "2026-10-16T05:30:00Z" }]
+            },
+            {
+              "text": "既存エンドポイントのネットワーク識別子を変更するとアクティブ フローがリセットされる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-16T05:30:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-private-link", "term": "Azure Private Link", "type": "product", "oneLine": { "text": "Azure サービスへの接続をプライベートに行うための機能群。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-service-endpoints-overview", "locator": "冒頭の注", "retrievedAt": "2026-10-16T05:30:00Z" }] } },
+        { "termKey": "service-endpoint", "term": "サービス エンドポイント", "type": "feature", "oneLine": { "text": "Azure バックボーン経由で、VNet から Azure サービスへ直接接続する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-service-endpoints-overview", "locator": "冒頭", "retrievedAt": "2026-10-16T05:30:00Z" }] } },
+        { "termKey": "nsp", "term": "ネットワーク セキュリティ境界", "type": "feature", "oneLine": { "text": "PaaS リソースの周囲に作る論理的なネットワーク境界で、パブリック アクセスを制御する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/network-security-perimeter-concepts", "locator": "冒頭", "retrievedAt": "2026-10-16T05:30:00Z" }] } },
+        { "termKey": "network-identifier", "term": "ネットワーク識別子", "type": "term", "oneLine": { "text": "サブネットのサービス エンドポイントに関連付ける、トラフィックの識別用パブリック IP。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "標準サービスエンドポイントの仕組み", "retrievedAt": "2026-10-16T05:30:00Z" }] } },
+        { "termKey": "paas-iaas", "term": "IaaS / PaaS", "type": "term", "oneLine": { "text": "仮想マシンなどの基盤（IaaS）と、Storage などのマネージド サービス（PaaS）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-16T05:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "対応 4 サービスはいずれも「すべての Azure リージョン」で一般提供",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "サポートされているサービス", "retrievedAt": "2026-10-16T05:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571025",
+        "learn": [
+          { "title": "標準的なサービスエンドポイントとは何ですか?", "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locale": "ja-jp" },
+          { "title": "ネットワークセキュリティ境界とは何ですか？", "url": "https://learn.microsoft.com/ja-jp/azure/private-link/network-security-perimeter-concepts", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "対応する Storage・Key Vault・SQL Database・Cosmos DB は、すべての Azure リージョンで一般提供と記載されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "サポートされているサービス", "retrievedAt": "2026-10-16T05:30:00Z" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "有料機能で、VNet 1 つあたり時間単位の固定料金で課金されます。詳細は Private Link の価格ページを参照してください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "Pricing", "retrievedAt": "2026-10-16T05:30:00Z" }]
+          },
+          {
+            "q": "Private Link のプライベート エンドポイントの代わりになりますか？",
+            "a": "いいえ。標準でもプライベート接続・オンプレミス接続・データ流出保護には対応せず、これらは Private Link が対応します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "接続オプションの比較", "retrievedAt": "2026-10-16T05:30:00Z" }]
+          },
+          {
+            "q": "設定に必要な権限は？",
+            "a": "Network Contributor 以上のロールが必要で、joinServiceEndpointNetworkIdentifier/action の許可が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/service-endpoint-standard-overview", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-16T05:30:00Z" }]
+          }
+        ]
+      }
+    }
+  ]
+}
