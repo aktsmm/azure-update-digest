@@ -13,7 +13,7 @@ GitHub Pages から配信する、読み取り専用の静的 JSON です。認�
 | `api/v1/months/YYYY-MM.json` | 月別の更新一覧（作成日の JST 月） |
 | `api/v1/updates/{id}.json` | 1 件の詳細。スライド JSON があれば `slide` に含む |
 | `api/v1/categories/{category}.json` | カテゴリ別の軽量索引（複数所属あり） |
-| `slides/{id}.json` | スライド JSON（[スキーマ](slide-schema.md)）。直近 3 か月の作成済みのみ |
+| `slides/{id}.json` | スライド JSON（[スキーマ](slide-schema.md)）。直近 3 か月の作成済みのみ。発表者向けの想定問答は `slides[0].speakerNotes.qa`（`q` / `a` / `evidence`。あるスライドのみ）。`api/v1/updates/{id}.json` の `slide` にも同じ内容が入る |
 | `pdf/sample.pdf` | 最新のスライド 1 件の PDF（サンプル。パスワード不要）。他の PDF は暗号化されており API の対象外 |
 | `data/slides.json` | PDF を公開している更新の一覧と、暗号化パラメータ（`pdfCrypto`）、サンプルの ID（`sample`） |
 
