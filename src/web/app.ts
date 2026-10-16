@@ -83,6 +83,7 @@ function badges(i: DigestItem): string {
   for (const c of i.categories) b.push(`<span class="badge">${esc(catLabel(c))}</span>`);
   if (i.status) b.push(`<span class="badge">${esc(i.status)}</span>`);
   for (const a of i.availabilities) b.push(`<span class="badge">${esc(a.ring)} ${a.year}年${esc(a.month)}</span>`);
+  if (slideEntries.size) b.push(slideEntries.has(i.key) ? `<span class="badge slide-yes" title="PDF・PPTX に含まれます">スライドあり</span>` : `<span class="badge slide-no" title="スライドは順次生成されます。それまで PDF・PPTX には含まれません">スライド未作成</span>`);
   return `<div class="badges">${b.join("")}</div>`;
 }
 
@@ -188,11 +189,11 @@ function bindDownload(r: QueryResult, q: Query) {
   const withSlides = () => chosen().filter((i) => slideEntries.has(i.key));
   const refresh = () => {
     const n = chosen().length, s = withSlides().length;
-    const set = (dl: string, label: string, count: number) => {
+    const set = (dl: string, label: string, count: number, total?: number) => {
       const b = document.querySelector<HTMLButtonElement>(`[data-dl="${dl}"]`);
-      if (b) { b.textContent = `${label}（${count}）`; b.disabled = count === 0; }
+      if (b) { b.textContent = `${label}（${count}${total === undefined ? "" : ` / ${total}`}）`; b.disabled = count === 0; }
     };
-    set("json", "JSON", n); set("pdf", "PDF", s); set("pptx", "PPTX", s);
+    set("json", "JSON", n); set("pdf", "PDF", s, n); set("pptx", "PPTX", s, n);
     const c = document.getElementById("selcount");
     if (c) c.textContent = `出力対象 ${n} / ${r.items.length} 件`;
   };
