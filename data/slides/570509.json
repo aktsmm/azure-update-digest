@@ -1,0 +1,112 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570509"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-16T06:57:19Z"
+  },
+  "slides": [
+    {
+      "key": "570509",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Payment HSM v2 がパブリック プレビュー",
+        "subtitleJa": "顧客専用のシングルテナント決済用 HSM クラスターを Azure で提供",
+        "en": "Public Preview: Azure Payments HSM v2"
+      },
+      "meta": {
+        "publishedJst": "2026-09-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure Payment HSM"],
+        "categories": ["security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "決済処理・PIN 処理・カード発行を行う**金融機関、決済事業者、フィンテック**", "origin": "learn", "assertion": "inference", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "Azure Payment HSM v2 を使用する理由", "retrievedAt": "2026-10-16T06:58:00Z" }] },
+        "change": { "text": "物理 HSM を調達・運用せず、専用の決済用 HSM クラスターを使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "Azure Payment HSM v2 を使用する理由", "retrievedAt": "2026-10-16T06:58:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。利用にはアカウント マネージャー等経由の登録が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "Important", "retrievedAt": "2026-10-16T06:58:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "支払い HSM 向けの分離されたシングルテナント クラスターを、Microsoft が基盤を管理する形で利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "決済処理、PIN 処理、キー管理、資格情報発行、認証データ保護向けのサービス", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "冒頭", "retrievedAt": "2026-10-16T06:58:00Z" }] },
+            { "text": "クラスターの管理権限は顧客が保持し、基盤は Microsoft が管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "冒頭", "retrievedAt": "2026-10-16T06:58:00Z" }] },
+            { "text": "FIPS 140-3 レベル 3、PCI DSS、PCI 3DS、PCI PIN 認定の基盤で稼働", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "セキュリティとコンプライアンスの強化", "retrievedAt": "2026-10-16T06:58:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ゲート オンボーディング方式。アカウント マネージャー等への連絡と登録が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "Important", "retrievedAt": "2026-10-16T06:58:00Z" }] },
+            { "text": "プレビュー期間中の提供リージョンは米国西部と西ヨーロッパ。プレビューは無料", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "Important", "retrievedAt": "2026-10-16T06:58:00Z" }] },
+            { "text": "バックアップ等の目標を満たす HSM 容量の確保は顧客の責任", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "管理とシングルテナントの制御", "retrievedAt": "2026-10-16T06:58:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "既存の Azure Payment HSM（v1）とは別サービス。要件に合うか比較して検討する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "Note", "retrievedAt": "2026-10-16T06:58:00Z" }] },
+            { "text": "提供リージョンと PCI 要件が自社の計画に合うかを確認し、検証から始める", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "payment-hsm-v2", "term": "Azure Payment HSM v2", "type": "product", "oneLine": { "text": "決済処理や PIN 処理向けの、高可用性のシングルテナント支払い HSM サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "冒頭", "retrievedAt": "2026-10-16T06:58:00Z" }] } },
+        { "termKey": "hsm", "term": "HSM", "type": "term", "oneLine": { "text": "ハードウェア セキュリティ モジュール。暗号化キーを保護する専用ハードウェア。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "Glossary", "retrievedAt": "2026-10-16T06:58:00Z" }] } },
+        { "termKey": "pci", "term": "PCI", "type": "term", "oneLine": { "text": "ペイメントカード業界。決済のセキュリティ要件の基準にあたる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "Glossary", "retrievedAt": "2026-10-16T06:58:00Z" }] } },
+        { "termKey": "single-tenant", "term": "シングルテナント", "type": "term", "oneLine": { "text": "サブスクリプションごとに分離された HSM クラスターを専用で使う構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "管理とシングルテナントの制御", "retrievedAt": "2026-10-16T06:58:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-16T06:58:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビュー期間中は米国西部と西ヨーロッパで提供",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locator": "Important", "retrievedAt": "2026-10-16T06:58:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570509",
+        "learn": [{ "title": "Azure Payment HSM v2 とは", "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "プレビュー期間中の提供リージョンは米国西部と西ヨーロッパです。日本リージョンは含まれていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview" }]
+          },
+          {
+            "q": "どうすれば使い始められますか？",
+            "a": "ゲート オンボーディング方式です。Microsoft アカウント マネージャーまたはカスタマー サポートに連絡し、サブスクリプションを登録します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "プレビュー期間中は無料で利用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview" }]
+          },
+          {
+            "q": "既存の Azure Payment HSM との関係は？",
+            "a": "v2 は Thales payShield 10K を使う既存の Azure Payment HSM とは別のサービスで、両者は共存します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/payment-hsm-v2/overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
