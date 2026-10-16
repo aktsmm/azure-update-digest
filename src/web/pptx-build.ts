@@ -303,7 +303,8 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
     s.addText([{ text: st.text, options: { bold: true, fontSize: 13, breakLine: true } }, ...(sl.region?.note ? [{ text: sl.region.note, options: { fontSize: 8 } }] : [])], { x: W - M - 3.55, y: footerTop + 0.12, w: 3.5, h: 0.68, fontFace: FONT, color: C.white, margin: 0, valign: "middle", fit: "shrink" });
   }
 
-  // notes: sources for reviewers
+  // notes: anticipated Q&A for the presenter, then sources for reviewers
+  const qa = (sl.speakerNotes?.qa ?? []).flatMap((x, n) => [`Q${n + 1}. ${x.q}`, `A${n + 1}. ${x.a}`, ...x.evidence.map((e) => `　根拠: ${e.url}`), ""]);
   const sources = (sl.references.learn ?? []).map((l) => `${l.title}: ${l.url}`);
-  s.addNotes([`出典（Azure Updates）: ${sl.references.announcement}`, ...sources].join("\n"));
+  s.addNotes([...(qa.length ? ["【想定問答】", ...qa] : []), `出典（Azure Updates）: ${sl.references.announcement}`, ...sources].join("\n"));
 }

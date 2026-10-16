@@ -256,6 +256,25 @@
           { "title": "Java 25 に移行する理由", "url": "https://learn.microsoft.com/ja-jp/java/openjdk/reasons-to-move-to-java-25", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "終了日を過ぎると、アプリは止まりますか？",
+            "a": "アプリは動作し続けますが、終了日以降はセキュリティ更新とカスタマー サービスが提供されなくなります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locator": "廃止", "retrievedAt": "2026-10-14T12:00:00Z" }]
+          },
+          {
+            "q": "どのバージョンが対象で、移行先はどれですか？",
+            "a": "Java 8・11・17 が 2027-09-01 に終了します。移行先は Java 25 です。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=568585" }, { "url": "https://learn.microsoft.com/ja-jp/java/openjdk/reasons-to-move-to-java-25" }]
+          },
+          {
+            "q": "日本リージョンでも対象になりますか？",
+            "a": "App Service のランタイム サポート ポリシーとして全体に適用されるため、日本リージョンも対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locator": "廃止", "retrievedAt": "2026-10-14T12:00:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     },
     {
