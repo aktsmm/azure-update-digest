@@ -141,6 +141,25 @@
           { "title": "Azure Front Door の除外リストを使用する Web Application Firewall", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-exclusion", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分の WAF は例外の対象ですか？",
+            "a": "Application Gateway v2 の次世代 WAF エンジンで、マネージド ルールセットが CRS 3.2 / DRS 2.1 以降の場合に使えます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "冒頭", "retrievedAt": "2026-10-16T07:25:00Z" }]
+          },
+          {
+            "q": "例外はいくつまで設定できますか？",
+            "a": "1 つの WAF ポリシーで最大 60 個です。1 つの例外には 600 個の IP、10 個の URI、10 個の要求ヘッダーのいずれかを設定できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "Limitations", "retrievedAt": "2026-10-16T07:25:00Z" }]
+          },
+          {
+            "q": "許可アクションのカスタム ルールとの違いは？",
+            "a": "許可ルールは DRS / CRS / Bot Protection の検査を一括でバイパスしますが、例外は特定のルール・グループ・ルールセットに限定できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "Azure WAF 経由のトラフィックを許可するオプション", "retrievedAt": "2026-10-16T07:25:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
