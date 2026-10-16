@@ -2,7 +2,7 @@
 
 Azure の更新情報（[Microsoft Release Communications](https://www.microsoft.com/releasecommunications) = MRC）を収集・保存・正規化し、日本語要約付きの静的サイトとして公開します。収集・要約・公開はすべて GitHub Actions 上で動き、ローカル実行は不要です。
 
-- 範囲: 収集 / 保存 / 正規化 / 日本語要約・日本語タイトル / 一覧・検索・絞り込み（期間・カテゴリ・種類）・アーカイブ / 定期更新 / **1 更新 1 枚のスライド JSON・PDF・PowerPoint（.pptx）** / 静的 JSON API / JSON・PDF・PPTX のダウンロード（更新ごとのチェックで必要な分だけ選べます）
+- 範囲: 収集 / 保存 / 正規化 / 日本語要約・日本語タイトル / 一覧・検索・絞り込み（期間・カテゴリ・種類）・アーカイブ / 定期更新 / **1 更新 1 枚のスライド JSON・PDF・PowerPoint（.pptx）** / 静的 JSON API / JSON・PDF・PPTX のダウンロード（更新ごとのチェックで必要な分だけ選べます。PPTX のスピーカーノートには想定問答が入ります）
 - 対象外: 月次ジョブ、M365 Roadmap（MRC が使えない場合は失敗として明示し、別ソースへ置換しません）
 - 公開サイト: https://aktsmm.github.io/azure-update-digest/
 - 設計・方式の詳細: **[docs/design.md](docs/design.md)**（データ層、取得方式、期間・日付、分類・重要度、要約・関連資料、権限、受け入れ条件、運用上の注意）
@@ -32,17 +32,19 @@ dist/             サイト・API・PDF。data/ から常に再生成可能     
 | `collect-daily.yml` | 日次収集（`modified` ベースの sweep）＋詳細補完、公開 | 毎日 21:00 UTC = **06:00 JST** |
 | `backfill.yml` | 初期バックフィル（直近 12 ヶ月）。完了後は no-op | 2 時間ごと（毎偶数時 :17 UTC） |
 | `summarize.md` (`.lock.yml`) | **GitHub Agentic Workflow**。日本語要約と Learn 関連資料を生成し PR を作成 | 6 時間ごと（:37 UTC） |
-| `slide-dispatch.yml` | 直近 3 か月でスライド未作成の更新を新しい順に最大 30 件、`slide.md` に 1 件ずつ起動（作成済みはスキップ） | 毎週月・木 **03:00 JST**（日・水 18:00 UTC） |
-| `slide.md` (`.lock.yml`) | **GitHub Agentic Workflow**。1 更新 1 枚のスライド JSON を生成し PR を作成。PDF も成果物として生成 | 手動（`id`）／ dispatch から |
+| `slide-dispatch.yml` | 直近 3 か月でスライド未作成の更新を新しい順に最大 30 件、`slide.md` に 1 件ずつ起動（作成済みはスキップ）。手動では `ids` と `regenerate=true` で既存スライドの再生成もできる | 毎週月・木 **03:00 JST**（日・水 18:00 UTC）／手動 |
+| `slide.md` (`.lock.yml`) | **GitHub Agentic Workflow**。1 更新 1 枚のスライド JSON を生成し PR を作成。PDF も成果物として生成 | 手動（`id`、既存の再生成は `regenerate=true`）／ dispatch から |
 | `auto-merge-slides.yml` | スライド PR を検証（スキーマ・禁止語・PDF 描画）して自動マージ → 公開 | スライド生成完了時 / 3 時間ごと（:23 UTC） |
 | `maintain.md` (`.lock.yml`) | **自己修復の Agentic Workflow**（モデルは `auto`）。決定的な健康チェック（`npm run health`）の結果を読み、コード・設定・テスト・ドキュメントの不具合は PR で直し、直せないもの（ワークフロー定義・Secret・設定）は Issue にまとめる。PR は、許可した範囲（`src` / `tests` / `config` / `schema` / `docs` / `scripts` / README、400 行以内、削除なし）で検査に通れば `auto-merge-maintenance.yml` が自動マージ | 隔週: 毎月 2 日・16 日 **03:17 JST**（1 日・15 日 18:17 UTC）／手動 |
 | `auto-merge-maintenance.yml` | 保守 PR の自動マージ。PR のコードは読み取り専用のジョブで検査し（型・テスト・検証）、書き込み権限のジョブは検査した SHA を指定してマージするだけ | 保守完了時 / 6 時間ごと（:29 UTC）/ 手動（`dry_run`） |
 | `watchdog.yml` | AI なし。40 分を超えて固まったエージェント実行を取り消し、失敗した Pages デプロイを 1 回だけ再実行 | 毎日 05:41 JST（20:41 UTC。実行は遅れることがある） |
+| `token-check.yml` | AI なし。`COPILOT_GITHUB_TOKEN` が有効か・期限が 14 日以内でないかを確認し、問題があれば Issue で通知（値は出力しない） | 毎週月曜 **09:20 JST**（日曜 00:20 UTC） |
 | `pages.yml` | validate → build → GitHub Pages 公開（失敗時は既存公開物を維持） | 呼び出し / data 等の push |
 | `ci.yml` | typecheck / test / validate / build | PR |
 
 - `permissions` は最小（収集ジョブのみ `contents: write`、公開ジョブのみ `pages` / `id-token: write`）。`concurrency: data-write` でデータ書き込みを直列化。
 - 収集が失敗（MRC 不達・整合性エラー）した場合は commit も deploy もしません。
+- **モデルとコスト**: `slide.md` と `summarize.md` は `claude-sonnet-5.5` に固定（`engine.model`）、`maintain.md` は `auto`。目安はスライド 1 枚あたり約 28 AI クレジット、要約 30 件あたり約 158 クレジット（[design.md の 15 章](docs/design.md)）。
 
 ### 要約・関連資料（Agentic Workflow）
 
@@ -55,8 +57,8 @@ dist/             サイト・API・PDF。data/ から常に再生成可能     
 
 ### スライドと API
 
-- スライド JSON は Git、PDF はデプロイ時に生成（Git には入れない）。公開は**直近 3 か月**。サイトのボタンで、選んだ範囲の JSON と PDF（表紙・目次・概要付き）をブラウザ内で作成します。詳細は [スライドスキーマ](docs/slide-schema.md)。
-- **PDF**: スライドごとの PDF はデプロイ時に作り、**最新の 1 件だけ**サンプル（`pdf/sample.pdf`、パスワード不要）として公開します。それ以外はリポジトリ Secret `PDF_PASSWORD` で暗号化（AES-256-GCM / PBKDF2）して置き、サイトの「PDF（N）」ボタンでパスワードを入力するとブラウザ内で復号・結合します（表紙・目次・概要付き）。「PPTX（N）」ボタンは同じ範囲のスライド JSON から、**編集できる PowerPoint**（テキストボックス・図形・実際のリンク）をブラウザ内で作ります（同じパスワード。`pptxgenjs`）。PDF と完全に同じ見た目にはならない場合があります。パスワードは公開されず、Secret が無い場合はサンプル以外の PDF を公開しません。変更は `gh secret set PDF_PASSWORD` のあと `pages.yml` を再実行します。
+- スライド JSON は Git、PDF はデプロイ時に生成（Git には入れない）。公開は**直近 3 か月**。サイトのボタンで、**チェックした更新だけ**の JSON・PDF（表紙・目次・概要付き）・PPTX をブラウザ内で作成します（ボタンは「PDF（スライドあり / 出力対象）」の形。スライドは順次生成されるため、新しい更新は PDF・PPTX に入らないことがあります）。詳細は [スライドスキーマ](docs/slide-schema.md)。
+- **PDF**: スライドごとの PDF はデプロイ時に作り、**最新の 1 件だけ**サンプル（`pdf/sample.pdf`、パスワード不要）として公開します。それ以外はリポジトリ Secret `PDF_PASSWORD` で暗号化（AES-256-GCM / PBKDF2）して置き、サイトの「PDF」ボタンでパスワードを入力するとブラウザ内で復号・結合します（表紙・目次・概要付き）。「PPTX」ボタンは同じ範囲のスライド JSON から、**編集できる PowerPoint**（テキストボックス・図形・実際のリンク）をブラウザ内で作ります（同じパスワード。`pptxgenjs`）。PDF と完全に同じ見た目にはならない場合があります。パスワードは公開されず、Secret が無い場合はサンプル以外の PDF を公開しません。変更は `gh secret set PDF_PASSWORD` のあと `pages.yml` を再実行します。
 - 静的 JSON API: [docs/api.md](docs/api.md)（`api/v1/`）。
 
 ## 取得の考え方
@@ -94,7 +96,7 @@ npm run collect -- --mode backfill   # MRC に接続して raw を保存（通�
 npm run build                        # normalize + site
 npm run pending -- --limit 5         # 要約・日本語タイトルが未生成の更新
 npm run pending-slides -- --limit 5   # スライド未作成の更新（直近 3 か月）
-npm run slide-input -- --id <id>      # スライド生成の入力（.work/）
+npm run slide-input -- --id <id> [--regenerate]   # スライド生成の入力（.work/）。--regenerate は既存スライドの再生成用
 npm run validate:slides               # data/slides/*.json の検証
 npm run pdf -- --dir data/slides --ids <id> --out dist-pdf   # ローカルで PDF を描画
 npm run build:pdfs && PDF_PASSWORD=*** npm run protect:pdfs && npm run build:api   # デプロイ時と同じ手順（要 Chrome）
