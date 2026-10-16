@@ -84,7 +84,7 @@
             {
               "text": "StandardV2 から Standard へのダウングレードは不可。一部リージョンは非対応",
               "origin": "learn", "assertion": "fact", "verification": "verified",
-              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/nat-gateway/nat-sku", "locator": "既知の制限事項", "retrievedAt": "2026-10-14T15:55:00Z" }]
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/nat-gateway", "locator": "マネージド NAT ゲートウェイ SKU を選択する", "retrievedAt": "2026-10-16T07:15:00Z" }, { "url": "https://learn.microsoft.com/ja-jp/azure/nat-gateway/nat-sku", "locator": "既知の制限事項", "retrievedAt": "2026-10-14T15:55:00Z" }]
             }
           ]
         },
@@ -122,6 +122,40 @@
         { "termKey": "managed-nat-gateway", "term": "managedNATGateway", "type": "term", "oneLine": { "text": "AKS が NAT Gateway を作成・管理する送信の種類（outbound type）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/nat-gateway", "locator": "AKS のマネージド NAT ゲートウェイ", "retrievedAt": "2026-10-14T15:55:00Z" }] } },
         { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T15:55:00Z" }] } }
       ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "AKS と NAT Gateway は全リージョン提供の基盤サービス。StandardV2 非対応リージョンでは Standard を使用",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-16T07:15:00Z" },
+          { "url": "https://learn.microsoft.com/ja-jp/azure/aks/nat-gateway", "locator": "マネージド NAT ゲートウェイ SKU を選択する", "retrievedAt": "2026-10-16T07:15:00Z" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存クラスターの NAT Gateway は自動で変わりますか？",
+            "a": "既定が StandardV2 になるのは SKU 未指定の新規クラスターです。既存の Standard は明示的に StandardV2 へ移行できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/nat-gateway", "locator": "マネージド NAT ゲートウェイ SKU を選択する", "retrievedAt": "2026-10-16T07:15:00Z" }]
+          },
+          {
+            "q": "StandardV2 を使うと費用は上がりますか？",
+            "a": "Standard と StandardV2 の NAT Gateway は同じ価格です。詳細は Azure NAT Gateway の料金ページで確認できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/nat-gateway/nat-sku", "locator": "料金と SLA", "retrievedAt": "2026-10-16T07:15:00Z" }]
+          },
+          {
+            "q": "後から Standard に戻せますか？",
+            "a": "StandardV2 から Standard へのダウングレードはサポートされていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/nat-gateway", "locator": "マネージド NAT ゲートウェイ SKU を選択する", "retrievedAt": "2026-10-16T07:15:00Z" }]
+          },
+          {
+            "q": "StandardV2 が使えないリージョンはありますか？",
+            "a": "一部リージョンでは非対応で、その場合 AKS は Standard を使用します。最新の一覧は NAT Gateway の制限事項を確認してください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/nat-gateway", "locator": "マネージド NAT ゲートウェイ SKU を選択する", "retrievedAt": "2026-10-16T07:15:00Z" }]
+          }
+        ]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=574430",
         "learn": [
