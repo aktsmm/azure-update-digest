@@ -276,5 +276,5 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 - 原文 URL の実在確認は自動化できません（9 章）。
 - 要約・日本語タイトルは 6 時間ごとに 50 件ずつ（新しい順）処理するため、バックフィル分の完了には時間がかかります（日次収集後は新着分のみ）。件数・頻度は `summarize.md` で調整できます。
 - 自動マージ PR の CI が、ジョブ 0 件のまま失敗扱いになることがありました（ワークフロー定義の問題ではなく起動時の一時的なもの）。自動マージは CI に依存せず独自に検証するため、影響はありません。
-- **スライド・PDF・API**: 実装済み（[slide-schema.md](slide-schema.md)、[api.md](api.md)）。スライドは直近 3 か月・週 2 回・最大 30 件ずつ生成し、PDF は最新の 1 件のみ公開（サンプル）、残りは `PDF_PASSWORD` で暗号化してブラウザ内で復号・結合します。コストの目安: スライド 1 枚あたり約 28 AI クレジット、要約 30 件あたり約 158 クレジット（モデルは `claude-sonnet-5.5` に固定。`slide.md` / `summarize.md` の `engine.model`）。
+- **スライド・PDF・API**: 実装済み（[slide-schema.md](slide-schema.md)、[api.md](api.md)）。スライドは直近 3 か月・週 2 回・最大 30 件ずつ生成し、PDF は最新の 1 件のみ公開（サンプル）、残りは `PDF_PASSWORD` で暗号化してブラウザ内で復号・結合します。コストの目安（`claude-sonnet-5.5` で実測）: スライド 1 枚あたり約 28 AI クレジット、要約 30 件あたり約 158 クレジット。モデルは `slide.md` が `claude-sonnet-5.5`、`summarize.md` が軽量の `claude-haiku-4.5` に固定（どちらも `engine.model`。要約の質に問題があれば `summarize.md` を戻す）。
 - **今後の候補**: PPTX の見た目の調整（PDF との差）、スライド対象の絞り込み（重要度）によるコスト削減、モデルの固定。
