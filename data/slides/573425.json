@@ -88,6 +88,30 @@
           { "title": "Azure PostgreSQL フレキシブル サーバーおよび Elastic Clusters の Vaulted Backup (v2) (プレビュー) について", "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存の v1 のバックアップは v2 へ移行できますか？",
+            "a": "同じポリシーとボールトのまま移行できますが一方向です。PostgreSQL 15 以降と、Burstable 以外のコンピュート層が前提です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "v1エクスペリエンスからv2エクスペリエンスへの移行", "retrievedAt": "2026-10-16T08:30:00Z" }]
+          },
+          {
+            "q": "v1 で作った回復ポイントは移行後も使えますか？",
+            "a": "引き続き利用できます。v1 の回復ポイントは Restore as Files、v2 の回復ポイントは Restore as Server で復元します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "v1エクスペリエンスからv2エクスペリエンスへの移行", "retrievedAt": "2026-10-16T08:30:00Z" }]
+          },
+          {
+            "q": "費用はどのように発生しますか？",
+            "a": "データ ソースのサイズに基づく保護インスタンス料金と、ボールトのバックアップ ストレージ料金です。課金は 2026年10月15日から有効です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "価格" }, { "url": "https://azure.microsoft.com/updates?id=573425" }]
+          },
+          {
+            "q": "大容量サーバーの復元にはどのくらいかかりますか？",
+            "a": "復元は完全なディスク イメージを書き込むため、サイズに比例します。数 TB では数時間から数日を目安にします。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-postgresql-flex-server-elastic-cluster-v2-overview", "locator": "復元フロー", "retrievedAt": "2026-10-16T08:30:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
