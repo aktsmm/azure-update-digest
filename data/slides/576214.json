@@ -139,6 +139,25 @@
           { "title": "VMware VM と物理サーバーの DR サポート マトリックス", "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/vmware-physical-azure-support-matrix", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どのマシンが対象ですか？",
+            "a": "Arc 対応の Windows VMware 仮想マシンと、オンプレミスの物理サーバーが対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/feature-updates-whats-new", "locator": "アップデート（2026年10月）", "retrievedAt": "2026-10-16T07:10:00Z" }]
+          },
+          {
+            "q": "ASR を使うと Arc の構成に影響しますか？",
+            "a": "ASR は Arc サービスを検出して既存の Arc 構成との互換性を維持するため、既存の Arc ベースの構成に影響を与えず DR を導入できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/feature-updates-whats-new", "locator": "アップデート（2026年10月）", "retrievedAt": "2026-10-16T07:10:00Z" }]
+          },
+          {
+            "q": "導入前に何を準備すべきですか？",
+            "a": "レプリケーション設定前に、アプリケーションの依存関係と復旧要件を評価し、ネットワーク接続性とフェールオーバー要件を計画します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-overview", "locator": "冒頭", "retrievedAt": "2026-10-16T07:10:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
