@@ -1,0 +1,100 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571899"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-16T06:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "571899",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "SQL Migration Agent Skills が一般提供（GA）に",
+        "subtitleJa": "SQL Server から Azure への移行を、評価から移行後の検証まで AI で支援",
+        "en": "Generally Available: SQL Migration Agent Skills for assessment, migration, and validation"
+      },
+      "meta": {
+        "publishedJst": "2026-09-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": [],
+        "categories": ["ai"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**SQL Server を Azure へ移行する予定・検討中の方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "移行の手作業が減り、重要な判断は利用者が管理したまま進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "SQL Server の Azure 移行を計画中なら試す価値あり", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "再利用できる AI スキルが、評価・移行先選定・実行・検証を案内", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "複数の Microsoft UI で使え、移行のコンテキストを保持", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "重要な判断は利用者が管理する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "主な機能", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "互換性の問題・リスク・移行の障害を分析し、準備状況を評価", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "SQL Database / SQL Managed Instance / SQL Server on Azure VM から最適な移行先を推奨（サイズ設定の指針を含む）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "移行後の検証と修復ガイダンスで、切り替え後の準備状況を確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "移行ワークフローの自動化は SQL Database と SQL Managed Instance のシナリオが対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する移行機能", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure Arc 対応の SQL Server は、評価の自動生成と Azure portal からの移行、Copilot による支援を利用可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migration-overview", "locator": "概要 / Microsoft Copilot支援された移行", "retrievedAt": "2026-10-16T06:38:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "移行前に障害を洗い出し、移行後の検証まで一貫して進めたいとき", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "SQL Database への移行ではインスタンス レベルの SQL Agent ジョブに依存しない構成を検討する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/data-migration/sql-server/database/overview", "locator": "概要", "retrievedAt": "2026-10-16T06:38:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sql-migration-agent-skills", "term": "SQL Migration Agent Skills", "type": "feature", "oneLine": { "text": "SQL Server から Azure への移行の各段階を案内する、再利用可能な AI スキル。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "完全マネージドな PaaS として提供される SQL データベース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/data-migration/sql-server/database/overview", "locator": "概要", "retrievedAt": "2026-10-16T06:38:00Z" }] } },
+        { "termKey": "azure-arc-sql", "term": "SQL Server enabled by Azure Arc", "type": "product", "oneLine": { "text": "Azure Arc で Azure に接続され、移行の評価や管理ができる SQL Server。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migration-overview", "locator": "概要", "retrievedAt": "2026-10-16T06:38:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-16T06:38:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571899",
+        "learn": [
+          { "title": "Azure Arc における SQL Server 移行の概要", "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/migration-overview", "locale": "ja-jp" },
+          { "title": "移行の概要: SQL Server から Azure SQL Database へ", "url": "https://learn.microsoft.com/ja-jp/data-migration/sql-server/database/overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
