@@ -96,6 +96,25 @@
         "announcement": "https://azure.microsoft.com/updates?id=573443",
         "learn": [{ "title": "Linux上でSQL Server on Linuxの一括インポート操作を設定する", "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locale": "ja-jp" }]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どのバージョンから使えますか？",
+            "a": "SQL Server 2022 CU27 以降、または SQL Server 2025 CU9 以降の Linux 版が対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "前提条件", "retrievedAt": "2026-10-16T07:50:00Z" }]
+          },
+          {
+            "q": "ロールを付与するだけで一括ロードできますか？",
+            "a": "いいえ。mssql アカウントへのファイル読み取り権限付与と、mssql-conf での許可パス承認も必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "Linux ファイル システムを構成する", "retrievedAt": "2026-10-16T07:50:00Z" }]
+          },
+          {
+            "q": "古い累積更新に戻すとどうなりますか？",
+            "a": "2022 CU24 / 2025 CU3 より前に戻すと、付与済み権限は機能せず、一括操作に sysadmin が必要になります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/linux/security/bulk-operations", "locator": "アップグレードとダウングレードの動作", "retrievedAt": "2026-10-16T07:50:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
