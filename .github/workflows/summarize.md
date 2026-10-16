@@ -9,7 +9,7 @@ permissions:
   contents: read
 engine:
   id: copilot
-  model: claude-haiku-4.5
+  model: claude-sonnet-5.5
 timeout-minutes: 45
 network:
   allowed:
