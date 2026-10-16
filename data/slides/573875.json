@@ -86,6 +86,25 @@
           { "title": "OneLake カタログの概要", "url": "https://learn.microsoft.com/ja-jp/fabric/governance/onelake-catalog-overview", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "ユーザーが検索で見つけられるテーブルの範囲は？",
+            "a": "親アイテムに Read 以上の権限があれば、クエリできないテーブルを含め、配下の全テーブルを検索で発見できます。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=573875", "locator": "What you need to know", "retrievedAt": "2026-10-16T08:20:00Z" }]
+          },
+          {
+            "q": "検索でテーブルのデータにもアクセスできるようになる？",
+            "a": "いいえ。検索はデータへのアクセスを与えず、テーブルを開く・クエリする際は既存のデータ アクセス制御が適用されます。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=573875", "locator": "What you need to know", "retrievedAt": "2026-10-16T08:20:00Z" }]
+          },
+          {
+            "q": "テーブルを検索に出したくない場合は？",
+            "a": "管理ポータルのテナント設定「Users can find objects in search」（既定で有効）をオフにします。アイテムやデータへのアクセスは変わりません。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=573875", "locator": "Action", "retrievedAt": "2026-10-16T08:20:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
