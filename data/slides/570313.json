@@ -79,6 +79,25 @@
           { "title": "Key Vault シークレット プロバイダー拡張機能でシークレットをフェッチする", "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "廃止日はいつで、廃止後はどうなりますか？",
+            "a": "2027-10-09 に廃止されます。以降は新機能・バグ修正・セキュリティ更新・技術サポートが提供されなくなります。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=570313" }]
+          },
+          {
+            "q": "移行先と、移行先の利点は何ですか？",
+            "a": "移行先は Secret Store Extension です。オフライン アクセス用のシークレット同期とワークロード ID フェデレーションに対応します。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=570313" }, { "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension", "locator": "冒頭", "retrievedAt": "2026-10-16T07:15:00Z" }]
+          },
+          {
+            "q": "移行先を使うための前提条件はありますか？",
+            "a": "Arc 対応クラスターで Kubernetes バージョン 1.27 以降が実行されている必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension", "locator": "前提条件", "retrievedAt": "2026-10-16T07:15:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
