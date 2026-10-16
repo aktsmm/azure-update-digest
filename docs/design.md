@@ -210,6 +210,7 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 | `maintain.lock.yml` | 隔週の自己修復: 健康チェックを読み、不具合を PR で修正／直せないものを Issue で報告（`.github/` の変更・Secret・モデル・権限は触らない。許可した範囲の PR は自動マージ） | 毎月 2・16 日 03:17 JST / 手動 | 読み取り + safe-output |
 | `auto-merge-maintenance.yml` | 保守 PR の自動マージ。許可パス（src / tests / config / schema / docs / scripts / README）のみ・400 行以内・削除なし・bot 作成・ラベル `maintenance`。PR のコードは読み取り専用の `check` ジョブだけで実行し、`merge` ジョブ（書き込み権限）は PR のコードを実行せず、検査した SHA を `--match-head-commit` で固定してマージ | 保守完了時 / 6 時間ごと / 手動 | check: 読み取り、merge: `contents: write`, `pull-requests: write` |
 | `watchdog.yml` | 固まったエージェント実行の取り消しと、失敗したデプロイの 1 回再実行（AI なし） | 毎日 05:41 JST（実行は遅れることがある） | `actions: write` |
+| `token-check.yml` | `COPILOT_GITHUB_TOKEN` が有効か・期限が 14 日以内でないかを確認し、問題があれば Issue で通知（AI なし。値は出力しない） | 毎週月曜 09:20 JST（UTC 日曜 00:20） | `issues: write` |
 | `pages.yml` | validate → build → GitHub Pages 公開 | 呼び出し / `data/**` 等の push / 手動 | `pages: write`, `id-token: write` |
 | `ci.yml` | typecheck / test / validate / build | PR | `contents: read` |
 
@@ -253,6 +254,7 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 - **PR のブランチ名は揺れる**: gh-aw が付けるブランチ名は `summaries/…` のことも `summaries-…` のこともあります。自動マージの対象判定は `^summaries[/-]` / `^slides[/-]` で両方に対応しています（片方だけだと、PR が溜まり続けます）。
 - **PDF 結合の注意**: Chrome は 1280×720 px を 960×540 pt で書き出すため、結合時の追加ページも同じサイズに揃えます。pdf-lib は可変フォントのサブセット化で字形が欠けるため、静的インスタンス化＋JIS・Latin-1 のサブセット（`scripts/make-font.py`）を使い、GSUB/GPOS は外します。
 
+- **収集の push 競合**: 日次収集と初期取得は、他の自動マージと重なって push が拒否されても、pull --rebase と push を最大 4 回まで再試行します。
 - **詰まった実行**: ランナーが「Checkout」で止まった実行が、直列のスライド生成キューを数時間止めたことがありました。`watchdog.yml`（1 日 1 回）が 40 分超の実行を取り消し（効かなければ force-cancel）、キューを進めます。
 - **健康チェック**: `npm run health` が `.work/health.json`（ワークフローの 14 日間の成否、詰まった実行、開いている PR、データの鮮度と未処理件数、公開サイトの応答、PDF のパスワード設定、`flags[]`）を作ります。隔週の `maintain.md` と、人の確認の両方で使います。
 

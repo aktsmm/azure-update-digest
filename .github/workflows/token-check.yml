@@ -1,0 +1,55 @@
+name: Token check
+
+# COPILOT_GITHUB_TOKEN（細粒度 PAT）が有効か、期限が近くないかを週 1 回確認し、
+# 問題があれば Issue で知らせる。失効すると要約とスライドの自動生成が止まる。
+# 毎週月曜 09:20 JST（UTC 日曜 00:20）。トークンの値は出力しない。
+on:
+  schedule:
+    - cron: "20 0 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: token-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check COPILOT_GITHUB_TOKEN
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAT: ${{ secrets.COPILOT_GITHUB_TOKEN }}
+          WARN_DAYS: "14"
+        run: |
+          title="[maintenance] COPILOT_GITHUB_TOKEN を確認してください"
+          if [ -z "$PAT" ]; then
+            body="COPILOT_GITHUB_TOKEN が設定されていません。細粒度 PAT（Copilot Requests 権限）を作り、\`gh secret set COPILOT_GITHUB_TOKEN\` で設定してください。"
+          else
+            headers=$(curl -sS -D - -o /dev/null -H "Authorization: Bearer $PAT" https://api.github.com/user | tr -d '\r')
+            status=$(printf '%s\n' "$headers" | awk 'NR==1{print $2}')
+            exp=$(printf '%s\n' "$headers" | awk -F': ' 'tolower($1)=="github-authentication-token-expiration"{print $2}')
+            echo "status=$status expiration=${exp:-none}"
+            if [ "$status" != "200" ]; then
+              body="COPILOT_GITHUB_TOKEN で GitHub API が HTTP $status を返しました。失効または権限不足の可能性があります。細粒度 PAT（Copilot Requests 権限）を作り直し、\`gh secret set COPILOT_GITHUB_TOKEN\` で更新してください。"
+            elif [ -n "$exp" ]; then
+              left=$(( ( $(date -d "$exp" +%s) - $(date +%s) ) / 86400 ))
+              echo "days left: $left"
+              if [ "$left" -gt "$WARN_DAYS" ]; then exit 0; fi
+              body="COPILOT_GITHUB_TOKEN は $exp（残り ${left} 日）に期限切れになります。切れると要約とスライドの自動生成が止まります。細粒度 PAT（Copilot Requests 権限）を作り直し、\`gh secret set COPILOT_GITHUB_TOKEN\` で更新してください。"
+            else
+              echo "token is valid and has no expiration"
+              exit 0
+            fi
+          fi
+          existing=$(gh issue list --state open --search "in:title COPILOT_GITHUB_TOKEN" --json number -q '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "$body"
+          else
+            gh issue create --title "$title" --body "$body" --label maintenance
+          fi

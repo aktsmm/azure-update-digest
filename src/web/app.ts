@@ -122,6 +122,7 @@ function periodForm(q: Query, fixedMonth: string | null, dl: string): string {
       <label>日付の基準 <select name="basis"><option value="created" ${q.basis === "created" ? "selected" : ""}>作成日</option><option value="modified" ${q.basis === "modified" ? "selected" : ""}>更新日</option></select></label>
       <label>重要度 <select name="imp"><option value="all">すべて</option><option value="notable" ${q.importance === "notable-or-high" ? "selected" : ""}>注目以上</option><option value="high" ${q.importance === "high" ? "selected" : ""}>重要のみ</option></select></label>
       <input type="search" name="q" placeholder="タイトル・要約・製品で検索" value="${esc(q.text)}">
+      <button type="button" data-reset title="期間・種類・カテゴリ・検索をすべて初期状態に戻す">条件をリセット</button>
       ${dl}
     </div>
     <div class="chips" style="margin-top:8px"><span class="chips-label">種類</span>${kindChips}</div>
@@ -156,6 +157,7 @@ function bind(q: Query, fixedMonth: string | null, basePath: string) {
     (f.elements.namedItem("base") as HTMLInputElement).value = "";
     apply();
   }));
+  f.querySelector("[data-reset]")?.addEventListener("click", () => { location.hash = basePath; });
 }
 
 function download(name: string, blob: Blob) {
