@@ -58,8 +58,12 @@ jobs:
           git add data
           if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           git commit -m "data: backfill chunk"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          pushed=false
+          for i in 1 2 3 4; do
+            if git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"; then pushed=true; break; fi
+            echo "push attempt $i failed; retrying"; git rebase --abort 2>/dev/null || true; sleep $((i * 5))
+          done
+          if [ "$pushed" != "true" ]; then echo "push failed after retries"; exit 1; fi
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
   deploy:
