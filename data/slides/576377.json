@@ -158,6 +158,25 @@
           { "title": "Azure Cloud HSM とは", "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/overview", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "有効化前の監査ログも取得できますか？",
+            "a": "できません。診断設定は、作成前に生成されたログを遡って取り込みません。監査が必要な場合は早めに有効化します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "構成の確認", "retrievedAt": "2026-10-16T06:20:00Z" }]
+          },
+          {
+            "q": "Log Analytics に反映されるまでどのくらいかかりますか？",
+            "a": "通常は数分〜約 20 分です。診断設定を新規に有効化した直後は、最大 90 分かかることがあります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "構成の確認", "retrievedAt": "2026-10-16T06:20:00Z" }]
+          },
+          {
+            "q": "利用の前提条件や注意点は何ですか？",
+            "a": "Log Analytics ワークスペースの保持期間は 30 日以上が必要です。ログにはユーザー ID などが含まれ得るため、送信先のアクセスを制限します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cloud-hsm/tutorial-hsm-operation-audit-logs", "locator": "前提条件", "retrievedAt": "2026-10-16T06:20:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
