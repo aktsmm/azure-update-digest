@@ -88,6 +88,32 @@
         { "termKey": "microsoft-dev-box", "term": "Microsoft Dev Box", "type": "product", "oneLine": { "text": "開発に必要なツールを備えた、クラウドベースの開発ワークステーションを提供するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/overview-what-is-azure-deployment-environments", "locator": "Microsoft Dev Box と共有されるコンポーネント", "retrievedAt": "2026-10-14T19:10:00Z" }] } },
         { "termKey": "dev-center", "term": "デベロッパー センター", "type": "term", "oneLine": { "text": "Dev Box と ADE の両方に共通する、企業内のリソースを整理するための単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/overview-what-is-azure-deployment-environments", "locator": "Microsoft Dev Box と共有されるコンポーネント", "retrievedAt": "2026-10-14T19:10:00Z" }] } }
       ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "サービス全体の廃止であり、リージョンを問わず適用される",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "Azureデプロイメント環境の廃止に関するよくある質問", "retrievedAt": "2026-10-16T07:40:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "廃止日以降は何ができなくなりますか？",
+            "a": "作成・デプロイ・再デプロイなどの書き込み操作はブロックされる見込みです。確認・読み取り・ログ・削除は期限付きで使える予定です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "退職日には何が起こるのですか?", "retrievedAt": "2026-10-16T07:40:00Z" }]
+          },
+          {
+            "q": "Microsoft Dev Box も同時に廃止されますか？",
+            "a": "いいえ。Dev Box は 2028年9月18日に別途廃止予定で、ADE の廃止日以降も継続します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "ADEの退職はMicrosoft Dev Boxも引退するのでしょうか?", "retrievedAt": "2026-10-16T07:40:00Z" }]
+          },
+          {
+            "q": "自分の環境が対象か、どう調べればよいですか？",
+            "a": "Service Retirement ブックと Azure Resource Graph で関連リソースを特定します。環境インスタンスは開発者ポータルや Azure CLI で確認します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/deployment-environments/deployment-environments-retirement-guide", "locator": "影響を受けるリソースはどのように特定すればよいですか?", "retrievedAt": "2026-10-16T07:40:00Z" }]
+          }
+        ]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=567934",
         "learn": [
