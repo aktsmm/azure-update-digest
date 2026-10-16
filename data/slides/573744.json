@@ -98,6 +98,25 @@
           { "title": "クイックスタート: Azure に Anyscale をデプロイする", "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/quickstart-azure-cli", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "対応は米国・欧州・オーストラリア東部・東南アジアなどの 12 リージョンで、日本リージョンは一覧に含まれません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/supported-regions", "locator": "利用可能な地域と地域名", "retrievedAt": "2026-10-16T07:50:00Z" }]
+          },
+          {
+            "q": "データはどこに保存されますか？",
+            "a": "Ray ワークロードとデータは自分の AKS（データ プレーン）に残ります。ただし運用メタデータは米国の制御プレーンへ送られます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/supported-regions", "locator": "データ駐留と制御プレーン", "retrievedAt": "2026-10-16T07:50:00Z" }]
+          },
+          {
+            "q": "費用の請求はどうなりますか？",
+            "a": "使用状況は Azure に報告され、Anyscale クラウドを含む Azure サブスクリプションに請求されます。価格は専用の価格ページで確認できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/overview", "locator": "Limitations", "retrievedAt": "2026-10-16T07:50:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
