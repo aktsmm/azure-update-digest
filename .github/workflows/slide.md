@@ -7,6 +7,11 @@ on:
         description: "Update ID (canonicalKey), e.g. 574343"
         required: true
         type: string
+      regenerate:
+        description: "true to overwrite an existing slide (keeps supported content, adds speaker-notes Q&A)"
+        required: false
+        default: "false"
+        type: string
 permissions:
   contents: read
 engine:
@@ -41,9 +46,14 @@ steps:
   - name: Prepare input
     env:
       UPDATE_ID: ${{ inputs.id }}
+      REGENERATE: ${{ inputs.regenerate }}
     run: |
       npm ci
-      npm run slide-input -- --id "$UPDATE_ID"
+      if [ "$REGENERATE" = "true" ]; then
+        npm run slide-input -- --id "$UPDATE_ID" --regenerate
+      else
+        npm run slide-input -- --id "$UPDATE_ID"
+      fi
 post-steps:
   - uses: actions/setup-node@v4
     with:
@@ -80,7 +90,7 @@ Create `data/slides/<id>.json` for exactly one Azure update: a one-slide deck th
 
 ## Inputs
 
-- `.work/slide-input.json` — `kind`, `panelTemplate`, the MRC fields (title, description, tags, products, availabilities, status, created), the existing Japanese summary, and verified Learn candidates.
+- `.work/slide-input.json` — `kind`, `panelTemplate`, the MRC fields (title, description, tags, products, availabilities, status, created), the existing Japanese summary, and verified Learn candidates. If it has a `regenerate` object, `data/slides/<id>.json` already exists on purpose: `cat` it, then overwrite it with an improved version (keep every statement the sources still support, same wording where possible; add `speakerNotes.qa`). Never `noop` just because the file exists in that case.
 - `schema/slide-deck.schema.json` — the contract. Read it first.
 - `examples/slide-deck.sample.json` — **the quality bar**. Four finished slides (GA / Preview / Retirement / Announcement). Match the one with the same `kind` in density, structure, and wording style.
 - `docs/slide-schema.md` — field semantics.

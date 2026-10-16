@@ -11,6 +11,7 @@ const flag = (n: string) => {
 };
 const id = flag("id");
 if (!id || !/^\d{1,12}$/.test(id)) throw new Error("--id <numeric canonicalKey> is required");
+const regenerate = args.includes("--regenerate");
 const out = flag("out") ?? ".work/slide-input.json";
 const root = process.env.DATA_ROOT ?? "data";
 
@@ -46,6 +47,7 @@ const input = {
   existingSummaryJa: summary && summary.sourceFingerprint === item.fingerprint ? summary.summaryJa : null,
   verifiedLearnCandidates: (related?.candidates ?? []).filter((c) => c.verified).map((c) => ({ title: c.title, url: c.url, locale: c.locale })),
   snapshotDateJst: toJstDate(Date.now()),
+  ...(regenerate ? { regenerate: { existingSlide: `data/slides/${item.canonicalKey}.json`, instruction: "The slide already exists. Overwrite that file with an improved version: keep every statement that the sources still support (same wording where possible) and add the optional speakerNotes.qa. Do not call noop because the file exists." } } : {}),
 };
 
 mkdirSync(out.replace(/[\\/][^\\/]+$/, ""), { recursive: true });
