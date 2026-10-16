@@ -1,0 +1,129 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["576542"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-16T06:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "576542",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Storage Mover で Azure Files 間のデータ コピー・同期（プレビュー）",
+        "subtitleJa": "リージョン・サブスクリプションをまたぎ、SMB ファイル共有を増分コピーできます",
+        "en": "Public Preview: Azure Files cross-region data copy and synchronization with Azure Storage Mover"
+      },
+      "meta": {
+        "publishedJst": "2026-10-16",
+        "modifiedJst": "2026-10-16",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "October" }],
+        "status": "In preview",
+        "products": ["Azure Files"],
+        "categories": ["storage"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "同一テナント内で **SMB の Azure Files** 共有を別リージョン・別アカウントへコピーしたい方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "スケジュール実行の増分コピーで、セカンダリ コピーや共有の統合を一元管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "対象シナリオがあればサインアップして評価", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ストレージ アカウント・リージョン・サブスクリプションをまたぐ Azure Files のコピーを、スケジュール・監視・監査込みで一元管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "SMB 共有を別アカウント・サブスクリプション・リージョンへコピー（同一 Entra テナント）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "制限", "retrievedAt": "2026-10-16T06:30:00Z" }] },
+            { "text": "1 回限り・スケジュール・定期の増分ジョブ。プレビューは Azure portal のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "前提条件 / ジョブ スケジュール", "retrievedAt": "2026-10-16T06:30:00Z" }] },
+            { "text": "コピー モードは、ファイル データと ACL・タイムスタンプなどに適用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "ジョブ定義の作成", "retrievedAt": "2026-10-16T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・制約", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プレビューのアクセスはサブスクリプション単位。サインアップが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "冒頭の Note", "retrievedAt": "2026-10-16T06:30:00Z" }] },
+            { "text": "NFS は非対応。プレビューは SSD プロビジョニング v2 共有を使用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "制限", "retrievedAt": "2026-10-16T06:30:00Z" }] },
+            { "text": "共有全体が対象でサブディレクトリは指定不可。同時ジョブは 10 件まで", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "制限", "retrievedAt": "2026-10-16T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-cases", "heading": "主な使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ペア リージョン以外も選べる DR、リージョン移行、共有の統合", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "ユース ケース", "retrievedAt": "2026-10-16T06:30:00Z" }] },
+            { "text": "RPO 保証はなく、復旧ポイントは最後に成功した実行の完了時点", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "ユース ケース / Note", "retrievedAt": "2026-10-16T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "operations", "heading": "運用上の注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "実行ごとにソースの共有スナップショットからコピー（残れば手動削除）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "制限", "retrievedAt": "2026-10-16T06:30:00Z" }] },
+            { "text": "スケジュール有効中はターゲットを変更しない（競合解決なし）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "制限", "retrievedAt": "2026-10-16T06:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "共有の種類（SSD v2 か）と DR 要件（RPO 保証なし）を確認し、検証環境で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "storage-mover", "term": "Azure Storage Mover", "type": "product", "oneLine": { "text": "ファイルとフォルダーを Azure Storage に移行し、ストレージ間の同期も維持できるフル マネージド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/reliability/reliability-storage-mover", "locator": "冒頭", "retrievedAt": "2026-10-16T06:30:00Z" }] } },
+        { "termKey": "job-definition", "term": "ジョブ定義", "type": "feature", "oneLine": { "text": "ソースとターゲット、コピー モード、スケジュールなど、コピー操作の設定を記述するリソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "プロジェクトとジョブ定義", "retrievedAt": "2026-10-16T06:30:00Z" }] } },
+        { "termKey": "merge-mode", "term": "ターゲットにマージ", "type": "feature", "oneLine": { "text": "ソースに無いファイルもターゲットに残し、同名のファイルだけソースに合わせて更新するコピー モード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "設定タブ", "retrievedAt": "2026-10-16T06:30:00Z" }] } },
+        { "termKey": "share-snapshot", "term": "共有スナップショット", "type": "feature", "oneLine": { "text": "各ジョブ実行がソース上に作成し、整合性のあるコピーに使う、ある時点のスナップショット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "制限", "retrievedAt": "2026-10-16T06:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-16T06:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Storage Mover リソースを作成できる 6 リージョンに日本は含まれない（共有自体は別リージョンでも可）",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "前提条件の Note（North Europe / Sweden Central / East US / East US 2 / West Central US / West US 3）", "retrievedAt": "2026-10-16T06:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=576542",
+        "learn": [
+          { "title": "Azure Storage Mover で Azure Files 間のデータ コピーの使用を開始する（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locale": "ja-jp" },
+          { "title": "Azure Storage Mover とは", "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/service-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どんな共有が対象ですか？",
+            "a": "SMB の Azure ファイル共有が対象で、NFS は非対応です。プレビューでは両側とも SSD プロビジョニング v2 共有の利用が案内されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "制限", "retrievedAt": "2026-10-16T06:30:00Z" }]
+          },
+          {
+            "q": "別テナントの共有へコピーできますか？",
+            "a": "ソースとターゲットは同じ Microsoft Entra テナント内である必要があります。サブスクリプションやリージョンは異なっても構いません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "制限", "retrievedAt": "2026-10-16T06:30:00Z" }]
+          },
+          {
+            "q": "災害対策（DR）に使えますか？",
+            "a": "ペア リージョン以外も含む任意のリージョンにセカンダリ コピーを保持できますが、RPO の保証はありません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "ユース ケース", "retrievedAt": "2026-10-16T06:30:00Z" }]
+          },
+          {
+            "q": "日本リージョンの Storage Mover で使えますか？",
+            "a": "Storage Mover を利用できる 6 リージョンに日本は含まれません。コピー対象の共有は別リージョンにあっても構いません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/storage-mover/azure-files-to-azure-files-copy", "locator": "前提条件", "retrievedAt": "2026-10-16T06:30:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
