@@ -85,6 +85,25 @@
           { "title": "App Service の概要", "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "今動かしている環境は、すぐ使えなくなりますか？",
+            "a": "サポート対象の既存環境は、提供終了の 2029-09-30 まで動作し、最新リリースへアップグレードできます。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=568178" }]
+          },
+          {
+            "q": "2026-09-30 以降は何ができなくなりますか？",
+            "a": "新規インストールが未サポートになり、新しいリリースや機能強化は提供されません。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=568178" }]
+          },
+          {
+            "q": "移行先はどこですか？Windows 依存が強いアプリはどうしますか？",
+            "a": "移行先は Azure 上の Azure App Service です。レジストリや COM などに依存するアプリは Managed Instance を評価してください。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=568178" }, { "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
