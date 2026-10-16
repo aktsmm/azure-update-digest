@@ -13,6 +13,16 @@ on:
         required: false
         default: "30"
         type: string
+      ids:
+        description: "Comma-separated update IDs to (re)generate instead of the pending list, e.g. 576377,576214"
+        required: false
+        default: ""
+        type: string
+      regenerate:
+        description: "true to overwrite existing slides for the given ids (adds speaker-notes Q&A)"
+        required: false
+        default: "false"
+        type: string
 
 permissions:
   contents: read
@@ -40,16 +50,26 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           LIMIT: ${{ inputs.limit || '30' }}
+          IDS: ${{ inputs.ids }}
+          REGENERATE: ${{ inputs.regenerate }}
         run: |
           case "$LIMIT" in ''|*[!0-9]*) echo "invalid limit"; exit 1;; esac
           [ "$LIMIT" -gt 30 ] && LIMIT=30
+          case "$IDS" in *[!0-9,\ ]*) echo "invalid ids"; exit 1;; esac
           open=$(gh pr list --state open --limit 200 --json headRefName -q '.[].headRefName' | grep -E '^slides[/-]' || true)
           started=0
-          for id in $(npm run -s pending-slides -- --limit 100 2>/dev/null); do
+          if [ -n "$IDS" ]; then
+            list=$(echo "$IDS" | tr ',' ' ')
+            regen=""; [ "$REGENERATE" = "true" ] && regen="-f regenerate=true"
+          else
+            list=$(npm run -s pending-slides -- --limit 100 2>/dev/null)
+            regen=""
+          fi
+          for id in $list; do
             [ "$started" -ge "$LIMIT" ] && break
             if echo "$open" | grep -Eq "^slides[/-]$id"; then echo "skip $id: open PR"; continue; fi
-            echo "dispatch $id"
-            gh workflow run slide.lock.yml -f id="$id"
+            echo "dispatch $id $regen"
+            gh workflow run slide.lock.yml -f id="$id" $regen
             started=$((started + 1))
             sleep 60
           done

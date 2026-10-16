@@ -204,7 +204,7 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 | `backfill.yml` | 初期バックフィル（完了後は no-op） | 2 時間ごと（:17 UTC）/ 手動 | `contents: write`（収集ジョブのみ） |
 | `summarize.lock.yml` | 要約・関連資料の生成 → PR | 6 時間ごと（:37 UTC）/ 手動 | 読み取り + safe-output ジョブ |
 | `auto-merge-summaries.yml` | 要約 PR の検証と自動マージ → 公開 | 要約完了時 / 3 時間ごと（:47 UTC）/ 手動 | `contents: write`, `pull-requests: write` |
-| `slide-dispatch.yml` | スライド未作成の更新（直近 3 か月・新しい順・最大 30 件）を 1 件ずつ起動 | 月・木 03:00 JST（日・水 18:00 UTC） | `actions: write` |
+| `slide-dispatch.yml` | スライド未作成の更新（直近 3 か月・新しい順・最大 30 件）を 1 件ずつ起動。手動実行では `ids`（カンマ区切り）と `regenerate=true` で、**既存スライドの再生成**（支持される内容は保ち、想定問答を追加）もできる | 月・木 03:00 JST（日・水 18:00 UTC） | `actions: write` |
 | `slide.lock.yml` | スライド JSON 生成 → PR（PDF は成果物） | 手動 / dispatch | 読み取り + safe-output |
 | `auto-merge-slides.yml` | スライド PR の検証（1 ファイルのみ・スキーマ・PDF 描画）と自動マージ → 公開 | 生成完了時 / 3 時間ごと（:23 UTC） | `contents: write`, `pull-requests: write` |
 | `maintain.lock.yml` | 隔週の自己修復: 健康チェックを読み、不具合を PR で修正／直せないものを Issue で報告（`.github/` の変更・Secret・モデル・権限は触らない。許可した範囲の PR は自動マージ） | 毎月 2・16 日 03:17 JST / 手動 | 読み取り + safe-output |
