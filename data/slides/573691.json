@@ -132,6 +132,25 @@
           { "title": "クイック スタート: PostgreSQL フレキシブル サーバーを作成する", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/quickstart-create-server", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンでも使えますか？",
+            "a": "はい。サービス自体は東日本・西日本で提供されています。今回の追加は East US 3 リージョンです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "Azureリージョン（東日本・西日本）", "retrievedAt": "2026-10-16T07:30:00Z" }]
+          },
+          {
+            "q": "East US 3 で作るには何が必要ですか？",
+            "a": "Azure サブスクリプションと、リソースを作成する権限が必要です。作成時にリージョンとして選択します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/quickstart-create-server", "locator": "前提条件", "retrievedAt": "2026-10-16T07:30:00Z" }]
+          },
+          {
+            "q": "作成後に変更できない設定はありますか？",
+            "a": "ネットワーク接続方式（パブリック／プライベート）、ストレージの種類、バックアップの冗長性は作成後に変更できません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/quickstart-create-server", "locator": "ネットワークの構成・ストレージの設定", "retrievedAt": "2026-10-16T07:30:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
