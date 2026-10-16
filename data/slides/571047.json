@@ -1,0 +1,178 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571047"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-16T06:55:00Z"
+  },
+  "slides": [
+    {
+      "key": "571047",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "PostgreSQL elastic clusters が PostgreSQL 18 に対応（GA）",
+        "subtitleJa": "Citus 14.0 を基盤に、PostgreSQL 18 の機能をマネージドな分散環境で利用できます",
+        "en": "Generally Available: PG18 support for Azure Database for PostgreSQL elastic clusters"
+      },
+      "meta": {
+        "publishedJst": "2026-09-19",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Database for PostgreSQL の elastic clusters** で分散ワークロードを運用・検討している方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "PostgreSQL 18 の性能・SQL・開発者向け機能を分散環境で使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "PostgreSQL 18 の機能を使いたい新規クラスターで検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "elastic clusters は Citus 14.0 を基盤に、PostgreSQL 18 を分散環境で提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "複数ノードがシャード（行ベース / スキーマベース）でデータを分散して保持",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters", "locator": "冒頭 / Architecture", "retrievedAt": "2026-10-16T06:55:00Z" }]
+            },
+            {
+              "text": "ノード追加後のデータ再調整はオンラインで、実行中のワークロードを止めない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters", "locator": "Architecture", "retrievedAt": "2026-10-16T06:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "作成の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "[サーバーの構成] → [クラスター] で「エラスティック クラスター」を選び、ノード数とコンピューティング サイズを指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/create-elastic-cluster", "locator": "エラスティック クラスターを作成する手順", "retrievedAt": "2026-10-16T06:55:00Z" }]
+            },
+            {
+              "text": "CLI は az postgres flexible-server create に --node-count を指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/create-elastic-cluster", "locator": "CLI タブ", "retrievedAt": "2026-10-16T06:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "対応バージョンは 17 と 18。メジャー バージョン アップグレードとノード数の削減は非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters-limitations", "locator": "全般", "retrievedAt": "2026-10-16T06:55:00Z" }]
+            },
+            {
+              "text": "TimescaleDB などの拡張機能は非対応。ストレージ自動スケールも非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters-limitations", "locator": "Extensions / Storage", "retrievedAt": "2026-10-16T06:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "通常のサーバーとの違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "単一サーバーと異なり、複数ノードを 1 つのリソースとして管理し、水平方向にスケールアウトできる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters", "locator": "冒頭", "retrievedAt": "2026-10-16T06:55:00Z" }]
+            },
+            {
+              "text": "ポート 7432 に接続すると、クラスター内の任意のノードにつながる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/create-elastic-cluster", "locator": "psql を使用して接続する", "retrievedAt": "2026-10-16T06:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "テーブルやスキーマを分散して、大規模ワークロードを PostgreSQL 18 でスケールさせたいとき", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "作成直後はテーブルが自動分散されない。シャーディング モデルを選び、分散を設定する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters", "locator": "Architecture", "retrievedAt": "2026-10-16T06:55:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-database-for-postgresql", "term": "Azure Database for PostgreSQL", "type": "product",
+          "oneLine": { "text": "PostgreSQL を提供する、フル マネージドのデータベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "冒頭", "retrievedAt": "2026-10-16T06:55:00Z" }] }
+        },
+        {
+          "termKey": "elastic-clusters", "term": "elastic clusters", "type": "feature",
+          "oneLine": { "text": "Citus 拡張機能を使い、PostgreSQL の水平シャーディングを実現するマネージド機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters", "locator": "冒頭", "retrievedAt": "2026-10-16T06:55:00Z" }] }
+        },
+        {
+          "termKey": "citus", "term": "Citus", "type": "term",
+          "oneLine": { "text": "複数の PostgreSQL インスタンスを接続する、オープンソースの拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters", "locator": "冒頭", "retrievedAt": "2026-10-16T06:55:00Z" }] }
+        },
+        {
+          "termKey": "shard", "term": "シャード", "type": "term",
+          "oneLine": { "text": "分散テーブルのデータを分割し、ワーカー ノード上に格納した単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters", "locator": "シャード", "retrievedAt": "2026-10-16T06:55:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-16T06:55:00Z" }] }
+        }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "elastic clusters はフレキシブル サーバーと同じリージョンで利用でき、同サービスは東日本・西日本で提供",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "Azure リージョン", "retrievedAt": "2026-10-16T06:55:00Z" },
+          { "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters-limitations", "locator": "Q: どのリージョンで使用できますか", "retrievedAt": "2026-10-16T06:55:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571047",
+        "learn": [
+          { "title": "フレキシブル サーバーのエラスティック クラスター", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters", "locale": "ja-jp" },
+          { "title": "エラスティック クラスターを作成する", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/create-elastic-cluster", "locale": "ja-jp" },
+          { "title": "エラスティック クラスターの制限（FAQ）", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters-limitations", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "elastic clusters はフレキシブル サーバーと同じリージョンで使え、同サービスは東日本・西日本で提供されています。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters-limitations", "locator": "Q: どのリージョンで使用できますか", "retrievedAt": "2026-10-16T06:55:00Z" },
+              { "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "Azure リージョン", "retrievedAt": "2026-10-16T06:55:00Z" }
+            ]
+          },
+          {
+            "q": "既存クラスターを PostgreSQL 18 に上げられますか？",
+            "a": "メジャー バージョン アップグレードは現在サポートされていません。移行には pg_dump / pg_restore や pgcopydb を使えます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters-limitations", "locator": "全般 / Migrations", "retrievedAt": "2026-10-16T06:55:00Z" }]
+          },
+          {
+            "q": "ノードは何台まで増やせますか？",
+            "a": "Azure portal、CLI、IaC ツールで 20 ノードまでスケールアウトできます。ノード数の削減は現在サポートされていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/elastic-clusters/concepts-elastic-clusters-limitations", "locator": "全般", "retrievedAt": "2026-10-16T06:55:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
