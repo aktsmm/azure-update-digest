@@ -1,0 +1,185 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571042"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-16T06:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "571042",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "PostgreSQL フレキシブル サーバーのトラブルシューティング ガイドが拡充",
+        "subtitleJa": "CPU・メモリ・IOPS・一時ファイル・autovacuum の原因特定から対処までを手順化",
+        "en": "Generally Available: New and improved troubleshooting guides for Azure Database for PostgreSQL"
+      },
+      "meta": {
+        "publishedJst": "2026-09-19",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Database for PostgreSQL フレキシブル サーバー**の運用・性能調査を担当する方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "性能問題の根本原因を、スケールアップ前に特定して対処しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "障害調査の前にテレメトリ（診断設定・クエリ ストア）を有効化しておく",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-troubleshooting-guides", "locator": "前提条件", "retrievedAt": "2026-10-16T06:50:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "メトリック・セッション・クエリ統計・ログを 1 つのビューで関連付けて診断",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/concepts-troubleshooting-guides", "locator": "冒頭", "retrievedAt": "2026-10-16T06:50:00Z" }]
+            },
+            {
+              "text": "症状の確認 → 原因の特定 → 修正の適用、という診断パスで進める",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/concepts-troubleshooting-guides", "locator": "冒頭", "retrievedAt": "2026-10-16T06:50:00Z" }]
+            },
+            {
+              "text": "対象は CPU・メモリ・IOPS・一時ファイル・autovacuum の 6 種のガイド",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/concepts-troubleshooting-guides", "locator": "ガイドを選択する", "retrievedAt": "2026-10-16T06:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始める流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "事前に診断設定（Log Analytics）とクエリ ストア関連のサーバー パラメーターを有効化",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-troubleshooting-guides", "locator": "前提条件", "retrievedAt": "2026-10-16T06:50:00Z" }]
+            },
+            {
+              "text": "Azure portal で対象サーバー → [監視] → [トラブルシューティング ガイド] を開く",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-troubleshooting-guides", "locator": "ガイドを開く", "retrievedAt": "2026-10-16T06:50:00Z" }]
+            },
+            {
+              "text": "調査する問題のタブを選び、分析する時間範囲を設定する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-troubleshooting-guides", "locator": "ガイドを開く", "retrievedAt": "2026-10-16T06:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "有効化後に蓄積したデータのみ対象。時間範囲の最小は 1 時間",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-troubleshooting-guides", "locator": "前提条件 / ガイドを開く", "retrievedAt": "2026-10-16T06:50:00Z" }]
+            },
+            {
+              "text": "Burstable ではクエリ ストアは非推奨。読み取りレプリカは対応するが挙動が異なる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/concepts-troubleshooting-guides", "locator": "制限事項", "retrievedAt": "2026-10-16T06:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連するツール", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure メトリックは「何が起きたか」、ガイドは原因のクエリ・待機・設定まで特定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/concepts-troubleshooting-guides", "locator": "メトリックチャートでは得られない、ガイドが提供するもの", "retrievedAt": "2026-10-16T06:50:00Z" }]
+            },
+            {
+              "text": "手動調査では pg_stat_statements やクエリ ストアで高負荷クエリを確認できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-high-cpu-utilization", "locator": "高い CPU 使用率を識別するためのツール", "retrievedAt": "2026-10-16T06:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "CPU 高騰時に、増強の前に原因クエリや接続数を確認する",
+              "origin": "editorial", "assertion": "recommendation", "verification": "unverified"
+            },
+            {
+              "text": "空のグラフはデータ ソース未有効化の可能性があり、正常を意味しない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-troubleshooting-guides", "locator": "グラフが空であるか、データが間違って見える場合", "retrievedAt": "2026-10-16T06:50:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-database-for-postgresql", "term": "Azure Database for PostgreSQL", "type": "product",
+          "oneLine": { "text": "PostgreSQL をマネージド サービスとして利用できる Azure のデータベース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-high-cpu-utilization", "locator": "冒頭", "retrievedAt": "2026-10-16T06:50:00Z" }] }
+        },
+        {
+          "termKey": "troubleshooting-guides", "term": "トラブルシューティング ガイド", "type": "feature",
+          "oneLine": { "text": "関連テレメトリを 1 つのビューに集め、診断の流れとして示す、ポータル組み込みのガイド。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/concepts-troubleshooting-guides", "locator": "冒頭", "retrievedAt": "2026-10-16T06:50:00Z" }] }
+        },
+        {
+          "termKey": "query-store", "term": "クエリ ストア", "type": "feature",
+          "oneLine": { "text": "クエリと実行時統計の履歴を自動的に取り込み、保持する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-high-cpu-utilization", "locator": "クエリ ストア", "retrievedAt": "2026-10-16T06:50:00Z" }] }
+        },
+        {
+          "termKey": "iops", "term": "IOPS", "type": "term",
+          "oneLine": { "text": "ストレージが 1 秒あたりに処理できる入出力操作の回数。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-high-io-utilization", "locator": "冒頭", "retrievedAt": "2026-10-16T06:50:00Z" }] }
+        },
+        {
+          "termKey": "autovacuum", "term": "autovacuum（自動バキューム）", "type": "term",
+          "oneLine": { "text": "テーブルの不要な行の整理と統計の更新を、自動で行う PostgreSQL の仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-autovacuum-tuning", "locator": "冒頭", "retrievedAt": "2026-10-16T06:50:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-16T06:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571042",
+        "learn": [
+          { "title": "トラブルシューティング ガイドを使用する", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-troubleshooting-guides", "locale": "ja-jp" },
+          { "title": "トラブルシューティング ガイドとは", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/concepts-troubleshooting-guides", "locale": "ja-jp" },
+          { "title": "高い CPU 使用率のトラブルシューティング", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-high-cpu-utilization", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "使い始める前に何を設定すればよいですか？",
+            "a": "診断設定で Log Analytics にログを送り、クエリ ストア等のサーバー パラメーターを有効化します。有効化後のデータのみ対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-troubleshooting-guides", "locator": "前提条件", "retrievedAt": "2026-10-16T06:50:00Z" }]
+          },
+          {
+            "q": "追加費用はかかりますか？",
+            "a": "ガイドはポータル組み込みで、既に支払っている Log Analytics の取り込みを超える費用はかからないと説明されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/concepts-troubleshooting-guides", "locator": "冒頭", "retrievedAt": "2026-10-16T06:50:00Z" }]
+          },
+          {
+            "q": "読み取りレプリカでも使えますか？",
+            "a": "サポートされますが、プライマリとは挙動が異なります。書き込みワークロードのグラフは使えず、autovacuum ガイドはプライマリで実行します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/concepts-troubleshooting-guides", "locator": "制限事項", "retrievedAt": "2026-10-16T06:50:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
