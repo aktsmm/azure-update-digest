@@ -1,0 +1,449 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["576334"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-16T06:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "576334",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "VM スケール セットの「自動ゾーン バランス」が GA に",
+        "subtitleJa": "ゾーン間の VM 数の偏りを検知し、VM を自動で再配置して回復性を保ちます",
+        "en": "Generally Availabile: Automatic zone balance for Virtual Machine Scale Sets"
+      },
+      "meta": {
+        "publishedJst": "2026-10-16",
+        "availability": [
+          { "rawRing": "General Availability", "year": 2026, "month": "October" }
+        ],
+        "status": "Launched",
+        "products": ["Virtual Machine Scale Sets"],
+        "categories": ["compute"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": {
+          "text": "複数の可用性ゾーンで **VM スケール セット** を運用している方（ステートレス ワークロード向け）",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "ゾーン間の偏りを放置せず、自動で解消できる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "ゾーン分散が偏りやすい構成なら有効化を検討",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified"
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "ゾーン分散は スケール アウト時にのみ行われ、既存の VM は移動・再配置されない",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-zone-balancing",
+              "locator": "How to manually balance your scale set",
+              "retrievedAt": "2026-10-16T06:30:00Z"
+            }
+          ]
+        },
+        "after": {
+          "text": "不均衡を継続的に監視し、バックグラウンドで VM を自動再配置して、単一ゾーン障害の影響の偏りを抑える",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "不足ゾーンに新 VM を作成し、正常になったら過剰ゾーンの VM を削除",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+                  "locator": "自動ゾーンバランスはどのように機能しますか？",
+                  "retrievedAt": "2026-10-16T06:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "再調整は一度に 1 VM。インスタンス保護ポリシーの VM は移動しない",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+                  "locator": "安全機能",
+                  "retrievedAt": "2026-10-16T06:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "進行中・直近 60 分の更新操作があるスケール セットは対象外",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+                  "locator": "再調整前の安全性チェック",
+                  "retrievedAt": "2026-10-16T06:30:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "有効化の流れ（Azure portal）",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "2 つ以上のゾーンを選択し、アプリケーションの正常性監視を有効化",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/auto-zone-balance-enable",
+                  "locator": "既存のスケール セットで自動ゾーン バランスを有効にするには",
+                  "retrievedAt": "2026-10-16T06:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "[回復性] の「自動ゾーン分散」にチェックを入れて保存",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/auto-zone-balance-enable",
+                  "locator": "既存のスケール セットで自動ゾーン バランスを有効にするには",
+                  "retrievedAt": "2026-10-16T06:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Azure CLI / PowerShell / REST API（resiliencyPolicy）でも設定可能",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "2 つ以上のゾーン、全 VM がゾーン指定、正常性監視、Compute API 2024-07-01 以降が必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/azure/virtual-machine-scale-sets/auto-zone-balance-enable",
+                  "locator": "Prerequisites",
+                  "retrievedAt": "2026-10-16T06:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "VM は削除・再作成され、インスタンス ID・ネットワーク・ディスクは保持されない。一時的に 1 VM 分のクォータが必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+                  "locator": "Limitations",
+                  "retrievedAt": "2026-10-16T06:30:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "似た機能との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "ゾーン バランス: スケール時に分散を試みる / 自動ゾーン バランス: 既存 VM も再配置",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-zone-balancing",
+                  "locator": "Zone balance modes",
+                  "retrievedAt": "2026-10-16T06:30:00Z"
+                },
+                {
+                  "url": "https://learn.microsoft.com/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+                  "locator": "Background",
+                  "retrievedAt": "2026-10-16T06:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "有効化するとインスタンスの自動修復も既定で有効（個別に無効化可能）",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+                  "locator": "Automatic instance repairs integration",
+                  "retrievedAt": "2026-10-16T06:30:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "使いどころ・注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "ステートレスなワークロードのゾーン分散を維持したい場合に適する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+                  "locator": "Limitations",
+                  "retrievedAt": "2026-10-16T06:30:00Z"
+                }
+              ]
+            },
+            {
+              "text": "ゾーン停止の検知・復旧用途ではない。オートスケールの最大数に 1 VM 分の余裕を",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+                  "locator": "Note / Important",
+                  "retrievedAt": "2026-10-16T06:30:00Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "vmss",
+          "term": "Virtual Machine Scale Sets",
+          "type": "product",
+          "oneLine": {
+            "text": "同一構成の VM 群をまとめてデプロイ・管理するための仕組み。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-16T06:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "availability-zone",
+          "term": "可用性ゾーン",
+          "type": "term",
+          "oneLine": {
+            "text": "リージョン内で電源・冷却・ネットワークが独立した物理的な場所。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category",
+                "locator": "Service categories across region types",
+                "retrievedAt": "2026-10-16T06:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "zone-balance",
+          "term": "自動ゾーン バランス",
+          "type": "feature",
+          "oneLine": {
+            "text": "ゾーン間の VM 数を監視し、偏りを VM の再配置で解消する機能。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-16T06:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "balanced",
+          "term": "バランスが取れている",
+          "type": "term",
+          "oneLine": {
+            "text": "各ゾーンの VM 数の差が ±1 台以内である状態。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+                "locator": "バックグラウンド",
+                "retrievedAt": "2026-10-16T06:30:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-ga",
+          "term": "GA（一般提供）",
+          "type": "label",
+          "oneLine": {
+            "text": "機能が完全にリリースされ、本番利用でサポートされる段階。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure",
+                "locator": "General availability (GA)",
+                "retrievedAt": "2026-10-16T06:30:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Virtual Machine Scale Sets は全リージョンで提供される基盤サービス。日本の東西リージョンは可用性ゾーン対応",
+        "evidence": [
+          {
+            "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category",
+            "locator": "Foundational services",
+            "retrievedAt": "2026-10-16T06:30:00Z"
+          },
+          {
+            "url": "https://learn.microsoft.com/en-us/azure/reliability/regions-list",
+            "locator": "Japan East / Japan West",
+            "retrievedAt": "2026-10-16T06:30:00Z"
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=576334",
+        "learn": [
+          {
+            "title": "仮想マシン スケール セットの自動ゾーン バランス",
+            "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+            "locale": "ja-jp"
+          },
+          {
+            "title": "スケール セットで自動ゾーン バランスを有効にする",
+            "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machine-scale-sets/auto-zone-balance-enable",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分のスケール セットは対象になりますか？",
+            "a": "2 つ以上の可用性ゾーンにまたがり、全 VM がゾーン指定で、正常性監視が有効なスケール セットが対象です。",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/azure/virtual-machine-scale-sets/auto-zone-balance-enable",
+                "locator": "Prerequisites",
+                "retrievedAt": "2026-10-16T06:30:00Z"
+              }
+            ]
+          },
+          {
+            "q": "再配置で VM のデータは引き継がれますか？",
+            "a": "VM は削除・再作成され、インスタンス ID・ネットワーク・ディスクは保持されません。ステートレス ワークロード向けです。",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+                "locator": "Limitations",
+                "retrievedAt": "2026-10-16T06:30:00Z"
+              }
+            ]
+          },
+          {
+            "q": "特定の VM を再配置から除外できますか？",
+            "a": "はい。対象の VM にインスタンス保護ポリシーを適用すると、再調整の対象に選ばれません。",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/azure/virtual-machine-scale-sets/auto-zone-balance-enable",
+                "locator": "Frequently Asked Questions",
+                "retrievedAt": "2026-10-16T06:30:00Z"
+              }
+            ]
+          },
+          {
+            "q": "有効化に必要なクォータなどの注意点は？",
+            "a": "再調整中は容量が一時的に 1 VM 増えるため、クォータとオートスケールの最大数に余裕が必要です。",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/azure/virtual-machine-scale-sets/auto-zone-balance-overview",
+                "locator": "How does automatic zone balance work?",
+                "retrievedAt": "2026-10-16T06:30:00Z"
+              }
+            ]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
