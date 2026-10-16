@@ -74,11 +74,37 @@
         { "termKey": "dev-center", "term": "デベロッパー センター", "type": "term", "oneLine": { "text": "Dev Box のプロジェクトとリソースを束ねるコンテナー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/overview-what-is-microsoft-dev-box", "locator": "Microsoft Dev Box で始める", "retrievedAt": "2026-10-14T19:00:00Z" }] } },
         { "termKey": "dev-box-pool", "term": "開発ボックス プール", "type": "feature", "oneLine": { "text": "プロジェクト管理者が作成し、開発者が開発ボックスを作成する元になる設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/overview-what-is-microsoft-dev-box", "locator": "開発者チーム リーダーのシナリオ", "retrievedAt": "2026-10-14T19:00:00Z" }] } }
       ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "サービス全体の廃止であり、リージョンを問わず適用される",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "Microsoft Dev Box の廃止に関するよくある質問", "retrievedAt": "2026-10-16T07:40:00Z" }]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=567933",
         "learn": [
           { "title": "Microsoft Dev Box リタイアメントガイド", "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locale": "ja-jp" },
           { "title": "Microsoft Dev Box とは", "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/overview-what-is-microsoft-dev-box", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "廃止日までは今の Dev Box を使い続けられますか？",
+            "a": "はい。既存のデプロイは移行期間中も引き続きサポートされます。廃止は 2028年9月18日 17:00 UTC です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "よくある質問", "retrievedAt": "2026-10-16T07:40:00Z" }]
+          },
+          {
+            "q": "Windows 365 は Dev Box の完全な代替ですか？",
+            "a": "いいえ。推奨の移行先ですが 1 対 1 の代替ではなく、アーキテクチャやライセンス等が異なる場合があるため検証が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "Windows 365 は Dev Box の 1 対 1 の代替品でしょうか", "retrievedAt": "2026-10-16T07:40:00Z" }]
+          },
+          {
+            "q": "自分の環境が影響を受けるか、どう確認できますか？",
+            "a": "Azure Advisor のサービス廃止ブックで影響を受けるサブスクリプションやリソースを確認できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dev-box/dev-box-retirement-guide", "locator": "影響を受けるリソースの特定", "retrievedAt": "2026-10-16T07:40:00Z" }]
+          }
         ]
       },
       "render": { "continuationRequired": false }
