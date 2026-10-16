@@ -95,6 +95,25 @@
           { "title": "Azure API Management の MCP サーバーについて", "url": "https://learn.microsoft.com/ja-jp/azure/api-management/mcp-server-overview", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分の API Management は対象ですか？",
+            "a": "v2 tier と AI Gateway tier が対象です。v1 tier は非対応で、v2 tier はツール単位の制御に対応しません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "サポートされている機能", "retrievedAt": "2026-10-16T07:30:00Z" }]
+          },
+          {
+            "q": "利用開始に必要な前提条件は何ですか？",
+            "a": "Agent 365 のテナント、対応する API Management、登録済みの MCP サーバー、テナント管理者の同意が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "Prerequisites", "retrievedAt": "2026-10-16T07:30:00Z" }]
+          },
+          {
+            "q": "エージェントは自動でゲートウェイ経由になりますか？",
+            "a": "なりません。エージェント開発者が、ゲートウェイの MCP エンドポイントを使うよう設定する必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/agent-365", "locator": "プレビューの制限事項", "retrievedAt": "2026-10-16T07:30:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
