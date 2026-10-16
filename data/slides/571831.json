@@ -68,6 +68,25 @@
         "announcement": "https://azure.microsoft.com/updates?id=571831",
         "learn": [{ "title": "マルチパーティ プライベート オファー (ソフトウェア企業向け)", "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/multiparty-private-offers-for-isvs", "locale": "ja-jp" }]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "オファーの作成に必要なロールは何ですか？",
+            "a": "販売者 ID に紐づく開発者・マネージャー・アカウント オーナーのロールが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/multiparty-private-offers-for-isvs", "locator": "前提条件", "retrievedAt": "2026-10-16T07:55:00Z" }]
+          },
+          {
+            "q": "プロフェッショナル サービスも販売できますか？",
+            "a": "マルチパーティ プライベート オファーは、顧客へのプロフェッショナル サービスの販売をサポートしていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/multiparty-private-offers-for-isvs", "locator": "冒頭", "retrievedAt": "2026-10-16T07:55:00Z" }]
+          },
+          {
+            "q": "顧客やパートナーに必要な条件はありますか？",
+            "a": "顧客は対象国の課金アカウント ID が必要です。パートナーは対象国の Marketplace で税プロファイルが完了している必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/multiparty-private-offers-for-isvs", "locator": "顧客・パートナーの設定", "retrievedAt": "2026-10-16T07:55:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
