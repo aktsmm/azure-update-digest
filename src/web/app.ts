@@ -191,7 +191,7 @@ function bindDownload(r: QueryResult, q: Query) {
     const n = chosen().length, s = withSlides().length;
     const set = (dl: string, label: string, count: number, total?: number) => {
       const b = document.querySelector<HTMLButtonElement>(`[data-dl="${dl}"]`);
-      if (b) { b.textContent = `${label}（${count}${total === undefined ? "" : ` / ${total}`}）`; b.disabled = count === 0; }
+      if (b) { b.textContent = `${label}（${count}${total === undefined || total === count ? "" : ` / ${total}`}）`; b.disabled = count === 0; }
     };
     set("json", "JSON", n); set("pdf", "PDF", s, n); set("pptx", "PPTX", s, n);
     const c = document.getElementById("selcount");
