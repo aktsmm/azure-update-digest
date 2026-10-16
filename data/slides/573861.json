@@ -245,6 +245,25 @@
           }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存の IPv4 専用ゲートウェイでも使えますか？",
+            "a": "既存の IPv4 専用ゲートウェイをデュアルスタックへ変換することはできません。IPv6 対応のデュアルスタック構成で新たに用意する必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6", "locator": "ワークフロー", "retrievedAt": "2026-10-16T08:30:00Z" }]
+          },
+          {
+            "q": "プレビュー機能の登録は必ず必要ですか？",
+            "a": "IPv6 の地域ベース カスタム ルールを使う場合のみ AllowAppGwWafIpv6Geo の登録が必要です。マネージド ルールセットでの検査やログ・診断は登録不要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6", "locator": "機能登録が必要な場合", "retrievedAt": "2026-10-16T08:30:00Z" }]
+          },
+          {
+            "q": "IPv6 専用のゲートウェイで WAF を使えますか？",
+            "a": "IPv6 専用の Application Gateway はサポートされていません。IPv4 と IPv6 の両方を受け付けるデュアルスタック構成が前提です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6", "locator": "ワークフロー", "retrievedAt": "2026-10-16T08:30:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
