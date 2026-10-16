@@ -99,7 +99,7 @@ function card(i: DigestItem, idx = -1): string {
     i.related.items.length > 0 ? `<div>関連資料（Microsoft Learn）<ul>${i.related.items.map((r) => `<li><a href="${safeUrl(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a></li>`).join("")}</ul></div>`
     : `<div class="meta">関連資料: ${relNames[i.related.status]}</div>`;
   return `<article class="card" id="update-${esc(i.key)}">
-    <div class="card-head"><label class="sel" title="ダウンロード（JSON・PDF・PPTX）に含める"><input type="checkbox" data-sel="${esc(i.key)}" ${deselected.has(i.key) ? "" : "checked"} aria-label="ダウンロードに含める"></label>${idx >= 0 ? `<span class="no" title="この一覧の上から ${idx + 1} 番目">${idx + 1}</span>` : ""}<h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a>${esc(i.titleJa ?? i.title)}</h3><span class="kind k-${i.kind}">${esc(KIND_LABEL[i.kind])}</span></div>
+    <div class="card-head"><label class="sel" title="ダウンロード（JSON・PDF・PPTX）に含める"><input type="checkbox" data-sel="${esc(i.key)}" ${deselected.has(i.key) ? "" : "checked"} aria-label="ダウンロードに含める"></label>${idx >= 0 ? `<span class="no" title="この一覧の上から ${idx + 1} 番目">${idx + 1}</span>` : ""}<h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a><a class="title-link" href="${safeUrl(i.sourceUrl)}" target="_blank" rel="noopener noreferrer" title="原文（Azure Updates）を開く">${esc(i.titleJa ?? i.title)}</a></h3><span class="kind k-${i.kind}">${esc(KIND_LABEL[i.kind])}</span></div>
     ${i.titleJa ? `<div class="orig">${esc(i.title)}</div>` : ""}
     <div class="meta">作成 ${esc(i.createdJst)} ／ 更新 ${esc(i.modifiedJst)} ／ ID ${esc(i.key)}</div>
     ${badges(i)}${summary}
