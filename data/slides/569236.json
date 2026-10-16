@@ -83,6 +83,32 @@
         { "termKey": "dc-series", "term": "DC シリーズ", "type": "term", "oneLine": { "text": "Intel SGX の利用に必要な、仮想コア モデルのハードウェア構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locator": "Intel SGX エンクレーブ タブ", "retrievedAt": "2026-10-14T19:45:00Z" }] } },
         { "termKey": "label-retirement", "term": "廃止（Retirement）", "type": "label", "oneLine": { "text": "機能が提供されなくなり、サポートや更新も終了する最終段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Retirement", "retrievedAt": "2026-10-14T19:45:00Z" }] } }
       ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "Intel SGX エンクレーブの提供終了は、リージョンを問わず日付で適用される",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locator": "重要", "retrievedAt": "2026-10-16T08:10:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分の環境は対象ですか？",
+            "a": "仮想コア モデルの DC シリーズで Intel SGX エンクレーブを使う Always Encrypted が対象です。標準シリーズや DTU モデルでは SGX は使えません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable" }]
+          },
+          {
+            "q": "期限までに移行しないとどうなりますか？",
+            "a": "2027年10月31日以降、DC シリーズに残るデータベースは標準シリーズへ自動移行され、VBS エンクレーブが有効になります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable" }]
+          },
+          {
+            "q": "VBS エンクレーブはどう有効にしますか？",
+            "a": "preferredEnclaveType を VBS に設定します。Azure portal、SSMS、Azure PowerShell、Azure CLI で設定できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable" }]
+          }
+        ]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=569236",
         "learn": [
