@@ -32,6 +32,21 @@ describe("slide-deck schema", () => {
     expect(ok).toBe(true);
   });
 
+  it("speaker-notes Q&A is optional, needs evidence, and is capped", () => {
+    const withQa = sample.slides.find((s: any) => s.speakerNotes);
+    expect(withQa?.speakerNotes.qa.length).toBeGreaterThanOrEqual(2);
+    const noEvidence = clone(sample);
+    delete noEvidence.slides.find((s: any) => s.speakerNotes).speakerNotes.qa[0].evidence;
+    expect(validate(noEvidence)).toBe(false);
+    const tooMany = clone(sample);
+    const qa = tooMany.slides.find((s: any) => s.speakerNotes).speakerNotes.qa;
+    while (qa.length < 5) qa.push(clone(qa[0]));
+    expect(validate(tooMany)).toBe(false);
+    const without = clone(sample);
+    for (const s of without.slides) delete s.speakerNotes;
+    expect(validate(without)).toBe(true);
+  });
+
   it("covers all four kinds in the sample", () => {
     expect(sample.slides.map((s: any) => s.kind)).toEqual(["ga", "preview", "retirement", "announcement"]);
   });

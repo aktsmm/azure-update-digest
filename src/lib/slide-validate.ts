@@ -30,6 +30,7 @@ export function renderedTexts(slide: any): string[] {
   for (const g of slide.glossary ?? []) out.push(g.term ?? "", g.oneLine?.text ?? "");
   if (slide.region?.note) out.push(slide.region.note);
   for (const t of slide.timeline ?? []) out.push(t.label ?? "");
+  for (const qa of slide.speakerNotes?.qa ?? []) out.push(qa.q ?? "", qa.a ?? "");
   return out;
 }
 
@@ -52,6 +53,7 @@ export function validateDeck(deck: any): DeckProblem[] {
     for (const t of renderedTexts(s)) for (const w of FORBIDDEN_PHRASES) if (t.includes(w)) problems.push({ slide: k, message: `forbidden phrase "${w}" in: ${t.slice(0, 60)}` });
     const urls: string[] = [s.references?.announcement, ...(s.references?.learn ?? []).map((l: any) => l.url), ...(s.region?.evidence ?? []).map((e: any) => e.url)];
     for (const c of claimsOf(s)) for (const e of c.evidence ?? []) urls.push(e.url);
+    for (const qa of s.speakerNotes?.qa ?? []) for (const e of qa.evidence ?? []) urls.push(e.url);
     for (const u of urls.filter(Boolean)) {
       try {
         const h = new URL(u).hostname;

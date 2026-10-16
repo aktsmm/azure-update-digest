@@ -85,6 +85,7 @@ export interface Slide {
   glossary?: { term: string; type: string; oneLine: { text: string } }[];
   region?: { stamp: string; note?: string };
   references: { announcement: string; learn?: { title: string; url: string }[] };
+  speakerNotes?: { qa?: { q: string; a: string; evidence: { url: string }[] }[] };
 }
 
 const TYPE_JA: Record<string, string> = { product: "製品", feature: "機能", term: "用語", label: "ラベル" };
