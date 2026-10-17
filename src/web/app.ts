@@ -332,13 +332,13 @@ function hero(): string {
   const day = run(1), week = run(7);
   const partial = day.coverage.status === "complete" && week.coverage.status === "complete" ? "" : "（一部のみ取得）";
   return `<section class="hero"><div class="hero-main">
-      <p class="eyebrow">UNOFFICIAL UPDATE DIGEST</p>
-      <h1>Azure の更新を、埋もれさせない。</h1>
-      <p>Microsoft Release Communications の Azure 更新を毎日収集し、日本語の要約とスライドで追えるように整理します。重要な更新（廃止・セキュリティ・GA・リージョン追加・価格変更）を先頭に、新着を月別に遡れます。</p>
+      <p class="eyebrow">非公式 ・ 日本語ダイジェスト</p>
+      <h1>Azure の更新を、日本語で見渡す</h1>
+      <p>公式の更新情報（Microsoft Release Communications）を毎日集め、廃止・セキュリティ・GA・リージョン追加・価格変更といった重要な更新を先頭に、日本語の要約と 1 更新 1 枚のスライド（PDF・PPTX）で届けます。</p>
       <div class="pills"><span class="pill">最終更新 <strong>${esc(jstStamp(meta.snapshotAt))}</strong>（JST）</span><span class="pill">取得状態 <strong>${meta.backfill.complete ? "全期間 取得済み" : "初期取得中"}</strong></span></div>
     </div><div class="hero-stats">
-      <div class="stat"><span class="stat-label">追跡中の更新</span><strong>${meta.itemCount}</strong><span class="meta">累計・重複除去後</span></div>
-      <div class="stat"><span class="stat-label">新規（作成日基準）</span><strong>${day.items.length} / ${week.items.length}</strong><span class="meta">今日 / 過去7日${esc(partial)}</span></div>
+      <div class="stat"><span class="stat-label">追跡中の更新</span><strong>${meta.itemCount}<small> 件</small></strong><span class="meta">スライドあり ${slideEntries.size} 件</span></div>
+      <div class="stat"><span class="stat-label">新着（作成日基準）</span><div class="stat-pair"><div><strong>${day.items.length}<small> 件</small></strong><span class="meta">今日</span></div><div><strong>${week.items.length}<small> 件</small></strong><span class="meta">過去7日</span></div></div>${partial ? `<span class="meta">${esc(partial)}</span>` : ""}</div>
     </div></section>`;
 }
 
@@ -393,7 +393,7 @@ function route() {
   }
   const q = queryFrom(params);
   document.querySelector(`nav [data-nav="${q.mode === "availability" ? "availability" : "home"}"]`)?.classList.add("active");
-  renderList(q, q.mode === "availability" ? "提供・廃止予定" : "Azure の最新更新", null, "/");
+  renderList(q, q.mode === "availability" ? "提供・廃止予定" : "更新一覧", null, "/");
 }
 
 async function main() {
