@@ -333,7 +333,7 @@ function hero(): string {
   const partial = day.coverage.status === "complete" && week.coverage.status === "complete" ? "" : "（一部のみ取得）";
   return `<section class="hero"><div class="hero-main">
       <p class="eyebrow">非公式 ・ 日本語ダイジェスト</p>
-      <h1>Azure の更新を、日本語で見渡す</h1>
+      <h1>Azure の更新情報</h1>
       <p>公式の更新情報（Microsoft Release Communications）を毎日集め、廃止・セキュリティ・GA・リージョン追加・価格変更といった重要な更新を先頭に、日本語の要約と 1 更新 1 枚のスライド（PDF・PPTX）で届けます。</p>
       <div class="pills"><span class="pill">最終更新 <strong>${esc(jstStamp(meta.snapshotAt))}</strong>（JST）</span><span class="pill">取得状態 <strong>${meta.backfill.complete ? "全期間 取得済み" : "初期取得中"}</strong></span></div>
     </div><div class="hero-stats">
