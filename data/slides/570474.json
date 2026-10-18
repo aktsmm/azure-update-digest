@@ -1,0 +1,108 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": { "mode": "ids", "basis": "created", "ids": ["570474"], "coverage": "complete", "snapshotAt": "2026-10-18T21:54:00Z" },
+  "slides": [
+    {
+      "key": "570474",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Firewall の「自動学習 SNAT ルート」が GA に",
+        "subtitleJa": "プライベート宛先の範囲を自動で学習し、元の送信元 IP を保ったまま SNAT 管理を簡単に",
+        "en": "Generally Available: Azure Firewall auto-learn SNAT routes"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Azure Firewall で **SNAT の範囲（No-SNAT 範囲）を手動管理している方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "学習した範囲が自動で No-SNAT になり、元の送信元 IP を保てる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "SNAT 範囲の手動管理が負担なら検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "既定では、宛先がプライベート IP 範囲（RFC 1918 / RFC 6598）のとき、ネットワーク規則で SNAT されない",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "冒頭", "retrievedAt": "2026-10-18T21:54:00Z" }]
+        },
+        "after": {
+          "text": "登録範囲とプライベート範囲を 30 分ごとに自動学習し、学習した宛先への通信は SNAT されない",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "自動学習SNATルート", "retrievedAt": "2026-10-18T21:54:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "登録範囲とプライベート範囲を 30 分ごとに自動学習する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "自動学習SNATルート", "retrievedAt": "2026-10-18T21:54:00Z" }] },
+            { "text": "学習した範囲は内部として扱われ、その宛先への通信は SNAT されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "自動学習SNATルート", "retrievedAt": "2026-10-18T21:54:00Z" }] },
+            { "text": "VNet 展開とセキュア仮想ハブ（vHub）展開の両方に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "自動学習SNATルート", "retrievedAt": "2026-10-18T21:54:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "VNet: Route Server を同じ VNet に展開し、ファイアウォールに関連付ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "VNet ファイアウォール", "retrievedAt": "2026-10-18T21:54:00Z" }] },
+            { "text": "ファイアウォール ポリシーで Auto-learn IP プレフィックスを有効化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "VNet ファイアウォール（Azure Portal）", "retrievedAt": "2026-10-18T21:54:00Z" }] },
+            { "text": "vHub: Route Server は関連付け済み。ポリシーで有効化するだけ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "vHub ファイアウォール", "retrievedAt": "2026-10-18T21:54:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure Route Server との関連付けが必要。有効化は Firewall Policy で行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "前提条件", "retrievedAt": "2026-10-18T21:54:00Z" }] },
+            { "text": "Azure CLI は未対応。ARM テンプレート / PowerShell / Portal を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "VNet ファイアウォール", "retrievedAt": "2026-10-18T21:54:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連機能", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "手動設定は、ポリシーのプライベート IP 範囲（SNAT）に範囲を指定する方法", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "SNATプライベートIPアドレス範囲の設定", "retrievedAt": "2026-10-18T21:54:00Z" }] },
+            { "text": "Route Server は NVA と VNet 間で BGP によりルートを自動交換する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/overview", "locator": "冒頭", "retrievedAt": "2026-10-18T21:54:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・確認", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "宛先範囲が増減する環境で、SNAT 範囲の更新作業を減らしたい場合", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "学習結果は Portal の [学習済み SNAT IP プレフィックス] で確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "VNet ファイアウォール（Azure Portal）", "retrievedAt": "2026-10-18T21:54:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-firewall", "term": "Azure Firewall", "type": "product", "oneLine": { "text": "パブリック IP アドレスへの送信トラフィックに SNAT 機能を提供するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "冒頭", "retrievedAt": "2026-10-18T21:54:00Z" }] } },
+        { "termKey": "snat", "term": "SNAT", "type": "term", "oneLine": { "text": "送信トラフィックの送信元 IP アドレスを変換する処理。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "冒頭", "retrievedAt": "2026-10-18T21:54:00Z" }] } },
+        { "termKey": "auto-learn-snat", "term": "自動学習 SNAT ルート", "type": "feature", "oneLine": { "text": "登録範囲とプライベート範囲を自動学習し、その宛先への通信を SNAT しない機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "自動学習SNATルート", "retrievedAt": "2026-10-18T21:54:00Z" }] } },
+        { "termKey": "route-server", "term": "Azure Route Server", "type": "product", "oneLine": { "text": "NVA と Azure 仮想ネットワーク間の動的ルーティングを簡略化するフル マネージド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/overview", "locator": "冒頭", "retrievedAt": "2026-10-18T21:54:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T21:54:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570474",
+        "learn": [
+          { "title": "Azure Firewall の SNAT プライベート IP アドレス範囲", "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locale": "ja-jp" },
+          { "title": "Azure Route Server とは何ですか。", "url": "https://learn.microsoft.com/ja-jp/azure/route-server/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "自動学習の間隔は？", "a": "登録範囲とプライベート範囲を 30 分ごとに自動学習します。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "自動学習SNATルート", "retrievedAt": "2026-10-18T21:54:00Z" }] },
+          { "q": "前提条件は何ですか？", "a": "Azure Route Server との関連付けが必要です。VNet では同じ VNet に展開し、vHub では関連付け済みです。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "前提条件", "retrievedAt": "2026-10-18T21:54:00Z" }] },
+          { "q": "Azure CLI で設定できますか？", "a": "Azure CLI は未対応です。ARM テンプレート、Azure PowerShell、Azure Portal を使います。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/snat-private-range", "locator": "VNet ファイアウォール", "retrievedAt": "2026-10-18T21:54:00Z" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
