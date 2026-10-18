@@ -1,0 +1,103 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569664"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T20:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "569664",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "PostgreSQL スキルと MCP プラグイン",
+        "subtitleJa": "AI コーディングアシスタントが PostgreSQL の支援役に（パブリック プレビュー）",
+        "en": "Public Preview: PostgreSQL skills and MCP plugin for Azure Database for PostgreSQL "
+      },
+      "meta": {
+        "publishedJst": "2026-09-16",
+        "modifiedJst": "2026-09-16",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "AI コーディングアシスタントで **Azure Database for PostgreSQL** を扱う開発者・運用担当", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "スキーマや環境を踏まえた助言と、クエリ実行などの操作を支援してもらえる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューのため、まず評価目的での試用が目安。SLA は通常提供されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-18T20:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "スキーマ・PostgreSQL バージョン・拡張機能・Azure 環境を踏まえた助言を受けられ、接続した DB に対する操作も任せられる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "専門スキルと MCP サーバーを束ねたプラグイン。ライブ DB の状況確認・クエリ実行・変更適用を支援", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象: クエリ／インデックス調整、ベクトル検索と RAG、JSONB、パーティション、セキュリティ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Azure のプロビジョニング／スケール、HA、PITR、AI 関数、Apache AGE も対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対応アシスタント例: GitHub Copilot CLI、Claude Code、Codex CLI", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プレビュー段階。機能は変更される可能性があり、通常 SLA は保証されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-18T20:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "usage", "heading": "ルーティング", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "質問と接続コンテキストから、汎用 PostgreSQL と Azure 固有の助言を自動で切り替える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "書き込み操作を伴うため、まず検証用の DB で動作と権限の扱いを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-database-for-postgresql", "term": "Azure Database for PostgreSQL", "type": "product", "oneLine": { "text": "PostgreSQL をフル マネージドで提供するデータベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "冒頭", "retrievedAt": "2026-10-18T20:30:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP（モデル コンテキスト プロトコル）", "type": "term", "oneLine": { "text": "AI アシスタントや言語モデルにツールを公開するためのプロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/development/vs-code-extension/reference/mcp-server", "locator": "冒頭", "retrievedAt": "2026-10-18T20:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-18T20:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "親サービス（Azure Database for PostgreSQL）の提供リージョンに基づく",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "Azure リージョン（東日本・西日本）", "retrievedAt": "2026-10-18T20:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569664",
+        "learn": [
+          { "title": "MCP サーバー リファレンス", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/development/vs-code-extension/reference/mcp-server", "locale": "ja-jp" },
+          { "title": "Azure Database for PostgreSQL フレキシブル サーバーとは", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "本番環境で使っても大丈夫ですか？", "a": "パブリック プレビューは、明示がない限り本番ワークロード向けではなく、通常 SLA も保証されません。", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-18T20:30:00Z" }] },
+          { "q": "対象の Azure Database for PostgreSQL は日本で使えますか？", "a": "サービス自体は東日本・西日本で提供されています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "Azure リージョン", "retrievedAt": "2026-10-18T20:30:00Z" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
