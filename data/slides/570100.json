@@ -1,0 +1,151 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570100"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T21:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "570100",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "AKS の Azure Linux 向け Confidential VM が GA",
+        "subtitleJa": "機密性の高いコンテナーを、コード変更なしで AKS ノード プールへ移行できます",
+        "en": "Generally Available: Confidential VMs for Azure Linux"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "June" }],
+        "status": "Launched",
+        "products": ["Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "containers"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "機密性の高いワークロードを **AKS（Azure Linux）** で動かしたい方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "Azure Linux 3 の CVM ノード プールを本番で使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "機密ワークロードを AKS に移す場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ハードウェア TEE（SEV-SNP）で、ホスト管理コードから VM のメモリと状態を保護",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "冒頭", "retrievedAt": "2026-10-18T21:48:00Z" }]
+            },
+            {
+              "text": "CVM ノードは、CVM 用に構成された専用のノード イメージを使用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "それはどのように動作しますか?", "retrievedAt": "2026-10-18T21:48:00Z" }]
+            },
+            {
+              "text": "CVM ノード上のすべてのポッドは同じ信頼境界に属する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "それはどのように動作しますか?", "retrievedAt": "2026-10-18T21:48:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure CLI）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "az aks nodepool add で --node-vm-size に CVM サイズ、--os-sku に AzureLinux を指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "CVM を持つノード プールを AKS クラスターに追加する", "retrievedAt": "2026-10-18T21:48:00Z" }]
+            },
+            {
+              "text": "az aks nodepool show で vmSize と nodeImageVersion を確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "ノード プールで CVM が使用されていることを確認する", "retrievedAt": "2026-10-18T21:48:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "既存の AKS クラスター、リージョンでの CVM サイズの利用可否と十分なクォータが必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "前提条件", "retrievedAt": "2026-10-18T21:48:00Z" }]
+            },
+            {
+              "text": "FIPS・ARM64・Trusted Launch・Pod sandboxing・NAP・Windows は併用不可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "制限事項", "retrievedAt": "2026-10-18T21:48:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "対応 OS・VM サイズ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure Linux は 3.0 が対象。Ubuntu も CVM ノード プールに利用可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "サポートされている OS のバージョン", "retrievedAt": "2026-10-18T21:48:00Z" }]
+            },
+            {
+              "text": "AKS は AMD SEV-SNP の CVM に対応。Intel TDX ベースは現在未対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "AKS でサポートされている機密 VM のサイズ", "retrievedAt": "2026-10-18T21:48:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "機密性の高い顧客データの処理や、政府契約などのコンプライアンス要件への対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "冒頭", "retrievedAt": "2026-10-18T21:48:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aks", "term": "AKS", "type": "product", "oneLine": { "text": "コンテナー化されたアプリケーションをデプロイ・管理するための、マネージド Kubernetes サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/what-is-aks", "locator": "冒頭", "retrievedAt": "2026-10-18T21:48:00Z" }] } },
+        { "termKey": "cvm", "term": "Confidential VM（CVM）", "type": "feature", "oneLine": { "text": "ハードウェアで強制される境界により、テナントに強力なセキュリティと機密性を提供する VM。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview", "locator": "冒頭", "retrievedAt": "2026-10-18T21:48:00Z" }] } },
+        { "termKey": "tee", "term": "TEE（信頼実行環境）", "type": "term", "oneLine": { "text": "ハイパーバイザーなどからメモリと状態へのアクセスを拒否する、ハードウェアベースの実行環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "冒頭", "retrievedAt": "2026-10-18T21:48:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T21:48:00Z" }] } }
+      ],
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どの VM サイズが使えますか？",
+            "a": "AKS では AMD SEV-SNP の CVM サイズが対象です。Intel TDX ベースの CVM は AKS では現在サポートされていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "AKS でサポートされている機密 VM のサイズ", "retrievedAt": "2026-10-18T21:48:00Z" }]
+          },
+          {
+            "q": "使う前に必要なものは何ですか？",
+            "a": "既存の AKS クラスターと、リージョンで利用できる CVM サイズ、そして十分なクォータが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "前提条件", "retrievedAt": "2026-10-18T21:48:00Z" }]
+          },
+          {
+            "q": "費用はどこで確認できますか？",
+            "a": "価格は機密 VM のサイズによって異なります。Linux Virtual Machines の料金ページで確認できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/virtual-machine-options", "locator": "価格", "retrievedAt": "2026-10-18T21:48:00Z" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570100",
+        "learn": [
+          { "title": "Azure Kubernetes Service (AKS) クラスターで Confidential Virtual Machines (CVM) を使用する", "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locale": "ja-jp" },
+          { "title": "Azure 機密 VM のオプション", "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/virtual-machine-options", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
