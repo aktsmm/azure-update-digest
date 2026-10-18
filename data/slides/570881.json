@@ -1,0 +1,157 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570881"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T21:15:00Z"
+  },
+  "slides": [
+    {
+      "key": "570881",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "azd の Extension Framework が一般提供（GA）に",
+        "subtitleJa": "独自のツール連携やデプロイ作業の自動化を、拡張機能として構築・配布できます",
+        "en": "Generally Available: Azure Developer CLI (azd) Extension Framework"
+      },
+      "meta": {
+        "publishedJst": "2026-09-09",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Blob Storage", "Azure Container Apps", "Azure Container Registry", "Azure Functions", "Key Vault", "Microsoft Foundry", "SDKs"],
+        "categories": ["compute", "storage", "ai", "security", "containers", "iot", "devtools"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**azd を使う開発者・チーム**、azd 向け拡張を作るパートナー", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "azd に独自の機能やツール連携を追加し、組織内で配布できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "azd の運用を標準化したいチームは検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "拡張機能は azd に新機能・自動化・他サービス連携を足すモジュール式コンポーネント",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "冒頭", "retrievedAt": "2026-10-18T21:15:00Z" }]
+            },
+            {
+              "text": "連携方法: コマンド追加 / ライフサイクル イベント / プロバイダー / MCP サーバー",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "拡張機能の統合ポイントについて", "retrievedAt": "2026-10-18T21:15:00Z" }]
+            },
+            {
+              "text": "拡張機能ソース（URL・ファイル）や .zip バンドルで配布・インストール",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "拡張機能ソースを管理する", "retrievedAt": "2026-10-18T21:15:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "azd extension install microsoft.azd.extensions で開発者拡張機能を導入",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/develop/quickstart-build-extension", "locator": "開発者拡張機能をインストールする", "retrievedAt": "2026-10-18T21:15:00Z" }]
+            },
+            {
+              "text": "azd x init で作成し、azd x pack → azd x publish で登録して実行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/develop/quickstart-build-extension", "locator": "拡張機能を実行する", "retrievedAt": "2026-10-18T21:15:00Z" }]
+            },
+            {
+              "text": "azd x watch で変更を自動的にビルド・インストール",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/develop/quickstart-build-extension", "locator": "開発中の変更を監視する", "retrievedAt": "2026-10-18T21:15:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "クイック スタートの前提: azd、Go 1.26 以降、コード エディター",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/develop/quickstart-build-extension", "locator": "前提条件", "retrievedAt": "2026-10-18T21:15:00Z" }]
+            },
+            {
+              "text": "開発レジストリの拡張機能は未署名で Azure サポート対象外",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "注意事項", "retrievedAt": "2026-10-18T21:15:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "フレームワークは GA。個々の拡張機能には独自のプレビュー状態がある場合がある",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "注", "retrievedAt": "2026-10-18T21:15:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "拡張機能に依存するプロジェクトは azure.yaml の requiredVersions で宣言",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "プロジェクトで必要な拡張機能を宣言する", "retrievedAt": "2026-10-18T21:15:00Z" }]
+            },
+            {
+              "text": "開発コンテナーの azd 機能で拡張機能を自動インストール可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "開発コンテナーで azd 拡張機能を使用する", "retrievedAt": "2026-10-18T21:15:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azd", "term": "Azure Developer CLI (azd)", "type": "product", "oneLine": { "text": "Azure でのアプリ リソースのプロビジョニングとデプロイを高速化するオープンソース ツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/overview", "locator": "冒頭", "retrievedAt": "2026-10-18T21:15:00Z" }] } },
+        { "termKey": "extension-framework", "term": "拡張機能（Extension）", "type": "feature", "oneLine": { "text": "azd の機能を拡張するモジュール式コンポーネント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "冒頭", "retrievedAt": "2026-10-18T21:15:00Z" }] } },
+        { "termKey": "extension-source", "term": "拡張機能ソース", "type": "term", "oneLine": { "text": "使用可能な azd 拡張機能の一覧を提供するファイルまたは URL ベースのマニフェスト。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "拡張機能ソースを管理する", "retrievedAt": "2026-10-18T21:15:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "モデル コンテキスト プロトコル。拡張機能は MCP サーバー機能を公開できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "拡張機能の統合ポイントについて", "retrievedAt": "2026-10-18T21:15:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T21:15:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570881",
+        "learn": [
+          { "title": "Azure Developer CLI 拡張機能の概要", "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locale": "ja-jp" },
+          { "title": "クイック スタート: サンプルの azd 拡張機能を構築する", "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/develop/quickstart-build-extension", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "拡張機能フレームワークは本番で使えますか？",
+            "a": "フレームワーク自体は GA です。ただし個々の拡張機能にはプレビューのものがあり、開発レジストリの拡張機能は未署名でサポート対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "注", "retrievedAt": "2026-10-18T21:15:00Z" }]
+          },
+          {
+            "q": "拡張機能を作るには何が必要ですか？",
+            "a": "クイック スタートでは azd、Go 1.26 以降、コード エディターを用意し、開発者拡張機能（azd x）で作成します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/develop/quickstart-build-extension", "locator": "前提条件", "retrievedAt": "2026-10-18T21:15:00Z" }]
+          },
+          {
+            "q": "拡張機能はどう配布できますか？",
+            "a": "URL ベースやファイル ベースの拡張機能ソース、または自己完結型の .zip バンドルで配布・インストールできます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "拡張機能ソースを管理する", "retrievedAt": "2026-10-18T21:15:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
