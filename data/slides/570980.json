@@ -1,0 +1,106 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570980"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T20:52:44Z"
+  },
+  "slides": [
+    {
+      "key": "570980",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Copilot の Troubleshooting Agent が一般提供（GA）に",
+        "subtitleJa": "Azure Copilot とポータルのサポート + トラブルシューティングで、調査から解決までを支援",
+        "en": "Generally Available: Azure Copilot Troubleshooting Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-09-11",
+        "modifiedJst": "2026-09-11",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure Copilot"],
+        "categories": ["ai", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure 環境の障害・不具合を調査する運用担当者・開発者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "診断の知見・運用コンテキスト・推奨アクションを 1 つの体験で得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "調査に手間がかかる障害があれば試す。管理者の有効化設定は確認", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Azure Copilot と Support + Troubleshooting の両方から、調査から解決までの流れを 1 つの体験で進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "問題を自然言語で記述 → 範囲特定 → 診断証拠の収集 → 解決策の推奨・適用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "どのように機能するのか", "retrievedAt": "2026-10-18T20:52:44Z" }] },
+            { "text": "解決しない場合は、サポート要求の作成やライブ サポートへの接続にエスカレート", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "どのように機能するのか", "retrievedAt": "2026-10-18T20:52:44Z" }] },
+            { "text": "ID と Azure RBAC を尊重。変更前に推奨事項を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "どのように機能するのか", "retrievedAt": "2026-10-18T20:52:44Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure Copilot →［新しいチャット］→［トラブルシューティング］を選び、問題を説明", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "Azure Copilotからトラブルシューティングを開始する", "retrievedAt": "2026-10-18T20:52:44Z" }] },
+            { "text": "対象リソース →［?］→［サポートとトラブルシューティング］から開始も可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "サポートからトラブルシューティングを開始する", "retrievedAt": "2026-10-18T20:52:44Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "追加料金なし。基になる Azure リソースの標準料金は通常どおり", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "Pricing", "retrievedAt": "2026-10-18T20:52:44Z" }] },
+            { "text": "自動軽減は全問題・全リソースで使えるとは限らず、診断の深さはサービスごとに異なる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "現在の考慮事項と制限事項", "retrievedAt": "2026-10-18T20:52:44Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "対応範囲", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "GA: Azure VM / VM Scale Sets / Compute Fleet、AKS の詳細なトラブルシューティング", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "Azure コンピューティングの詳細なトラブルシューティング", "retrievedAt": "2026-10-18T20:52:44Z" }] },
+            { "text": "Azure Local と Microsoft Entra のトラブルシューティングはパブリック プレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "冒頭", "retrievedAt": "2026-10-18T20:52:44Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "例: VM への RDP 接続不可、AKS の CrashLoopBackOff、予期しない再起動の調査", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "サンプル プロンプトのトラブルシューティング", "retrievedAt": "2026-10-18T20:52:44Z" }] },
+            { "text": "管理者がエージェントを無効化している場合、選択肢に表示されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "Note", "retrievedAt": "2026-10-18T20:52:44Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-copilot", "term": "Azure Copilot", "type": "product", "oneLine": { "text": "Azure の設計・運用・最適化・トラブルシューティングを支援する、AI を利用したツール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/overview", "locator": "Azure Copilot の機能", "retrievedAt": "2026-10-18T20:52:44Z" }] } },
+        { "termKey": "troubleshooting-agent", "term": "Troubleshooting Agent", "type": "feature", "oneLine": { "text": "Azure 環境の問題の診断、解決策の検索、解決を支援するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "冒頭", "retrievedAt": "2026-10-18T20:52:44Z" }] } },
+        { "termKey": "support-troubleshooting", "term": "Support + Troubleshooting", "type": "feature", "oneLine": { "text": "Azure portal でリソースのトラブルシューティングを始められる入口。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "サポートからトラブルシューティングを開始する", "retrievedAt": "2026-10-18T20:52:44Z" }] } },
+        { "termKey": "rbac", "term": "Azure RBAC", "type": "term", "oneLine": { "text": "ロールに基づいて Azure リソースへのアクセス権を管理する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "どのように機能するのか", "retrievedAt": "2026-10-18T20:52:44Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T20:52:44Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570980",
+        "learn": [
+          { "title": "Azure Copilot トラブルシューティング エージェント", "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locale": "ja-jp" },
+          { "title": "Azure Copilot とは", "url": "https://learn.microsoft.com/ja-jp/azure/copilot/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "追加の費用やライセンスは必要ですか？", "a": "追加料金なしで、個別のライセンスやクエリ課金は不要です。基になる Azure リソースの標準料金は通常どおりです。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "Pricing", "retrievedAt": "2026-10-18T20:52:44Z" }] },
+          { "q": "どこから使えますか？", "a": "Azure portal の Azure Copilot と、リソースの Support + Troubleshooting から利用できます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "概要", "retrievedAt": "2026-10-18T20:52:44Z" }] },
+          { "q": "エージェントが表示されない場合は？", "a": "管理者が Azure Copilot エージェントへのアクセスを無効化している可能性があります。管理者に確認してください。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "Note", "retrievedAt": "2026-10-18T20:52:44Z" }] },
+          { "q": "どのサービスの問題を調査できますか？", "a": "GA では Azure VM、VM Scale Sets、Compute Fleet、AKS を対象にしています。診断の深さは種類により異なります。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/copilot/troubleshooting-agent", "locator": "Azure コンピューティングの詳細なトラブルシューティング", "retrievedAt": "2026-10-18T20:52:44Z" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
