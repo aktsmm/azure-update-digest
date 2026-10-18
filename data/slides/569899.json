@@ -1,0 +1,177 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569899"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T22:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "569899",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Monitor の Auxiliary ログ プランがソブリン クラウドで GA",
+        "subtitleJa": "Azure Government (Fairfax) と China で、大量の詳細ログを低コストで取り込み・保持",
+        "en": "Generally Available: Azure Monitor Auxiliary Logs Plan in Azure Government and China regions"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Monitor"],
+        "categories": ["ops-governance", "devtools"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Azure Government (Fairfax) / China で Azure Monitor Logs を使っている**ソブリン クラウドの利用者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "コンプライアンス・監査向けの大量ログを低コストで取り込み・保持できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "大量の詳細ログのコストが課題なら検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "テーブル プランの 1 つ。Analytics / Basic / Auxiliary から選ぶ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/logs-table-plans", "locator": "冒頭の表", "retrievedAt": "2026-10-18T22:08:00Z" }]
+            },
+            {
+              "text": "Auxiliary は、長期・低コスト保存向けの大量で冗長なデータ用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/logs-table-plans", "locator": "冒頭の表", "retrievedAt": "2026-10-18T22:08:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "設定の流れ（Azure portal）",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Log Analytics ワークスペース → [テーブル] → テーブルの [テーブルの管理] → [テーブル プラン] で補助 / Lake を選び保存",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/logs-table-plans", "locator": "テーブル プランを変更する", "retrievedAt": "2026-10-18T22:08:00Z" }]
+            },
+            {
+              "text": "Azure CLI・PowerShell・REST API（plan に Auxiliary を指定）でも設定可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/logs-table-plans", "locator": "REST タブ", "retrievedAt": "2026-10-18T22:08:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "従来の価格レベルのワークスペースでは使用不可。プラン変更はテーブルごとに週 1 回まで",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [
+                { "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locator": "テーブル プランの比較", "retrievedAt": "2026-10-18T22:08:00Z" },
+                { "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/logs-table-plans", "locator": "テーブル プランを変更する", "retrievedAt": "2026-10-18T22:08:00Z" }
+              ]
+            },
+            {
+              "text": "Azure テーブルの Auxiliary 対応はテーブルごとに異なる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/logs-table-plans", "locator": "テーブル プランを設定する", "retrievedAt": "2026-10-18T22:08:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "似た機能との違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "Analytics: 継続監視・低遅延の分析 / Basic: トラブルシューティング・インシデント対応 / Auxiliary: 長期・低コスト保存",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/logs-table-plans", "locator": "冒頭の表", "retrievedAt": "2026-10-18T22:08:00Z" }]
+            },
+            {
+              "text": "Analytics から Auxiliary に切り替えると、そのテーブルのアラートは機能しなくなる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/logs-table-plans", "locator": "テーブル プランを変更する", "retrievedAt": "2026-10-18T22:08:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "使いどころ・注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "監査・コンプライアンス用に、データを最長 12 年間保存する用途",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locator": "監査とコンプライアンスのためにデータを保持する", "retrievedAt": "2026-10-18T22:08:00Z" }]
+            },
+            { "text": "アラートが必要なログは Analytics のまま残す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-monitor-logs", "term": "Azure Monitor Logs", "type": "product",
+          "oneLine": { "text": "Azure や Azure 以外のリソースのテレメトリを収集・分析する一元的なプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locator": "冒頭", "retrievedAt": "2026-10-18T22:08:00Z" }] }
+        },
+        {
+          "termKey": "log-analytics-workspace", "term": "Log Analytics ワークスペース", "type": "feature",
+          "oneLine": { "text": "Azure Monitor ログの主要リソースで、ログを収集して格納する場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locator": "冒頭", "retrievedAt": "2026-10-18T22:08:00Z" }] }
+        },
+        {
+          "termKey": "table-plan", "term": "テーブル プラン", "type": "feature",
+          "oneLine": { "text": "ログ テーブルの用途に応じて選ぶ種類（Analytics / Basic / Auxiliary）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/logs-table-plans", "locator": "冒頭", "retrievedAt": "2026-10-18T22:08:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T22:08:00Z" }] }
+        }
+      ],
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どのクラウドで一般提供になったのですか？",
+            "a": "Azure Government (Fairfax) と China のソブリン クラウドで一般提供になりました。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=569899", "locator": "アナウンス本文", "retrievedAt": "2026-10-18T22:08:00Z" }]
+          },
+          {
+            "q": "既存テーブルのプランは変更できますか？",
+            "a": "ポータル・CLI・PowerShell・REST で変更できます。変更はテーブルごとに週 1 回までで、対応テーブルのみです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/logs-table-plans", "locator": "テーブル プランを変更する", "retrievedAt": "2026-10-18T22:08:00Z" }]
+          },
+          {
+            "q": "従来の価格レベルのワークスペースでも使えますか？",
+            "a": "使えません。Basic と Auxiliary プランは従来の価格レベルのワークスペースでは利用できません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locator": "テーブル プランの比較", "retrievedAt": "2026-10-18T22:08:00Z" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569899",
+        "learn": [
+          { "title": "Log Analytics ワークスペースでテーブル プランを構成する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/logs-table-plans", "locale": "ja-jp" },
+          { "title": "Azure Monitor ログの概要", "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
