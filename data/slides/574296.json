@@ -1,0 +1,117 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["574296"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-19T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "574296",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Managed HSM の外部キー管理が一般提供（GA）に",
+        "subtitleJa": "Microsoft 外の自社 HSM の鍵を CMK に利用。Private Link 連携はプレビュー",
+        "en": "Generally Available: External key management for Azure Key Vault Managed HSM"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "modifiedJst": "2026-10-17",
+        "availability": [
+          { "rawRing": "Preview", "year": 2026, "month": "July" },
+          { "rawRing": "General Availability", "year": 2026, "month": "October" }
+        ],
+        "status": "Launched",
+        "products": ["Key Vault"],
+        "categories": ["security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "鍵を **Microsoft インフラの外で物理的に管理する要件がある** Managed HSM の利用者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Azure サービスの CMK 暗号化で、自社運用 HSM の鍵を使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "外部保管の要件がある場合のみ検討。サブスクリプションごとに機能登録が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-overview", "locator": "サブスクリプションの外部キー管理を有効にする", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "GA により、Managed HSM が EKM プロキシ経由で外部 HSM の鍵を使い、鍵のラップ／ラップ解除を行える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "GA の範囲とプレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "GA: パブリック インターネット経由でプロキシに接続するモデル", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-faq", "locator": "Managed HSM は EKM プロキシにどのように接続しますか?", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "プレビュー: Azure Private Link によるプロキシへの接続", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "対象は Managed HSM で CMK をサポートする Azure サービス", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "外部 HSM とプロキシは Managed HSM の SLA の対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-overview", "locator": "スコープと制限事項", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "キー リリース、バックアップ／復元、geo レプリケーションは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-overview", "locator": "スコープと制限事項", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "プロキシの往復は 250 ミリ秒以内。超えるとエラーになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-faq", "locator": "外部キー管理操作の待機時間の予算は何ですか?", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "物理的な外部保管の要件がなければ Managed HSM キーを推奨", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-faq", "locator": "外部キー管理を使用すべきでないのはいつですか?", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "追加料金なし。プロキシと HSM ベンダーの費用は利用者負担", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-overview", "locator": "外部キー管理を使用する理由", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "managed-hsm", "term": "Managed HSM", "type": "product", "oneLine": { "text": "FIPS 140-3 レベル 3 の HSM で鍵を保管する、Azure 内の管理サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-overview", "locator": "比較: 外部キーとマネージド HSM キー", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "ekm", "term": "外部キー管理（EKM）", "type": "feature", "oneLine": { "text": "CMK の保存時暗号化を、Microsoft 外で動作する HSM に接続する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "cmk", "term": "CMK", "type": "term", "oneLine": { "text": "お客様が管理する鍵（カスタマー マネージド キー）で保存データを暗号化する方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "ekm-proxy", "term": "EKM プロキシ", "type": "term", "oneLine": { "text": "利用者または HSM ベンダーが運用し、外部 HSM への鍵操作を中継するプロキシ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "private-link", "term": "Azure Private Link", "type": "feature", "oneLine": { "text": "プライベート エンドポイント経由で、トラフィックを Microsoft バックボーンに留める接続。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-faq", "locator": "Managed HSM は EKM プロキシにどのように接続しますか?", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-19T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "外部キー管理は Azure のすべてのパブリック リージョンで利用可能（ソブリン クラウドは対象外）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-faq", "locator": "外部キー管理とそのPrivate Link統合は、どのリージョンで利用できますか?", "retrievedAt": "2026-10-19T00:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=574296",
+        "learn": [
+          { "title": "Managed HSM 外部キー管理とは何ですか?", "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-overview", "locale": "ja-jp" },
+          { "title": "Managed HSM の外部キー管理アーキテクチャ", "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-architecture", "locale": "ja-jp" },
+          { "title": "外部キー管理に関してよく寄せられる質問", "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-faq", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どのリージョンで使えますか？",
+            "a": "Azure のすべてのパブリック リージョンで利用できます。Azure Government と中国 Azure は対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-faq", "locator": "リージョン", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          },
+          {
+            "q": "利用にはどう有効化しますか？",
+            "a": "Microsoft.KeyVault 名前空間の MHSM_EKM 機能をサブスクリプションに登録します。登録は自動的に承認されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-overview", "locator": "サブスクリプションの外部キー管理を有効にする", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          },
+          {
+            "q": "追加の費用はかかりますか？",
+            "a": "操作ごとの追加料金はなく、標準の Managed HSM 料金が適用されます。プロキシと HSM の費用は利用者負担です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/external-key-management-faq", "locator": "外部キー管理のコストは何ですか?", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
