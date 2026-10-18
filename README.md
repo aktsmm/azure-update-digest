@@ -39,6 +39,8 @@ dist/             サイト・API・PDF。data/ から常に再生成可能     
 | `auto-merge-maintenance.yml` | 保守 PR の自動マージ。PR のコードは読み取り専用のジョブで検査し（型・テスト・検証）、書き込み権限のジョブは検査した SHA を指定してマージするだけ | 保守完了時 / 6 時間ごと（:29 UTC）/ 手動（`dry_run`） |
 | `watchdog.yml` | AI なし。40 分を超えて固まったエージェント実行を取り消し、失敗した Pages デプロイを 1 回だけ再実行 | 毎日 05:41 JST（20:41 UTC。実行は遅れることがある） |
 | `token-check.yml` | AI なし。`COPILOT_GITHUB_TOKEN` が有効か・期限が 14 日以内でないかを確認し、問題があれば Issue で通知（値は出力しない） | 毎週月曜 **09:20 JST**（日曜 00:20 UTC） |
+| `heal-on-failure.yml` | AI なし。収集・公開・自動マージ・スライド配布のワークフローが失敗したら、隔週の保守を待たずに `maintain` を起動（6 時間以内に動いていれば何もしない） | 上記ワークフローの失敗時 |
+| `pipeline-status.yml` | AI なし。Issue「Pipeline status」を 1 つだけ保ち、データ件数・要約とスライドの進み具合・各ワークフローの成否・開いている PR を毎日更新（`npm run health` の結果を整形） | 毎日 **06:10 JST**（21:10 UTC） |
 | `pages.yml` | validate → build → GitHub Pages 公開（失敗時は既存公開物を維持） | 呼び出し / data 等の push |
 | `ci.yml` | typecheck / test / validate / build | PR |
 

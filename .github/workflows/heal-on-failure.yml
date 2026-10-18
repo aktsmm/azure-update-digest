@@ -1,0 +1,45 @@
+name: Heal on failure
+
+# 自動処理のワークフローが失敗したら、次の隔週保守を待たずに保守エージェント（maintain）を起動する。
+# 6 時間以内に保守が走っていれば何もしない（連鎖して何度も AI が動かないようにする）。
+# エージェントは健康チェックを読み、直せるものは PR で直し、直せないものは Issue に報告する。
+# このワークフロー自体は AI を使わない。
+on:
+  workflow_run:
+    workflows:
+      - "Collect (daily)"
+      - "Deploy site"
+      - "Auto-merge slides"
+      - "Auto-merge summaries"
+      - "Auto-merge maintenance"
+      - "Dispatch slide generation"
+    types: [completed]
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: heal-on-failure
+  cancel-in-progress: false
+
+jobs:
+  heal:
+    if: github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Start maintenance unless it ran recently
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          FAILED: ${{ github.event.workflow_run.name }}
+        run: |
+          read -r status created < <(gh run list --workflow maintain.lock.yml --limit 1 --json status,createdAt -q '.[0] | "\(.status) \(.createdAt)"' || echo "none 1970-01-01T00:00:00Z")
+          age=$(( $(date +%s) - $(date -d "$created" +%s) ))
+          if [ "$status" = "in_progress" ] || [ "$status" = "queued" ] || [ "$status" = "pending" ] || [ "$age" -lt 21600 ]; then
+            echo "maintenance ran recently or is running ($status, ${age}s ago); not starting another for: $FAILED"
+            exit 0
+          fi
+          echo "starting maintenance because '$FAILED' failed"
+          gh workflow run maintain.lock.yml

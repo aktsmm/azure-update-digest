@@ -1,0 +1,48 @@
+name: Pipeline status
+
+# 「Pipeline status」という Issue を 1 つだけ保ち、毎日その内容を更新する。
+# Actions タブを開かなくても、データの件数・要約とスライドの進み具合・各ワークフローの成否・
+# 開いている PR が読める。AI は使わない（npm run health の結果を整形するだけ）。
+# 毎日 06:10 JST（UTC 21:10）。実行は遅れることがある。
+on:
+  schedule:
+    - cron: "10 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+  issues: write
+  pull-requests: read
+
+concurrency:
+  group: pipeline-status
+  cancel-in-progress: false
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Write the report
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STATUS_OUT: .work/status.md
+        run: npm run health
+      - name: Update the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          number=$(gh issue list --label pipeline-status --state open --limit 1 --json number -q '.[0].number')
+          if [ -z "$number" ]; then
+            gh label create pipeline-status --description "Daily automation status" --color 0E8A16 2>/dev/null || true
+            gh issue create --title "Pipeline status" --label pipeline-status --body-file .work/status.md
+          else
+            gh issue edit "$number" --body-file .work/status.md
+          fi
