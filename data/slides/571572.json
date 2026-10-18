@@ -1,0 +1,113 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571572"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T20:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "571572",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Virtual Network Manager の高スケール メッシュが GA",
+        "subtitleJa": "connected group で最大 3,000 の仮想ネットワークを、個別のピアリングなしで接続",
+        "en": "Generally Available: High-scale mesh in Azure Virtual Network Manager"
+      },
+      "meta": {
+        "publishedJst": "2026-09-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure Virtual Network Manager"],
+        "categories": ["networking", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "多数の仮想ネットワークを運用する **Azure Virtual Network Manager の利用者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "大規模環境の接続を、個別のピアリングを作らず管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "大規模な VNet 間接続が必要な場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "利用可能なリージョンで、既定で最大 3,000 の VNet を 1 つのメッシュ構成に接続", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ネットワーク グループと接続構成の従来モデルをそのまま使う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "メッシュは connected group で接続され、VNet のピアリング一覧には表示されない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locator": "舞台裏: 繋がるグループ", "retrievedAt": "2026-10-18T20:05:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ネットワーク グループで対象 VNet を定義し、メッシュ トポロジの接続構成をデプロイする",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locator": "接続性の構成 / メッシュ型トポロジ", "retrievedAt": "2026-10-18T20:05:00Z" }]
+            },
+            { "text": "より高いスケールの IP 接続は、リクエストにより利用可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "VNet は最大 2 つの connected group（メッシュ）に所属可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locator": "舞台裏: 繋がるグループ", "retrievedAt": "2026-10-18T20:05:00Z" }]
+            },
+            {
+              "text": "アドレス空間が重複するサブネット間の通信は破棄される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locator": "メッシュ型トポロジ（注）", "retrievedAt": "2026-10-18T20:05:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "メッシュは connected group、ハブ アンド スポークは VNet ピアリングで接続を確立する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locator": "接続構成のデプロイ", "retrievedAt": "2026-10-18T20:05:00Z" }]
+            },
+            {
+              "text": "既定はリージョン メッシュ。グローバル メッシュで全リージョン間も接続可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locator": "メッシュ型トポロジ", "retrievedAt": "2026-10-18T20:05:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "アプリや事業部ごとに VNet を分けたまま、VNet 間を直接接続したい場合", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "avnm", "term": "Azure Virtual Network Manager", "type": "product", "oneLine": { "text": "Azure ネットワーク全体の接続・セキュリティ・ルーティングの管理を簡素化するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locator": "冒頭", "retrievedAt": "2026-10-18T20:05:00Z" }] } },
+        { "termKey": "mesh", "term": "メッシュ トポロジ", "type": "term", "oneLine": { "text": "ネットワーク グループ内のすべての VNet を双方向に接続する構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locator": "メッシュ型トポロジ", "retrievedAt": "2026-10-18T20:05:00Z" }] } },
+        { "termKey": "connected-group", "term": "connected group", "type": "feature", "oneLine": { "text": "メッシュ接続された VNet を束ねる、Virtual Network Manager 専用の接続コンストラクト。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locator": "舞台裏: 繋がるグループ", "retrievedAt": "2026-10-18T20:05:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T20:05:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571572",
+        "learn": [{ "title": "Azure Virtual Network Manager の接続構成", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
