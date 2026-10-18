@@ -1,0 +1,144 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570250"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T22:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "570250",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Observability Agent が Basic / Auxiliary テーブルに対応（GA）",
+        "subtitleJa": "低コストのテーブル プランに移した Log Analytics データも、エージェントの分析・調査で活用できます",
+        "en": "Generally Available: Azure Copilot Observability Agent supports Basic and Auxiliary table plans"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Copilot", "Azure Monitor"],
+        "categories": ["ai", "ops-governance", "devtools"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Monitor Log Analytics と Observability Agent を使っている運用チーム**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "Basic / Auxiliary プランのデータもエージェントの分析対象になる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "対象テーブルが既に Basic / Auxiliary なら追加設定は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対話型の分析と詳細な調査で、Basic / Auxiliary プランの Log Analytics データを扱える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "メトリック・トレース・トポロジ・Azure リソースのコンテキストと併せて利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "エージェントは自然言語でログやメトリックを調べ、問題の調査を支援する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/aiops/observability-agent-overview", "locator": "冒頭", "retrievedAt": "2026-10-18T22:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象テーブルが既に Basic / Auxiliary プランなら、追加の設定は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "Application Insights または Log Analytics ワークスペースの [ログ] で [Observability Agent] を選びチャットを開始",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/aiops/observability-agent-chat", "locator": "[ログ] ページからチャットを開始する", "retrievedAt": "2026-10-18T22:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure Copilot へのアクセスが必要。会話は 24 時間まで、エージェントは英語のみ対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/aiops/observability-agent-overview", "locator": "現在の制限", "retrievedAt": "2026-10-18T22:00:00Z" }]
+            },
+            {
+              "text": "Basic / Auxiliary プランは従来の価格レベルのワークスペースでは使えない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locator": "テーブル プラン", "retrievedAt": "2026-10-18T22:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "テーブル プランの違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "テーブル プランは Analytics・Basic・Auxiliary の 3 種類。Basic / Auxiliary は対応テーブルのみ選択可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locator": "テーブル プラン", "retrievedAt": "2026-10-18T22:00:00Z" }]
+            },
+            {
+              "text": "Basic / Auxiliary は Azure Monitor ダッシュボードに未対応（ワークブックと Grafana は対応）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locator": "テーブル プラン（脚注）", "retrievedAt": "2026-10-18T22:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "AKS の ContainerLogV2・監査ログ・コントロール プレーン ログなど大量ログを Basic 候補にしつつ調査に使う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "コンテナーの stdout / stderr、監査証跡、ノードの syslog を低コスト プランへ移す", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-copilot-observability-agent", "term": "Observability Agent", "type": "feature", "oneLine": { "text": "Azure Monitor の AI を活用した運用コンパニオンで、可観測データの調査を支援する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/aiops/observability-agent-overview", "locator": "冒頭", "retrievedAt": "2026-10-18T22:00:00Z" }] } },
+        { "termKey": "azure-monitor", "term": "Azure Monitor", "type": "product", "oneLine": { "text": "Azure とそれ以外のリソースのテレメトリを収集・分析・活用するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locator": "冒頭", "retrievedAt": "2026-10-18T22:00:00Z" }] } },
+        { "termKey": "log-analytics-workspace", "term": "Log Analytics ワークスペース", "type": "feature", "oneLine": { "text": "Azure Monitor ログのデータを保存・管理する主要なリソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locator": "冒頭", "retrievedAt": "2026-10-18T22:00:00Z" }] } },
+        { "termKey": "table-plan", "term": "テーブル プラン", "type": "term", "oneLine": { "text": "ログ テーブルの機能とコストを決める種別で、Analytics・Basic・Auxiliary がある。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locator": "テーブル プラン", "retrievedAt": "2026-10-18T22:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T22:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Observability Agent の提供リージョン一覧に日本は含まれない（処理の一部は地理ベース）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/aiops/observability-agent-overview", "locator": "リージョン", "retrievedAt": "2026-10-18T22:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570250",
+        "learn": [
+          { "title": "Azure Copilot 監視エージェント", "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/aiops/observability-agent-overview", "locale": "ja-jp" },
+          { "title": "Azure Monitor ログの概要", "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "追加の設定は必要ですか？",
+            "a": "対象テーブルが既に Basic または Auxiliary プランなら、追加のユーザー設定は不要です。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=570250" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Learn の提供リージョン一覧に日本は含まれていません（東アジアなどは記載）。処理の一部は地理ベースです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/aiops/observability-agent-overview" }]
+          },
+          {
+            "q": "利用上の制限はありますか？",
+            "a": "同じ会話は 24 時間まで、エージェントは英語のみ対応です。CMK は会話では未対応です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/aiops/observability-agent-overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
