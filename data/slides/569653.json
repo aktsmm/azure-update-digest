@@ -1,0 +1,112 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569653"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T21:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "569653",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "MySQL フレキシブル サーバーにリーダー エンドポイント",
+        "subtitleJa": "複数の読み取りレプリカへの接続を 1 つの DNS で自動分散（パブリック プレビュー）",
+        "en": "Public Preview: Reader Endpoint for Azure Database for MySQL "
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "modifiedJst": "2026-10-02",
+        "availability": [
+          { "rawRing": "Preview", "year": 2026, "month": "September" },
+          { "rawRing": "Private Preview", "year": 2026, "month": "September" }
+        ],
+        "status": "In preview",
+        "products": ["Azure Database for MySQL"],
+        "categories": ["databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "MySQL フレキシブル サーバーで**複数の読み取りレプリカ**を使う／検討している方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "個々のレプリカのエンドポイントを管理せず、読み取り用の単一エンドポイントに接続できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "非運用環境での検証向け。利用する場合は追加料金が発生する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locator": "リーダー エンドポイント (プレビュー)", "retrievedAt": "2026-10-18T21:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "1 つの DNS エンドポイントで、複数レプリカへの新しい読み取り接続を自動的に負荷分散できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locator": "リーダー エンドポイント (プレビュー)", "retrievedAt": "2026-10-18T21:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ソース サーバー 1 台につき最大 10 個の読み取りレプリカに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locator": "冒頭", "retrievedAt": "2026-10-18T21:30:00Z" }] },
+            { "text": "ルーティング方法はローテーション（ラウンドロビン）とパフォーマンス（最寄り）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locator": "ルーティング方法", "retrievedAt": "2026-10-18T21:30:00Z" }] },
+            { "text": "停止・ラグ超過のレプリカはルーティングから自動的に除外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locator": "リーダー エンドポイント (プレビュー)", "retrievedAt": "2026-10-18T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "geo レプリカは未対応。Azure CLI も未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locator": "Limitations", "retrievedAt": "2026-10-18T21:30:00Z" }] },
+            { "text": "作成後にルーティング方法は変更できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locator": "Limitations", "retrievedAt": "2026-10-18T21:30:00Z" }] },
+            { "text": "VERIFY_IDENTITY モードの SSL 接続は使用不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locator": "Limitations", "retrievedAt": "2026-10-18T21:30:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "読み取りレプリカを複数使うワークロードで、接続管理の簡素化と分散の挙動を検証環境で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mysql-flexible", "term": "Azure Database for MySQL", "type": "product", "oneLine": { "text": "MySQL Community Edition をベースにした、フルマネージドのリレーショナル データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/mysql/flexible-server/overview", "locator": "冒頭", "retrievedAt": "2026-10-18T21:30:00Z" }] } },
+        { "termKey": "read-replica", "term": "読み取りレプリカ", "type": "feature", "oneLine": { "text": "ソース サーバーからデータをレプリケートする、読み取り専用のサーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locator": "冒頭", "retrievedAt": "2026-10-18T21:30:00Z" }] } },
+        { "termKey": "reader-endpoint", "term": "リーダー エンドポイント", "type": "feature", "oneLine": { "text": "読み取りレプリカに対する単一の DNS エンドポイントで、読み取り接続を自動分散する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locator": "リーダー エンドポイント (プレビュー)", "retrievedAt": "2026-10-18T21:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-18T21:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "親サービスは Japan East / Japan West で提供。プレビュー機能自体のリージョン一覧は示されていない",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/mysql/flexible-server/overview", "locator": "Azure regions", "retrievedAt": "2026-10-18T21:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569653",
+        "learn": [
+          { "title": "Azure Database for MySQL のレプリカの読み取り", "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "リーダー エンドポイントに追加料金はかかりますか？",
+            "a": "Learn には、リーダー エンドポイントには追加料金が発生すると記載があります。料金計算ツールで見積もれます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locator": "リーダー エンドポイント (プレビュー)", "retrievedAt": "2026-10-18T21:30:00Z" }]
+          },
+          {
+            "q": "geo レプリカでも使えますか？",
+            "a": "プレビュー中は geo レプリカは未対応です。Azure CLI も未対応と記載されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locator": "Limitations", "retrievedAt": "2026-10-18T21:30:00Z" }]
+          },
+          {
+            "q": "複数のリーダー エンドポイントを作れますか？",
+            "a": "同じソース サーバーに複数作成でき、ワークロードごとにレプリカ選択やルーティング方法、TTL を変えられます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-read-replicas", "locator": "リーダー エンドポイント (プレビュー)", "retrievedAt": "2026-10-18T21:30:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
