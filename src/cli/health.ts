@@ -30,12 +30,15 @@ async function http(path: string): Promise<{ status: number; json?: unknown }> {
   }
 }
 
-interface Run { databaseId: number; workflowName: string; status: string; conclusion: string; event: string; createdAt: string; updatedAt: string }
-const runs = gh<Run[]>(["run", "list", "--repo", repo, "--limit", "300", "--json", "databaseId,workflowName,status,conclusion,event,createdAt,updatedAt"], []);
+interface Run { databaseId: number; workflowName: string; headBranch?: string; status: string; conclusion: string; event: string; createdAt: string; updatedAt: string }
+const runs = gh<Run[]>(["run", "list", "--repo", repo, "--limit", "300", "--json", "databaseId,workflowName,headBranch,status,conclusion,event,createdAt,updatedAt"], []);
 const recent = runs.filter((r) => now - Date.parse(r.createdAt) <= 14 * DAY);
 
 const byWorkflow: Record<string, { success: number; failure: number; cancelled: number; running: number; lastSuccess: string | null; lastFailures: { id: number; at: string }[] }> = {};
+// Bot-authored PR branches can show a CI run that fails with zero jobs (GitHub withholds workflow runs for bot pushes). It is not a test failure; auto-merge validates those PRs itself.
+const botBranch = /^(slides|summaries|maintenance|maint)[/-]/;
 for (const r of recent) {
+  if (r.workflowName === "CI" && r.event === "pull_request" && r.conclusion === "failure" && botBranch.test(r.headBranch ?? "")) continue;
   const w = (byWorkflow[r.workflowName] ??= { success: 0, failure: 0, cancelled: 0, running: 0, lastSuccess: null, lastFailures: [] });
   if (r.status !== "completed") w.running++;
   else if (r.conclusion === "success") { w.success++; if (!w.lastSuccess || r.createdAt > w.lastSuccess) w.lastSuccess = r.createdAt; }
@@ -101,3 +104,39 @@ mkdirSync(out.replace(/[\\/][^\\/]+$/, ""), { recursive: true });
 writeFileSync(out, stableStringify(health) + "\n", "utf8");
 console.log(`health: ${f.length} flag(s) -> ${out}`);
 for (const x of f) console.log(`  - ${x}`);
+
+// Human-readable status for the "Pipeline status" issue (no AI). Written only when asked.
+const statusOut = process.env.STATUS_OUT;
+if (statusOut) {
+  const wf = Object.entries(byWorkflow).sort(([a], [b]) => a.localeCompare(b));
+  const mark = (w: (typeof wf)[number][1]) => (w.failure === 0 ? "OK" : w.failure > w.success ? "NG" : "注意");
+  const lines = [
+    "# Pipeline status",
+    "",
+    `最終確認: ${health.generatedAt}（UTC）／ 今日（JST）: ${health.todayJst}`,
+    "",
+    f.length === 0 ? "**異常なし**" : `**要確認 ${f.length} 件**\n${f.map((x) => `- ${x}`).join("\n")}`,
+    "",
+    "## データ",
+    "",
+    `- 更新: ${items.length} 件（最新の作成日 ${latestCreated ?? "-"}）`,
+    `- 日本語要約: ${summaries} 件済み／ 未生成 ${missingSummary} 件`,
+    `- スライド: ${slides} 枚（直近 3 か月の対象 ${inWindow} 件）`,
+    `- 公開サイト: 一覧 ${itemsIdx.status} ／ API ${apiIdx.status} ／ スライド索引 ${slidesIdx.status} ／ サンプル PDF ${sample.status}`,
+    "",
+    "## ワークフロー（過去 14 日）",
+    "",
+    "| 状態 | ワークフロー | 成功 | 失敗 | 取消 | 実行中 | 最終成功（UTC） |",
+    "| --- | --- | ---: | ---: | ---: | ---: | --- |",
+    ...wf.map(([n, w]) => `| ${mark(w)} | ${n} | ${w.success} | ${w.failure} | ${w.cancelled} | ${w.running} | ${w.lastSuccess?.slice(0, 16).replace("T", " ") ?? "-"} |`),
+    "",
+    `## 開いている PR（${openPrs.length} 件）`,
+    "",
+    ...(openPrs.length ? openPrs.slice(0, 15).map((p) => `- #${p.number} ${p.title}（${p.ageDays} 日）`) : ["なし"]),
+    "",
+    "<sub>このコメントは `npm run health` の結果から毎日自動で更新されます（AI なし）。</sub>",
+  ];
+  mkdirSync(statusOut.replace(/[\\/][^\\/]+$/, ""), { recursive: true });
+  writeFileSync(statusOut, lines.join("\n") + "\n", "utf8");
+  console.log(`status -> ${statusOut}`);
+}
