@@ -1,0 +1,183 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570095"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T21:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "570095",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "AKS の Artifact Streaming が一般提供（GA）に",
+        "subtitleJa": "ACR のイメージをストリーミングして、ポッドの起動とスケールを高速化",
+        "en": "Generally Available: Artifact Streaming on AKS"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "July" }],
+        "status": "Launched",
+        "products": ["Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "containers"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "ACR（Premium）と連携した **AKS で大きなイメージを使う方**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming", "locator": "前提条件 / 制限事項", "retrievedAt": "2026-10-18T21:40:00Z" }] },
+        "change": { "text": "イメージのプル完了を待たずにワークロードをスケールできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "起動の遅さが課題なら検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "標準の起動では、ワークロード開始前にすべてのイメージ レイヤーをダウンロードする",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "アーティファクト ストリーミングのしくみ", "retrievedAt": "2026-10-18T21:40:00Z" }]
+        },
+        "after": {
+          "text": "最初のポッドの起動に必要なレイヤーのみ取得し、残りは必要に応じて後で取得する",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "アーティファクト ストリーミングのしくみ", "retrievedAt": "2026-10-18T21:40:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "イメージ レイヤーを OverlayBD で仮想ブロック デバイスに変換",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "アーティファクト ストリーミングのしくみ", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            },
+            {
+              "text": "起動時・実行時にアクセスされるブロックだけを取得",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "アーティファクト ストリーミングのしくみ", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            },
+            {
+              "text": "タグ指定のプルをストリーミング版イメージに解決して動作",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "Note", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure CLI）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ACR（Premium）で az acr artifact-streaming create を実行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming", "locator": "ACR で成果物ストリーミングを有効にする", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            },
+            {
+              "text": "ノード プールで az aks nodepool add / update に --enable-artifact-streaming",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming", "locator": "AKS で成果物ストリーミングを有効にする", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            },
+            {
+              "text": "az aks nodepool show の artifactStreamingProfile で状態を確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming", "locator": "有効化の状態を確認する", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Premium SKU の ACR を AKS と統合、Kubernetes 1.25 以降、Azure CLI 2.87.0 以降",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming", "locator": "前提条件 / 制限事項", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            },
+            {
+              "text": "Linux AMD64 のみ。Windows / ARM64 / CMK レジストリは非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming", "locator": "制限事項", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "標準のプルとの違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "標準: 全レイヤーを取得後に起動 / Artifact Streaming: 必要なレイヤーのみで起動",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "アーティファクト ストリーミングのしくみ", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            },
+            {
+              "text": "元のイメージとストリーミング版の両方を ACR に保持できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "Considerations", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "大きなイメージや、複数ポッドのスケール時の起動遅延を減らす",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "利点とユース ケース", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            },
+            {
+              "text": "起動時に多くのファイルを読む読み取り負荷の高いイメージは効果が出ない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "Considerations", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aks", "term": "AKS", "type": "product", "oneLine": { "text": "Azure 上でマネージドな Kubernetes クラスターを実行するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "冒頭", "retrievedAt": "2026-10-18T21:40:00Z" }] } },
+        { "termKey": "acr", "term": "ACR", "type": "product", "oneLine": { "text": "コンテナー イメージを保存する Azure Container Registry。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "冒頭", "retrievedAt": "2026-10-18T21:40:00Z" }] } },
+        { "termKey": "artifact-streaming", "term": "Artifact Streaming", "type": "feature", "oneLine": { "text": "ACR から AKS へイメージをストリーミングし、起動に必要なレイヤーのみ取得する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "冒頭", "retrievedAt": "2026-10-18T21:40:00Z" }] } },
+        { "termKey": "overlaybd", "term": "OverlayBD", "type": "term", "oneLine": { "text": "コンテナー イメージ レイヤーを仮想ブロック デバイスに変換する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "アーティファクト ストリーミングのしくみ", "retrievedAt": "2026-10-18T21:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T21:40:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "AKS は全リージョンで提供される基盤サービス。機能固有のリージョン制限は示されていない",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-18T21:40:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570095",
+        "learn": [
+          { "title": "AKS でのアーティファクト ストリーミングの概要", "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locale": "ja-jp" },
+          { "title": "ACR と AKS のアーティファクト ストリーミングでデプロイ時間を短縮する", "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分の環境は対象になりますか？",
+            "a": "Premium SKU の ACR を AKS と統合し、Linux AMD64 イメージをタグで指定してプルする場合が対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming", "locator": "制限事項", "retrievedAt": "2026-10-18T21:40:00Z" }]
+          },
+          {
+            "q": "ダイジェスト指定のイメージでも使えますか？",
+            "a": "使えません。Artifact Streaming はタグ指定のプルのみをサポートします。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "Note", "retrievedAt": "2026-10-18T21:40:00Z" }]
+          },
+          {
+            "q": "有効化した後で無効にできますか？",
+            "a": "--disable-artifact-streaming で無効化できます。無効化後も元のアーティファクトとストリーミング版にアクセスできます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming", "locator": "無効にする" , "retrievedAt": "2026-10-18T21:40:00Z" }, { "url": "https://learn.microsoft.com/ja-jp/azure/aks/artifact-streaming-overview", "locator": "Considerations", "retrievedAt": "2026-10-18T21:40:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
