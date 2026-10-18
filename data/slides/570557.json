@@ -1,0 +1,170 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570557"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T21:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "570557",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Virtual Network Manager の IPAM が US Gov・China の各リージョンで GA",
+        "subtitleJa": "重複しないアドレスの自動割り当てと使用状況の可視化を、追加 5 リージョンで利用可能に",
+        "en": "Generally Available: Azure Virtual Network Manager IPAM in additional Azure regions"
+      },
+      "meta": {
+        "publishedJst": "2026-09-04",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure Virtual Network Manager"],
+        "categories": ["networking", "ops-governance"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "US Gov Virginia / Texas / Arizona、China North 3 / East 3 で **Virtual Network Manager を使う方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "IP アドレス計画と重複防止を、これらのリージョンでも一元管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "対象リージョンで IP 管理を集約したい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "IP アドレス プールを作成し、重複しない CIDR を Azure リソースへ自動割り当て",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-ip-address-management", "locator": "IP アドレス管理 (IPAM) とは", "retrievedAt": "2026-10-18T21:18:00Z" }]
+            },
+            {
+              "text": "Azure Policy 連携で、指定プールからの仮想ネットワーク作成を徹底できる",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            },
+            {
+              "text": "1 つのプールを複数リージョンの仮想ネットワークに関連付け可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-ip-address-management", "locator": "複数のリージョンにわたる IP アドレス空間の管理", "retrievedAt": "2026-10-18T21:18:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ネットワーク マネージャー → [IP アドレス プール] → [作成] で範囲を指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/how-to-manage-ip-addresses-network-manager", "locator": "IP アドレス プールを作成する", "retrievedAt": "2026-10-18T21:18:00Z" }]
+            },
+            {
+              "text": "プールの [割り当て] で仮想ネットワークを関連付け、使用状況を確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/how-to-manage-ip-addresses-network-manager", "locator": "仮想ネットワークを IP アドレス プールに関連付ける", "retrievedAt": "2026-10-18T21:18:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "既存のネットワーク マネージャーが必要。プール管理にはネットワーク共同作成者ロール",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/how-to-manage-ip-addresses-network-manager", "locator": "前提条件", "retrievedAt": "2026-10-18T21:18:00Z" }]
+            },
+            {
+              "text": "プール階層は最大 7 層。1 つの仮想ネットワークに IPv4・IPv6 各 1 プールまで",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [
+                { "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-ip-address-management", "locator": "IP アドレス プールを管理する", "retrievedAt": "2026-10-18T21:18:00Z" },
+                { "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/how-to-manage-ip-addresses-network-manager", "locator": "重複しない CIDR 範囲を持つ仮想ネットワークを作成する", "retrievedAt": "2026-10-18T21:18:00Z" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連機能", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "静的 CIDR: IPAM 未対応のリソースやオンプレミス分の領域をプールで確保",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/how-to-manage-ip-addresses-network-manager", "locator": "プールの静的 CIDR ブロックを作成する", "retrievedAt": "2026-10-18T21:18:00Z" }]
+            },
+            {
+              "text": "アクセス許可の委任: 「IPAM プール ユーザー」ロールで他のユーザーにプール利用を許可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-ip-address-management", "locator": "IPAM のアクセス許可要件", "retrievedAt": "2026-10-18T21:18:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure・オンプレミス・マルチクラウド間でアドレス空間の競合を防ぐ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-ip-address-management", "locator": "冒頭", "retrievedAt": "2026-10-18T21:18:00Z" }]
+            },
+            {
+              "text": "プールの割り当て済み・利用可能なアドレス空間を一覧で確認する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/how-to-manage-ip-addresses-network-manager", "locator": "割り当ての使用状況を確認する", "retrievedAt": "2026-10-18T21:18:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-virtual-network-manager", "term": "Azure Virtual Network Manager", "type": "product",
+          "oneLine": { "text": "サブスクリプションやテナントをまたいで仮想ネットワークをグローバルに管理する一元管理サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/overview", "locator": "冒頭", "retrievedAt": "2026-10-18T21:18:00Z" }] }
+        },
+        {
+          "termKey": "ipam", "term": "IPAM（IP アドレス管理）", "type": "feature",
+          "oneLine": { "text": "IP アドレス プールで仮想ネットワークの IP アドレスを一元管理する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-ip-address-management", "locator": "IP アドレス管理 (IPAM) とは", "retrievedAt": "2026-10-18T21:18:00Z" }] }
+        },
+        {
+          "termKey": "ip-pool", "term": "IP アドレス プール", "type": "term",
+          "oneLine": { "text": "CIDR のグループを入れるコンテナーで、用途ごとの論理的なグループ化に使う。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-ip-address-management", "locator": "IP アドレス プールを管理する", "retrievedAt": "2026-10-18T21:18:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T21:18:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570557",
+        "learn": [
+          { "title": "Azure Virtual Network Manager の IP アドレス管理 (IPAM) とは", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-ip-address-management", "locale": "ja-jp" },
+          { "title": "Azure Virtual Network Manager を使用して IP アドレスを管理する", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/how-to-manage-ip-addresses-network-manager", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "IPAM を使うために必要な前提条件は？",
+            "a": "既存のネットワーク マネージャー インスタンスと、プール管理用のネットワーク共同作成者ロールが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/how-to-manage-ip-addresses-network-manager", "locator": "前提条件", "retrievedAt": "2026-10-18T21:18:00Z" }]
+          },
+          {
+            "q": "他のユーザーにプールを使わせるには？",
+            "a": "「IPAM プール ユーザー」ロールを割り当てます。プールが見えない場合はネットワーク マネージャー読み取りロールも付与します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/how-to-manage-ip-addresses-network-manager", "locator": "アクセス許可を委任する", "retrievedAt": "2026-10-18T21:18:00Z" }]
+          },
+          {
+            "q": "別リージョンのプールを使えますか？",
+            "a": "はい。1 つのプールを複数リージョンの仮想ネットワークに関連付けられ、PowerShell と Azure CLI が対応しています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-ip-address-management", "locator": "複数のリージョンにわたる IP アドレス空間の管理", "retrievedAt": "2026-10-18T21:18:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
