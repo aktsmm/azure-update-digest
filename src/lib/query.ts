@@ -36,12 +36,16 @@ export interface Query {
   mode: QueryMode;
   categories: string[];
   kinds: string[];
-  importance: "all" | "high" | "notable-or-high";
+  /** Selected importance levels; empty = all. */
+  importance: ImportanceLevel[];
   text: string;
   rings: string[];
 }
 
-export const defaultQuery = (period: Period): Query => ({ period, basis: "created", mode: "dated", categories: [], kinds: [], importance: "all", text: "", rings: [] });
+export type ImportanceLevel = "high" | "notable" | "normal";
+export const IMPORTANCE_LEVELS: ImportanceLevel[] = ["high", "notable", "normal"];
+
+export const defaultQuery = (period: Period): Query => ({ period, basis: "created", mode: "dated", categories: [], kinds: [], importance: [], text: "", rings: [] });
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -64,8 +68,7 @@ export function inQueryPeriod(item: DigestItem, q: Query): boolean {
 export function matchesFilters(item: DigestItem, q: Query): boolean {
   if (q.categories.length && !q.categories.some((c) => item.categories.includes(c))) return false;
   if (q.kinds.length && !q.kinds.includes(item.kind)) return false;
-  if (q.importance === "high" && item.importance.level !== "high") return false;
-  if (q.importance === "notable-or-high" && item.importance.level === "normal") return false;
+  if (q.importance.length && !q.importance.includes(item.importance.level)) return false;
   const t = q.text.trim().toLowerCase();
   if (t) {
     const hay = [item.title, item.titleJa ?? "", item.summary.text ?? "", item.products.join(" "), item.tags.join(" "), item.productCategories.join(" ")].join("\n").toLowerCase();
