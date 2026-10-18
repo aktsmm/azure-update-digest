@@ -1,0 +1,102 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571056"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T20:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "571056",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure SQL の論理サーバーにソフト削除（プレビュー）",
+        "subtitleJa": "誤って削除したサーバーを、保持期間内なら自分で復元できます",
+        "en": "Public Preview: Azure SQL updates for mid-September 2026 "
+      },
+      "meta": {
+        "publishedJst": "2026-09-17",
+        "modifiedJst": "2026-09-17",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Azure SQL Database の**論理サーバーを運用・削除する管理者**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/deleted-logical-server-restore", "locator": "概要", "retrievedAt": "2026-10-18T20:18:00Z" }] },
+        "change": { "text": "誤削除しても、Microsoft サポートに連絡せず自分で復元できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "2 年未満のサーバーは既定で無効。必要なら保持期間（1〜7 日）を設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/deleted-logical-server-restore", "locator": "Important / ソフト削除の保持期間を設定する", "retrievedAt": "2026-10-18T20:18:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "削除した論理サーバーが保持期間中ソフト削除状態になり、自分で復元できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "保持期間は 0〜7 日。0 日で無効。Azure ポータル・PowerShell・Azure CLI で構成・復元", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/deleted-logical-server-restore", "locator": "ソフト削除の保持期間を設定する", "retrievedAt": "2026-10-18T20:18:00Z" }] },
+            { "text": "2 年以上前のサーバーは 7 日に自動設定。2 年未満は既定で無効", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/deleted-logical-server-restore", "locator": "Important", "retrievedAt": "2026-10-18T20:18:00Z" }] },
+            { "text": "必要な権限は SQL Server 共同作成者ロール", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/deleted-logical-server-restore", "locator": "アクセス許可", "retrievedAt": "2026-10-18T20:18:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "復元後に再構成が必要: フェールオーバー グループ、ファイアウォール規則、プライベート エンドポイントなど", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/deleted-logical-server-restore", "locator": "削除されたサーバーを復元した後のアクション", "retrievedAt": "2026-10-18T20:18:00Z" }] },
+            { "text": "Microsoft Entra 専用認証の組み込みポリシー適用中は復元不可。CMK 暗号化は再構成が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/deleted-logical-server-restore", "locator": "制限事項", "retrievedAt": "2026-10-18T20:18:00Z" }] },
+            { "text": "サーバー削除でユーザー データベースも削除される。復元後にデータベースの復元が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/deleted-logical-server-restore", "locator": "概要", "retrievedAt": "2026-10-18T20:18:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "誤削除の対策として、検証環境で保持期間の設定と復元手順を試し、復元後の再構成項目を洗い出す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "Azure 上で提供される SQL のデータベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/logical-servers", "locator": "概要", "retrievedAt": "2026-10-18T20:18:00Z" }] } },
+        { "termKey": "logical-server", "term": "論理サーバー", "type": "term", "oneLine": { "text": "データベースの集合を管理する中央管理ポイント。ポータルでは「SQL Server」と表示される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/logical-servers", "locator": "概要", "retrievedAt": "2026-10-18T20:18:00Z" }] } },
+        { "termKey": "soft-delete", "term": "ソフト削除", "type": "feature", "oneLine": { "text": "削除後すぐ完全削除せず、保持期間中は削除済み状態で残して復元できるようにする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/deleted-logical-server-restore", "locator": "概要", "retrievedAt": "2026-10-18T20:18:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "全 Azure ユーザーが GA 前に評価とフィードバックを行える段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-18T20:18:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571056",
+        "learn": [
+          { "title": "Azure SQL Databaseで削除された論理サーバーを復元する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/deleted-logical-server-restore", "locale": "ja-jp" },
+          { "title": "Azure SQL Databaseの論理サーバーとは", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/logical-servers", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分の論理サーバーも既に保護されますか？",
+            "a": "2 年以上前のサーバーは保持期間 7 日に自動設定され、2 年未満は既定で無効です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/deleted-logical-server-restore", "locator": "Important", "retrievedAt": "2026-10-18T20:18:00Z" }]
+          },
+          {
+            "q": "どうやって設定・復元しますか？",
+            "a": "ポータル、PowerShell、Azure CLI で可能です。PowerShell は Az 15.4.0 以降、CLI は 2.84.0 以降が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/deleted-logical-server-restore", "locator": "前提条件", "retrievedAt": "2026-10-18T20:18:00Z" }]
+          },
+          {
+            "q": "復元すれば元通りに使えますか？",
+            "a": "名前と構成は復元されますが、ファイアウォール規則や CMK 暗号化などは再構成が必要で、データベースも別途復元します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/deleted-logical-server-restore", "locator": "削除されたサーバーを復元した後のアクション", "retrievedAt": "2026-10-18T20:18:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
