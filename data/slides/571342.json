@@ -1,0 +1,100 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571342"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T20:12:16Z"
+  },
+  "slides": [
+    {
+      "key": "571342",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "コンテナー化 SAP データコネクタのイメージが 2026-10-14 に削除",
+        "subtitleJa": "サポート終了済み。新規取得・再デプロイ・スケールができなくなるため、agentless コネクタへ移行",
+        "en": "Retirement Update: SAP container images removed October 14, 2026"
+      },
+      "meta": {
+        "publishedJst": "2026-09-17",
+        "availability": [{ "rawRing": "Retirement", "year": 2026, "month": "October" }],
+        "status": null,
+        "products": [],
+        "categories": ["containers"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Sentinel で**コンテナー化された SAP エージェント**を使っている方", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "冒頭", "retrievedAt": "2026-10-18T20:12:00Z" }] },
+        "change": { "text": "2026-09-14 に廃止済み。2026-10-14 からコンテナー イメージが削除され、新規取得や再デプロイなどができない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "冒頭", "retrievedAt": "2026-10-18T20:12:00Z" }] },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "サポート対象の SAP agentless データ コネクタへ移行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "冒頭", "retrievedAt": "2026-10-18T20:12:00Z" }] }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-09-17", "precision": "day" } },
+        { "label": "コネクタ廃止", "when": { "date": "2026-09-14", "precision": "day" } },
+        { "label": "イメージ削除", "when": { "date": "2026-10-14", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "イメージ削除後は、取得・インストール・再デプロイ・スケーリング・置換・災害復旧ができない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "冒頭", "retrievedAt": "2026-10-18T20:12:00Z" }] },
+            { "text": "TLS 準拠の既存エージェントは、廃止済みの HTTP Data Collector API 経由でログ送信を続ける可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "冒頭", "retrievedAt": "2026-10-18T20:12:00Z" }] },
+            { "text": "agentless データ コネクタを利用中の場合は影響を受けない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "冒頭", "retrievedAt": "2026-10-18T20:12:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "SAP agentless データ コネクタ（SAP Integration Suite と SAP Cloud Connector ベース）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "エージェントレス データ コネクタに移行する理由", "retrievedAt": "2026-10-18T20:12:00Z" }] },
+            { "text": "既存の分析ルール・ブック・プレイブックは agentless でも利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "エージェントレス データ コネクタに移行する理由", "retrievedAt": "2026-10-18T20:12:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "agentless を既存エージェントと並行稼働し、ログ取り込みを検証後にエージェントを停止する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "移行パス", "retrievedAt": "2026-10-18T20:12:00Z" }] },
+            { "text": "必要な SAP ユーザー権限が異なるため、ロールと請求対象の SAP SID を事前に確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "移行パス / 重要・Warning", "retrievedAt": "2026-10-18T20:12:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agentless-sap-connector", "term": "agentless データ コネクタ", "type": "term", "oneLine": { "text": "SAP Integration Suite と SAP Cloud Connector に基づく、コンテナー管理が不要な SAP 向けコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "エージェントレス データ コネクタに移行する理由", "retrievedAt": "2026-10-18T20:12:00Z" }] } },
+        { "termKey": "http-data-collector-api", "term": "HTTP Data Collector API", "type": "term", "oneLine": { "text": "既存の TLS 準拠エージェントがログ送信に使う、すでに廃止された API。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "冒頭", "retrievedAt": "2026-10-18T20:12:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571342",
+        "learn": [
+          { "title": "Microsoft Sentinel agentless SAP data connector への移行", "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "agentless コネクタを使っていれば影響はありますか？",
+            "a": "agentless データ コネクタを利用している場合は影響を受けません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate" }]
+          },
+          {
+            "q": "移行すると料金は変わりますか？",
+            "a": "廃止による価格や課金メーターの変更はありませんが、識別方法が異なるため SAP SID の請求除外設定の確認が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate" }]
+          },
+          {
+            "q": "既存の分析ルールは作り直しが必要ですか？",
+            "a": "既存の分析ルール、ブック、プレイブックは agentless データ コネクタでも機能を維持します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
