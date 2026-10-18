@@ -1,0 +1,162 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570919"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T21:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "570919",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Playwright Workspaces が東日本など 3 リージョンで GA",
+        "subtitleJa": "クラウド ブラウザーで Playwright テストを大規模に並列実行できます",
+        "en": "Generally Available: Playwright Workspaces in Australia East, Japan East, and Switzerland North"
+      },
+      "meta": {
+        "publishedJst": "2026-09-09",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure Load Testing"],
+        "categories": ["devtools"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Playwright で E2E テストを書いている**開発・QA チーム**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "東日本を含む 3 リージョンで、本番利用向けに使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "テスト実行環境の運用負荷を下げたい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "完全管理型のクラウド ホスト ブラウザーで、既存の Playwright テストを並列実行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "ブラウザー インフラを自前で管理せず、複数のブラウザーと OS の組み合わせを検証できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/overview-what-is-microsoft-playwright-workspaces", "locator": "コア機能", "retrievedAt": "2026-10-18T21:08:00Z" }]
+            },
+            { "text": "トレース・動画・スクリーンショットなどのデバッグ成果物を取得できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Azure portal で Playwright Workspaces を作成し、ブラウザー エンドポイントを環境変数に設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/quickstart-run-end-to-end-tests", "locator": "ワークスペースの作成 / ブラウザー エンドポイントを構成する", "retrievedAt": "2026-10-18T21:08:00Z" }]
+            },
+            {
+              "text": "Playwright CLI または VS Code 拡張機能から、サービス構成を指定してテストを実行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/quickstart-run-end-to-end-tests", "locator": "Playwright Workspaces を使用して大規模なテストを実行する", "retrievedAt": "2026-10-18T21:08:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure サブスクリプションと、所有者または共同作成者などのロール、Playwright プロジェクトが必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/quickstart-run-end-to-end-tests", "locator": "前提条件", "retrievedAt": "2026-10-18T21:08:00Z" }]
+            },
+            {
+              "text": "顧客データはワークスペースをデプロイしたリージョンの外に保存・処理されない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/overview-what-is-microsoft-playwright-workspaces", "locator": "リージョン内のデータ レジデンシー", "retrievedAt": "2026-10-18T21:08:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連機能", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Playwright テストランナーのほか、CDP 経由でのクラウド ブラウザー接続や、AI エージェント向けのリモート MCP サーバーも提供",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/overview-what-is-microsoft-playwright-workspaces", "locator": "リモート MCP サーバー / コア機能", "retrievedAt": "2026-10-18T21:08:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "E2E・回帰・クロスブラウザー検証や CI/CD での大規模並列テスト実行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/overview-what-is-microsoft-playwright-workspaces", "locator": "一般的なシナリオ", "retrievedAt": "2026-10-18T21:08:00Z" }]
+            },
+            {
+              "text": "プライベート アプリケーションへの接続もサポートされる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/overview-what-is-microsoft-playwright-workspaces", "locator": "プライベートアプリケーションへの安全なアクセス", "retrievedAt": "2026-10-18T21:08:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "playwright-workspaces", "term": "Playwright Workspaces", "type": "product",
+          "oneLine": { "text": "アプリのテストやブラウザー自動化のための、完全管理型のクラウド ブラウザー プラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/overview-what-is-microsoft-playwright-workspaces", "locator": "冒頭", "retrievedAt": "2026-10-18T21:08:00Z" }] }
+        },
+        {
+          "termKey": "e2e-test", "term": "エンドツーエンド テスト", "type": "term",
+          "oneLine": { "text": "ブラウザーを通じて、アプリケーション全体の動作を最初から最後まで確認するテスト。", "origin": "mrc", "assertion": "inference", "verification": "source-only" }
+        },
+        {
+          "termKey": "entra-id", "term": "Microsoft Entra ID", "type": "product",
+          "oneLine": { "text": "組織の ID を使って、ワークスペースへの認証と認可を行うための ID サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/overview-what-is-microsoft-playwright-workspaces", "locator": "エンタープライズ認証とアクセス制御", "retrievedAt": "2026-10-18T21:08:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T21:08:00Z" }] }
+        }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "提供リージョンに東日本が含まれる（西日本は一覧になし）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/overview-what-is-microsoft-playwright-workspaces", "locator": "地域ごとの提供状況", "retrievedAt": "2026-10-18T21:08:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570919",
+        "learn": [
+          { "title": "クイック スタート: Playwright Workspaces を使用してエンド ツー エンドのテストを大規模に実行する", "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/quickstart-run-end-to-end-tests", "locale": "ja-jp" },
+          { "title": "Playwright ワークスペースとは", "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/overview-what-is-microsoft-playwright-workspaces", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "はい。提供リージョンに東日本が含まれます。一覧に西日本はありません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/overview-what-is-microsoft-playwright-workspaces", "locator": "地域ごとの提供状況", "retrievedAt": "2026-10-18T21:08:00Z" }]
+          },
+          {
+            "q": "利用開始に必要な前提は？",
+            "a": "Azure サブスクリプション、所有者または共同作成者などのロール、Playwright プロジェクト、Azure CLI が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/quickstart-run-end-to-end-tests", "locator": "前提条件", "retrievedAt": "2026-10-18T21:08:00Z" }]
+          },
+          {
+            "q": "データはどこに保存されますか？",
+            "a": "顧客データは、ワークスペースをデプロイしたリージョンの外では保存・処理されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/overview-what-is-microsoft-playwright-workspaces", "locator": "リージョン内のデータ レジデンシー", "retrievedAt": "2026-10-18T21:08:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
