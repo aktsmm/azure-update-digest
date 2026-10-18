@@ -1,0 +1,151 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569700"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T21:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "569700",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Microsoft Marketplace で発注書マッピングが利用可能に",
+        "subtitleJa": "Marketplace を含む Microsoft の請求を発注書（PO）単位で割り当て、消し込みを容易に",
+        "en": "Generally Available: Purchase order mapping available in Microsoft Marketplace"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [
+          { "rawRing": "Preview", "year": 2026, "month": "July" },
+          { "rawRing": "General Availability", "year": 2026, "month": "September" }
+        ],
+        "status": "Launched",
+        "products": [],
+        "categories": ["other"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Marketplace や Azure の支出を発注書ごとに管理したい**経理・調達・課金管理の担当者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "発注書別の補足請求書ビューを取得でき、請求後も支出を再マッピングできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "発注書で支出を管理している場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "発注書を作成しても、請求金額は自動では関連付けられない（マッピングの作成が必要）",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-order-mapping", "locator": "マッピングのしくみ", "retrievedAt": "2026-10-18T21:50:00Z" }]
+        },
+        "after": {
+          "text": "Marketplace を含む請求を発注書に割り当て、発注書別の補足請求書ビューを取得できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "できること", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "スコープは全購入・Microsoft 製品・Marketplace 製品から発行元・製品単位まで",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-order-mapping", "locator": "スコープのマッピング", "retrievedAt": "2026-10-18T21:50:00Z" }]
+            },
+            {
+              "text": "複数のマッピングに一致する場合は、最も具体的なマッピングが優先される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-order-mapping", "locator": "マッピングの優先順位", "retrievedAt": "2026-10-18T21:50:00Z" }]
+            },
+            { "text": "請求後最大 3 か月間は、支出を再マッピングできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "新しいマッピングの既定は将来の料金のみ。過去分は「マッピングの再適用」を使う",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-order-mapping", "locator": "マッピングの作成", "retrievedAt": "2026-10-18T21:50:00Z" }]
+            },
+            {
+              "text": "EA では再マッピングで再請求が行われ、以前の請求書は無効になる場合がある",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-order-mapping", "locator": "マッピングを再適用する", "retrievedAt": "2026-10-18T21:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "ga-timing", "heading": "GA の時期", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "2026 年 7 月にプレビュー、2026 年 9 月に一般提供", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure と Marketplace で発注書を分けるか、発行元・製品単位で分けるかを決めてから設定する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "再適用前に、過去の割り当てや補足ドキュメントへの影響を確認する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-order-mapping", "locator": "マッピングを再適用する", "retrievedAt": "2026-10-18T21:50:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "purchase-order-mapping", "term": "発注書の割り当て", "type": "feature",
+          "oneLine": { "text": "Azure と Marketplace の支出を、追跡・予算作成・請求書調整のために発注書へ関連付ける機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-order-mapping", "locator": "冒頭", "retrievedAt": "2026-10-18T21:50:00Z" }] }
+        },
+        {
+          "termKey": "mapping", "term": "マッピング", "type": "term",
+          "oneLine": { "text": "発注書に関連付ける購入・製品・ソフトウェア会社・支出カテゴリを決める設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-order-mapping", "locator": "冒頭", "retrievedAt": "2026-10-18T21:50:00Z" }] }
+        },
+        {
+          "termKey": "reapply-mapping", "term": "マッピングの再適用", "type": "feature",
+          "oneLine": { "text": "現在のマッピング設定で、以前に請求された料金を再評価する操作。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-order-mapping", "locator": "マッピングを再適用する", "retrievedAt": "2026-10-18T21:50:00Z" }] }
+        },
+        {
+          "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label",
+          "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-18T21:50:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T21:50:00Z" }] }
+        }
+      ],
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "発注書を作るだけで請求は割り当てられますか？",
+            "a": "いいえ。発注書を作成しても自動では関連付けられず、1 つ以上のマッピングを作成して支出を割り当てます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-order-mapping" }]
+          },
+          {
+            "q": "請求済みの料金にも適用できますか？",
+            "a": "「マッピングの再適用」で、直近 3 か月の範囲から日付を選んで適用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-order-mapping" }]
+          },
+          {
+            "q": "再適用すると請求書はどうなりますか？",
+            "a": "EA では再請求が行われ、以前の請求書は無効になります。Microsoft 顧客契約では更新された補足ドキュメントのみ届きます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-order-mapping" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569700",
+        "learn": [{ "title": "クラウド支出を Microsoft Marketplace の発注書にマップする", "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-order-mapping", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
