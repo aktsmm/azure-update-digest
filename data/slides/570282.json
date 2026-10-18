@@ -1,0 +1,151 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570282"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T21:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "570282",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Container Apps が Defender for Cloud のサーバーレス コンテナー体制管理に対応（GA）",
+        "subtitleJa": "Container Apps 環境のリスクを、インベントリ・推奨事項・攻撃パス分析で把握できます",
+        "en": "Generally Available: Microsoft Defender for Cloud support for Azure Container Apps (Serverless Containers Posture)"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "July" }],
+        "status": "Launched",
+        "products": ["Azure Container Apps"],
+        "categories": ["security", "containers"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Container Apps を使い、Defender for Cloud でセキュリティ態勢を管理している方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "Container Apps を含むコンテナー資産の態勢管理を、同じ画面で一元的に行える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Defender CSPM を使っているなら、サーバーレス コンテナーの有効化を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ホストのエージェントが使えない環境で、コントロール プレーンとイメージの情報からリスクを評価する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "サーバーレス コンテナーの体制のしくみ", "retrievedAt": "2026-10-18T21:35:00Z" }]
+            },
+            {
+              "text": "結果はインベントリ、推奨事項、攻撃パス分析に表示される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "主な機能", "retrievedAt": "2026-10-18T21:35:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Defender CSPM プランを有効にし、サーバーレス コンテナー コンポーネントをオンにする",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "要件と可用性", "retrievedAt": "2026-10-18T21:35:00Z" }]
+            },
+            {
+              "text": "初回の反映には最大 24 時間かかる場合がある",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "サーバーレス コンテナーの体制のしくみ", "retrievedAt": "2026-10-18T21:35:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Defender CSPM が必須。結果の閲覧はセキュリティ閲覧者、設定変更はセキュリティ管理者",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "要件と可用性", "retrievedAt": "2026-10-18T21:35:00Z" }]
+            },
+            {
+              "text": "商用クラウドのみ。ソブリン クラウドや国内クラウドでは使えない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "要件と可用性", "retrievedAt": "2026-10-18T21:35:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連機能・対象範囲", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Container Apps のほか Azure Container Instances、AWS Fargate 上の ECS も対象",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "Note", "retrievedAt": "2026-10-18T21:35:00Z" }]
+            },
+            {
+              "text": "クラウド セキュリティ エクスプローラーでカスタム クエリも作成できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "クラウド セキュリティ エクスプローラー", "retrievedAt": "2026-10-18T21:35:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "公開されているワークロードを見つけ、重要な問題から優先して対処する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "冒頭", "retrievedAt": "2026-10-18T21:35:00Z" }]
+            },
+            {
+              "text": "対象は態勢のみ。ランタイムの脅威検出や対応は含まれない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "制限事項", "retrievedAt": "2026-10-18T21:35:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-container-apps", "term": "Azure Container Apps", "type": "product", "oneLine": { "text": "サーバーレス コンテナー プラットフォームの 1 つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "Note", "retrievedAt": "2026-10-18T21:35:00Z" }] } },
+        { "termKey": "defender-cspm", "term": "Defender CSPM", "type": "feature", "oneLine": { "text": "Defender for Cloud のクラウド セキュリティ態勢管理機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "冒頭", "retrievedAt": "2026-10-18T21:35:00Z" }] } },
+        { "termKey": "serverless-containers-posture", "term": "サーバーレス コンテナーの体制", "type": "feature", "oneLine": { "text": "ホスト エージェントが使えないサーバーレス コンテナーのリスクを評価・優先順位付けする機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "冒頭", "retrievedAt": "2026-10-18T21:35:00Z" }] } },
+        { "termKey": "attack-path", "term": "攻撃パス分析", "type": "term", "oneLine": { "text": "リスクの高い関係性や露出経路を示し、修復の優先順位付けに役立つ分析。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "主な機能", "retrievedAt": "2026-10-18T21:35:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T21:35:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570282",
+        "learn": [
+          { "title": "サーバーレス コンテナー ワークロードの検出と体制", "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "利用するための前提条件は何ですか？",
+            "a": "Defender CSPM を有効にする必要があります。レジストリ アクセスを有効にすると、すべての機能を使えます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "要件と可用性" }]
+          },
+          {
+            "q": "有効化してすぐに結果は見えますか？",
+            "a": "初回の反映には最大 24 時間かかる場合があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "サーバーレス コンテナーの体制のしくみ" }]
+          },
+          {
+            "q": "実行時の脅威検出も含まれますか？",
+            "a": "含まれません。この機能は態勢（ポスチャ）のみが対象で、ランタイムの脅威検出や対応は含みません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "制限事項" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
