@@ -1,0 +1,176 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570940"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T20:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "570940",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Functions Flex 従量課金で TLS/SSL 証明書とエンドツーエンド TLS が GA",
+        "subtitleJa": "関数アプリ単位の証明書モデルで、カスタム ドメインや相互 TLS を利用できます",
+        "en": "Generally Available: TLS/SSL certificate and end-to-end TLS encryption support for Azure Functions Flex Consumption"
+      },
+      "meta": {
+        "publishedJst": "2026-09-11",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure Functions"],
+        "categories": ["compute", "security", "containers", "iot"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Flex 従量課金プラン**でカスタム ドメインや証明書認証を使いたい Azure Functions 利用者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "Flex 従量課金でもカスタム ドメイン・クライアント証明書認証・相互 TLS を構成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "証明書を使う要件があれば、新規アプリで検討", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "サイト単位の証明書に関する考慮事項", "retrievedAt": "2026-10-18T20:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "関数アプリごとにプライベート証明書・パブリック証明書を各 3 つまで保持でき、プラットフォームとワーカー間の通信も暗号化できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "サイトスコープ: 証明書は同じ Web スペースで共有されず、各関数アプリに限定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "サイト レベルの証明書を構成する", "retrievedAt": "2026-10-18T20:50:00Z" }]
+            },
+            {
+              "text": "追加方法: .pfx / .cer のアップロード、Key Vault、App Service マネージド証明書",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "サイト レベルの証明書を構成する", "retrievedAt": "2026-10-18T20:50:00Z" }]
+            },
+            {
+              "text": "エンドツーエンド TLS: フロントエンドとワーカー間の通信を暗号化",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "エンドツーエンドのTLS暗号化を設定", "retrievedAt": "2026-10-18T20:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ポータル: 関数アプリ → [設定] → [証明書] → [証明書の持ち込み (.pfx)] → [証明書の追加]",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "プライベート (.pfx) をアップロードする", "retrievedAt": "2026-10-18T20:50:00Z" }]
+            },
+            {
+              "text": "E2E TLS: ARM / Bicep で endToEndEncryptionEnabled を true に設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "エンドツーエンドのTLS暗号化を設定", "retrievedAt": "2026-10-18T20:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "既存アプリに移行手段はなく、新規の Flex 従量課金アプリが必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "サイト単位の証明書に関する考慮事項", "retrievedAt": "2026-10-18T20:50:00Z" }]
+            },
+            {
+              "text": "Azure CLI は未対応。ポータルか ARM / Bicep で管理。Linux 上のためファイル パスから読み込む",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "サイト単位の証明書に関する考慮事項", "retrievedAt": "2026-10-18T20:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "証明書の種類と上限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "プライベート上限の対象: マネージド / App Service / Key Vault / .pfx（最大 3）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "サイト レベルの証明書を構成する", "retrievedAt": "2026-10-18T20:50:00Z" }]
+            },
+            {
+              "text": "パブリック証明書 (.cer) は別枠で最大 3。.pfx は中間・ルートを含める",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "サイト単位の証明書に関する考慮事項", "retrievedAt": "2026-10-18T20:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "カスタム ドメイン、クライアント証明書認証、相互 TLS が必要な関数アプリ",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            },
+            {
+              "text": "既存アプリで必要なら、新規アプリを作成して移す形を検討",
+              "origin": "editorial", "assertion": "recommendation", "verification": "unverified"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-functions", "term": "Azure Functions", "type": "product",
+          "oneLine": { "text": "サーバーレスで関数を実行できる Azure のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-plan", "locator": "冒頭", "retrievedAt": "2026-10-18T20:50:00Z" }] }
+        },
+        {
+          "termKey": "flex-consumption", "term": "Flex 従量課金プラン", "type": "feature",
+          "oneLine": { "text": "Linux ベースで、使用した分だけ支払うサーバーレスのホスティング プラン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-plan", "locator": "冒頭", "retrievedAt": "2026-10-18T20:50:00Z" }] }
+        },
+        {
+          "termKey": "site-scoped-cert", "term": "サイトスコープ証明書", "type": "feature",
+          "oneLine": { "text": "TLS/SSL 証明書を個々の関数アプリに限定して扱うモデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "サイト レベルの証明書を構成する", "retrievedAt": "2026-10-18T20:50:00Z" }] }
+        },
+        {
+          "termKey": "e2e-tls", "term": "エンドツーエンド TLS", "type": "term",
+          "oneLine": { "text": "プラットフォームのフロントエンドとワーカー間の通信を暗号化する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "エンドツーエンドのTLS暗号化を設定", "retrievedAt": "2026-10-18T20:50:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T20:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570940",
+        "learn": [
+          { "title": "Flex 従量課金プランの関数アプリを作成および管理する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locale": "ja-jp" },
+          { "title": "Azure Functions の Flex 従量課金プラン ホスティング", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-plan", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存の Flex 従量課金アプリでも使えますか？",
+            "a": "この機能の提供前に作成された既存アプリには証明書の移行パスがなく、新しい Flex 従量課金の関数アプリを作成する必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "サイト単位の証明書に関する考慮事項", "retrievedAt": "2026-10-18T20:50:00Z" }]
+          },
+          {
+            "q": "証明書はいくつまで登録できますか？",
+            "a": "各アプリで最大 3 つのプライベート証明書と 3 つのパブリック証明書をサポートします。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "サイト単位の証明書に関する考慮事項", "retrievedAt": "2026-10-18T20:50:00Z" }]
+          },
+          {
+            "q": "Azure CLI で証明書を管理できますか？",
+            "a": "現時点では未対応です。Azure ポータルまたは ARM / Bicep テンプレートで管理します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/flex-consumption-how-to", "locator": "サイト単位の証明書に関する考慮事項", "retrievedAt": "2026-10-18T20:50:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
