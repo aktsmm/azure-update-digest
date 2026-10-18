@@ -35,6 +35,19 @@ describe("query", () => {
     expect(r.periodTotal).toBe(3);
     expect(runQuery(kinds, defaultQuery({ start: "2026-03-01", end: "2026-03-31" }), cov).items).toHaveLength(3);
   });
+  it("filters by one or more importance levels (empty = all) and keeps counts consistent", () => {
+    const lv = (l: "high" | "notable" | "normal") => ({ level: l, score: 0, topics: [] as string[] });
+    const set = [item("h", "2026-03-01", { importance: lv("high") }), item("n", "2026-03-02", { importance: lv("notable") }), item("o", "2026-03-03", { importance: lv("normal") })];
+    const p = defaultQuery({ start: "2026-03-01", end: "2026-03-31" });
+    const keys = (importance: ("high" | "notable" | "normal")[]) => runQuery(set, { ...p, importance }, cov).items.map((i) => i.key).sort();
+    expect(keys([])).toEqual(["h", "n", "o"]);
+    expect(keys(["high"])).toEqual(["h"]);
+    expect(keys(["high", "notable"])).toEqual(["h", "n"]);
+    expect(keys(["normal", "high"])).toEqual(["h", "o"]);
+    const r = runQuery(set, { ...p, importance: ["notable"] }, cov);
+    expect(r.periodTotal).toBe(3);
+    expect(Object.values(r.countsByImportance).reduce((a, b) => a + b, 0)).toBe(r.items.length);
+  });
   it("distinguishes not-fetched from zero", () => {
     const r = runQuery(all, defaultQuery({ start: "2025-01-01", end: "2025-01-31" }), cov);
     expect(r.items).toHaveLength(0);

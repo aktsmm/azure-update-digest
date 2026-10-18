@@ -1,5 +1,5 @@
 import { addDays, isValidDateString, monthBounds, resolvePeriod, toJstDate, type Period } from "../lib/period.js";
-import { defaultQuery, runQuery, type DigestItem, type Query, type QueryResult } from "../lib/query.js";
+import { defaultQuery, runQuery, IMPORTANCE_LEVELS, type DigestItem, type ImportanceLevel, type Query, type QueryResult } from "../lib/query.js";
 import type { SiteMeta } from "../lib/site-data.js";
 import type { SlideEntry } from "./pdf-merge.js";
 import { orderSlides } from "../lib/slide-order.js";
@@ -44,9 +44,16 @@ function queryFrom(params: URLSearchParams, forcedPeriod?: Period): Query {
   q.mode = params.get("mode") === "availability" ? "availability" : "dated";
   q.categories = (params.get("cat") ?? "").split(",").filter(Boolean);
   q.kinds = (params.get("kind") ?? "").split(",").filter((k) => (KIND_FILTERS as string[]).includes(k));
-  q.importance = params.get("imp") === "high" ? "high" : params.get("imp") === "notable" ? "notable-or-high" : "all";
+  q.importance = parseImportance(params.get("imp"));
   q.text = params.get("q") ?? "";
   return q;
+}
+
+/** `imp=high,notable` (new) and the old single values `imp=high` / `imp=notable` (= notable or higher). */
+function parseImportance(v: string | null): ImportanceLevel[] {
+  if (!v) return [];
+  if (v === "notable") return ["high", "notable"];
+  return v.split(",").filter((x): x is ImportanceLevel => (IMPORTANCE_LEVELS as string[]).includes(x));
 }
 
 function toParams(q: Query, keepPeriod: boolean): string {
@@ -56,7 +63,7 @@ function toParams(q: Query, keepPeriod: boolean): string {
   if (q.mode === "availability") p.set("mode", "availability");
   if (q.categories.length) p.set("cat", q.categories.join(","));
   if (q.kinds.length) p.set("kind", q.kinds.join(","));
-  if (q.importance !== "all") p.set("imp", q.importance === "high" ? "high" : "notable");
+  if (q.importance.length) p.set("imp", q.importance.join(","));
   if (q.text) p.set("q", q.text);
   return p.toString();
 }
@@ -110,6 +117,7 @@ function card(i: DigestItem, idx = -1): string {
 
 function periodForm(q: Query, fixedMonth: string | null, dl: string): string {
   const chips = meta.categories.map((c) => `<label class="chip"><input type="checkbox" name="cat" value="${esc(c.id)}" ${q.categories.includes(c.id) ? "checked" : ""}>${esc(c.label)}</label>`).join("");
+  const impChips = IMPORTANCE_LEVELS.map((l) => `<label class="chip imp-chip i-${l}"><input type="checkbox" name="imp" value="${l}" ${q.importance.includes(l) ? "checked" : ""}>${esc(impLabel(l))}</label>`).join("");
   const kindChips = KIND_FILTERS.map((k) => `<label class="chip kind-chip k-${k}"><input type="checkbox" name="kind" value="${k}" ${q.kinds.includes(k) ? "checked" : ""}>${esc(KIND_LABEL[k])}</label>`).join("");
   return `<form class="panel" id="f">
     ${fixedMonth ? "" : `<div class="row">
@@ -120,12 +128,12 @@ function periodForm(q: Query, fixedMonth: string | null, dl: string): string {
     </div>`}
     <div class="row" style="margin-top:8px">
       <label>日付の基準 <select name="basis"><option value="created" ${q.basis === "created" ? "selected" : ""}>作成日</option><option value="modified" ${q.basis === "modified" ? "selected" : ""}>更新日</option></select></label>
-      <label>重要度 <select name="imp"><option value="all">すべて</option><option value="notable" ${q.importance === "notable-or-high" ? "selected" : ""}>注目以上</option><option value="high" ${q.importance === "high" ? "selected" : ""}>重要のみ</option></select></label>
       <input type="search" name="q" placeholder="タイトル・要約・製品で検索" value="${esc(q.text)}">
       <button type="button" data-reset title="期間・種類・カテゴリ・検索をすべて初期状態に戻す">条件をリセット</button>
       ${dl}
     </div>
-    <div class="chips" style="margin-top:8px"><span class="chips-label">種類</span>${kindChips}</div>
+    <div class="chips" style="margin-top:8px"><span class="chips-label">重要度</span>${impChips}</div>
+    <div class="chips" style="margin-top:6px"><span class="chips-label">種類</span>${kindChips}</div>
     <div class="chips" style="margin-top:6px"><span class="chips-label">カテゴリ</span>${chips}</div>
   </form>`;
 }
@@ -139,7 +147,7 @@ function bind(q: Query, fixedMonth: string | null, basePath: string) {
   const f = document.getElementById("f") as HTMLFormElement;
   const apply = () => {
     const d = new FormData(f);
-    const nq: Query = { ...q, categories: d.getAll("cat").map(String), kinds: d.getAll("kind").map(String), basis: d.get("basis") === "modified" ? "modified" : "created", importance: d.get("imp") === "high" ? "high" : d.get("imp") === "notable" ? "notable-or-high" : "all", text: String(d.get("q") ?? "") };
+    const nq: Query = { ...q, categories: d.getAll("cat").map(String), kinds: d.getAll("kind").map(String), basis: d.get("basis") === "modified" ? "modified" : "created", importance: d.getAll("imp").map(String).filter((v): v is ImportanceLevel => (IMPORTANCE_LEVELS as string[]).includes(v)), text: String(d.get("q") ?? "") };
     let start = String(d.get("start") ?? q.period.start), end = String(d.get("end") ?? q.period.end);
     const base = String(d.get("base") ?? "");
     if (!fixedMonth && base && isValidDateString(base) && base <= toJstDate(Date.now())) { end = base; start = addDays(base, -29); }
@@ -331,15 +339,16 @@ function hero(): string {
   const run = (days: number) => runQuery(items, defaultQuery({ start: addDays(today, -(days - 1)), end: today }), meta.coverage, meta.snapshotAt);
   const day = run(1), week = run(7);
   const partial = day.coverage.status === "complete" && week.coverage.status === "complete" ? "" : "（一部のみ取得）";
-  return `<section class="hero"><div class="hero-main">
-      <p class="eyebrow">非公式 ・ 日本語ダイジェスト</p>
+  return `<section class="hero compact">
       <h1>Azure の更新情報</h1>
-      <p>公式の更新情報（Microsoft Release Communications）を毎日集め、廃止・セキュリティ・GA・リージョン追加・価格変更といった重要な更新を先頭に、日本語の要約と 1 更新 1 枚のスライド（PDF・PPTX）で届けます。</p>
-      <div class="pills"><span class="pill">最終更新 <strong>${esc(jstStamp(meta.snapshotAt))}</strong>（JST）</span><span class="pill">取得状態 <strong>${meta.backfill.complete ? "全期間 取得済み" : "初期取得中"}</strong></span></div>
-    </div><div class="hero-stats">
-      <div class="stat"><span class="stat-label">追跡中の更新</span><strong>${meta.itemCount}<small> 件</small></strong><span class="meta">スライドあり ${slideEntries.size} 件</span></div>
-      <div class="stat"><span class="stat-label">新着（作成日基準）</span><div class="stat-pair"><div><strong>${day.items.length}<small> 件</small></strong><span class="meta">今日</span></div><div><strong>${week.items.length}<small> 件</small></strong><span class="meta">過去7日</span></div></div>${partial ? `<span class="meta">${esc(partial)}</span>` : ""}</div>
-    </div></section>`;
+      <p>公式の更新情報（Microsoft Release Communications）を毎日集め、重要な更新を先頭に、日本語の要約と 1 更新 1 枚のスライド（PDF・PPTX）で届けます。</p>
+      <div class="pills">
+        <span class="pill">追跡中 <strong>${meta.itemCount}</strong> 件（スライドあり ${slideEntries.size}）</span>
+        <span class="pill">新着 今日 <strong>${day.items.length}</strong> ／ 過去7日 <strong>${week.items.length}</strong>${esc(partial)}</span>
+        <span class="pill">最終更新 <strong>${esc(jstStamp(meta.snapshotAt))}</strong>（JST）</span>
+        <span class="pill">取得状態 <strong>${meta.backfill.complete ? "全期間 取得済み" : "初期取得中"}</strong></span>
+      </div>
+    </section>`;
 }
 
 function renderList(q: Query, heading: string, fixedMonth: string | null, basePath: string) {
@@ -350,7 +359,7 @@ function renderList(q: Query, heading: string, fixedMonth: string | null, basePa
     ? `<div class="empty">${r.coverage.status === "complete" ? "条件に一致する更新はありません。" : "取得範囲外・一部取得のため、0件とは断定できません。取得状態を確認してください。"}</div>` : "";
   const hl = q.mode === "dated" && r.highlights.length ? `<h2>重要更新（${r.highlights.length}件）</h2>${r.highlights.map((i, n) => card(i, n)).join("")}` : "";
   const note = q.mode === "availability" ? "<p class='meta'>提供時期は公式の月単位表記のまま表示しています（日付への換算はしていません）。</p>" : "";
-  app.innerHTML = `${basePath === "/" ? `${hero()}<h2>${esc(heading)}</h2>` : `<h1>${esc(heading)}</h1>`}
+  app.innerHTML = `${basePath === "/" ? `${hero()}` : `<h1>${esc(heading)}</h1>`}
     <p><strong>${esc(q.period.start)} 〜 ${esc(q.period.end)}</strong>（JST・${basisLabel}）: <strong>${r.items.length} 件</strong> ${filtered}</p>
     ${coverageBanner(r)}${backfillPanel()}${periodForm(q, fixedMonth, downloadBar(r, q))}${note}${hl}
     <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${r.items.map((i, n) => card(i, n)).join("")}${empty}`;
