@@ -1,0 +1,131 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569804"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T21:21:26Z"
+  },
+  "slides": [
+    {
+      "key": "569804",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Front Door WAF がプロファイル／ルート単位のポリシーに対応",
+        "subtitleJa": "共通のベースラインに加え、サインインなど特定のパスだけ別ポリシーを適用（パブリック プレビュー）",
+        "en": "Public Preview: Azure Front Door profile and route level WAF policies"
+      },
+      "meta": {
+        "publishedJst": "2026-09-03",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure Front Door", "Web Application Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "複数のドメインやルートを持つ **Azure Front Door の WAF 利用者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ポリシーの重複を減らしつつ、必要な箇所だけ細かく制御できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "本番利用の前にプレビューの位置付けを確認し、検証から始める",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-19T00:00:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "Front Door で配信する Web アプリには、一度に 1 つの WAF ポリシーだけを関連付けられた",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/afds-overview", "locator": "WAF のポリシーと規則", "retrievedAt": "2026-10-19T00:00:00Z" }]
+        },
+        "after": {
+          "text": "プロファイル、ドメイン、ルートの各スコープで WAF ポリシーを関連付けられる。共通の保護と個別の制御を使い分けられる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "関連付けできるスコープ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プロファイル: プロファイル全体に共有のベースライン ポリシーを適用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/afds-overview", "locator": "ポリシーの添付範囲", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "ドメイン: プロファイル内の特定ドメインにポリシー設定を適用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/afds-overview", "locator": "ポリシーの添付範囲", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "ルート: 選択したルートに最も具体的なポリシーを適用（例: サインイン、API）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/afds-overview", "locator": "ポリシーの添付範囲", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "優先順位・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "複数スコープが該当する場合は最も具体的なものが優先: ルート → ドメイン → プロファイル", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/afds-overview", "locator": "ポリシーの優先順位", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "パブリック プレビューは通常 SLA がなく、原則として本番ワークロード向けではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure portal で Front Door の WAF ポリシーを作成または更新し、デプロイに合う関連付けスコープを選ぶ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "使い分けの目安", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "まずプロファイル レベルのベースラインから始め、異なる保護が必要な場合のみドメイン／ルート レベルを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/afds-overview", "locator": "Tip", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "サインインや API など保護を変えたいパスを洗い出し、検証環境で優先順位の挙動を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-front-door", "term": "Azure Front Door", "type": "product", "oneLine": { "text": "受信要求を世界中の Azure ネットワーク エッジで受け付ける配信サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/afds-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "waf", "term": "WAF", "type": "feature", "oneLine": { "text": "Web アプリケーションを一般的な悪用や脆弱性から守る仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/afds-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "waf-policy", "term": "WAF ポリシー", "type": "term", "oneLine": { "text": "カスタム ルールとマネージド規則セットで構成される保護の設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/afds-overview", "locator": "WAF のポリシーと規則", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "policy-scope", "term": "ポリシーの添付範囲", "type": "term", "oneLine": { "text": "WAF ポリシーを適用する単位で、プロファイル・ドメイン・ルートがある。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/afds-overview", "locator": "ポリシーの添付範囲", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-19T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Front Door はグローバル サービスで、特定のリージョンにデプロイしない",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "List of nonregional services", "retrievedAt": "2026-10-19T00:00:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "複数のスコープが重なった場合はどのポリシーが使われますか？",
+            "a": "最も具体的なスコープが使われます。ルート レベル、ドメイン レベル、プロファイル レベルの順に優先されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/afds-overview", "locator": "ポリシーの優先順位", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          },
+          {
+            "q": "どのスコープから使い始めるのがよいですか？",
+            "a": "まずプロファイル レベルのベースライン ポリシーから始め、異なる保護が必要な場合にドメインやルート レベルを追加します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/afds-overview", "locator": "Tip", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          },
+          {
+            "q": "プレビュー中の機能は本番で使えますか？",
+            "a": "パブリック プレビューは通常 SLA がなく、明示されない限り本番ワークロード向けではありません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569804",
+        "learn": [
+          { "title": "Azure Front Door 上の Azure Web アプリケーション ファイアウォール", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/afds-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
