@@ -1,0 +1,131 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["576556"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T20:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "576556",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Databricks の Private network gateway がパブリック プレビュー",
+        "subtitleJa": "サーバーレスから VNet 内のリソースへ、単一のマネージド ゲートウェイ経由で接続",
+        "en": "Public Preview: Azure Databricks Private network gateway"
+      },
+      "meta": {
+        "publishedJst": "2026-10-17",
+        "modifiedJst": "2026-10-17",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "October" }],
+        "status": "In preview",
+        "products": ["Azure Databricks"],
+        "categories": ["databases", "ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Azure Databricks のサーバーレス コンピュート**から、VNet やオンプレミスのリソースへ接続したい方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "リソースごとの設定なしで接続でき、送信を自社ファイアウォール経由・固定 IP にできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビュー段階。必要に応じて検証環境で評価", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "1 つの委任サブネットのゲートウェイ経由で、VNet とトランジット接続されたネットワークの複数リソースへサーバーレスから接続できる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "冒頭 / Overview", "retrievedAt": "2026-10-18T20:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "VNet と ExpressRoute / VPN 経由のオンプレミス等へ接続できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "冒頭 / Overview", "retrievedAt": "2026-10-18T20:00:00Z" }] },
+            { "text": "サーバーレスの送信を自社ファイアウォール経由にでき、送信元 IP も固定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "Overview", "retrievedAt": "2026-10-18T20:00:00Z" }] },
+            { "text": "既存の NCC を再利用し、Private Link を置き換えず補完する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "どのように機能するのか", "retrievedAt": "2026-10-18T20:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プレミアム プランが必要。請求は 2026 年 12 月 1 日以降に開始", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "Note", "retrievedAt": "2026-10-18T20:00:00Z" }] },
+            { "text": "ゲートウェイとサブネットは NCC と同じリージョンに置く必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "Limitations", "retrievedAt": "2026-10-18T20:00:00Z" }] },
+            { "text": "Blob Storage は常にサービス エンドポイント経由で、上書き不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "どのように機能するのか", "retrievedAt": "2026-10-18T20:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "limits", "heading": "上限・構成", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "帯域幅は 10 / 30 / 50 / 100 Gbps（コンソールの初期値は 30 Gbps）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "Limitations", "retrievedAt": "2026-10-18T20:00:00Z" }] },
+            { "text": "1 つの NCC につきゲートウェイは最大 2 つ、宛先は最大 100 件", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "Limitations", "retrievedAt": "2026-10-18T20:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "compare", "heading": "Private Link との使い分け", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "特定のクラウド管理リソースへは Private Link のプライベート エンドポイント ルールを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "冒頭", "retrievedAt": "2026-10-18T20:00:00Z" }] },
+            { "text": "VNet 内リソースや自社ファイアウォール経由の送信にはゲートウェイを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "冒頭", "retrievedAt": "2026-10-18T20:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "固定 IP や自社ファイアウォール経由が必要か確認し、まず検証環境で挙動と課金開始時期を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-databricks", "term": "Azure Databricks", "type": "product", "oneLine": { "text": "Azure 上で提供される Databricks のデータ分析・AI プラットフォーム。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "serverless-compute", "term": "サーバーレス コンピュート", "type": "term", "oneLine": { "text": "Azure Databricks が管理する環境で実行されるコンピュート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "冒頭", "retrievedAt": "2026-10-18T20:00:00Z" }] } },
+        { "termKey": "ncc", "term": "NCC（ネットワーク接続設定）", "type": "term", "oneLine": { "text": "サーバーレス ネットワークを管理する、アカウント レベルのオブジェクト。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "どのように機能するのか", "retrievedAt": "2026-10-18T20:00:00Z" }] } },
+        { "termKey": "private-link", "term": "Azure Private Link", "type": "product", "oneLine": { "text": "特定のクラウド管理リソースへ直接かつプライベートに接続する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "冒頭", "retrievedAt": "2026-10-18T20:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-18T20:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビュー期間中の提供リージョン一覧に japaneast が含まれる（japanwest は一覧になし）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway/configure-private-network-gateway", "locator": "Requirements", "retrievedAt": "2026-10-18T20:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=576556",
+        "learn": [
+          { "title": "プライベートネットワークゲートウェイ", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locale": "ja-jp" },
+          { "title": "プライベートネットワークゲートウェイの設定", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway/configure-private-network-gateway", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "プレビュー期間中の提供リージョン一覧に japaneast が含まれます。japanwest は一覧に含まれていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway/configure-private-network-gateway", "locator": "Requirements", "retrievedAt": "2026-10-18T20:00:00Z" }]
+          },
+          {
+            "q": "費用や前提条件は？",
+            "a": "プレミアム プランが必要で、請求は 2026 年 12 月 1 日以降に開始されます。/28 以上の専用サブネットも必要です。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "Note", "retrievedAt": "2026-10-18T20:00:00Z" },
+              { "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway/configure-private-network-gateway", "locator": "Requirements", "retrievedAt": "2026-10-18T20:00:00Z" }
+            ]
+          },
+          {
+            "q": "Private Link は不要になりますか？",
+            "a": "いいえ。ゲートウェイは Private Link を補完するもので、置き換えません。特定のリソースにはプライベート エンドポイント ルールが優先されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/network/serverless-network-security/private-network-gateway", "locator": "冒頭 / どのように機能するのか", "retrievedAt": "2026-10-18T20:00:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
