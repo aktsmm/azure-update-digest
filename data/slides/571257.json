@@ -1,0 +1,109 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571257"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-19T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "571257",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "AKS の OS Guard 搭載 Azure Linux が 2026-12-10 にサポート終了",
+        "subtitleJa": "新規ノード プール作成不可・パッチ停止。2027-03-10 にイメージ削除。Azure Container Linux へ",
+        "en": "Retirement: Azure Linux with OS Guard in Azure Kubernetes Service"
+      },
+      "meta": {
+        "publishedJst": "2026-09-12",
+        "availability": [{ "rawRing": "Retirement", "year": 2026, "month": "December" }],
+        "status": null,
+        "products": ["Azure Kubernetes Service"],
+        "categories": ["containers"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "AKS で OS Guard 搭載 Azure Linux（プレビュー）のノード プールを使っている**AKS 利用者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "2026-12-10 以降は新規ノード プールを作成できず、新しいノード イメージもセキュリティ パッチも提供されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "期限までに Azure Container Linux のノード プールへ移行する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2026-12-10", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-09-12", "precision": "day" } },
+        { "label": "サポート終了", "when": { "date": "2026-12-10", "precision": "day" } },
+        { "label": "イメージ削除", "when": { "date": "2027-03-10", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "2026-12-10 以降、新規ノード プール作成・新イメージ・セキュリティ パッチが止まる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/os-guard-overview", "locator": "冒頭の Important", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "2027-03-10 にイメージが削除され、スケールや再イメージ化・再デプロイが失敗する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/os-guard-overview", "locator": "冒頭の Important", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "後継は Azure Container Linux（AKS 1.34 以降で GA）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/azure-container-linux-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "既存ノード プールのインプレース移行、または新規プール作成後に旧プール削除", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "OS Guard のノード プールを棚卸しし、移行とワークロード検証の期間を期限から逆算して計画する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aks", "term": "Azure Kubernetes Service (AKS)", "type": "product", "oneLine": { "text": "Azure 上でマネージドの Kubernetes クラスターを実行するサービス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "os-guard", "term": "OS Guard 搭載 Azure Linux", "type": "feature", "oneLine": { "text": "AKS のコンテナー ホスト向けに、改ざん防止とランタイム整合性を強化した Azure Linux の不変バリアント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/os-guard-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "acl", "term": "Azure Container Linux (ACL)", "type": "feature", "oneLine": { "text": "AKS 向けの不変でコンテナー最適化された OS。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/azure-container-linux-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "node-pool", "term": "ノード プール", "type": "term", "oneLine": { "text": "AKS クラスター内で同じ構成のノードをまとめたグループ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "AKS における OS Guard 搭載 Azure Linux のサポート終了（全体に適用）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/os-guard-overview", "locator": "冒頭の Important", "retrievedAt": "2026-10-19T00:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571257",
+        "learn": [
+          { "title": "AKS 向け Azure Container Linux (ACL) とは何ですか?", "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/azure-container-linux-overview", "locale": "ja-jp" },
+          { "title": "AKS 向け OS Guard 搭載 Azure Linux (プレビュー) とは何ですか?", "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/os-guard-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "2027-03-10 以降はどうなりますか？",
+            "a": "OS Guard のノード イメージが削除され、対象ノード プールのスケールと再イメージ化・再デプロイが失敗します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/os-guard-overview", "locator": "冒頭の Important", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          },
+          {
+            "q": "どう移行すればよいですか？",
+            "a": "既存プールの ACL へのインプレース移行、または新しい ACL ノード プールを作成し、検証後に旧プールを削除します。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=571257" }, { "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/azure-container-linux-overview", "locator": "ACL を使用した OS の移行とアップグレード", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          },
+          {
+            "q": "ACL に前提条件や非対応機能はありますか？",
+            "a": "AKS 1.34 以降で GA です。第 1 世代 VM、Pod サンドボックス化、SecurityPatch / Unmanaged のアップグレード チャネルは非対応です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/azure-container-linux-overview", "locator": "サポートされていない機能", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
