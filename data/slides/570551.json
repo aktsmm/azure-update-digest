@@ -1,0 +1,168 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570551"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T21:05:00Z"
+  },
+  "slides": [
+    {
+      "key": "570551",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "エフェメラル OS ディスクのフル キャッシュが GA に",
+        "subtitleJa": "OS イメージ全体をローカルにキャッシュし、リモート ストレージへの依存をなくします（新規 VM / VMSS）",
+        "en": "Generally Available: Azure Ephemeral OS Disk with full caching for VM/VMSS"
+      },
+      "meta": {
+        "publishedJst": "2026-09-10",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Virtual Machines"],
+        "categories": ["compute"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "I/O 負荷の高い**ステートレス ワークロードを VM / VMSS で動かす方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "OS ディスクの I/O 性能と、ストレージ障害時の耐障害性が高まる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "I/O 性能や耐障害性を重視する新規 VM で検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "既存のエフェメラル VM は部分キャッシュ モードで作成され、ベース ディスクは元のファイルの読み取りを行う",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "キャッシュ モード", "retrievedAt": "2026-10-18T21:05:00Z" }]
+        },
+        "after": {
+          "text": "OS ディスク全体をローカルにキャッシュし、キャッシュ完了後はリモート ストレージの読み取りが不要になる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "VM 起動後にバックグラウンドで OS ディスクをキャッシュ。VM の作成時間には影響しない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "エフェメラル OS ディスクの完全キャッシュ モード", "retrievedAt": "2026-10-18T21:05:00Z" }]
+            },
+            {
+              "text": "ストレージの中断中も OS ディスクを引き続き使用できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "エフェメラル OS ディスクの完全キャッシュ モード", "retrievedAt": "2026-10-18T21:05:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "テンプレートまたは REST API の diffDiskSettings で enableFullCaching を true に設定する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "完全キャッシュを有効にする方法", "retrievedAt": "2026-10-18T21:05:00Z" }]
+            },
+            {
+              "text": "Azure CLI でも有効化できる",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "vCPU 8 以上の対応 VM シリーズ、API バージョン 2025-04-01 以降、OS ディスクはステートレス",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "完全キャッシュの前提条件", "retrievedAt": "2026-10-18T21:05:00Z" }]
+            },
+            {
+              "text": "ローカル ストレージが OS ディスク サイズの 2 倍分減る（必要容量は 2 × OS ディスク + 1 GiB）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "サイズの要件", "retrievedAt": "2026-10-18T21:05:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "部分キャッシュ（既定）: 差分ディスクとベース ディスクで分割し、性能と効率のバランスを取る",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "キャッシュ モード", "retrievedAt": "2026-10-18T21:05:00Z" }]
+            },
+            {
+              "text": "永続 OS ディスク: 書き込みデータは Azure Storage に保存される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "永続 OS ディスクとエフェメラル OS ディスクの違い", "retrievedAt": "2026-10-18T21:05:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "AI トレーニング / 推論、クォーラム ベースのデータベース、リアルタイム処理に適する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "キャッシュ モード", "retrievedAt": "2026-10-18T21:05:00Z" }]
+            },
+            {
+              "text": "フル キャッシュに対する追加料金はない（通常の VM とディスクのコストのみ）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "完全キャッシュを有効にする方法（注記）", "retrievedAt": "2026-10-18T21:05:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "virtual-machines", "term": "Virtual Machines", "type": "product", "oneLine": { "text": "Azure 上で仮想マシン（VM）を作成・実行するサービス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "ephemeral-os-disk", "term": "エフェメラル OS ディスク", "type": "feature", "oneLine": { "text": "リモートの Azure Storage ではなく、VM のローカル ストレージに作成される OS ディスク。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "冒頭", "retrievedAt": "2026-10-18T21:05:00Z" }] } },
+        { "termKey": "full-caching", "term": "フル キャッシュ", "type": "feature", "oneLine": { "text": "ローカル ストレージ上に OS ディスク全体をキャッシュするモード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "キャッシュ モード", "retrievedAt": "2026-10-18T21:05:00Z" }] } },
+        { "termKey": "stateless", "term": "ステートレス ワークロード", "type": "term", "oneLine": { "text": "個々の VM 障害を許容できるアプリケーション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "冒頭", "retrievedAt": "2026-10-18T21:05:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T21:05:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "対応 VM サイズ（vCPU 8 以上）で、すべての Azure パブリック リージョンで一般提供",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "完全キャッシュを有効にする方法（注記）", "retrievedAt": "2026-10-18T21:05:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570551",
+        "learn": [
+          { "title": "Azure VM のエフェメラル OS ディスク", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "フル キャッシュは、対応 VM サイズ（vCPU 8 以上）に対し、すべての Azure パブリック リージョンで一般提供されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "完全キャッシュを有効にする方法（注記）", "retrievedAt": "2026-10-18T21:05:00Z" }]
+          },
+          {
+            "q": "追加料金はかかりますか？",
+            "a": "標準の VM とディスクのコストを超える、フル キャッシュ固有の追加料金はありません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "完全キャッシュを有効にする方法（注記）", "retrievedAt": "2026-10-18T21:05:00Z" }]
+          },
+          {
+            "q": "対応している VM サイズは？",
+            "a": "N / L / M / H シリーズ、v5〜v7 の D / E 系などで、vCPU 数が 8 以上の VM が対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/ephemeral-os-disks", "locator": "完全キャッシュの前提条件", "retrievedAt": "2026-10-18T21:05:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
