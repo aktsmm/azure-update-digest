@@ -1,0 +1,159 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570090"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-18T21:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "570090",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "AKS で Windows Server 2025 が一般提供（GA）に",
+        "subtitleJa": "Stable ABI・第 2 世代 VM 既定・containerd 2.0・FIPS 既定有効などを搭載",
+        "en": "Generally Available: Windows Server 2025 on AKS"
+      },
+      "meta": {
+        "publishedJst": "2026-09-02",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "May" }],
+        "status": "Launched",
+        "products": ["Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "containers"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "AKS で **Windows ノード プール**を運用している方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "Windows Server 2025 のノード プールを本番で使え、旧版のサポート終了に備えられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "Windows Server 2022 は 2028-06-30 以降 AKS 非対応。計画的に移行",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "Important", "retrievedAt": "2026-10-18T21:40:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "主な改善点", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Stable ABI、第 2 世代 VM 既定、containerd 2.0、FIPS 既定有効", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "Windows Server 2025 は既定で FIPS 対応イメージと第 2 世代 VM を使用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "インプレース移行に関する考慮事項", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "移行の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "インプレース: az aks nodepool update で --os-sku Windows2025 を指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "既存のWindows Server 2022 ノード プールを Windows Server 2025 に更新する", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            },
+            {
+              "text": "手動: 2025 の新ノード プールを作成→ワークロード移動→旧プール削除",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "新しいノード プールへの手動移行", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Kubernetes 1.32.0 以降。インプレース移行は 1.32〜1.36 かつ aks-preview 22.0.0b6 以降",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "制限事項", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            },
+            {
+              "text": "同じノード プールに異なる Windows Server 版は混在できない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "制限事項", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "移行方法の違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "インプレース: 既存プールの OS SKU を更新（自動再イメージ化）。2022→2025 のみ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "インプレース移行に関する考慮事項", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            },
+            {
+              "text": "手動: 新ノード プールを使用。その他の版の移行や非対応構成向け",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "新しいノード プールへの手動移行", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "移行前に Dockerfile の FROM を更新し、検証環境で動作を確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "前提条件", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            },
+            {
+              "text": "gMSA 利用時は新ノード プール向けにマネージド ID 構成を更新",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "セキュリティと認証の構成を更新する", "retrievedAt": "2026-10-18T21:40:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aks", "term": "AKS", "type": "product", "oneLine": { "text": "Azure 上で Kubernetes を実行するためのサービス（Azure Kubernetes Service）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "冒頭", "retrievedAt": "2026-10-18T21:40:00Z" }] } },
+        { "termKey": "node-pool", "term": "ノード プール", "type": "term", "oneLine": { "text": "AKS クラスター内で、同じ OS バージョンなどを共有するノードのまとまり。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "制限事項", "retrievedAt": "2026-10-18T21:40:00Z" }] } },
+        { "termKey": "containerd", "term": "containerd", "type": "term", "oneLine": { "text": "AKS ノードで使われるコンテナー ランタイム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "インプレース移行の出力例", "retrievedAt": "2026-10-18T21:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T21:40:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "AKS は全リージョンで提供される基盤サービス。GA 機能として親サービスの提供状況に準拠",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-18T21:40:00Z" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どの Kubernetes バージョンで使えますか？",
+            "a": "Windows Server 2025 は Kubernetes 1.32.0 以降でサポートされます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "制限事項", "retrievedAt": "2026-10-18T21:40:00Z" }]
+          },
+          {
+            "q": "既存の 2022 ノード プールは作り直しが必要ですか？",
+            "a": "2022 から 2025 へは az aks nodepool update でインプレース移行できます。非対応構成は新規ノード プールへ手動移行します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "インプレース移行", "retrievedAt": "2026-10-18T21:40:00Z" }]
+          },
+          {
+            "q": "Windows Server 2022 はいつまで使えますか？",
+            "a": "2028 年 6 月 30 日から、AKS はノード プールの Windows Server 2022 をサポートしなくなります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "Important", "retrievedAt": "2026-10-18T21:40:00Z" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570090",
+        "learn": [
+          { "title": "AKS Windows ワークロードの OS バージョンをアップグレードする", "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
