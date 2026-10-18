@@ -1,0 +1,117 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570910"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-19T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "570910",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Storage Mover が SMB から Azure Files へエージェントレス移行（プレビュー）",
+        "subtitleJa": "移行エージェントを展開せず、オンプレミスの SMB 共有を Azure Files へコピーできます",
+        "en": "Public Preview: Agentless migration of on-premises SMB file shares to Azure Files (SMB)"
+      },
+      "meta": {
+        "publishedJst": "2026-09-12",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure Storage Mover"],
+        "categories": ["storage"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Windows Server や NAS の **SMB ファイル共有を Azure Files へ移行する**方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "オンプレミスに移行エージェントを用意せずに移行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューのため、まず検証用の共有で評価", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/agentless-on-premises-files-migration", "locator": "移行の制限と動作", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "移行エージェントの展開・登録・保守なしで、Storage Mover が既存のプライベート接続経由で SMB 共有に直接接続してコピーする",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "移行元: Windows Server / NAS の SMB 共有（SMB 2.x / 3.x）、移行先: Azure Files（SMB）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/service-overview", "locator": "サポートされているソースとターゲット", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "認証情報は Key Vault に保存し、マネージド ID でソースとターゲットにアクセス", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Azure portal または Azure CLI でエンドポイントとジョブを設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/agentless-on-premises-files-migration", "locator": "移行ジョブを作成して運用する", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "VPN や ExpressRoute などのプライベート接続が必須", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/agentless-on-premises-files-migration", "locator": "Important", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "1 ジョブ最大 5 億オブジェクト、1 サブスクリプションで同時 10 ジョブ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/agentless-on-premises-files-migration", "locator": "移行の制限と動作", "retrievedAt": "2026-10-19T00:00:00Z" }] },
+            { "text": "SMB 1.x ソースは非対応。データはコピーされ、ソースには残る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/agentless-on-premises-files-migration", "locator": "移行の制限と動作", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "プライベート接続と Key Vault を用意でき、検証用の共有で初回コピーと差分コピーを試せるか確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "prerequisites", "heading": "前提", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Storage Mover リソース、ストレージ アカウントと Azure ファイル共有、SMB 認証情報用の Key Vault が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/agentless-on-premises-files-migration", "locator": "前提条件", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "従来方式との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Storage Mover は、エージェントを使う移行とエージェントレス移行の両方をサポートする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/service-overview", "locator": "ハイブリッド クラウド サービス", "retrievedAt": "2026-10-19T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "storage-mover", "term": "Azure Storage Mover", "type": "product", "oneLine": { "text": "ファイルとフォルダーを Azure Storage へ移行する、フル マネージドの移行サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/service-overview", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "agentless", "term": "エージェントレス移行", "type": "feature", "oneLine": { "text": "移行エージェント VM を使わずに、クラウド サービスが直接移行を行う方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/service-overview", "locator": "ハイブリッド クラウド サービス", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "smb", "term": "SMB", "type": "term", "oneLine": { "text": "Windows Server や NAS などで使われるファイル共有のプロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/agentless-on-premises-files-migration", "locator": "冒頭", "retrievedAt": "2026-10-19T00:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-19T00:00:00Z" }] } }
+      ],
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "移行すると元のデータは消えますか？",
+            "a": "いいえ。データはコピーされるだけで移動はされず、ソース データは廃止するまで SMB サーバーに残ります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/agentless-on-premises-files-migration", "locator": "移行の制限と動作", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          },
+          {
+            "q": "利用に必要な前提条件は何ですか？",
+            "a": "プライベート接続、Storage Mover リソース、Azure ファイル共有、SMB 認証情報を保存する Key Vault、必要な RBAC 権限が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/agentless-on-premises-files-migration", "locator": "前提条件", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          },
+          {
+            "q": "大規模な共有も移行できますか？",
+            "a": "1 ジョブあたり最大 5 億オブジェクトです。超える場合は移行範囲を複数のジョブに分割します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/agentless-on-premises-files-migration", "locator": "移行の制限と動作", "retrievedAt": "2026-10-19T00:00:00Z" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570910",
+        "learn": [
+          { "title": "Azure Storage Mover (プレビュー) を使用して、オンプレミスの SMB から Azure Files にデータを移行する", "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/agentless-on-premises-files-migration", "locale": "ja-jp" },
+          { "title": "Azure Storage Mover とは", "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/service-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
