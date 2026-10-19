@@ -39,6 +39,8 @@ const byWorkflow: Record<string, { success: number; failure: number; cancelled: 
 const botBranch = /^(slides|summaries|maintenance|maint)[/-]/;
 for (const r of recent) {
   if (r.workflowName === "CI" && r.event === "pull_request" && r.conclusion === "failure" && botBranch.test(r.headBranch ?? "")) continue;
+  // "skipped" (e.g. heal-on-failure when nothing failed) and "neutral" are neither successes nor failures.
+  if (r.status === "completed" && (r.conclusion === "skipped" || r.conclusion === "neutral")) continue;
   const w = (byWorkflow[r.workflowName] ??= { success: 0, failure: 0, cancelled: 0, running: 0, lastSuccess: null, lastFailures: [] });
   if (r.status !== "completed") w.running++;
   else if (r.conclusion === "success") { w.success++; if (!w.lastSuccess || r.createdAt > w.lastSuccess) w.lastSuccess = r.createdAt; }
