@@ -258,6 +258,7 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 
 - **収集の push 競合**: 日次収集と初期取得は、他の自動マージと重なって push が拒否されても、pull --rebase と push を最大 4 回まで再試行します。
 - **ワークフローの整合テスト**: `tests/workflow-lock.test.ts` が、gh-aw の `.lock.yml` が元の `.md` と一致していること（`gh aw compile` の漏れ）と、全ワークフローが `permissions` を宣言し、`write-all` / `pull_request_target` を使っていないことを CI で検査します。
+- **PPTX の文字サイズ推定の監視**: PPTX は、テキストの高さを推定して文字サイズを選びます（`pptx-build.ts`）。この推定は安全側（高めに見積もる）で、108 枚中 39 枚が最小の 9pt と推定されますが、実際の PowerPoint で描画して確認したところ（573041・574343 など）、重なりやはみ出しはなく収まりました（テキストボックスは `fit: shrink`）。`tests/pptx-fit.test.ts` が、この推定が悪化しない（9pt まで落ちる枚数が増えない）ことを監視します。推定を改善したら、基準値を下げてください。
 - **サイトのリンク切れ検査**: `tests/site-links.test.ts` が、ビルドした `dist/index.html` の内部 `href` / `src` がすべて実在することと、favicon がインラインであることを CI で検査します（本番のコンソールに 404 が出る類の不具合を防ぐ。`dist/` が無ければ自動でビルド）。
 - **健康チェックの誤検知**: 自動生成 PR（`slides/…`・`summaries/…`）の CI は、ジョブ 0 件のまま失敗扱いになることがあります（テストの失敗ではない）。`npm run health` はこの種の失敗を数えません。また `heal-on-failure.yml` は、対象のワークフローが完了するたびに起動し（`workflow_run` はトリガー側で「失敗時のみ」に絞れない）、成功時は `skipped` として終わります。これは異常ではなく、健康チェックも `skipped` を成功・失敗のどちらにも数えません。`STATUS_OUT=<path>` を付けると人が読める状況レポートも書き出します。
 - **詰まった実行**: ランナーが「Checkout」で止まった実行が、直列のスライド生成キューを数時間止めたことがありました。`watchdog.yml`（1 日 1 回）が 40 分超の実行を取り消し（効かなければ force-cancel）、キューを進めます。
