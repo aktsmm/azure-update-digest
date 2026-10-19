@@ -209,7 +209,7 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 | `auto-merge-slides.yml` | スライド PR の検証（1 ファイルのみ・スキーマ・PDF 描画）と自動マージ → 公開 | 生成完了時 / 3 時間ごと（:23 UTC） | `contents: write`, `pull-requests: write` |
 | `maintain.lock.yml` | 隔週の自己修復: 健康チェックを読み、不具合を PR で修正／直せないものを Issue で報告（`.github/` の変更・Secret・モデル・権限は触らない。許可した範囲の PR は自動マージ） | 毎月 2・16 日 03:17 JST / 手動 | 読み取り + safe-output |
 | `auto-merge-maintenance.yml` | 保守 PR の自動マージ。許可パス（src / tests / config / schema / docs / scripts / README）のみ・400 行以内・削除なし・bot 作成・ラベル `maintenance`。PR のコードは読み取り専用の `check` ジョブだけで実行し、`merge` ジョブ（書き込み権限）は PR のコードを実行せず、検査した SHA を `--match-head-commit` で固定してマージ | 保守完了時 / 6 時間ごと / 手動 | check: 読み取り、merge: `contents: write`, `pull-requests: write` |
-| `watchdog.yml` | 固まったエージェント実行の取り消しと、失敗したデプロイの 1 回再実行（AI なし） | 毎日 05:41 JST（実行は遅れることがある） | `actions: write` |
+| `watchdog.yml` | 固まったエージェント実行の取り消し、失敗したデプロイの 1 回再実行、1 時間以上待っている生成 PR（スライド・要約）の自動マージ起動、予定の日次収集が走らなかったときの収集起動（AI なし） | 毎日 05:41 / 17:41 JST（実行は遅れることがある） | `actions: write` |
 | `token-check.yml` | `COPILOT_GITHUB_TOKEN` が有効か・期限が 14 日以内でないかを確認し、問題があれば Issue で通知（AI なし。値は出力しない） | 毎週月曜 09:20 JST（UTC 日曜 00:20） | `issues: write` |
 | `heal-on-failure.yml` | 自動処理のワークフローが失敗したら、隔週を待たず `maintain` を起動（6 時間以内に動いていれば何もしない。AI なし） | 失敗時（`workflow_run`） | `actions: write` |
 | `pipeline-status.yml` | Issue「Pipeline status」を 1 つだけ保ち、毎日更新（件数・要約とスライドの進み・各ワークフローの成否・開いている PR。AI なし） | 毎日 06:10 JST（21:10 UTC）/ 手動 | `issues: write` |
@@ -261,6 +261,7 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 - **PPTX の文字サイズ推定の監視**: PPTX は、テキストの高さを推定して文字サイズを選びます（`pptx-build.ts`）。この推定は安全側（高めに見積もる）で、108 枚中 39 枚が最小の 9pt と推定されますが、実際の PowerPoint で描画して確認したところ（573041・574343 など）、重なりやはみ出しはなく収まりました（テキストボックスは `fit: shrink`）。`tests/pptx-fit.test.ts` が、この推定が悪化しない（9pt まで落ちる枚数が増えない）ことを監視します。推定を改善したら、基準値を下げてください。
 - **サイトのリンク切れ検査**: `tests/site-links.test.ts` が、ビルドした `dist/index.html` の内部 `href` / `src` がすべて実在することと、favicon がインラインであることを CI で検査します（本番のコンソールに 404 が出る類の不具合を防ぐ。`dist/` が無ければ自動でビルド）。
 - **健康チェックの誤検知**: 自動生成 PR（`slides/…`・`summaries/…`）の CI は、ジョブ 0 件のまま失敗扱いになることがあります（テストの失敗ではない）。`npm run health` はこの種の失敗を数えません。また `heal-on-failure.yml` は、対象のワークフローが完了するたびに起動し（`workflow_run` はトリガー側で「失敗時のみ」に絞れない）、成功時は `skipped` として終わります。これは異常ではなく、健康チェックも `skipped` を成功・失敗のどちらにも数えません。`STATUS_OUT=<path>` を付けると人が読める状況レポートも書き出します。
+- **定期実行の遅延・欠落**: GitHub の定期実行は、予定より 1〜2 時間以上遅れるのが普通で、まれに丸ごと落ちます（実測: 日次収集は予定 21:00 UTC に対して 22:47〜23:43 UTC に実行。スライド配布は 1 回欠落）。ウォッチドッグを 1 日 2 回にして、待っている生成 PR と、走らなかった日次収集を拾います。
 - **詰まった実行**: ランナーが「Checkout」で止まった実行が、直列のスライド生成キューを数時間止めたことがありました。`watchdog.yml`（1 日 1 回）が 40 分超の実行を取り消し（効かなければ force-cancel）、キューを進めます。
 - **健康チェック**: `npm run health` が `.work/health.json`（ワークフローの 14 日間の成否、詰まった実行、開いている PR、データの鮮度と未処理件数、公開サイトの応答、PDF のパスワード設定、`flags[]`）を作ります。隔週の `maintain.md` と、人の確認の両方で使います。
 

@@ -5,8 +5,9 @@ name: Watchdog
 #  - re-runs the latest Pages deploy once when it failed (deploys collide when two finish close together)
 on:
   schedule:
-    # once a day, 05:41 JST (20:41 UTC); GitHub scheduled runs are often delayed, so nothing here is time-critical
-    - cron: "41 20 * * *"
+    # twice a day (05:41 and 17:41 JST = 20:41 and 08:41 UTC); GitHub scheduled runs are often delayed or dropped,
+    # so the watchdog also starts auto-merge and the daily collection when they did not run
+    - cron: "41 8,20 * * *"
   workflow_dispatch:
 
 permissions:
@@ -49,4 +50,30 @@ jobs:
             gh run rerun "$id" --failed
           else
             echo "deploy ok or already retried ($concl, attempt $attempt)"
+          fi
+      - name: Start auto-merge when generated PRs have been waiting
+        run: |
+          # GitHub sometimes drops the scheduled auto-merge runs; a generated PR then waits until the next one.
+          old=$(date -u -d '60 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
+          for kind in slides summaries; do
+            n=$(gh pr list --state open --limit 100 --json headRefName,createdAt \
+              -q "[.[] | select((.headRefName | test(\"^$kind[/-]\")) and .createdAt < \"$old\")] | length")
+            if [ "${n:-0}" -gt 0 ]; then
+              echo "$n $kind PR(s) waiting > 60 min; starting auto-merge-$kind"
+              gh workflow run "auto-merge-$kind.yml" || true
+            fi
+          done
+      - name: Start the daily collection if its scheduled run never happened
+        run: |
+          # The daily collection is due at 21:00 UTC. If the last successful scheduled run is older than ~27 h
+          # and nothing is running, start it (the data would otherwise go a day stale).
+          last=$(gh run list --workflow collect-daily.yml --limit 20 --json createdAt,conclusion,status \
+            -q '[.[] | select(.conclusion == "success" or .status != "completed")] | .[0].createdAt // "1970-01-01T00:00:00Z"')
+          running=$(gh run list --workflow collect-daily.yml --status in_progress --limit 1 --json databaseId -q 'length')
+          queued=$(gh run list --workflow collect-daily.yml --status queued --limit 1 --json databaseId -q 'length')
+          age=$(( $(date +%s) - $(date -d "$last" +%s) ))
+          echo "last collect: $last (${age}s ago), running=$running queued=$queued"
+          if [ "$age" -gt 97200 ] && [ "${running:-0}" = "0" ] && [ "${queued:-0}" = "0" ]; then
+            echo "daily collection is overdue; starting it"
+            gh workflow run collect-daily.yml
           fi
