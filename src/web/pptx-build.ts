@@ -234,6 +234,9 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
   let pt = 9, sp = 9;
   for (const cand of STEPS) { if (mainFor(cand).total <= avail) { pt = cand; break; } }
   for (const cand of STEPS.filter((x) => x <= 16)) { if (sideFor(cand) <= avail) { sp = cand; break; } }
+  // audit hook: report slides whose estimated content does not fit even at the smallest font step
+  const audit = (globalThis as { __PPTX_FIT_AUDIT__?: { key: string; pt: number; sp: number; mainOver: boolean; sideOver: boolean }[] }).__PPTX_FIT_AUDIT__;
+  audit?.push({ key: sl.key, pt, sp, mainOver: mainFor(9).total > avail, sideOver: sideFor(9) > avail });
   const fitFor = (p: number) => ({ baH: mainFor(p).baH });
   const mainPt = pt;
   const drawPanel = (p: Panel, x: number, y: number, w: number, h: number, pt = mainPt) => {
