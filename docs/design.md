@@ -214,6 +214,7 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 | `token-check.yml` | `COPILOT_GITHUB_TOKEN` が有効か・期限が 14 日以内でないかを確認し、問題があれば Issue で通知（AI なし。値は出力しない） | 毎週月曜 09:20 JST（UTC 日曜 00:20） | `issues: write` |
 | `heal-on-failure.yml` | 自動処理のワークフローが失敗したら、隔週を待たず `maintain` を起動（6 時間以内に動いていれば何もしない。AI なし） | 失敗時（`workflow_run`） | `actions: write` |
 | `pipeline-status.yml` | Issue「Pipeline status」を 1 つだけ保ち、毎日更新（件数・要約とスライドの進み・各ワークフローの成否・開いている PR。AI なし） | 毎日 06:10 JST（21:10 UTC）/ 手動 | `issues: write` |
+| `full-tests.yml` | main で型・データ検証・スライド検証・全テストを毎日実行（AI なし）。失敗時は `heal-on-failure` が `maintain` を起動 | 毎日 06:30 JST（21:30 UTC）/ 手動 | `contents: read` |
 | `pages.yml` | validate → build → GitHub Pages 公開 | 呼び出し / `data/**` 等の push / 手動 | `pages: write`, `id-token: write` |
 | `ci.yml` | typecheck / test / validate / build | PR | `contents: read` |
 
@@ -258,6 +259,7 @@ MRC の `productCategories` / `products` / `tags` / `status` は元値を保存�
 - **PDF 結合の注意**: Chrome は 1280×720 px を 960×540 pt で書き出すため、結合時の追加ページも同じサイズに揃えます。pdf-lib は可変フォントのサブセット化で字形が欠けるため、静的インスタンス化＋JIS・Latin-1 のサブセット（`scripts/make-font.py`）を使い、GSUB/GPOS は外します。
 
 - **収集の push 競合**: 日次収集と初期取得は、他の自動マージと重なって push が拒否されても、pull --rebase と push を最大 4 回まで再試行します。
+- **main の毎日の全検査**: `ci.yml` は PR のときだけ走るため、main へのデータ更新（日次収集・自動マージ）だけで起きる不具合は次の PR まで気づけません（直近の CI 60 件に main の実行は 0 件でした）。`full-tests.yml` が毎日 main を検査し、失敗すると `heal-on-failure` が保守エージェントを起動します。
 - **ワークフローの整合テスト**: `tests/workflow-lock.test.ts` が、gh-aw の `.lock.yml` が元の `.md` と一致していること（`gh aw compile` の漏れ）と、全ワークフローが `permissions` を宣言し、`write-all` / `pull_request_target` を使っていないことを CI で検査します。
 - **PPTX の文字サイズ推定の監視**: PPTX は、テキストの高さを推定して文字サイズを選びます（`pptx-build.ts`）。この推定は安全側（高めに見積もる）で、108 枚中 39 枚が最小の 9pt と推定されますが、実際の PowerPoint で描画して確認したところ（573041・574343 など）、重なりやはみ出しはなく収まりました（テキストボックスは `fit: shrink`）。`tests/pptx-fit.test.ts` が、この推定が悪化しない（9pt まで落ちる枚数が増えない）ことを監視します。推定を改善したら、基準値を下げてください。
 - **サイトのリンク切れ検査**: `tests/site-links.test.ts` が、ビルドした `dist/index.html` の内部 `href` / `src` がすべて実在することと、favicon がインラインであることを CI で検査します（本番のコンソールに 404 が出る類の不具合を防ぐ。`dist/` が無ければ自動でビルド）。
