@@ -2298,6 +2298,86 @@
     {
       "availabilities": [
         {
+          "month": "July",
+          "ring": "Preview",
+          "year": 2026
+        },
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": "2026-07",
+        "privatePreview": null
+      },
+      "canonicalKey": "575329",
+      "categories": [
+        "ops-governance",
+        "devtools"
+      ],
+      "created": "2026-10-20T16:54:24.9349401Z",
+      "createdJst": "2026-10-21",
+      "description": "Advanced platform metrics for Azure Monitor are now generally available. Advanced platform metrics provide finer-grained signals that help customers more quickly and accurately identify changes and trends within their resources.With this release, customers can enable advanced platform metrics directly from the Azure portal, with an in-product banner prompting enablement for subscriptions where the feature is not yet enabled. Advanced platform metrics are also now available in Fairfax and Mooncake, expanding availability beyond the public cloud.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "1ccdcc4f3661afa1485e908e5a1adc717c0d4d59213486506c6b654ec12046ec",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-20T23:38:10.538Z",
+          "fingerprint": "0556d0313485c542262f2f7a382e4a25851b3fa2a5f96694c26397699dced950",
+          "modifiedAfter": "2026-10-20T16:54:24.9349401Z",
+          "modifiedBefore": null,
+          "rawRef": "20261020T233810538Z_list_sweep_o0.json#575329"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-20T23:38:26.810Z",
+          "fingerprint": "1ccdcc4f3661afa1485e908e5a1adc717c0d4d59213486506c6b654ec12046ec",
+          "modifiedAfter": "2026-10-20T16:54:24.9349401Z",
+          "modifiedBefore": "2026-10-20T16:54:24.9349401Z",
+          "rawRef": "20261020T233826810Z_detail_575329.json#575329"
+        }
+      ],
+      "ids": [
+        "575329"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "575329",
+      "modified": "2026-10-20T16:54:24.9349401Z",
+      "modifiedJst": "2026-10-21",
+      "productCategories": [
+        "DevOps",
+        "Management and governance"
+      ],
+      "products": [
+        "Azure Monitor"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=575329",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Advanced platform metrics for Azure Monitor"
+    },
+    {
+      "availabilities": [
+        {
           "month": "October",
           "ring": "General Availability",
           "year": 2026
@@ -2369,6 +2449,77 @@
         "Management"
       ],
       "title": "Generally Available: Azure Site Recovery Support for Azure ARC-enabled Windows VMWare/Physical servers"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-10",
+        "privatePreview": null
+      },
+      "canonicalKey": "576242",
+      "categories": [
+        "networking",
+        "ops-governance"
+      ],
+      "created": "2026-10-20T18:55:47.1858285Z",
+      "createdJst": "2026-10-21",
+      "description": "Announcing\nthe public preview of disable VNet peering route, a route-table capability that\ngives you more control over traffic between peered virtual networks. DPR\nsuppresses system-generated peering routes on subnets associated with the route\ntable while preserving the peering connection itself.     In\nlarge hub-and-spoke networks, you can pair this feature with a summarized\nuser-defined route to direct traffic through a network virtual appliance, such\nas Azure Firewall, instead of maintaining a separate override for every spoke.\nThis helps simplify route management as your network grows.            Manage\nDPR through route-table configuration or Azure Virtual Network Manager routing\nrule collections. You configure the replacement UDRs and inspection path; DPR\ndoes not create them automatically.        Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "9fe52e2e5de7cb0b71aabd648b9fd7d38560d61cf340526c12c9d6cc4212eb54",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-20T23:38:10.538Z",
+          "fingerprint": "bcbf73f5b5a7f7325dc5019acb2a2dfb035788bef8af90d28a94265d1196a589",
+          "modifiedAfter": "2026-10-20T18:55:47.1858285Z",
+          "modifiedBefore": null,
+          "rawRef": "20261020T233810538Z_list_sweep_o0.json#576242"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-20T23:38:16.364Z",
+          "fingerprint": "9fe52e2e5de7cb0b71aabd648b9fd7d38560d61cf340526c12c9d6cc4212eb54",
+          "modifiedAfter": "2026-10-20T18:55:47.1858285Z",
+          "modifiedBefore": "2026-10-20T18:55:47.1858285Z",
+          "rawRef": "20261020T233816364Z_detail_576242.json#576242"
+        }
+      ],
+      "ids": [
+        "576242"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "576242",
+      "modified": "2026-10-20T18:55:47.1858285Z",
+      "modifiedJst": "2026-10-21",
+      "productCategories": [
+        "Networking"
+      ],
+      "products": [
+        "Virtual Network"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=576242",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Management",
+        "Services"
+      ],
+      "title": "Public Preview: Disable VNet peering route"
     },
     {
       "availabilities": [
@@ -2648,6 +2799,157 @@
         "Feature"
       ],
       "title": "Public Preview: Azure Databricks Private network gateway"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "577130",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-10-20T16:55:59.9707431Z",
+      "createdJst": "2026-10-21",
+      "description": "Azure Application Gateway now supports keyless TLS\ntermination using certificates whose private keys stay in Azure Key Vault\nManaged HSM. Each TLS handshake signature is performed inside the HSM, and the\nprivate key is never exported to the gateway. This integration helps you: \n Maintain\n     private key custody within a dedicated HSM boundary. \n Use\n     managed identities and role-based access control for key access. \n Monitor\n     signing operations through Managed HSM diagnostic logs. \n Obtain\n     cryptographic evidence that the TLS key was generated and is stored in a\n     FIPS 140-3 Level 3 validated HSM. \n Support\n     separation of duties and centralized key management. Learn more: What is keyless TLS for Azure\nApplication Gateway and Azure Key Vault Managed HSM? Tutorial: Configure keyless\nTLS termination with Azure Key Vault Managed HSM What is\nAzure Key Vault Managed HSM?",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "4fc9479de2e89e3942697a87244b3201b92d5211a5797227b264378dcc74dc63",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-20T23:38:10.538Z",
+          "fingerprint": "ee2cbc75d449bd652361c6dd31ca557d2d3dca1397fc1f5f87126ee2d0efec3e",
+          "modifiedAfter": "2026-10-20T16:55:59.9707431Z",
+          "modifiedBefore": null,
+          "rawRef": "20261020T233810538Z_list_sweep_o0.json#577130"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-20T23:38:24.475Z",
+          "fingerprint": "4fc9479de2e89e3942697a87244b3201b92d5211a5797227b264378dcc74dc63",
+          "modifiedAfter": "2026-10-20T16:55:59.9707431Z",
+          "modifiedBefore": "2026-10-20T16:55:59.9707431Z",
+          "rawRef": "20261020T233824475Z_detail_577130.json#577130"
+        }
+      ],
+      "ids": [
+        "577130"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "577130",
+      "modified": "2026-10-20T16:55:59.9707431Z",
+      "modifiedJst": "2026-10-21",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Application Gateway"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577130",
+      "status": "Launched",
+      "tags": [
+        "Features"
+      ],
+      "title": "Generally Available: Keyless TLS on Application Gateway with Azure Key Vault Managed HSM"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "577156",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-10-20T16:57:35.7124686Z",
+      "createdJst": "2026-10-21",
+      "description": "Announcing the general availability of the service tag match\ncondition for Azure Web Application Firewall (WAF) custom rules on Azure Front\nDoor Premium. Service tags represent groups of IP address prefixes used by\nAzure services, and Microsoft updates them automatically as addresses change.\nCustom rules can now match a HTTP request's source IP address against service\ntags, so you can control traffic from Azure services without building and\nmaintaining lists of IPs.  With service tag matching, you can: Allow Azure services your\napplication relies on, such as monitoring and health checks, through to your\nendpoints. Block traffic from Azure\nservices your application never expects to receive requests from. Restrict sensitive paths,\nsuch as admin endpoints, by combining a service tag with URI, host, or request\nmethod conditions. Rate limit traffic from an\nAzure service instead of blocking it outright. Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "fb90a15463465f0a0958e6ccadfc3efca4a5b3fcd5d5c23fbc0abb4040a26c10",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-20T23:38:10.538Z",
+          "fingerprint": "3db2303cbd1b62fdc60116671982e3fa5fc2a6cd513bcafd69f96a131d9f7abd",
+          "modifiedAfter": "2026-10-20T16:57:35.7124686Z",
+          "modifiedBefore": null,
+          "rawRef": "20261020T233810538Z_list_sweep_o0.json#577156"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-20T23:38:21.134Z",
+          "fingerprint": "fb90a15463465f0a0958e6ccadfc3efca4a5b3fcd5d5c23fbc0abb4040a26c10",
+          "modifiedAfter": "2026-10-20T16:57:35.7124686Z",
+          "modifiedBefore": "2026-10-20T16:57:35.7124686Z",
+          "rawRef": "20261020T233821134Z_detail_577156.json#577156"
+        }
+      ],
+      "ids": [
+        "577156"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "577156",
+      "modified": "2026-10-20T16:57:35.7124686Z",
+      "modifiedJst": "2026-10-21",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Front Door",
+        "Web Application Firewall"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577156",
+      "status": "Launched",
+      "tags": [
+        "Features"
+      ],
+      "title": "Generally Available: Service tag match condition for Azure Front Door Premium WAF"
     },
     {
       "availabilities": [

@@ -1,0 +1,191 @@
+{
+  "args": {
+    "filter": "modified ge 2026-10-19T00:07:07Z and modified lt 2026-10-20T23:38:10Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-20T23:38:10.538Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "573917",
+        "created": "2026-10-19T17:55:40.3803959Z",
+        "description": "Azure DNS now provides DNS based load balancing by seamless\nintegration with Azure Traffic Manager. Customers can directly associate an\nAzure DNS record set with a Traffic Manager profile, eliminating...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "573917",
+        "modified": "2026-10-19T17:55:40.3803959Z",
+        "productCategories": [
+          "Networking",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure DNS",
+          "Traffic Manager"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure DNS enables DNS-based load balancing through Traffic Manager linked records"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "575329",
+        "created": "2026-10-20T16:54:24.9349401Z",
+        "description": "Advanced platform metrics for Azure Monitor are now generally available. Advanced platform metrics provide finer-grained signals that help customers more quickly and accurately identify changes and tr...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "575329",
+        "modified": "2026-10-20T16:54:24.9349401Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Advanced platform metrics for Azure Monitor"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "576242",
+        "created": "2026-10-20T18:55:47.1858285Z",
+        "description": "Announcing\nthe public preview of disable VNet peering route, a route-table capability that\ngives you more control over traffic between peered virtual networks. DPR\nsuppresses system-generated peering ...",
+        "id": "576242",
+        "modified": "2026-10-20T18:55:47.1858285Z",
+        "previewAvailabilityDate": "2026-10",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Virtual Network"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Management",
+          "Services"
+        ],
+        "title": "Public Preview: Disable VNet peering route"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577130",
+        "created": "2026-10-20T16:55:59.9707431Z",
+        "description": "Azure Application Gateway now supports keyless TLS\ntermination using certificates whose private keys stay in Azure Key Vault\nManaged HSM. Each TLS handshake signature is performed inside the HSM, and ...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "577130",
+        "modified": "2026-10-20T16:55:59.9707431Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Keyless TLS on Application Gateway with Azure Key Vault Managed HSM"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577156",
+        "created": "2026-10-20T16:57:35.7124686Z",
+        "description": "Announcing the general availability of the service tag match\ncondition for Azure Web Application Firewall (WAF) custom rules on Azure Front\nDoor Premium. Service tags represent groups of IP address pr...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "577156",
+        "modified": "2026-10-20T16:57:35.7124686Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door",
+          "Web Application Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Service tag match condition for Azure Front Door Premium WAF"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577165",
+        "created": "2026-10-19T20:23:15.1677523Z",
+        "description": "Metrics usage insights is now generally available, giving you greater visibility into what’s driving metrics usage across your Azure Monitor workspace. Monitor workspace utilization, identify unused m...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "577165",
+        "modified": "2026-10-19T20:23:15.1677523Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Metrics usage insights for Azure Monitor workspace"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 6,
+    "totalCount": 6
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

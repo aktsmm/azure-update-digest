@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "576242"
+  },
+  "fetchedAt": "2026-10-20T23:38:16.364Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "576242",
+    "created": "2026-10-20T18:55:47.1858285Z",
+    "description": "Announcing\nthe public preview of disable VNet peering route, a route-table capability that\ngives you more control over traffic between peered virtual networks. DPR\nsuppresses system-generated peering routes on subnets associated with the route\ntable while preserving the peering connection itself.     In\nlarge hub-and-spoke networks, you can pair this feature with a summarized\nuser-defined route to direct traffic through a network virtual appliance, such\nas Azure Firewall, instead of maintaining a separate override for every spoke.\nThis helps simplify route management as your network grows.            Manage\nDPR through route-table configuration or Azure Virtual Network Manager routing\nrule collections. You configure the replacement UDRs and inspection path; DPR\ndoes not create them automatically.        Learn\nmore. ",
+    "id": "576242",
+    "modified": "2026-10-20T18:55:47.1858285Z",
+    "previewAvailabilityDate": "2026-10",
+    "productCategories": [
+      "Networking"
+    ],
+    "products": [
+      "Virtual Network"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Management",
+      "Services"
+    ],
+    "title": "Public Preview: Disable VNet peering route"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
