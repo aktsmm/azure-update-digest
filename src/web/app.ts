@@ -351,13 +351,19 @@ function hero(): string {
     </section>`;
 }
 
+const HL_KEY = "azure-digest:highlights-open";
+/** Highlights start expanded; the choice is remembered per browser (storage may be unavailable, e.g. private mode). */
+function highlightsOpen(): boolean {
+  try { return localStorage.getItem(HL_KEY) !== "0"; } catch { return true; }
+}
+
 function renderList(q: Query, heading: string, fixedMonth: string | null, basePath: string) {
   const r = runQuery(items, q, meta.coverage, meta.snapshotAt);
   const basisLabel = q.mode === "availability" ? "提供・廃止予定（月単位）" : q.basis === "created" ? "作成日基準" : "更新日基準";
   const filtered = r.items.length !== r.periodTotal ? `（期間内 ${r.periodTotal} 件中、絞り込み後 ${r.items.length} 件）` : "";
   const empty = r.items.length === 0
     ? `<div class="empty">${r.coverage.status === "complete" ? "条件に一致する更新はありません。" : "取得範囲外・一部取得のため、0件とは断定できません。取得状態を確認してください。"}</div>` : "";
-  const hl = q.mode === "dated" && r.highlights.length ? `<h2>重要更新（${r.highlights.length}件）</h2>${r.highlights.map((i, n) => card(i, n)).join("")}` : "";
+  const hl = q.mode === "dated" && r.highlights.length ? `<details class="fold" id="hl-fold" ${highlightsOpen() ? "open" : ""}><summary><h2>重要更新（${r.highlights.length}件）</h2><span class="fold-hint"></span></summary>${r.highlights.map((i, n) => card(i, n)).join("")}</details>` : "";
   const note = q.mode === "availability" ? "<p class='meta'>提供時期は公式の月単位表記のまま表示しています（日付への換算はしていません）。</p>" : "";
   app.innerHTML = `${basePath === "/" ? `${hero()}` : `<h1>${esc(heading)}</h1>`}
     <p><strong>${esc(q.period.start)} 〜 ${esc(q.period.end)}</strong>（JST・${basisLabel}）: <strong>${r.items.length} 件</strong> ${filtered}</p>
@@ -365,6 +371,9 @@ function renderList(q: Query, heading: string, fixedMonth: string | null, basePa
     <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${r.items.map((i, n) => card(i, n)).join("")}${empty}`;
   bind(q, fixedMonth, basePath);
   bindDownload(r, q);
+  document.getElementById("hl-fold")?.addEventListener("toggle", (e) => {
+    try { localStorage.setItem(HL_KEY, (e.target as HTMLDetailsElement).open ? "1" : "0"); } catch { /* storage unavailable */ }
+  });
 }
 
 function renderArchive() {
