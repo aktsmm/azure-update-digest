@@ -60,8 +60,7 @@
           "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
           "items": [
             { "text": "推奨は NVads_V710_v5（GPU あたりの GPU メモリ帯域幅が増加）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "冒頭", "retrievedAt": "2026-10-14T20:31:00Z" }] },
-            { "text": "用途により NVadsA10_v5 も候補。ゲーミングは NGads_V620", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "移行先の推奨 SKU", "retrievedAt": "2026-10-14T20:31:00Z" }] },
-            { "text": "V710_v5 へのサイズ変更で既知のエラーがある場合は AFEC 'VMTempDiskResizePreview' を登録", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "冒頭 / Note", "retrievedAt": "2026-10-14T20:31:00Z" }] }
+            { "text": "用途により NVadsA10_v5 も候補。ゲーミングは NGads_V620", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv4-retirement", "locator": "移行先の推奨 SKU", "retrievedAt": "2026-10-14T20:31:00Z" }] }
           ]
         },
         {
