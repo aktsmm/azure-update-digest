@@ -1,7 +1,7 @@
 import * as PptxNs from "pptxgenjs";
 import type { Slide } from "../lib/slide-html.js";
 import { CATEGORY_JA } from "../lib/slide-html.js";
-import { KIND_COLOR_HEX, KIND_ICON, sectionByKind } from "../lib/kind-section.js";
+import { KIND_COLOR_HEX, KIND_ICON, paginateRows, sectionByKind } from "../lib/kind-section.js";
 import type { SlideKind } from "../lib/slide-kind.js";
 
 // pptxgenjs ships CJS/ESM typings that disagree under NodeNext; resolve the constructor at runtime and keep loose option types.
@@ -126,12 +126,13 @@ export async function buildDeckPptx(o: PptxOptions): Promise<ArrayBuffer> {
     }
   }
   const PER = 13;
-  for (let t = 0; t < Math.max(1, Math.ceil(rows.length / PER)); t++) {
+  const tocPageRows = paginateRows(rows, PER);
+  for (let t = 0; t < Math.max(1, tocPageRows.length); t++) {
     const s = pptx.addSlide();
     s.background = { color: C.white };
     frame(s, "Azure アップデート情報", source);
     s.addText(t === 0 ? "目次" : "目次（続き）", { x: 0.7, y: 0.4, w: 6, h: 0.6, fontFace: FONT, fontSize: 28, bold: true, color: C.navy, margin: 0 });
-    rows.slice(t * PER, (t + 1) * PER).forEach((r, i) => {
+    (tocPageRows[t] ?? []).forEach((r, i) => {
       const y = 1.25 + i * 0.4;
       const col = KIND_COLOR_HEX[r.kind];
       if (r.type === "head") {

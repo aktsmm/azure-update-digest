@@ -21,6 +21,20 @@ export const KIND_ICON: Record<SlideKind, string> = {
 
 export interface Sectioned<T> { kind: SlideKind; label: string; items: T[] }
 
+/** Split contents rows into pages of at most `perPage` rows; a section heading is never left as the last row of a page. */
+export function paginateRows<R extends { type: "head" | "item" }>(rows: R[], perPage: number): R[][] {
+  const pages: R[][] = [];
+  let cur: R[] = [];
+  for (const r of rows) {
+    if (cur.length === perPage) { pages.push(cur); cur = []; }
+    cur.push(r);
+    // a heading that would end up last on a full page moves to the next page together with its first row
+    if (cur.length === perPage && r.type === "head") { cur.pop(); pages.push(cur); cur = [r]; }
+  }
+  if (cur.length) pages.push(cur);
+  return pages;
+}
+
 /** Group already-ordered entries into kind sections, in KIND_ORDER, skipping kinds with no entries. */
 export function sectionByKind<T extends { kind: SlideKind; label: string }>(entries: T[]): Sectioned<T>[] {
   const out: Sectioned<T>[] = [];
