@@ -1910,6 +1910,82 @@
       "availabilities": [
         {
           "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "573917",
+      "categories": [
+        "networking",
+        "ops-governance"
+      ],
+      "created": "2026-10-19T17:55:40.3803959Z",
+      "createdJst": "2026-10-20",
+      "description": "Azure DNS now provides DNS based load balancing by seamless\nintegration with Azure Traffic Manager. Customers can directly associate an\nAzure DNS record set with a Traffic Manager profile, eliminating the need to\ncreate a CNAME record pointing to the trafficmanager.net domain. This integration reduces DNS lookup latency by removing the\nadditional CNAME lookup and enables DNSSEC compatibility for load-balanced\nrecords by removing the unsigned trafficmanager.net domain from the DNS\nresolution chain. Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "9396b2ebf555e483e50621d2419fb4d3ffa8bf49d8f99630852e46f4a82505d2",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-20T00:07:07.588Z",
+          "fingerprint": "3e88b90d7d4c3f18d6adfbce2c855b9b07f766cfc2a885e6a2cf9af4b0d71f24",
+          "modifiedAfter": "2026-10-19T17:55:40.3803959Z",
+          "modifiedBefore": null,
+          "rawRef": "20261020T000707588Z_list_sweep_o0.json#573917"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-20T00:07:15.420Z",
+          "fingerprint": "9396b2ebf555e483e50621d2419fb4d3ffa8bf49d8f99630852e46f4a82505d2",
+          "modifiedAfter": "2026-10-19T17:55:40.3803959Z",
+          "modifiedBefore": "2026-10-19T17:55:40.3803959Z",
+          "rawRef": "20261020T000715420Z_detail_573917.json#573917"
+        }
+      ],
+      "ids": [
+        "573917"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "573917",
+      "modified": "2026-10-19T17:55:40.3803959Z",
+      "modifiedJst": "2026-10-20",
+      "productCategories": [
+        "Management and governance",
+        "Networking"
+      ],
+      "products": [
+        "Azure DNS",
+        "Traffic Manager"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=573917",
+      "status": "Launched",
+      "tags": [
+        "Features"
+      ],
+      "title": "Generally Available: Azure DNS enables DNS-based load balancing through Traffic Manager linked records"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
           "ring": "Preview",
           "year": 2026
         }
@@ -2572,6 +2648,81 @@
         "Feature"
       ],
       "title": "Public Preview: Azure Databricks Private network gateway"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "577165",
+      "categories": [
+        "ops-governance",
+        "devtools"
+      ],
+      "created": "2026-10-19T20:23:15.1677523Z",
+      "createdJst": "2026-10-20",
+      "description": "Metrics usage insights is now generally available, giving you greater visibility into what’s driving metrics usage across your Azure Monitor workspace. Monitor workspace utilization, identify unused metrics, understand usage trends, and investigate changes in ingestion volume to help optimize costs and plan capacity.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "c3454d7aade484bcadb4037b0c75262ddb75345af1bde961db948af857cb597b",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-20T00:07:07.588Z",
+          "fingerprint": "7fcac6a841e1d0309dbbf1090f2c42d1e1576d59a63a9d44d5f547c89725e659",
+          "modifiedAfter": "2026-10-19T20:23:15.1677523Z",
+          "modifiedBefore": null,
+          "rawRef": "20261020T000707588Z_list_sweep_o0.json#577165"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-20T00:07:12.211Z",
+          "fingerprint": "c3454d7aade484bcadb4037b0c75262ddb75345af1bde961db948af857cb597b",
+          "modifiedAfter": "2026-10-19T20:23:15.1677523Z",
+          "modifiedBefore": "2026-10-19T20:23:15.1677523Z",
+          "rawRef": "20261020T000712211Z_detail_577165.json#577165"
+        }
+      ],
+      "ids": [
+        "577165"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "577165",
+      "modified": "2026-10-19T20:23:15.1677523Z",
+      "modifiedJst": "2026-10-20",
+      "productCategories": [
+        "DevOps",
+        "Management and governance"
+      ],
+      "products": [
+        "Azure Monitor"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577165",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Metrics usage insights for Azure Monitor workspace"
     }
   ],
   "month": "2026-10",

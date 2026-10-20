@@ -1,0 +1,75 @@
+{
+  "args": {
+    "filter": "modified ge 2026-10-17T22:47:59Z and modified lt 2026-10-20T00:07:07Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-20T00:07:07.588Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "573917",
+        "created": "2026-10-19T17:55:40.3803959Z",
+        "description": "Azure DNS now provides DNS based load balancing by seamless\nintegration with Azure Traffic Manager. Customers can directly associate an\nAzure DNS record set with a Traffic Manager profile, eliminating...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "573917",
+        "modified": "2026-10-19T17:55:40.3803959Z",
+        "productCategories": [
+          "Networking",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure DNS",
+          "Traffic Manager"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Azure DNS enables DNS-based load balancing through Traffic Manager linked records"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577165",
+        "created": "2026-10-19T20:23:15.1677523Z",
+        "description": "Metrics usage insights is now generally available, giving you greater visibility into what’s driving metrics usage across your Azure Monitor workspace. Monitor workspace utilization, identify unused m...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "577165",
+        "modified": "2026-10-19T20:23:15.1677523Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Metrics usage insights for Azure Monitor workspace"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 2,
+    "totalCount": 2
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}
