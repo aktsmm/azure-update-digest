@@ -1,6 +1,6 @@
-import { PDFDocument, concatTransformationMatrix, PDFString, pushGraphicsState, rgb, type PDFFont, type PDFPage } from "pdf-lib";
+import { PDFDocument, PDFHexString, PDFName, concatTransformationMatrix, PDFString, pushGraphicsState, rgb, type PDFFont, type PDFPage } from "pdf-lib";
 import fontkit from "@pdf-lib/fontkit";
-import { KIND_COLOR_HEX, KIND_ICON, sectionByKind } from "../lib/kind-section.js";
+import { KIND_COLOR_HEX, KIND_ICON, paginateRows, sectionByKind } from "../lib/kind-section.js";
 import type { SlideKind } from "../lib/slide-kind.js";
 
 export interface SlideEntry { key: string; kind: string; label: string; title: string; publishedJst: string; categories: string[]; pages: number }
@@ -75,6 +75,35 @@ function footer(g: Painter, p: PDFPage, left: string, right: string) {
   g.text(p, right, W - 96 - g.width(right, 16), H - 38, 16, WHITE);
 }
 
+/** PDF outline (bookmarks): kind sections, each with its updates, pointing at the real pages. */
+function addOutline(doc: PDFDocument, items: { title: string; pageIndex: number; children: { title: string; pageIndex: number }[] }[]) {
+  const ctx = doc.context;
+  const pages = doc.getPages();
+  const rootRef = ctx.nextRef();
+  const mk = (title: string, pageIndex: number) => ({ title, pageRef: pages[pageIndex]!.ref, ref: ctx.nextRef() });
+  const sections = items.map((s) => ({ ...mk(s.title, s.pageIndex), kids: s.children.map((c) => mk(c.title, c.pageIndex)) }));
+  const dest = (pageRef: unknown) => ctx.obj([pageRef as never, PDFName.of("Fit")]);
+  const link = (nodes: { ref: ReturnType<typeof ctx.nextRef> }[], i: number, key: "Prev" | "Next", out: Record<string, unknown>) => {
+    const j = key === "Prev" ? i - 1 : i + 1;
+    if (nodes[j]) out[key] = nodes[j]!.ref;
+  };
+  sections.forEach((s, i) => {
+    const d: Record<string, unknown> = { Title: PDFHexString.fromText(s.title), Parent: rootRef, Dest: dest(s.pageRef) };
+    link(sections, i, "Prev", d); link(sections, i, "Next", d);
+    if (s.kids.length) { d.First = s.kids[0]!.ref; d.Last = s.kids[s.kids.length - 1]!.ref; d.Count = s.kids.length; }
+    ctx.assign(s.ref, ctx.obj(d as never));
+    s.kids.forEach((k, j) => {
+      const kd: Record<string, unknown> = { Title: PDFHexString.fromText(k.title), Parent: s.ref, Dest: dest(k.pageRef) };
+      link(s.kids, j, "Prev", kd); link(s.kids, j, "Next", kd);
+      ctx.assign(k.ref, ctx.obj(kd as never));
+    });
+  });
+  if (!sections.length) return;
+  ctx.assign(rootRef, ctx.obj({ Type: "Outlines", First: sections[0]!.ref, Last: sections[sections.length - 1]!.ref, Count: sections.length + sections.reduce((a, s) => a + s.kids.length, 0) } as never));
+  doc.catalog.set(PDFName.of("Outlines"), rootRef);
+  doc.catalog.set(PDFName.of("PageMode"), PDFName.of("UseOutlines"));
+}
+
 export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetchPdf: (key: string) => Promise<ArrayBuffer>): Promise<Uint8Array> {
   const doc = await PDFDocument.create();
   doc.registerFontkit(fontkit);
@@ -84,17 +113,24 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
   const sections = sectionByKind(o.entries.map((e) => ({ ...e, kind: e.kind as SlideKind })));
   // contents rows: one heading row per kind section, then its updates (a section page precedes each kind's slides)
   type TocRow = { type: "head"; kind: SlideKind; label: string; count: number; page: number } | { type: "item"; no: number; kind: SlideKind; label: string; title: string; page: number };
-  const tocPagesFor = (rows: number) => Math.max(1, Math.ceil(rows / PER_TOC_PAGE));
-  const rowCount = n + sections.length;
-  const tocPages = tocPagesFor(rowCount);
-  const firstSlidePage = 1 + tocPages + 1 + 1;
   const rows: TocRow[] = [];
   {
-    let pg = firstSlidePage, no = 0;
+    let no = 0;
     for (const s of sections) {
-      rows.push({ type: "head", kind: s.kind, label: s.label, count: s.items.length, page: pg });
-      pg += 1; // the section page
-      for (const e of s.items) { rows.push({ type: "item", no: ++no, kind: s.kind, label: e.label, title: e.title, page: pg }); pg += e.pages; }
+      rows.push({ type: "head", kind: s.kind, label: s.label, count: s.items.length, page: 0 });
+      for (const e of s.items) rows.push({ type: "item", no: ++no, kind: s.kind, label: e.label, title: e.title, page: 0 });
+    }
+  }
+  // paging depends only on the row order (never on page numbers), so the number of contents pages is known before numbering
+  const tocPageRows = paginateRows(rows, PER_TOC_PAGE);
+  const tocPages = Math.max(1, tocPageRows.length);
+  const firstSlidePage = 1 + tocPages + 1 + 1;
+  {
+    let pg = firstSlidePage, k = 0;
+    for (const s of sections) {
+      rows[k++]!.page = pg; // section heading -> its section page
+      pg += 1;
+      for (const e of s.items) { rows[k++]!.page = pg; pg += e.pages; }
     }
   }
 
@@ -112,7 +148,7 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
     const p = newPage(doc);
     frame(p);
     g.text(p, t === 0 ? "目次" : "目次（続き）", 70, 44, 34, NAVY, true);
-    rows.slice(t * PER_TOC_PAGE, (t + 1) * PER_TOC_PAGE).forEach((r, i) => {
+    tocPageRows[t]?.forEach((r, i) => {
       const top = 108 + i * 36;
       const col = hexRgb(KIND_COLOR_HEX[r.kind]);
       const pg = String(r.page);
@@ -158,6 +194,7 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
   footer(g, sum, "Azure アップデート情報", source);
 
   let done = 0;
+  const outline: { title: string; pageIndex: number; children: { title: string; pageIndex: number }[] }[] = [];
   for (const s of sections) {
     // section page: big colour icon + kind name + count
     const sp = newPage(doc);
@@ -168,8 +205,11 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
     g.text(sp, s.label, 250, 250, 64, NAVY, true);
     g.text(sp, `${s.items.length} 件`, 252, 340, 30, GRAY);
     footer(g, sp, "Azure アップデート情報", source);
+    const node = { title: `${s.label}（${s.items.length} 件）`, pageIndex: doc.getPageCount() - 1, children: [] as { title: string; pageIndex: number }[] };
+    outline.push(node);
     for (const e of s.items) {
       const src = await PDFDocument.load(await fetchPdf(e.key));
+      node.children.push({ title: e.title, pageIndex: doc.getPageCount() });
       for (const pg of await doc.copyPages(src, src.getPageIndices())) doc.addPage(pg);
       o.onProgress?.(++done, n);
     }
@@ -192,5 +232,6 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
 
   doc.setTitle("Azure アップデート情報");
   doc.setCreationDate(new Date(o.createdUtc));
+  addOutline(doc, outline);
   return doc.save();
 }

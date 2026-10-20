@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { KIND_COLOR_HEX, KIND_ICON, sectionByKind } from "../src/lib/kind-section.js";
+import { KIND_COLOR_HEX, KIND_ICON, paginateRows, sectionByKind } from "../src/lib/kind-section.js";
 import { KIND_ORDER } from "../src/lib/slide-order.js";
 import type { SlideKind } from "../src/lib/slide-kind.js";
 
@@ -31,6 +31,30 @@ function inCp932(ch: string): boolean {
   }
   return false;
 }
+
+describe("paginateRows", () => {
+  type Row = { type: "head" | "item"; id: number };
+  const build = (groups: number[]): Row[] => {
+    const rows: Row[] = [];
+    let id = 0;
+    for (const n of groups) { rows.push({ type: "head", id: id++ }); for (let i = 0; i < n; i++) rows.push({ type: "item", id: id++ }); }
+    return rows;
+  };
+  it("never strands a section heading at the bottom of a page, and keeps every row exactly once in order", () => {
+    for (let a = 1; a <= 28; a++) for (let b = 0; b <= 28; b++) for (let c = 0; c <= 28; c += 3) {
+      const rows = build([a, b, c].filter((x) => x > 0));
+      const pages = paginateRows(rows, 13);
+      expect(pages.flat().map((r) => r.id)).toEqual(rows.map((r) => r.id));
+      for (const [i, p] of pages.entries()) {
+        expect(p.length).toBeLessThanOrEqual(13);
+        if (i < pages.length - 1) expect(p[p.length - 1]!.type, `page ${i + 1} of [${a},${b},${c}] ends with a heading`).toBe("item");
+      }
+    }
+  });
+  it("returns no pages for no rows", () => {
+    expect(paginateRows([], 13)).toEqual([]);
+  });
+});
 
 describe("kind icons", () => {
   it("has a colour and a single-glyph icon for every kind", () => {
