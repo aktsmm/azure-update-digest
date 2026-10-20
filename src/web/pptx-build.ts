@@ -1,6 +1,8 @@
 import * as PptxNs from "pptxgenjs";
 import type { Slide } from "../lib/slide-html.js";
 import { CATEGORY_JA } from "../lib/slide-html.js";
+import { KIND_COLOR_HEX, KIND_ICON, sectionByKind } from "../lib/kind-section.js";
+import type { SlideKind } from "../lib/slide-kind.js";
 
 // pptxgenjs ships CJS/ESM typings that disagree under NodeNext; resolve the constructor at runtime and keep loose option types.
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -112,17 +114,36 @@ export async function buildDeckPptx(o: PptxOptions): Promise<ArrayBuffer> {
     s.addText([{ text: String(order.length), options: { fontSize: 34, bold: true, color: C.navy } }, { text: " 件", options: { fontSize: 18, color: C.gray } }], { x: 0.9, y, w: 11, h: 0.7, fontFace: FONT, margin: 0, valign: "middle" });
   }
 
-  // table of contents (paged)
+  // table of contents (paged): a heading row per kind section, each update row starts with a kind icon badge
+  const sections = sectionByKind(order);
+  type TocRow = { type: "head"; kind: SlideKind; label: string; count: number } | { type: "item"; no: number; kind: SlideKind; label: string; title: string };
+  const rows: TocRow[] = [];
+  {
+    let no = 0;
+    for (const sec of sections) {
+      rows.push({ type: "head", kind: sec.kind, label: sec.label, count: sec.items.length });
+      for (const e of sec.items) rows.push({ type: "item", no: ++no, kind: sec.kind, label: e.label, title: e.title.ja });
+    }
+  }
   const PER = 13;
-  for (let t = 0; t < Math.max(1, Math.ceil(order.length / PER)); t++) {
+  for (let t = 0; t < Math.max(1, Math.ceil(rows.length / PER)); t++) {
     const s = pptx.addSlide();
     s.background = { color: C.white };
     frame(s, "Azure アップデート情報", source);
     s.addText(t === 0 ? "目次" : "目次（続き）", { x: 0.7, y: 0.4, w: 6, h: 0.6, fontFace: FONT, fontSize: 28, bold: true, color: C.navy, margin: 0 });
-    order.slice(t * PER, (t + 1) * PER).forEach((e, i) => {
+    rows.slice(t * PER, (t + 1) * PER).forEach((r, i) => {
       const y = 1.25 + i * 0.4;
-      s.addText(`${t * PER + i + 1}.`, { x: 0.7, y, w: 0.6, h: 0.36, fontFace: FONT, fontSize: 15, bold: true, color: C.blue, margin: 0, valign: "middle" });
-      s.addText(`【${e.label}】${e.title.ja}`, { x: 1.3, y, w: 11.3, h: 0.36, fontFace: FONT, fontSize: 15, color: C.navy, margin: 0, valign: "middle", fit: "shrink" });
+      const col = KIND_COLOR_HEX[r.kind];
+      if (r.type === "head") {
+        s.addShape("rect", { x: 0.7, y, w: W - 1.4, h: 0.36, fill: { color: col }, line: { color: col, width: 0 } });
+        s.addText(`${KIND_ICON[r.kind]}  ${r.label}（${r.count} 件）`, { x: 0.85, y, w: W - 1.7, h: 0.36, fontFace: FONT, fontSize: 15, bold: true, color: C.white, margin: 0, valign: "middle" });
+      } else {
+        // left-edge kind icon (small colour badge), then number and title
+        s.addShape("rect", { x: 0.7, y: y + 0.02, w: 0.32, h: 0.32, fill: { color: col }, line: { color: col, width: 0 } });
+        s.addText(KIND_ICON[r.kind], { x: 0.7, y: y + 0.02, w: 0.32, h: 0.32, fontFace: FONT, fontSize: 12, bold: true, color: C.white, margin: 0, align: "center", valign: "middle" });
+        s.addText(`${r.no}.`, { x: 1.1, y, w: 0.6, h: 0.36, fontFace: FONT, fontSize: 15, bold: true, color: C.blue, margin: 0, valign: "middle" });
+        s.addText(r.title, { x: 1.75, y, w: 10.85, h: 0.36, fontFace: FONT, fontSize: 15, color: C.navy, margin: 0, valign: "middle", fit: "shrink" });
+      }
     });
   }
 
@@ -147,7 +168,18 @@ export async function buildDeckPptx(o: PptxOptions): Promise<ArrayBuffer> {
     table([...kinds], 0.9, 4.8);
     table([...cats].sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1)).map(([k, v]) => [labels[k] ?? k, v] as [string, number]), 6.9, 5.5);  }
 
-  for (const sl of order) addUpdateSlide(pptx, sl, labels);
+  for (const sec of sections) {
+    // section slide: big colour icon + kind name + count
+    const ss = pptx.addSlide();
+    ss.background = { color: C.white };
+    frame(ss, "Azure アップデート情報", source);
+    const col = KIND_COLOR_HEX[sec.kind];
+    ss.addShape("rect", { x: 1.0, y: 2.4, w: 1.6, h: 1.6, fill: { color: col }, line: { color: col, width: 0 } });
+    ss.addText(KIND_ICON[sec.kind], { x: 1.0, y: 2.4, w: 1.6, h: 1.6, fontFace: FONT, fontSize: 60, bold: true, color: C.white, margin: 0, align: "center", valign: "middle" });
+    ss.addText(sec.label, { x: 3.0, y: 2.35, w: 9, h: 1.0, fontFace: FONT, fontSize: 44, bold: true, color: C.navy, margin: 0, valign: "middle" });
+    ss.addText(`${sec.items.length} 件`, { x: 3.0, y: 3.4, w: 9, h: 0.6, fontFace: FONT, fontSize: 24, color: C.gray, margin: 0, valign: "middle" });
+    for (const sl of sec.items) addUpdateSlide(pptx, sl, labels);
+  }
 
   // ending
   {

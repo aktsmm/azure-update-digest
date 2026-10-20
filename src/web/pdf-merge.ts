@@ -1,5 +1,7 @@
 import { PDFDocument, concatTransformationMatrix, PDFString, pushGraphicsState, rgb, type PDFFont, type PDFPage } from "pdf-lib";
 import fontkit from "@pdf-lib/fontkit";
+import { KIND_COLOR_HEX, KIND_ICON, sectionByKind } from "../lib/kind-section.js";
+import type { SlideKind } from "../lib/slide-kind.js";
 
 export interface SlideEntry { key: string; kind: string; label: string; title: string; publishedJst: string; categories: string[]; pages: number }
 export interface DeckOptions {
@@ -18,6 +20,7 @@ const CYAN = rgb(0x50 / 255, 0xe6 / 255, 1);
 const TINT = rgb(0xea / 255, 0xf3 / 255, 0xfc / 255);
 const GRAY = rgb(0x3d / 255, 0x4a / 255, 0x5c / 255);
 const WHITE = rgb(1, 1, 1);
+const hexRgb = (h: string) => rgb(parseInt(h.slice(0, 2), 16) / 255, parseInt(h.slice(2, 4), 16) / 255, parseInt(h.slice(4, 6), 16) / 255);
 const PER_TOC_PAGE = 13;
 // Chrome writes the 1280x720 px slides as 960x540 pt; draw the extra pages in px units on the same page size.
 const PT = 0.75;
@@ -78,8 +81,22 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
   const g = new Painter(await doc.embedFont(fontBytes, { subset: false }));
   const source = "出典: Microsoft Azure Updates ／ Microsoft Learn";
   const n = o.entries.length;
-  const tocPages = Math.max(1, Math.ceil(n / PER_TOC_PAGE));
+  const sections = sectionByKind(o.entries.map((e) => ({ ...e, kind: e.kind as SlideKind })));
+  // contents rows: one heading row per kind section, then its updates (a section page precedes each kind's slides)
+  type TocRow = { type: "head"; kind: SlideKind; label: string; count: number; page: number } | { type: "item"; no: number; kind: SlideKind; label: string; title: string; page: number };
+  const tocPagesFor = (rows: number) => Math.max(1, Math.ceil(rows / PER_TOC_PAGE));
+  const rowCount = n + sections.length;
+  const tocPages = tocPagesFor(rowCount);
   const firstSlidePage = 1 + tocPages + 1 + 1;
+  const rows: TocRow[] = [];
+  {
+    let pg = firstSlidePage, no = 0;
+    for (const s of sections) {
+      rows.push({ type: "head", kind: s.kind, label: s.label, count: s.items.length, page: pg });
+      pg += 1; // the section page
+      for (const e of s.items) { rows.push({ type: "item", no: ++no, kind: s.kind, label: e.label, title: e.title, page: pg }); pg += e.pages; }
+    }
+  }
 
   const cover = newPage(doc);
   tint(cover, 910); frame(cover);
@@ -91,18 +108,27 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
   g.text(cover, " 件", 96 + g.width(String(n), 44), y + 16, 26, GRAY);
   footer(g, cover, `作成日 ${o.createdUtc.slice(0, 10)}（UTC）`, source);
 
-  let page = firstSlidePage;
   for (let t = 0; t < tocPages; t++) {
     const p = newPage(doc);
     frame(p);
     g.text(p, t === 0 ? "目次" : "目次（続き）", 70, 44, 34, NAVY, true);
-    o.entries.slice(t * PER_TOC_PAGE, (t + 1) * PER_TOC_PAGE).forEach((e, i) => {
+    rows.slice(t * PER_TOC_PAGE, (t + 1) * PER_TOC_PAGE).forEach((r, i) => {
       const top = 108 + i * 36;
-      g.text(p, `${t * PER_TOC_PAGE + i + 1}.`, 70, top, 20, BLUE, true);
-      const pg = String(page);
-      g.text(p, g.fit(`【${e.label}】${e.title}`, 20, W - 70 - 120 - 130), 120, top, 20, NAVY);
-      g.text(p, pg, W - 70 - g.width(pg, 20), top, 20, GRAY);
-      page += e.pages;
+      const col = hexRgb(KIND_COLOR_HEX[r.kind]);
+      const pg = String(r.page);
+      if (r.type === "head") {
+        // section heading: a wide colour band with the kind icon, name and count
+        p.drawRectangle({ x: 70, y: H - top - 26, width: W - 140, height: 30, color: col });
+        g.text(p, `${KIND_ICON[r.kind]}  ${r.label}（${r.count} 件）`, 84, top, 20, WHITE, true);
+        g.text(p, pg, W - 70 - 14 - g.width(pg, 20), top, 20, WHITE);
+      } else {
+        // left-edge kind icon (small colour badge), then number and title
+        p.drawRectangle({ x: 70, y: H - top - 24, width: 26, height: 26, color: col });
+        g.text(p, KIND_ICON[r.kind], 70 + (26 - g.width(KIND_ICON[r.kind], 16)) / 2, top + 4, 16, WHITE, true);
+        g.text(p, `${r.no}.`, 106, top + 1, 20, BLUE, true);
+        g.text(p, g.fit(r.title, 20, W - 160 - 90 - g.width(pg, 20)), 160, top + 1, 20, NAVY);
+        g.text(p, pg, W - 70 - g.width(pg, 20), top + 1, 20, GRAY);
+      }
     });
     footer(g, p, "Azure アップデート情報", source);
   }
@@ -132,10 +158,21 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
   footer(g, sum, "Azure アップデート情報", source);
 
   let done = 0;
-  for (const e of o.entries) {
-    const src = await PDFDocument.load(await fetchPdf(e.key));
-    for (const pg of await doc.copyPages(src, src.getPageIndices())) doc.addPage(pg);
-    o.onProgress?.(++done, n);
+  for (const s of sections) {
+    // section page: big colour icon + kind name + count
+    const sp = newPage(doc);
+    frame(sp);
+    const col = hexRgb(KIND_COLOR_HEX[s.kind]);
+    sp.drawRectangle({ x: 96, y: H - 350, width: 120, height: 120, color: col });
+    g.text(sp, KIND_ICON[s.kind], 96 + (120 - g.width(KIND_ICON[s.kind], 80)) / 2, 262, 80, WHITE, true);
+    g.text(sp, s.label, 250, 250, 64, NAVY, true);
+    g.text(sp, `${s.items.length} 件`, 252, 340, 30, GRAY);
+    footer(g, sp, "Azure アップデート情報", source);
+    for (const e of s.items) {
+      const src = await PDFDocument.load(await fetchPdf(e.key));
+      for (const pg of await doc.copyPages(src, src.getPageIndices())) doc.addPage(pg);
+      o.onProgress?.(++done, n);
+    }
   }
 
   const end = newPage(doc);
