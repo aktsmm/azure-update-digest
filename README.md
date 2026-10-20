@@ -41,6 +41,7 @@ dist/             サイト・API・PDF。data/ から常に再生成可能     
 | `token-check.yml` | AI なし。`COPILOT_GITHUB_TOKEN` が有効か・期限が 14 日以内でないかを確認し、問題があれば Issue で通知（値は出力しない） | 毎週月曜 **09:20 JST**（日曜 00:20 UTC） |
 | `heal-on-failure.yml` | AI なし。収集・公開・自動マージ・スライド配布のワークフローが失敗したら、隔週の保守を待たずに `maintain` を起動（6 時間以内に動いていれば何もしない） | 上記ワークフローの失敗時 |
 | `pipeline-status.yml` | AI なし。Issue「Pipeline status」を 1 つだけ保ち、データ件数・要約とスライドの進み具合・各ワークフローの成否・開いている PR を毎日更新（`npm run health` の結果を整形） | 毎日 **06:10 JST**（21:10 UTC） |
+| `full-tests.yml` | AI なし。**main で**型・データ検証・スライド検証・全テスト（ビルドとリンク切れ検査を含む）を毎日実行。CI は PR のときしか走らず、収集や自動マージによるデータ更新だけで起きる不具合は次の PR まで見つからないため。失敗すると `heal-on-failure` が `maintain` を起動 | 毎日 **06:30 JST**（21:30 UTC） |
 | `pages.yml` | validate → build → GitHub Pages 公開（失敗時は既存公開物を維持） | 呼び出し / data 等の push |
 | `ci.yml` | typecheck / test / validate / build | PR |
 

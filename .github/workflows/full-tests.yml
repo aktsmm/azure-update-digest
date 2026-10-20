@@ -1,0 +1,39 @@
+name: Full tests
+
+# コードを変えていなくても、データやサイトが壊れていないかを毎日確かめる（AI は使わない）。
+# CI は PR のときしか走らず、main へのデータ更新（収集・自動マージ）だけで起きる不具合は
+# 次の PR まで見つからないため、main で型・テスト・データ検証・スライド検証・ビルドを通す。
+# 失敗すると heal-on-failure が保守エージェントを起動し、状況レポートにも出る。
+# 毎日 06:30 JST（21:30 UTC）。実行は遅れることがある。
+on:
+  schedule:
+    - cron: "30 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: full-tests
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - name: Validate data and slides
+        run: |
+          npm run validate
+          npm run validate:slides
+      - name: Run the full test suite (builds the site and checks links)
+        run: npm test
