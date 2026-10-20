@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "canonicalKey": "573917",
+  "sourceFingerprint": "9396b2ebf555e483e50621d2419fb4d3ffa8bf49d8f99630852e46f4a82505d2",
+  "titleJa": "Azure DNS と Traffic Manager の連携による DNS ベース負荷分散が GA に",
+  "summaryJa": "Azure DNS のレコードセットを Traffic Manager プロファイルに直接関連付けられるようになり、DNS ベースの負荷分散が一般提供（GA）されました。trafficmanager.net を指す CNAME レコードが不要になり、追加の CNAME 参照が省かれて DNS ルックアップの遅延が減ります。署名されていない trafficmanager.net が解決経路から外れるため、負荷分散されたレコードでも DNSSEC と互換性を保てます。",
+  "generatedBy": "gh-aw:summarize",
+  "generatedAt": "2026-10-20T05:15:00Z"
+}
