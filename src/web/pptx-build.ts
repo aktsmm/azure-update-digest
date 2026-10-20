@@ -263,14 +263,17 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
     return gl + sug.reduce((a, p) => a + panelHeight(p, sp, sideW) + 0.08, 0);
   };
   // the two columns are fitted independently: the main column grows while the right column keeps its own (usually smaller) size
-  const STEPS = [18, 17, 16, 15, 14.5, 14, 13.5, 13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9];
-  let pt = 9, sp = 9;
+  const STEPS = [18, 17, 16, 15, 14.5, 14, 13.5, 13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9, 8.5, 8];
+  let pt = 8, sp = 8;
   for (const cand of STEPS) { if (mainFor(cand).total <= avail) { pt = cand; break; } }
   for (const cand of STEPS.filter((x) => x <= 16)) { if (sideFor(cand) <= avail) { sp = cand; break; } }
   // audit hook: report slides whose estimated content does not fit even at the smallest font step
   const audit = (globalThis as { __PPTX_FIT_AUDIT__?: { key: string; pt: number; sp: number; mainOver: boolean; sideOver: boolean }[] }).__PPTX_FIT_AUDIT__;
-  audit?.push({ key: sl.key, pt, sp, mainOver: mainFor(9).total > avail, sideOver: sideFor(9) > avail });
-  const fitFor = (p: number) => ({ baH: mainFor(p).baH });
+  audit?.push({ key: sl.key, pt, sp, mainOver: mainFor(8).total > avail, sideOver: sideFor(8) > avail });
+  // when even the 9pt floor is estimated too tall, compress every block (and gap) so the column ends above the footer; text boxes use fit: shrink
+  const k = Math.min(1, avail / mainFor(pt).total);
+  const gap = 0.08 * k;
+  const fitFor = (p: number) => ({ baH: mainFor(p).baH * k });
   const mainPt = pt;
   const drawPanel = (p: Panel, x: number, y: number, w: number, h: number, pt = mainPt) => {
     const col = p.tone === "warn" ? C.red : p.tone === "sug" ? "A8710F" : "0B6BCB";
@@ -297,12 +300,12 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
       s.addShape("roundRect", { x: ax, y: bt, w: aw, h: bh, fill: { color: "E8F5EC" }, line: { color: C.green, width: 1 }, rectRadius: 0.05 });
       s.addText([{ text: ba.before ? "After" : "できるようになること", options: { bold: true, fontSize: pt - 1.5, color: C.green, breakLine: true } }, ...runs(ba.after.text, { fontSize: pt })], { x: ax + 0.08, y: bt + 0.03, w: aw - 0.16, h: bh - 0.06, fontFace: FONT, color: "1F2A37", margin: 0, valign: "top", fit: "shrink" });
     }
-    y += f.baH + 0.08;
+    y += f.baH + gap;
   }
-  for (const p of core) { const h = panelHeight(p, pt, mainW); drawPanel(p, M, y, mainW, h); y += h + 0.08; }
+  for (const p of core) { const h = panelHeight(p, pt, mainW) * k; drawPanel(p, M, y, mainW, h); y += h + gap; }
   if (detail.length) {
     const cols = Math.min(3, detail.length);
-    const h = Math.max(...detail.map((p) => panelHeight(p, pt, detW)));
+    const h = Math.max(...detail.map((p) => panelHeight(p, pt, detW))) * k;
     detail.slice(0, 3).forEach((p, i) => drawPanel(p, M + i * (detW + 0.1), y, detW, h));
   }
 
