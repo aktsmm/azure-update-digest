@@ -9,8 +9,16 @@ describe("pptx export", () => {
     const bytes = await buildDeckPptx({ slides: deck.slides, periodLabel: "2026-10-01 〜 2026-10-31", totalInPeriod: 28, createdUtc: "2026-10-14T12:00:00Z" });
     const zip = await JSZip.loadAsync(bytes);
     const slideFiles = Object.keys(zip.files).filter((f) => /^ppt\/slides\/slide\d+\.xml$/.test(f));
-    expect(slideFiles).toHaveLength(3 + deck.slides.length + 1);
+    // cover + toc + summary + one section slide per kind present + one slide per update + ending
+    const kinds = new Set(deck.slides.map((s: { kind: string }) => s.kind));
+    expect(slideFiles).toHaveLength(3 + kinds.size + deck.slides.length + 1);
     const all = (await Promise.all(slideFiles.map((f) => zip.file(f)!.async("string")))).join("\n");
+    // the contents page lists a heading per kind with its count, and no technical-genre tags
+    const toc = await zip.file("ppt/slides/slide2.xml")!.async("string");
+    for (const k of kinds as Set<string>) {
+      const n = deck.slides.filter((s: { kind: string }) => s.kind === k).length;
+      expect(toc).toContain(`${n} 件）`);
+    }
     expect(all).toContain("Azure アップデート情報");
     expect(all).toContain("© 2026 yamapan");
     for (const s of deck.slides) expect(all).toContain(s.title.ja.slice(0, 8));
