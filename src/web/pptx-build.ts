@@ -267,15 +267,22 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
   };
   // the two columns are fitted independently: the main column grows while the right column keeps its own (usually smaller) size
   const STEPS = [20, 19, 18, 17, 16, 15, 14.5, 14, 13.5, 13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9, 8.5, 8];
+  // too much for the body even at the smallest size: drop trailing bullets, detail panels first, so text never overflows its box (the PDF keeps the full text)
+  for (let guard = 0; guard < 20 && mainFor(8).total * 0.9 > avail; guard++) {
+    const from = (detail.some((p) => p.items.length > 1) ? detail : core).filter((p) => p.items.length > 1);
+    const longest = from.sort((a, b) => b.items.length - a.items.length)[0];
+    if (!longest) break;
+    longest.items.pop();
+  }
   let pt = 8, sp = 8;
   for (const cand of STEPS) { if (mainFor(cand).total <= avail) { pt = cand; break; } }
   for (const cand of STEPS.filter((x) => x <= 16)) { if (sideFor(cand) * 1.04 <= avail) { sp = cand; break; } }
   // audit hook: report slides whose estimated content does not fit even at the smallest font step
-  const audit = (globalThis as { __PPTX_FIT_AUDIT__?: { key: string; pt: number; sp: number; mainOver: boolean; sideOver: boolean }[] }).__PPTX_FIT_AUDIT__;
-  audit?.push({ key: sl.key, pt, sp, mainOver: mainFor(8).total > avail, sideOver: sideFor(8) > avail });
-  // when even the 9pt floor is estimated too tall, compress every block (and gap) so the column ends above the footer; text boxes use fit: shrink
+    // when even the 9pt floor is estimated too tall, compress every block (and gap) so the column ends above the footer; text boxes use fit: shrink
   const k = Math.min(1.12, avail / mainFor(pt).total);
   const mainBottom = bodyTop + mainFor(pt).total * k;
+  const audit = (globalThis as { __PPTX_FIT_AUDIT__?: { key: string; pt: number; sp: number; k: number; titlePt: number; sideRatio: number }[] }).__PPTX_FIT_AUDIT__;
+  audit?.push({ key: sl.key, pt, sp, k, titlePt, sideRatio: sideFor(sp) / avail });
   const gap = 0.08 * k;
   const fitFor = (p: number) => ({ baH: mainFor(p).baH * k });
   const mainPt = pt;
