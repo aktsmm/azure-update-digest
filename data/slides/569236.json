@@ -57,8 +57,7 @@
           "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
           "items": [
             { "text": "ハードウェア非依存の VBS エンクレーブ（構成証明は不要）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "代替案として SQL Server on Confidential VMs も検討できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "preferredEnclaveType を VBS に設定して有効化する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/always-encrypted-enclaves-enable", "locator": "VBS エンクレーブ タブ", "retrievedAt": "2026-10-14T19:45:00Z" }] }
+            { "text": "代替案として SQL Server on Confidential VMs も検討できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
           ]
         },
         {

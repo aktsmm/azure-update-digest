@@ -73,7 +73,7 @@ function tintShape(s: PptxSlide, topLeft: number) {
 }
 
 function panelHeight(p: Panel, pt: number, w: number): number {
-  const body = p.items.reduce((a, t) => a + lines(t, pt, w - 0.25) * lineH(pt), 0);
+  const body = p.items.reduce((a, t) => a + lines(t, pt, w - 0.34) * lineH(pt), 0);
   return 0.34 + body + 0.1 + (p.items.length - 1) * 0.03;
 }
 
@@ -206,7 +206,9 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
   const dateLine = `掲載 ${sl.meta.publishedJst}${ring ? ` ｜ ${sl.kind === "retirement" ? "終了" : "時期"} ${dateJa(ring)}` : ""}`;
 
   // header
-  s.addText(sl.title.ja, { x: M, y: 0.22, w: W - M - 2.5, h: 0.5, fontFace: FONT, fontSize: 24, bold: true, color: "0B2A4A", margin: 0, fit: "shrink" });
+  // PowerPoint does not apply fit: shrink until the text is edited, so pick the largest size that keeps the title on one line
+  const titlePt = [24, 22, 21, 20, 19, 18, 17, 16].find((x) => lines(sl.title.ja, x * 1.06, W - M - 2.5) === 1) ?? 16;
+  s.addText(sl.title.ja, { x: M, y: 0.22, w: W - M - 2.5, h: 0.5, fontFace: FONT, fontSize: titlePt, bold: true, color: "0B2A4A", margin: 0, fit: "shrink" });
   if (sl.title.subtitleJa) s.addText(`― ${sl.title.subtitleJa}`, { x: M, y: 0.74, w: W - M - 2.5, h: 0.32, fontFace: FONT, fontSize: 13, bold: true, color: C.navy, margin: 0, fit: "shrink" });
   s.addText([{ text: sl.title.en, options: { color: "8A95A6" } }, { text: `　${dateLine}`, options: { color: C.gray, bold: true } }], { x: M, y: 1.06, w: W - 2 * M, h: 0.26, fontFace: FONT, fontSize: 9.5, margin: 0, fit: "shrink" });
   s.addShape("roundRect", { x: W - M - 1.9, y: 0.25, w: 1.9, h: 0.42, fill: { color: KIND_COLOR[sl.kind] ?? C.mute }, line: { color: KIND_COLOR[sl.kind] ?? C.mute, width: 0 }, rectRadius: 0.2 });
@@ -258,27 +260,29 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
     const detH = detail.length ? Math.max(...detail.map((p) => panelHeight(p, pt, detW))) + 0.08 : 0;
     return { total: baH + (ba ? 0.08 : 0) + coreH + detH, baH };
   };
+  const glossH = (sp: number) => gloss.reduce((a, g) => a + lineH(sp) * lines(`${g.term}  ${TYPE_JA[g.type] ?? g.type}`, sp * 1.08, sideW - 0.24) + lineH(sp - 1) * lines(g.oneLine.text, sp - 1, sideW - 0.24) + 0.09, 0.42);
   const sideFor = (sp: number) => {
-    const gl = gloss.length ? gloss.reduce((a, g) => a + lineH(sp) * (1 + lines(g.oneLine.text, sp - 1, sideW - 0.1)) + 0.05, 0.4) + 0.08 : 0;
+    const gl = gloss.length ? glossH(sp) + 0.08 : 0;
     return gl + sug.reduce((a, p) => a + panelHeight(p, sp, sideW) + 0.08, 0);
   };
   // the two columns are fitted independently: the main column grows while the right column keeps its own (usually smaller) size
-  const STEPS = [18, 17, 16, 15, 14.5, 14, 13.5, 13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9, 8.5, 8];
+  const STEPS = [20, 19, 18, 17, 16, 15, 14.5, 14, 13.5, 13, 12.5, 12, 11.5, 11, 10.5, 10, 9.5, 9, 8.5, 8];
   let pt = 8, sp = 8;
   for (const cand of STEPS) { if (mainFor(cand).total <= avail) { pt = cand; break; } }
-  for (const cand of STEPS.filter((x) => x <= 16)) { if (sideFor(cand) <= avail) { sp = cand; break; } }
+  for (const cand of STEPS.filter((x) => x <= 16)) { if (sideFor(cand) * 1.04 <= avail) { sp = cand; break; } }
   // audit hook: report slides whose estimated content does not fit even at the smallest font step
   const audit = (globalThis as { __PPTX_FIT_AUDIT__?: { key: string; pt: number; sp: number; mainOver: boolean; sideOver: boolean }[] }).__PPTX_FIT_AUDIT__;
   audit?.push({ key: sl.key, pt, sp, mainOver: mainFor(8).total > avail, sideOver: sideFor(8) > avail });
   // when even the 9pt floor is estimated too tall, compress every block (and gap) so the column ends above the footer; text boxes use fit: shrink
-  const k = Math.min(1, avail / mainFor(pt).total);
+  const k = Math.min(1.12, avail / mainFor(pt).total);
+  const mainBottom = bodyTop + mainFor(pt).total * k;
   const gap = 0.08 * k;
   const fitFor = (p: number) => ({ baH: mainFor(p).baH * k });
   const mainPt = pt;
   const drawPanel = (p: Panel, x: number, y: number, w: number, h: number, pt = mainPt) => {
     const col = p.tone === "warn" ? C.red : p.tone === "sug" ? "A8710F" : "0B6BCB";
     s.addShape("roundRect", { x, y, w, h, fill: { color: p.tone === "warn" ? "FFF4F4" : p.tone === "sug" ? "FFF8E8" : C.white }, line: { color: p.tone === "warn" ? C.red : p.tone === "sug" ? "D9A441" : C.line, width: 1.25, ...(p.tone === "sug" ? { dashType: "dash" } : {}) }, rectRadius: 0.06 });
-    s.addText(p.heading, { x: x + 0.1, y: y + 0.03, w: w - 0.2, h: 0.3, fontFace: FONT, fontSize: pt + 1.5, bold: true, color: col, margin: 0, valign: "middle" });
+    s.addText(p.heading, { x: x + 0.1, y: y + 0.03, w: w - 0.2, h: 0.3, fontFace: FONT, fontSize: Math.min(pt + 1.5, 16), bold: true, color: col, margin: 0, valign: "middle" });
     s.addText(p.items.map((t) => ({ text: t, options: { bullet: { indent: 12 }, breakLine: true } })), { x: x + 0.12, y: y + 0.34, w: w - 0.24, h: h - 0.38, fontFace: FONT, fontSize: pt, color: "1F2A37", valign: "top", margin: 0, paraSpaceAfter: 2, fit: "shrink" });
   };
 
@@ -312,7 +316,7 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
   // side column: glossary then suggestion
   let sy = bodyTop;
   if (gloss.length) {
-    const gh = gloss.reduce((a, g) => a + lineH(sp) * (1 + lines(g.oneLine.text, sp - 1, sideW - 0.1)) + 0.05, 0.4);
+    const gh = Math.max(glossH(sp), sug.length ? 0 : mainBottom - bodyTop);
     s.addShape("roundRect", { x: sideX, y: sy, w: sideW, h: gh, fill: { color: "F1F7FF" }, line: { color: "7AA7D9", width: 1.25 }, rectRadius: 0.06 });
     s.addText("用語ミニ解説", { x: sideX + 0.1, y: sy + 0.03, w: sideW - 0.2, h: 0.3, fontFace: FONT, fontSize: sp + 1.5, bold: true, color: "0B6BCB", margin: 0, valign: "middle" });
     s.addText(gloss.flatMap((g) => [
