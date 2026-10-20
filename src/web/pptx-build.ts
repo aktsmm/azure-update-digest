@@ -238,7 +238,7 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
     bodyTop += 0.58;
   }
 
-  const footerTop = H - 0.98;
+  const footerTop = H - 0.84;
   const mainW = 8.55, sideX = M + mainW + 0.15, sideW = W - M - sideX;
   const isSug = (p: Slide["panels"][number]) => (p.items ?? []).length > 0 && (p.items ?? []).every((i) => i.assertion === "recommendation");
   const shown = sl.panels.filter((p) => p.availability === "present" && (p.items ?? []).length);
@@ -335,11 +335,11 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
     { text: "発表 ", options: { bold: true, color: C.gray } }, link("Azure Updates", sl.references.announcement), { text: "", options: { breakLine: true } },
     ...(learn.length ? [...detailRuns, { text: "", options: { breakLine: true } }] : []),
     { text: `${cats ? `分類: ${cats}　｜　` : ""}ID ${sl.key}`, options: { color: C.mute } },
-  ], { x: M, y: footerTop + 0.06, w: 9.2, h: 0.8, fontFace: FONT, fontSize: 9.5, margin: 0, valign: "top", fit: "shrink" });
+  ], { x: M, y: footerTop + 0.06, w: 9.2, h: 0.7, fontFace: FONT, fontSize: 9.5, margin: 0, valign: "top", fit: "shrink" });
   const st = sl.region ? STAMP[sl.region.stamp] : undefined;
   if (st) {
-    s.addShape("roundRect", { x: W - M - 3.6, y: footerTop + 0.1, w: 3.6, h: 0.72, fill: { color: st.color }, line: { color: st.color, width: 0 }, rectRadius: 0.08 });
-    s.addText([{ text: st.text, options: { bold: true, fontSize: 13, breakLine: true } }, ...(sl.region?.note ? [{ text: sl.region.note, options: { fontSize: 8 } }] : [])], { x: W - M - 3.55, y: footerTop + 0.12, w: 3.5, h: 0.68, fontFace: FONT, color: C.white, margin: 0, valign: "middle", fit: "shrink" });
+    s.addShape("roundRect", { x: W - M - 3.6, y: footerTop + 0.06, w: 3.6, h: 0.7, fill: { color: st.color }, line: { color: st.color, width: 0 }, rectRadius: 0.08 });
+    s.addText([{ text: st.text, options: { bold: true, fontSize: 13, breakLine: true } }, ...(sl.region?.note ? [{ text: sl.region.note, options: { fontSize: 8 } }] : [])], { x: W - M - 3.55, y: footerTop + 0.08, w: 3.5, h: 0.66, fontFace: FONT, color: C.white, margin: 0, valign: "middle", fit: "shrink" });
   }
 
   // notes: anticipated Q&A for the presenter, then sources for reviewers
