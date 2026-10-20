@@ -1,0 +1,185 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577165"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-20T19:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "577165",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Monitor ワークスペースの「Metrics usage insights」が GA",
+        "subtitleJa": "メトリック使用量の要因を可視化し、未使用メトリックの把握やコスト最適化に役立てられます",
+        "en": "Generally Available: Metrics usage insights for Azure Monitor workspace"
+      },
+      "meta": {
+        "publishedJst": "2026-10-20",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Monitor"],
+        "categories": ["ops-governance", "devtools"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Monitor ワークスペース**（Prometheus メトリックなど）を運用している方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "メトリックの使用量・未使用メトリック・取り込み量の変化を把握し、コストとキャパシティを見直せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "コスト最適化や容量計画をしたい場合に有効化を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "使用状況データを Log Analytics ワークスペースに送り、分析情報として表示",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "冒頭", "retrievedAt": "2026-10-20T19:40:00Z" }]
+            },
+            {
+              "text": "時系列・イベントの使用量、調整の制限、使用傾向、未使用メトリックを確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "冒頭", "retrievedAt": "2026-10-20T19:40:00Z" }]
+            },
+            {
+              "text": "Log Analytics に送るデータ・クエリ・ストレージに追加料金なし",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "冒頭", "retrievedAt": "2026-10-20T19:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "既存ワークスペース: [診断設定] → [診断設定の追加] で Metrics Usage Details を選び Log Analytics に送信",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "既存のワークスペースに対して有効にする", "retrievedAt": "2026-10-20T19:40:00Z" }]
+            },
+            {
+              "text": "新規作成時は [モニタリング] タブで [インサイトを有効にする] を選択",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "作成時に有効にする", "retrievedAt": "2026-10-20T19:40:00Z" }]
+            },
+            {
+              "text": "ワークスペースの [分析情報] または [概要] から Metrics usage insights を開く",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "メトリックの使用状況に関する分析情報を開く", "retrievedAt": "2026-10-20T19:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・提供範囲", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "送信先の Log Analytics ワークスペースが必要（診断設定で構成）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "メトリクス利用状況分析を有効にする", "retrievedAt": "2026-10-20T19:40:00Z" }]
+            },
+            {
+              "text": "Azure Monitor ワークスペースが GA のパブリック リージョンで利用可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "サポートされているリージョン", "retrievedAt": "2026-10-20T19:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "ダッシュボードの内容", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "制限と使用 / ワークスペースを探索 / 未使用のメトリック / 取り込み量の変更 の各ページ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "ダッシュボード", "retrievedAt": "2026-10-20T19:40:00Z" }]
+            },
+            {
+              "text": "Metrics Usage Insights ブックのクエリを編集してカスタマイズ可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "高度な分析", "retrievedAt": "2026-10-20T19:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "未使用のメトリックを見つけ、取り込みから外して不要な使用量を減らす",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "未使用のメトリック", "retrievedAt": "2026-10-20T19:40:00Z" }]
+            },
+            {
+              "text": "複数ワークスペースのデータを 1 つの Log Analytics に集約して横断的に確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "ヒント", "retrievedAt": "2026-10-20T19:40:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "metrics-usage-insights", "term": "Metrics usage insights", "type": "feature",
+          "oneLine": { "text": "メトリックの使用状況とコスト最適化の機会に関する分析情報を得られる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "冒頭", "retrievedAt": "2026-10-20T19:40:00Z" }] }
+        },
+        {
+          "termKey": "diagnostic-settings", "term": "診断設定", "type": "term",
+          "oneLine": { "text": "ワークスペースのデータを Log Analytics ワークスペースなどへ送るための設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "メトリクス利用状況分析を有効にする", "retrievedAt": "2026-10-20T19:40:00Z" }] }
+        },
+        {
+          "termKey": "active-time-series", "term": "アクティブな時系列", "type": "term",
+          "oneLine": { "text": "1 分あたりに取り込まれた時系列の数。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "メトリックの使用状況に関する分析情報を開く", "retrievedAt": "2026-10-20T19:40:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-20T19:40:00Z" }] }
+        }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Monitor ワークスペースが GA のパブリック リージョンで利用可能。同ワークスペースは Japan East / Japan West に対応",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "サポートされているリージョン", "retrievedAt": "2026-10-20T19:40:00Z" },
+          { "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-overview", "locator": "Regional availability", "retrievedAt": "2026-10-20T19:40:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577165",
+        "learn": [
+          { "title": "メトリックの使用状況に関する分析情報", "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Azure Monitor ワークスペースが GA のパブリック リージョンで利用でき、同ワークスペースは Japan East / Japan West に対応しています。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights" },
+              { "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-overview" }
+            ]
+          },
+          {
+            "q": "追加費用はかかりますか？",
+            "a": "Log Analytics ワークスペースに送信されるデータ、クエリ、ストレージに追加料金は発生しないと案内されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights" }]
+          },
+          {
+            "q": "利用するには何が必要ですか？",
+            "a": "診断設定を作成し、Metrics Usage Details を Log Analytics ワークスペースに送信します。新規作成時は [インサイトを有効にする] でも設定できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
