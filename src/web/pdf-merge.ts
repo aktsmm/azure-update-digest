@@ -88,7 +88,7 @@ export async function buildDeckPdf(o: DeckOptions, fontBytes: ArrayBuffer, fetch
   let y = 366;
   if (o.periodLabel) { g.text(cover, `対象期間 ${o.periodLabel}`, 96, y, 28, BLUE, true); y += 52; }
   g.text(cover, String(n), 96, y, 44, NAVY, true);
-  g.text(cover, o.totalInPeriod !== null ? ` 件（期間内の更新 ${o.totalInPeriod} 件のうちスライド作成済み）` : " 件", 96 + g.width(String(n), 44), y + 16, 26, GRAY);
+  g.text(cover, " 件", 96 + g.width(String(n), 44), y + 16, 26, GRAY);
   footer(g, cover, `作成日 ${o.createdUtc.slice(0, 10)}（UTC）`, source);
 
   let page = firstSlidePage;

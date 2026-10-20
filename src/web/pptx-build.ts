@@ -109,7 +109,7 @@ export async function buildDeckPptx(o: PptxOptions): Promise<ArrayBuffer> {
     s.addText("Azure アップデート情報", { x: 0.9, y: 2.8, w: 11, h: 1.0, fontFace: FONT, fontSize: 48, bold: true, color: C.navy, margin: 0 });
     let y = 4.0;
     if (o.periodLabel) { s.addText(`対象期間 ${o.periodLabel}`, { x: 0.9, y, w: 10, h: 0.5, fontFace: FONT, fontSize: 22, bold: true, color: C.blue, margin: 0 }); y += 0.65; }
-    s.addText([{ text: String(order.length), options: { fontSize: 34, bold: true, color: C.navy } }, { text: o.totalInPeriod !== null ? ` 件（期間内の更新 ${o.totalInPeriod} 件のうちスライド作成済み）` : " 件", options: { fontSize: 18, color: C.gray } }], { x: 0.9, y, w: 11, h: 0.7, fontFace: FONT, margin: 0, valign: "middle" });
+    s.addText([{ text: String(order.length), options: { fontSize: 34, bold: true, color: C.navy } }, { text: " 件", options: { fontSize: 18, color: C.gray } }], { x: 0.9, y, w: 11, h: 0.7, fontFace: FONT, margin: 0, valign: "middle" });
   }
 
   // table of contents (paged)
