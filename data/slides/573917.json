@@ -1,0 +1,171 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["573917"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-20T19:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "573917",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure DNS が Traffic Manager のリンクされたレコードで DNS 負荷分散（GA）",
+        "subtitleJa": "レコードセットを Traffic Manager プロファイルに直接関連付け。CNAME 不要で DNSSEC とも両立",
+        "en": "Generally Available: Azure DNS enables DNS-based load balancing through Traffic Manager linked records"
+      },
+      "meta": {
+        "publishedJst": "2026-10-20",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure DNS", "Traffic Manager"],
+        "categories": ["networking", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Traffic Manager で DNS 負荷分散をしている、または **Azure DNS ゾーンを DNSSEC 署名したい方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "CNAME 参照が減り、DNSSEC と負荷分散を両立できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "DNSSEC 利用や新規構成で検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "エイリアス レコード方式では CNAME が trafficmanager.net に向き、追加の DNS 検索が必要。署名のない中間ホップで DNSSEC と非互換",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "どのように機能するのか / 比較表", "retrievedAt": "2026-10-20T19:35:00Z" }]
+        },
+        "after": {
+          "text": "レコードセットを Traffic Manager プロファイルに直接リンクし、中間 CNAME なしで IP を直接返す。DNSSEC の信頼チェーンも維持される",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "Benefits", "retrievedAt": "2026-10-20T19:35:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Azure DNS が Traffic Manager プロファイルを内部で解決し、IP を直接返す（DNS フラット化）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "どのように機能するのか", "retrievedAt": "2026-10-20T19:35:00Z" }]
+            },
+            {
+              "text": "ゾーン頂点（contoso.com など）でも Traffic Manager を利用できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "ゾーンApexサポート", "retrievedAt": "2026-10-20T19:35:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "レコードセットの新プロパティ trafficManagementProfile でプロファイルをリンクして宣言する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "どのように機能するのか", "retrievedAt": "2026-10-20T19:35:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "対応レコードは A / AAAA / CNAME。1 プロファイルあたり最大 50 リンク",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "サポートされているレコードの種類 / Benefits", "retrievedAt": "2026-10-20T19:35:00Z" }]
+            },
+            {
+              "text": "TTL は常にプロファイル側の値を使用。リンク中のプロファイルは削除不可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "Time-to-Live (TTL)", "retrievedAt": "2026-10-20T19:35:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "エイリアス レコードとの違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "リンク: 常にフラット化・DNSSEC 互換 / エイリアス: CNAME 型は trafficmanager.net を経由",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "比較表", "retrievedAt": "2026-10-20T19:35:00Z" }]
+            },
+            {
+              "text": "Traffic Manager 以外（Front Door 等）が対象ならエイリアス レコードを使う",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "以下の場合に別名レコードを使用する", "retrievedAt": "2026-10-20T19:35:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "DNSSEC 署名ゾーンや、trafficmanager.net を通したくない環境で推奨される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "Traffic Manager の Linked Records を次の場合に使用してください", "retrievedAt": "2026-10-20T19:35:00Z" }]
+            },
+            {
+              "text": "既存のエイリアス構成を維持したい場合はそのままでよい",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "以下の場合に別名レコードを使用する", "retrievedAt": "2026-10-20T19:35:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-dns", "term": "Azure DNS", "type": "product", "oneLine": { "text": "Azure 上で DNS ドメインのホスティングと名前解決を提供するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "冒頭", "retrievedAt": "2026-10-20T19:35:00Z" }] } },
+        { "termKey": "traffic-manager", "term": "Traffic Manager", "type": "product", "oneLine": { "text": "DNS を使ってトラフィックをエンドポイントに分散する Azure のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "冒頭", "retrievedAt": "2026-10-20T19:35:00Z" }] } },
+        { "termKey": "linked-records", "term": "リンクされたレコード", "type": "feature", "oneLine": { "text": "DNS レコードセットと Traffic Manager プロファイルを直接つなぐ Azure DNS の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "冒頭", "retrievedAt": "2026-10-20T19:35:00Z" }] } },
+        { "termKey": "dns-flattening", "term": "DNS フラット化", "type": "term", "oneLine": { "text": "Azure DNS が中間の名前を代わりに解決し、最終的な応答を直接返す処理。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "どのように機能するのか", "retrievedAt": "2026-10-20T19:35:00Z" }] } },
+        { "termKey": "dnssec", "term": "DNSSEC", "type": "term", "oneLine": { "text": "DNS 応答の署名で信頼チェーンを検証する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locator": "Benefits", "retrievedAt": "2026-10-20T19:35:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-20T19:35:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure DNS（パブリック / プライベート ゾーン）と Traffic Manager はいずれも非リージョン（グローバル）サービス",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "List of nonregional services", "retrievedAt": "2026-10-20T19:36:00Z" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "DNSSEC を使うゾーンでも利用できますか？",
+            "a": "はい。リンクされたレコードは DNSSEC の信頼チェーンを維持し、署名のない trafficmanager.net を経由しないため、署名ゾーンに適しています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records" }]
+          },
+          {
+            "q": "ゾーン頂点（contoso.com）でも使えますか？",
+            "a": "はい。IP を直接返すため、CNAME を置けないゾーン頂点でも Traffic Manager を利用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records" }]
+          },
+          {
+            "q": "既存のエイリアス レコード構成は移行が必要ですか？",
+            "a": "既存のエイリアス構成で後方互換性を維持したい場合は、そのまま使えます。新規構成ではリンクされたレコードが推奨されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Azure DNS と Traffic Manager は特定リージョンにデプロイしない非リージョン（グローバル）サービスです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=573917",
+        "learn": [{ "title": "Traffic Manager のリンクされたレコードの概要", "url": "https://learn.microsoft.com/ja-jp/azure/dns/dns-traffic-manager-linked-records", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
