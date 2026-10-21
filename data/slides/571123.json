@@ -1,0 +1,107 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571123"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T21:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "571123",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Application Gateway が HTTP/3（QUIC）に対応",
+        "subtitleJa": "フロントエンド接続を QUIC で処理し、接続確立の遅延を削減（パブリック プレビュー）",
+        "en": "Public Preview: HTTP/3 over QUIC support in Azure Application Gateway"
+      },
+      "meta": {
+        "publishedJst": "2026-09-15",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Application Gateway"],
+        "categories": ["networking", "security"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "遅延に敏感な Web / API を **Application Gateway で公開している方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "クライアント接続の確立時間短縮や、パケット損失時の応答性向上が期待できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。プレビューは SLA なしで、運用環境は非推奨", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "Important", "retrievedAt": "2026-10-21T21:40:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "HTTP/3 は Basic リスナー単位で有効化（ゲートウェイ全体ではない）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "HTTP/3の有効化", "retrievedAt": "2026-10-21T21:40:00Z" }] },
+            { "text": "設定は Azure portal か REST API（2023-02-01 以降）で行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "HTTP/3の有効化", "retrievedAt": "2026-10-21T21:40:00Z" }] },
+            { "text": "HTTP/3 はフロントエンド接続のみ。バックエンドは HTTP/1.1 のまま", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "HTTP/3の有効化", "retrievedAt": "2026-10-21T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "マルチサイト リスナー、IPv6 リスナー、相互認証は未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "制限事項", "retrievedAt": "2026-10-21T21:40:00Z" }] },
+            { "text": "WAF ゲートウェイは HTTP/3 リスナーを使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "制限事項", "retrievedAt": "2026-10-21T21:40:00Z" }] },
+            { "text": "PowerShell / CLI / Terraform は未対応（GA で対応予定）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "制限事項", "retrievedAt": "2026-10-21T21:40:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "TLS 1.3 が必須。TLS 1.3 対応の事前定義ポリシーは 2022 年版のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "HTTP/3の有効化", "retrievedAt": "2026-10-21T21:40:00Z" }] },
+            { "text": "WAF 利用有無・リスナー種別を確認し、検証環境で挙動を比較する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "http3", "term": "HTTP/3", "type": "term", "oneLine": { "text": "HTTP の最新バージョン。TCP の代わりに UDP ベースの QUIC を使う。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "冒頭", "retrievedAt": "2026-10-21T21:40:00Z" }] } },
+        { "termKey": "quic", "term": "QUIC", "type": "term", "oneLine": { "text": "UDP ベースのトランスポート プロトコル。1-RTT で接続を確立できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "冒頭", "retrievedAt": "2026-10-21T21:40:00Z" }] } },
+        { "termKey": "hol-blocking", "term": "ヘッド・オブ・ライン・ブロッキング", "type": "term", "oneLine": { "text": "パケット損失や遅延が、同じ接続上の後続パケットの配信を妨げること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "独立したHTTPストリーム", "retrievedAt": "2026-10-21T21:40:00Z" }] } },
+        { "termKey": "tls13", "term": "TLS 1.3", "type": "term", "oneLine": { "text": "QUIC に組み込まれているセキュリティ プロトコル。HTTP/3 の有効化に必要。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "HTTP/3の有効化", "retrievedAt": "2026-10-21T21:40:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（パブリック プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために全顧客へ提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-21T21:40:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Application Gateway は全リージョンで提供される基盤サービス",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-21T21:40:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571123",
+        "learn": [{ "title": "Azure Application GatewayにおけるHTTP/3サポートの概要(プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "本番環境で使えますか？",
+            "a": "プレビューは SLA なしで提供され、運用環境のワークロードには推奨されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "Important", "retrievedAt": "2026-10-21T21:40:00Z" }]
+          },
+          {
+            "q": "どう有効化しますか？",
+            "a": "Azure portal か REST API でリスナー単位に有効化します。新規作成フローでは設定できず、作成後に設定します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "HTTP/3の有効化", "retrievedAt": "2026-10-21T21:40:00Z" }]
+          },
+          {
+            "q": "WAF を使っていても有効にできますか？",
+            "a": "プレビュー中、WAF ゲートウェイは HTTP/3 リスナーを使えません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "制限事項", "retrievedAt": "2026-10-21T21:40:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
