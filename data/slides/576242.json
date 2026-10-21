@@ -1,0 +1,119 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["576242"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T21:08:13Z"
+  },
+  "slides": [
+    {
+      "key": "576242",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "VNet ピアリングのルートを抑制できる「Disable VNet peering route」",
+        "subtitleJa": "ピアリングは維持したまま、集約 UDR で NVA 経由に誘導（パブリック プレビュー）",
+        "en": "Public Preview: Disable VNet peering route"
+      },
+      "meta": {
+        "publishedJst": "2026-10-21",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "October" }],
+        "status": "In preview",
+        "products": ["Virtual Network"],
+        "categories": ["networking", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "ハブ アンド スポーク構成で **Azure Firewall / NVA 経由の通信制御**をしている方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "スポークごとの上書き UDR を減らし、ルート管理を簡素化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "ルート管理が大規模化している場合に検証", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "ピアリング ルートが集約 UDR より具体的だと選択され、トラフィックが NVA を迂回することがある",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-peering-overview", "locator": "ピアリングルート伝播を無効にするタイミング", "retrievedAt": "2026-10-21T21:00:00Z" }]
+        },
+        "after": {
+          "text": "ピアリング ルートを抑制し、集約 UDR を選択させて NVA 経由にできる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-peering-overview", "locator": "ピアリングルート伝播を無効にするタイミング", "retrievedAt": "2026-10-21T21:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "機能の範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ルート テーブルに関連付けたサブネットで、IPv4 / IPv6 のピアリング ルートを抑制", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-peering-overview", "locator": "ピアリングルート伝播を無効にする(プレビュー)", "retrievedAt": "2026-10-21T21:00:00Z" }] },
+            { "text": "disablePeeringRoute プロパティ: None（既定）/ All", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-peering-overview", "locator": "ピアリングルート抑制の仕組み", "retrievedAt": "2026-10-21T21:00:00Z" }] },
+            { "text": "設定は Azure portal / CLI / PowerShell で可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/configure-disable-peering-route-propagation", "locator": "冒頭", "retrievedAt": "2026-10-21T21:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "置き換え用 UDR や検査経路は自動作成されない。事前に構成が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-peering-overview", "locator": "ピアリングルート抑制の仕組み", "retrievedAt": "2026-10-21T21:00:00Z" }] },
+            { "text": "FW / NVA の次ホップは、送信元 NIC と同じ VNet 内に必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-peering-overview", "locator": "Limitations", "retrievedAt": "2026-10-21T21:00:00Z" }] },
+            { "text": "BareMetal Infrastructure は対象外。Terraform は AzAPI を使用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-peering-overview", "locator": "Limitations", "retrievedAt": "2026-10-21T21:00:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "検証環境でプレビュー機能を登録して設定し、有効なルートで抑制と次ホップを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "virtual-network", "term": "Azure Virtual Network", "type": "product", "oneLine": { "text": "Azure 内の仮想ネットワークで、リソース同士を接続する基盤サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-peering-overview", "locator": "冒頭", "retrievedAt": "2026-10-21T21:00:00Z" }] } },
+        { "termKey": "vnet-peering", "term": "VNet ピアリング", "type": "feature", "oneLine": { "text": "複数の仮想ネットワークを Microsoft のバックボーン上で接続する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-peering-overview", "locator": "冒頭", "retrievedAt": "2026-10-21T21:00:00Z" }] } },
+        { "termKey": "udr", "term": "UDR", "type": "term", "oneLine": { "text": "ユーザー定義ルート。通信の次ホップを利用者が指定するルート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-peering-overview", "locator": "ピアリングルート伝播を無効にする(プレビュー)", "retrievedAt": "2026-10-21T21:00:00Z" }] } },
+        { "termKey": "nva", "term": "NVA", "type": "term", "oneLine": { "text": "ネットワーク仮想アプライアンス。Azure Firewall のように通信を検査・中継する機器。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-peering-overview", "locator": "ピアリングルート伝播を無効にする(プレビュー)", "retrievedAt": "2026-10-21T21:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-21T21:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Virtual Network は全リージョンで提供される基盤サービス。機能は親サービスの提供範囲に準ずる",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-21T21:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=576242",
+        "learn": [
+          { "title": "ピアリング ルート伝播の無効化を構成する", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/configure-disable-peering-route-propagation", "locale": "ja-jp" },
+          { "title": "Azure 仮想ネットワーク ピアリング", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-peering-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "利用開始に必要な前提は？",
+            "a": "ルート テーブルと必要な UDR、同一 VNet 内の FW/NVA 次ホップ、Microsoft.Network/AllowDisablePeeringRoutes のプレビュー機能登録が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/configure-disable-peering-route-propagation" }]
+          },
+          {
+            "q": "元に戻せますか？",
+            "a": "設定を None に戻す（portal では Enable peering routes を選択）と、システム生成のピアリング ルートが復元されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/configure-disable-peering-route-propagation" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Virtual Network は基盤サービスとして全リージョンで提供されるため、日本 East / West も対象のサービスです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
