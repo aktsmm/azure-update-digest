@@ -1,0 +1,85 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569910"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-22T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "569910",
+      "kind": "announcement",
+      "kindSource": "tags",
+      "label": "アナウンス",
+      "title": {
+        "ja": "Aspire 13.5 が公開された",
+        "subtitleJa": "ダッシュボード刷新、Azure 参照の拡張、Kubernetes 永続ボリュームなどを追加",
+        "en": "Announcing: Aspire 13.5 has shipped"
+      },
+      "meta": {
+        "publishedJst": "2026-08-26",
+        "modifiedJst": "2026-08-26",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "August" }],
+        "status": null,
+        "products": [],
+        "categories": ["devtools"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Aspire で分散アプリを開発・運用している**開発者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ダッシュボードの刷新に加え、Azure 参照や Kubernetes 永続ボリュームなどの機能が増える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "新機能を使いたい場合に、13.5 の変更点を確認してアップグレードを検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "主な追加・更新", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ダッシュボードと aspire.dev サイトの刷新", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Interaction Service の拡張、スコープをまたぐ Azure 参照", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Kubernetes の永続ボリューム、apphost 内のライブ ターミナル", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "permissions", "heading": "知っておくべき点", "availability": "not-stated", "priority": "core"
+        },
+        {
+          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "利用中の機能に関わる変更がないか、aspire.dev の「What's new in Aspire 13.5」で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aspire", "term": "Aspire", "type": "product", "oneLine": { "text": "分散アプリケーションをコードで定義し、実行・監視するためのオーケストレーションと可観測性のレイヤー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dotnet/aspire/get-started/aspire-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "apphost", "term": "AppHost", "type": "term", "oneLine": { "text": "アプリの構成要素と依存関係をコードで記述し、ローカル実行の起点になる定義。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dotnet/aspire/get-started/aspire-overview", "locator": "What Aspire is and isn't", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "aspire-dashboard", "term": "Aspire ダッシュボード", "type": "feature", "oneLine": { "text": "アプリ全体のログやトレースを 1 か所で確認できる画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dotnet/aspire/get-started/aspire-overview", "locator": "Why Aspire?", "retrievedAt": "2026-10-22T00:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569910",
+        "learn": [{ "title": "クイック スタート: Azure App Service に Aspire アプリをデプロイする", "url": "https://learn.microsoft.com/ja-jp/azure/app-service/quickstart-aspire", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "Aspire とは何ですか",
+            "a": "分散アプリケーションをコードで定義し、1 つのコマンドで実行して、ダッシュボードで監視するための仕組みです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/dotnet/aspire/get-started/aspire-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          },
+          {
+            "q": "Aspire アプリを Azure App Service に載せられますか",
+            "a": "Aspire の Azure App Service 統合が利用できますが、現在プレビューです。クイック スタートには前提条件と手順があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/quickstart-aspire", "locator": "重要 / 前提条件", "retrievedAt": "2026-10-22T00:00:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
