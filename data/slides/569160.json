@@ -1,0 +1,158 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569160"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T23:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "569160",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "MSSQL 拡張機能から Azure SQL Database を作成できる機能が GA に",
+        "subtitleJa": "エディターを離れず、無料レベルの Azure SQL Database を作成して接続できます",
+        "en": "Generally Available: Azure SQL Database provisioning in MSSQL extension"
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "VS Code の MSSQL 拡張機能で開発する**アプリ開発者・DB 開発者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "エディターから無料で Azure SQL Database を作成・接続できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "開発・検証用 DB が必要なら試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ガイド付きウィザードで Azure 認証後、DB を数分で作成して自動接続",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration", "locator": "冒頭", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            },
+            {
+              "text": "月次の無料枠に達したら、自動一時停止か標準レートで続行かを選択",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration", "locator": "Features", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            },
+            { "text": "ARM / Bicep / Terraform テンプレートで繰り返しデプロイも可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "[デプロイ] ビュー → [Azure SQL Database の作成] → サインイン",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration", "locator": "Azure SQL データベースをプロビジョニングする", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            },
+            {
+              "text": "サブスクリプション・リソース グループ・サーバー・DB 名を入力して作成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration", "locator": "Azure SQL データベースをプロビジョニングする", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "前提: MSSQL 拡張機能、Azure アカウント、リソース作成の権限、Entra ID 認証",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration", "locator": "前提条件 / 制限事項", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            },
+            {
+              "text": "Free レベルのみ。Managed Instance と VM 上の SQL Server は非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration", "locator": "制限事項", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "無料プランの内容", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "DB あたり月 100,000 仮想コア秒・32 GB データ。1 サブスクリプション最大 10 DB",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/free-offer", "locator": "冒頭", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            },
+            {
+              "text": "高度な設定や有料レベルは Azure portal から作成する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration", "locator": "冒頭", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "作成後は Schema Designer や Data API builder、SQL Notebook へ続けて利用できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration", "locator": "プロビジョニング後", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            },
+            { "text": "プロトタイプや学習用の DB をすばやく用意する場面に向く", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "アップグレードやバックアップなどを Azure が管理する、フル マネージドの SQL データベース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/free-offer", "locator": "毎月の無料制限", "retrievedAt": "2026-10-21T23:30:00Z" }] } },
+        { "termKey": "mssql-extension", "term": "MSSQL 拡張機能", "type": "product", "oneLine": { "text": "Visual Studio Code から SQL データベースに接続・操作するための拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration", "locator": "冒頭", "retrievedAt": "2026-10-21T23:30:00Z" }] } },
+        { "termKey": "free-tier", "term": "Free レベル", "type": "feature", "oneLine": { "text": "月ごとの無料枠の範囲内で Azure SQL Database を無料で使えるプラン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/free-offer", "locator": "冒頭", "retrievedAt": "2026-10-21T23:30:00Z" }] } },
+        { "termKey": "provisioning", "term": "プロビジョニング", "type": "term", "oneLine": { "text": "Azure 上にデータベースなどのリソースを作成して使える状態にすること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration", "locator": "冒頭", "retrievedAt": "2026-10-21T23:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-21T23:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure SQL Database は全リージョンで提供される基盤サービス",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-21T23:30:00Z" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "この機能で作れるのはどの SQL 製品ですか？",
+            "a": "Azure SQL Database のみです。Azure SQL Managed Instance と SQL Server on Azure Virtual Machines は現在サポートされていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "Free レベルは無料枠内なら課金されません。枠超過時は、自動一時停止か標準サーバーレス レートで続行かを選べます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/free-offer" }]
+          },
+          {
+            "q": "有料レベルや詳細設定は使えますか？",
+            "a": "この機能では Free レベルのみで、コンピューティングや価格の変更はできません。詳細設定や有料レベルは Azure portal を使います。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569160",
+        "learn": [
+          { "title": "Azure SQL Database の作成（MSSQL 拡張機能）", "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration", "locale": "ja-jp" },
+          { "title": "Azure SQL Database を無料でデプロイする", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/free-offer", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
