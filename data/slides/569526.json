@@ -1,0 +1,109 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569526"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T22:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "569526",
+      "kind": "announcement",
+      "kindSource": "tags",
+      "label": "アナウンス",
+      "title": {
+        "ja": "PostgreSQL フレキシブル サーバーに延長サポートが登場",
+        "subtitleJa": "コミュニティ終了後も最大 3 年、セキュリティ更新と技術サポートを提供",
+        "en": "Announcing: Extended Support for Azure Database for PostgreSQL Flexible Server "
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "modifiedJst": "2026-08-25",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "August" }],
+        "status": null,
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "標準サポートが終了した PostgreSQL 11〜14 を使う **Azure Database for PostgreSQL フレキシブル サーバー**の利用者", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "対象となる PostgreSQL バージョン", "retrievedAt": "2026-10-21T22:50:00Z" }] },
+        "change": { "text": "アップグレードに時間をかけつつ、セキュリティ パッチと重要なバグ修正を受け続けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "冒頭", "retrievedAt": "2026-10-21T22:50:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "対象サーバーは自動登録される。課金を止めるには対応バージョンへ上げる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "登録と価格", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+      },
+      "timeline": [
+        { "label": "延長サポート開始（11〜13）", "when": { "date": "2026-08-01", "precision": "day" } },
+        { "label": "発表", "when": { "date": "2026-08-25", "precision": "day" } },
+        { "label": "課金開始（11〜13）", "when": { "date": "2026-09-01", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "scope", "heading": "適用範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "標準サポート終了後、最大 3 年間の追加サポートを提供", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "冒頭", "retrievedAt": "2026-10-21T22:50:00Z" }] },
+            { "text": "提供内容: セキュリティ パッチ、重要なバグ修正、技術サポート", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "冒頭", "retrievedAt": "2026-10-21T22:50:00Z" }] },
+            { "text": "対象は PostgreSQL 11・12・13・14（14 は 2027-02-01 開始）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "対象となる PostgreSQL バージョン", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "permissions", "heading": "知っておくべき点（登録と価格）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象サーバーは 2026-08-01 に自動登録され、オプトアウトはできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "登録と価格 / FAQ", "retrievedAt": "2026-10-21T22:50:00Z" }] },
+            { "text": "PostgreSQL 11〜13 は 1 か月の猶予後、2026-09-01 から課金開始", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "登録と価格", "retrievedAt": "2026-10-21T22:50:00Z" }] },
+            { "text": "新機能・性能改善・マイナー バージョン アップは対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "拡張サポートでは、次の機能が提供されます", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "延長サポートは一時的な橋渡しとして扱い、早めに移行を計画する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "ベスト プラクティス", "retrievedAt": "2026-10-21T22:50:00Z" }] },
+            { "text": "課金は実行中のサーバーのみ。対応バージョンへ上げると課金は止まる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "よく寄せられる質問 (FAQ)", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "pg-flex", "term": "Azure Database for PostgreSQL フレキシブル サーバー", "type": "product", "oneLine": { "text": "Azure が提供する、マネージドな PostgreSQL データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "冒頭", "retrievedAt": "2026-10-21T22:50:00Z" }] } },
+        { "termKey": "extended-support", "term": "延長サポート", "type": "feature", "oneLine": { "text": "標準サポート終了後も、セキュリティ更新と技術サポートを受けられる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "冒頭", "retrievedAt": "2026-10-21T22:50:00Z" }] } },
+        { "termKey": "community-eol", "term": "コミュニティのサポート終了", "type": "term", "oneLine": { "text": "PostgreSQL コミュニティが、そのメジャー バージョンの提供を終了すること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "最後の FAQ", "retrievedAt": "2026-10-21T22:50:00Z" }] } },
+        { "termKey": "major-upgrade", "term": "メジャー バージョンのアップグレード", "type": "term", "oneLine": { "text": "PostgreSQL 15 や 16 などの新しいメジャー バージョンへ移行する作業。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "ベスト プラクティス", "retrievedAt": "2026-10-21T22:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "バージョンのサポート ポリシーであり、リージョンごとの機能ではない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "対象となる PostgreSQL バージョン", "retrievedAt": "2026-10-21T22:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569526",
+        "learn": [{ "title": "フレキシブル サーバーの延長サポート (Azure Database for PostgreSQL)", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "延長サポートを使わずに済みますか？",
+            "a": "できません。サポート外バージョンの対象サーバーは自動登録されます。対応バージョンへ上げると課金は止まります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "よく寄せられる質問 (FAQ)", "retrievedAt": "2026-10-21T22:50:00Z" }]
+          },
+          {
+            "q": "いつから課金されますか？",
+            "a": "PostgreSQL 11〜13 は 2026-08-01 に登録され、1 か月の猶予後、2026-09-01 に課金が始まります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "登録と価格", "retrievedAt": "2026-10-21T22:50:00Z" }]
+          },
+          {
+            "q": "停止中のサーバーにも課金されますか？",
+            "a": "いいえ。課金は成功（実行中）状態のサーバーのみです。停止・削除・プロビジョニング失敗中は対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/extended-support", "locator": "よく寄せられる質問 (FAQ)", "retrievedAt": "2026-10-21T22:50:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
