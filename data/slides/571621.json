@@ -1,0 +1,100 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571621"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T21:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "571621",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Red Hat OpenShift にホスト型コントロール プレーン",
+        "subtitleJa": "コントロール プレーンを Red Hat 側で管理する新デプロイ オプション（パブリック プレビュー）",
+        "en": "Public Preview: Azure Red Hat OpenShift with hosted control planes"
+      },
+      "meta": {
+        "publishedJst": "2026-09-16",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "September" }],
+        "status": "In preview",
+        "products": ["Azure Red Hat OpenShift"],
+        "categories": ["containers"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "OpenShift をマネージドで運用したい **Azure Red Hat OpenShift の利用者・検討者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "コントロール プレーンをワーカー ノードから分離し、フル マネージドで運用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。標準アーキテクチャは引き続き完全サポート", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "コントロール プレーンは Red Hat 所有の Azure アカウントでホストされ、ワーカー ノードのみ自分のサブスクリプションに配置", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/openshift/concepts-classic-hosted-control-planes-comparison", "locator": "アーキテクチャの概要", "retrievedAt": "2026-10-21T21:30:00Z" }] },
+            { "text": "コントロール プレーンと各ノード プールを個別にアップグレード可能。クラスター作成は約 15～20 分", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/openshift/concepts-classic-hosted-control-planes-comparison", "locator": "主な違い", "retrievedAt": "2026-10-21T21:30:00Z" }] },
+            { "text": "作成は Azure CLI、REST API、Bicep で実施。マネージド ID とワークロード ID に対応", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プレビュー提供リージョンは 8 つ（UK South、East US 2、West Europe など）。日本リージョンは含まれない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/openshift/howto-choose-cluster-configuration", "locator": "Choose the cluster region", "retrievedAt": "2026-10-21T21:30:00Z" }] },
+            { "text": "リージョンなどの設定は作成後に変更できず、変更には再作成が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/openshift/howto-choose-cluster-configuration", "locator": "冒頭 / Important", "retrievedAt": "2026-10-21T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ワーカー ノード 2 台から作成でき、課金はワーカー ノードのみ（標準は制御 3＋ワーカー 3 が必要）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/openshift/concepts-classic-hosted-control-planes-comparison", "locator": "最小コンピューティング フットプリント / 請求書", "retrievedAt": "2026-10-21T21:30:00Z" }] },
+            { "text": "インフラストラクチャ ノードは使わず、イングレスや監視はワーカー ノードに配置される点を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/openshift/concepts-classic-hosted-control-planes-comparison", "locator": "インフラストラクチャ ノード", "retrievedAt": "2026-10-21T21:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-red-hat-openshift", "term": "Azure Red Hat OpenShift", "type": "product", "oneLine": { "text": "Red Hat と Microsoft が共同で設計した、フル マネージドの OpenShift サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/openshift/concepts-classic-hosted-control-planes-comparison", "locator": "冒頭", "retrievedAt": "2026-10-21T21:30:00Z" }] } },
+        { "termKey": "hosted-control-plane", "term": "ホスト型コントロール プレーン（HCP）", "type": "term", "oneLine": { "text": "Red Hat が API サーバーや etcd を自社の Azure アカウントで管理する方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/openshift/concepts-classic-hosted-control-planes-comparison", "locator": "アーキテクチャの概要", "retrievedAt": "2026-10-21T21:30:00Z" }] } },
+        { "termKey": "etcd", "term": "etcd", "type": "term", "oneLine": { "text": "OpenShift のコントロール プレーンを構成するデータベース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/openshift/concepts-classic-hosted-control-planes-comparison", "locator": "アーキテクチャの概要", "retrievedAt": "2026-10-21T21:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-21T21:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビュー提供は 8 リージョン（日本は含まれない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/openshift/howto-choose-cluster-configuration", "locator": "Choose the cluster region", "retrievedAt": "2026-10-21T21:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571621",
+        "learn": [
+          { "title": "標準アーキテクチャとホスト型コントロール プレーンの比較（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/azure/openshift/concepts-classic-hosted-control-planes-comparison", "locale": "ja-jp" },
+          { "title": "クイック スタート: ホスト型コントロール プレーン クラスターの作成（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/azure/openshift/quickstart-create-default-hosted-cluster", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "プレビューの提供リージョンは 8 つで、日本リージョンは含まれていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/openshift/howto-choose-cluster-configuration" }]
+          },
+          {
+            "q": "費用面で標準アーキテクチャと何が違いますか？",
+            "a": "HCP ではワーカー ノード（2 台以上）のみ課金され、コントロール プレーン ノードはサブスクリプションに配置されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/openshift/concepts-classic-hosted-control-planes-comparison" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
