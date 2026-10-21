@@ -1,0 +1,199 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569743"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T23:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "569743",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "ゲートウェイの広告プレフィックス集約が一般提供（GA）に",
+        "subtitleJa": "オンプレミスへ広告するアドレスを、集約したプレフィックスで指定できます",
+        "en": "Generally Available: Summarized advertised gateway prefixes for route advertisement"
+      },
+      "meta": {
+        "publishedJst": "2026-08-21",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure ExpressRoute", "VPN Gateway", "Virtual Network"],
+        "categories": ["networking", "security", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": {
+          "text": "ExpressRoute / VPN Gateway を使う**大規模なハブ アンド スポーク環境の管理者**",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        },
+        "change": {
+          "text": "スポーク追加時も、広告ルート数を制限内に収めやすい",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "広告プレフィックス数の上限が近い場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "既定では、ハブと、ピアリングされた全仮想ネットワークのアドレス空間をそれぞれオンプレミスへ広告",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/advertised-gateway-prefixes-overview", "locator": "既定の動作", "retrievedAt": "2026-10-21T23:10:00Z" }]
+        },
+        "after": {
+          "text": "集約した CIDR（例: /16）を指定すると、その範囲に含まれるスポークのアドレス空間は個別に広告されない",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/advertised-gateway-prefixes-overview", "locator": "summarizedGatewayPrefixes が設定されている場合の動作", "retrievedAt": "2026-10-21T23:10:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ハブ VNet の summarizedGatewayPrefixes に集約 CIDR の一覧を設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/advertised-gateway-prefixes-overview", "locator": "冒頭", "retrievedAt": "2026-10-21T23:10:00Z" }]
+            },
+            {
+              "text": "集約範囲に含まれるアドレス空間は広告せず、範囲外は引き続き個別に広告",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/advertised-gateway-prefixes-overview", "locator": "summarizedGatewayPrefixes が設定されている場合の動作", "retrievedAt": "2026-10-21T23:10:00Z" }]
+            },
+            {
+              "text": "ExpressRoute Gateway と VPN Gateway の両方で、IPv4 / IPv6 に対応",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ハブ仮想ネットワーク → [設定] の [アドレス空間] → [アドバタイズされたゲートウェイ プレフィックス] で [+ プレフィックスの追加]",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/how-to-advertised-gateway-prefixes", "locator": "アドバタイズされたゲートウェイ プレフィックスを追加する", "retrievedAt": "2026-10-21T23:10:00Z" }]
+            },
+            {
+              "text": "集約 CIDR（例: 10.0.0.0/16）を入力して保存。全て削除すると既定の動作に戻る",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/how-to-advertised-gateway-prefixes", "locator": "アドバタイズされたゲートウェイ プレフィックスを削除する", "retrievedAt": "2026-10-21T23:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ゲートウェイ サブネットとゲートウェイを持つハブ VNet が必要。スポークでの設定は無視される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [
+                { "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/how-to-advertised-gateway-prefixes", "locator": "Prerequisites", "retrievedAt": "2026-10-21T23:10:00Z" },
+                { "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/advertised-gateway-prefixes-overview", "locator": "FAQ", "retrievedAt": "2026-10-21T23:10:00Z" }
+              ]
+            },
+            {
+              "text": "集約プレフィックスにハブのアドレス空間を含める。リスト内の重複は不可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/advertised-gateway-prefixes-overview", "locator": "重要な考慮事項", "retrievedAt": "2026-10-21T23:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する留意点", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "集約の利用に Azure Route Server は不要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/advertised-gateway-prefixes-overview", "locator": "FAQ", "retrievedAt": "2026-10-21T23:10:00Z" }]
+            },
+            {
+              "text": "デュアル スタックでは IPv4 と IPv6 の集約プレフィックスを両方追加",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/how-to-advertised-gateway-prefixes", "locator": "Note", "retrievedAt": "2026-10-21T23:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ExpressRoute の広告プレフィックス上限（IPv4 1,000 / IPv6 100 など）に近づいたハブ アンド スポーク構成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/advertised-gateway-prefixes-overview", "locator": "使用する必要があるタイミング", "retrievedAt": "2026-10-21T23:10:00Z" }]
+            },
+            {
+              "text": "多数の /24 を /16 などにまとめ、アドレス設計の見直しや VNet 分割を避ける",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "advertised-gateway-prefixes", "term": "アドバタイズされたゲートウェイ プレフィックス", "type": "feature",
+          "oneLine": { "text": "ゲートウェイがオンプレミスへ広告する、集約した CIDR プレフィックスを指定する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/advertised-gateway-prefixes-overview", "locator": "冒頭", "retrievedAt": "2026-10-21T23:10:00Z" }] }
+        },
+        {
+          "termKey": "summarized-gateway-prefixes", "term": "summarizedGatewayPrefixes", "type": "term",
+          "oneLine": { "text": "既定の広告の代わりに広告する CIDR プレフィックスの一覧を指定する、仮想ネットワークのプロパティ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/advertised-gateway-prefixes-overview", "locator": "冒頭", "retrievedAt": "2026-10-21T23:10:00Z" }] }
+        },
+        {
+          "termKey": "hybrid-gateway", "term": "ExpressRoute / VPN ゲートウェイ", "type": "product",
+          "oneLine": { "text": "ハブ仮想ネットワークに配置し、オンプレミス ネットワークとの接続に使うゲートウェイ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/how-to-advertised-gateway-prefixes", "locator": "Prerequisites", "retrievedAt": "2026-10-21T23:10:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-21T23:10:00Z" }] }
+        }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "ExpressRoute・VPN Gateway・Virtual Network は全リージョンで提供される基盤サービス",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-21T23:10:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569743",
+        "learn": [
+          { "title": "Azure仮想ネットワークでアドバタイズされたゲートウェイ プレフィックス", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/advertised-gateway-prefixes-overview", "locale": "ja-jp" },
+          { "title": "Azure ポータルを使用して仮想ネットワークのアドバタイズされたゲートウェイ プレフィックスを構成する", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/how-to-advertised-gateway-prefixes", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どのような環境が対象ですか？",
+            "a": "ハブ アンド スポーク型で、ExpressRoute または VPN ゲートウェイから多数のスポークのプレフィックスを広告している環境が対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/advertised-gateway-prefixes-overview", "locator": "使用する必要があるタイミング" }]
+          },
+          {
+            "q": "設定前に必要なものは何ですか？",
+            "a": "ゲートウェイ サブネットとゲートウェイを持つハブ仮想ネットワークです。ゲートウェイ作成前に設定はできますが、作成後に有効になります。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/how-to-advertised-gateway-prefixes", "locator": "Prerequisites" },
+              { "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/advertised-gateway-prefixes-overview", "locator": "前提条件と適用可能性" }
+            ]
+          },
+          {
+            "q": "設定を元に戻せますか？",
+            "a": "はい。広告プレフィックスをすべて削除すると、各アドレス空間を個別に広告する既定の動作に戻ります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/how-to-advertised-gateway-prefixes", "locator": "アドバタイズされたゲートウェイ プレフィックスを削除する" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
