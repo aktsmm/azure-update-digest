@@ -2813,6 +2813,81 @@
         "preview": null,
         "privatePreview": null
       },
+      "canonicalKey": "576716",
+      "categories": [
+        "databases",
+        "iot"
+      ],
+      "created": "2026-10-21T17:13:16.6926859Z",
+      "createdJst": "2026-10-22",
+      "description": "Safe Key Rotation for Azure Cosmos DB is now generally available. You can view timestamp metadata showing when each account key was last used, helping you identify active keys before rotating or retiring credentials.This visibility helps reduce the risk of service disruptions caused by disabling keys that are still in use. It also gives you actionable insights to improve credential management, maintain application continuity, and support modern security and compliance practices.Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "bf93304d33282ba58a404920123c90db733a7782cffe4bb4e3ca5c6e06d1ba5b",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-21T23:54:38.030Z",
+          "fingerprint": "947c132052cd84489109abab606391d793f245959843dc7c354a0e8f44dd99d3",
+          "modifiedAfter": "2026-10-21T17:13:16.6926859Z",
+          "modifiedBefore": null,
+          "rawRef": "20261021T235438030Z_list_sweep_o0.json#576716"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-21T23:54:43.763Z",
+          "fingerprint": "bf93304d33282ba58a404920123c90db733a7782cffe4bb4e3ca5c6e06d1ba5b",
+          "modifiedAfter": "2026-10-21T17:13:16.6926859Z",
+          "modifiedBefore": "2026-10-21T17:13:16.6926859Z",
+          "rawRef": "20261021T235443763Z_detail_576716.json#576716"
+        }
+      ],
+      "ids": [
+        "576716"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "576716",
+      "modified": "2026-10-21T17:13:16.6926859Z",
+      "modifiedJst": "2026-10-22",
+      "productCategories": [
+        "Databases",
+        "Internet of Things"
+      ],
+      "products": [
+        "Azure Cosmos DB"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=576716",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Azure Cosmos DB Safe Key Rotation"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
       "canonicalKey": "577130",
       "categories": [
         "networking",
@@ -3025,6 +3100,74 @@
         "Feature"
       ],
       "title": "Generally Available: Metrics usage insights for Azure Monitor workspace"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "Effective",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "577273",
+      "categories": [
+        "security"
+      ],
+      "created": "2026-10-21T17:38:32.9112077Z",
+      "createdJst": "2026-10-22",
+      "description": "What and whyStarting October 30, 2026, Microsoft Entra ID will make the Choose Your Own Telephony Provider experience available. This feature enables organizations to use a supported third-party telecommunications provider for SMS and voice authentication. Organizations select a supported provider through Microsoft Security Store and manage their commercial relationship directly with the provider.Microsoft recommends phishing-resistant authentication methods, such as passkeys, instead of SMS or voice authentication. Organizations should use a telephony provider for user populations that have a business, regulatory, or technical requirement for telephony-based authentication.Starting October 30, 2026, organizations can choose to enable CYOT. Organizations planning to adopt CYOT should begin preparing before October 30. Microsoft-provided SMS and voice authentication are scheduled to begin retiring on February 1, 2027.What you need to do to prepareIf your organization plans to adopt CYOT, we recommend preparing the following ahead of its targeted GA date of October 30, 2026:Identify the users who require SMS or voice authentication. Determine which user populations have a documented business, regulatory, or technical requirement for telephony-based authentication.Evaluate phishing-resistant alternatives. Confirm that a phishing-resistant authentication method does not meet the requirements for these users.Review supported telephony providers. Compare providers based on geographic coverage, supported delivery channels, pricing, support, security, and compliance capabilities.Review organizational requirements. Work with the appropriate teams in your organization to review procurement, privacy, and regulatory requirements before selecting a provider.Plan your transition. Review the guidance for the retirement of Microsoft-provided SMS and voice authentication and plan your deployment accordingly.Validate Azure subscription and purchasing requirements. Confirm that the subscription is eligible and that your organization permits the required Azure Marketplace or Security Store provider purchase.Estimate costs. Review provider pricing and expected Azure infrastructure charges before deployment.Learn moreSupported telecommunications providers and provider offersAzure resource requirements and pricing guidance",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "ca3af91d923d2cf7997a228acfcf271deab46966596f0e7406570ef28991a5fc",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-21T23:54:38.030Z",
+          "fingerprint": "61af00f106a8610949299cb39d7af77f2cce7ccabd8e131539849bf5bbba05d9",
+          "modifiedAfter": "2026-10-21T17:38:32.9112077Z",
+          "modifiedBefore": null,
+          "rawRef": "20261021T235438030Z_list_sweep_o0.json#577273"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-21T23:54:40.468Z",
+          "fingerprint": "ca3af91d923d2cf7997a228acfcf271deab46966596f0e7406570ef28991a5fc",
+          "modifiedAfter": "2026-10-21T17:38:32.9112077Z",
+          "modifiedBefore": "2026-10-21T17:38:32.9112077Z",
+          "rawRef": "20261021T235440468Z_detail_577273.json#577273"
+        }
+      ],
+      "ids": [
+        "577273"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "577273",
+      "modified": "2026-10-21T17:38:32.9112077Z",
+      "modifiedJst": "2026-10-22",
+      "productCategories": [
+        "Identity"
+      ],
+      "products": [
+        "Microsoft Entra ID (formerly Azure AD)"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577273",
+      "status": null,
+      "tags": [
+        "Announcement"
+      ],
+      "title": "Announcing: Choose Your Own Telephony (CYOT) for Microsoft Entra"
     }
   ],
   "month": "2026-10",

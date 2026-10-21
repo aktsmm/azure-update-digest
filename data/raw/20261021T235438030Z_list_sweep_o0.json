@@ -1,0 +1,187 @@
+{
+  "args": {
+    "filter": "modified ge 2026-10-19T23:38:10Z and modified lt 2026-10-21T23:54:38Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-21T23:54:38.030Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "575329",
+        "created": "2026-10-20T16:54:24.9349401Z",
+        "description": "Advanced platform metrics for Azure Monitor are now generally available. Advanced platform metrics provide finer-grained signals that help customers more quickly and accurately identify changes and tr...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "575329",
+        "modified": "2026-10-20T16:54:24.9349401Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Monitor"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Advanced platform metrics for Azure Monitor"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "576242",
+        "created": "2026-10-20T18:55:47.1858285Z",
+        "description": "Announcing\nthe public preview of disable VNet peering route, a route-table capability that\ngives you more control over traffic between peered virtual networks. DPR\nsuppresses system-generated peering ...",
+        "id": "576242",
+        "modified": "2026-10-20T18:55:47.1858285Z",
+        "previewAvailabilityDate": "2026-10",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Virtual Network"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Management",
+          "Services"
+        ],
+        "title": "Public Preview: Disable VNet peering route"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "576716",
+        "created": "2026-10-21T17:13:16.6926859Z",
+        "description": "Safe Key Rotation for Azure Cosmos DB is now generally available. You can view timestamp metadata showing when each account key was last used, helping you identify active keys before rotating or retir...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "576716",
+        "modified": "2026-10-21T17:13:16.6926859Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Cosmos DB Safe Key Rotation"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577130",
+        "created": "2026-10-20T16:55:59.9707431Z",
+        "description": "Azure Application Gateway now supports keyless TLS\ntermination using certificates whose private keys stay in Azure Key Vault\nManaged HSM. Each TLS handshake signature is performed inside the HSM, and ...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "577130",
+        "modified": "2026-10-20T16:55:59.9707431Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Keyless TLS on Application Gateway with Azure Key Vault Managed HSM"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577156",
+        "created": "2026-10-20T16:57:35.7124686Z",
+        "description": "Announcing the general availability of the service tag match\ncondition for Azure Web Application Firewall (WAF) custom rules on Azure Front\nDoor Premium. Service tags represent groups of IP address pr...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "577156",
+        "modified": "2026-10-20T16:57:35.7124686Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door",
+          "Web Application Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Service tag match condition for Azure Front Door Premium WAF"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "577273",
+        "created": "2026-10-21T17:38:32.9112077Z",
+        "description": "What and whyStarting October 30, 2026, Microsoft Entra ID will make the Choose Your Own Telephony Provider experience available. This feature enables organizations to use a supported third-party telec...",
+        "id": "577273",
+        "modified": "2026-10-21T17:38:32.9112077Z",
+        "productCategories": [
+          "Identity"
+        ],
+        "products": [
+          "Microsoft Entra ID (formerly Azure AD)"
+        ],
+        "tags": [
+          "Announcement"
+        ],
+        "title": "Announcing: Choose Your Own Telephony (CYOT) for Microsoft Entra"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 6,
+    "totalCount": 6
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

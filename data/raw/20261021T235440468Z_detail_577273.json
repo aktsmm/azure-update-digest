@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "577273"
+  },
+  "fetchedAt": "2026-10-21T23:54:40.468Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "Effective",
+        "year": 2026
+      }
+    ],
+    "baseId": "577273",
+    "created": "2026-10-21T17:38:32.9112077Z",
+    "description": "What and whyStarting October 30, 2026, Microsoft Entra ID will make the Choose Your Own Telephony Provider experience available. This feature enables organizations to use a supported third-party telecommunications provider for SMS and voice authentication. Organizations select a supported provider through Microsoft Security Store and manage their commercial relationship directly with the provider.Microsoft recommends phishing-resistant authentication methods, such as passkeys, instead of SMS or voice authentication. Organizations should use a telephony provider for user populations that have a business, regulatory, or technical requirement for telephony-based authentication.Starting October 30, 2026, organizations can choose to enable CYOT. Organizations planning to adopt CYOT should begin preparing before October 30. Microsoft-provided SMS and voice authentication are scheduled to begin retiring on February 1, 2027.What you need to do to prepareIf your organization plans to adopt CYOT, we recommend preparing the following ahead of its targeted GA date of October 30, 2026:Identify the users who require SMS or voice authentication. Determine which user populations have a documented business, regulatory, or technical requirement for telephony-based authentication.Evaluate phishing-resistant alternatives. Confirm that a phishing-resistant authentication method does not meet the requirements for these users.Review supported telephony providers. Compare providers based on geographic coverage, supported delivery channels, pricing, support, security, and compliance capabilities.Review organizational requirements. Work with the appropriate teams in your organization to review procurement, privacy, and regulatory requirements before selecting a provider.Plan your transition. Review the guidance for the retirement of Microsoft-provided SMS and voice authentication and plan your deployment accordingly.Validate Azure subscription and purchasing requirements. Confirm that the subscription is eligible and that your organization permits the required Azure Marketplace or Security Store provider purchase.Estimate costs. Review provider pricing and expected Azure infrastructure charges before deployment.Learn moreSupported telecommunications providers and provider offersAzure resource requirements and pricing guidance",
+    "id": "577273",
+    "modified": "2026-10-21T17:38:32.9112077Z",
+    "productCategories": [
+      "Identity"
+    ],
+    "products": [
+      "Microsoft Entra ID (formerly Azure AD)"
+    ],
+    "tags": [
+      "Announcement"
+    ],
+    "title": "Announcing: Choose Your Own Telephony (CYOT) for Microsoft Entra"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
