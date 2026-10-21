@@ -1,0 +1,219 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569760"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T22:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "569760",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure SRE Agent の 30 日間トライアルが一般提供（GA）に",
+        "subtitleJa": "新規のお客様は、常時稼働の基本料金なしで SRE Agent を試せます",
+        "en": "Generally Available: Azure SRE Agent 30-Day Trial"
+      },
+      "meta": {
+        "publishedJst": "2026-08-27",
+        "modifiedJst": "2026-08-27",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": [],
+        "categories": ["ai"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": {
+          "text": "Azure SRE Agent を初めて使う**開発者・SRE・IT 運用チーム**",
+          "origin": "mrc", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "試用版に含まれる内容", "retrievedAt": "2026-10-21T22:36:00Z" }]
+        },
+        "change": {
+          "text": "常時稼働の基本料金なしで、自分の環境で機能を試せる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "Azure SRE Agentの料金設定", "retrievedAt": "2026-10-21T22:36:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "試す場合は、30 日後に課金が始まる前に削除するか判断",
+          "origin": "editorial", "assertion": "recommendation", "verification": "unverified"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "最初のエージェント作成日から最大 30 日間、常時稼働料金が免除",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "試用版に含まれる内容", "retrievedAt": "2026-10-21T22:36:00Z" }]
+            },
+            {
+              "text": "エージェントが作業した分の AAU（アクティブ使用）のみ課金",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "Azure SRE Agentの料金設定", "retrievedAt": "2026-10-21T22:36:00Z" }]
+            },
+            {
+              "text": "試用中に機能制限はなく、条件は課金面のみ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "制限はありますか?", "retrievedAt": "2026-10-21T22:36:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "対象リージョンでエージェントを作成し、運用ツールやデータソースに接続",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "始める前に", "retrievedAt": "2026-10-21T22:36:00Z" }]
+            },
+            {
+              "text": "まず 1 つのエージェントと、よく知るサービス・問題から評価",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "評価時に試すべきこと", "retrievedAt": "2026-10-21T22:36:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "対象は初めて使うお客様。1 アカウントあたり最大 3 エージェント（削除分も数える）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "試用版に含まれる内容", "retrievedAt": "2026-10-21T22:36:00Z" }]
+            },
+            {
+              "text": "作成には所有者、または共同作成者＋ユーザー アクセス管理者が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "始める前に", "retrievedAt": "2026-10-21T22:36:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "試用終了後との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "終了後は常時稼働料金（エージェント時間あたり 4 AAU）が自動で適用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [
+                { "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/pricing-billing", "locator": "常時稼働フロー", "retrievedAt": "2026-10-21T22:36:00Z" },
+                { "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "試用期間が終了したら", "retrievedAt": "2026-10-21T22:36:00Z" }
+              ]
+            },
+            {
+              "text": "停止ではアクティブ使用のみ止まり、削除で全課金が止まる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/pricing-billing", "locator": "アクションによる課金の影響", "retrievedAt": "2026-10-21T22:36:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "アラート・ログ・メトリクスから根本原因と緩和策を調査させる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "評価時に試すべきこと", "retrievedAt": "2026-10-21T22:36:00Z" }]
+            },
+            {
+              "text": "月間 AAU 上限（500〜1,000,000）でアクティブ使用を抑えられる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/pricing-billing", "locator": "アクティブなフローの使用制限を設定する", "retrievedAt": "2026-10-21T22:36:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-sre-agent", "term": "Azure SRE Agent", "type": "product",
+          "oneLine": {
+            "text": "Azure や運用ツールの情報を集め、根本原因と緩和策を提案するエージェント。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "冒頭", "retrievedAt": "2026-10-21T22:36:00Z" }]
+          }
+        },
+        {
+          "termKey": "aau", "term": "AAU", "type": "term",
+          "oneLine": {
+            "text": "Azure エージェント単位。エージェントの処理量を測る標準の指標。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/pricing-billing", "locator": "冒頭", "retrievedAt": "2026-10-21T22:36:00Z" }]
+          }
+        },
+        {
+          "termKey": "always-on", "term": "常時稼働フロー", "type": "term",
+          "oneLine": {
+            "text": "エージェントが存在する間かかる固定料金。作成から削除まで続く。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/pricing-billing", "locator": "常時稼働フロー (固定コスト)", "retrievedAt": "2026-10-21T22:36:00Z" }]
+          }
+        },
+        {
+          "termKey": "active-flow", "term": "アクティブ フロー", "type": "term",
+          "oneLine": {
+            "text": "エージェントが作業処理中に消費する変動料金。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/pricing-billing", "locator": "アクティブ フロー (変動コスト)", "retrievedAt": "2026-10-21T22:36:00Z" }]
+          }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": {
+            "text": "機能が完全にリリースされ、本番利用でサポートされる段階。",
+            "origin": "learn", "assertion": "fact", "verification": "verified",
+            "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-21T22:36:00Z" }]
+          }
+        }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "SRE Agent の対応リージョンに東日本・西日本が含まれる（エージェントは作成時に選んだ 1 リージョンで動作）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/supported-regions", "locator": "対応リージョン", "retrievedAt": "2026-10-21T22:36:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569760",
+        "learn": [
+          { "title": "Azure SRE エージェントを評価する", "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locale": "ja-jp" },
+          { "title": "Azure SRE エージェントの価格と課金", "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/pricing-billing", "locale": "ja-jp" },
+          { "title": "Azure SRE エージェントでサポートされているリージョン", "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/supported-regions", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "トライアルの対象と期間は？",
+            "a": "Azure SRE Agent を初めて使うお客様が対象です。最初のエージェント作成日から 30 日間、最大 3 エージェントまで試せます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "試用版に含まれる内容" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "対応リージョンに東日本・西日本が含まれます。エージェントは作成時に選んだ 1 リージョンで動作し、後から変更できません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/supported-regions", "locator": "対応リージョン" }]
+          },
+          {
+            "q": "試用中の費用は？",
+            "a": "常時稼働料金は免除されますが、エージェントが作業した分のアクティブ使用料金（AAU）は課金されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "Azure SRE Agentの料金設定" }]
+          },
+          {
+            "q": "試用が終わったらどうなりますか？",
+            "a": "エージェントを削除しない限り、標準料金（常時稼働料金を含む）が自動で適用されます。続けない場合は終了前に削除します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/evaluate", "locator": "試用期間が終了したら" }]
+          }
+        ]
+      }
+    }
+  ]
+}
