@@ -1,0 +1,119 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569690"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T22:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "569690",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure SRE Agent に Live Reports が登場",
+        "subtitleJa": "会話から運用ビューを作成し、最新データで更新（パブリック プレビュー）",
+        "en": "Public Preview: Introducing Live Reports for Azure SRE Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-08-27",
+        "modifiedJst": "2026-08-27",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "August" }],
+        "status": "In preview",
+        "products": ["Azure SRE Agent"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Azure SRE Agent で運用ダッシュボードを作りたい**運用・SRE チーム**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ダッシュボードの手作業での再構築や、複数ツールからの情報収集を減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューのため、まず読み取り専用ツールで評価するのが無難", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports", "locator": "レポートからアクションを実行する", "retrievedAt": "2026-10-21T22:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "SRE Agent との会話でレポートを生成し、日次・週次・月次など指定した頻度で最新データを反映して再利用できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "Live Reports でできること", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "チャットで必要なビューを説明すると、保存されたレポートとして作成される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports", "locator": "冒頭", "retrievedAt": "2026-10-21T22:30:00Z" }] },
+            { "text": "Azure Data Explorer など MCP コネクタのデータを、チャートや表で表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports", "locator": "レポートに含められること", "retrievedAt": "2026-10-21T22:30:00Z" }] },
+            { "text": "共有リンクと HTML ダウンロード（静的スナップショット）に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports", "locator": "レポートの共有、エクスポート、削除", "retrievedAt": "2026-10-21T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・制約", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "前提: エージェントの読み書き権限。取得できるのは設定済みコネクタの範囲のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports", "locator": "前提条件", "retrievedAt": "2026-10-21T22:30:00Z" }] },
+            { "text": "レポート HTML は 10 MB 以下。モデルがレート制限されると HTTP 429", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports", "locator": "制限事項", "retrievedAt": "2026-10-21T22:30:00Z" }] },
+            { "text": "テナント間共有では、承認が必要なツールの呼び出しを承認できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports", "locator": "制限事項", "retrievedAt": "2026-10-21T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "作成・更新時はアクティブ フロー AAU を消費。コネクタのみの再読み込みは消費しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports", "locator": "使用とコスト", "retrievedAt": "2026-10-21T22:30:00Z" }] },
+            { "text": "プレビューではモデル支援セクションの予算上限がなく、繰り返しループは避ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports", "locator": "使用とコスト", "retrievedAt": "2026-10-21T22:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sre-agent", "term": "Azure SRE Agent", "type": "product", "oneLine": { "text": "Azure リソースや運用ツールに接続し、インシデント調査などを支援するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/overview", "locator": "冒頭", "retrievedAt": "2026-10-21T22:30:00Z" }] } },
+        { "termKey": "live-reports", "term": "Live Reports", "type": "feature", "oneLine": { "text": "一貫したレイアウトでデータを更新できる、保存型の再利用可能な運用ダッシュボード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports", "locator": "冒頭", "retrievedAt": "2026-10-21T22:30:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP（Model Context Protocol）", "type": "term", "oneLine": { "text": "外部のデータソースやツールをエージェントに接続するための標準プロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/overview", "locator": "どのように機能するのか", "retrievedAt": "2026-10-21T22:30:00Z" }] } },
+        { "termKey": "aau", "term": "アクティブ フロー AAU", "type": "term", "oneLine": { "text": "レポートの作成・更新やモデル支援分析で消費される、エージェントの従量課金の単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports", "locator": "使用とコスト", "retrievedAt": "2026-10-21T22:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-21T22:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure SRE Agent のデプロイ可能リージョンに東日本・西日本が含まれる。GA 前のプレビュー機能のため、リージョンは変更される場合がある",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/supported-regions", "locator": "対応リージョン", "retrievedAt": "2026-10-21T22:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569690",
+        "learn": [
+          { "title": "Azure SRE Agent (preview) のライブレポート", "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports", "locale": "ja-jp" },
+          { "title": "Azure SRE エージェントの概要", "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Azure SRE Agent は東日本・西日本にデプロイ可能です。プレビュー機能のため、提供範囲は今後変わる可能性があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/supported-regions" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "作成・更新はアクティブ フロー AAU を消費します。コネクタのみの再読み込みは消費せず、モデル支援分析は消費します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports" }]
+          },
+          {
+            "q": "利用の前提条件は？",
+            "a": "エージェントの読み書き権限が必要です。レポートは、エージェントに設定済みのコネクタと付与された権限の範囲でのみデータを取得します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports" }]
+          },
+          {
+            "q": "レポートを他の人と共有できますか？",
+            "a": "コピーリンクで共有できますが、アクセス権は付与されません。受信者は SRE エージェント標準ユーザー以上のロールが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/live-reports" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
