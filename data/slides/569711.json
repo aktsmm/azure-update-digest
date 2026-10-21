@@ -1,0 +1,112 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569711"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T21:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "569711",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure VM のディスクごとの回復性がパブリック プレビュー",
+        "subtitleJa": "障害時に影響を受けたデータ ディスクだけをオフラインにし、VM は稼働を継続",
+        "en": "Public Preview: Per-disk resiliency for Azure VMs"
+      },
+      "meta": {
+        "publishedJst": "2026-09-01",
+        "modifiedJst": "2026-09-01",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "August" }],
+        "status": "In preview",
+        "products": ["Azure Disk Storage"],
+        "categories": ["storage"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**データ ディスクを複数使う VM**（コンテナー ノード、共有ディスク クラスター等）の運用者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "1 つのデータ ディスクの障害で VM 全体が再起動しなくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "既定動作は変わらない。使うにはプレビュー登録とディスクごとの有効化が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency-configure", "locator": "ディスクごとの回復性プレビューに登録する", "retrievedAt": "2026-10-21T21:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "ディスクへの接続が長時間失われると、VM がシャットダウンされ、復旧後に再起動する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "冒頭", "retrievedAt": "2026-10-21T21:50:00Z" }] },
+        "after": { "text": "有効化したデータ ディスクのみデタッチされ、VM と他のディスクは稼働を継続。復旧後に自動で再アタッチ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "ディスクごとの回復性のしくみ", "retrievedAt": "2026-10-21T21:50:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "仕組みと対象", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ディスクの actionOnDiskDelay を AutomaticReattach にすると有効化（既定は None）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "ディスクごとの回復性のしくみ", "retrievedAt": "2026-10-21T21:50:00Z" }] },
+            { "text": "I/O 遅延がしきい値を超えると、そのディスクだけがデタッチされ、VM は再起動しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "ディスクごとの回復性のしくみ", "retrievedAt": "2026-10-21T21:50:00Z" }] },
+            { "text": "ディスクがオフラインの間、そのディスクへの I/O はエラーを返す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "ディスクごとの回復性シーケンスの例", "retrievedAt": "2026-10-21T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "データ ディスクのみ対象。OS ディスクは従来どおり VM が再起動する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "ディスクごとの回復性の制限", "retrievedAt": "2026-10-21T21:50:00Z" }] },
+            { "text": "2026 年 8 月 15 日より前にサポート リージョンで作成された VM は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "ディスクごとの回復性の制限", "retrievedAt": "2026-10-21T21:50:00Z" }] },
+            { "text": "VM 作成時は有効化不可。Azure ポータル非対応。書き込みアクセラレータ有効 VM も非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "ディスクごとの回復性の制限", "retrievedAt": "2026-10-21T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "向くのは、コンテナーのノード、クラスター化／共有ディスク、運用 VM のバックアップ ディスク", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "ディスクごとの回復性のユース ケース", "retrievedAt": "2026-10-21T21:50:00Z" }] },
+            { "text": "ディスクのオフライン中に返る I/O エラーを、アプリが処理できるか確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "backup", "heading": "バックアップと復元", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure Backup / Site Recovery で復元した後は、ディスクに設定を再度行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "ディスクごとの回復性の制限", "retrievedAt": "2026-10-21T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "regions", "heading": "プレビューの対象リージョン", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "東日本、東アジア、東南アジア、韓国中部、米国西部 など 18 リージョン", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "ディスクごとの回復性をサポートするリージョン", "retrievedAt": "2026-10-21T21:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "managed-disk", "term": "Azure マネージド ディスク", "type": "product", "oneLine": { "text": "VM に接続して使う、Azure が管理するディスク。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "冒頭", "retrievedAt": "2026-10-21T21:50:00Z" }] } },
+        { "termKey": "per-disk-resiliency", "term": "ディスクごとの回復性", "type": "feature", "oneLine": { "text": "ディスク障害時に、影響を受けたデータ ディスクだけをデタッチして VM を稼働させ続ける機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "冒頭", "retrievedAt": "2026-10-21T21:50:00Z" }] } },
+        { "termKey": "shared-disk", "term": "共有ディスク", "type": "term", "oneLine": { "text": "Windows / Linux のクラスター化アプリ向けに共有ブロック ストレージを提供するディスク。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "ディスクごとの回復性のユース ケース", "retrievedAt": "2026-10-21T21:50:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために全顧客へ提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-21T21:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビュー期間中のリージョン一覧に東日本を含む（西日本は一覧に含まれない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locator": "ディスクごとの回復性をサポートするリージョン", "retrievedAt": "2026-10-21T21:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569711",
+        "learn": [
+          { "title": "ディスクごとの回復性を使用してワークロードの可用性を向上させる (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency", "locale": "ja-jp" },
+          { "title": "Azure マネージド ディスクのディスクごとの回復性を構成する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency-configure", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "プレビュー期間中のリージョン一覧に東日本が含まれます。西日本は一覧にありません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency" }] },
+          { "q": "既存の VM でも使えますか？", "a": "2026 年 8 月 15 日より前にサポート リージョンで作成された VM は非対応です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency" }] },
+          { "q": "有効にするには何が必要ですか？", "a": "サブスクリプションに AllowDiskAvailabilityPolicy を登録し、データ ディスクで AutomaticReattach を設定します。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency-configure" }] },
+          { "q": "OS ディスクも対象ですか？", "a": "対象外です。データ ディスクのみが対象で、OS ディスクは従来の動作のままです。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-per-disk-resiliency" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
