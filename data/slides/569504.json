@@ -1,0 +1,126 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569504"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-22T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "569504",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Application Gateway WAF のブロック応答をカスタマイズ可能に（GA）",
+        "subtitleJa": "ブロック時のステータスコードと本文を、ポリシー単位で独自に定義できます",
+        "en": "Generally Available: Custom block response code and body for Application Gateway WAF"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Application Gateway", "Web Application Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Application Gateway の WAF を使っていて、**ブロック時の応答を変えたい方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "既定の 403 固定メッセージ以外を返せる（Front Door の WAF と同様）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "応答を変えたい場合のみ設定", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "一致したルールでブロックすると、403 と「The request is blocked」を返す",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/configure-custom-response-code", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }]
+        },
+        "after": {
+          "text": "ブロック時の応答ステータスコードと本文を独自に定義でき、全ブロック要求に同じ応答を返す",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "WAF がルール一致で要求をブロックした際の応答を、独自の状態コードとメッセージに置き換える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/configure-custom-response-code", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "ポリシー レベルの設定で、ブロックされた全要求に同じ応答を返す", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "WAF ポリシー → [設定] → [ポリシー設定] → [カスタムレスポンス] でコードと本文を入力し、保存", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/configure-custom-response-code", "locator": "カスタム応答状態コードとメッセージを構成する", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "Azure CLI や PowerShell でも設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/configure-custom-response-code", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "使える状態コード: 200・403・405・406・429・990〜999。本文は最大 32 KB", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/configure-custom-response-code", "locator": "制限事項", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "1 ゲートウェイで最大 20 ポリシー。ARM API は base64、Application Gateway for Containers は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/configure-custom-response-code", "locator": "制限事項", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Front Door の WAF にも同様のカスタム応答がある。Front Door の対応コードは 200・403・405・406・429", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/web-application-firewall/afds/waf-front-door-policy-settings", "locator": "WAF response for blocked requests", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ブロックされたことが分かる独自のメッセージや、運用に合う状態コードを返したい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "waf", "term": "WAF", "type": "feature", "oneLine": { "text": "Web アプリを一般的な悪用や脆弱性から保護する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/ag-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "block-response", "term": "ブロック応答", "type": "feature", "oneLine": { "text": "WAF が要求をブロックしたときに返す、状態コードと本文。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/configure-custom-response-code", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "policy-level", "term": "ポリシー レベルの設定", "type": "term", "oneLine": { "text": "ポリシー全体に適用され、ブロックされた全要求に同じ応答を返す設定。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-22T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Application Gateway は全リージョンで提供される基盤サービス。GA 機能は親サービスの提供状況に準ずる",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-22T00:00:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569504",
+        "learn": [{ "title": "Azure Application Gateway WAFのカスタムレスポンスを設定", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/configure-custom-response-code", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どのステータスコードを設定できますか？",
+            "a": "200・403・405・406・429・990〜999 のいずれかです。本文は最大 32 KB です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/configure-custom-response-code" }]
+          },
+          {
+            "q": "どこで設定しますか？",
+            "a": "Azure portal の WAF ポリシー「ポリシー設定」の「カスタムレスポンス」で設定します。CLI や PowerShell も使えます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/configure-custom-response-code" }]
+          },
+          {
+            "q": "Application Gateway for Containers でも使えますか？",
+            "a": "使えません。カスタム ブロック応答の状態コードと本文は Application Gateway for Containers WAF では未対応です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/configure-custom-response-code" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
