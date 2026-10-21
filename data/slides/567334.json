@@ -1,0 +1,105 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["567334"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T22:58:00Z"
+  },
+  "slides": [
+    {
+      "key": "567334",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "App Service の Node 22 LTS サポートが 2027-04-30 に終了",
+        "subtitleJa": "終了日以降もアプリは動くが、更新・サポートが止まる。期限までに Node 24 LTS へ",
+        "en": "Retirement: Support for Node 22 LTS ends on April 30, 2027"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [{ "rawRing": "Retirement", "year": 2027, "month": "April" }],
+        "status": null,
+        "products": ["App Service"],
+        "categories": ["compute", "web-mobile"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "App Service で Node 22 LTS を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "終了日以降は、セキュリティ更新とカスタマー サービスが提供されなくなる（アプリは動作し続ける）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "期限までに Node 24 LTS へアップグレードする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2027-04-30", "precision": "day" }
+      },
+      "beforeAfter": {
+        "before": { "text": "終了日までは、Node 22 LTS のアプリがセキュリティ更新とサポートを受けられる", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "after": { "text": "終了日以降はアプリは動作するが、セキュリティ更新なし・カスタマー サービスなし", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-08-25", "precision": "day" } },
+        { "label": "サポート終了", "when": { "date": "2027-04-30", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "App Service は、各言語コミュニティのサポート期限に従ってランタイムを廃止する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locator": "廃止", "retrievedAt": "2026-10-21T22:58:00Z" }] },
+            { "text": "サポート対象外の言語バージョンでは、サポートを受ける前に対応バージョンへの更新が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locator": "廃止 / 重要", "retrievedAt": "2026-10-21T22:58:00Z" }] }
+          ]
+        },
+        { "id": "migration", "heading": "移行先", "availability": "present", "priority": "core", "items": [{ "text": "Node 24 LTS", "origin": "mrc", "assertion": "fact", "verification": "source-only" }] },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Node のバージョンは、アプリ設定 WEBSITE_NODE_DEFAULT_VERSION（Windows）や linux-fx-version（Linux）で設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/configure-language-nodejs", "locator": "Node.js バージョンを設定する", "retrievedAt": "2026-10-21T22:58:00Z" }] },
+            { "text": "利用中の Node バージョンを棚卸しし、移行とテストの期間を期限から逆算して計画する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-app-service", "term": "Azure App Service", "type": "product", "oneLine": { "text": "Web アプリ・モバイル バックエンド・REST API を、基盤の管理なしで動かせるプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/app-service/overview", "locator": "冒頭", "retrievedAt": "2026-10-21T22:58:00Z" }] } },
+        { "termKey": "label-end-of-support", "term": "サポート終了", "type": "label", "oneLine": { "text": "セキュリティ更新とカスタマー サポートが提供されなくなること。アプリ自体は変更なく動き続ける。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locator": "廃止", "retrievedAt": "2026-10-21T22:58:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "App Service のランタイム サポート ポリシー（全体に適用）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locator": "廃止", "retrievedAt": "2026-10-21T22:58:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=567334",
+        "learn": [
+          { "title": "Azure App Service の言語ランタイム サポート ポリシー", "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locale": "ja-jp" },
+          { "title": "Azure App Service 向けの Node.js アプリを構成する", "url": "https://learn.microsoft.com/ja-jp/azure/app-service/configure-language-nodejs", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "終了日を過ぎると、アプリは止まりますか？",
+            "a": "アプリは変更なく動作し続けますが、終了日以降はセキュリティ更新とカスタマー サポートが提供されなくなります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy" }]
+          },
+          {
+            "q": "移行先と期限はいつですか？",
+            "a": "2027-04-30 までに Node 24 LTS へのアップグレードが必要です。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=567334" }]
+          },
+          {
+            "q": "Node のバージョンはどこで変更できますか？",
+            "a": "Windows では WEBSITE_NODE_DEFAULT_VERSION、Linux では linux-fx-version（例: NODE|24-lts）で設定します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/configure-language-nodejs" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
