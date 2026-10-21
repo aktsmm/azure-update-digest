@@ -1,0 +1,188 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569873"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T22:55:00Z"
+  },
+  "slides": [
+    {
+      "key": "569873",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "AKS の eBPF ホスト ルーティングが一般提供（GA）に",
+        "subtitleJa": "iptables を経由せず Linux カーネル内で転送し、低遅延・高スループットを狙えます",
+        "en": "Generally Available: eBPF host routing in Advanced Container Networking Services for AKS"
+      },
+      "meta": {
+        "publishedJst": "2026-08-25",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "June" }],
+        "status": "Launched",
+        "products": ["Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "containers"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Cilium 搭載 Azure CNI の AKS クラスター**で ACNS を使う／検討している方", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/aks/how-to-enable-ebpf-host-routing", "locator": "Requirements and parameters", "retrievedAt": "2026-10-21T22:55:00Z" }] },
+        "change": { "text": "ポッド間通信の遅延短縮・スループット向上・CPU 使用率の軽減が期待できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing", "locator": "主な利点", "retrievedAt": "2026-10-21T22:55:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "性能重視のワークロードがあれば検討。有効化はノード更新を伴う", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "従来のホスト ルーティングでは、ホスト ネットワーク名前空間で iptables と netfilter のルール処理によるオーバーヘッドが発生する",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing", "locator": "冒頭", "retrievedAt": "2026-10-21T22:55:00Z" }]
+        },
+        "after": {
+          "text": "ルーティングを eBPF プログラムで実装し、Cilium がホストの iptables をバイパス。ホップと処理レイヤーが減り、パケット配信が速くなる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing", "locator": "冒頭", "retrievedAt": "2026-10-21T22:55:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "パケット転送とルーティングの判断を eBPF で Linux カーネル内に移す", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "Cilium が BPF ベースのマスカレードで SNAT を引き継ぐ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing", "locator": "eBPF ホスト ルーティングのコンポーネント", "retrievedAt": "2026-10-21T22:55:00Z" }]
+            },
+            {
+              "text": "iptables blocker が、ホストへの iptables ルール追加を防ぐ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing", "locator": "eBPF ホスト ルーティングのコンポーネント", "retrievedAt": "2026-10-21T22:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "有効化の流れ（Azure CLI）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "新規: az aks create に --enable-acns と --acns-datapath-acceleration-mode BpfVeth を指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/aks/how-to-enable-ebpf-host-routing", "locator": "Enable Advanced Container Networking Services and eBPF Host Routing", "retrievedAt": "2026-10-21T22:55:00Z" }]
+            },
+            {
+              "text": "既存: az aks update で同じフラグを指定。ノードはローリング更新される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [
+                { "url": "https://learn.microsoft.com/azure/aks/how-to-enable-ebpf-host-routing", "locator": "on an existing cluster", "retrievedAt": "2026-10-21T22:55:00Z" },
+                { "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing", "locator": "考慮事項", "retrievedAt": "2026-10-21T22:55:00Z" }
+              ]
+            },
+            {
+              "text": "無効化は --acns-datapath-acceleration-mode None（他の ACNS 機能は維持）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/aks/how-to-enable-ebpf-host-routing", "locator": "Disable eBPF Host Routing", "retrievedAt": "2026-10-21T22:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure CLI 2.71.0 以降、Kubernetes 1.33 以降、Azure Linux 3.0 か Ubuntu 24.04",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/aks/how-to-enable-ebpf-host-routing", "locator": "Requirements and parameters", "retrievedAt": "2026-10-21T22:55:00Z" }]
+            },
+            {
+              "text": "Windows ノード、機密 VM、ポッド サンドボックス、静的エグレス ゲートウェイは非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing", "locator": "制限事項", "retrievedAt": "2026-10-21T22:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する ACNS の機能", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ACNS は「監視」「セキュリティ」「パフォーマンス」で構成。本機能はパフォーマンス側",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/advanced-container-networking-services-overview", "locator": "コンテナネットワークのパフォーマンス", "retrievedAt": "2026-10-21T22:55:00Z" }]
+            },
+            {
+              "text": "ACNS は有料オファリング。価格は公式の価格ページで確認できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing", "locator": "Pricing", "retrievedAt": "2026-10-21T22:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "高スループットのマイクロサービス、リアルタイム サービス、AI/ML ワークロード",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing", "locator": "主な利点", "retrievedAt": "2026-10-21T22:55:00Z" }]
+            },
+            {
+              "text": "ホストの iptables ルールはバイパスされる。依存するクラスターは事前に確認する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing", "locator": "考慮事項", "retrievedAt": "2026-10-21T22:55:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aks", "term": "AKS", "type": "product", "oneLine": { "text": "Azure 上で Kubernetes クラスターを実行するためのマネージド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/what-is-aks", "locator": "冒頭", "retrievedAt": "2026-10-21T22:55:00Z" }] } },
+        { "termKey": "acns", "term": "ACNS", "type": "product", "oneLine": { "text": "AKS のネットワークの監視・セキュリティ・パフォーマンスを強化する一連のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/advanced-container-networking-services-overview", "locator": "冒頭", "retrievedAt": "2026-10-21T22:55:00Z" }] } },
+        { "termKey": "ebpf", "term": "eBPF", "type": "term", "oneLine": { "text": "カーネル内でプログラムを動かし、ネットワーク処理などを最適化する技術。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing", "locator": "冒頭", "retrievedAt": "2026-10-21T22:55:00Z" }] } },
+        { "termKey": "iptables", "term": "iptables", "type": "term", "oneLine": { "text": "従来のホストでパケットを処理するルール機構で、ルール処理のオーバーヘッドが生じる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing", "locator": "冒頭", "retrievedAt": "2026-10-21T22:55:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-21T22:55:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "AKS は全リージョンで提供される基盤サービス。本機能に個別のリージョン制限の記載はない",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-21T22:55:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569873",
+        "learn": [
+          { "title": "eBPF ホスト ルーティングの概要", "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing", "locale": "ja-jp" },
+          { "title": "Enable eBPF Host Routing with Advanced Container Networking Services", "url": "https://learn.microsoft.com/en-us/azure/aks/how-to-enable-ebpf-host-routing", "locale": "en-us" },
+          { "title": "AKS 用の高度なコンテナー ネットワーク サービスの概要", "url": "https://learn.microsoft.com/ja-jp/azure/aks/advanced-container-networking-services-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分のクラスターは対象ですか？",
+            "a": "Cilium 搭載 Azure CNI、Kubernetes 1.33 以降、Azure Linux 3.0 または Ubuntu 24.04 のノードが必要です。Windows ノードは非対応です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/aks/how-to-enable-ebpf-host-routing" }, { "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing" }]
+          },
+          {
+            "q": "既存クラスターで有効化すると通信は止まりますか？",
+            "a": "ノード プールのローリング アップグレードで更新され、ノード ドレイン タイムアウトにより既存の接続は適切に維持されます。ただし接続が中断される可能性はあります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing" }, { "url": "https://learn.microsoft.com/azure/aks/how-to-enable-ebpf-host-routing" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "ACNS は有料オファリングです。価格の詳細は Azure の ACNS 価格ページをご確認ください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/container-network-performance-ebpf-host-routing" }]
+          },
+          {
+            "q": "後から無効にできますか？",
+            "a": "--acns-datapath-acceleration-mode None を指定すると、他の ACNS 機能に影響せず個別に無効化できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/aks/how-to-enable-ebpf-host-routing" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
