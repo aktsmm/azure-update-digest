@@ -1,0 +1,146 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569546"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T22:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "569546",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "D/E v7 VM に 248・372 vCPU サイズが一般提供（GA）",
+        "subtitleJa": "Intel Xeon 6 搭載。最大 372 vCPU・2.8 TiB メモリまでスケールアップ可能",
+        "en": "Generally Available: Azure 248 and 372 vCPU sizes for D/E v7 series VMs"
+      },
+      "meta": {
+        "publishedJst": "2026-08-26",
+        "modifiedJst": "2026-08-26",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Virtual Machines"],
+        "categories": ["compute"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "大規模な CPU／メモリを要する **D/E v7 系 VM の利用者**（インメモリ DB、AI ワークロードなど）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "v6 比で最大 20% 高い計算性能と、より高いネットワーク・ストレージ性能を得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "大型 VM が必要なら対象リージョンで検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Dlsv7 / Dsv7 / Esv7 系に 248・372 vCPU サイズが加わり、最大 372 vCPU・2.8 TiB メモリまで拡張できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み・特長", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Intel Xeon 6 搭載。前世代 Intel v6 VM より最大 20% 高い計算性能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "372 vCPU の Esv7/Edsv7 は最大 400 Gbps のネットワーク帯域", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "リモート ストレージは最大 800k IOPS・20 GBps（Premium SSD v2 / Ultra Disk）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "サイズ名の例: Standard_D248s_v7（248 vCPU）、Standard_D372s_v7（372 vCPU）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dsv7-series", "locator": "シリーズにおけるサイズ", "retrievedAt": "2026-10-21T22:50:00Z" }]
+            },
+            { "text": "提供リージョン: 米国 6 リージョン、Germany West Central、Sweden Central", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "NVMe 対応の OS イメージが必要。第 1 世代 VM は非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dsv7-series", "locator": "機能のサポート", "retrievedAt": "2026-10-21T22:50:00Z" }]
+            },
+            {
+              "text": "Dsv7 / Dlsv7 は一時ストレージなし。ディスクは VM とは別課金",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dsv7-series", "locator": "冒頭", "retrievedAt": "2026-10-21T22:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "シリーズ間の違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Dlsv7: 最大 248 vCPU・496 GiB。メモリを多く使わない用途向け",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dlsv7-series", "locator": "冒頭", "retrievedAt": "2026-10-21T22:50:00Z" }]
+            },
+            {
+              "text": "Dsv7: 最大 372 vCPU・1,488 GiB の汎用 VM",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dsv7-series", "locator": "ホストの仕様", "retrievedAt": "2026-10-21T22:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "大規模インメモリ DB、コンテキストの大きいエージェント型 AI", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ノード間ネットワーク ホップを減らし、低遅延なアプリを実現", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "vcpu", "term": "vCPU", "type": "term",
+          "oneLine": { "text": "仮想マシンに割り当てられる仮想 CPU の数。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dsv7-series", "locator": "シリーズにおけるサイズ", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+        },
+        {
+          "termKey": "dsv7", "term": "Dsv7 シリーズ", "type": "feature",
+          "oneLine": { "text": "Intel Xeon 6 で動作し、多くの汎用ワークロードに適した VM シリーズ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dsv7-series", "locator": "冒頭", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+        },
+        {
+          "termKey": "dlsv7", "term": "Dlsv7 シリーズ", "type": "feature",
+          "oneLine": { "text": "メモリを多く使わないアプリのコストを抑えられる VM シリーズ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dlsv7-series", "locator": "冒頭", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-21T22:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569546",
+        "learn": [
+          { "title": "Dsv7 サイズ シリーズ", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dsv7-series", "locale": "ja-jp" },
+          { "title": "Dlsv7 サイズ シリーズ", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dlsv7-series", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "前提条件はありますか？",
+            "a": "NVMe 対応の OS イメージが必要で、第 1 世代 VM は非対応です。ディスクは別課金です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dsv7-series", "locator": "機能のサポート", "retrievedAt": "2026-10-21T22:50:00Z" }]
+          },
+          {
+            "q": "最大サイズはどれくらいですか？",
+            "a": "Dsv7 は最大 372 vCPU・1,488 GiB、Dlsv7 は最大 248 vCPU・496 GiB です。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dsv7-series", "locator": "ホストの仕様", "retrievedAt": "2026-10-21T22:50:00Z" },
+              { "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dlsv7-series", "locator": "ホストの仕様", "retrievedAt": "2026-10-21T22:50:00Z" }
+            ]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
