@@ -1,0 +1,120 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570364"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T21:52:08Z"
+  },
+  "slides": [
+    {
+      "key": "570364",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Multicloud Interconnect がパブリック プレビュー",
+        "subtitleJa": "Azure と AWS をマネージドなプライベート接続で結ぶ（プレビューは AWS のみ対応）",
+        "en": "Public Preview: Azure Multicloud Interconnect"
+      },
+      "meta": {
+        "publishedJst": "2026-09-01",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "August" }],
+        "status": "In preview",
+        "products": ["Azure ExpressRoute"],
+        "categories": ["networking", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Azure と AWS をまたぐ構成を検討している**ネットワーク／クラウド担当者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "クラウド間のプライベート接続を、ポータルからマネージドに構成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "検証向け。プレビューは SLA なし・1Gbps・対象リージョン限定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/availability-limits", "locator": "サービス水準合意書 / 既知の制限", "retrievedAt": "2026-10-21T21:55:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "プロバイダー回線、ルーター、クロスコネクト、VLAN、BGP ピアリングなどを自分で調整する必要があった",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/overview", "locator": "簡素化されたプロビジョニング", "retrievedAt": "2026-10-21T21:55:00Z" }]
+        },
+        "after": {
+          "text": "リソース作成とアクティベーション キーの交換で接続をプロビジョニングでき、上記の調整は不要",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/overview", "locator": "簡素化されたプロビジョニング", "retrievedAt": "2026-10-21T21:55:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure と AWS 間の接続。帯域幅は 1Gbps、マネージドな冗長接続", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/overview", "locator": "プレビュー範囲", "retrievedAt": "2026-10-21T21:55:00Z" }] },
+            { "text": "作成可能リージョン: オーストラリア東部 / 米国東部 / ドイツ中西部 / 米国西部", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/availability-limits", "locator": "サポートされているリージョン", "retrievedAt": "2026-10-21T21:55:00Z" }] },
+            { "text": "プレビュー中は、サービス料金も Azure の送信料金も発生しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/availability-limits", "locator": "Pricing", "retrievedAt": "2026-10-21T21:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対応プロバイダーは AWS のみ。プライベート接続のみで Microsoft ピアリングは対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/availability-limits", "locator": "既知の制限", "retrievedAt": "2026-10-21T21:55:00Z" }] },
+            { "text": "プレビュー中は SLA なし。1 インターコネクトにつきゲートウェイ接続は 1 つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/availability-limits", "locator": "サービス水準合意書 / ゲートウェイ接続", "retrievedAt": "2026-10-21T21:55:00Z" }] },
+            { "text": "前提: ExpressRoute の仮想ネットワーク ゲートウェイと、重複しないアドレス空間", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/availability-limits", "locator": "Prerequisites", "retrievedAt": "2026-10-21T21:55:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "オンプレミス接続は ExpressRoute、他クラウドとの接続は本サービスという使い分け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/overview", "locator": "Azure マルチクラウド相互接続と ExpressRoute", "retrievedAt": "2026-10-21T21:55:00Z" }] },
+            { "text": "検証前に、アドレス空間の重複とルーティング意図、対象リージョンを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "multicloud-interconnect", "term": "Azure Multicloud Interconnect", "type": "product", "oneLine": { "text": "Azure と対応クラウド プロバイダー間にプライベート接続を提供するマネージド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/overview", "locator": "冒頭", "retrievedAt": "2026-10-21T21:55:00Z" }] } },
+        { "termKey": "expressroute", "term": "ExpressRoute", "type": "product", "oneLine": { "text": "本サービスの基盤となる、安全なプライベート接続の技術。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/overview", "locator": "Azure マルチクラウド相互接続と ExpressRoute", "retrievedAt": "2026-10-21T21:55:00Z" }] } },
+        { "termKey": "activation-key", "term": "アクティベーション キー", "type": "term", "oneLine": { "text": "インターコネクトの Azure 側とプロバイダー側を結びつけるキー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/overview", "locator": "アクティベーション キー", "retrievedAt": "2026-10-21T21:55:00Z" }] } },
+        { "termKey": "macsec", "term": "MACsec", "type": "term", "oneLine": { "text": "Azure とプロバイダー間の物理リンクを暗号化する仕組み（既定で有効）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/overview", "locator": "リンク暗号化", "retrievedAt": "2026-10-21T21:55:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-21T21:55:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビューの作成可能リージョンに日本は含まれない（オーストラリア東部・米国東部・ドイツ中西部・米国西部）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/availability-limits", "locator": "サポートされているリージョン", "retrievedAt": "2026-10-21T21:55:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570364",
+        "learn": [
+          { "title": "Azure Multicloud Interconnect Previewとは何ですか?", "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/overview", "locale": "ja-jp" },
+          { "title": "Azure Multicloud Interconnect プレビューの提供状況と制限", "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/availability-limits", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "プレビューで作成できるのはオーストラリア東部・米国東部・ドイツ中西部・米国西部で、日本は含まれません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/availability-limits" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "プレビュー期間中は、サービス料金も Azure の送信料金も発生しません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/availability-limits" }]
+          },
+          {
+            "q": "AWS 以外のクラウドにも接続できますか？",
+            "a": "プレビューで対応するのは AWS のみで、帯域幅は 1Gbps に限られます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/multicloud-interconnect/availability-limits" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
