@@ -1,0 +1,93 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["575329"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T21:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "575329",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Monitor の高度なプラットフォーム メトリック",
+        "subtitleJa": "より詳細なリソース メトリックをオプトインで取得（一般提供の発表）",
+        "en": "Generally Available: Advanced platform metrics for Azure Monitor"
+      },
+      "meta": {
+        "publishedJst": "2026-10-21",
+        "availability": [
+          { "rawRing": "Preview", "year": 2026, "month": "July" },
+          { "rawRing": "General Availability", "year": 2026, "month": "October" }
+        ],
+        "status": "Launched",
+        "products": ["Azure Monitor"],
+        "categories": ["ops-governance", "devtools"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Monitor でリソースを監視する運用担当者**（現在の対応リソースは Azure Storage）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform", "locator": "サポートされているリソース プロバイダー", "retrievedAt": "2026-10-21T21:30:00Z" }] },
+        "change": { "text": "既定のメトリックより細かい粒度でリソースの変化や傾向を把握できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform", "locator": "冒頭", "retrievedAt": "2026-10-21T21:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "リソース単位のオプトイン。有料機能のため料金を確認して有効化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform", "locator": "Note", "retrievedAt": "2026-10-21T21:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "プラットフォーム メトリックは自動収集・無料で、ベースライン監視向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform", "locator": "冒頭", "retrievedAt": "2026-10-21T21:30:00Z" }] },
+        "after": { "text": "リソース単位で有効化すると、より詳細なメトリックを取得できる（有料）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform", "locator": "プラットフォーム メトリックとの違い", "retrievedAt": "2026-10-21T21:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "対象と有効化", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プラットフォーム メトリックを拡張する有料レベル。リソース単位でオプトイン", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform", "locator": "高度なプラットフォーム メトリックとは", "retrievedAt": "2026-10-21T21:30:00Z" }] },
+            { "text": "現在の対応は Azure Storage（コンテナー別の BLOB 容量・BLOB 数）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform", "locator": "サポートされているリソース プロバイダー", "retrievedAt": "2026-10-21T21:30:00Z" }] },
+            { "text": "Azure portal から有効化でき、未有効のサブスクリプションにはバナーで案内", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "有料機能。設定の反映（有効化・更新・無効化）に最大 6 時間かかる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform", "locator": "Note", "retrievedAt": "2026-10-21T21:30:00Z" }] },
+            { "text": "Storage では Premium Azure Files / Premium Page Blob アカウントは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/blob-storage-advanced-platform-metrics", "locator": "制限と考慮事項", "retrievedAt": "2026-10-21T21:30:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "コンテナー単位の容量把握が必要な Storage アカウントで、対象を絞って有効化し費用を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-monitor", "term": "Azure Monitor", "type": "product", "oneLine": { "text": "Azure リソースのメトリックを収集・分析する監視サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform", "locator": "冒頭", "retrievedAt": "2026-10-21T21:30:00Z" }] } },
+        { "termKey": "platform-metrics", "term": "プラットフォーム メトリック", "type": "feature", "oneLine": { "text": "Azure Monitor が Azure リソースから自動収集する無料のメトリック。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform", "locator": "冒頭", "retrievedAt": "2026-10-21T21:30:00Z" }] } },
+        { "termKey": "advanced-platform-metrics", "term": "高度なプラットフォーム メトリック", "type": "feature", "oneLine": { "text": "より詳細な粒度のデータを提供する、プラットフォーム メトリックの有料レベル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform", "locator": "冒頭", "retrievedAt": "2026-10-21T21:30:00Z" }] } },
+        { "termKey": "opt-in", "term": "オプトイン", "type": "term", "oneLine": { "text": "リソース レベルで明示的に有効化すること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform", "locator": "高度なプラットフォーム メトリックとは", "retrievedAt": "2026-10-21T21:30:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=575329",
+        "learn": [
+          { "title": "高度なプラットフォーム メトリック", "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform", "locale": "ja-jp" },
+          { "title": "Azure Blob Storage の高度なプラットフォーム メトリック", "url": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/blob-storage-advanced-platform-metrics", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "どのリソースで使えますか？", "a": "現在の対応リソース プロバイダーは Azure Storage です。今後、より多くのプロバイダーが対応する予定と案内されています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform" }] },
+          { "q": "費用はかかりますか？", "a": "有料機能です。既定のプラットフォーム メトリックは無料です。詳細は Azure Monitor の価格を参照してください。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform" }] },
+          { "q": "有効化後すぐ反映されますか？", "a": "設定の変更が反映されるまで最大 6 時間かかる場合があります。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-advanced-platform" }, { "url": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/blob-storage-advanced-platform-metrics" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
