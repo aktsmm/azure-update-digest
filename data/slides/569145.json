@@ -1,0 +1,151 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569145"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T23:21:31Z"
+  },
+  "slides": [
+    {
+      "key": "569145",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "VS Code の MSSQL 拡張でショートカット設定が GA に",
+        "subtitleJa": "Quick Queries・結果グリッド・クエリ エディターのキー操作を、エディター内で変更できます",
+        "en": "Generally Available: Azure SQL updates for mid-August 2026"
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**VS Code の MSSQL 拡張機能で Azure SQL に接続して開発する方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "エディターを離れずにショートカットを自分好みに設定できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "ショートカットを変えたい場合に利用", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "クイック クエリ: キーボード ショートカット付きの SQL スニペットを保存して実行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code", "locator": "ショートカット設定", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            },
+            {
+              "text": "拡張機能ショートカット: クエリ エディターと結果ビューのショートカットを設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-keyboard-shortcuts", "locator": "ショートカット設定を使用する", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "MSSQL 拡張のツールバーで [ショートカット設定を開く] を選択",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-keyboard-shortcuts", "locator": "ショートカット設定を使用する", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            },
+            {
+              "text": "[拡張機能ショートカット] タブで、クエリ エディターと結果ビューを確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-keyboard-shortcuts", "locator": "ショートカット設定を使用する", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "VS Code 用 MSSQL 拡張機能の機能。Azure SQL・Fabric の SQL データベース・SQL Server が対象",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code", "locator": "冒頭", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            },
+            {
+              "text": "既存のショートカットを上書きする場合があり、保存前に競合の確認が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-keyboard-shortcuts", "locator": "Note", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ショートカット設定: 日常の変更向け / keybindings.json・settings.json: 詳細設定向け",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-keyboard-shortcuts", "locator": "構成方法を選択する", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            },
+            {
+              "text": "SSMS / Azure Data Studio 風のキーには、MSSQL Database Management Keymap 拡張機能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-keyboard-shortcuts", "locator": "構成方法を選択する", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "よく使うクエリをクイック クエリに割り当て、日々の確認作業を速くする",
+              "origin": "editorial", "assertion": "recommendation", "verification": "unverified"
+            },
+            {
+              "text": "クイック クエリは、ショートカットで即実行するか、エディターで開くかを選べる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code", "locator": "ショートカット設定", "retrievedAt": "2026-10-21T23:30:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "Azure SQL に含まれる、マネージドなリレーショナル データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code", "locator": "冒頭", "retrievedAt": "2026-10-21T23:30:00Z" }] } },
+        { "termKey": "mssql-extension", "term": "MSSQL 拡張機能", "type": "product", "oneLine": { "text": "VS Code から SQL データベースへの接続や T-SQL クエリの実行を行える拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code", "locator": "冒頭", "retrievedAt": "2026-10-21T23:30:00Z" }] } },
+        { "termKey": "quick-queries", "term": "クイック クエリ", "type": "feature", "oneLine": { "text": "キーボード ショートカット付きで保存して実行できる SQL スニペット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code", "locator": "ショートカット設定", "retrievedAt": "2026-10-21T23:30:00Z" }] } },
+        { "termKey": "keybindings", "term": "キーバインディング", "type": "term", "oneLine": { "text": "VS Code でコマンドに割り当てるキーの組み合わせ（keybindings.json）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-keyboard-shortcuts", "locator": "冒頭", "retrievedAt": "2026-10-21T23:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-21T23:30:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569145",
+        "learn": [
+          { "title": "キーボード ショートカットをカスタマイズする", "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-keyboard-shortcuts", "locale": "ja-jp" },
+          { "title": "Visual Studio Code のための MSSQL 拡張機能", "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どこから設定しますか？",
+            "a": "MSSQL 拡張のツールバーから [ショートカット設定を開く] を選びます。クイック クエリと拡張機能ショートカットの 2 つのタブがあります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code" }]
+          },
+          {
+            "q": "SSMS と同じキー操作にできますか？",
+            "a": "MSSQL Database Management Keymap 拡張機能を入れると、SSMS や Azure Data Studio に近いショートカットを使えます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-keyboard-shortcuts" }]
+          },
+          {
+            "q": "設定ファイルを直接編集できますか？",
+            "a": "できます。コマンドは keybindings.json、結果ビューは settings.json の mssql.shortcuts で手動設定できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-keyboard-shortcuts" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
