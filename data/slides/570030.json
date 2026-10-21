@@ -1,0 +1,155 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570030"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T22:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "570030",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Bastion 経由の AKS クラスター接続が GA に",
+        "subtitleJa": "ローカル PC から Bastion のトンネルで API サーバーへ安全に接続できます",
+        "en": "Generally Available: Connect to AKS clusters using Azure Bastion"
+      },
+      "meta": {
+        "publishedJst": "2026-08-27",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Bastion", "Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "networking", "security", "containers"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "AKS プライベート クラスターを運用・管理している**クラスター管理者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "踏み台 VM や VPN サーバーを別途用意せず、標準の Kubernetes ツールで接続できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プライベート クラスターへの接続方法を見直したい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Bastion 経由のトンネルで AKS の API サーバーに接続でき、プライベート エンドポイントを公開せずに済む。別個の踏み台 VM・VPN サーバー・追加のアクセス エージェントを減らせる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Bastion のネイティブ クライアント トンネリングを使い、ローカルから AKS へ接続",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-connect-to-aks-private-cluster", "locator": "冒頭", "retrievedAt": "2026-10-21T22:20:00Z" }]
+            },
+            {
+              "text": "クラスターのエンドポイントを公開せず、クライアントやエージェントの追加も不要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-connect-to-aks-private-cluster", "locator": "冒頭", "retrievedAt": "2026-10-21T22:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "接続の流れ（Azure CLI）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "az login → az aks get-credentials --admin → az aks bastion でトンネルを開く",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-connect-to-aks-private-cluster", "locator": "接続する", "retrievedAt": "2026-10-21T22:20:00Z" }]
+            },
+            {
+              "text": "一時 KUBECONFIG の server を Bastion トンネルのローカル ポートに向け、kubectl で操作",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-connect-to-aks-private-cluster", "locator": "接続する", "retrievedAt": "2026-10-21T22:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Bastion は Standard / Premium SKU でネイティブ クライアントを有効化し、AKS の VNet に配置",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-connect-to-aks-private-cluster", "locator": "前提条件", "retrievedAt": "2026-10-21T22:20:00Z" }]
+            },
+            {
+              "text": "AKS・Bastion リソースの閲覧者ロールが必要。承認済み IP 範囲には Bastion の IP を追加",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-connect-to-aks-private-cluster", "locator": "必要な役割 / その他の要件", "retrievedAt": "2026-10-21T22:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Bastion は VM への RDP/SSH 接続が基本。本機能は AKS の API サーバーへのトンネルを提供",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [
+                { "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-overview", "locator": "Azure Bastionとは", "retrievedAt": "2026-10-21T22:20:00Z" },
+                { "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-connect-to-aks-private-cluster", "locator": "冒頭", "retrievedAt": "2026-10-21T22:20:00Z" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "踏み台 VM や VPN サーバーの運用を減らしたいプライベート クラスター管理に向く",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            },
+            {
+              "text": "Bastion は時間単位の SKU 料金と送信データ転送で課金される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-overview", "locator": "料金と SLA", "retrievedAt": "2026-10-21T22:20:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-bastion", "term": "Azure Bastion", "type": "product", "oneLine": { "text": "仮想マシンへ安全に RDP/SSH 接続できる、フル マネージドの PaaS サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-overview", "locator": "冒頭", "retrievedAt": "2026-10-21T22:20:00Z" }] } },
+        { "termKey": "aks", "term": "AKS", "type": "product", "oneLine": { "text": "Azure 上で Kubernetes クラスターを実行できるマネージド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/private-clusters", "locator": "冒頭", "retrievedAt": "2026-10-21T22:20:00Z" }] } },
+        { "termKey": "private-cluster", "term": "プライベート クラスター", "type": "feature", "oneLine": { "text": "コントロール プレーン（API サーバー）が内部 IP アドレスを持つ AKS クラスター。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/private-clusters", "locator": "AKS のプライベート クラスターの概要", "retrievedAt": "2026-10-21T22:20:00Z" }] } },
+        { "termKey": "native-client", "term": "ネイティブ クライアント", "type": "feature", "oneLine": { "text": "ローカル PC にインストール済みのクライアントで Bastion 経由接続する方法（Standard / Premium SKU）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-overview", "locator": "接続方法", "retrievedAt": "2026-10-21T22:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-21T22:20:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570030",
+        "learn": [
+          { "title": "Azure Bastionを使ってAKSプライベートクラスタに接続してください", "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-connect-to-aks-private-cluster", "locale": "ja-jp" },
+          { "title": "Azure Bastionとは", "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どの SKU の Bastion が必要ですか？",
+            "a": "Standard または Premium SKU で、構成設定でネイティブ クライアント サポートを有効にする必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-connect-to-aks-private-cluster" }]
+          },
+          {
+            "q": "必要な権限は何ですか？",
+            "a": "AKS クラスターと Bastion リソースの閲覧者ロールが必要です。ピアリング構成の場合は AKS の仮想ネットワークの閲覧者ロールも必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-connect-to-aks-private-cluster" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "Bastion は時間単位の SKU 料金と送信データ転送コストで課金され、デプロイ時点から料金が発生します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
