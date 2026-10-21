@@ -1,0 +1,148 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570020"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T22:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "570020",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Bastion の共有可能リンクに有効期限を設定できるように（GA）",
+        "subtitleJa": "リンク作成時に失効日時を指定でき、期限後はそのリンクで接続できなくなります",
+        "en": "Generally Available: Azure Bastion shareable link expiration"
+      },
+      "meta": {
+        "publishedJst": "2026-08-27",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Bastion"],
+        "categories": ["networking", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Azure Bastion の共有可能リンクで **VM への一時的な接続を提供している管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "常時アクセスを抑え、一時的な接続を管理しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "共有可能リンクを使っていれば、作成時に有効期限を設定", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "リンク作成時に、リンクが期限切れになる日時を指定する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "共有可能なリンクの有効期限を設定する", "retrievedAt": "2026-10-21T22:10:00Z" }]
+            },
+            {
+              "text": "期限を過ぎるとリンクは接続に使えず、状態は「リンクの期限切れ」に変わる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "共有可能なリンクの有効期限を設定する", "retrievedAt": "2026-10-21T22:10:00Z" }]
+            },
+            {
+              "text": "リンクに資格情報は含まれず、管理者がサインイン資格情報を別途提供する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "VM への接続", "retrievedAt": "2026-10-21T22:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Bastion → [構成] で Standard を選び [共有可能リンク] を有効化（反映に約 10 分）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "共有可能リンク機能を有効にする", "retrievedAt": "2026-10-21T22:10:00Z" }]
+            },
+            {
+              "text": "[共有可能リンク] → [+ 追加] でリソースと有効期限を選び [適用]",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "共有可能リンクを作成する", "retrievedAt": "2026-10-21T22:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Standard SKU が必要。リンクは 1 Bastion あたり 500 個まで",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "考慮事項", "retrievedAt": "2026-10-21T22:10:00Z" }]
+            },
+            {
+              "text": "Virtual WAN、テナント間ピアリング、オンプレミス VM は非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "考慮事項", "retrievedAt": "2026-10-21T22:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ポータル接続: Azure ポータル経由 / 共有可能リンク: ポータル不要で接続（Standard 以上）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-overview", "locator": "接続方法", "retrievedAt": "2026-10-21T22:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "外部の担当者に短時間だけ VM へ接続してもらう場面で期限を短く設定する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "作成・削除の権限は IAM で付与。既定は読み取りのみ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "アクセス許可", "retrievedAt": "2026-10-21T22:10:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-bastion", "term": "Azure Bastion", "type": "product", "oneLine": { "text": "VM へ安全に RDP/SSH 接続できる、フル マネージドの PaaS サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-overview", "locator": "冒頭", "retrievedAt": "2026-10-21T22:10:00Z" }] } },
+        { "termKey": "shareable-link", "term": "共有可能リンク", "type": "feature", "oneLine": { "text": "Azure portal を使わずに Bastion 経由でターゲット リソースへ接続できる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "冒頭", "retrievedAt": "2026-10-21T22:10:00Z" }] } },
+        { "termKey": "standard-sku", "term": "Standard SKU", "type": "term", "oneLine": { "text": "共有可能リンクやネイティブ クライアントなどの高度な機能を含む Bastion のレベル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-overview", "locator": "SKU", "retrievedAt": "2026-10-21T22:10:00Z" }] } },
+        { "termKey": "rdp-ssh", "term": "RDP / SSH", "type": "term", "oneLine": { "text": "Bastion が VM への接続に使うリモート接続のプロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-overview", "locator": "冒頭", "retrievedAt": "2026-10-21T22:10:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-21T22:10:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570020",
+        "learn": [
+          { "title": "Bastion の共有可能リンクを作成する", "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locale": "ja-jp" },
+          { "title": "Azure Bastion とは", "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "共有可能リンクを使うには何が必要ですか？",
+            "a": "Bastion の Standard SKU が必要です。リンクを作成する VM は、Bastion の仮想ネットワークか直接ピアリングされた仮想ネットワークにある必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "前提条件", "retrievedAt": "2026-10-21T22:10:00Z" }]
+          },
+          {
+            "q": "有効期限が切れたリンクはどうなりますか？",
+            "a": "期限を過ぎるとターゲット リソースへの接続に使えなくなり、リソースの状態は「リンクの期限切れ」になります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "共有可能なリンクの有効期限を設定する", "retrievedAt": "2026-10-21T22:10:00Z" }]
+          },
+          {
+            "q": "リンクを受け取った人は資格情報なしで接続できますか？",
+            "a": "できません。リンクに資格情報は含まれないため、管理者がサインイン資格情報を別途提供する必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "VM への接続", "retrievedAt": "2026-10-21T22:10:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
