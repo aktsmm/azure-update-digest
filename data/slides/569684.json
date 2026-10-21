@@ -1,0 +1,120 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569684"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T23:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "569684",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Databricks Lakebase が新たに 4 リージョンで一般提供",
+        "subtitleJa": "北中部アメリカ・フランス中部・ドイツ西中部・東アジアでデプロイ可能に",
+        "en": "Generally Available: Azure Databricks Lakebase in four additional regions"
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Databricks"],
+        "categories": ["databases", "ai"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Azure Databricks で Lakebase を使う／検討している方**（対象 4 リージョンのワークスペース）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Lakebase ワークロードのデプロイ先の選択肢が広がる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "対象リージョンにワークスペースがあれば利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/oltp/projects/get-started", "locator": "手順 1: 最初のプロジェクトを作成する", "retrievedAt": "2026-10-21T23:20:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "追加された 4 リージョン", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "northcentralus（北中部アメリカ）/ francecentral（フランス中部）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/lakebase/", "locator": "Lakebaseは4つの新しいAzureリージョンで利用可能", "retrievedAt": "2026-10-21T23:20:00Z" }] },
+            { "text": "germanywestcentral（ドイツ西中部）/ eastasia（東アジア）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/lakebase/", "locator": "Lakebaseは4つの新しいAzureリージョンで利用可能", "retrievedAt": "2026-10-21T23:20:00Z" }] },
+            { "text": "Lakebase プロジェクトは Databricks ワークスペースのリージョンに作成される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/oltp/projects/manage-projects", "locator": "利用可能なリージョン", "retrievedAt": "2026-10-21T23:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "アプリスイッチャーで Lakebase アプリを開き、[新しいプロジェクト] で名前と Postgres バージョンを選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/oltp/projects/get-started", "locator": "手順 1", "retrievedAt": "2026-10-21T23:20:00Z" }] },
+            { "text": "プロジェクトのリージョンはワークスペースのリージョンに自動設定される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/oltp/projects/get-started", "locator": "手順 1", "retrievedAt": "2026-10-21T23:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Postgres 16 / 17 / 18 に対応（既定は 17）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/oltp/projects/manage-projects", "locator": "Postgres バージョンのサポート", "retrievedAt": "2026-10-21T23:20:00Z" }] },
+            { "text": "リリースは段階的で、アカウントへの反映に 1 週間以上かかる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/lakebase/", "locator": "冒頭の注記", "retrievedAt": "2026-10-21T23:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "Lakebase の主な特長", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "自動スケーリング、スケール・トゥ・ゼロ、ブランチ、即時復元を提供（Azure で 2026 年 3 月に GA）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/lakebase/", "locator": "Lakebase が Azure で一般提供されるようになりました", "retrievedAt": "2026-10-21T23:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "データの所在地や遅延の要件に合わせ、近いリージョンのワークスペースで検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-databricks", "term": "Azure Databricks", "type": "product", "oneLine": { "text": "Azure 上で提供される、データ分析と AI のための Databricks プラットフォーム。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "lakebase", "term": "Lakebase", "type": "feature", "oneLine": { "text": "Azure Databricks 上の完全管理型 Postgres データベース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/lakebase/", "locator": "冒頭", "retrievedAt": "2026-10-21T23:20:00Z" }] } },
+        { "termKey": "project", "term": "プロジェクト", "type": "term", "oneLine": { "text": "ブランチ、コンピューティング、データベース、ロールなど Lakebase リソースの最上位のコンテナー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/oltp/projects/manage-projects", "locator": "冒頭", "retrievedAt": "2026-10-21T23:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-21T23:20:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Lakebase のサポート リージョン一覧に japaneast（日本東）が含まれる。japanwest は一覧に含まれない",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/databricks/oltp/projects/manage-projects", "locator": "利用可能なリージョン", "retrievedAt": "2026-10-21T23:20:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569684",
+        "learn": [
+          { "title": "レイクベースリリースノート", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/lakebase/", "locale": "ja-jp" },
+          { "title": "プロジェクトの管理", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/oltp/projects/manage-projects", "locale": "ja-jp" },
+          { "title": "Postgres データベースを取得する", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/oltp/projects/get-started", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "今回追加されたリージョンはどこですか？",
+            "a": "北中部アメリカ、フランス中部、ドイツ西中部、東アジアの 4 つです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/lakebase/" }]
+          },
+          {
+            "q": "日本のリージョンで使えますか？",
+            "a": "サポート リージョン一覧には japaneast（日本東）が含まれます。japanwest は一覧に載っていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/oltp/projects/manage-projects" }]
+          },
+          {
+            "q": "プロジェクトのリージョンはどう決まりますか？",
+            "a": "Lakebase プロジェクトは Databricks ワークスペースのリージョンに作成され、自動的に設定されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/oltp/projects/get-started" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
