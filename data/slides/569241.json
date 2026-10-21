@@ -1,0 +1,122 @@
+{
+  "$schema": "../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569241"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T21:45:00Z"
+  },
+  "slides": [
+    {
+      "key": "569241",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Storage の「ユーザーバインドのユーザー委任 SAS」が GA に",
+        "subtitleJa": "SAS の利用を特定のエンドユーザーの Entra ID に限定できます（全パブリック リージョン）",
+        "en": "Generally Available: User-bound user delegation SAS for Azure Storage "
+      },
+      "meta": {
+        "publishedJst": "2026-09-10",
+        "modifiedJst": "2026-09-10",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "September" }],
+        "status": "Launched",
+        "products": ["Azure Blob Storage"],
+        "categories": ["storage", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "SAS で Blob / Files / Table / Queue へのアクセスを渡している**Azure Storage の利用者・管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "SAS を想定したユーザーだけが使えるよう制限でき、不正利用を抑えられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "SAS を発行している場合は、利用者を限定したいトークンで採用を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "ユーザー委任 SAS は作成者の Entra 資格情報で保護され、作成者にたどれる（有効期間は最大 7 日）",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas", "locator": "ユーザー委任 SAS を作成する", "retrievedAt": "2026-10-21T21:45:00Z" }]
+        },
+        "after": {
+          "text": "SAS を特定のエンドユーザーに紐づけ、そのユーザーが Entra ID でサインインしたときだけ使える",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas", "locator": "ユーザーバインドのユーザー委任 SAS", "retrievedAt": "2026-10-21T21:45:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "SAS 作成時にエンドユーザーの Entra オブジェクト ID を sduoid に指定する（sv 2025-07-05 以降）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas", "locator": "ユーザーバインドのユーザー委任 SAS", "retrievedAt": "2026-10-21T21:45:00Z" }] },
+            { "text": "利用時は Entra のベアラー トークンも必要で、指定ユーザー以外は SAS を使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas", "locator": "ユーザーバインドのユーザー委任 SAS", "retrievedAt": "2026-10-21T21:45:00Z" }] },
+            { "text": "アカウント SAS・サービス SAS・通常のユーザー委任 SAS より安全なトークンを作成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ユーザー委任キーを取得し、対象ユーザーの oid を sduoid に入れて SAS に署名する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas", "locator": "ユーザー委任 SAS を作成する", "retrievedAt": "2026-10-21T21:45:00Z" }] },
+            { "text": "別テナントのユーザーは skdutid で指定。既定では不可で、allowCrossTenantDelegationSas を true にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas", "locator": "ユーザーバインドのユーザー委任 SAS", "retrievedAt": "2026-10-21T21:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "署名キーの有効期限は開始から最大 7 日。保存されたアクセス ポリシーは使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas", "locator": "signedKeyExpiryTime / 概要", "retrievedAt": "2026-10-21T21:45:00Z" }] },
+            { "text": "追加費用なし。課金はストレージ アカウントの種類ごとの標準トランザクション料金", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "アカウント SAS・サービス SAS はアカウント キー、ユーザー委任 SAS は Entra 資格情報で保護される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview", "locator": "共有アクセス署名の種類", "retrievedAt": "2026-10-21T21:45:00Z" }] },
+            { "text": "requireUserBoundUserDelegationSas を true、アクションを block にすると他の SAS を拒否できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas", "locator": "ユーザーバインドのユーザー委任 SAS", "retrievedAt": "2026-10-21T21:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "SAS を部門外へ共有する場面で、利用者を限定したいときに有効", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "既定は log で、true にしても他種の SAS は記録のみ。拒否するには block を設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas", "locator": "requireUserBoundUserDelegationSasAction", "retrievedAt": "2026-10-21T21:45:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sas", "term": "SAS（共有アクセス署名）", "type": "term", "oneLine": { "text": "ストレージ アカウント内のリソースへ、期間や権限を限定して委任アクセスを与える仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview", "locator": "冒頭", "retrievedAt": "2026-10-21T21:45:00Z" }] } },
+        { "termKey": "ud-sas", "term": "ユーザー委任 SAS", "type": "feature", "oneLine": { "text": "アカウント キーではなく Microsoft Entra 資格情報で保護される SAS。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview", "locator": "ユーザー委任 SAS", "retrievedAt": "2026-10-21T21:45:00Z" }] } },
+        { "termKey": "user-bound", "term": "ユーザーバインド", "type": "feature", "oneLine": { "text": "SAS をエンドユーザーの Entra ID に紐づけ、そのユーザーだけが使えるようにする指定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas", "locator": "ユーザーバインドのユーザー委任 SAS", "retrievedAt": "2026-10-21T21:45:00Z" }] } },
+        { "termKey": "blob-storage", "term": "Azure Blob Storage", "type": "product", "oneLine": { "text": "ユーザー委任 SAS に対応するストレージ サービス（Queue・Table・Files も対応）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview", "locator": "ユーザー委任 SAS", "retrievedAt": "2026-10-21T21:45:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-21T21:45:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "MRC では全パブリック リージョンで提供。Blob Storage は基盤サービスとして全リージョンで提供",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services: Azure Blob Storage", "retrievedAt": "2026-10-21T21:45:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569241",
+        "learn": [
+          { "title": "ユーザー委任 SAS を作成する", "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas", "locale": "ja-jp" },
+          { "title": "共有アクセス署名 (SAS) で Azure Storage リソースへのアクセスを制限する", "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "追加費用はかかりますか？", "a": "追加費用はありません。課金はストレージ アカウントの種類に応じた標準のトランザクション料金です。", "evidence": [{ "url": "https://azure.microsoft.com/updates?id=569241" }] },
+          { "q": "別テナントのユーザーにも使えますか？", "a": "skdutid で指定できますが既定では許可されません。allowCrossTenantDelegationSas を true にする必要があります。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas" }] },
+          { "q": "他の種類の SAS を禁止できますか？", "a": "requireUserBoundUserDelegationSas を true、アクションを block にすると、ユーザーバインド以外の SAS は拒否されます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas" }] },
+          { "q": "SAS の有効期間はどれくらいですか？", "a": "ユーザー委任キーの有効期限は開始から最大 7 日です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/rest/api/storageservices/create-user-delegation-sas" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
