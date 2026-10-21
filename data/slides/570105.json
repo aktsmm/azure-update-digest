@@ -1,0 +1,100 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570105"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-22T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "570105",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "VM Image Builder がソブリン／エアギャップ クラウドで GA",
+        "subtitleJa": "Azure Government・China North 3 などでもマネージドなイメージ ビルドが使えます",
+        "en": "Generally Available: Azure VM Image Builder in sovereign and air-gapped clouds"
+      },
+      "meta": {
+        "publishedJst": "2026-08-29",
+        "modifiedJst": "2026-08-29",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure VM Image Builder"],
+        "categories": ["compute", "ops-governance"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Azure Government・China North 3・Azure Government Secret / Top Secret で VM イメージを運用する方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "グローバル Azure と同じマネージドなイメージ ビルド サービスを、ソブリン環境でも使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "対象クラウドで標準イメージを運用しているなら導入を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "イメージ構成を送信すると、サービスがビルド VM を用意してビルドし、配布する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "しくみ", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "ビルド基盤の構築・パッチ適用・運用は不要。同じテンプレート定義をクラウド間で使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始めるには", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "PowerShell・Azure CLI・ARM テンプレート・DevOps タスクのいずれかで構成を送信", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "しくみ", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "イメージ テンプレート リソースに対して Run を呼び出すとビルドが始まる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "しくみ", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "配布には、イメージの読み取り・書き込み権限を持つユーザー割り当て ID が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "アクセス許可", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "Windows Server 向け Azure ハイブリッド特典は未対応。イメージ テンプレートは移動不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "コスト / 移動のサポート", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "配布先は Compute Gallery・マネージド イメージ・VHD。ギャラリーならバージョン管理も可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "特徴", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "パッチ済みソース イメージでゴールデン イメージを再構築し、コンプライアンスを維持", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "セキュリティ", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+            { "text": "ビルドではコンピューティング・ネットワーク・ストレージの費用が発生する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "コスト", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "vm-image-builder", "term": "Azure VM Image Builder", "type": "product", "oneLine": { "text": "構成を送るだけで、VM イメージのビルドと配布を行うマネージド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "冒頭", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "golden-image", "term": "ゴールデン イメージ", "type": "term", "oneLine": { "text": "最新パッチを適用したソース イメージから再構築できる、標準化された VM イメージ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "セキュリティ", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "compute-gallery", "term": "Azure Compute Gallery", "type": "product", "oneLine": { "text": "イメージのホスト先となり、配布・レプリケーション・バージョン管理を行える仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "特徴", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "image-template", "term": "イメージ テンプレート", "type": "feature", "oneLine": { "text": "構成を送信すると作成される、ビルド実行の対象となるリソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "しくみ", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-22T00:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570105",
+        "learn": [
+          { "title": "Azure VM Image Builder の概要", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locale": "ja-jp" },
+          { "title": "Azure Image Builder テンプレートを作成する", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/linux/image-builder-json", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "追加のビルド インフラは必要ですか？", "a": "長期・一時のインフラはサービスが管理するため、利用者側での管理は不要です。ビルド成果物は Azure リソースとして保存されます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "コードとしてのインフラストラクチャ", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+          { "q": "費用はどうなりますか？", "a": "ビルド VM・ネットワーク・ストレージの費用が Azure のレートで発生します。手動でイメージを作る場合と似た水準です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "コスト", "retrievedAt": "2026-10-22T00:00:00Z" }] },
+          { "q": "ビルドしたイメージの配布先は？", "a": "Azure Compute Gallery、マネージド イメージ、VHD を指定できます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "しくみ", "retrievedAt": "2026-10-22T00:00:00Z" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
