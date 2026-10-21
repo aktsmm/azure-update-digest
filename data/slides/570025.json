@@ -1,0 +1,319 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570025"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T22:13:28Z"
+  },
+  "slides": [
+    {
+      "key": "570025",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Bastion が IPv4/IPv6 デュアルスタックに対応",
+        "subtitleJa": "新規 Bastion に IPv4・IPv6 の両パブリック IP を構成可能（パブリック プレビュー）",
+        "en": "Public Preview: IPv6 dual-stack support for Azure Bastion"
+      },
+      "meta": {
+        "publishedJst": "2026-08-27",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "August" }],
+        "status": "In preview",
+        "products": ["Azure Bastion"],
+        "categories": ["networking", "security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": {
+          "text": "IPv6 を使う／検討している **Azure Bastion の利用者**",
+          "origin": "mrc",
+          "assertion": "inference",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "ユーザーから Bastion への接続で IPv6 を使える",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "新規作成時のみ構成可。既存 Bastion は変換できない",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings",
+              "locator": "IPv6デュアルスタックサポート(プレビュー)",
+              "retrievedAt": "2026-10-21T22:00:00Z"
+            }
+          ]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Bastion は IPv4 のみ、または IPv4 と IPv6 のデュアルスタックを選べる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings",
+                  "locator": "IPv6デュアルスタックサポート(プレビュー)",
+                  "retrievedAt": "2026-10-21T22:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "IPv6 はユーザーと Azure Bastion 間の接続でのみ使われる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings",
+                  "locator": "IPv6デュアルスタックサポート(プレビュー)",
+                  "retrievedAt": "2026-10-21T22:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Bastion から対象 VM への接続は引き続き IPv4",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings",
+                  "locator": "IPv6デュアルスタックサポート(プレビュー)",
+                  "retrievedAt": "2026-10-21T22:00:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "デュアルスタックは作成時に設定。既存の IPv4 専用は変換不可",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings",
+                  "locator": "IPv6デュアルスタックサポート(プレビュー)",
+                  "retrievedAt": "2026-10-21T22:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "IPv6 のみの構成、プライベート専用の Bastion は未対応",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings",
+                  "locator": "Limitations",
+                  "retrievedAt": "2026-10-21T22:00:00Z"
+                }
+              ]
+            },
+            {
+              "text": "VNet・AzureBastionSubnet・対象 VM の NIC もデュアルスタックが必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings",
+                  "locator": "前提条件",
+                  "retrievedAt": "2026-10-21T22:00:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ga-timing",
+          "heading": "GA の時期",
+          "availability": "not-stated",
+          "priority": "core"
+        },
+        {
+          "id": "evaluate",
+          "heading": "評価ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "IPv6 クライアントからの接続要件があるか、VNet をデュアルスタック化できるかを検証環境で確認する",
+              "origin": "editorial",
+              "assertion": "recommendation",
+              "verification": "unverified"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-bastion",
+          "term": "Azure Bastion",
+          "type": "product",
+          "oneLine": {
+            "text": "VM へ安全に RDP/SSH 接続できる、フル マネージドの PaaS サービス。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-overview",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-21T22:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "dual-stack",
+          "term": "デュアルスタック",
+          "type": "term",
+          "oneLine": {
+            "text": "IPv4 と IPv6 の両方のアドレスを使える構成。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings",
+                "locator": "IPv6デュアルスタックサポート(プレビュー)",
+                "retrievedAt": "2026-10-21T22:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "azurebastionsubnet",
+          "term": "AzureBastionSubnet",
+          "type": "term",
+          "oneLine": {
+            "text": "Bastion をデプロイする仮想ネットワーク内の専用サブネット。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings",
+                "locator": "Azure Bastion サブネット",
+                "retrievedAt": "2026-10-21T22:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "public-ip",
+          "term": "パブリック IP アドレス",
+          "type": "term",
+          "oneLine": {
+            "text": "Bastion に必要な、Standard SKU・静的割り当ての IP アドレス。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings",
+                "locator": "パブリック IP アドレス",
+                "retrievedAt": "2026-10-21T22:00:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-preview",
+          "term": "Preview（プレビュー）",
+          "type": "label",
+          "oneLine": {
+            "text": "GA の前に、評価とフィードバックのために提供される段階。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure",
+                "locator": "Public preview",
+                "retrievedAt": "2026-10-21T22:00:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Bastion は主流サービスとして全推奨リージョンで提供されるサービス",
+        "evidence": [
+          {
+            "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category",
+            "locator": "Mainstream services",
+            "retrievedAt": "2026-10-21T22:00:00Z"
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570025",
+        "learn": [
+          {
+            "title": "Azure Bastion の構成設定について",
+            "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings",
+            "locale": "ja-jp"
+          },
+          {
+            "title": "Azure Bastionとは",
+            "url": "https://learn.microsoft.com/ja-jp/azure/bastion/bastion-overview",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存の Bastion を IPv6 対応にできますか？",
+            "a": "現時点では変換できません。デュアルスタックは Bastion 作成時に設定する必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings" }]
+          },
+          {
+            "q": "Bastion から VM への通信も IPv6 になりますか？",
+            "a": "いいえ。IPv6 はユーザーと Bastion 間のみで、Bastion から対象 VM への接続は IPv4 です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings" }]
+          },
+          {
+            "q": "利用の前提条件は？",
+            "a": "VNet と AzureBastionSubnet がデュアルスタック設定で、対象 VM の NIC もデュアルスタック対応である必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/configuration-settings" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
