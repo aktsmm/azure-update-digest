@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "canonicalKey": "576242",
+  "status": "verified",
+  "sourceQuery": "Azure Virtual Network disable VNet peering route route table",
+  "checkedAt": "2026-10-21T05:20:00Z",
+  "candidates": [
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/configure-disable-peering-route-propagation",
+      "title": "Configure disable peering route propagation",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "Explains how to configure suppression of peering routes on a route table.",
+      "checkedAt": "2026-10-21T05:20:00Z"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-peering-overview",
+      "title": "Azure 仮想ネットワーク ピアリング",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "Covers how disable peering route propagation works, its benefits and limitations.",
+      "checkedAt": "2026-10-21T05:20:00Z"
+    }
+  ]
+}

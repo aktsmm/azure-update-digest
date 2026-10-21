@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "canonicalKey": "576242",
+  "sourceFingerprint": "9fe52e2e5de7cb0b71aabd648b9fd7d38560d61cf340526c12c9d6cc4212eb54",
+  "titleJa": "VNet ピアリング ルートの無効化機能がパブリック プレビューに",
+  "summaryJa": "ルート テーブルの機能として、サブネットに自動生成されるピアリング ルートを抑制し、ピアリング接続自体は維持できる「Disable VNet peering route」がパブリック プレビューになりました。大規模なハブ アンド スポーク構成で、集約した UDR と Azure Firewall などの NVA を組み合わせ、スポークごとの上書きルートを減らせます。置き換え用の UDR や検査経路は自動作成されないため、利用者側で構成する必要があります。",
+  "generatedBy": "gh-aw:summarize",
+  "generatedAt": "2026-10-21T05:20:00Z"
+}
