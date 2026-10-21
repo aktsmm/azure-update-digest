@@ -1,0 +1,157 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570120"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T22:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "570120",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "AKS の Azure Files CSI ドライバーがワークロード ID に対応（GA）",
+        "subtitleJa": "SMB ファイル共有へのアクセスを、ポッド単位の最小権限で制御できます",
+        "en": "Generally Available: Workload identity support for Azure Files CSI driver (SMB) in Azure"
+      },
+      "meta": {
+        "publishedJst": "2026-08-29",
+        "modifiedJst": "2026-08-29",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Files", "Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "storage", "security", "containers"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "AKS から Azure Files の **SMB 共有** を使い、アクセス範囲を絞りたい方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ノード単位ではなく、ポッド単位の最小権限でデータへのアクセスを絞れる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "キーやノード単位の ID からの切り替えを検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": { "text": "AKS のマネージド ID 対応で、ストレージ アカウント キーなしに Azure Files をマウント可能だった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "ワークロード ID により、アプリのポッド単位で Azure Files への最小権限アクセスを実現できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ノードのライフサイクルに ID を結び付けず、ポッドが SMB アクセスの認証を行う",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locator": "ワークロード ID を使用して Azure Files ストレージにアクセスする", "retrievedAt": "2026-10-21T22:00:00Z" }]
+            },
+            {
+              "text": "ストレージ アカウント キーを使わず、ワークロード ID トークンでマウントできる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locator": "マネージド ID を作成または再利用し、必要なアクセス許可を付与する", "retrievedAt": "2026-10-21T22:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "OIDC 発行者を有効化 → マネージド ID に SMB MI Admin ロール付与 → ServiceAccount とフェデレーション資格情報を作成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locator": "前提条件 1〜5", "retrievedAt": "2026-10-21T22:00:00Z" }]
+            },
+            {
+              "text": "StorageClass（動的 PV）または PV（静的）で mountWithWorkloadIdentityToken を \"true\" にする",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locator": "動的な PV / 静的な PV のワークロード ID を有効にする", "retrievedAt": "2026-10-21T22:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Linux ノード上の AKS 1.35.0 以降。クラスターで OIDC 発行者が有効であること",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locator": "ワークロード ID を使用して Azure Files ストレージにアクセスする", "retrievedAt": "2026-10-21T22:00:00Z" }]
+            },
+            {
+              "text": "静的 PV ではストレージ アカウントで SMBOauth を有効化（--enable-smb-oauth true）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locator": "静的な PV のワークロード ID を有効にする", "retrievedAt": "2026-10-21T22:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "従来のキー方式（NTLM v2）や、ノード レベルのマネージド ID に頼らず、ポッド単位の ID で認証する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locator": "冒頭の注 / ワークロード ID のセクション", "retrievedAt": "2026-10-21T22:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "コンプライアンス要件が厳しい環境で、アプリごとにアクセス範囲を分けたい場合", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "動的 PV では CSI ドライバーの ID にストレージ アカウントの Storage Account Contributor ロールが必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locator": "動的な PV のワークロード ID を有効にする", "retrievedAt": "2026-10-21T22:00:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aks", "term": "AKS", "type": "product", "oneLine": { "text": "Azure 上で Kubernetes クラスターを実行・管理するためのマネージド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/csi-storage-drivers", "locator": "冒頭", "retrievedAt": "2026-10-21T22:00:00Z" }] } },
+        { "termKey": "azure-files", "term": "Azure Files", "type": "product", "oneLine": { "text": "SMB や NFS で利用できる、Azure のマネージド ファイル共有。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locator": "冒頭", "retrievedAt": "2026-10-21T22:00:00Z" }] } },
+        { "termKey": "csi", "term": "CSI ドライバー", "type": "feature", "oneLine": { "text": "Kubernetes のコンテナーにストレージ システムを公開する標準に準拠したプラグイン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/csi-storage-drivers", "locator": "冒頭", "retrievedAt": "2026-10-21T22:00:00Z" }] } },
+        { "termKey": "workload-identity", "term": "ワークロード ID", "type": "feature", "oneLine": { "text": "ストレージ キーを使わず、ポッドが Microsoft Entra の ID で Azure リソースへ認証する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locator": "ワークロード ID を使用して Azure Files ストレージにアクセスする", "retrievedAt": "2026-10-21T22:00:00Z" }] } },
+        { "termKey": "smb", "term": "SMB", "type": "term", "oneLine": { "text": "Azure Files のファイル共有を、ポッドにマウントする際に使われるプロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/csi-storage-drivers", "locator": "Azure Files CSI ドライバーについて", "retrievedAt": "2026-10-21T22:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-21T22:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Files と AKS は全リージョンで提供される基盤サービス。MRC も両サービスが使えるリージョンで利用可能と記載",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-21T22:00:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570120",
+        "learn": [
+          { "title": "AKS で Azure Files を使用して永続ボリュームを作成および管理する", "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locale": "ja-jp" },
+          { "title": "AKS で CSI ドライバーを使用する", "url": "https://learn.microsoft.com/ja-jp/azure/aks/csi-storage-drivers", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分の環境は対象ですか？",
+            "a": "Linux ノード上の AKS 1.35.0 以降が対象で、クラスターで OIDC 発行者の有効化が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locator": "ワークロード ID を使用して Azure Files ストレージにアクセスする", "retrievedAt": "2026-10-21T22:00:00Z" }]
+          },
+          {
+            "q": "ストレージ アカウント キーは必要ですか？",
+            "a": "不要です。マネージド ID に Storage File Data SMB MI Admin ロールを付与し、ワークロード ID トークンでマウントします。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locator": "マネージド ID を作成または再利用し、必要なアクセス許可を付与する", "retrievedAt": "2026-10-21T22:00:00Z" }]
+          },
+          {
+            "q": "動的 PV と静的 PV で設定は違いますか？",
+            "a": "どちらも mountWithWorkloadIdentityToken を true にします。静的 PV はさらにストレージ アカウントで SMBOauth を有効化します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/azure-csi-files-storage-provision", "locator": "動的な PV / 静的な PV", "retrievedAt": "2026-10-21T22:00:00Z" }]
+          }
+        ]
+      }
+    }
+  ]
+}
