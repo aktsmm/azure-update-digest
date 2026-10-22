@@ -1,0 +1,60 @@
+{
+  "backfill": {
+    "complete": true,
+    "completedMonths": [
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05",
+      "2026-06",
+      "2026-07",
+      "2026-08",
+      "2026-09",
+      "2026-10"
+    ],
+    "pendingMonths": []
+  },
+  "consistencyNotes": [],
+  "consistent": true,
+  "cutoff": "2026-10-22T23:53:18Z",
+  "detailStateCounts": {
+    "ok": 916
+  },
+  "details": {
+    "attempted": 1,
+    "failed": [],
+    "pendingAfter": 0,
+    "succeeded": [
+      "577618"
+    ]
+  },
+  "errors": [],
+  "finishedAt": "2026-10-22T23:53:27.537Z",
+  "limits": {
+    "hit": null,
+    "pagesMax": 60,
+    "pagesUsed": 1
+  },
+  "mode": "sweep",
+  "months": [],
+  "mrcRequests": 4,
+  "runId": "20261022T235318937Z",
+  "startedAt": "2026-10-22T23:53:18.937Z",
+  "statusCounts": {
+    "In development": 15,
+    "In preview": 335,
+    "Launched": 472,
+    "null": 94
+  },
+  "sweep": {
+    "from": "2026-10-20T23:54:38Z",
+    "pages": 1,
+    "status": "complete",
+    "to": "2026-10-22T23:53:18Z",
+    "totalCount": 3,
+    "uniqueIds": 3
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "577618"
+  },
+  "fetchedAt": "2026-10-22T23:53:23.852Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "May",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "577618",
+    "created": "2026-10-22T18:01:00.8638115Z",
+    "description": "ABFS Vectored Read helps compatible analytics engines reduce request overhead for selective reads in Azure Data Lake Storage. By combining nearby file ranges into fewer storage requests and executing reads asynchronously, it can reduce network round trips for workloads such as selective Parquet queries.Compatible Spark workloads can enable the capability through configuration, without rewriting queries or migrating data.Learn\nmore. ",
+    "generalAvailabilityDate": "2026-05",
+    "id": "577618",
+    "modified": "2026-10-22T18:01:00.8638115Z",
+    "productCategories": [
+      "Storage",
+      "Analytics"
+    ],
+    "products": [
+      "Azure Blob Storage",
+      "Azure Data Lake Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: ABFS Vectored Read for Azure Data Lake Storage"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

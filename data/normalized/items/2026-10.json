@@ -3168,6 +3168,82 @@
         "Announcement"
       ],
       "title": "Announcing: Choose Your Own Telephony (CYOT) for Microsoft Entra"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "May",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-05",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "577618",
+      "categories": [
+        "storage",
+        "databases"
+      ],
+      "created": "2026-10-22T18:01:00.8638115Z",
+      "createdJst": "2026-10-23",
+      "description": "ABFS Vectored Read helps compatible analytics engines reduce request overhead for selective reads in Azure Data Lake Storage. By combining nearby file ranges into fewer storage requests and executing reads asynchronously, it can reduce network round trips for workloads such as selective Parquet queries.Compatible Spark workloads can enable the capability through configuration, without rewriting queries or migrating data.Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "9f224b31461af08f32da64b81ee73a9dc3a957b00b64626966b745c54814c9ad",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-22T23:53:18.939Z",
+          "fingerprint": "268fbc0e0459df11783bace53d63fad617dce47af8304304f5cfc77c6ebb7c92",
+          "modifiedAfter": "2026-10-22T18:01:00.8638115Z",
+          "modifiedBefore": null,
+          "rawRef": "20261022T235318939Z_list_sweep_o0.json#577618"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-22T23:53:23.852Z",
+          "fingerprint": "9f224b31461af08f32da64b81ee73a9dc3a957b00b64626966b745c54814c9ad",
+          "modifiedAfter": "2026-10-22T18:01:00.8638115Z",
+          "modifiedBefore": "2026-10-22T18:01:00.8638115Z",
+          "rawRef": "20261022T235323852Z_detail_577618.json#577618"
+        }
+      ],
+      "ids": [
+        "577618"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "577618",
+      "modified": "2026-10-22T18:01:00.8638115Z",
+      "modifiedJst": "2026-10-23",
+      "productCategories": [
+        "Analytics",
+        "Storage"
+      ],
+      "products": [
+        "Azure Blob Storage",
+        "Azure Data Lake Storage"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577618",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: ABFS Vectored Read for Azure Data Lake Storage"
     }
   ],
   "month": "2026-10",

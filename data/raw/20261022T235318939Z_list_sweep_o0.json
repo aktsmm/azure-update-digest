@@ -1,0 +1,99 @@
+{
+  "args": {
+    "filter": "modified ge 2026-10-20T23:54:38Z and modified lt 2026-10-22T23:53:18Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-22T23:53:18.939Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "576716",
+        "created": "2026-10-21T17:13:16.6926859Z",
+        "description": "Safe Key Rotation for Azure Cosmos DB is now generally available. You can view timestamp metadata showing when each account key was last used, helping you identify active keys before rotating or retir...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "576716",
+        "modified": "2026-10-21T17:13:16.6926859Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Cosmos DB Safe Key Rotation"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "577273",
+        "created": "2026-10-21T17:38:32.9112077Z",
+        "description": "What and whyStarting October 30, 2026, Microsoft Entra ID will make the Choose Your Own Telephony Provider experience available. This feature enables organizations to use a supported third-party telec...",
+        "id": "577273",
+        "modified": "2026-10-21T17:38:32.9112077Z",
+        "productCategories": [
+          "Identity"
+        ],
+        "products": [
+          "Microsoft Entra ID (formerly Azure AD)"
+        ],
+        "tags": [
+          "Announcement"
+        ],
+        "title": "Announcing: Choose Your Own Telephony (CYOT) for Microsoft Entra"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577618",
+        "created": "2026-10-22T18:01:00.8638115Z",
+        "description": "ABFS Vectored Read helps compatible analytics engines reduce request overhead for selective reads in Azure Data Lake Storage. By combining nearby file ranges into fewer storage requests and executing ...",
+        "generalAvailabilityDate": "2026-05",
+        "id": "577618",
+        "modified": "2026-10-22T18:01:00.8638115Z",
+        "productCategories": [
+          "Storage",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Blob Storage",
+          "Azure Data Lake Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: ABFS Vectored Read for Azure Data Lake Storage"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 3,
+    "totalCount": 3
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}
