@@ -3244,6 +3244,81 @@
         "Feature"
       ],
       "title": "Generally Available: ABFS Vectored Read for Azure Data Lake Storage"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "577963",
+      "categories": [
+        "storage",
+        "ops-governance"
+      ],
+      "created": "2026-10-23T19:21:07.07978Z",
+      "createdJst": "2026-10-24",
+      "description": "Azure Backup now supports Item-Level Recovery (ILR) for Azure virtual machines using Premium SSD v2 and Ultra disks with both 512 byte and 4KB logical sector sizes. You can now recover individual files and folders from your Azure VMs with Premium SSDv2 and Ultra disks. You can generate a file-recovery executable or script through the Azure portal, CLI, or PowerShell, then run it on a compatible machine to access the recovery point, selectively browse, and copy individual files or folders without performing a full disk or virtual machine restore, in parity with the existing ILR behavior. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "c3b9b93d14681a3237f19b6bfb12dacbf494403abb64cf43506c0c9066468bca",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-23T23:45:08.389Z",
+          "fingerprint": "e9a547d5db0d2d452f7c61d1977415d12c18456add3c94c7671a1ea782c53c60",
+          "modifiedAfter": "2026-10-23T19:21:07.07978Z",
+          "modifiedBefore": null,
+          "rawRef": "20261023T234508389Z_list_sweep_o0.json#577963"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-23T23:45:14.147Z",
+          "fingerprint": "c3b9b93d14681a3237f19b6bfb12dacbf494403abb64cf43506c0c9066468bca",
+          "modifiedAfter": "2026-10-23T19:21:07.07978Z",
+          "modifiedBefore": "2026-10-23T19:21:07.07978Z",
+          "rawRef": "20261023T234514147Z_detail_577963.json#577963"
+        }
+      ],
+      "ids": [
+        "577963"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "577963",
+      "modified": "2026-10-23T19:21:07.07978Z",
+      "modifiedJst": "2026-10-24",
+      "productCategories": [
+        "Management and governance",
+        "Storage"
+      ],
+      "products": [
+        "Azure Backup"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577963",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Item Level Recovery for Azure VMs with Premium SSDv2 and Ultra Disks in Azure Backup"
     }
   ],
   "month": "2026-10",
