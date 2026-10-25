@@ -1,0 +1,119 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568666"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T22:32:57Z"
+  },
+  "slides": [
+    {
+      "key": "568666",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "ExpressRoute の Resiliency Guard がパブリック プレビューに",
+        "subtitleJa": "ゲートウェイをシングルホーム／マルチホームで運用する設計をガイド付きで構成できます",
+        "en": "Public Preview: Azure ExpressRoute resiliency guard"
+      },
+      "meta": {
+        "publishedJst": "2026-08-08",
+        "modifiedJst": "2026-08-08",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "August" }],
+        "status": "In preview",
+        "products": ["Azure ExpressRoute"],
+        "categories": ["networking", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "ExpressRoute 仮想ネットワーク ゲートウェイを**設計・運用するネットワーク管理者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "耐障害性の要件に合わせたゲートウェイ構成を、ポータルのガイダンスで組める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用にはサブスクリプションでの有効化（プレビュー フォーム提出）が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "始める前の準備", "retrievedAt": "2026-10-25T22:32:57Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "resiliency model プロパティで、ゲートウェイの用途（シングルホーム／マルチホーム）を指定できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象は ExpressRoute 仮想ネットワーク ゲートウェイ。Virtual WAN ゲートウェイは未サポート", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "始める前の準備", "retrievedAt": "2026-10-25T22:32:57Z" }] },
+            { "text": "マルチホーム: 異なる場所の回線 2 本以上、または Metro 回線に接続", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "マルチホーム構成", "retrievedAt": "2026-10-25T22:32:57Z" }] },
+            { "text": "シングルホーム: 回線 1 本・1 か所への接続。場所単位の障害には非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "シングルホーム", "retrievedAt": "2026-10-25T22:32:57Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "サブスクリプションで有効化するには、パブリック プレビュー フォームの提出が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "始める前の準備", "retrievedAt": "2026-10-25T22:32:57Z" }] },
+            { "text": "マルチホームでは、最低限の冗長性を損なう接続の削除がブロックされる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "ゲートウェイ接続を削除してください", "retrievedAt": "2026-10-25T22:32:57Z" }] },
+            { "text": "プレビュー機能は、明記がない限り本番ワークロード向けではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-25T22:32:57Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "重要なワークロードのゲートウェイはマルチホームを推奨（Azure Advisor）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "マルチホーム構成: 最大の耐障害性", "retrievedAt": "2026-10-25T22:32:57Z" }] },
+            { "text": "まず検証環境で、ポータルのガイダンスと接続の削除ブロックの挙動を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        },
+        {
+          "id": "howto", "heading": "設定方法", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ゲートウェイ作成時にポータルで選択、または PowerShell の -ResiliencyModel で指定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "レジリエンシーガードの設定", "retrievedAt": "2026-10-25T22:32:57Z" }] },
+            { "text": "作成後もポータルの設定タブから、いつでもモデルを変更できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "レジリエンスモデルを変えましょう", "retrievedAt": "2026-10-25T22:32:57Z" }] }
+          ]
+        },
+        {
+          "id": "usage", "heading": "運用上の注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "接続を外すには、先にシングルホームへ変更する必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "ゲートウェイ接続を削除してください", "retrievedAt": "2026-10-25T22:32:57Z" }] },
+            { "text": "マルチホームのゲートウェイ削除も、シングルホームへの変更後に行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "マルチホームおよび Metro ゲートウェイ", "retrievedAt": "2026-10-25T22:32:57Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-expressroute", "term": "Azure ExpressRoute", "type": "product", "oneLine": { "text": "オンプレミスのネットワークを Azure に専用回線で接続するサービス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "resiliency-guard", "term": "Resiliency Guard", "type": "feature", "oneLine": { "text": "必要な可用性レベルに合わせて ExpressRoute ゲートウェイを設定するガイド付きの体験。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "冒頭", "retrievedAt": "2026-10-25T22:32:57Z" }] } },
+        { "termKey": "multi-homed", "term": "マルチホーム", "type": "term", "oneLine": { "text": "異なる場所の回線などに複数接続し、場所単位の障害に備える構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "マルチホーム構成", "retrievedAt": "2026-10-25T22:32:57Z" }] } },
+        { "termKey": "single-homed", "term": "シングルホーム", "type": "term", "oneLine": { "text": "ゲートウェイを 1 つの回線・1 つの場所に接続する標準構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "シングルホーム", "retrievedAt": "2026-10-25T22:32:57Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-25T22:32:57Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568666",
+        "learn": [{ "title": "ExpressRoute Resiliency Guard (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "Virtual WAN のゲートウェイでも使えますか？",
+            "a": "現在は ExpressRoute 仮想ネットワーク ゲートウェイ向けのプレビューで、Virtual WAN ゲートウェイはサポートされていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "始める前の準備", "retrievedAt": "2026-10-25T22:32:57Z" }]
+          },
+          {
+            "q": "利用するのに事前の手続きは必要ですか？",
+            "a": "サブスクリプションで有効化するには、パブリック プレビュー フォームの提出が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "始める前の準備", "retrievedAt": "2026-10-25T22:32:57Z" }]
+          },
+          {
+            "q": "後からモデルを変更できますか？",
+            "a": "ポータルの設定タブからいつでも変更できます。マルチホームの接続を削除するには、先にシングルホームへ変更します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/resiliency-model", "locator": "レジリエンスモデルを変えましょう", "retrievedAt": "2026-10-25T22:32:57Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
