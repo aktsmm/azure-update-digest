@@ -1,0 +1,104 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568964"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T22:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "568964",
+      "kind": "announcement",
+      "kindSource": "tags",
+      "label": "アナウンス",
+      "title": {
+        "ja": "Databricks の Genie One / Genie Agents の無料利用が延長",
+        "subtitleJa": "無料期間の終了日が 2026-07-31 から 2027-01-31 に（ユーザー利用のみ対象）",
+        "en": "Announcing:  Azure Databricks Genie One and Genie Agents Free Usage extended through January 31, 2027 "
+      },
+      "meta": {
+        "publishedJst": "2026-08-07",
+        "modifiedJst": "2026-08-07",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "August" }],
+        "status": null,
+        "products": ["Azure Databricks"],
+        "categories": ["databases", "ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Azure Databricks の Genie 利用者・アカウント管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Genie One と Genie Agents を 2027-01-31 まで無料で使える", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/genie/", "locator": "Genie の予算を管理する", "retrievedAt": "2026-10-25T22:38:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "サービスプリンシパルの利用は課金対象。Genie Code は対象外のため利用状況を確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2027-01-31", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "従来の無料期間の終了日", "when": { "date": "2026-07-31", "precision": "day" } },
+        { "label": "延長後の無料期間の終了日", "when": { "date": "2027-01-31", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "scope", "heading": "適用範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Genie One と Genie Agents の無料利用が 2027-01-31 まで延長（従来は 2026-07-31）", "origin": "mrc", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/genie-code/", "locator": "Note", "retrievedAt": "2026-10-25T22:38:00Z" }] },
+            { "text": "無料期間中、これらの製品には予算管理が適用されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "permissions", "heading": "知っておくべき点（対象外・課金）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象はユーザーによる利用のみ。サービスプリンシパルは除外され、引き続き課金される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/genie/", "locator": "Genie の予算を管理する", "retrievedAt": "2026-10-25T22:38:00Z" }] },
+            { "text": "Genie Code は対象外。ユーザーごとに月 150 DBU が無料", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "150 DBU を超える分は 2027-01-31 まで 25% 割引", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "自動処理がサービスプリンシパルで Genie を呼び出していないか確認し、課金の見込みを把握する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "2027-01-31 の無料期間終了後の運用（予算管理）を管理者と事前に検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-databricks", "term": "Azure Databricks", "type": "product", "oneLine": { "text": "Azure 上で提供される、データとAIを扱う Databricks のプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/genie/", "locator": "冒頭", "retrievedAt": "2026-10-25T22:38:00Z" }] } },
+        { "termKey": "genie-one", "term": "Genie One", "type": "feature", "oneLine": { "text": "ビジネス ユーザーがデータ資産を検出して操作するための簡素化されたインターフェイス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/genie/", "locator": "Genie", "retrievedAt": "2026-10-25T22:38:00Z" }] } },
+        { "termKey": "genie-agents", "term": "Genie Agents", "type": "feature", "oneLine": { "text": "データ チームが信頼できるデータ、メトリック、ビジネス ルールを構成する、ドメイン固有の環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/genie/", "locator": "Genie", "retrievedAt": "2026-10-25T22:38:00Z" }] } },
+        { "termKey": "genie-code", "term": "Genie Code", "type": "feature", "oneLine": { "text": "ワークスペースの開発者や技術専門家向けの、AI コーディングとデータ アシスタント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/genie-code/", "locator": "冒頭", "retrievedAt": "2026-10-25T22:38:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568964",
+        "learn": [
+          { "title": "Genie（Azure Databricks）", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/genie/", "locale": "ja-jp" },
+          { "title": "ジーニーコード", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/genie-code/", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "無料期間はいつまで延長された？",
+            "a": "Genie One と Genie Agents の使用は 2027年1月31日まで無料です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/genie/" }]
+          },
+          {
+            "q": "サービスプリンシパルでの利用も無料？",
+            "a": "いいえ。サービスプリンシパルはプロモーションから除外され、利用費が請求されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/genie/" }]
+          },
+          {
+            "q": "Genie Code も無料になる？",
+            "a": "Genie Code は 2026年7月8日以降、ユーザーごとの無料月額割引を含む従量課金制で課金されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/genie-code/" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
