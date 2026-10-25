@@ -1,0 +1,136 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569376"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T21:45:00Z"
+  },
+  "slides": [
+    {
+      "key": "569376",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Linux が WSL で利用可能に（パブリック プレビュー）",
+        "subtitleJa": "開発用 PC で、Azure と同じ Linux 基盤を使って検証・再現できます",
+        "en": "Public Preview: Azure Linux on WSL"
+      },
+      "meta": {
+        "publishedJst": "2026-08-18",
+        "modifiedJst": "2026-08-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "August" }],
+        "status": "In preview",
+        "products": ["Azure Linux"],
+        "categories": ["other"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Windows 上で Linux 開発をする**開発者・Azure Linux 利用チーム**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "開発・テスト・本番で、Microsoft サポートの同じ Linux 基盤を使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Azure Linux の環境差異に悩む場合に試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "開発用ワークステーションにも Azure Linux を拡張し、本番に近い構成で動作検証や問題の再現ができる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "systemd サポート付きの Azure Linux ターミナル環境。Linux のコマンド ライン ツールを Windows 上で実行できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/windows-subsystem-for-linux-overview", "locator": "冒頭", "retrievedAt": "2026-10-25T21:44:00Z" }]
+            },
+            {
+              "text": "対応アーキテクチャは x86_64 と arm64",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/windows-subsystem-for-linux-overview", "locator": "サポートされているアーキテクチャ", "retrievedAt": "2026-10-25T21:44:00Z" }]
+            },
+            {
+              "text": "VS Code や Git でローカル開発し、VM・AKS・コンテナーなどへデプロイできる",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・制約", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Windows 10 (22H2) または Windows 11、WSL 2 の有効化、インターネット接続が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/get-started-windows-subsystem-for-linux", "locator": "前提条件", "retrievedAt": "2026-10-25T21:44:00Z" }]
+            },
+            {
+              "text": "VM や Azure サブスクリプションは不要。管理者権限なしでインストールできる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/get-started-windows-subsystem-for-linux", "locator": "冒頭 / インストール", "retrievedAt": "2026-10-25T21:44:00Z" }]
+            },
+            {
+              "text": "更新は、WSL ユーザーの報告した問題が生産性に影響する場合に必要に応じて提供",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/windows-subsystem-for-linux-overview", "locator": "リリースのテンポ", "retrievedAt": "2026-10-25T21:44:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure Linux を本番で使うチームは、ローカルで問題を再現できるか試す",
+              "origin": "editorial", "assertion": "recommendation", "verification": "unverified"
+            },
+            {
+              "text": "VS Code の WSL 拡張機能を使うと、VS Code から Azure Linux 内でツールとターミナルを実行できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/windows-subsystem-for-linux-overview", "locator": "WSL での開発", "retrievedAt": "2026-10-25T21:44:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-linux", "term": "Azure Linux", "type": "product", "oneLine": { "text": "Azure 上で実行される Linux。WSL 版でも同じコマンド ライン ツールと動作を使える。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/get-started-windows-subsystem-for-linux", "locator": "冒頭", "retrievedAt": "2026-10-25T21:44:00Z" }] } },
+        { "termKey": "wsl", "term": "WSL", "type": "feature", "oneLine": { "text": "Linux 用 Windows サブシステム。Windows 上で Linux 環境を実行する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/get-started-windows-subsystem-for-linux", "locator": "前提条件", "retrievedAt": "2026-10-25T21:44:00Z" }] } },
+        { "termKey": "systemd", "term": "systemd", "type": "term", "oneLine": { "text": "Linux のサービスなどを管理する仕組み。Azure Linux on WSL ではサポートされる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/windows-subsystem-for-linux-overview", "locator": "冒頭", "retrievedAt": "2026-10-25T21:44:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-25T21:44:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569376",
+        "learn": [
+          { "title": "Linux 用 Windows サブシステム (WSL) Azure Linux の概要", "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/windows-subsystem-for-linux-overview", "locale": "ja-jp" },
+          { "title": "WSL Azure Linux 4.0 の使用を開始する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/get-started-windows-subsystem-for-linux", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "動作に必要な環境は？",
+            "a": "Windows 10 (22H2) または Windows 11 で WSL 2 が有効であることと、インターネット接続が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/get-started-windows-subsystem-for-linux" }]
+          },
+          {
+            "q": "Azure サブスクリプションは必要？",
+            "a": "不要です。VM や Azure サブスクリプションなしで、ローカルの Linux 環境として使い始められます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/get-started-windows-subsystem-for-linux" }]
+          },
+          {
+            "q": "対応アーキテクチャは？",
+            "a": "x86_64 と arm64 に対応しています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-linux/windows-subsystem-for-linux-overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
