@@ -1,0 +1,166 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577130"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T20:45:00Z"
+  },
+  "slides": [
+    {
+      "key": "577130",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Application Gateway のキーレス TLS が GA に",
+        "subtitleJa": "TLS の秘密キーを Managed HSM に置いたまま、ゲートウェイで TLS を終端できます",
+        "en": "Generally Available: Keyless TLS on Application Gateway with Azure Key Vault Managed HSM"
+      },
+      "meta": {
+        "publishedJst": "2026-10-21",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Application Gateway"],
+        "categories": ["networking", "security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": {
+          "text": "TLS 秘密キーを HSM 内で管理したい **Application Gateway（v2）の利用者**",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls-overview", "locator": "Requirements", "retrievedAt": "2026-10-25T20:45:00Z" }]
+        },
+        "change": { "text": "秘密キーをゲートウェイにエクスポートせず、HSM 内で TLS 署名を実行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "HSM でのキー管理が要件なら検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ゲートウェイが Managed HSM の非エクスポート キーで署名させ、TLS ハンドシェイクを完了",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls-overview", "locator": "ハンドシェイクとリクエストフロー", "retrievedAt": "2026-10-25T20:45:00Z" }]
+            },
+            {
+              "text": "証明書の公開部分のみゲートウェイに渡し、秘密キーは HSM から出ない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls-overview", "locator": "冒頭", "retrievedAt": "2026-10-25T20:45:00Z" }]
+            },
+            {
+              "text": "マネージド ID と RBAC でキーアクセスを制御し、診断ログで署名操作を監査",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls-overview", "locator": "使用する理由", "retrievedAt": "2026-10-25T20:45:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "HSM キーで証明書を生成し、マネージド ID に Managed HSM Crypto User ロールを付与",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls", "locator": "キーレスTLSの設定", "retrievedAt": "2026-10-25T20:45:00Z" }]
+            },
+            {
+              "text": "ゲートウェイの ssl-cert に HSM キー ID と公開証明書を登録し、リスナーに関連付け",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls", "locator": "キーレスTLSの設定", "retrievedAt": "2026-10-25T20:45:00Z" }]
+            },
+            {
+              "text": "Managed HSM の診断設定で AuditEvent を送信し、KeySign 操作を確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls", "locator": "キーレスTLS操作の監視", "retrievedAt": "2026-10-25T20:45:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Application Gateway v2、Managed HSM、ユーザー割り当てマネージド ID が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls-overview", "locator": "Requirements", "retrievedAt": "2026-10-25T20:45:00Z" }]
+            },
+            {
+              "text": "AGIC、WebSockets、L4 TCP/TLS プロキシ、FIPS モード、EC キーは非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls", "locator": "Limitations", "retrievedAt": "2026-10-25T20:45:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連サービス", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Managed HSM は FIPS 140-3 レベル 3 検証済みのフル マネージド HSM",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/overview", "locator": "冒頭", "retrievedAt": "2026-10-25T20:45:00Z" }]
+            },
+            {
+              "text": "Application Gateway は SSL/TLS 終端や WAF 統合を備えた L7 ロード バランサー",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/overview", "locator": "冒頭", "retrievedAt": "2026-10-25T20:45:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "キー保管を HSM 境界内に保ち、職務分離や集中キー管理を行いたい場合",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls-overview", "locator": "冒頭", "retrievedAt": "2026-10-25T20:45:00Z" }]
+            },
+            {
+              "text": "HSM の権限範囲は、特に本番環境でできるだけ狭く設定する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls-overview", "locator": "Considerations", "retrievedAt": "2026-10-25T20:45:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "application-gateway", "term": "Application Gateway", "type": "product", "oneLine": { "text": "Web アプリケーションへのトラフィックを管理する、Web トラフィック ロード バランサー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/overview", "locator": "冒頭", "retrievedAt": "2026-10-25T20:45:00Z" }] } },
+        { "termKey": "managed-hsm", "term": "Azure Key Vault Managed HSM", "type": "product", "oneLine": { "text": "FIPS 140-3 レベル 3 検証済み HSM で暗号化キーを保護する、フル マネージドのシングルテナント サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/overview", "locator": "冒頭", "retrievedAt": "2026-10-25T20:45:00Z" }] } },
+        { "termKey": "keyless-tls", "term": "キーレス TLS", "type": "feature", "oneLine": { "text": "秘密キーを HSM 内に残したまま、ゲートウェイが TLS を終端できる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls-overview", "locator": "冒頭", "retrievedAt": "2026-10-25T20:45:00Z" }] } },
+        { "termKey": "rbac", "term": "RBAC", "type": "term", "oneLine": { "text": "ロールの割り当てによって、リソースやキーへのアクセスを制御する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/key-vault/managed-hsm/overview", "locator": "分離アクセス制御", "retrievedAt": "2026-10-25T20:45:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-25T20:45:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577130",
+        "learn": [
+          { "title": "Application Gateway および Managed HSM 用のキーレス TLS とは", "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls-overview", "locale": "ja-jp" },
+          { "title": "Managed HSM を使用してキーレス TLS 終端を構成する", "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どんな前提条件がありますか？",
+            "a": "Application Gateway v2、Managed HSM、ユーザー割り当てマネージド ID と HSM キーへの RBAC 権限が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls-overview" }]
+          },
+          {
+            "q": "対応していない構成はありますか？",
+            "a": "AGIC、WebSockets、L4 TCP/TLS プロキシ、FIPS モード、EC キーは非対応で、リスナーは TLS 1.2 以降が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls" }]
+          },
+          {
+            "q": "署名操作は監査できますか？",
+            "a": "Managed HSM の診断設定で AuditEvent を送信すると、KeySign 操作をログで確認できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
