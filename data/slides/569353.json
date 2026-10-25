@@ -1,0 +1,110 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569353"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T21:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "569353",
+      "kind": "announcement",
+      "kindSource": "tags",
+      "label": "アナウンス",
+      "title": {
+        "ja": "Azure Databricks Runtime 10.4 LTS が 2026年11月1日に有効期限終了",
+        "subtitleJa": "終了後は利用不可。残るワークロードは実行されない",
+        "en": "Announcing: Azure Databricks Runtime 10.4 LTS will reach end of life on November 1, 2026"
+      },
+      "meta": {
+        "publishedJst": "2026-08-15",
+        "modifiedJst": "2026-08-15",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "November" }],
+        "status": null,
+        "products": ["Azure Databricks"],
+        "categories": ["databases", "ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Databricks Runtime 10.4 LTS を使うクラスター・ワークロードの管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "2026年11月1日以降、10.4 LTS は利用できなくなり、残るワークロードは実行されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "2026年11月1日までに、対象のクラスターとワークロードをサポート対象の Databricks Runtime へ移行する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2026-11-01", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "リリース", "when": { "date": "2022-03-18", "precision": "day" } },
+        { "label": "サポート終了", "when": { "date": "2025-03-18", "precision": "day" } },
+        { "label": "有効期限の終了（EOL）", "when": { "date": "2026-11-01", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "scope", "heading": "適用範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure Databricks で提供される Databricks Runtime 10.4 LTS（Apache Spark 3.2.1 搭載）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/runtime/10.4lts", "locator": "冒頭", "retrievedAt": "2026-10-25T21:48:00Z" }] },
+            { "text": "10.4 LTS は 2022年3月18日にリリースされ、2025年3月18日にサポートが終了している", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/runtime/eos", "locator": "サポート終了とサービス終了の履歴", "retrievedAt": "2026-10-25T21:48:00Z" }] }
+          ]
+        },
+        {
+          "id": "permissions", "heading": "知っておくべき点", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "2026年11月1日以降、10.4 LTS は利用不可。このバージョンに残るワークロードは実行されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "サポート終了後のバージョンは、UI のコンピュート作成では選択できなくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/runtime/eos", "locator": "サポート終了バージョンを使用してコンピューティングインスタンスを作成する", "retrievedAt": "2026-10-25T21:48:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ワークスペースで 10.4 LTS を使うクラスター・ジョブがないか棚卸しし、移行先の Runtime での動作を事前に検証する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-databricks", "term": "Azure Databricks", "type": "product", "oneLine": { "text": "Azure 上で提供される、Databricks のデータ分析・AI プラットフォーム。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "databricks-runtime", "term": "Databricks Runtime", "type": "feature", "oneLine": { "text": "Azure Databricks 上で提供される、Databricks が管理するランタイム。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "lts", "term": "LTS", "type": "label", "oneLine": { "text": "Databricks Runtime の長期サポート版を示す表記。10.4 LTS はその一つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/runtime/eos", "locator": "サポート終了とサービス終了の履歴", "retrievedAt": "2026-10-25T21:48:00Z" }] } },
+        { "termKey": "eol", "term": "EOL（有効期限の終了）", "type": "term", "oneLine": { "text": "対象バージョンが利用できなくなり、ワークロードが実行されなくなる時点。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "Databricks Runtime バージョンのサポート ライフサイクルに基づく終了で、リージョン別ではない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/runtime/eos", "locator": "サポート終了とサービス終了の履歴", "retrievedAt": "2026-10-25T21:48:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569353",
+        "learn": [
+          { "title": "Databricks Runtime 10.4 LTS （販売終了）", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/runtime/10.4lts", "locale": "ja-jp" },
+          { "title": "サポート終了 Databricks Runtime リリース ノート", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/runtime/eos", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分の環境は対象か？",
+            "a": "Databricks Runtime 10.4 LTS を使うクラスターやワークロードが対象です。それ以外のバージョンはこの告知の対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/runtime/10.4lts" }]
+          },
+          {
+            "q": "10.4 LTS はいつまで使えるか？",
+            "a": "2025年3月18日にサポートが終了しており、有効期限の終了日は 2026年11月1日です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/runtime/eos" }]
+          },
+          {
+            "q": "サポート終了版で新規にクラスターを作れるか？",
+            "a": "UI の選択肢には表示されなくなります。有効期限の終了までは、クラスター API の spark_version にバージョンキーを指定して作成できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/release-notes/runtime/eos" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
