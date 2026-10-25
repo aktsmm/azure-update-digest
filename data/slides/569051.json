@@ -1,0 +1,185 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569051"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T20:57:49Z"
+  },
+  "slides": [
+    {
+      "key": "569051",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "VM の vCore カスタマイズが一般提供（GA）に",
+        "subtitleJa": "SMT/HT の無効化と、使う vCPU 数の絞り込みで、性能の安定化とライセンス費用の削減を狙えます",
+        "en": "Generally Available: vCore Customization: Disable Multithreading and Configurable Constrained Cores"
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "modifiedJst": "2026-08-20",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Virtual Machines"],
+        "categories": ["compute"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "コア単位でライセンスされる **SQL Server / Oracle / SAP などを VM で動かしている方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "VM のメモリ・帯域はそのまま、使うコア数だけ減らして費用を抑えられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "ライセンス費用や遅延の揺らぎに課題があれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "vCPU を減らすには、サフィックス付きの定義済み VM サイズ（例: Standard_E32-16s_v5）から選ぶ必要があった",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/constrained-vcpu", "locator": "冒頭", "retrievedAt": "2026-10-25T20:57:49Z" }]
+        },
+        "after": {
+          "text": "サイズを変えずに、有効な vCPU 数の指定と SMT/HT の無効化を設定で行える",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "SMT 無効化: コアあたりのスレッド数を 1 にし、物理コアを排他的に使う",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization", "locator": "冒頭", "retrievedAt": "2026-10-25T20:57:49Z" }]
+            },
+            {
+              "text": "制約付きコア: 既定より少ない vCPU 数を選び、メモリと I/O は維持",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization", "locator": "冒頭", "retrievedAt": "2026-10-25T20:57:49Z" }]
+            },
+            {
+              "text": "追加料金なし。VM 価格は既定設定のフルサイズ VM と同じ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization", "locator": "利点", "retrievedAt": "2026-10-25T20:57:49Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "portal: VM 作成 [基本] → サイズの [コアのカスタマイズ] で設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization", "locator": "Azure portal", "retrievedAt": "2026-10-25T20:57:49Z" }]
+            },
+            {
+              "text": "CLI / PowerShell / ARM: vCPUsPerCore=1、vCPUsAvailable=n を指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization", "locator": "ARM テンプレート", "retrievedAt": "2026-10-25T20:57:49Z" }]
+            },
+            {
+              "text": "対応 vCPU 数は az vm list-skus の vCPUsConstraintsAllowed で確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization", "locator": "構成でサポートされている仮想コアを特定する", "retrievedAt": "2026-10-25T20:57:49Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "vCPU は減らすのみ。SMT 有効 VM では偶数、設定は作成時かサイズ変更時のみ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization", "locator": "考慮事項", "retrievedAt": "2026-10-25T20:57:49Z" }]
+            },
+            {
+              "text": "VMSS は Uniform 対応。ファースト パーティ イメージ等のみで、サードパーティ ライセンス込みの Marketplace イメージは非対応",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "定義済みの制約付き vCPU サイズ: サイズ名で固定。vCore カスタマイズ: 設定で vCPU 数を指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [
+                { "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/constrained-vcpu", "locator": "冒頭", "retrievedAt": "2026-10-25T20:57:49Z" },
+                { "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization", "locator": "冒頭", "retrievedAt": "2026-10-25T20:57:49Z" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "メモリ集約の SQL Server など、コア単位課金のライセンス費用の削減",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization", "locator": "利点", "retrievedAt": "2026-10-25T20:57:49Z" }]
+            },
+            {
+              "text": "無効にした vCPU は使えない。同一 VM のほかの処理に影響しないか確認する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/constrained-vcpu", "locator": "仕様の比較（注）", "retrievedAt": "2026-10-25T20:57:49Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-vm", "term": "Azure Virtual Machines", "type": "product", "oneLine": { "text": "Azure 上で仮想マシン（VM）を作成して実行できるサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization", "locator": "冒頭", "retrievedAt": "2026-10-25T20:57:49Z" }] } },
+        { "termKey": "vcpu", "term": "vCPU", "type": "term", "oneLine": { "text": "VM に割り当てられる仮想 CPU コア。ソフトウェアのライセンス数の基準になることがある。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/constrained-vcpu", "locator": "ワークロードの例", "retrievedAt": "2026-10-25T20:57:49Z" }] } },
+        { "termKey": "smt", "term": "SMT / ハイパースレッディング", "type": "feature", "oneLine": { "text": "1 つの物理コアで複数のスレッドを同時に実行する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization", "locator": "冒頭", "retrievedAt": "2026-10-25T20:57:49Z" }] } },
+        { "termKey": "constrained-cores", "term": "構成可能な制約付きコア", "type": "feature", "oneLine": { "text": "VM サイズの既定より少ない数の vCPU だけを有効にする機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization", "locator": "冒頭", "retrievedAt": "2026-10-25T20:57:49Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-25T20:57:49Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "告知で「すべての Azure パブリック リージョンで利用可能」と明記",
+        "evidence": [
+          { "url": "https://azure.microsoft.com/updates?id=569051", "locator": "本文", "retrievedAt": "2026-10-25T20:57:49Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569051",
+        "learn": [
+          { "title": "VM 仮想コアのカスタマイズ機能: 同時マルチスレッド (SMT/HT) と構成可能な制約付きコアを無効にする", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization", "locale": "ja-jp" },
+          { "title": "データベース ワークロードの制約付き vCPU サイズ", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/constrained-vcpu", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "追加料金はかかりますか？",
+            "a": "この CPU オプションの利用に追加料金はなく、VM 価格は既定設定のフルサイズ VM と同じです。コア課金のソフトウェア費用が下がります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization" }]
+          },
+          {
+            "q": "稼働中の VM の設定を変更できますか？",
+            "a": "作成時またはサイズ変更時のみ指定でき、動的な調整はできません。更新には VM の割り当て解除が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "告知では、すべての Azure パブリック リージョンで利用可能とされています。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=569051" }]
+          },
+          {
+            "q": "SQL Server の Marketplace イメージでも使えますか？",
+            "a": "SQL Server on Virtual Machines などの特殊な Marketplace オファリングは、現時点でサポートされていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/vm-customization" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
