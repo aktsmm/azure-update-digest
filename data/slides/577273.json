@@ -1,0 +1,107 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577273"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-26T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "577273",
+      "kind": "announcement",
+      "kindSource": "tags",
+      "label": "アナウンス",
+      "title": {
+        "ja": "Entra ID で、通信事業者を自分で選べる CYOT が利用可能に",
+        "subtitleJa": "2026-10-30 から、SMS・音声認証にサードパーティのテレフォニー プロバイダーを設定できます",
+        "en": "Announcing: Choose Your Own Telephony (CYOT) for Microsoft Entra"
+      },
+      "meta": {
+        "publishedJst": "2026-10-22",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "October" }],
+        "status": null,
+        "products": ["Microsoft Entra ID (formerly Azure AD)"],
+        "categories": ["security"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "SMS・音声認証を使い続ける必要がある **Microsoft Entra ID のテナント管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Microsoft 提供の SMS・音声が廃止された後も、外部プロバイダー経由で利用を続けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "冒頭", "retrievedAt": "2026-10-26T00:00:00Z" }] },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "SMS・音声が必要なユーザーを洗い出し、パスキー等で代替できるか確認。必要ならプロバイダーを選定する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2026-10-30", "precision": "day" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "適用範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "2026-10-30 から CYOT を有効化できる（構成画面もこの日以降）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "Important", "retrievedAt": "2026-10-26T00:00:00Z" }] },
+            { "text": "プロバイダーは Microsoft Security Store から選び、契約は組織が直接管理", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プライベート プレビューの初期プロバイダーは Soprano と Telesign", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "使用可能なテレフォニー プロバイダー", "retrievedAt": "2026-10-26T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "permissions", "heading": "知っておくべき点", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Microsoft は SMS・音声ではなくパスキー等のフィッシング耐性のある方法を推奨", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "冒頭", "retrievedAt": "2026-10-26T00:00:00Z" }] },
+            { "text": "Microsoft 提供の SMS・音声は 2027-02-01 から廃止（全体管理者と外部ユーザーは 2027-07-01）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-sms-voice-retirement", "locator": "退役のタイムライン", "retrievedAt": "2026-10-26T00:00:00Z" }] },
+            { "text": "認証方法ポリシーの適用は Entra ID、SMS・音声の配信はプロバイダーが担当", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "独自のテレフォニー プロバイダーの選択のしくみ", "retrievedAt": "2026-10-26T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check", "heading": "事前準備", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "文書化された要件のあるユーザーを特定し、パスキー等で代替できないか確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "独自のテレフォニー プロバイダー導入を計画する", "retrievedAt": "2026-10-26T00:00:00Z" }] },
+            { "text": "提供地域・配信チャネル・価格・サポート・コンプライアンスでプロバイダーを比較", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "独自のテレフォニー プロバイダー導入を計画する", "retrievedAt": "2026-10-26T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-entra-id", "term": "Microsoft Entra ID", "type": "product", "oneLine": { "text": "ユーザーやアプリの認証とアクセス管理を提供する、クラウドベースの ID サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/fundamentals/whatis", "locator": "Microsoft Entra ID", "retrievedAt": "2026-10-26T00:00:00Z" }] } },
+        { "termKey": "cyot", "term": "CYOT", "type": "feature", "oneLine": { "text": "Choose Your Own Telephony の略で、SMS・音声認証に使う通信事業者を選べる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "冒頭", "retrievedAt": "2026-10-26T00:00:00Z" }] } },
+        { "termKey": "passkey", "term": "パスキー", "type": "term", "oneLine": { "text": "共有シークレットの代わりに暗号化キーを使う、フィッシング耐性のある認証方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-sms-voice-retirement", "locator": "2. ユーザーをパスキーに移動する", "retrievedAt": "2026-10-26T00:00:00Z" }] } },
+        { "termKey": "security-store", "term": "Microsoft Security Store", "type": "product", "oneLine": { "text": "テレフォニー プロバイダーのオファーを選んで購入できる Microsoft のストア。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "使用可能なテレフォニー プロバイダー", "retrievedAt": "2026-10-26T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Microsoft Entra ID は、リージョンを指定せずに使う非リージョン サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "List of nonregional services", "retrievedAt": "2026-10-26T00:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577273",
+        "learn": [
+          { "title": "SMS および音声認証用のテレフォニー プロバイダーを選択する", "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locale": "ja-jp" },
+          { "title": "既定でのパスキーと、Microsoftが提供する SMS および音声認証の廃止", "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-sms-voice-retirement", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "CYOT はいつから使えますか？",
+            "a": "2026 年 10 月 30 日以降に構成エクスペリエンスが利用可能になります。それまでは構成できません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers" }]
+          },
+          {
+            "q": "対応しないとどうなりますか？",
+            "a": "プロバイダーを構成せず SMS・音声が有効なままだと、廃止日以降は通常どおりサインインできなくなります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-sms-voice-retirement" }]
+          },
+          {
+            "q": "どのプロバイダーを選べますか？",
+            "a": "初期は Soprano と Telesign で、一般提供に伴い増える予定です。Microsoft Security Store から選びます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
