@@ -1,0 +1,139 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["576716"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T20:31:30Z"
+  },
+  "slides": [
+    {
+      "key": "576716",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Cosmos DB の Safe Key Rotation が一般提供（GA）に",
+        "subtitleJa": "アカウント キーの最終使用時刻を確認し、使用中のキーを誤って無効化するのを防げます",
+        "en": "Generally Available: Azure Cosmos DB Safe Key Rotation"
+      },
+      "meta": {
+        "publishedJst": "2026-10-22",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Cosmos DB"],
+        "categories": ["databases", "iot"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "アカウント キーを使う **Cosmos DB 利用者**（キーのローテーション／廃止を予定している方）", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "使用中のキーを把握でき、無効化による中断リスクを減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "キーのローテーションや無効化の前に確認", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "各アカウント キーが最後に使われた時刻のメタデータを確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ローテーションや廃止の前に、使用中のキーを特定できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "キーのローテーション手順（概要）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "主キー使用中: セカンダリ キーを再生成・検証し、アプリを切替えてから主キーを再生成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/how-to-rotate-keys", "locator": "主キーを使用するときにキーをローテーションする", "retrievedAt": "2026-10-25T20:35:00Z" }]
+            },
+            {
+              "text": "Azure portal のアカウントの [キー] から再生成する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/how-to-rotate-keys", "locator": "主キーを使用するときにキーをローテーションする", "retrievedAt": "2026-10-25T20:35:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Cosmos DB for NoSQL アカウントと、キーを一貫して使うアプリが前提",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/how-to-rotate-keys", "locator": "Prerequisites", "retrievedAt": "2026-10-25T20:35:00Z" }]
+            },
+            {
+              "text": "キーの再生成は、アカウントのサイズにより 1 分〜数時間かかる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/how-to-rotate-keys", "locator": "注", "retrievedAt": "2026-10-25T20:35:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する認証方式", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "より安全な認証には、Microsoft Entra ID のロールベース アクセス制御が推奨されている",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/how-to-rotate-keys", "locator": "Warning", "retrievedAt": "2026-10-25T20:35:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "月次・年次ジョブや、チーム間で共有するキーなど、利用状況が見えにくいキー",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/how-to-rotate-keys", "locator": "なぜ重要なのでしょうか?", "retrievedAt": "2026-10-25T20:35:00Z" }]
+            },
+            {
+              "text": "Entra ID への移行前に、ローカル認証を無効化できるか判断する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/how-to-rotate-keys", "locator": "なぜ重要なのでしょうか?", "retrievedAt": "2026-10-25T20:35:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "account-key", "term": "アカウント キー", "type": "term", "oneLine": { "text": "Cosmos DB アカウントへのアクセスに使う、プライマリ キーとセカンダリ キー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/how-to-rotate-keys", "locator": "冒頭", "retrievedAt": "2026-10-25T20:35:00Z" }] } },
+        { "termKey": "key-rotation", "term": "キーのローテーション", "type": "term", "oneLine": { "text": "セキュリティ維持のため、キーを再生成して入れ替えること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/how-to-rotate-keys", "locator": "冒頭", "retrievedAt": "2026-10-25T20:35:00Z" }] } },
+        { "termKey": "entra-id", "term": "Microsoft Entra ID", "type": "product", "oneLine": { "text": "ロールベースのアクセス制御による認証に使う、Microsoft の ID サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/how-to-rotate-keys", "locator": "Warning", "retrievedAt": "2026-10-25T20:35:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-25T20:35:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Cosmos DB は全リージョンで提供される基盤サービス（GA 機能は親サービスの提供状況を継承）",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-25T20:33:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=576716",
+        "learn": [{ "title": "Azure Cosmos DB for NoSQL のキーをローテーションする", "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/how-to-rotate-keys", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "キーの再生成にはどのくらい時間がかかりますか？",
+            "a": "アカウントのサイズに応じて 1 分から数時間かかる場合があります。開始前にアプリがキーを一貫して使っているか確認してください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/how-to-rotate-keys" }]
+          },
+          {
+            "q": "キーを使わない認証方法はありますか？",
+            "a": "はい。Microsoft Entra ID によるロールベースのアクセス制御が、より安全な認証として案内されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/how-to-rotate-keys" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
