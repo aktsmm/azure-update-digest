@@ -1,0 +1,141 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577618"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T20:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "577618",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Data Lake Storage の ABFS Vectored Read が GA に",
+        "subtitleJa": "近接する読み取りをまとめて非同期実行し、選択的な Parquet クエリなどの往復を削減します",
+        "en": "Generally Available: ABFS Vectored Read for Azure Data Lake Storage"
+      },
+      "meta": {
+        "publishedJst": "2026-10-23",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "May" }],
+        "status": "Launched",
+        "products": ["Azure Blob Storage", "Azure Data Lake Storage"],
+        "categories": ["storage", "databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Data Lake Storage 上で**互換性のある Spark などの分析エンジン**を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "選択的な読み取りでのリクエスト オーバーヘッドとネットワーク往復を減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "選択的な Parquet クエリが多ければ検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "近接するファイル範囲を、より少ないストレージ要求にまとめる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "読み取りを非同期に実行し、ネットワーク往復を減らす", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "互換性のある Spark ワークロードでは、構成で有効化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "クエリの書き換えやデータ移行は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・補足", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ABFS ドライバーの認証は、階層型名前空間が有効なストレージ アカウントが前提",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/data-lake-storage-abfs-driver", "locator": "認証", "retrievedAt": "2026-10-25T20:30:00Z" }]
+            },
+            {
+              "text": "ABFS ドライバーの設定は core-site.xml に格納する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/data-lake-storage-abfs-driver", "locator": "構成", "retrievedAt": "2026-10-25T20:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する仕組み", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ABFS は Data Lake Storage REST API のクライアント shim で、旧 WASB ドライバーの課題を解消するドライバー",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/data-lake-storage-abfs-driver", "locator": "ABFS のしくみ", "retrievedAt": "2026-10-25T20:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "選択的な Parquet クエリなど、小さな範囲の読み取りが多いワークロード", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "abfs", "term": "ABFS", "type": "feature",
+          "oneLine": { "text": "Hadoop から Data Lake Storage のデータにアクセスするための Azure Blob File System ドライバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/data-lake-storage-abfs-driver", "locator": "冒頭", "retrievedAt": "2026-10-25T20:30:00Z" }] }
+        },
+        {
+          "termKey": "azure-data-lake-storage", "term": "Azure Data Lake Storage", "type": "product",
+          "oneLine": { "text": "Blob Storage 上に構築された、ビッグ データ分析専用の一連の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/data-lake-storage-introduction", "locator": "冒頭", "retrievedAt": "2026-10-25T20:30:00Z" }] }
+        },
+        {
+          "termKey": "azure-blob-storage", "term": "Azure Blob Storage", "type": "product",
+          "oneLine": { "text": "Data Lake Storage の土台となる、Azure のオブジェクト ストレージ サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/data-lake-storage-introduction", "locator": "Azure Blob Storage に基づいて構築", "retrievedAt": "2026-10-25T20:30:00Z" }] }
+        },
+        {
+          "termKey": "hierarchical-namespace", "term": "階層型名前空間", "type": "term",
+          "oneLine": { "text": "ストレージ内のオブジェクトを、ディレクトリと入れ子のサブディレクトリの階層に整理する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/data-lake-storage-introduction", "locator": "階層ディレクトリ構造", "retrievedAt": "2026-10-25T20:30:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-25T20:30:00Z" }] }
+        }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Blob Storage と Data Lake Storage Gen2 は、全リージョンで提供される基盤サービス",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/reliability/availability-service-by-category", "locator": "基本サービス", "retrievedAt": "2026-10-25T20:30:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577618",
+        "learn": [
+          { "title": "Azure BLOB ファイル システム ドライバー (ABFS): Hadoop 専用Azure Storage ドライバー", "url": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/data-lake-storage-abfs-driver", "locale": "ja-jp" },
+          { "title": "Azure Data Lake Storage の概要", "url": "https://learn.microsoft.com/ja-jp/azure/storage/blobs/data-lake-storage-introduction", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Blob Storage と Data Lake Storage Gen2 は基盤サービスとして全リージョンで提供されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/reliability/availability-service-by-category" }]
+          },
+          {
+            "q": "クエリやデータの変更は必要ですか？",
+            "a": "互換性のある Spark ワークロードでは、構成で有効化でき、クエリの書き換えやデータ移行は不要です。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=577618" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
