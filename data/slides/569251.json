@@ -1,0 +1,86 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": { "mode": "ids", "basis": "created", "ids": ["569251"], "coverage": "complete", "snapshotAt": "2026-10-25T22:14:00Z" },
+  "slides": [
+    {
+      "key": "569251",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Front Door が相互 TLS（mTLS）をパブリック プレビュー",
+        "subtitleJa": "エッジでクライアント証明書を検証し、オリジンに届く前に不正なクライアントを遮断",
+        "en": "Public Preview: Azure Front Door mutual TLS"
+      },
+      "meta": {
+        "publishedJst": "2026-08-13",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "August" }],
+        "status": "In preview",
+        "products": ["Azure Front Door"],
+        "categories": ["networking", "security"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "B2B・IoT・金融・VPN などで **Front Door Premium** を使う方", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "冒頭 / 適用対象", "retrievedAt": "2026-10-25T22:14:00Z" }] },
+        "change": { "text": "リクエストがアプリに届く前に、X.509 証明書でクライアントを認証できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。プレビューは追加の利用規約の対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "Important", "retrievedAt": "2026-10-25T22:14:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "検証モードは4種: 必須+検証 / 必須のみ / 提示時のみ検証 / オリジンへ通過", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "相互TLS検証モード", "retrievedAt": "2026-10-25T22:14:00Z" }] },
+            { "text": "公的 CA・プライベート CA 発行の証明書に対応。CA チェーンは Key Vault に保存", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "mTLSは公開証明書とプライベート証明書の両方をサポートしていますか?", "retrievedAt": "2026-10-25T22:14:00Z" }] },
+            { "text": "証明書は X-Azure-ClientCertificate ヘッダーでオリジンへ転送", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "相互TLS検証モード", "retrievedAt": "2026-10-25T22:14:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "既存ドメインで mTLS を有効化・無効化するとダウンタイムが発生", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "重要な設計上の考慮事項", "retrievedAt": "2026-10-25T22:14:00Z" }] },
+            { "text": "mTLS 有効時は、ルートでキャッシュを有効にできない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "重要な設計上の考慮事項", "retrievedAt": "2026-10-25T22:14:00Z" }] },
+            { "text": "CA 証明書は PEM で 25 KB 未満、ルート＋中間証明書は最大 3 つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "構成クォータの上限", "retrievedAt": "2026-10-25T22:14:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "新しいドメイン・エンドポイントでの mTLS 有効化が推奨されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "コンフィギュレーションの手順", "retrievedAt": "2026-10-25T22:14:00Z" }] },
+            { "text": "検証モードと CA 証明書の運用（自動ローテーションなし）を検証環境で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "front-door", "term": "Azure Front Door", "type": "product", "oneLine": { "text": "Web コンテンツやアプリをグローバルに高速・安全に配信する、クラウドの CDN。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/front-door-overview", "locator": "冒頭", "retrievedAt": "2026-10-25T22:14:00Z" }] } },
+        { "termKey": "mtls", "term": "相互 TLS（mTLS）", "type": "term", "oneLine": { "text": "クライアントとサーバーの双方向で、通信の安全性と信頼を確認する認証方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "冒頭", "retrievedAt": "2026-10-25T22:14:00Z" }] } },
+        { "termKey": "ocsp", "term": "OCSP", "type": "term", "oneLine": { "text": "証明書の失効状態を確認するためのプロトコル（Online Certificate Status Protocol）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "証明書失効の確認", "retrievedAt": "2026-10-25T22:14:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、すべての Azure 顧客が評価とフィードバックのために使える段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-25T22:14:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Front Door はグローバル サービス（特定リージョンにデプロイしない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "List of nonregional services", "retrievedAt": "2026-10-25T22:14:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "対象のティアはどれですか？", "a": "Learn では Front Door Premium が適用対象とされています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "適用対象", "retrievedAt": "2026-10-25T22:14:00Z" }] },
+          { "q": "既存のドメインで有効化できますか？", "a": "有効化・無効化にはダウンタイムが伴うため、新しいドメインやエンドポイントでの有効化が推奨されています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "重要な設計上の考慮事項", "retrievedAt": "2026-10-25T22:14:00Z" }] },
+          { "q": "証明書が拒否されたとき、理由は分かりますか？", "a": "リクエストにヘッダー X-Azure-DebugInfo:1 を付けると、応答のデバッグ ヘッダーでエラーの可能性を確認できます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "Unexpected 403", "retrievedAt": "2026-10-25T22:14:00Z" }] },
+          { "q": "本番で使えますか？", "a": "パブリック プレビューは、明示がない限り本番ワークロード向けではありません。", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-25T22:14:00Z" }] }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569251",
+        "learn": [{ "title": "Azure Front Door における Mutual TLS authentication (preview)", "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
