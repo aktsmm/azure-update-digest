@@ -1,0 +1,105 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569140"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T22:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "569140",
+      "kind": "announcement",
+      "kindSource": "tags",
+      "label": "アナウンス",
+      "title": {
+        "ja": "Fabric のアイテム回復が、設定未指定のテナントで既定で有効になる",
+        "subtitleJa": "2026年8月23日以降、既定の回復期間は 3 日間",
+        "en": "Announcing: Microsoft Fabric Item Recovery will be enabled by default for tenants without an explicit setting"
+      },
+      "meta": {
+        "publishedJst": "2026-08-11",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "August" }],
+        "status": null,
+        "products": ["Microsoft Fabric"],
+        "categories": ["databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Fabric のテナント管理者**とワークスペース利用者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "誤って削除したアイテムを、回復期間内なら復元できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/item-recovery", "locator": "冒頭", "retrievedAt": "2026-10-25T22:30:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "管理者は、テナント設定「Item Recovery」を確認し、保持期間（3〜90 日）を必要に応じて変更する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/item-recovery", "locator": "削除済みアイテムの保持期間を設定する", "retrievedAt": "2026-10-25T22:30:00Z" }] },
+        "deadline": { "date": "2026-08-23", "precision": "day" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "適用範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Item Recovery を明示的に設定していないテナントが対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対応アイテムの回復期間は既定で 3 日間", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "管理者が明示的に設定した値は、オン・オフとも保持される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/item-recovery", "locator": "削除済みアイテムの保持期間を設定する", "retrievedAt": "2026-10-25T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "permissions", "heading": "知っておくべき点（権限）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "設定の変更にはテナント管理者ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/item-recovery", "locator": "前提条件", "retrievedAt": "2026-10-25T22:30:00Z" }] },
+            { "text": "回復はワークスペースの共同作成者以上、完全削除は管理者のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/retention-recovery", "locator": "項目の回復と削除のアクセス許可", "retrievedAt": "2026-10-25T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "保持期間中の削除済みアイテムにも、通常の OneLake ストレージ料金が発生する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/retention-recovery", "locator": "保持期間中の課金", "retrievedAt": "2026-10-25T22:30:00Z" }] },
+            { "text": "対応するアイテムの種類は限られ、未対応の種類は元に戻せない形で削除される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/retention-recovery", "locator": "サポートされているアイテムの種類", "retrievedAt": "2026-10-25T22:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "item-recovery", "term": "アイテム回復", "type": "feature", "oneLine": { "text": "削除したアイテムを、保持期間内なら復元できる Fabric の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/item-recovery", "locator": "冒頭", "retrievedAt": "2026-10-25T22:30:00Z" }] } },
+        { "termKey": "soft-delete", "term": "論理削除", "type": "term", "oneLine": { "text": "すぐには完全削除せず、保持期間中は復元できる状態にしておく削除方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/retention-recovery", "locator": "冒頭", "retrievedAt": "2026-10-25T22:30:00Z" }] } },
+        { "termKey": "tenant-admin", "term": "テナント管理者", "type": "term", "oneLine": { "text": "Fabric のテナント設定を変更できる管理ロール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/item-recovery", "locator": "前提条件", "retrievedAt": "2026-10-25T22:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "feature",
+        "basis": "policy",
+        "note": "テナント設定として、テナント全体に適用される",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/item-recovery", "locator": "削除済みアイテムの保持期間を設定する", "retrievedAt": "2026-10-25T22:30:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分のテナントは対象になりますか？",
+            "a": "Item Recovery を明示的に設定していないテナントが対象です。明示的に設定済みの値は保持されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/item-recovery", "locator": "削除済みアイテムの保持期間を設定する", "retrievedAt": "2026-10-25T22:30:00Z" }]
+          },
+          {
+            "q": "費用は発生しますか？",
+            "a": "別の課金メーターはありませんが、保持期間中は通常の OneLake ストレージ料金が発生します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/retention-recovery", "locator": "保持期間中の課金", "retrievedAt": "2026-10-25T22:30:00Z" }]
+          },
+          {
+            "q": "無効化や期間変更はできますか？",
+            "a": "テナント管理者が Item Recovery 設定で、期間の変更やオフへの切り替えができます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/admin/item-recovery", "locator": "前提条件", "retrievedAt": "2026-10-25T22:30:00Z" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569140",
+        "learn": [
+          { "title": "アイテムを回復または完全に削除する", "url": "https://learn.microsoft.com/ja-jp/fabric/admin/item-recovery", "locale": "ja-jp" },
+          { "title": "Fabric での保持と回復", "url": "https://learn.microsoft.com/ja-jp/fabric/admin/retention-recovery", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
