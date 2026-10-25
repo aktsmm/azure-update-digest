@@ -1,0 +1,167 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569246"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T22:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "569246",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Front Door のバッチ ルール更新が一般提供（GA）に",
+        "subtitleJa": "ルールセット内の複数ルールの変更を、すべて成功か、すべて未適用かの一括操作で反映できます",
+        "en": "Generally Available: Batch rule updates for Azure Front Door"
+      },
+      "meta": {
+        "publishedJst": "2026-08-13",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Front Door"],
+        "categories": ["networking", "security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Front Door Standard / Premium で **Terraform などの IaC でルールセットを管理している方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ルール変更が部分的に適用された状態を避けられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "大規模ルールセットを IaC 管理するなら検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "ルールは個別に作成・更新・削除する。並べ替えや一括編集はアトミックではない",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "クラシックルールの更新(デフォルト)", "retrievedAt": "2026-10-25T22:10:00Z" }]
+        },
+        "after": {
+          "text": "ルールをセットとして更新し、すべての変更が成功するか失敗するかを共にできる（オプトイン）",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "バッチルールの更新(オプトイン)", "retrievedAt": "2026-10-25T22:10:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ルールセット作成時にバッチ モードを有効化し、望ましい最終状態のルール配列を送信する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "バッチルールの更新の仕組み", "retrievedAt": "2026-10-25T22:10:00Z" }]
+            },
+            {
+              "text": "Front Door が差分を計算し、ルールセット単位でまとめて適用する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "ルールの宣言", "retrievedAt": "2026-10-25T22:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "バッチ モードを有効にした新しいルールセットを作成し、ルートを関連付ける",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "重要な考慮事項", "retrievedAt": "2026-10-25T22:10:00Z" }]
+            },
+            {
+              "text": "Terraform、ARM/REST、Azure CLI、PowerShell などの IaC で利用できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "冒頭", "retrievedAt": "2026-10-25T22:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Standard / Premium が対象。モードは作成後に変更不可（切り替えは新規ルールセット作成）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "重要な考慮事項", "retrievedAt": "2026-10-25T22:10:00Z" }]
+            },
+            {
+              "text": "上限は 1 ルールセット 100 ルール。ルート オーバーライドでキャッシュ有効のルールは 2 つ分",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "バッチルールセットのクォータ制限", "retrievedAt": "2026-10-25T22:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "従来方式との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "クラシック（既定）: ルールを個別管理 / バッチ: セット単位で一括更新",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "ルール管理モード", "retrievedAt": "2026-10-25T22:10:00Z" }]
+            },
+            {
+              "text": "既存のルールセットは変更なしで動作し、既定の挙動も変わらない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "後方互換性", "retrievedAt": "2026-10-25T22:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ルール数が多い・並べ替えが頻繁・Terraform / IaC デプロイにはバッチを推奨",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "適切なモードを選択する", "retrievedAt": "2026-10-25T22:10:00Z" }]
+            },
+            {
+              "text": "ルールが少なく更新が時折なら、クラシックで足りる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "適切なモードを選択する", "retrievedAt": "2026-10-25T22:10:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "rule-set", "term": "ルール セット", "type": "feature", "oneLine": { "text": "複数のルールを 1 つにまとめた、Front Door のカスタマイズ可能なルール エンジン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/frontdoor/front-door-rules-engine", "locator": "冒頭", "retrievedAt": "2026-10-25T22:10:00Z" }] } },
+        { "termKey": "batch-mode", "term": "バッチ モード", "type": "feature", "oneLine": { "text": "ルールセット内のルールをセットとして一括更新できる、オプトインのモード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "ルール管理モード", "retrievedAt": "2026-10-25T22:10:00Z" }] } },
+        { "termKey": "iac", "term": "IaC", "type": "term", "oneLine": { "text": "Infrastructure as Code の略で、Terraform などのコードでインフラを展開する手法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "冒頭", "retrievedAt": "2026-10-25T22:10:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-25T22:10:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Front Door は特定リージョンにデプロイしないグローバル サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "List of nonregional services", "retrievedAt": "2026-10-25T22:10:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569246",
+        "learn": [{ "title": "Azure Front Door ルール セットのバッチ ルール更新", "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存のルールセットもバッチ更新になりますか？",
+            "a": "なりません。既存のルールセットは従来どおり動作し、バッチ モードは明示的に有効化したルールセットでのみ使われます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "後方互換性", "retrievedAt": "2026-10-25T22:10:00Z" }]
+          },
+          {
+            "q": "後からクラシック方式に戻せますか？",
+            "a": "戻せません。バッチ モードは作成後に変更できず、切り替えには新しいルールセットの作成とルートの再関連付けが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "重要な考慮事項", "retrievedAt": "2026-10-25T22:10:00Z" }]
+          },
+          {
+            "q": "ルール数の上限はありますか？",
+            "a": "1 ルールセットあたり最大 100 ルールです。キャッシュを有効にしたルート オーバーライドのルールは 2 ルールとして数えられます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/rule-set-batch", "locator": "バッチルールセットのクォータ制限", "retrievedAt": "2026-10-25T22:10:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
