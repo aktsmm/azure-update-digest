@@ -1,0 +1,108 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568344"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T21:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "568344",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "SQL Managed Instance Next-gen General Purpose がゾーン冗長に対応",
+        "subtitleJa": "コンピュートとデータを可用性ゾーンに分散し、最大 99.995% の稼働率（パブリック プレビュー）",
+        "en": "Public Preview: Zone redundancy for Azure SQL Managed Instance Next-gen General Purpose"
+      },
+      "meta": {
+        "publishedJst": "2026-08-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "August" }],
+        "status": "In preview",
+        "products": ["Azure SQL Managed Instance"],
+        "categories": ["databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Azure SQL Managed Instance の Next-gen General Purpose を使う、または検討している方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "アプリ構成を変えずに、ゾーン障害への耐性を高められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。リージョンと前提条件（Elastic SAN ZRS）を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/instance-zone-redundancy-configure?view=azuresql", "locator": "考慮事項", "retrievedAt": "2026-10-25T21:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "コンピュートとデータを可用性ゾーンに自動で分散し、局所障害のリスクを低減", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既存インスタンスをゾーン冗長に変換でき、有効化・無効化はオンラインのスケーリング操作", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/instance-zone-redundancy-configure?view=azuresql", "locator": "考慮事項", "retrievedAt": "2026-10-25T21:30:00Z" }] },
+            { "text": "Azure portal・PowerShell・Azure CLI・REST API で構成可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/instance-zone-redundancy-configure?view=azuresql", "locator": "新しいインスタンス", "retrievedAt": "2026-10-25T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Next-gen General Purpose では Azure Elastic SAN のゾーン冗長ストレージ（ZRS）が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/instance-zone-redundancy-configure?view=azuresql", "locator": "考慮事項", "retrievedAt": "2026-10-25T21:30:00Z" }] },
+            { "text": "Elastic SAN ZRS が使えない一部のゾーン冗長対応リージョンでは利用不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/region-availability?view=azuresql", "locator": "ゾーン冗長性", "retrievedAt": "2026-10-25T21:30:00Z" }] },
+            { "text": "有効化にはバックアップ ストレージ冗長をゾーン冗長または geo ゾーン冗長にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/instance-zone-redundancy-configure?view=azuresql", "locator": "考慮事項", "retrievedAt": "2026-10-25T21:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象リージョンでの利用可否を確認し、検証環境で有効化の手順と影響を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "ハードウェア容量の制限で、ゾーン冗長のデプロイが一時的に無効になる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/region-availability?view=azuresql", "locator": "ゾーン冗長性", "retrievedAt": "2026-10-25T21:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "sql-mi", "term": "Azure SQL Managed Instance", "type": "product", "oneLine": { "text": "Azure 上で提供されるマネージドな SQL データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/service-tiers-next-gen-general-purpose-use?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-10-25T21:30:00Z" }] } },
+        { "termKey": "next-gen-gp", "term": "Next-gen General Purpose", "type": "term", "oneLine": { "text": "General Purpose サービス レベルのアーキテクチャ アップグレードで、ストレージに Elastic SAN を使う。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/service-tiers-next-gen-general-purpose-use?view=azuresql", "locator": "概要", "retrievedAt": "2026-10-25T21:30:00Z" }] } },
+        { "termKey": "zone-redundancy", "term": "ゾーン冗長", "type": "term", "oneLine": { "text": "ゾーン全体の障害時にデータへの影響を抑え、高可用性を実現する構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/high-availability-sla-local-zone-redundancy?view=azuresql", "locator": "ゾーン冗長", "retrievedAt": "2026-10-25T21:30:00Z" }] } },
+        { "termKey": "elastic-san", "term": "Elastic SAN", "type": "product", "oneLine": { "text": "Next-gen General Purpose でページ BLOB の代わりに使われるストレージ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/service-tiers-next-gen-general-purpose-use?view=azuresql", "locator": "概要", "retrievedAt": "2026-10-25T21:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-25T21:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "ゾーン冗長の対応リージョンに東日本・西日本が含まれる。Next-gen General Purpose は Elastic SAN ZRS が使えない一部リージョンでは提供されない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/region-availability?view=azuresql", "locator": "ゾーン冗長性 / アジア太平洋", "retrievedAt": "2026-10-25T21:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568344",
+        "learn": [
+          { "title": "ゾーン冗長を構成する - Azure SQL Managed Instance", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/instance-zone-redundancy-configure?view=azuresql", "locale": "ja-jp" },
+          { "title": "ローカルとゾーン冗長による可用性 - Azure SQL Managed Instance", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/high-availability-sla-local-zone-redundancy?view=azuresql", "locale": "ja-jp" },
+          { "title": "次世代型「General Purpose」サービス ティアの使用", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/service-tiers-next-gen-general-purpose-use?view=azuresql", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "プレビュー中のゾーン冗長に必要な前提は何ですか？",
+            "a": "Elastic SAN のゾーン冗長ストレージ（ZRS）と、ゾーン冗長または geo ゾーン冗長のバックアップ ストレージが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/instance-zone-redundancy-configure?view=azuresql" }]
+          },
+          {
+            "q": "既存のインスタンスにも適用できますか？",
+            "a": "既存インスタンスをゾーン冗長に変換できます。有効化・無効化はバックグラウンドで実行されるオンラインのスケーリング操作です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/instance-zone-redundancy-configure?view=azuresql" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "東日本・西日本はゾーン冗長の対応リージョンです。ただし Elastic SAN ZRS が使えないリージョンでは Next-gen General Purpose のゾーン冗長は提供されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/region-availability?view=azuresql" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
