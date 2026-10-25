@@ -1,0 +1,181 @@
+{
+  "$schema": "../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569515"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T21:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "569515",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Site Recovery で既存の NIC を使えるように（BYON）が GA",
+        "subtitleJa": "Azure 間のフェールオーバーで、ターゲット側に用意済みの NIC を割り当てられます",
+        "en": "Generally Available: BYON (Bring Your Own NIC) in Azure Site Recovery"
+      },
+      "meta": {
+        "publishedJst": "2026-08-20",
+        "modifiedJst": "2026-08-20",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Site Recovery"],
+        "categories": ["ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Azure VM を Site Recovery で**リージョン間レプリケート**している方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "準備済みのネットワーク構成や IP の予約を、ターゲット側で維持しやすい", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "ターゲット側の NIC を事前に固定したい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "ディザスター リカバリー操作では、常に新しい NIC が作成されていた",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/azure/site-recovery/feature-updates-whats-new", "locator": "BYON (Bring Your Own NIC) in Azure Site Recovery", "retrievedAt": "2026-10-25T21:00:00Z" }]
+        },
+        "after": {
+          "text": "ターゲット リージョンに事前作成した NIC を、フェールオーバーとテスト フェールオーバーで選択して使える",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ターゲットの NIC を、フェールオーバーとテストで別々に選べる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/site-recovery/feature-updates-whats-new", "locator": "BYON (Bring Your Own NIC) in Azure Site Recovery", "retrievedAt": "2026-10-25T21:00:00Z" }]
+            },
+            {
+              "text": "NSG の関連付けや予約済み IP などの構成を維持しやすい",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/site-recovery/feature-updates-whats-new", "locator": "BYON (Bring Your Own NIC) in Azure Site Recovery", "retrievedAt": "2026-10-25T21:00:00Z" }]
+            },
+            {
+              "text": "NIC を選ばなければ、従来どおり新しい NIC が作成される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/site-recovery/feature-updates-whats-new", "locator": "BYON (Bring Your Own NIC) in Azure Site Recovery", "retrievedAt": "2026-10-25T21:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ターゲットに NIC を事前作成し、[レプリケートされたアイテム] → VM → [ネットワーク] → [編集] を開く",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-customize-networking", "locator": "フェールオーバーをカスタマイズし、フェールオーバー ネットワーク構成をテストする", "retrievedAt": "2026-10-25T21:00:00Z" }]
+            },
+            {
+              "text": "NIC の構成タブで、フェールオーバー／テスト用に作成済みの NIC を選んで [OK]",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-customize-networking", "locator": "フェールオーバーをカスタマイズし、フェールオーバー ネットワーク構成をテストする", "retrievedAt": "2026-10-25T21:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "NIC は同時に 1 台の VM にしか関連付けできない。接続済みの NIC を選ぶとフェールオーバーは失敗する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-customize-networking", "locator": "Note", "retrievedAt": "2026-10-25T21:00:00Z" }]
+            },
+            {
+              "text": "ネットワーク リソースは事前に作成し、復旧側の構成を計画しておく",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-customize-networking", "locator": "前提条件", "retrievedAt": "2026-10-25T21:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "既定: 静的 IP の VM は、可能なら同じ IP をターゲットに用意しようとする",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-retain-ip-azure-vm-failover", "locator": "冒頭", "retrievedAt": "2026-10-25T21:00:00Z" }]
+            },
+            {
+              "text": "BYON: 作成済みの NIC 自体を指定でき、その構成を引き継ぐ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-customize-networking", "locator": "Note", "retrievedAt": "2026-10-25T21:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "DR 先で NSG や IP を事前に確定させておきたい環境で活用", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "NIC の使用状況を確認し、テスト後の再利用に備える", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-site-recovery", "term": "Azure Site Recovery", "type": "product",
+          "oneLine": { "text": "VM を別リージョンにレプリケートし、障害時にフェールオーバーできるディザスター リカバリー サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-overview", "locator": "冒頭", "retrievedAt": "2026-10-25T21:00:00Z" }] }
+        },
+        {
+          "termKey": "nic", "term": "NIC", "type": "term",
+          "oneLine": { "text": "VM をネットワークに接続するネットワーク インターフェイス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-customize-networking", "locator": "サポートされているネットワーク リソース", "retrievedAt": "2026-10-25T21:00:00Z" }] }
+        },
+        {
+          "termKey": "failover", "term": "フェールオーバー", "type": "term",
+          "oneLine": { "text": "障害時にプライマリからセカンダリの場所へ切り替え、そこからアプリにアクセスすること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-overview", "locator": "Recovery Services", "retrievedAt": "2026-10-25T21:00:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-25T21:00:00Z" }] }
+        }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Site Recovery は基盤サービス（全ての推奨・代替リージョンで提供）。GA 機能のため親サービスの提供状況を継承",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-25T21:00:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569515",
+        "learn": [
+          { "title": "ターゲット Azure VM のネットワーク構成をカスタマイズする", "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-customize-networking", "locale": "ja-jp" },
+          { "title": "フェールオーバー時に IP アドレスを保持する", "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-retain-ip-azure-vm-failover", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "NIC を選ばなかった場合はどうなりますか？",
+            "a": "従来どおり、復旧時に Site Recovery が新しい NIC を作成します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/site-recovery/feature-updates-whats-new", "locator": "BYON" }]
+          },
+          {
+            "q": "事前作成した NIC を複数 VM で共有できますか？",
+            "a": "できません。NIC は同時に 1 台の VM にのみ関連付けられ、接続済みの NIC を選ぶとフェールオーバーが失敗します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-customize-networking", "locator": "Note" }]
+          },
+          {
+            "q": "テスト フェールオーバーと本番で別の NIC を使えますか？",
+            "a": "はい。フェールオーバーとテスト フェールオーバーで、既存のターゲット NIC を個別に選択できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/site-recovery/feature-updates-whats-new", "locator": "BYON" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
