@@ -1,0 +1,173 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577156"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-26T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "577156",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Front Door Premium WAF のサービス タグ一致条件が GA に",
+        "subtitleJa": "IP リストを自分で管理せず、Azure サービス単位で通信を許可・ブロックできます",
+        "en": "Generally Available: Service tag match condition for Azure Front Door Premium WAF"
+      },
+      "meta": {
+        "publishedJst": "2026-10-21",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Front Door", "Web Application Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Front Door Premium** の WAF カスタム ルールを運用している方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Azure サービスの IP 範囲を自前で管理せずに制御できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Azure サービスからの通信を制御したい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "リクエスト元 IP が属するサービス タグを特定し、ルールの値と照合",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition", "locator": "サービスタグマッチングの仕組み", "retrievedAt": "2026-10-26T00:00:00Z" }]
+            },
+            {
+              "text": "タグの IP プレフィックスは Microsoft が自動更新するため、ルール修正は不要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition", "locator": "サービスタグマッチングの仕組み", "retrievedAt": "2026-10-26T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "カスタム ルールで一致変数を SocketAddr か RemoteAddr、演算子を ServiceTagMatch に設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition", "locator": "サービスタグマッチ条件の設定", "retrievedAt": "2026-10-26T00:00:00Z" }]
+            },
+            {
+              "text": "Azure portal では一覧からタグを選択（1 条件で複数選択可）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition", "locator": "サービスタグマッチ条件の設定", "retrievedAt": "2026-10-26T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "対象は Front Door Premium。タグ名は完全一致で、ワイルドカードや正規表現は不可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition", "locator": "冒頭 / サービスタグマッチ条件の設定", "retrievedAt": "2026-10-26T00:00:00Z" }]
+            },
+            {
+              "text": "一致変数は SocketAddr（接続元）か RemoteAddr（X-Forwarded-For 由来）のみ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition", "locator": "適切なマッチ変数を選ぶ", "retrievedAt": "2026-10-26T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "NSG は Front Door 背後のオリジンでは元クライアント IP を評価できず、Azure 外のオリジンには使えない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition", "locator": "なぜサービスタグがAzure Front Doorで有用なのか", "retrievedAt": "2026-10-26T00:00:00Z" }]
+            },
+            {
+              "text": "WAF で評価するため、元のクライアント接続に対して制御できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition", "locator": "なぜサービスタグがAzure Front Doorで有用なのか", "retrievedAt": "2026-10-26T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "許可・ブロック・管理パスの制限・レート制限に利用できる",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            },
+            {
+              "text": "AzureCloud など広いタグは影響範囲が大きい。最も狭いタグを選び、検出モードで確認してから適用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition", "locator": "Considerations", "retrievedAt": "2026-10-26T00:00:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "waf", "term": "WAF", "type": "feature",
+          "oneLine": { "text": "ユーザーが定義した条件に基づいて Web アプリへのアクセスを制御できる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-custom-rules", "locator": "冒頭", "retrievedAt": "2026-10-26T00:00:00Z" }] }
+        },
+        {
+          "termKey": "service-tag", "term": "サービス タグ", "type": "term",
+          "oneLine": { "text": "特定の Azure サービスの IP アドレス プレフィックスをまとめたグループ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition", "locator": "冒頭", "retrievedAt": "2026-10-26T00:00:00Z" }] }
+        },
+        {
+          "termKey": "custom-rule", "term": "カスタム ルール", "type": "feature",
+          "oneLine": { "text": "優先順位・規則の種類・一致条件・アクションで構成する WAF の規則。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-custom-rules", "locator": "冒頭", "retrievedAt": "2026-10-26T00:00:00Z" }] }
+        },
+        {
+          "termKey": "socketaddr", "term": "SocketAddr", "type": "term",
+          "oneLine": { "text": "Front Door に到達した TCP 接続の IP アドレスを評価する一致変数。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition", "locator": "適切なマッチ変数を選ぶ", "retrievedAt": "2026-10-26T00:00:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-26T00:00:00Z" }] }
+        }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Front Door はグローバル サービス（特定リージョンに配置しない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "List of nonregional services", "retrievedAt": "2026-10-26T00:00:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どの Front Door の SKU が対象ですか？",
+            "a": "Learn では適用対象が Front Door Premium と記載されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition" }]
+          },
+          {
+            "q": "SocketAddr と RemoteAddr はどう使い分けますか？",
+            "a": "実際に接続した Azure サービスを対象にするなら SocketAddr です。RemoteAddr は X-Forwarded-For 由来で、偽装されやすい点に注意してください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition" }]
+          },
+          {
+            "q": "新しいルールはどう安全に導入しますか？",
+            "a": "ログ アクションか検出モードで先に動作を確認し、問題なければブロックに切り替えます。許可ルールは範囲を狭くしてください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577156",
+        "learn": [
+          { "title": "Azure Front Doorのサービスタグマッチングとは何ですか?", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/service-tag-match-condition", "locale": "ja-jp" },
+          { "title": "Azure Front Door 上の Azure Web Application Firewall 用のカスタム ルール", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-custom-rules", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
