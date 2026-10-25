@@ -1,0 +1,156 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577963"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T20:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "577963",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Backup の項目レベル復旧が Premium SSD v2 / Ultra ディスクの VM に対応（GA）",
+        "subtitleJa": "ディスクや VM 全体を復元せず、必要なファイル・フォルダーだけ回復できます",
+        "en": "Generally Available: Item Level Recovery for Azure VMs with Premium SSDv2 and Ultra Disks in Azure Backup"
+      },
+      "meta": {
+        "publishedJst": "2026-10-24",
+        "modifiedJst": "2026-10-24",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Backup"],
+        "categories": ["storage", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Premium SSD v2 / Ultra ディスクの **Azure VM を Azure Backup で保護している方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "少量のファイルのために VM 全体を復元せずに済む", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "必要なときに従来の ILR と同じ手順で利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Premium SSD v2 / Ultra ディスク（512 バイト・4KB セクター）の VM でも、個別のファイルやフォルダーを回復できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ポータル / CLI / PowerShell でファイル回復用の実行ファイルまたはスクリプトを生成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対応するマシンで実行して復旧ポイントを参照し、必要なものだけコピー", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ディスクや VM 全体の復元は不要。従来の ILR と同等の動作", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "VM → [バックアップ] → [ファイルの回復] → 復元ポイントを選択",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-restore-files-from-vm", "locator": "手順1", "retrievedAt": "2026-10-25T20:20:00Z" }]
+            },
+            {
+              "text": "Windows は実行可能ファイル、Linux は Python スクリプトをダウンロード",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-restore-files-from-vm", "locator": "手順1", "retrievedAt": "2026-10-25T20:20:00Z" }]
+            },
+            {
+              "text": "パスワード保護されているため、画面のパスワードをコピーして実行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-restore-files-from-vm", "locator": "手順1", "retrievedAt": "2026-10-25T20:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Premium SSD v2 / Ultra ディスクの保護は Enhanced ポリシーが前提",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/backup/backup-support-matrix-iaas", "locator": "VM storage support", "retrievedAt": "2026-10-25T20:20:00Z" }]
+            },
+            {
+              "text": "回復サイズは 10 GB 以下が目安（転送速度は約 1 GB/時）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-restore-files-from-vm", "locator": "重要", "retrievedAt": "2026-10-25T20:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ILR: 個別のファイルやフォルダーを回復 / VM・ディスクの復元: 全体を復元",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-restore-files-from-vm", "locator": "冒頭", "retrievedAt": "2026-10-25T20:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "誤って削除したファイルなど、少量のデータだけ戻したいときに検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "ディスク種別が混在する VM でも、対象ディスクをすべて公開して回復できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-restore-files-from-vm", "locator": "対応ディスクとリカバリー範囲", "retrievedAt": "2026-10-25T20:20:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-backup", "term": "Azure Backup", "type": "product", "oneLine": { "text": "Azure VM などを復旧ポイントから復元できるバックアップ サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-restore-files-from-vm", "locator": "冒頭", "retrievedAt": "2026-10-25T20:20:00Z" }] } },
+        { "termKey": "ilr", "term": "項目レベル復旧（ILR）", "type": "feature", "oneLine": { "text": "VM 全体ではなく、個別のファイルやフォルダーだけを回復する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "recovery-point", "term": "復旧ポイント", "type": "term", "oneLine": { "text": "Azure VM のバックアップ時点のデータ。ここからファイルを回復する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-restore-files-from-vm", "locator": "冒頭", "retrievedAt": "2026-10-25T20:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-25T20:20:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Backup は全リージョンで提供される基盤サービス。機能固有のリージョン制限は確認できず、親サービスの提供状況に準じる",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-25T20:20:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577963",
+        "learn": [
+          { "title": "Azure 仮想マシンのバックアップからファイルを回復する", "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-restore-files-from-vm", "locale": "ja-jp" },
+          { "title": "Azure VM バックアップのサポート マトリックス", "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-support-matrix-iaas", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "対象のディスクとセクターサイズは？",
+            "a": "Premium SSD v2 と Ultra ディスクで、512 バイトと 4KB の論理セクター サイズの両方に対応しています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-restore-files-from-vm", "locator": "対応ディスクとリカバリー範囲", "retrievedAt": "2026-10-25T20:20:00Z" }]
+          },
+          {
+            "q": "どのような VM が対象ですか？",
+            "a": "Ubuntu、RHEL、Debian、Oracle Linux、SLES、openSUSE を実行する Linux VM と Windows VM が対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-restore-files-from-vm", "locator": "対応ディスクとリカバリー範囲", "retrievedAt": "2026-10-25T20:20:00Z" }]
+          },
+          {
+            "q": "バックアップのポリシーに条件はありますか？",
+            "a": "Premium SSD v2 と Ultra ディスクのバックアップは Enhanced ポリシーでサポートされます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/backup/backup-support-matrix-iaas", "locator": "VM storage support", "retrievedAt": "2026-10-25T20:20:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
