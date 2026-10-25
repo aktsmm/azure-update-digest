@@ -1,0 +1,117 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569535"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T21:07:16Z"
+  },
+  "slides": [
+    {
+      "key": "569535",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "AVS のライセンス込みサービスが 2027-08-30 に終了",
+        "subtitleJa": "AVS 自体は継続。ライセンス込み SKU から VCF BYOL SKU への移行が必要",
+        "en": "Retirement: Azure VMware Solution License-included service will be retired August 30, 2027"
+      },
+      "meta": {
+        "publishedJst": "2026-08-19",
+        "modifiedJst": "2026-08-19",
+        "availability": [{ "rawRing": "Retirement", "year": 2027, "month": "August" }],
+        "status": null,
+        "products": ["Azure VMware Solution"],
+        "categories": ["compute"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "AVS で**ライセンス込みの RI SKU** を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "2027-08-31 のサービス中断を避けるには、期限までに VCF BYOL SKU への移行が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "何が変更されていますか?", "retrievedAt": "2026-10-25T21:10:00Z" }] },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "Broadcom から VCF ライセンスを購入し、2027-08-30 までに AVS VCF BYOL へ移行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "今日、行動を起こしましょう", "retrievedAt": "2026-10-25T21:10:00Z" }] },
+        "deadline": { "date": "2027-08-30", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-08-19", "precision": "day" } },
+        { "label": "ライセンス込み PayGo SKU 廃止", "when": { "date": "2026-10-31", "precision": "day" } },
+        { "label": "ライセンス込みサービス最終日", "when": { "date": "2027-08-30", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "AVS は終了せず、ライセンス込みの SKU が変わる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "Note", "retrievedAt": "2026-10-25T21:10:00Z" }] },
+            { "text": "Broadcom が VCF のポータブル ライセンス持ち込みを必須化したことが背景", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "冒頭", "retrievedAt": "2026-10-25T21:10:00Z" }] },
+            { "text": "ライセンス込みの PayGo SKU は 2026-10-31 に廃止", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "主要な日付と移行の詳細", "retrievedAt": "2026-10-25T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "AVS VCF BYOL SKU（影響が最も小さい移行パス）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "VCF BYOLを使ったAzure VMware Solutionを継続してください", "retrievedAt": "2026-10-25T21:10:00Z" }] },
+            { "text": "他の選択肢: Nutanix Cloud Clusters on Azure、他の Azure サービス", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "プライベートクラウドの切り替え", "retrievedAt": "2026-10-25T21:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "RI はセルフサービス交換で VCF BYOL RI へ。交換後 60 分以内に VCF 情報を登録", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/vmware-cloud-foundations-license-portability", "locator": "ライセンス付き予約を交換する", "retrievedAt": "2026-10-25T21:10:00Z" }] },
+            { "text": "ライセンス購入と移行に十分な時間を確保し、アカウント チームへ相談する", "origin": "learn", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "avs", "term": "Azure VMware Solution", "type": "product", "oneLine": { "text": "Azure 上で VMware ワークロードを運用できる、完全マネージドのサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "冒頭", "retrievedAt": "2026-10-25T21:10:00Z" }] } },
+        { "termKey": "vcf", "term": "VMware Cloud Foundation (VCF)", "type": "product", "oneLine": { "text": "Broadcom の VMware 製品群。ポータブル ライセンスの持ち込みが必要になった。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "冒頭", "retrievedAt": "2026-10-25T21:10:00Z" }] } },
+        { "termKey": "byol", "term": "BYOL (VCF ポータブル ライセンス)", "type": "term", "oneLine": { "text": "Broadcom から購入した VCF サブスクリプションを AVS と組み合わせて使う方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/vmware-cloud-foundations-license-portability", "locator": "冒頭", "retrievedAt": "2026-10-25T21:10:00Z" }] } },
+        { "termKey": "ri", "term": "リザーブド インスタンス (RI)", "type": "term", "oneLine": { "text": "AVS では、ライセンス込みの RI を VCF BYOL RI と交換して移行できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "VCF BYOLを使ったAzure VMware Solutionを継続してください", "retrievedAt": "2026-10-25T21:10:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "ライセンス込みサービス全体の廃止（リージョン限定ではない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "何が変更されていますか?", "retrievedAt": "2026-10-25T21:10:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569535",
+        "learn": [
+          { "title": "AVS ライセンス込みサービスのリタイアメント", "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locale": "ja-jp" },
+          { "title": "AVS 用ポータブル VCF を構成する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/vmware-cloud-foundations-license-portability", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "AVS 自体が終了するのですか？",
+            "a": "いいえ。AVS は終了せず、ライセンス込みの SKU が変わるだけです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "Note", "retrievedAt": "2026-10-25T21:10:00Z" }]
+          },
+          {
+            "q": "いつまでに何をすればよいですか？",
+            "a": "2027-08-30 までに VCF BYOL SKU へ移行します。VCF ライセンスは Broadcom から購入する必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "何が変更されていますか?", "retrievedAt": "2026-10-25T21:10:00Z" }]
+          },
+          {
+            "q": "既存の RI はどうなりますか？",
+            "a": "2027-08-30 より後に期限を迎える RI は、VCF BYOL RI へ交換できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/license-included-service-retirement", "locator": "主要な日付と移行の詳細", "retrievedAt": "2026-10-25T21:10:00Z" }]
+          },
+          {
+            "q": "移行時にダウンタイムは発生しますか？",
+            "a": "稼働中のプライベート クラウドをポータブル VCF に変換する際、ダウンタイムやワークロードの中断はありません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-vmware/vmware-cloud-foundations-license-portability", "locator": "既存の Azure VMware Solution プライベート クラウドでポータブル VCF を有効にする", "retrievedAt": "2026-10-25T21:10:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
