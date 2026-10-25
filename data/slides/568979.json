@@ -1,0 +1,120 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568979"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T22:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "568979",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "App Service「Markdown for Agents」がパブリック プレビュー",
+        "subtitleJa": "AI エージェントが要求すると、HTML 応答を自動で Markdown に変換（コード変更不要）",
+        "en": "Public Preview: Markdown for Agents in Azure App Service"
+      },
+      "meta": {
+        "publishedJst": "2026-08-13",
+        "modifiedJst": "2026-08-13",
+        "availability": [
+          { "rawRing": "Private Preview", "year": 2026, "month": "July" },
+          { "rawRing": "Preview", "year": 2026, "month": "August" }
+        ],
+        "status": "In preview",
+        "products": ["App Service"],
+        "categories": ["compute", "ai", "web-mobile"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "AI エージェントやツールに**コンテンツを読ませたい App Service アプリの運用者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "エージェントが扱いやすい Markdown でアプリの内容を取得できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。AI エージェント連携を検討中なら検証環境で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "クライアントが Markdown を要求すると、App Service がアプリの HTML 応答を自動で Markdown に変換する。アプリケーション コードの変更は不要",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象: Azure App Service のアプリが返す HTML 応答", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "動作: クライアントが Markdown を要求したときに自動変換", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "利用者: AI エージェントなどのツールがコンテンツを取得しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "パブリック プレビューは機能が変更される可能性があり、通常 SLA の対象外",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-25T22:20:00Z" }]
+            },
+            {
+              "text": "明示されない限り、本番ワークロード向けではない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview (Important)", "retrievedAt": "2026-10-25T22:20:00Z" }]
+            }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "AI エージェントにアプリの内容を読ませる用途があるか確認し、検証環境で変換結果を確かめる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "app-service", "term": "Azure App Service", "type": "product",
+          "oneLine": { "text": "Web アプリや AI を利用したアプリケーションを開発・ホストできるプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-ai-integration", "locator": "冒頭", "retrievedAt": "2026-10-25T22:20:00Z" }] }
+        },
+        {
+          "termKey": "markdown-for-agents", "term": "Markdown for Agents", "type": "feature",
+          "oneLine": { "text": "AI エージェントなどがアプリの内容を Markdown で取得できるようにする機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "termKey": "ai-agent", "term": "AI エージェント", "type": "term",
+          "oneLine": { "text": "計画やマルチステップの操作を自律的に行う AI のこと。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-ai-integration", "locator": "App Service の AI シナリオ", "retrievedAt": "2026-10-25T22:20:00Z" }] }
+        },
+        {
+          "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label",
+          "oneLine": { "text": "GA の前に、すべての Azure 利用者が評価とフィードバックのために使える段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-25T22:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568979",
+        "learn": [{ "title": "AI を Azure App Service アプリケーションに統合する", "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-ai-integration", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "プレビュー機能は本番で使ってよいですか？",
+            "a": "パブリック プレビューは、明示されない限り本番ワークロード向けではありません。まず検証環境での評価が前提です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview" }]
+          },
+          {
+            "q": "プレビュー中にサポートや SLA はありますか？",
+            "a": "パブリック プレビューでは通常 SLA がなく、サービス レベルや本番サポートの保証はありません。機能は変更される場合があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
