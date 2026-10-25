@@ -1,0 +1,105 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568457"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T22:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "568457",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Sentinel SAP ソリューションのコンテナー化エージェントが 2026-09-14 に廃止",
+        "subtitleJa": "SAP ログの送信は停止。SAP エージェントレス データ コネクタへ移行する",
+        "en": "Retirement: Containerized data connector agent for the Microsoft Sentinel solution for SAP applications"
+      },
+      "meta": {
+        "publishedJst": "2026-08-13",
+        "availability": [{ "rawRing": "Retirement", "year": 2026, "month": "September" }],
+        "status": null,
+        "products": ["Microsoft Sentinel"],
+        "categories": ["ai", "security", "ops-governance"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Sentinel の SAP ソリューションで**コンテナー化エージェントを使っている方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "エージェントは無効化され、SAP ログの送信が止まる。エージェントレス コネクタの利用者は影響を受けない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "SAP エージェントレス データ コネクタへ移行する。エージェントと並行稼働で検証できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2026-09-14", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-08-13", "precision": "day" } },
+        { "label": "エージェント廃止", "when": { "date": "2026-09-14", "precision": "day" } },
+        { "label": "コンテナー イメージ削除", "when": { "date": "2026-10-14", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "影響", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "SAP ログ収集が止まり、依存する分析ルール・ブック・プレイブックが結果を返さなくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "新規のコンテナー化エージェントの作成は、すでに無効", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "2026-10-14 にコンテナー イメージが削除され、再展開やスケーリングも不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "冒頭", "retrievedAt": "2026-10-25T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "SAP エージェントレス データ コネクタ（一般提供中）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既存の分析ルール・ブック・プレイブックは変更なしで動作を維持", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "エージェントレス データ コネクタに移行する理由 / 機能同等性", "retrievedAt": "2026-10-25T22:00:00Z" }] },
+            { "text": "料金や請求メーターは変わらない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "移行手順", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "評価→レビュー→デプロイ→検証→並行稼働でモニター→エージェントを廃止、の順に進める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "移行パス", "retrievedAt": "2026-10-25T22:00:00Z" }] },
+            { "text": "必要な SAP 権限が異なるため、SAP 側のユーザーとロールを事前に確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "重要", "retrievedAt": "2026-10-25T22:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-sentinel", "term": "Microsoft Sentinel", "type": "product", "oneLine": { "text": "マルチクラウド環境のセキュリティを支える、クラウドネイティブの SIEM ソリューション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/overview", "locator": "冒頭", "retrievedAt": "2026-10-25T22:00:00Z" }] } },
+        { "termKey": "agentless-connector", "term": "SAP エージェントレス データ コネクタ", "type": "feature", "oneLine": { "text": "SAP データを Sentinel に取り込むコネクタ。SAP Integration Suite と SAP Cloud Connector がベース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "エージェントレス データ コネクタに移行する理由", "retrievedAt": "2026-10-25T22:00:00Z" }] } },
+        { "termKey": "analytics-rule", "term": "分析ルール", "type": "term", "oneLine": { "text": "アラートをインシデントにまとめる Sentinel の検出ルール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/overview", "locator": "脅威の検出", "retrievedAt": "2026-10-25T22:00:00Z" }] } },
+        { "termKey": "playbook", "term": "プレイブック", "type": "term", "oneLine": { "text": "脅威への対応を自動化する、修復アクションの集まり。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/overview", "locator": "インシデントへの迅速な対応", "retrievedAt": "2026-10-25T22:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568457",
+        "learn": [
+          { "title": "Microsoft Sentinel agentless SAP data connector への移行", "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locale": "ja-jp" },
+          { "title": "SAP システムを Microsoft Sentinel に接続する", "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/deploy-data-connector-agentless", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分の環境は対象ですか？",
+            "a": "コンテナー化エージェントを使っている場合が対象です。エージェントレス データ コネクタの利用者は影響を受けません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate" }]
+          },
+          {
+            "q": "移行中にログの欠落は起きますか？",
+            "a": "並行稼働で移行でき、エージェントレス コネクタの取り込みを検証してからエージェントを廃止します。既存の分析ルール等は動作を維持します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate" }, { "url": "https://azure.microsoft.com/updates?id=568457" }]
+          },
+          {
+            "q": "費用は変わりますか？",
+            "a": "廃止による料金や請求メーターの変更はありません。ただし SAP SID の識別方法が異なるため、請求の除外設定を確認し担当者に連絡するよう案内されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
