@@ -1,0 +1,118 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["557775"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T21:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "557775",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Dragon Copilot の医師向けアプリとエージェントを Marketplace で購入可能に",
+        "subtitleJa": "米国の顧客は Microsoft Marketplace で検索・評価・購入でき、請求は Microsoft に一本化されます",
+        "en": "Generally Available: Dragon Copilot Physician Apps and Agents on Microsoft Marketplace "
+      },
+      "meta": {
+        "publishedJst": "2026-08-18",
+        "modifiedJst": "2026-08-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": [],
+        "categories": ["ai"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**米国の Dragon Copilot 顧客**で、AI アプリ／エージェントの導入を検討している方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "新たなベンダー登録や別の調達手続きなしで、Microsoft への一本化した請求で購入できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "導入を検討する場合のみ。Dragon Copilot のライセンスが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-dragon-copilot-app", "locator": "Dragon Copilot プランを購入するためのお客様の前提条件", "retrievedAt": "2026-10-25T21:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Microsoft Marketplace が新たな探索・調達チャネルに加わり、ベンダーの新規オンボードや別の調達手続きが不要になる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Dragon Copilot に AI アプリ／エージェントを追加し、臨床ワークフローを拡張する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-dragon-copilot-app", "locator": "AI アプリとエージェントとは", "retrievedAt": "2026-10-25T21:40:00Z" }] },
+            { "text": "購入後、アプリ／エージェントは Dragon 管理センターのテナントに自動追加される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-dragon-copilot-app", "locator": "Dragon 管理センターでオファーを構成して使用する", "retrievedAt": "2026-10-25T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "購入の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "製品ページでプランを選び [Set up + subscribe] → サブスクリプション等を設定して [サブスクライブ]", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-dragon-copilot-app", "locator": "購入手順", "retrievedAt": "2026-10-25T21:40:00Z" }] },
+            { "text": "[今すぐアカウントを構成] で Dragon 管理センターへ移動し、アプリをデプロイする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-dragon-copilot-app", "locator": "購入手順", "retrievedAt": "2026-10-25T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Dragon Copilot のライセンスと、事前に締結した Microsoft 顧客契約が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/plan-dragon-copilot-offer", "locator": "お客様の前提条件", "retrievedAt": "2026-10-25T21:40:00Z" }] },
+            { "text": "米国内の顧客のみ対象。30 日以内に構成しないとサブスクリプションは自動削除", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-dragon-copilot-app", "locator": "Important", "retrievedAt": "2026-10-25T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する仕組み", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Dragon 管理センター: Dragon Copilot などのライセンスと課金を管理する管理者向けツール", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-dragon-copilot-app", "locator": "冒頭", "retrievedAt": "2026-10-25T21:40:00Z" }] },
+            { "text": "価格モデルは定額またはユーザーごと。ユーザーごとは管理センターでライセンスを割り当てる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/plan-dragon-copilot-offer", "locator": "技術的な要件", "retrievedAt": "2026-10-25T21:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "文書作成支援・情報の提示・タスク自動化など、診療ワークフローの効率化に使う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "購入には Azure サブスクリプションと Marketplace 購入の権限が必要（学生・無料クレジット等は不可）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-dragon-copilot-app", "locator": "Requirements / 購入手順", "retrievedAt": "2026-10-25T21:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dragon-copilot", "term": "Dragon Copilot", "type": "product", "oneLine": { "text": "録音から臨床医のレビュー用のドラフト臨床出力を作成する AI アシスタント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-dragon-copilot-app", "locator": "冒頭", "retrievedAt": "2026-10-25T21:40:00Z" }] } },
+        { "termKey": "ai-apps-agents", "term": "AI アプリとエージェント", "type": "feature", "oneLine": { "text": "AI を使ったアプリを臨床ワークフローに統合し、Dragon Copilot の機能を拡張する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-dragon-copilot-app", "locator": "AI アプリとエージェントとは", "retrievedAt": "2026-10-25T21:40:00Z" }] } },
+        { "termKey": "dragon-admin-center", "term": "Dragon 管理センター", "type": "product", "oneLine": { "text": "医療管理者が Dragon Copilot 等のライセンスと課金を管理するための管理ポータル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-dragon-copilot-app", "locator": "冒頭", "retrievedAt": "2026-10-25T21:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-25T21:40:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=557775",
+        "learn": [
+          { "title": "Azure ポータルで Marketplace で Dragon Copilot オファーを購入する", "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-dragon-copilot-app", "locale": "ja-jp" },
+          { "title": "Dragon Copilot オファーを計画する", "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/plan-dragon-copilot-offer", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分の組織は対象ですか？",
+            "a": "Dragon Copilot Physician Apps and Agents の提供は米国のお客様向けです。Dragon Copilot のライセンスと Microsoft 顧客契約も必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/plan-dragon-copilot-offer", "locator": "市場の可用性 / お客様の前提条件", "retrievedAt": "2026-10-25T21:40:00Z" }]
+          },
+          {
+            "q": "購入後に何をすればよいですか？",
+            "a": "[今すぐアカウントを構成] から Dragon 管理センターで構成し、アプリをデプロイします。30 日以内に構成しないとサブスクリプションは自動削除されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-dragon-copilot-app", "locator": "購入手順", "retrievedAt": "2026-10-25T21:40:00Z" }]
+          },
+          {
+            "q": "購入をキャンセルできますか？",
+            "a": "顧客はいつでもオファーをキャンセルできます。ただし複数年契約期間や保留中の支払いがあるサブスクリプションは取り消せません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/plan-dragon-copilot-offer", "locator": "技術的な要件", "retrievedAt": "2026-10-25T21:40:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
