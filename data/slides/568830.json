@@ -1,0 +1,112 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568830"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T21:55:00Z"
+  },
+  "slides": [
+    {
+      "key": "568830",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "AKS のコントロール プレーン メトリックが Managed Prometheus で GA",
+        "subtitleJa": "API サーバーや etcd などの状態を、Azure Monitor のマネージド Prometheus で観測できます",
+        "en": "Generally Available: Control plane metrics collection for AKS with Managed Prometheus"
+      },
+      "meta": {
+        "publishedJst": "2026-08-14",
+        "modifiedJst": "2026-08-14",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Kubernetes Service (AKS)", "Azure Monitor"],
+        "categories": ["compute", "containers", "ops-governance", "devtools"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**AKS クラスターの運用・プラットフォーム チーム**（Managed Prometheus を使う／検討している方）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "コントロール プレーンとワークロード／スケーリングの相互作用を、メトリックで継続的に把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "コントロール プレーンの可観測性が必要なら、対象クラスターで有効化を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Managed Prometheus で、コントロール プレーンの重要コンポーネントのメトリックを収集", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "冒頭", "retrievedAt": "2026-10-25T21:55:00Z" }] },
+            { "text": "対象: API サーバー / etcd / スケジューラ / コントローラー マネージャー / 自動スケーラー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "コントロール プレーン メトリックをカスタマイズする", "retrievedAt": "2026-10-25T21:55:00Z" }] },
+            { "text": "メトリックはクラスターのリージョンの Azure Monitor ワークスペースに保存", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "コントロール プレーンのメトリックのクエリを実行する", "retrievedAt": "2026-10-25T21:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "新規: az aks create に --enable-control-plane-metrics と --enable-azure-monitor-metrics を指定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "新しい AKS クラスター", "retrievedAt": "2026-10-25T21:55:00Z" }] },
+            { "text": "既存（Managed Prometheus 有効済み）: az aks update --enable-control-plane-metrics", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "既存の AKS クラスター", "retrievedAt": "2026-10-25T21:55:00Z" }] },
+            { "text": "ワークスペースの Prometheus エクスプローラーや Managed Grafana でクエリ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "コントロール プレーンのメトリックのクエリを実行する", "retrievedAt": "2026-10-25T21:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Managed Prometheus のみ対応。マネージド ID 認証が必要。Private Link は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "前提条件と制限事項", "retrievedAt": "2026-10-25T21:55:00Z" }] },
+            { "text": "カスタマイズできるのは既定の ama-metrics-settings-configmap のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "前提条件と制限事項", "retrievedAt": "2026-10-25T21:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "プラットフォーム メトリック（API サーバー・etcd）は無料で自動収集、メトリック エクスプローラーで分析", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "コントロール プレーン プラットフォームのメトリック", "retrievedAt": "2026-10-25T21:55:00Z" }] },
+            { "text": "本機能は Prometheus 側で収集。既定で有効なのは API サーバーと etcd", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "コントロール プレーン メトリックをカスタマイズする", "retrievedAt": "2026-10-25T21:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "スケーリングや自動化がコントロール プレーンに与える影響の把握に活用", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "他のターゲットは既定で無効。configmap で有効化し、最小インジェストで量を抑制可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "インジェスト プロファイルをカスタマイズする", "retrievedAt": "2026-10-25T21:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aks", "term": "AKS", "type": "product", "oneLine": { "text": "Azure で Kubernetes クラスターを実行・管理するマネージド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "冒頭", "retrievedAt": "2026-10-25T21:55:00Z" }] } },
+        { "termKey": "control-plane", "term": "コントロール プレーン", "type": "term", "oneLine": { "text": "API サーバーやスケジューラなど、AKS クラスターを制御する重要コンポーネント群。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "冒頭", "retrievedAt": "2026-10-25T21:55:00Z" }] } },
+        { "termKey": "managed-prometheus", "term": "Managed Prometheus", "type": "feature", "oneLine": { "text": "Prometheus メトリックを、サーバー管理なしで収集・分析できる Azure Monitor のマネージド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/essentials/prometheus-metrics-overview", "locator": "冒頭", "retrievedAt": "2026-10-25T21:55:00Z" }] } },
+        { "termKey": "azure-monitor-workspace", "term": "Azure Monitor ワークスペース", "type": "term", "oneLine": { "text": "Prometheus メトリックの保存先となるワークスペース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/essentials/prometheus-metrics-overview", "locator": "データ ストレージ", "retrievedAt": "2026-10-25T21:55:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-25T21:55:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "AKS は全リージョンで提供される基盤サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-25T21:55:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568830",
+        "learn": [
+          { "title": "Azure Kubernetes Service のコントロール プレーン メトリックを監視する", "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locale": "ja-jp" },
+          { "title": "Azure Monitor と Prometheus", "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/essentials/prometheus-metrics-overview", "locale": "ja-jp" },
+          { "title": "Azure Kubernetes Service 監視データ リファレンス", "url": "https://learn.microsoft.com/ja-jp/azure/aks/monitor-aks-reference", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "利用の前提条件は？", "a": "Managed Prometheus とマネージド ID 認証が必要です。Azure Private Link は非対応です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor" }] },
+          { "q": "費用はかかりますか？", "a": "Managed Prometheus は収集データのインジェストとクエリに基づく課金です。API サーバー等のプラットフォーム メトリックは無料です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/essentials/prometheus-metrics-overview" }, { "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor" }] },
+          { "q": "既存クラスターで有効にするには？", "a": "Managed Prometheus 有効済みなら、az aks update に --enable-control-plane-metrics を指定します。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor" }] },
+          { "q": "日本リージョンで使えますか？", "a": "AKS は全リージョンで提供される基盤サービスに分類されています。", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
