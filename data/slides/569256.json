@@ -1,0 +1,110 @@
+{
+  "$schema": "../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569256"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-25T22:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "569256",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Firewall Premium の IDPS 性能が約 2.2 倍に（GA）",
+        "subtitleJa": "TLS 検査＋IDPS（拒否）で最大 22 Gbps、単一 TCP 接続は最大 600 Mbps",
+        "en": "Generally Available: 2.2X IDPS performance optimization in Azure Firewall"
+      },
+      "meta": {
+        "publishedJst": "2026-08-12",
+        "modifiedJst": "2026-08-12",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Firewall Premium** で TLS 検査 / IDPS を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "IDPS 有効時のスループットと単一接続の上限が向上する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "設定変更は不要。大量通信の環境は性能を再確認", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": { "text": "TLS 検査＋IDPS（拒否）は最大 10 Gbps、IDPS 有効時の単一 TCP 接続は最大 300 Mbps", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": {
+          "text": "TLS 検査＋IDPS（拒否）で最大 22 Gbps、IDPS（アラート / 拒否）有効時の単一 TCP 接続は最大 600 Mbps",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/firewall-performance", "locator": "パフォーマンス データ / 単一接続のスループット", "retrievedAt": "2026-10-25T22:30:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "TLS 検査: 暗号化通信を復号して検査し、再暗号化して宛先へ送る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/premium-features", "locator": "TLS インスペクション", "retrievedAt": "2026-10-25T22:30:00Z" }] },
+            { "text": "IDPS: シグネチャで通信を監視し、検出・記録・必要ならブロックする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/premium-features", "locator": "IDPS", "retrievedAt": "2026-10-25T22:30:00Z" }] },
+            { "text": "この 2 機能は Premium のファイアウォール性能に影響し得る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/firewall-performance", "locator": "Azure Firewall Premium", "retrievedAt": "2026-10-25T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "利用の始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Premium ポリシーの IDPS モードを「アラート」または「アラートと拒否」にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/premium-features", "locator": "IDPS シグネチャ規則", "retrievedAt": "2026-10-25T22:30:00Z" }] },
+            { "text": "HTTPS の検査にはアプリケーション ルールで TLS 検査を有効にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/premium-features", "locator": "URL フィルタリング", "retrievedAt": "2026-10-25T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "掲載値は最大自動スケール 20 インスタンス時。プリスケーリングで最大 50", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/firewall-performance", "locator": "パフォーマンス データ", "retrievedAt": "2026-10-25T22:30:00Z" }] },
+            { "text": "IDPS バイパス リストはスループット向上を目的としない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/premium-features", "locator": "IDPS", "retrievedAt": "2026-10-25T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "他の SKU との比較", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "全体帯域: Premium（TLS・IDPS 無効）最大 100 Gbps / Standard 最大 30 Gbps", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/firewall-performance", "locator": "パフォーマンス データ", "retrievedAt": "2026-10-25T22:30:00Z" }] },
+            { "text": "単一 TCP 接続: Standard 最大 1.5 Gbps / Premium 最大 9 Gbps", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/firewall-performance", "locator": "単一接続のスループット", "retrievedAt": "2026-10-25T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "暗号化通信も含めた脅威対策を、高帯域の環境で運用する場面", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "性能は環境に左右される。本番前にテスト環境で評価する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/firewall-performance", "locator": "パフォーマンス テスト", "retrievedAt": "2026-10-25T22:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-firewall", "term": "Azure Firewall", "type": "product", "oneLine": { "text": "Azure Virtual Network リソースを保護する、クラウドベースのマネージド ネットワーク セキュリティ サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/features-by-sku", "locator": "冒頭", "retrievedAt": "2026-10-25T22:30:00Z" }] } },
+        { "termKey": "firewall-premium", "term": "Premium SKU", "type": "feature", "oneLine": { "text": "機密性が高く規制された環境向けの、次世代のファイアウォール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/firewall-performance", "locator": "Azure Firewall Premium", "retrievedAt": "2026-10-25T22:30:00Z" }] } },
+        { "termKey": "tls-inspection", "term": "TLS 検査", "type": "feature", "oneLine": { "text": "暗号化された通信を復号して検査し、再暗号化して送信する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/premium-features", "locator": "TLS インスペクション", "retrievedAt": "2026-10-25T22:30:00Z" }] } },
+        { "termKey": "idps", "term": "IDPS", "type": "feature", "oneLine": { "text": "ネットワークの悪意ある活動を監視し、記録・報告し、必要に応じてブロックする仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/premium-features", "locator": "IDPS", "retrievedAt": "2026-10-25T22:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-25T22:30:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569256",
+        "learn": [
+          { "title": "Azure Firewall のパフォーマンス", "url": "https://learn.microsoft.com/ja-jp/azure/firewall/firewall-performance", "locale": "ja-jp" },
+          { "title": "Azure Firewall Premium 機能の実装ガイド", "url": "https://learn.microsoft.com/ja-jp/azure/firewall/premium-features", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "追加の設定は必要ですか？", "a": "この更新に設定変更の記載はありません。Premium のパフォーマンス ブーストは全 Premium デプロイで既定で有効です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/firewall-performance" }] },
+          { "q": "Standard SKU も対象ですか？", "a": "対象は Premium の TLS 検査 / IDPS です。Standard の単一 TCP 接続は最大 1.5 Gbps と記載されています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/firewall-performance" }] },
+          { "q": "IDPS はどの通信に適用できますか？", "a": "インバウンド、スポーク間（East-West）、アウトバウンド（オンプレミス間を含む）に適用できます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/premium-features" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
