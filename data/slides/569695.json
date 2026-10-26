@@ -1,0 +1,382 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": [
+      "569695"
+    ],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-21T22:31:00Z"
+  },
+  "slides": [
+    {
+      "key": "569695",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure SRE Agent の VNet 統合が一般提供（GA）に",
+        "subtitleJa": "NSG・プライベート DNS・ファイアウォールの制御下で、エージェントの送信通信を運用できます",
+        "en": "Generally Available: Azure SRE Agent VNet Integration"
+      },
+      "meta": {
+        "publishedJst": "2026-08-27",
+        "availability": [
+          {
+            "rawRing": "General Availability",
+            "year": 2026,
+            "month": "August"
+          }
+        ],
+        "status": "Launched",
+        "products": [
+          "Azure SRE Agent"
+        ],
+        "categories": [
+          "ai",
+          "security"
+        ],
+        "importance": "high"
+      },
+      "audience": {
+        "who": {
+          "text": "**Azure SRE Agent をセキュリティ要件の厳しい環境で使いたい方**",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "既存のネットワーク境界を変えずに、プライベート リソースへ到達できる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "閉域環境で SRE Agent を使う場合に検討",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "Azure VNet モードでは、プラットフォーム以外の送信トラフィックが VNet 内の委任サブネットを経由する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+                  "locator": "Azure VNet モードのしくみ",
+                  "retrievedAt": "2026-10-21T22:35:00Z"
+                }
+              ]
+            },
+            {
+              "text": "NSG ルール・ファイアウォール ポリシー・カスタム DNS・ネットワーク ログが適用される",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+                  "locator": "Azure VNet モードのしくみ",
+                  "retrievedAt": "2026-10-21T22:35:00Z"
+                }
+              ]
+            },
+            {
+              "text": "ルートが許せば、ExpressRoute / VPN 経由のオンプレミスにも到達できる",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+                  "locator": "Azure VNet モードのしくみ",
+                  "retrievedAt": "2026-10-21T22:35:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "設定の流れ（Azure portal）",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "設定 → Workspace 構成 → Network で、エグレス モードに Azure VNet を選択",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+                  "locator": "Azure VNet モードを設定する",
+                  "retrievedAt": "2026-10-21T22:35:00Z"
+                }
+              ]
+            },
+            {
+              "text": "[サブネットを参照] で要件を満たすサブネットを選んで保存し、代表的なインシデントで動作を確認",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+                  "locator": "Azure VNet モードを設定する",
+                  "retrievedAt": "2026-10-21T22:35:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "専用サブネット（/27 以上、Microsoft.App/environments に委任、エージェントと同一リージョン）が必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+                  "locator": "サブネットの要件",
+                  "retrievedAt": "2026-10-21T22:35:00Z"
+                }
+              ]
+            },
+            {
+              "text": "制御対象は送信のみ。受信接続は非対応で、コネクタ通信は VNet を経由しない",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+                  "locator": "制限事項",
+                  "retrievedAt": "2026-10-21T22:35:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "ネットワーク制御モードの違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "無制限（既定）: 制限なし / 制限付き: URL 許可リストで制御 / Azure VNet: VNet 経由で制御",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+                  "locator": "ネットワーク制御モード",
+                  "retrievedAt": "2026-10-21T22:35:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Azure VNet は、監査やエグレス制御が必要な運用環境向けとして案内されている",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+                  "locator": "ネットワーク制御モード",
+                  "retrievedAt": "2026-10-21T22:35:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "使いどころ・注意",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "機微データを扱う本番環境で、インシデント調査時の送信通信を監査したい場合",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+                  "locator": "ワークロードのネットワーク制御モードを選択する",
+                  "retrievedAt": "2026-10-21T22:35:00Z"
+                }
+              ]
+            },
+            {
+              "text": "パッケージ・コード リポジトリ・MCP は、切り替えか FQDN ルールで到達性を確保する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+                  "locator": "Azure SRE エージェント インフラ ネットワーク",
+                  "retrievedAt": "2026-10-21T22:35:00Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-sre-agent",
+          "term": "Azure SRE Agent",
+          "type": "product",
+          "oneLine": {
+            "text": "インシデントの調査や修復を支援する、Azure のエージェント サービス。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "termKey": "vnet",
+          "term": "VNet 統合",
+          "type": "feature",
+          "oneLine": {
+            "text": "エージェントの送信トラフィックを Azure Virtual Network 経由にする機能。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+                "locator": "冒頭",
+                "retrievedAt": "2026-10-21T22:35:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "nsg",
+          "term": "NSG",
+          "type": "term",
+          "oneLine": {
+            "text": "ネットワーク セキュリティ グループ。通信を許可・拒否するルールの集合。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "termKey": "private-endpoint",
+          "term": "プライベート エンドポイント",
+          "type": "term",
+          "oneLine": {
+            "text": "Azure サービスへ VNet 内のプライベート IP で接続するための窓口。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "termKey": "label-ga",
+          "term": "GA（一般提供）",
+          "type": "label",
+          "oneLine": {
+            "text": "機能が完全にリリースされ、本番利用でサポートされる段階。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure",
+                "locator": "General availability (GA)",
+                "retrievedAt": "2026-10-21T22:35:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure SRE Agent の提供リージョンに Japan East / Japan West が含まれる",
+        "evidence": [
+          {
+            "url": "https://learn.microsoft.com/azure/sre-agent/supported-regions",
+            "locator": "Available regions",
+            "retrievedAt": "2026-10-21T22:35:00Z"
+          }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "VNet 統合を使うために必要な前提は？",
+            "a": "同一リージョンの専用サブネット（/27 以上、Microsoft.App/environments に委任）が必要です。他サービスとは共有できません。",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration"
+              }
+            ]
+          },
+          {
+            "q": "受信（インバウンド）通信も制御できますか？",
+            "a": "いいえ。送信（エグレス）のみが対象で、プライベート ネットワークからエージェントへの受信接続は非対応です。",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration"
+              }
+            ]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "提供リージョン一覧に Japan East と Japan West が含まれています。",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/azure/sre-agent/supported-regions"
+              }
+            ]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569695",
+        "learn": [
+          {
+            "title": "Azure SRE Agent ネットワーク統合",
+            "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "render": {
+        "continuationRequired": false
+      }
+    }
+  ]
+}
