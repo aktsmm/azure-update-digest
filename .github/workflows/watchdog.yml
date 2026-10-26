@@ -106,3 +106,18 @@ jobs:
               fi
             fi
           done
+      - name: Close stale agent failure issues once a later run succeeded
+        run: |
+          # "[aw] ... failed" issues are opened by the agentic workflows and never closed by themselves.
+          # A later successful run of the same workflow means the failure is no longer current.
+          for pair in "Azure Update Digest — one-update slide JSON|slide.lock.yml" "Azure Update Digest — summaries and related documents|summarize.lock.yml"; do
+            title=${pair%%|*}; wf=${pair##*|}
+            last=$(gh run list --workflow "$wf" --status success --limit 1 --json createdAt -q '.[0].createdAt // ""')
+            [ -z "$last" ] && continue
+            gh issue list --state open --limit 50 --search "[aw] $title failed in:title" --json number,createdAt \
+              -q ".[] | select(.createdAt < \"$last\") | .number" |
+            while read -r n; do
+              echo "close #$n (a later $wf run succeeded at $last)"
+              gh issue close "$n" --comment "その後の実行が成功しているため（$last）、自動で閉じます。再発した場合は新しい課題が作られます。" || true
+            done
+          done
