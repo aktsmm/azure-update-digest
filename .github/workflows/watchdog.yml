@@ -3,6 +3,7 @@ name: Watchdog
 # No AI. Keeps the pipeline moving when GitHub itself gets stuck:
 #  - cancels agent runs that hang (a run stuck in "Checkout" once blocked the serialized slide queue for hours)
 #  - re-runs the latest Pages deploy once when it failed (deploys collide when two finish close together)
+#  - retries or reports generated PRs that auto-merge keeps skipping (stuck for > 12 h), so a failing PR never sits unnoticed
 on:
   schedule:
     # twice a day (05:41 and 17:41 JST = 20:41 and 08:41 UTC); GitHub scheduled runs are often delayed or dropped,
@@ -12,7 +13,9 @@ on:
 
 permissions:
   actions: write
-  contents: read
+  contents: write
+  pull-requests: write
+  issues: write
 
 concurrency:
   group: watchdog
@@ -77,3 +80,29 @@ jobs:
             echo "daily collection is overdue; starting it"
             gh workflow run collect-daily.yml
           fi
+      - name: Retry or report generated PRs that auto-merge keeps skipping
+        run: |
+          # Auto-merge skips a PR that fails validation and still ends "success", so a stuck PR is otherwise invisible.
+          # A slide PR open > 12 h is closed and its slide regenerated once more (max 2 failed PRs per update);
+          # after that, and for any other stuck generated PR, a single issue is opened for a human.
+          old=$(date -u -d '12 hours ago' +%Y-%m-%dT%H:%M:%SZ)
+          gh pr list --state open --limit 100 --json number,headRefName,createdAt,title \
+            -q ".[] | select((.headRefName | test(\"^(slides|summaries)[/-]\")) and .createdAt < \"$old\") | \"\(.number)|\(.headRefName)|\(.title)\"" |
+          while IFS='|' read -r n ref title; do
+            echo "stuck: PR #$n ($ref)"
+            id=""
+            case "$ref" in slides[/-]*) id=${ref#slides[/-]}; id=${id%%-*};; esac
+            failed=0
+            if [ -n "$id" ]; then
+              failed=$(gh pr list --state closed --search "Add slide for update $id in:title" --json mergedAt -q '[.[] | select(.mergedAt == null)] | length')
+            fi
+            if [ -n "$id" ] && [ "${failed:-0}" -lt 2 ]; then
+              gh pr close "$n" --delete-branch --comment "12 時間以上マージされなかったため（検証失敗の可能性）、閉じてスライドを 1 回作り直します（失敗 ${failed} 回目）。" || true
+              gh workflow run slide-dispatch.yml -f ids="$id" || true
+            else
+              marker="Stuck generated PR #$n"
+              if [ -z "$(gh issue list --state open --search "$marker in:title" --json number -q '.[0].number')" ]; then
+                gh issue create --title "$marker" --body "PR #$n（$title）が 12 時間以上マージされていません。自動マージの検証で落ちている可能性があります。ログ: auto-merge の実行結果を確認してください。自動での作り直しは上限に達したか対象外です。" || true
+              fi
+            fi
+          done
