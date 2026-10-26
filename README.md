@@ -1,5 +1,7 @@
 # Azure Update Digest
 
+**公開サイト（GitHub Pages）: [https://aktsmm.github.io/azure-update-digest/](https://aktsmm.github.io/azure-update-digest/)**
+
 Azure の更新情報（[Microsoft Release Communications](https://www.microsoft.com/releasecommunications) = MRC）を収集・保存・正規化し、日本語要約付きの静的サイトとして公開します。収集・要約・公開はすべて GitHub Actions 上で動き、ローカル実行は不要です。
 
 - 範囲: 収集 / 保存 / 正規化 / 日本語要約・日本語タイトル / 一覧・検索・絞り込み（期間・カテゴリ・種類）・アーカイブ / 定期更新 / **1 更新 1 枚のスライド JSON・PDF・PowerPoint（.pptx）** / 静的 JSON API / JSON・PDF・PPTX のダウンロード（更新ごとのチェックで必要な分だけ選べます。PPTX のスピーカーノートには想定問答が入ります）
