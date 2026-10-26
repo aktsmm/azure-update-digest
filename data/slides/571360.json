@@ -4,7 +4,9 @@
   "selection": {
     "mode": "ids",
     "basis": "created",
-    "ids": ["571360"],
+    "ids": [
+      "571360"
+    ],
     "coverage": "complete",
     "snapshotAt": "2026-10-25T20:45:19Z"
   },
@@ -21,56 +23,181 @@
       },
       "meta": {
         "publishedJst": "2026-09-15",
-        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "October" }],
+        "availability": [
+          {
+            "rawRing": "Effective",
+            "year": 2026,
+            "month": "October"
+          }
+        ],
         "status": null,
-        "products": ["Azure Virtual Desktop"],
-        "categories": ["compute"],
+        "products": [
+          "Azure Virtual Desktop"
+        ],
+        "categories": [
+          "compute"
+        ],
         "importance": "normal"
       },
       "audience": {
-        "who": { "text": "Windows App で Azure Virtual Desktop に接続し、端末にネットワーク制御を適用している**ネットワーク管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-        "change": { "text": "許可しないと、サインインや接続に失敗する可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-        "changeNature": "risk"
+        "who": {
+          "text": "Windows App で Azure Virtual Desktop に接続し、端末にネットワーク制御を適用している**ネットワーク管理者**",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "許可しないと、サインインや接続に失敗する可能性がある",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "breaking"
       },
       "action": {
         "required": "yes",
-        "summary": { "text": "2026年10月初旬までに、3 つの FQDN への 443/TCP の送信 HTTPS を許可する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-        "deadline": { "month": "2026-10", "precision": "month" }
+        "summary": {
+          "text": "2026年10月初旬までに、3 つの FQDN への 443/TCP の送信 HTTPS を許可する",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "deadline": {
+          "month": "2026-10",
+          "precision": "month"
+        }
       },
       "panels": [
         {
-          "id": "scope", "heading": "適用範囲（許可する FQDN）", "availability": "present", "priority": "core",
+          "id": "scope",
+          "heading": "適用範囲（許可する FQDN）",
+          "availability": "present",
+          "priority": "core",
           "items": [
-            { "text": "*.windows.cloud.microsoft（一般的なクラウド サービス トラフィック）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "*.service.windows.cloud.microsoft（最適化が必要なサービス トラフィック）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "*.windows.static.microsoft（静的コンテンツ、インストール、更新資産）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            {
+              "text": "*.windows.cloud.microsoft（一般的なクラウド サービス トラフィック）",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "*.service.windows.cloud.microsoft（最適化が必要なサービス トラフィック）",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "*.windows.static.microsoft（静的コンテンツ、インストール、更新資産）",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            }
           ]
         },
         {
-          "id": "permissions", "heading": "知っておくべき点", "availability": "present", "priority": "core",
+          "id": "permissions",
+          "heading": "知っておくべき点",
+          "availability": "present",
+          "priority": "core",
           "items": [
-            { "text": "3 つとも TCP 443 で、Learn のクライアント向け一覧に掲載されている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-desktop/required-fqdn-endpoint", "locator": "リモート デスクトップ クライアントのデバイス", "retrievedAt": "2026-10-25T20:50:00Z" }] },
-            { "text": "クラウド側のドメイン更新とは別の、Windows App のクライアント側の変更", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "ブロックはサポートされず、サービス機能に影響する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-desktop/required-fqdn-endpoint", "locator": "リモート デスクトップ クライアントのデバイス", "retrievedAt": "2026-10-25T20:50:00Z" }] }
+            {
+              "text": "3 つとも TCP 443 で、Learn のクライアント向け一覧に掲載されている",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/virtual-desktop/required-fqdn-endpoint",
+                  "locator": "リモート デスクトップ クライアントのデバイス",
+                  "retrievedAt": "2026-10-25T20:50:00Z"
+                }
+              ]
+            },
+            {
+              "text": "クラウド側のドメイン更新とは別の、Windows App のクライアント側の変更",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "ブロックはサポートされず、サービス機能に影響する",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/virtual-desktop/required-fqdn-endpoint",
+                  "locator": "リモート デスクトップ クライアントのデバイス",
+                  "retrievedAt": "2026-10-25T20:50:00Z"
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "id": "impact-check",
+          "heading": "影響・アクション",
+          "availability": "present",
+          "priority": "detail",
           "items": [
-            { "text": "FW・プロキシ・VPN・DNS フィルター・SWG の許可設定を確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "TLS インスペクションで接続が妨げられないか確認し、ヘルプ デスクへ周知する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            {
+              "text": "FW・プロキシ・VPN・DNS フィルター・SWG の許可設定を確認する",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            },
+            {
+              "text": "TLS インスペクションで接続が妨げられないか確認し、ヘルプ デスクへ周知する",
+              "origin": "mrc",
+              "assertion": "fact",
+              "verification": "source-only"
+            }
           ]
         }
       ],
       "glossary": [
-        { "termKey": "azure-virtual-desktop", "term": "Azure Virtual Desktop", "type": "product", "oneLine": { "text": "Azure 上で仮想デスクトップとアプリを提供するサービス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
-        { "termKey": "windows-app", "term": "Windows App", "type": "product", "oneLine": { "text": "Azure Virtual Desktop に接続するためのクライアント アプリ。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
-        { "termKey": "fqdn", "term": "FQDN", "type": "term", "oneLine": { "text": "ホスト名とドメイン名をすべて含む、完全修飾ドメイン名。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+        {
+          "termKey": "azure-virtual-desktop",
+          "term": "Azure Virtual Desktop",
+          "type": "product",
+          "oneLine": {
+            "text": "Azure 上で仮想デスクトップとアプリを提供するサービス。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "termKey": "windows-app",
+          "term": "Windows App",
+          "type": "product",
+          "oneLine": {
+            "text": "Azure Virtual Desktop に接続するためのクライアント アプリ。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        },
+        {
+          "termKey": "fqdn",
+          "term": "FQDN",
+          "type": "term",
+          "oneLine": {
+            "text": "ホスト名とドメイン名をすべて含む、完全修飾ドメイン名。",
+            "origin": "mrc",
+            "assertion": "fact",
+            "verification": "source-only"
+          }
+        }
       ],
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=571360",
         "learn": [
-          { "title": "Azure Virtual Desktop に必要な FQDN とエンドポイント", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-desktop/required-fqdn-endpoint", "locale": "ja-jp" }
+          {
+            "title": "Azure Virtual Desktop に必要な FQDN とエンドポイント",
+            "url": "https://learn.microsoft.com/ja-jp/azure/virtual-desktop/required-fqdn-endpoint",
+            "locale": "ja-jp"
+          }
         ]
       },
       "speakerNotes": {
@@ -78,16 +205,28 @@
           {
             "q": "いつから新しいエンドポイントが使われますか？",
             "a": "2026年10月初旬から Windows App が使い始めます。それまでに許可設定を済ませる必要があります。",
-            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=571360" }]
+            "evidence": [
+              {
+                "url": "https://azure.microsoft.com/updates?id=571360"
+              }
+            ]
           },
           {
             "q": "許可する通信のポートとプロトコルは何ですか？",
             "a": "3 つの FQDN すべてで TCP 443 の送信通信です。",
-            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-desktop/required-fqdn-endpoint", "locator": "リモート デスクトップ クライアントのデバイス", "retrievedAt": "2026-10-25T20:50:00Z" }]
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/virtual-desktop/required-fqdn-endpoint",
+                "locator": "リモート デスクトップ クライアントのデバイス",
+                "retrievedAt": "2026-10-25T20:50:00Z"
+              }
+            ]
           }
         ]
       },
-      "render": { "continuationRequired": false }
+      "render": {
+        "continuationRequired": false
+      }
     }
   ]
 }
