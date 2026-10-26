@@ -46,7 +46,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           merged=false
-          while read -r n sha; do
+          while read -r n sha ref; do
             echo "== PR #$n @ $sha"
             files=$(gh pr view "$n" --json files -q '.files[].path')
             if [ "$(echo "$files" | wc -l)" -ne 1 ] || ! echo "$files" | grep -Eq '^data/slides/[0-9]{1,12}\.json$'; then
@@ -58,13 +58,26 @@ jobs:
             git reset -q --hard origin/main
             git checkout -q FETCH_HEAD -- "$f"
             rm -rf .slide-check && mkdir .slide-check && cp "$f" ".slide-check/$id.json"
+            # the agent cannot run the validator, so mechanical vocabulary slips are repaired here (trusted code from main) and pushed to the PR branch
+            npx tsx src/cli/repair-slide.ts .slide-check
+            if ! cmp -s "$f" ".slide-check/$id.json"; then
+              git reset -q --hard origin/main
+              git checkout -q -B slide-repair FETCH_HEAD
+              cp ".slide-check/$id.json" "$f"
+              git add "$f"
+              git commit -q -m "fix(slide): repair schema vocabulary automatically"
+              if ! git push -q origin "HEAD:refs/heads/$ref"; then echo "skip: could not push the repair"; git reset -q --hard origin/main; continue; fi
+              sha=$(git rev-parse HEAD)
+              git reset -q --hard origin/main
+              sleep 5
+            fi
             if ! npx tsx src/cli/validate-slides.ts .slide-check; then echo "skip: validation failed"; git reset -q --hard origin/main; continue; fi
             if ! npx tsx src/cli/render-pdf.ts --dir .slide-check --ids "$id" --out .slide-check/out; then echo "skip: render check failed"; git reset -q --hard origin/main; continue; fi
             git reset -q --hard origin/main
             rm -rf .slide-check
             gh pr merge "$n" --squash --match-head-commit "$sha" && merged=true
           done < <(gh pr list --state open --limit 100 --base "${{ github.event.repository.default_branch }}" --json number,headRefName,headRefOid,labels \
-              -q '.[] | select((.headRefName | test("^slides[/-]")) and (.labels | map(.name) | index("data"))) | "\(.number) \(.headRefOid)"')
+              -q '.[] | select((.headRefName | test("^slides[/-]")) and (.labels | map(.name) | index("data"))) | "\(.number) \(.headRefOid) \(.headRefName)"')
           echo "merged=$merged" >> "$GITHUB_OUTPUT"
 
   deploy:
