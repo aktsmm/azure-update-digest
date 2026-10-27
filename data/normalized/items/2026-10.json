@@ -3258,6 +3258,81 @@
         "preview": null,
         "privatePreview": null
       },
+      "canonicalKey": "577782",
+      "categories": [
+        "networking",
+        "ops-governance"
+      ],
+      "created": "2026-10-26T16:02:05.593558Z",
+      "createdJst": "2026-10-27",
+      "description": "Azure Network Watcher VNet flow logs filtering is now generally available, enabling you to control which\nnetwork traffic flows are logged based on specific criteria such as IP\naddresses, ports, protocols, encryption state, flow state, and traffic direction. With this capability, you\ncan focus logging on the traffic that matters most for monitoring,\ntroubleshooting, security, compliance, and network optimization. Filtering\nhelps reduce log volume by capturing only relevant flows, which can lower\nstorage costs and make analysis easier by reducing noise. This feature is now\naccessible through the Azure portal, in addition to PowerShell, making it\neasier to configure and manage filtering for VNet flow logs directly from the\nportal. Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "4807a4b8b44b50f5d60555d0398ee06c11aed7c709d250553e0e5abb14e4fe2c",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-27T00:14:52.720Z",
+          "fingerprint": "104db95a20944cd2e20ced8b8089a309484ab9a6dc8fa54dc6dedf3a431c6103",
+          "modifiedAfter": "2026-10-26T16:02:05.593558Z",
+          "modifiedBefore": null,
+          "rawRef": "20261027T001452720Z_list_sweep_o0.json#577782"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-27T00:14:58.245Z",
+          "fingerprint": "4807a4b8b44b50f5d60555d0398ee06c11aed7c709d250553e0e5abb14e4fe2c",
+          "modifiedAfter": "2026-10-26T16:02:05.593558Z",
+          "modifiedBefore": "2026-10-26T16:02:05.593558Z",
+          "rawRef": "20261027T001458245Z_detail_577782.json#577782"
+        }
+      ],
+      "ids": [
+        "577782"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "577782",
+      "modified": "2026-10-26T16:02:05.593558Z",
+      "modifiedJst": "2026-10-27",
+      "productCategories": [
+        "Management and governance",
+        "Networking"
+      ],
+      "products": [
+        "Network Watcher"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577782",
+      "status": "Launched",
+      "tags": [
+        "Features"
+      ],
+      "title": "Generally Available: Network Watcher VNet flow logs filtering"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
       "canonicalKey": "577963",
       "categories": [
         "storage",

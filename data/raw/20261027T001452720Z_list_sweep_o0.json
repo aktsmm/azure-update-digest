@@ -1,0 +1,47 @@
+{
+  "args": {
+    "filter": "modified ge 2026-10-24T23:01:56Z and modified lt 2026-10-27T00:14:52Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-27T00:14:52.720Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577782",
+        "created": "2026-10-26T16:02:05.593558Z",
+        "description": "Azure Network Watcher VNet flow logs filtering is now generally available, enabling you to control which\nnetwork traffic flows are logged based on specific criteria such as IP\naddresses, ports, protoc...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "577782",
+        "modified": "2026-10-26T16:02:05.593558Z",
+        "productCategories": [
+          "Management and governance",
+          "Networking"
+        ],
+        "products": [
+          "Network Watcher"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Network Watcher VNet flow logs filtering"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 1,
+    "totalCount": 1
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}
