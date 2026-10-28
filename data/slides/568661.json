@@ -1,0 +1,117 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568661"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-28T23:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "568661",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "入れ子構成の機密 VM（cc_v5）シリーズが 2026-09-01 に廃止",
+        "subtitleJa": "DCas / DCads / ECas / ECads_cc_v5 は期限までにサイズ変更が必要。未対応の VM は割り当て解除される",
+        "en": "Retirement: Nested confidential (cc_v5) VMs will be retired on September 1, 2026"
+      },
+      "meta": {
+        "publishedJst": "2026-08-05",
+        "availability": [{ "rawRing": "Retirement", "year": 2026, "month": "September" }],
+        "status": null,
+        "products": ["Virtual Machines"],
+        "categories": ["compute"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "DCas_cc_v5 / DCads_cc_v5 / ECas_cc_v5 / ECads_cc_v5 で**ワークロードを実行している方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "2026-09-01 以降は利用も購入もできず、未変更の VM は割り当て解除される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "期限までに移行先シリーズへ VM のサイズを変更する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2026-09-01", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-08-05", "precision": "day" } },
+        { "label": "容量制限（新規サブスクリプション不可）", "when": { "date": "2026-06-30", "precision": "day" } },
+        { "label": "廃止", "when": { "date": "2026-09-01", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象サイズは DCas_cc_v5、DCads_cc_v5、ECas_cc_v5、ECads_cc_v5", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "2026-06-30 から容量制限が適用され、新しいサブスクリプションは許可されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-28T23:10:00Z" }] },
+            { "text": "廃止日までは SLA、インフラ更新、メンテナンスを受けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "現在のワークロードは Microsoft によって引き続きサポートされますか?", "retrievedAt": "2026-10-28T23:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "汎用：Dasv5 / Dadsv5、Easv5 / Eadsv5 などの標準シリーズ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "移行に推奨されるオプション", "retrievedAt": "2026-10-28T23:10:00Z" }] },
+            { "text": "機密 VM：DCasv6 / ECasv6 または DCesv6（現在プレビュー）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "移行に推奨されるオプション", "retrievedAt": "2026-10-28T23:10:00Z" }] },
+            { "text": "コンテナー化済みなら Confidential Container Instances も候補", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "移行に推奨されるオプション", "retrievedAt": "2026-10-28T23:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "手順・注意点", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "移行先のクォータを確認し、不足なら Azure portal から引き上げを要求する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "クォータの引き上げを確認して要求する", "retrievedAt": "2026-10-28T23:10:00Z" }] },
+            { "text": "サイズ変更で VM は再起動し、動的 IP は解放される（ディスクは影響なし）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "ターゲット VM シリーズにサイズを変更する", "retrievedAt": "2026-10-28T23:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "detail-1", "heading": "価格・課金", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "SKU を切り替えると価格が変わる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "移行は現在の課金にどのように影響しますか?", "retrievedAt": "2026-10-28T23:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "detail-2", "heading": "廃止後の扱い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "廃止日以降、対象 VM は動作を停止し課金も発生しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "廃止日以降はどうなりますか?", "retrievedAt": "2026-10-28T23:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-virtual-machines", "term": "Azure Virtual Machines", "type": "product", "oneLine": { "text": "Azure が提供する、オンデマンドでスケーラブルなコンピューティング リソースの一つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/overview", "locator": "冒頭", "retrievedAt": "2026-10-28T23:10:00Z" }] } },
+        { "termKey": "confidential-vm", "term": "機密 VM", "type": "term", "oneLine": { "text": "アプリケーションと仮想化スタックの間にハードウェアで強制される境界を作る VM。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview", "locator": "冒頭", "retrievedAt": "2026-10-28T23:10:00Z" }] } },
+        { "termKey": "vm-resize", "term": "サイズ変更", "type": "term", "oneLine": { "text": "ポータル、PowerShell、CLI で VM のサイズを切り替える操作。VM は再起動される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "ターゲット VM シリーズにサイズを変更する", "retrievedAt": "2026-10-28T23:10:00Z" }] } },
+        { "termKey": "vm-series-retirement", "term": "シリーズの廃止", "type": "label", "oneLine": { "text": "その日以降、対象シリーズの VM が動作を停止すること。事前の移行が必要。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "この提供終了は、私にどのような影響を与えるでしょうか。", "retrievedAt": "2026-10-28T23:10:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568661",
+        "learn": [
+          { "title": "DCas_cc_v5 / DCads_cc_v5 / ECas_cc_v5 / ECads_cc_v5 シリーズの提供終了", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locale": "ja-jp" },
+          { "title": "Azure の機密 VM について", "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "廃止日を過ぎるとどうなりますか？",
+            "a": "2026-09-01 以降、対象シリーズの VM は動作を停止し、課金も発生しなくなります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement" }]
+          },
+          {
+            "q": "どこへ移行すればよいですか？",
+            "a": "汎用なら Dasv5 / Easv5 系、機密 VM なら DCasv6 / ECasv6 または DCesv6（プレビュー）が案内されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement" }]
+          },
+          {
+            "q": "サイズ変更でディスクや IP は影響を受けますか？",
+            "a": "OS ディスクとデータ ディスクは影響を受けませんが、動的 IP は解放されます。固定したい場合は静的 IP の利用が案内されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
