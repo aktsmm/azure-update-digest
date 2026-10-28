@@ -1,0 +1,124 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568339"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-28T23:34:29Z"
+  },
+  "slides": [
+    {
+      "key": "568339",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure SQL のバックアップに不変性が自動適用（GA）",
+        "subtitleJa": "直近 7 日間のバックアップが既定で保護されます。操作や設定は不要です",
+        "en": "Generally Available: Immutability to the most recent seven days of backups on Azure SQL Database and Azure SQL Managed Instance"
+      },
+      "meta": {
+        "publishedJst": "2026-08-04",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure SQL Database", "Azure SQL Managed Instance"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure SQL Database / SQL Managed Instance** を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "直近 7 日間のバックアップが既定で不変になり、復旧の備えが強化される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": {
+          "text": "設定不要。追加料金もなし（Hyperscale は対象外）",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "この機能が提供するもの", "retrievedAt": "2026-10-28T23:34:29Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "直近 7 日間の PITR バックアップを不変性で保護", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "この機能が提供するもの", "retrievedAt": "2026-10-28T23:34:29Z" }] },
+            { "text": "PITR の保持期間の設定に関わらず適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "この機能が提供するもの", "retrievedAt": "2026-10-28T23:34:29Z" }] },
+            { "text": "Azure Storage の不変ストレージ機能で保護を強制", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "コンプライアンスおよびガバナンスの考慮事項", "retrievedAt": "2026-10-28T23:34:29Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象のデータベースでは既定で有効。オンボーディングや手動設定は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "この機能が提供するもの", "retrievedAt": "2026-10-28T23:34:29Z" }] },
+            { "text": "不変性ポリシーの作成やストレージ アカウントの構成は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "運用上の影響", "retrievedAt": "2026-10-28T23:34:29Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure SQL Database の Hyperscale 層は現在対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "Limitations", "retrievedAt": "2026-10-28T23:34:29Z" }] },
+            { "text": "SQL Managed Instance は Always-up-to-date / SQL Server 2025 ポリシーのみ。SQL Server 2022 ポリシーは対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "Limitations", "retrievedAt": "2026-10-28T23:34:29Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する機能", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "自動バックアップ、特定時点への復元、geo 冗長バックアップ、論理サーバーのソフト削除保護を補完", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "関連する機能", "retrievedAt": "2026-10-28T23:34:29Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ランサムウェア、誤削除、管理資格の漏洩への備えとして重要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "この機能が重要な理由", "retrievedAt": "2026-10-28T23:34:29Z" }] },
+            { "text": "コンプライアンス要件は法務チームと確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "コンプライアンスおよびガバナンスの考慮事項", "retrievedAt": "2026-10-28T23:34:29Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "Azure のマネージド SQL データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-10-28T23:34:29Z" }] } },
+        { "termKey": "azure-sql-managed-instance", "term": "Azure SQL Managed Instance", "type": "product", "oneLine": { "text": "SQL Server との互換性が高い、Azure のマネージド インスタンス サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-10-28T23:34:29Z" }] } },
+        { "termKey": "immutability", "term": "不変性", "type": "term", "oneLine": { "text": "バックアップが変更・削除されないよう保護する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "この機能が重要な理由", "retrievedAt": "2026-10-28T23:34:29Z" }] } },
+        { "termKey": "pitr", "term": "PITR（ポイントインタイム リストア）", "type": "feature", "oneLine": { "text": "過去の特定時点にデータベースを復元する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "関連する機能", "retrievedAt": "2026-10-28T23:34:29Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-28T23:34:29Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure SQL Database / Managed Instance は全リージョンで提供される基盤サービス。機能単位のリージョン制限は確認されていない",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-28T23:34:29Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568339",
+        "learn": [
+          { "title": "Azure SQL Database および Azure SQL Managed Instance 向けの自動バックアップの変更不可", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分の環境は対象ですか？",
+            "a": "Hyperscale 層以外の Azure SQL Database が対象です。SQL Managed Instance は Always-up-to-date または SQL Server 2025 ポリシーのインスタンスが対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql" }]
+          },
+          {
+            "q": "費用や設定は必要ですか？",
+            "a": "追加料金はかかりません。ユーザー設定やオンボーディングも不要で、既定で有効です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Azure SQL Database と Managed Instance は基盤サービスとして全リージョンで提供されます。機能単位の制限は確認されていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
