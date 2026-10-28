@@ -1,0 +1,158 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["578358"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-29T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "578358",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "ストレージ アカウント数の上限が最大 1,000 に（GA）",
+        "subtitleJa": "リージョン・サブスクリプションごとの標準エンドポイント アカウント数を、既定の 250 から引き上げ可能",
+        "en": "Generally Available: Higher limit of Azure Blob Storage accounts per region per subscription"
+      },
+      "meta": {
+        "publishedJst": "2026-10-28",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Blob Storage"],
+        "categories": ["storage", "ops-governance"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "1 つのサブスクリプションで **多数のストレージ アカウント** を管理している方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "アカウントを複数サブスクリプションに分散する必要が減る", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "250 を超えるアカウントが必要な場合のみ、クォータ引き上げを要求", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "既定では、サブスクリプションの標準エンドポイントでリージョンあたり最大 250 個のストレージ アカウントを作成できる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-account-overview", "locator": "標準エンドポイント", "retrievedAt": "2026-10-29T00:00:00Z" }]
+        },
+        "after": {
+          "text": "クォータ引き上げの要求により、リージョンごとに標準エンドポイントで最大 1,000 個まで作成できる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/quotas/storage-account-quota-requests", "locator": "冒頭", "retrievedAt": "2026-10-29T00:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象は標準エンドポイントのアカウント。既定 250 → 最大 1,000（リージョン・サブスクリプション単位）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "SRP の読み取り・書き込み・一覧操作は、承認済みの上限に合わせて自動でスケール", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は SRP コントロール プレーンの管理操作で、データ プレーン操作は含まない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "引き上げの要求手順", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure Portal、Azure CLI、Azure PowerShell から、サポート チケットなしで要求できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "Portal: [クォータ] → [ストレージ] → 対象リージョンの [調整の要求] で最大 1000 を入力して送信",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/quotas/storage-account-quota-requests", "locator": "ストレージ アカウントのクォータの引き上げを要求する", "retrievedAt": "2026-10-29T00:00:00Z" }]
+            },
+            {
+              "text": "PowerShell: Update-AzQuota でリージョンごとに上限値を指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/quotas/storage-account-quota-requests", "locator": "PowerShell タブ", "retrievedAt": "2026-10-29T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "要求には共同作成者ロール（またはそれを含むロール）が必要。処理には数分かかる場合がある",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/quotas/storage-account-quota-requests", "locator": "ストレージ アカウントのクォータの引き上げを要求する", "retrievedAt": "2026-10-29T00:00:00Z" }]
+            },
+            {
+              "text": "SRP の管理操作には別の上限あり（書き込みは 1 秒あたり 10 または 1 時間あたり 1,200 など）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/scalability-targets-resource-provider", "locator": "リソース プロバイダーのスケール ターゲット", "retrievedAt": "2026-10-29T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure DNS ゾーン エンドポイント（プレビュー）は最大 5,000 だが、2027 年 3 月に廃止予定。標準エンドポイントが推奨",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-account-overview", "locator": "ストレージ アカウント エンドポイント", "retrievedAt": "2026-10-29T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "1 つのサブスクリプションにアカウントを集約し、管理を簡素化したい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "現在のクォータは Portal の [クォータ] や Get-AzStorageUsage で確認できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/quotas/storage-account-quota-requests", "locator": "リージョンの現在のクォータを表示する", "retrievedAt": "2026-10-29T00:00:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "blob-storage", "term": "Azure Blob Storage", "type": "product", "oneLine": { "text": "BLOB、ファイル、キュー、テーブルなどのデータ オブジェクトを格納する Azure Storage のサービス群の一つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-account-overview", "locator": "冒頭", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "storage-account", "term": "ストレージ アカウント", "type": "term", "oneLine": { "text": "Azure Storage のすべてのデータ オブジェクトを含み、一意の名前空間を提供する単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-account-overview", "locator": "冒頭", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "standard-endpoint", "term": "標準エンドポイント", "type": "term", "oneLine": { "text": "アカウント名とサービス エンドポイントの組み合わせで形成される、推奨のエンドポイント形式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-account-overview", "locator": "ストレージ アカウント エンドポイント", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "quota", "term": "クォータ", "type": "term", "oneLine": { "text": "サブスクリプションとリージョンごとに設定されるリソース数の上限で、引き上げを要求できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/quotas/storage-account-quota-requests", "locator": "冒頭", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-29T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Blob Storage は全リージョンで提供される基盤サービス。リージョン制限の記載はなく親サービスの提供状況を継承",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-29T00:00:00Z" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "上限はどのアカウントに適用されますか？",
+            "a": "標準エンドポイントを持つストレージ アカウントが対象で、リージョンごと・サブスクリプションごとに既定 250 から最大 1,000 まで引き上げを要求できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/quotas/storage-account-quota-requests" }]
+          },
+          {
+            "q": "引き上げ要求に必要な権限は？",
+            "a": "共同作成者ロール（または共同作成者のアクセス権を含むロール）を持つアカウントが必要です。処理には数分かかる場合があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/quotas/storage-account-quota-requests" }]
+          },
+          {
+            "q": "DNS ゾーン エンドポイントを使えば上限は増やせますか？",
+            "a": "DNS ゾーン エンドポイント（プレビュー）は最大 5,000 ですが 2027 年 3 月に廃止予定で、標準エンドポイントが推奨されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-account-overview" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=578358",
+        "learn": [
+          { "title": "Azure Storage アカウントのクォータを増やす", "url": "https://learn.microsoft.com/ja-jp/azure/quotas/storage-account-quota-requests", "locale": "ja-jp" },
+          { "title": "ストレージ アカウントの概要", "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-account-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
