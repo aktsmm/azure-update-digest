@@ -1,0 +1,171 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568605"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-28T23:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "568605",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Virtual Network ルーティング アプライアンスが GA",
+        "subtitleJa": "専用ハードウェアで VNet 間の東西トラフィックを低遅延・高スループットで転送",
+        "en": "Generally Available: Azure Virtual Network routing appliance"
+      },
+      "meta": {
+        "publishedJst": "2026-08-05",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Virtual Network"],
+        "categories": ["networking", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "ハブ＆スポーク構成で **VNet 間の大容量トラフィック** を扱うネットワーク担当者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "自前の仮想マシンなしで、最大 200 Gbps の転送層を使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "転送のボトルネックがあれば検討。日本リージョンは対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "リージョンの可用性", "retrievedAt": "2026-10-28T23:25:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "専用サブネット VirtualNetworkApplianceSubnet に、Azure リソースとしてデプロイする",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "主な特性", "retrievedAt": "2026-10-28T23:25:00Z" }]
+            },
+            {
+              "text": "UDR の次ホップ（仮想アプライアンス）で、アプライアンスのプライベート IP へ誘導する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "概要", "retrievedAt": "2026-10-28T23:25:00Z" }]
+            },
+            {
+              "text": "帯域は 10 / 50 / 100 / 200 Gbps から選択。IPv4・IPv6・デュアルスタック対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "メリット", "retrievedAt": "2026-10-28T23:25:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "VNet に VirtualNetworkApplianceSubnet を作成する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/how-to-create-virtual-network-routing-appliance", "locator": "仮想ネットワークの作成", "retrievedAt": "2026-10-28T23:25:00Z" }]
+            },
+            {
+              "text": "ポータルでルーティング アプライアンスを検索 → [作成] → リージョン・容量・VNet を指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/how-to-create-virtual-network-routing-appliance", "locator": "ルーティング アプライアンスを作成する", "retrievedAt": "2026-10-28T23:25:00Z" }]
+            },
+            {
+              "text": "[メトリクス] で送受信バイト・パケット・フロー数を確認（診断設定は不要）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/how-to-create-virtual-network-routing-appliance", "locator": "ルーティングアプライアンスを監視する", "retrievedAt": "2026-10-28T23:25:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "リージョンごと・サブスクリプションごとに最大 2 台。作成後の帯域変更は不可（再作成）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "制限事項", "retrievedAt": "2026-10-28T23:25:00Z" }]
+            },
+            {
+              "text": "VNet フローログ未対応。通過トラフィックは VNet 暗号化の対象外",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "制限事項", "retrievedAt": "2026-10-28T23:25:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "自前の仮想マシン（NVA）と違い、Azure マネージドで高可用性・ゾーン耐障害性が標準",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "高可用性と負荷分散のガイダンス", "retrievedAt": "2026-10-28T23:25:00Z" }]
+            },
+            {
+              "text": "NSG・UDR・NAT Gateway などの VNet 機能をネイティブにサポート",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "Azureネイティブ管理モデル", "retrievedAt": "2026-10-28T23:25:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ハブ VNet に置き、スポーク間（東西）トランジットを水平スケールさせる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "一般的なルーティング パターン", "retrievedAt": "2026-10-28T23:25:00Z" }]
+            },
+            {
+              "text": "Terraform は AzAPI プロバイダーを使用（AzureRM は未対応）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "制限事項", "retrievedAt": "2026-10-28T23:25:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "virtual-network", "term": "Virtual Network", "type": "product", "oneLine": { "text": "Azure 上のプライベートなネットワークを構成するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "冒頭", "retrievedAt": "2026-10-28T23:25:00Z" }] } },
+        { "termKey": "routing-appliance", "term": "ルーティング アプライアンス", "type": "feature", "oneLine": { "text": "VNet 内に置く、Azure マネージドの高帯域な転送デバイス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "概要", "retrievedAt": "2026-10-28T23:25:00Z" }] } },
+        { "termKey": "east-west", "term": "東西トラフィック", "type": "term", "oneLine": { "text": "仮想ネットワーク間・サブネット間など、内部同士で流れる通信。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "概要", "retrievedAt": "2026-10-28T23:25:00Z" }] } },
+        { "termKey": "udr", "term": "UDR", "type": "term", "oneLine": { "text": "通信の次ホップを指定する、ユーザー定義ルート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "概要", "retrievedAt": "2026-10-28T23:25:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-28T23:25:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "提供リージョンに東日本・西日本は含まれない（Microsoft は容量が増え次第リージョンを追加）",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locator": "リージョンの可用性", "retrievedAt": "2026-10-28T23:25:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568605",
+        "learn": [
+          { "title": "Azure Virtual Network ルーティング アプライアンスの概要", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview", "locale": "ja-jp" },
+          { "title": "Azure Virtual Network ルーティング アプライアンスを作成する", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/how-to-create-virtual-network-routing-appliance", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "公開されている提供リージョン一覧に東日本・西日本は含まれていません。Microsoft は容量が増え次第、リージョンを追加するとしています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview" }]
+          },
+          {
+            "q": "何台まで作成でき、帯域は後から変更できますか？",
+            "a": "リージョンごと・サブスクリプションごとに最大 2 台です。帯域は変更できず、削除して再デプロイが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview" }]
+          },
+          {
+            "q": "Terraform で管理できますか？",
+            "a": "AzAPI プロバイダーを使用します。AzureRM プロバイダーは現在ルーティング アプライアンスをサポートしていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network/virtual-network-routing-appliance-overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
