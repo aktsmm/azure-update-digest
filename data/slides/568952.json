@@ -1,0 +1,108 @@
+{
+  "$schema": "../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": { "mode": "ids", "basis": "created", "ids": ["568952"], "coverage": "complete", "snapshotAt": "2026-10-29T00:00:00Z" },
+  "slides": [
+    {
+      "key": "568952",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "App Service の Managed Instance が一般提供（GA）に",
+        "subtitleJa": "Windows 固有の依存関係を保ったまま、コード変更を抑えて Web アプリを PaaS へ移行できます",
+        "en": "Generally Available: Managed Instance on Azure App Service"
+      },
+      "meta": {
+        "publishedJst": "2026-08-19",
+        "modifiedJst": "2026-08-19",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["App Service"],
+        "categories": ["compute", "web-mobile"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "オンプレミスや VM 上の **Windows / .NET Framework の Web アプリを移行したい方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "コード変更を抑え、Windows 依存を保ったまま App Service へ移行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "移行候補の Windows Web アプリがあれば、対象リージョンと SKU を確認して評価", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "Windows 固有の依存関係との互換性を保ったまま、フル マネージドな App Service 環境へ移行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プラン単位のホスティング。Windows の Web アプリ向けに OS のカスタマイズが可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "冒頭", "retrievedAt": "2026-10-29T00:00:00Z" }] },
+            { "text": "起動時に実行する PowerShell 構成スクリプト、レジストリ アダプター、ストレージ マウントを提供", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "構成オプション", "retrievedAt": "2026-10-29T00:00:00Z" }] },
+            { "text": "Azure Bastion 経由の Just-In-Time RDP で診断（仮想ネットワーク統合が必要）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "主な機能", "retrievedAt": "2026-10-29T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure Migrate で対象ワークロードを評価し、Azure portal / Azure CLI / IaC でデプロイ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "portal で「Web App (Managed Instance)」を作成し、Pv4 / Pmv4 プランを選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/quickstart-managed-instance", "locator": "マネージド インスタンス プランをデプロイする", "retrievedAt": "2026-10-29T00:00:00Z" }] },
+            { "text": "VS Code の GitHub Copilot モダナイゼーションで評価からデプロイまで支援", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "GitHub Copilot のモダナイゼーション", "retrievedAt": "2026-10-29T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Windows の Web アプリのみ。Pv4 / Pmv4 のみ。Linux・コンテナー・ASE は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "現在の制限", "retrievedAt": "2026-10-29T00:00:00Z" }] },
+            { "text": "認証は Entra ID とマネージド ID のみ（ドメイン参加 / NTLM / Kerberos なし）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "現在の制限", "retrievedAt": "2026-10-29T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似たホスティング オプションとの違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Standard App Service: Linux・コンテナー・多言語向けで OS カスタマイズなし", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "適切なホスティング オプションの選択", "retrievedAt": "2026-10-29T00:00:00Z" }] },
+            { "text": "App Service Environment: 完全分離の専用基盤で 100 以上のアプリ規模", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "適切なホスティング オプションの選択", "retrievedAt": "2026-10-29T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "COM・レジストリ・MSI・GAC・MSMQ など、レガシー .NET Framework アプリの段階的な最新化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "適切なホスティング オプションの選択", "retrievedAt": "2026-10-29T00:00:00Z" }] },
+            { "text": "永続的な変更は構成スクリプトで行う。RDP での変更は再起動後に失われる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "構成オプション", "retrievedAt": "2026-10-29T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "app-service", "term": "App Service", "type": "product", "oneLine": { "text": "マネージドなパッチ適用やスケーリングを備えた、Web アプリのホスティング サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "冒頭", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "managed-instance", "term": "Managed Instance", "type": "feature", "oneLine": { "text": "OS のカスタマイズが必要な Windows Web アプリ向けの、プラン単位のホスティング オプション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "冒頭", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "azure-bastion", "term": "Azure Bastion", "type": "product", "oneLine": { "text": "Managed Instance への Just-In-Time RDP アクセスに使われるサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "主な機能", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "pv4", "term": "Pv4 / Pmv4", "type": "term", "oneLine": { "text": "Managed Instance で利用できる App Service の料金プラン（SKU）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "現在の制限", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-29T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Learn の提供リージョン一覧に日本は含まれない（今後さらに拡大予定と記載）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "現在の制限 / Regions", "retrievedAt": "2026-10-29T00:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568952",
+        "learn": [
+          { "title": "Azure App Service 上のマネージド インスタンス", "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locale": "ja-jp" },
+          { "title": "Azure App Service にマネージド インスタンスをデプロイする", "url": "https://learn.microsoft.com/ja-jp/azure/app-service/quickstart-managed-instance", "locale": "ja-jp" },
+          { "title": "Azure App Service 上でマネージド インスタンスを構成する", "url": "https://learn.microsoft.com/ja-jp/azure/app-service/configure-managed-instance", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "Learn の制限表の提供リージョンは東アジア、米国東部など 7 つで、日本は含まれません。今後さらに拡大予定とされています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "現在の制限" }] },
+          { "q": "Linux やコンテナーのアプリも移行できますか？", "a": "できません。Windows の Web アプリのみが対象で、Pv4 / Pmv4 プランに限られます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "現在の制限" }] },
+          { "q": "構成変更はどう永続化しますか？", "a": "構成（インストール）スクリプトを使います。RDP での変更は一時的で、再起動やメンテナンス後に失われます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/overview-managed-instance", "locator": "構成オプション" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
