@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "577260"
+  },
+  "fetchedAt": "2026-10-28T00:15:48.367Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "577260",
+    "created": "2026-10-27T17:19:43.4374073Z",
+    "description": "Microsoft Foundry now brings Claude models into Azure Cost Management alongside the rest of your Foundry spend, generally available. Until now, Claude charges appeared under SaaS rather than under the Foundry resource used to deploy them, and Claude deployments lacked the tags enterprises rely on for showback and chargeback, leaving finance and platform teams to reconcile costs by hand. With this release, Claude costs appear under the associated Foundry resource; Claude deployments and Foundry resources support tags that follow your organization's existing conventions; and Claude cost records carry model and usage_type tags, so you can filter and group spending by Claude model and separate input-token from output-token costs. Customers get one consistent, resource-level view of Claude spending and can allocate usage to the responsible teams and workloads without a separate reconciliation process. To get started, open Cost analysis in Azure Cost Management and group by resource or tag. Learn more.",
+    "generalAvailabilityDate": "2026-10",
+    "id": "577260",
+    "modified": "2026-10-27T17:19:43.4374073Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Cost management and tagging for Claude models in Microsoft Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

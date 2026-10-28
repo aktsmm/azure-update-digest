@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "578358"
+  },
+  "fetchedAt": "2026-10-28T00:15:42.835Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "578358",
+    "created": "2026-10-27T21:16:52.9993698Z",
+    "description": "Higher Azure Storage account resource quotas are now generally available, supporting up to 1,000 storage accounts with standard endpoints per region, per subscription, up from the default of 250. Manage more accounts in a single subscription, reducing the need to distribute resources across multiple subscriptions. Request quota increases through the Azure Portal, Azure CLI, or Azure PowerShell without opening a support ticket. Azure Storage Resource Provider (SRP) API read, write, and list operations automatically scale to support higher approved account quotas. These changes apply to account management operations through the Storage Resource Provider control plane, not to data plane operations within a storage account.Learn more.",
+    "generalAvailabilityDate": "2026-10",
+    "id": "578358",
+    "modified": "2026-10-27T21:16:52.9993698Z",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Blob Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Management"
+    ],
+    "title": "Generally Available: Higher limit of Azure Blob Storage accounts per region per subscription"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

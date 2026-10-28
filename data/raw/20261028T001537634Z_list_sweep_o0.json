@@ -1,0 +1,128 @@
+{
+  "args": {
+    "filter": "modified ge 2026-10-26T00:14:52Z and modified lt 2026-10-28T00:15:37Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-28T00:15:37.634Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577260",
+        "created": "2026-10-27T17:19:43.4374073Z",
+        "description": "Microsoft Foundry now brings Claude models into Azure Cost Management alongside the rest of your Foundry spend, generally available. Until now, Claude charges appeared under SaaS rather than under the...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "577260",
+        "modified": "2026-10-27T17:19:43.4374073Z",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Cost management and tagging for Claude models in Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577782",
+        "created": "2026-10-26T16:02:05.593558Z",
+        "description": "Azure Network Watcher VNet flow logs filtering is now generally available, enabling you to control which\nnetwork traffic flows are logged based on specific criteria such as IP\naddresses, ports, protoc...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "577782",
+        "modified": "2026-10-26T16:02:05.593558Z",
+        "productCategories": [
+          "Management and governance",
+          "Networking"
+        ],
+        "products": [
+          "Network Watcher"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Network Watcher VNet flow logs filtering"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578153",
+        "created": "2026-10-27T16:58:04.0040776Z",
+        "description": "Announcing the general availability of profile and route\nlevel policies for Azure Web Application Firewall (WAF) on Azure Front Door\nPremium. WAF policies are no longer limited to individual domains: ...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "578153",
+        "modified": "2026-10-27T16:58:04.0040776Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door",
+          "Web Application Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: Azure Front Door profile and route level WAF policies "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578358",
+        "created": "2026-10-27T21:16:52.9993698Z",
+        "description": "Higher Azure Storage account resource quotas are now generally available, supporting up to 1,000 storage accounts with standard endpoints per region, per subscription, up from the default of 250. Mana...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "578358",
+        "modified": "2026-10-27T21:16:52.9993698Z",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Azure Blob Storage"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Management"
+        ],
+        "title": "Generally Available: Higher limit of Azure Blob Storage accounts per region per subscription"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 4,
+    "totalCount": 4
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}
