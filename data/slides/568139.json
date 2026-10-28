@@ -1,0 +1,144 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568139"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-28T23:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "568139",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure SQL Database に正規表現ベースの動的データ マスキング",
+        "subtitleJa": "REGEXP_REPLACE で、メールや電話番号などを柔軟にマスク（プレビュー）",
+        "en": "Public Preview: Azure SQL updates for late-July"
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "July" }],
+        "status": "In preview",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "機密データを扱う **Azure SQL Database の利用者・DBA**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": {
+          "text": "組み込みマスクでは難しい、可変長データの部分的なマスクを定義できる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql", "locator": "組み込みマスキング機能の制限", "retrievedAt": "2026-10-28T23:50:00Z" }]
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "非本番環境での評価向け。本番利用は十分な検証後に検討",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql", "locator": "Important", "retrievedAt": "2026-10-28T23:50:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "組み込みのマスク関数は固定パターンで、可変長データには柔軟性がない（例: email() はドメイン名も隠す）",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql", "locator": "組み込みマスキング機能の制限", "retrievedAt": "2026-10-28T23:50:00Z" }]
+        },
+        "after": {
+          "text": "REGEXP_REPLACE マスクで、表示する部分と隠す部分を正規表現で指定できる（例: ドメイン名を残す）",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql", "locator": "正則表現ベースのマスキングとは何ですか?", "retrievedAt": "2026-10-28T23:50:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "REGEXP_REPLACE マスキング関数で、パターン駆動のマスク ルールを定義",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-10-28T23:50:00Z" }]
+            },
+            {
+              "text": "対象: char / nchar / varchar / nvarchar と、最大 2 MB の varchar(max) / nvarchar(max)",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql", "locator": "引数", "retrievedAt": "2026-10-28T23:50:00Z" }]
+            },
+            {
+              "text": "パターンは最大 8,000 バイト。開始位置・出現回数・フラグは固定値",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql", "locator": "引数", "retrievedAt": "2026-10-28T23:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "設定は T-SQL のみ。Azure portal では正規表現マスクを設定できない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql", "locator": "Note", "retrievedAt": "2026-10-28T23:50:00Z" }]
+            },
+            {
+              "text": "パターンに一致しない値はマスクされず、非特権ユーザーに見えてしまう",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql", "locator": "Considerations", "retrievedAt": "2026-10-28T23:50:00Z" }]
+            },
+            {
+              "text": "プレビュー機能は SLA の対象外。非本番環境での使用が前提",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql", "locator": "Important", "retrievedAt": "2026-10-28T23:50:00Z" }]
+            }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "null・空文字・非定型形式を含む代表データで、パターンの漏れを検証する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "許可モデルは変更なし。UNMASK 権限を持つユーザーは実データを閲覧できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql", "locator": "ステップ3", "retrievedAt": "2026-10-28T23:50:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "Azure 上で提供される SQL のマネージド データベース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-overview?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-10-28T23:50:00Z" }] } },
+        { "termKey": "ddm", "term": "動的データ マスキング（DDM）", "type": "feature", "oneLine": { "text": "特権のないユーザーに対し、クエリ結果の機密データを隠す機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-overview?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-10-28T23:50:00Z" }] } },
+        { "termKey": "regexp-replace", "term": "REGEXP_REPLACE", "type": "term", "oneLine": { "text": "正規表現に一致する部分を、指定した文字列に置き換える関数。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql", "locator": "引数", "retrievedAt": "2026-10-28T23:50:00Z" }] } },
+        { "termKey": "unmask", "term": "UNMASK 権限", "type": "term", "oneLine": { "text": "マスクされていない実データを閲覧できる権限。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-overview?view=azuresql", "locator": "詳細なアクセス許可の例", "retrievedAt": "2026-10-28T23:50:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-28T23:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure SQL Database は、リージョンの GA 時点で全リージョンに提供される基盤サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-10-28T23:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568139",
+        "learn": [
+          { "title": "Azure SQL Database における正規表現ベースの動的データ マスキング (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql", "locale": "ja-jp" },
+          { "title": "動的データ マスク", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-overview?view=azuresql", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "Azure portal から設定できますか？", "a": "できません。正規表現マスクは T-SQL でのみ設定します。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql" }] },
+          { "q": "本番環境で使ってよいですか？", "a": "プレビュー機能は SLA の対象外で、非本番環境での使用が前提です。本番検討前に十分な検証が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql" }] },
+          { "q": "対象のデータ型は？", "a": "char / nchar / varchar / nvarchar と、最大 2 MB の varchar(max) / nvarchar(max) です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/dynamic-data-masking-regex?view=azuresql" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
