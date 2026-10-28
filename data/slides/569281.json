@@ -1,0 +1,134 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["569281"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-28T22:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "569281",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "共有 Premium SSD v2 / Ultra データ ディスクのライブ リサイズが GA",
+        "subtitleJa": "アプリを止めずにディスク容量を拡張。小さく始めて必要に応じて増やせます",
+        "en": "Generally Available: Live Resize for Shared Premium SSD v2 and Ultra Data Disks"
+      },
+      "meta": {
+        "publishedJst": "2026-08-14",
+        "modifiedJst": "2026-08-14",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Disk Storage"],
+        "categories": ["storage"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "共有ディスク（Premium SSD v2 / Ultra）でクラスターを組んでいる方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ダウンタイムなしで容量を増やせるため、コストを抑えた運用ができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "容量不足に備えて、拡張手順を確認しておくと安心", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "共有 Premium SSD v2 / Ultra データ ディスクを、アプリを中断せずに動的に拡張できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "VM の割り当て解除なしで、ディスク サイズを拡張できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/linux/expand-disks", "locator": "ダウンタイムなしで拡張する", "retrievedAt": "2026-10-28T22:40:00Z" }] },
+            { "text": "拡張は Azure portal / Azure CLI / Azure PowerShell で実行", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/linux/expand-disks", "locator": "Ultra Disks と Premium SSD v2 で拡張する", "retrievedAt": "2026-10-28T22:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始める流れ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "az disk update などでディスクを拡張し、OS 側でも領域を認識させる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/linux/expand-disks", "locator": "Azure CLIを使用してAzureマネージド ディスクを展開する", "retrievedAt": "2026-10-28T22:40:00Z" }] },
+            { "text": "VM に正しいサイズが反映されるまで最大 10 分。必要に応じて再スキャンを実行", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/linux/expand-disks", "locator": "Ultra Disks と Premium SSD v2 で拡張する", "retrievedAt": "2026-10-28T22:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ディスクでデータのバックグラウンド コピー中は拡張できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/linux/expand-disks", "locator": "Ultra Disks と Premium SSD v2 で拡張する", "retrievedAt": "2026-10-28T22:40:00Z" }] },
+            { "text": "データ ディスクのみ対象。最新の CLI / PowerShell、または API 2021-04-01 以降が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/linux/expand-disks", "locator": "ダウンタイムなしで拡張する", "retrievedAt": "2026-10-28T22:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する仕様", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Premium SSD v2 は容量・IOPS・スループットをいつでも個別に調整できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-types", "locator": "プレミアムSSD v2", "retrievedAt": "2026-10-28T22:40:00Z" }] },
+            { "text": "共有ディスクは VM ごとの追加料金なし。課金は容量・IOPS・MB/秒", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-shared", "locator": "共有 Ultra Disk と共有 Premium SSD v2 の価格", "retrievedAt": "2026-10-28T22:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "まず小さな共有ディスクで始め、データ増加に合わせて拡張する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "共有ディスクには WSFC や Pacemaker などのクラスター マネージャーが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-shared", "locator": "冒頭", "retrievedAt": "2026-10-28T22:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-disk-storage", "term": "Azure Disk Storage", "type": "product", "oneLine": { "text": "Azure VM 向けの、高性能で耐久性の高いマネージド ディスクのブロック ストレージ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-types", "locator": "冒頭", "retrievedAt": "2026-10-28T22:40:00Z" }] } },
+        { "termKey": "premium-ssd-v2", "term": "Premium SSD v2", "type": "feature", "oneLine": { "text": "容量・スループット・IOPS を個別に調整できる、コスト効率の高い SSD ディスク。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-types", "locator": "プレミアムSSD v2", "retrievedAt": "2026-10-28T22:40:00Z" }] } },
+        { "termKey": "ultra-disk", "term": "Ultra Disk", "type": "feature", "oneLine": { "text": "Azure VM 向けで最も高性能なストレージ オプション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-types", "locator": "Ultra Disks", "retrievedAt": "2026-10-28T22:40:00Z" }] } },
+        { "termKey": "shared-disk", "term": "共有ディスク", "type": "feature", "oneLine": { "text": "複数の VM に同時に接続できるマネージド ディスクの機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-shared", "locator": "冒頭", "retrievedAt": "2026-10-28T22:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-28T22:40:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Premium SSD v2 は東日本・西日本、Ultra Disk は東日本・西日本で提供",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-types", "locator": "Premium SSD v2 リージョンの可用性 / Ultra Disk リージョン", "retrievedAt": "2026-10-28T22:40:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=569281",
+        "learn": [
+          { "title": "Linux VM の仮想ハード ディスクを拡張する", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/linux/expand-disks", "locale": "ja-jp" },
+          { "title": "VM 間で Azure マネージド ディスクを共有する", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-shared", "locale": "ja-jp" },
+          { "title": "Azure マネージド ディスクの種類", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-types", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Premium SSD v2 と Ultra Disk は、いずれも東日本・西日本のリージョンで提供されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-types" }]
+          },
+          {
+            "q": "拡張に追加の前提条件はありますか？",
+            "a": "データ ディスクのみが対象で、バックグラウンド コピー中は拡張できません。Azure portal / CLI / PowerShell で実行します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/linux/expand-disks" }]
+          },
+          {
+            "q": "拡張後すぐに VM で容量を使えますか？",
+            "a": "VM に正しいサイズが反映されるまで最大 10 分かかります。必要に応じて OS で再スキャンを実行します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/linux/expand-disks" }]
+          },
+          {
+            "q": "共有ディスクの課金はどうなりますか？",
+            "a": "接続する VM ごとの追加料金はなく、プロビジョニングした容量・IOPS・スループットに基づいて課金されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/disks-shared" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
