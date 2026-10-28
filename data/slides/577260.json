@@ -1,0 +1,103 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": { "mode": "ids", "basis": "created", "ids": ["577260"], "coverage": "complete", "snapshotAt": "2026-10-28T22:20:00Z" },
+  "slides": [
+    {
+      "key": "577260",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Foundry の Claude モデルのコスト管理とタグ付けが GA に",
+        "subtitleJa": "Claude の費用が Foundry リソースの配下に表示され、モデル別・入出力別に分析できます",
+        "en": "Generally Available: Cost management and tagging for Claude models in Microsoft Foundry"
+      },
+      "meta": {
+        "publishedJst": "2026-10-28",
+        "modifiedJst": "2026-10-28",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Foundry で Claude を使い、**showback / chargeback を行う財務・基盤チーム**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Claude の費用をリソース単位・タグ単位で一元的に把握でき、手作業の突合が不要に", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "ResourceId 前提のレポートやエクスポートがあれば見直す",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/manage-costs", "locator": "Claude コストの分析", "retrievedAt": "2026-10-28T22:20:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "before": { "text": "Claude の費用は Foundry リソースではなく SaaS 配下に表示され、デプロイにタグも使えなかった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "Claude の費用が Foundry リソース配下に表示され、タグを利用でき、model / usage_type タグで絞り込める", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "CCU 課金の Claude 消費料金が Foundry リソースに関連付けられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/foundry-models/concepts/claude-models-billing", "locator": "Claude のコスト可視化", "retrievedAt": "2026-10-28T22:20:00Z" }] },
+            { "text": "Foundry リソースのタグが Claude のコスト レコードに表示され、絞り込みに使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/foundry-models/concepts/claude-models-billing", "locator": "Claude のコスト可視化", "retrievedAt": "2026-10-28T22:20:00Z" }] },
+            { "text": "モデルと使用状況の種類（入力・出力・キャッシュ）別にコストを分析できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/manage-costs", "locator": "Claude コストの分析", "retrievedAt": "2026-10-28T22:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方（Cost analysis）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Cost analysis のスコープを対象の Foundry リソースに設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/manage-costs", "locator": "Claude コストの分析", "retrievedAt": "2026-10-28T22:20:00Z" }] },
+            { "text": "割り当て済みタグでコストをフィルター・グループ化し、モデル別の内訳を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/manage-costs", "locator": "Claude コストの分析", "retrievedAt": "2026-10-28T22:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "タグはリソース レベルのみ。プロジェクト レベルのコスト配分は Claude では未サポート", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/manage-costs", "locator": "Claude コストの分析", "retrievedAt": "2026-10-28T22:20:00Z" }] },
+            { "text": "コストの閲覧には Cost Management 閲覧者ロールなどが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/manage-costs", "locator": "前提条件", "retrievedAt": "2026-10-28T22:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "他のパートナー モデルの費用はリソース グループ配下。CCU 課金の Claude は Foundry リソースに関連付け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/manage-costs", "locator": "メーター別のコスト内訳を理解する", "retrievedAt": "2026-10-28T22:20:00Z" }] },
+            { "text": "Foundry の [監視] タブは推定コストを表示するが、プライベート オファーの割引は未反映", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/foundry-models/concepts/claude-models-billing", "locator": "表示できる内容", "retrievedAt": "2026-10-28T22:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "チームや案件ごとに Foundry リソースとタグを分け、Claude 費用を配賦する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "実際の請求額は Azure Cost Management と請求書で確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/manage-costs", "locator": "Claude コストの分析", "retrievedAt": "2026-10-28T22:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "ccu", "term": "CCU", "type": "term", "oneLine": { "text": "Claude Consumption Unit。Foundry の Claude モデルの課金単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/foundry-models/concepts/claude-models-billing", "locator": "クロード消費ユニットとは", "retrievedAt": "2026-10-28T22:20:00Z" }] } },
+        { "termKey": "resource-tag", "term": "リソース タグ", "type": "feature", "oneLine": { "text": "Foundry リソースに付ける Azure タグで、コストの絞り込みや割り当てに使う。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/foundry-models/concepts/claude-models-billing", "locator": "Claude のコスト可視化", "retrievedAt": "2026-10-28T22:20:00Z" }] } },
+        { "termKey": "macc", "term": "MACC", "type": "term", "oneLine": { "text": "Microsoft Azure Consumption Commitment。CCU の利用額はここから差し引かれる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/foundry-models/concepts/claude-models-billing", "locator": "クロード消費ユニットとは", "retrievedAt": "2026-10-28T22:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-28T22:20:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577260",
+        "learn": [
+          { "title": "Microsoft Foundry のコストを計画および管理する", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/manage-costs", "locale": "ja-jp" },
+          { "title": "Microsoft Foundry でのクロード消費ユニット (CCU) の課金", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/foundry-models/concepts/claude-models-billing", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "既存の Claude デプロイも対象ですか？", "a": "CCU 課金は今後作成するデプロイが対象です。それ以前のデプロイは従来のモデル別プランで課金が続きます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/foundry-models/concepts/claude-models-billing", "locator": "既存のデプロイと移行", "retrievedAt": "2026-10-28T22:20:00Z" }] },
+          { "q": "プロジェクト単位でコストを配分できますか？", "a": "Claude ではリソース レベルのタグのみ対応で、Foundry プロジェクト レベルのコスト配分は未サポートです。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/manage-costs", "locator": "Claude コストの分析", "retrievedAt": "2026-10-28T22:20:00Z" }] },
+          { "q": "CCU で価格は変わりますか？", "a": "CCU は価格ではなく課金形式の変更です。コストは Anthropic のモデル別トークン単価と割引で決まります。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/foundry-models/concepts/claude-models-billing", "locator": "よく寄せられる質問", "retrievedAt": "2026-10-28T22:20:00Z" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
