@@ -1,0 +1,176 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568825"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-28T22:59:06Z"
+  },
+  "slides": [
+    {
+      "key": "568825",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Firewall の「明示的プロキシ」が一般提供（GA）に",
+        "subtitleJa": "アプリやブラウザーのプロキシ設定から、Web 通信を Azure Firewall へ直接送れます",
+        "en": "Generally Available: Explicit proxy in Azure Firewall"
+      },
+      "meta": {
+        "publishedJst": "2026-08-05",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Azure Firewall（Standard / Premium）で送信 Web 通信を制御している方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "UDR に頼らず、アプリ単位で送信 HTTP / HTTPS を制御できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "UDR を使わない送信制御が必要なら検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "既定は透過プロキシ モード。UDR で通信をファイアウォールへ誘導し、インラインで傍受して宛先へ転送する",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locator": "冒頭", "retrievedAt": "2026-10-28T22:59:00Z" }]
+        },
+        "after": {
+          "text": "アプリやブラウザーがファイアウォールをプロキシとして指定し、プライベート IP へ直接送信できる。単一のプロキシ エンドポイントで HTTP / HTTPS に対応",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "アプリのプロキシ設定をファイアウォールのプライベート IP に向ける",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locator": "冒頭", "retrievedAt": "2026-10-28T22:59:00Z" }]
+            },
+            {
+              "text": "設定は手動、または PAC ファイル（ファイアウォールがホスト）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locator": "冒頭", "retrievedAt": "2026-10-28T22:59:00Z" }]
+            },
+            { "text": "GA で PAC ファイルの取得にマネージド ID を利用可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ファイアウォール ポリシーで明示的プロキシを有効化し、HTTP ポートを指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locator": "構成", "retrievedAt": "2026-10-28T22:59:00Z" }]
+            },
+            {
+              "text": "通信を許可するアプリケーション規則をポリシーに作成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locator": "構成", "retrievedAt": "2026-10-28T22:59:00Z" }]
+            },
+            {
+              "text": "PAC 利用時は Blob に PAC を置き、マネージド ID と URL を設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locator": "構成", "retrievedAt": "2026-10-28T22:59:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Standard / Premium SKU のポリシーで設定（ファイアウォール リソースではない）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locator": "前提条件", "retrievedAt": "2026-10-28T22:59:00Z" }]
+            },
+            {
+              "text": "PAC 利用時はストレージ アカウントと、Blob ロール付きのマネージド ID が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locator": "前提条件", "retrievedAt": "2026-10-28T22:59:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "透過プロキシ: UDR で誘導 / 明示的プロキシ: アプリ側の設定で直接送信",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locator": "冒頭", "retrievedAt": "2026-10-28T22:59:00Z" }]
+            },
+            {
+              "text": "Azure Policy で明示的プロキシや PAC の構成を統一・監査できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locator": "ガバナンスとコンプライアンス", "retrievedAt": "2026-10-28T22:59:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ハイブリッド環境で Azure Arc 対応サーバーの転送プロキシとして利用", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既存の転送プロキシからの移行や、アプリ単位の通信誘導", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-firewall", "term": "Azure Firewall", "type": "product",
+          "oneLine": { "text": "クラウドネイティブでステートフルな、Azure のネットワーク ファイアウォール サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/overview", "locator": "冒頭", "retrievedAt": "2026-10-28T22:59:00Z" }] }
+        },
+        {
+          "termKey": "explicit-proxy", "term": "明示的プロキシ", "type": "feature",
+          "oneLine": { "text": "アプリをファイアウォール経由のプロキシ設定にし、UDR なしで通信を送る機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locator": "冒頭", "retrievedAt": "2026-10-28T22:59:00Z" }] }
+        },
+        {
+          "termKey": "udr", "term": "UDR（ユーザー定義ルート）", "type": "term",
+          "oneLine": { "text": "通信をファイアウォールへ向けるために使う、ユーザーが定義する経路設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locator": "冒頭", "retrievedAt": "2026-10-28T22:59:00Z" }] }
+        },
+        {
+          "termKey": "pac", "term": "PAC ファイル", "type": "term",
+          "oneLine": { "text": "プロキシ自動構成ファイル。ファイアウォールにホストさせてプロキシ要求を処理できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locator": "冒頭", "retrievedAt": "2026-10-28T22:59:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-28T22:59:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568825",
+        "learn": [
+          { "title": "Azure Firewall 明示的プロキシ", "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy", "locale": "ja-jp" },
+          { "title": "Azure Firewall とは", "url": "https://learn.microsoft.com/ja-jp/azure/firewall/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どの SKU で使えますか？",
+            "a": "Azure Firewall の Standard と Premium SKU で対応しています。設定はファイアウォール リソースではなくポリシーで行います。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy" }]
+          },
+          {
+            "q": "HTTP と HTTPS で別のポートが必要ですか？",
+            "a": "いいえ。HTTP と HTTPS の両方に、単一の HTTP ポートを使う必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy" }]
+          },
+          {
+            "q": "PAC ファイルを使うには何が必要ですか？",
+            "a": "PAC を置く Blob コンテナーを持つストレージ アカウントと、Storage Blob Data Contributor / Reader ロールを持つユーザー割り当てマネージド ID が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/explicit-proxy" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
