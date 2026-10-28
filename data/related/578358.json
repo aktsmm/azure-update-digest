@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "canonicalKey": "578358",
+  "status": "verified",
+  "sourceQuery": "Azure Storage account quota increase 1000 storage accounts per region per subscription",
+  "checkedAt": "2026-10-28T13:30:00Z",
+  "candidates": [
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/quotas/storage-account-quota-requests",
+      "title": "Azure Storage アカウントのクォータを増やす",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "標準エンドポイントのストレージ アカウント数を 250 から最大 1,000 に増やすクォータ要求手順を説明している。",
+      "checkedAt": "2026-10-28T13:30:00Z"
+    },
+    {
+      "url": "https://learn.microsoft.com/ja-jp/azure/storage/common/storage-account-overview",
+      "title": "ストレージ アカウントの概要",
+      "verified": true,
+      "locale": "ja-jp",
+      "matchReason": "リージョンごとのストレージ アカウント数の上限とエンドポイントの種類を説明している。",
+      "checkedAt": "2026-10-28T13:30:00Z"
+    }
+  ]
+}
