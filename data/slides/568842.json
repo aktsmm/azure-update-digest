@@ -1,0 +1,111 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568842"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-28T23:14:25Z"
+  },
+  "slides": [
+    {
+      "key": "568842",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Private Link が IPv6 に対応（パブリック プレビュー）",
+        "subtitleJa": "IPv6 のプライベート エンドポイントで PaaS にプライベート接続できます",
+        "en": "Public Preview: Azure Private Link support over IPv6 "
+      },
+      "meta": {
+        "publishedJst": "2026-08-05",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "August" }],
+        "status": "In preview",
+        "products": ["Azure Private Link"],
+        "categories": ["networking"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "PaaS へのプライベート接続で IPv6 を使う／検討している**ネットワーク担当者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "IPv6 クライアントや ExpressRoute 経由のオンプレミスから、PaaS にプライベート接続できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。SLA なしで、運用環境には非推奨", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "Important", "retrievedAt": "2026-10-28T23:14:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "IPv6 のプライベート エンドポイントを使い、Storage や SQL Database などに IPv6 でプライベート接続できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対応サービス: Storage / SQL Database / Key Vault / Data Explorer", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "前提条件", "retrievedAt": "2026-10-28T23:14:00Z" }] },
+            { "text": "接続元: デュアルスタック VNet 内の IPv6 VM、ExpressRoute 経由のオンプレミス", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "サポートされているシナリオ", "retrievedAt": "2026-10-28T23:14:00Z" }] },
+            { "text": "プライベート エンドポイント作成時に ip-version-type を IPv6 に設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "プライベートエンドポイントの設定", "retrievedAt": "2026-10-28T23:14:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・制約", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "利用前にサブスクリプションでプレビュー機能の登録が必須", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "前提条件", "retrievedAt": "2026-10-28T23:14:00Z" }] },
+            { "text": "提供リージョンは 5 つ（米国中西部・東アジア・英国南部・米国中部・北ヨーロッパ）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "前提条件", "retrievedAt": "2026-10-28T23:14:00Z" }] },
+            { "text": "対象 PaaS はエンドポイントと同一リージョン。NSG / ASG は未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "Limitations", "retrievedAt": "2026-10-28T23:14:00Z" }] }
+          ]
+        },
+        {
+          "id": "limits", "heading": "オンプレミス接続の制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "オンプレミスは ExpressRoute のみ。VPN・vWAN・NVA は対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "Limitations", "retrievedAt": "2026-10-28T23:14:00Z" }] },
+            { "text": "Virtual Network Routing Appliance とユーザー定義ルートの構成が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "ExpressRoute およびVirtual Network Routing Appliance を使ったオンプレミス接続の設定", "retrievedAt": "2026-10-28T23:14:00Z" }] }
+          ]
+        },
+        {
+          "id": "logs", "heading": "ログの注意点", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "暗黙の NAT により、下流サービスのログに元クライアントの IPv6 は残らない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "Limitations", "retrievedAt": "2026-10-28T23:14:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象サービス・リージョンが自環境と合うか確認し、検証環境で挙動と制約を試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "private-link", "term": "Azure Private Link", "type": "product", "oneLine": { "text": "Azure PaaS サービスへ、プライベート エンドポイント経由でプライベートに接続する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "冒頭", "retrievedAt": "2026-10-28T23:14:00Z" }] } },
+        { "termKey": "private-endpoint", "term": "プライベート エンドポイント", "type": "feature", "oneLine": { "text": "仮想ネットワーク内のアドレスを使って PaaS サービスに接続する入口。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "プライベートエンドポイントの設定", "retrievedAt": "2026-10-28T23:14:00Z" }] } },
+        { "termKey": "dual-stack", "term": "デュアルスタック", "type": "term", "oneLine": { "text": "IPv4 と IPv6 の両方を使う仮想ネットワーク構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "前提条件", "retrievedAt": "2026-10-28T23:14:00Z" }] } },
+        { "termKey": "expressroute", "term": "ExpressRoute", "type": "product", "oneLine": { "text": "オンプレミスのネットワークから Azure への接続に使うサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "サポートされているシナリオ", "retrievedAt": "2026-10-28T23:14:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "SLA なしで提供され、運用環境には推奨されない段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "Important", "retrievedAt": "2026-10-28T23:14:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビューの提供リージョンは米国中西部・東アジア・英国南部・米国中部・北ヨーロッパ",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locator": "前提条件", "retrievedAt": "2026-10-28T23:14:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568842",
+        "learn": [{ "title": "IPv6 経由で Azure Private Link を構成する（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "プレビューは米国中西部・東アジア・英国南部・米国中部・北ヨーロッパのみで、日本リージョンは含まれません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6" }] },
+          { "q": "どの PaaS サービスが対象ですか？", "a": "Azure Storage、Azure SQL Database、Azure Key Vault、Azure Data Explorer が対象です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6" }] },
+          { "q": "利用開始に必要な準備は？", "a": "サブスクリプションでプレビュー機能の登録と、デュアルスタック VNet・サブネットの用意が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6" }] },
+          { "q": "本番環境で使えますか？", "a": "プレビューは SLA なしで提供され、運用環境ではお勧めしないとされています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/private-link-ipv6" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
