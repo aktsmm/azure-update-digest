@@ -1,0 +1,149 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568600"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-29T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "568600",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Trusted Launch が新規 Gen2 VM の既定に（GA）",
+        "subtitleJa": "Secure Boot と vTPM が追加費用なしで自動的に有効になります",
+        "en": "Generally Available: Trusted Launch as Default"
+      },
+      "meta": {
+        "publishedJst": "2026-08-04",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "July" }],
+        "status": "Launched",
+        "products": ["Virtual Machine Scale Sets", "Virtual Machines"],
+        "categories": ["compute", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Azure で **新規に Gen2 VM / スケール セットをデプロイする**方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "既定で Secure Boot と vTPM が有効になり、追加費用なしで基本的なセキュリティが得られる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "IaC でデプロイする場合は登録を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "新規 Gen2 VM / スケール セットで Secure Boot と vTPM を自動で有効化", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Portal・CLI・PowerShell は既定で適用。ARM・Bicep・Terraform・SDK は一度のサブスクリプション登録で同様に利用", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既存の VM は変更されず、明示した設定は尊重される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Portal / CLI / PowerShell: 新規 Gen2 VM を作成するだけで適用", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ARM・Bicep・Terraform・SDK: サブスクリプションの登録を一度実施", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "対象は x64 / Arm64 の Gen2 VM。サポート外のサイズ・OS・機能（マネージド イメージ、Linux VM の休止状態）あり",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch", "locator": "仮想マシンのサイズ / サポートされていない機能", "retrievedAt": "2026-10-29T00:00:00Z" }]
+            },
+            {
+              "text": "Compute Gallery イメージ生成用 VM などは既定を明示的にバイパスする必要がある",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch-faq", "locator": "既定としてのトラステッド起動", "retrievedAt": "2026-10-29T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "既存の Gen2 VM やスケール セットも、作成後に Trusted Launch を有効化できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch", "locator": "重要", "retrievedAt": "2026-10-29T00:00:00Z" }]
+            },
+            {
+              "text": "既存の Gen1 VM は Gen2 の Trusted Launch へアップグレードして有効化できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch", "locator": "重要", "retrievedAt": "2026-10-29T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "無効化が必要な事情がなければ、新規デプロイで無効にしないことが推奨されている",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch-faq", "locator": "VM の新しい展開でトラステッド起動を無効にできますか", "retrievedAt": "2026-10-29T00:00:00Z" }]
+            },
+            {
+              "text": "Defender for Cloud と統合され、ブート整合性を監視できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch", "locator": "Microsoft Defender for Cloud の統合", "retrievedAt": "2026-10-29T00:00:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "trusted-launch", "term": "Trusted Launch", "type": "feature", "oneLine": { "text": "ブートキットやルートキットなどの攻撃から Gen2 VM を保護するセキュリティ機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch", "locator": "冒頭", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "secure-boot", "term": "Secure Boot", "type": "term", "oneLine": { "text": "署名された OS とドライバーだけが起動できるようにする機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch", "locator": "セキュア ブート", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "vtpm", "term": "vTPM", "type": "term", "oneLine": { "text": "TPM 2.0 に準拠した、VM 専用の仮想トラステッド プラットフォーム モジュール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch", "locator": "vTPM", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "gen2-vm", "term": "Gen2 VM", "type": "term", "oneLine": { "text": "Trusted Launch の対象となる、第 2 世代の Azure 仮想マシン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch", "locator": "冒頭", "retrievedAt": "2026-10-29T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-29T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Trusted Launch は全パブリック リージョンで利用可能",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch", "locator": "詳細情報 / リージョン", "retrievedAt": "2026-10-29T00:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568600",
+        "learn": [
+          { "title": "Azure 仮想マシンの信頼できる起動", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch", "locale": "ja-jp" },
+          { "title": "信頼できる起動に関する FAQ", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch-faq", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存の VM も自動で変わりますか？",
+            "a": "いいえ。既定での Trusted Launch は既存の VM やスケール セットを変更しません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch-faq" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Trusted Launch は、すべてのパブリック リージョンで提供されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch" }]
+          },
+          {
+            "q": "追加費用はかかりますか？",
+            "a": "Trusted Launch によって既存の VM の価格コストが増えることはありません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch" }]
+          },
+          {
+            "q": "既定を無効にできますか？",
+            "a": "securityType に Standard を指定すれば無効化できますが、基本的に無効化しないことが推奨されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/trusted-launch-faq" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
