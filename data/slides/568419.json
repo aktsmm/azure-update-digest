@@ -1,0 +1,125 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568419"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-29T15:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "568419",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "PostgreSQL のメジャー アップグレード前検証が GA に",
+        "subtitleJa": "アップグレードを実行せず、阻害要因を事前に洗い出せます（portal / CLI）",
+        "en": "Generally Available: Pre-upgrade validation checks for Azure Database for PostgreSQL Flexible Server"
+      },
+      "meta": {
+        "publishedJst": "2026-08-14",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**PostgreSQL フレキシブル サーバーのメジャー バージョン アップグレードを予定している方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "アップグレード前に阻害要因を特定でき、失敗や手戻りを減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "アップグレード予定があれば、本番作業前に検証を実行", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": { "text": "検証はアップグレード実行中にインラインで行われていた", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "検証だけを事前に独立して実行でき、問題を解消して再検証してから進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure のアップグレード ポリシーと pg_upgrade --check の要件で検証", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "検出例: 未対応の拡張機能、論理レプリケーション スロット、準備されたトランザクション", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-major-version-upgrade", "locator": "アップグレード検証チェック", "retrievedAt": "2026-10-29T15:40:00Z" }] },
+            { "text": "バージョン変更・ダウンタイム・再起動は発生しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-major-version-upgrade", "locator": "アップグレード検証チェック", "retrievedAt": "2026-10-29T15:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "実行方法", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "portal: [アップグレード] → 対象バージョン → アクション [検証のみ] → [スタート]", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/how-to-run-upgrade-validation-checks", "locator": "ポータル", "retrievedAt": "2026-10-29T15:40:00Z" }] },
+            { "text": "CLI: Azure CLI 2.89.0 以降で upgrade コマンドに --validate-only を指定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/how-to-run-upgrade-validation-checks", "locator": "CLI", "retrievedAt": "2026-10-29T15:40:00Z" }] },
+            { "text": "結果は CSV でダウンロード可能。失敗時は修復ガイダンスを表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/how-to-run-upgrade-validation-checks", "locator": "検証結果を確認する", "retrievedAt": "2026-10-29T15:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "サーバー状態が「準備完了」で、他の操作が進行中でないこと", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-major-version-upgrade", "locator": "制限事項", "retrievedAt": "2026-10-29T15:40:00Z" }] },
+            { "text": "読み取りレプリカは非対応。全データベースへの接続が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-major-version-upgrade", "locator": "制限事項", "retrievedAt": "2026-10-29T15:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "アップグレード本番との関係", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "同じ検証チェックは、メジャー バージョン アップグレード中にも自動実行される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-major-version-upgrade", "locator": "アップグレード検証チェック", "retrievedAt": "2026-10-29T15:40:00Z" }] },
+            { "text": "検証では準備状況のみを確認し、実際のアップグレードは行わない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/how-to-run-upgrade-validation-checks", "locator": "Note", "retrievedAt": "2026-10-29T15:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "運用アップグレードの時間枠を決める前に実行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-major-version-upgrade", "locator": "アップグレード検証チェック", "retrievedAt": "2026-10-29T15:40:00Z" }] },
+            { "text": "ダウンタイムはないが、アクティビティが低い時間帯の実行を検討", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-major-version-upgrade", "locator": "制限事項", "retrievedAt": "2026-10-29T15:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "mvu", "term": "メジャー バージョン アップグレード（MVU）", "type": "term", "oneLine": { "text": "PostgreSQL のメジャー バージョンを上げること（インプレースでサーバー名や設定は保持）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-major-version-upgrade", "locator": "冒頭", "retrievedAt": "2026-10-29T15:40:00Z" }] } },
+        { "termKey": "upgrade-validation", "term": "アップグレード検証チェック", "type": "feature", "oneLine": { "text": "アップグレード前に互換性の問題や阻害要因を特定する、実際の操作とは別の検証。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/how-to-run-upgrade-validation-checks", "locator": "冒頭", "retrievedAt": "2026-10-29T15:40:00Z" }] } },
+        { "termKey": "validate-only", "term": "--validate-only", "type": "term", "oneLine": { "text": "サーバーをアップグレードせず、検証だけを実行する Azure CLI のパラメーター。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/how-to-run-upgrade-validation-checks", "locator": "CLI", "retrievedAt": "2026-10-29T15:40:00Z" }] } },
+        { "termKey": "blocking-issue", "term": "ブロックの問題", "type": "term", "oneLine": { "text": "アップグレードを続行する前に解決が必要な、検証で見つかった問題。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-major-version-upgrade", "locator": "アップグレード検証チェック", "retrievedAt": "2026-10-29T15:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-29T15:40:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "フレキシブル サーバーは Japan East / Japan West で提供。機能固有のリージョン制限は確認できず、親サービスの提供状況に準じる",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/overview#azure-regions", "locator": "Azure regions", "retrievedAt": "2026-10-29T15:40:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568419",
+        "learn": [
+          { "title": "フレキシブル サーバーでアップグレード検証チェックを実行する", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/how-to-run-upgrade-validation-checks", "locale": "ja-jp" },
+          { "title": "Azure Database for PostgreSQL フレキシブル サーバーでのメジャー バージョンのアップグレード", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-major-version-upgrade", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "検証を実行するとサーバーは止まりますか？",
+            "a": "検証ではバージョン変更・ダウンタイム・再起動は発生しません。アクティビティが低い時間帯の実行が推奨されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-major-version-upgrade", "locator": "アップグレード検証チェック", "retrievedAt": "2026-10-29T15:40:00Z" }]
+          },
+          {
+            "q": "読み取りレプリカでも検証できますか？",
+            "a": "読み取りレプリカでは検証チェックはサポートされていません。またサーバー状態が「準備完了」である必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-major-version-upgrade", "locator": "制限事項", "retrievedAt": "2026-10-29T15:40:00Z" }]
+          },
+          {
+            "q": "CLI で使うには何が必要ですか？",
+            "a": "Azure CLI 2.89.0 以降で、az postgres flexible-server upgrade コマンドに --validate-only を指定します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/how-to-run-upgrade-validation-checks", "locator": "CLI", "retrievedAt": "2026-10-29T15:40:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
