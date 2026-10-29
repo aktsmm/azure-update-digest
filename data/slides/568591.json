@@ -1,0 +1,121 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568591"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-28T23:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "568591",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Marketplace の SaaS を Azure portal で簡単購入（GA）",
+        "subtitleJa": "プラン・課金・リソース グループ・連絡先・条件を 1 ページで確認して購入できます",
+        "en": "Generally Available: Single-click purchase for public SaaS offers"
+      },
+      "meta": {
+        "publishedJst": "2026-08-01",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "July" }],
+        "status": "Launched",
+        "products": [],
+        "categories": ["other"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Marketplace の **SaaS 製品を Azure portal で購入する方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "購入に必要な情報を 1 ページで確認して完了できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "対象 SaaS の購入時に利用できる。特別な設定は不要", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "対象 SaaS 製品で、プラン・課金・リソース グループ・連絡先・条件を 1 ページで確認して購入を完了できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "購入ページで、サブスクリプション・プラン・契約期間・ユーザー数・自動更新を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal", "locator": "SaaS 製品を購入する手順", "retrievedAt": "2026-10-28T23:40:00Z" }] },
+            { "text": "リソース グループ・場所・タグ・連絡先を確認し、使用条件を確認して購入", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal", "locator": "SaaS 製品を購入する手順", "retrievedAt": "2026-10-28T23:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "購入の流れ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Marketplace か Azure portal で SaaS とプランを探し、[今すぐ入手] または [サブスクライブ] を選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal", "locator": "SaaS 製品を購入する手順", "retrievedAt": "2026-10-28T23:40:00Z" }] },
+            { "text": "内容を確認して [購入の完了] を選択。入力不備があればエラーが表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal", "locator": "完全な購入", "retrievedAt": "2026-10-28T23:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "有効な購入方法のある Azure サブスクリプションと、Marketplace 購入に必要なロール・アクセス許可が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal", "locator": "要件", "retrievedAt": "2026-10-28T23:40:00Z" }] },
+            { "text": "Azure ネイティブ統合・Model-as-a-Service などのカスタム購入体験の SaaS は対象外", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "プライベート オファーは、シングル クリック購入または個別の承諾と購入で、案内に従って完了する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal", "locator": "注", "retrievedAt": "2026-10-28T23:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "リソース グループ作成を制限する Azure Policy がある場合、利用可能なリソース グループを事前に用意する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal", "locator": "Tip", "retrievedAt": "2026-10-28T23:40:00Z" }] },
+            { "text": "SaaS サブスクリプション名は購入前に変更でき、購入後は変更できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal", "locator": "基本的な詳細を確認します", "retrievedAt": "2026-10-28T23:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-marketplace", "term": "Microsoft Marketplace", "type": "product", "oneLine": { "text": "ソフトウェア会社の SaaS などの製品を探して購入できる場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal", "locator": "冒頭", "retrievedAt": "2026-10-28T23:40:00Z" }] } },
+        { "termKey": "saas", "term": "SaaS", "type": "term", "oneLine": { "text": "サービスとしてのソフトウェア。Marketplace から購入できるオファーの種類。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal", "locator": "冒頭", "retrievedAt": "2026-10-28T23:40:00Z" }] } },
+        { "termKey": "resource-group", "term": "リソース グループ", "type": "term", "oneLine": { "text": "購入した SaaS リソースを整理して管理するための入れ物。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal", "locator": "基本的な詳細を確認します", "retrievedAt": "2026-10-28T23:40:00Z" }] } },
+        { "termKey": "private-offer", "term": "プライベート オファー", "type": "term", "oneLine": { "text": "特定のテナント向けに提示される、個別条件の SaaS オファー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal", "locator": "Azure ポータルで SaaS オファーを見つける", "retrievedAt": "2026-10-28T23:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-28T23:40:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "購入は Azure portal 上で行う。Azure portal は非リージョン（グローバル）サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "List of nonregional services: Azure portal", "retrievedAt": "2026-10-28T23:40:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568591",
+        "learn": [{ "title": "Azure portal で SaaS オファーを購入する", "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "購入に必要な前提条件は？",
+            "a": "有効な購入方法のある Azure サブスクリプションと、Marketplace 購入に必要なロール・アクセス許可が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal" }]
+          },
+          {
+            "q": "すべての SaaS オファーが対象ですか？",
+            "a": "いいえ。Azure ネイティブ統合や Model-as-a-Service など、カスタムの購入体験を使う SaaS は現時点で対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal" }]
+          },
+          {
+            "q": "Azure Policy でリソース グループ作成が制限されていると？",
+            "a": "利用可能なリソース グループが自動選択されます。なければ購入前に選択または作成が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/purchase-saas-offer-in-azure-portal" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
