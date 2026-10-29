@@ -1,0 +1,171 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["567979"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-28T22:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "567979",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Storage Mover が AWS FSx から Azure Files への移行に対応",
+        "subtitleJa": "移行エージェント不要で、Windows ファイル共有（SMB）をクラウド間で移行（パブリック プレビュー）",
+        "en": "Public Preview: Migrate from AWS FSx for Windows File Server to Azure Files with Azure Storage Mover"
+      },
+      "meta": {
+        "publishedJst": "2026-08-07",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "July" }],
+        "status": "In preview",
+        "products": ["Azure Storage Mover"],
+        "categories": ["storage"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "AWS FSx for Windows File Server の共有を Azure Files へ移したい**移行担当者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "移行エージェントを展開・管理せずに、FSx から Azure ファイル共有へ移行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "FSx から移す予定があれば、検証環境で評価", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "エージェントレスで、FSx から Azure ファイル共有へプライベート接続経由で直接コピーできる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "移行元は AWS FSx（SMB）、移行先は Azure Files（SMB）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/service-overview", "locator": "サポートされているソースとターゲット", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            },
+            {
+              "text": "ポータルと Azure CLI で、エンドポイント作成からジョブ実行まで行える",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration", "locator": "移行ジョブを作成して運営する", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            },
+            {
+              "text": "データはコピーのため、移行元の FSx には残る",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration", "locator": "移行の制限と動作", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "1 ジョブ最大 5 億オブジェクト、同時実行は 1 サブスクリプション 10 ジョブまで",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration", "locator": "移行の制限と動作", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            },
+            {
+              "text": "プレビュー中は、移行先の共有ごとに同時 1 ジョブ。SMB 1.x は非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration", "locator": "移行の制限と動作", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            },
+            {
+              "text": "Azure と AWS ネットワーク間のプライベート接続が必須",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration", "locator": "Important", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "prerequisites", "heading": "事前準備", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "FSx の認証情報（ユーザー名・パスワード）を Azure Key Vault に保存",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration", "locator": "Prerequisites", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            },
+            {
+              "text": "Storage Mover リソース、ストレージ アカウント、移行先ファイル共有を用意",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration", "locator": "Prerequisites", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "cutover", "heading": "カットオーバーの流れ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "初回コピー → 差分コピー → 書き込み停止 → 最終差分 → UNC パスを切替",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration", "locator": "移行の検証とカットオーバーの実行", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            },
+            {
+              "text": "初回の移行は加算（Additive）モードの利用を推奨",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration", "locator": "Tip", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "共有のオブジェクト数とプライベート接続の準備状況を確認し、まず検証環境で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-storage-mover", "term": "Azure Storage Mover", "type": "product",
+          "oneLine": { "text": "ファイルやフォルダーを Azure Storage へ移行できる、フル マネージドの移行サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/service-overview", "locator": "冒頭", "retrievedAt": "2026-10-28T22:50:00Z" }] }
+        },
+        {
+          "termKey": "agentless", "term": "エージェントレス", "type": "term",
+          "oneLine": { "text": "移行エージェント VM を用意せずに移行できる方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/service-overview", "locator": "ハイブリッド クラウド サービス", "retrievedAt": "2026-10-28T22:50:00Z" }] }
+        },
+        {
+          "termKey": "azure-key-vault", "term": "Azure Key Vault", "type": "product",
+          "oneLine": { "text": "移行元の認証情報などのシークレットを保管するために使うサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration", "locator": "Prerequisites", "retrievedAt": "2026-10-28T22:50:00Z" }] }
+        },
+        {
+          "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label",
+          "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-28T22:50:00Z" }] }
+        }
+      ],
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "移行に必要な前提条件は何ですか？",
+            "a": "AWS アカウント、Storage Mover リソース、移行先ファイル共有、プライベート接続、FSx 認証情報を保存した Key Vault が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration" }]
+          },
+          {
+            "q": "移行後の FSx のデータはどうなりますか？",
+            "a": "データはコピーされ移動はされないため、廃止しない限り FSx に残ります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration" }]
+          },
+          {
+            "q": "大規模な共有でも移行できますか？",
+            "a": "1 ジョブ最大 5 億オブジェクトです。超える場合は移行範囲を複数ジョブに分割します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=567979",
+        "learn": [
+          { "title": "Azure Storage Mover (Preview)で AWS FSx から Azure Files へデータを移行", "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/amazon-files-azure-files-migration", "locale": "ja-jp" },
+          { "title": "Azure Storage Mover とは", "url": "https://learn.microsoft.com/ja-jp/azure/storage-mover/service-overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
