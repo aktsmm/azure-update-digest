@@ -1,0 +1,166 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568905"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-28T22:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "568905",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Databricks の SharePoint コネクタが一般提供（GA）に",
+        "subtitleJa": "Lakeflow Connect で SharePoint のファイルを Azure Databricks へ取り込めます",
+        "en": "Generally Available: SharePoint Connector for Azure Databricks"
+      },
+      "meta": {
+        "publishedJst": "2026-08-06",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Databricks"],
+        "categories": ["databases", "ai"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "SharePoint の文書を分析や AI に使いたい**Azure Databricks 利用者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "企業コンテンツをデータ・AI ワークフローに統合しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "SharePoint のデータを取り込みたい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ファイルをバイナリで取り込むか、CSV・JSON・Excel などを Delta テーブルへ取り込む",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/lakeflow-connect/sharepoint", "locator": "冒頭", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            },
+            {
+              "text": "増分インジェスト、Unity Catalog のガバナンス、スキーマの展開に対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/lakeflow-connect/sharepoint", "locator": "機能の可用性", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            },
+            {
+              "text": "SharePoint list も構造化 Delta テーブルとして取り込める",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/lakeflow-connect/sharepoint", "locator": "冒頭", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "管理者が認証を設定し、カタログ エクスプローラーで SharePoint 接続を作成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/lakeflow-connect/sharepoint-connection", "locator": "接続を作成する", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            },
+            {
+              "text": "認証は OAuth U2M（Databricks 管理は推奨）、M2M、手動更新トークンから選択",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/lakeflow-connect/sharepoint-connection", "locator": "認証方法", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            },
+            {
+              "text": "管理者以外は、既存の接続から UI や API でパイプラインを作成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/lakeflow-connect/sharepoint", "locator": "SharePoint からの取り込み開始", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "SCD タイプ 2 と API での列の選択・選択解除は未サポート",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/lakeflow-connect/sharepoint", "locator": "機能の可用性", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            },
+            {
+              "text": "基本認証（ユーザー名/パスワードなど）は未サポート",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/lakeflow-connect/sharepoint", "locator": "認証方法", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た方法との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "マネージド コネクタ: 完全管理で Delta テーブルを同期 / SQL・Spark API: 自前でパイプラインを構築",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/sharepoint", "locator": "SharePointからの取り込み方法を選択する", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            },
+            {
+              "text": "Databricks はほとんどのユース ケースでマネージド コネクタを推奨",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/sharepoint", "locator": "Tip", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "社内文書を Delta テーブルに集め、分析や AI の入力に使う", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "個人アカウントで認証した接続は共有しない（資格情報とデータが他者に見える）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/lakeflow-connect/sharepoint-connection", "locator": "Warning", "retrievedAt": "2026-10-28T22:50:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-databricks", "term": "Azure Databricks", "type": "product", "oneLine": { "text": "Azure 上でデータと AI のワークフローを実行できる Databricks のサービス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "lakeflow-connect", "term": "Lakeflow Connect", "type": "feature", "oneLine": { "text": "SharePoint などのソースからデータを取り込むマネージド コネクタを提供する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/lakeflow-connect/sharepoint", "locator": "冒頭", "retrievedAt": "2026-10-28T22:50:00Z" }] } },
+        { "termKey": "unity-catalog", "term": "Unity Catalog", "type": "feature", "oneLine": { "text": "取り込んだデータのガバナンスと、接続の資格情報の保管に使われる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/sharepoint", "locator": "主な機能", "retrievedAt": "2026-10-28T22:50:00Z" }] } },
+        { "termKey": "incremental-ingestion", "term": "増分インジェスト", "type": "term", "oneLine": { "text": "新規・変更分のファイルだけを継続的に取り込む方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/sharepoint", "locator": "冒頭", "retrievedAt": "2026-10-28T22:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-28T22:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Lakeflow Connect のマネージド コネクタは Japan East で提供。Japan West は対象外",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/databricks/resources/feature-region-support", "locator": "Ingestion availability", "retrievedAt": "2026-10-28T22:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568905",
+        "learn": [
+          { "title": "SharePoint コネクタ", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/lakeflow-connect/sharepoint", "locale": "ja-jp" },
+          { "title": "SharePoint 接続を作成する", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/lakeflow-connect/sharepoint-connection", "locale": "ja-jp" },
+          { "title": "SharePointからファイルを取り込む", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/sharepoint", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Lakeflow Connect のマネージド コネクタは Japan East で提供され、Japan West は対象に含まれません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/databricks/resources/feature-region-support" }]
+          },
+          {
+            "q": "どの認証方法に対応していますか？",
+            "a": "OAuth U2M、OAuth M2M、手動更新トークンの OAuth に対応します。基本認証は未サポートです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/lakeflow-connect/sharepoint" }]
+          },
+          {
+            "q": "SQL や Spark API での取り込みとどちらを使うべきですか？",
+            "a": "Databricks は、ほとんどのユース ケースでマネージド SharePoint コネクタの使用を推奨しています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ingestion/sharepoint" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
