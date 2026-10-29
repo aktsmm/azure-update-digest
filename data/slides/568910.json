@@ -1,0 +1,167 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["568910"],
+    "coverage": "complete",
+    "snapshotAt": "2026-10-28T22:54:39Z"
+  },
+  "slides": [
+    {
+      "key": "568910",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Databricks の Unity AI Gateway が一般提供（GA）に",
+        "subtitleJa": "モデル・エージェント・MCP を一か所でガバナンス（アクセス制御・コスト管理・ガードレール）",
+        "en": "Generally Available: Unity AI Gateway on Azure Databricks"
+      },
+      "meta": {
+        "publishedJst": "2026-08-06",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "August" }],
+        "status": "Launched",
+        "products": ["Azure Databricks"],
+        "categories": ["databases", "ai"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Azure Databricks で **AI モデル・エージェント・MCP を運用／管理する方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "AI 利用の使用状況・コスト・アクセスを一元的に管理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "AI 利用の統制が必要なら導入を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "モデル・MCP へのリクエストを中央の制御プレーンでルーティング",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/ai-governance", "locator": "冒頭", "retrievedAt": "2026-10-28T22:54:00Z" }]
+            },
+            {
+              "text": "レート制限・予算・使用状況の追跡を強制",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/ai-governance", "locator": "Azure Databricks での AI ガバナンスのしくみ", "retrievedAt": "2026-10-28T22:54:00Z" }]
+            },
+            {
+              "text": "アクセス権は Unity Catalog の権限で管理",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/unity-gateway/concepts", "locator": "Unityカタログとアクセス制御", "retrievedAt": "2026-10-28T22:54:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "モデル サービスを作成し、レート制限や MCP のアクセス管理を設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/ai-governance", "locator": "ステップ 2", "retrievedAt": "2026-10-28T22:54:00Z" }]
+            },
+            {
+              "text": "コーディング エージェントは Unity Gateway CLI（ug）で接続",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/coding-agent-quickstart", "locator": "エージェントをセットアップして実行しましょう", "retrievedAt": "2026-10-28T22:54:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Unity Catalog が有効なワークスペースが必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/ai-governance", "locator": "前提条件", "retrievedAt": "2026-10-28T22:54:00Z" }]
+            },
+            {
+              "text": "サービス ポリシーはベータ版で、プレビューの有効化が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/ai-governance", "locator": "ステップ 3", "retrievedAt": "2026-10-28T22:54:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する機能", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "サービス ポリシー: PII・プロンプト インジェクション等への組み込みガードレール",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/ai-governance", "locator": "ステップ 3", "retrievedAt": "2026-10-28T22:54:00Z" }]
+            },
+            {
+              "text": "使用状況テーブル・コスト分析・推論テーブルで監視と監査",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/", "locator": "使用状況、コスト、およびリスクを監視する", "retrievedAt": "2026-10-28T22:54:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Claude Code・Codex など外部コーディング エージェントを統制して利用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/ai-governance", "locator": "冒頭", "retrievedAt": "2026-10-28T22:54:00Z" }]
+            },
+            {
+              "text": "ユーザーごとの予算の上限設定で AI の支出を管理",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/", "locator": "AI トラフィックのルーティングと管理", "retrievedAt": "2026-10-28T22:54:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-databricks", "term": "Azure Databricks", "type": "product", "oneLine": { "text": "Azure 上でデータと AI を扱う Databricks のプラットフォーム。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "unity-ai-gateway", "term": "Unity AI Gateway", "type": "feature", "oneLine": { "text": "AI のモデルやツールへの接続・アクセス・コストを一か所で管理する制御プレーン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/unity-gateway/concepts", "locator": "冒頭", "retrievedAt": "2026-10-28T22:54:00Z" }] } },
+        { "termKey": "unity-catalog", "term": "Unity Catalog", "type": "feature", "oneLine": { "text": "データや AI 資産の権限を一元管理する Databricks のガバナンス基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/ai-governance", "locator": "Azure Databricks での AI ガバナンスのしくみ", "retrievedAt": "2026-10-28T22:54:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "エージェントがツールを発見・呼び出すためのモデル コンテキスト プロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/unity-gateway/concepts", "locator": "MCP", "retrievedAt": "2026-10-28T22:54:00Z" }] } },
+        { "termKey": "service-policy", "term": "サービス ポリシー", "type": "feature", "oneLine": { "text": "AI サービスへの要求と応答を許可・拒否するガードレール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/ai-governance", "locator": "ステップ 3", "retrievedAt": "2026-10-28T22:54:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-28T22:54:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Unity Gateway は Japan East で提供、Japan West は対象外",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/azure/databricks/resources/feature-region-support", "locator": "AI and machine learning features availability", "retrievedAt": "2026-10-28T22:54:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=568910",
+        "learn": [
+          { "title": "Unity Gateway コンセプト", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/unity-gateway/concepts", "locale": "ja-jp" },
+          { "title": "AI ガバナンス ガイド", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/ai-governance", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "利用の前提条件は？",
+            "a": "Unity Catalog が有効なワークスペースが必要です。サービス ポリシーはベータ版のため、プレビューの有効化が別途必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/ai-governance" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Learn の機能別リージョン表では Unity Gateway は Japan East が対象で、Japan West は対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/databricks/resources/feature-region-support" }]
+          },
+          {
+            "q": "外部のモデルやツールも管理できますか？",
+            "a": "OpenAI・Anthropic などの外部モデルや、外部の MCP サーバー、外部コーディング エージェントにも同じ管理を適用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/ai-governance" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
