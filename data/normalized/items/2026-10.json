@@ -2733,6 +2733,84 @@
     {
       "availabilities": [
         {
+          "month": "July",
+          "ring": "Private Preview",
+          "year": 2026
+        },
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": "2026-07"
+      },
+      "canonicalKey": "576547",
+      "categories": [
+        "ops-governance"
+      ],
+      "created": "2026-10-28T16:23:43.6489709Z",
+      "createdJst": "2026-10-29",
+      "description": "Private offers through Microsoft Marketplace help you optimize your spending power with pricing and terms aligned to your organization’s needs, including flexible billing, custom contract lengths, and more. For eligible private offers, we are simplifying the private offer purchase experience for customers. Previously, customers needed to first “accept” the private offer and then “purchase” individual products. Now, customers simply purchase all included products with one easy step for eligible private offers. Purchase governance remains aligned with Azure role-based access controls through the billing admin role. This is currently being enabled for SaaS and Professional Services offer types.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "99f74fbbabf3736adf76cb2ebfcc85b30cd45dc5191d3e3990012f697a263020",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-29T00:37:09.637Z",
+          "fingerprint": "a0f8d4ae7387f2794462cd5dc8c63140b905c917c3a802673ff28fde1715ffbc",
+          "modifiedAfter": "2026-10-28T16:23:43.6489709Z",
+          "modifiedBefore": null,
+          "rawRef": "20261029T003709637Z_list_sweep_o0.json#576547"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-29T00:37:27.081Z",
+          "fingerprint": "99f74fbbabf3736adf76cb2ebfcc85b30cd45dc5191d3e3990012f697a263020",
+          "modifiedAfter": "2026-10-28T16:23:43.6489709Z",
+          "modifiedBefore": "2026-10-28T16:23:43.6489709Z",
+          "rawRef": "20261029T003727081Z_detail_576547.json#576547"
+        }
+      ],
+      "ids": [
+        "576547"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "576547",
+      "modified": "2026-10-28T16:23:43.6489709Z",
+      "modifiedJst": "2026-10-29",
+      "productCategories": [
+        "Management and governance"
+      ],
+      "products": [
+        "Microsoft Azure portal"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=576547",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Marketplace private offer enhancements "
+    },
+    {
+      "availabilities": [
+        {
           "month": "October",
           "ring": "Preview",
           "year": 2026
@@ -2874,6 +2952,84 @@
         "Feature"
       ],
       "title": "Generally Available: Azure Cosmos DB Safe Key Rotation"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-10",
+        "privatePreview": null
+      },
+      "canonicalKey": "577117",
+      "categories": [
+        "storage",
+        "security",
+        "ops-governance"
+      ],
+      "created": "2026-10-28T17:09:30.4621383Z",
+      "createdJst": "2026-10-29",
+      "description": "Cross-Tenant Restore (CTR) helps organizations establish an independent recovery path by enabling Azure VM backups to be restored into a separate Azure tenant. It strengthens cyber resilience while using the existing backup copy, without requiring customers to maintain and manage duplicate backup data.Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "ccc0e966af11f41a58898b45ea5109475e3fd736f6a37756a8f914eb80827226",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-29T00:37:09.637Z",
+          "fingerprint": "17c125a61e55c6622b02a18b2c6ac025aed7a0f89feeae0aa79b55e340a439c4",
+          "modifiedAfter": "2026-10-28T17:09:30.4621383Z",
+          "modifiedBefore": null,
+          "rawRef": "20261029T003709637Z_list_sweep_o0.json#577117"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-29T00:37:22.613Z",
+          "fingerprint": "ccc0e966af11f41a58898b45ea5109475e3fd736f6a37756a8f914eb80827226",
+          "modifiedAfter": "2026-10-28T17:09:30.4621383Z",
+          "modifiedBefore": "2026-10-28T17:09:30.4621383Z",
+          "rawRef": "20261029T003722613Z_detail_577117.json#577117"
+        }
+      ],
+      "ids": [
+        "577117"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "security-tag"
+        ],
+        "score": 5,
+        "topics": [
+          "security"
+        ]
+      },
+      "latestId": "577117",
+      "modified": "2026-10-28T17:09:30.4621383Z",
+      "modifiedJst": "2026-10-29",
+      "productCategories": [
+        "Management and governance",
+        "Storage"
+      ],
+      "products": [
+        "Azure Backup"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577117",
+      "status": "In preview",
+      "tags": [
+        "Feature",
+        "Management",
+        "Microsoft Ignite",
+        "Security"
+      ],
+      "title": "Public Preview: Cross Tenant Restore with Azure Backup"
     },
     {
       "availabilities": [
@@ -3317,6 +3473,74 @@
         "Feature"
       ],
       "title": "Generally Available: ABFS Vectored Read for Azure Data Lake Storage"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "September",
+          "ring": "Effective",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "577689",
+      "categories": [
+        "containers"
+      ],
+      "created": "2026-10-28T17:52:51.6023895Z",
+      "createdJst": "2026-10-29",
+      "description": "The Log Analytics logging destination for Azure Container Apps is now a legacy logging option. Existing environments configured with the Log Analytics logging destination will continue to function normally. However, we recommend planning a migration to the Azure Monitor logging destination.   This recommendation is driven by the underlying HTTP Data Collector API used by the Log Analytics logging destination. Support for the legacy HTTP Data Collector API ended on September 14, 2026 and will now only be receiving critical security updates.  Recommended action  Review any monitoring resources that depend on logs collected through the Log Analytics logging destination, including: Log queries Dashboards Alerts Workbooks If your monitoring solutions reference either of the following tables, your environment is using the Log Analytics logging destination: ContainerAppConsoleLogs_CL ContainerAppSystemLogs_CL Customers using both Azure Container Apps Log Analytics logging and direct HTTP Data Collector API ingestion should plan for both migrations. Learn more: Azure\ndocumentation Separate\nmigration guidance for the Logs Ingestion API ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "9118be01a635bb014b02ff613d88036ecb8c6165e8f865693652c5026a9c6caa",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-29T00:37:09.637Z",
+          "fingerprint": "8b403881b310d67bb274648c01a6191c1c76d4671871f6c01e62a556dfbc0766",
+          "modifiedAfter": "2026-10-28T17:52:51.6023895Z",
+          "modifiedBefore": null,
+          "rawRef": "20261029T003709637Z_list_sweep_o0.json#577689"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-29T00:37:16.149Z",
+          "fingerprint": "9118be01a635bb014b02ff613d88036ecb8c6165e8f865693652c5026a9c6caa",
+          "modifiedAfter": "2026-10-28T17:52:51.6023895Z",
+          "modifiedBefore": "2026-10-28T17:52:51.6023895Z",
+          "rawRef": "20261029T003716149Z_detail_577689.json#577689"
+        }
+      ],
+      "ids": [
+        "577689"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "577689",
+      "modified": "2026-10-28T17:52:51.6023895Z",
+      "modifiedJst": "2026-10-29",
+      "productCategories": [
+        "Containers"
+      ],
+      "products": [
+        "Azure Container Apps"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577689",
+      "status": null,
+      "tags": [
+        "Announcement"
+      ],
+      "title": "Announcing: Migrate Azure Container Apps logging destination from Log Analytics to Azure Monitor"
     },
     {
       "availabilities": [
