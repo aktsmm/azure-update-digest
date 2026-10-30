@@ -3846,6 +3846,228 @@
         "Management"
       ],
       "title": "Generally Available: Higher limit of Azure Blob Storage accounts per region per subscription"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "578662",
+      "categories": [
+        "devtools"
+      ],
+      "created": "2026-10-29T17:04:58.3369171Z",
+      "createdJst": "2026-10-30",
+      "description": "Azure MCP Server 3.0 is now generally available, expanding how AI agents and developer tools interact with Azure through the open Model Context Protocol (MCP).This release introduces new and expanded capabilities:Infrastructure as code: Azure Terraform tools for provider documentation, Azure Verified Modules, resource export, and policy validation.Protection and recovery: Azure Backup and Azure Resilience Management tools for backup protection, recovery plans, readiness checks, and drills.Cost optimization: Expanded Azure Advisor capabilities and optimization tools for reviewing recommendations, comparing resource options, and understanding utilization.More predictable integrations: Clearer tool contracts, stricter input and endpoint validation, and opt-in structured output.Version 3.0 also introduces safer defaults when creating Storage accounts, Event Hubs namespaces, NFS file shares, and Recovery Services vaults.This release includes breaking changes. Review the upgrade guidance before updating existing integrations or shared deployments.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "94b6d08049f88a9f5b9d185b06714d8ec0aac6ef383bd4616a280689c465618d",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-30T00:37:55.051Z",
+          "fingerprint": "4ed41e4c251493d0e88df5ac5affc25930e6daa2c4efbe412e3fb11d5dfdbbb2",
+          "modifiedAfter": "2026-10-29T17:04:58.3369171Z",
+          "modifiedBefore": null,
+          "rawRef": "20261030T003755051Z_list_sweep_o0.json#578662"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-30T00:38:11.110Z",
+          "fingerprint": "94b6d08049f88a9f5b9d185b06714d8ec0aac6ef383bd4616a280689c465618d",
+          "modifiedAfter": "2026-10-29T17:04:58.3369171Z",
+          "modifiedBefore": "2026-10-29T17:04:58.3369171Z",
+          "rawRef": "20261030T003811110Z_detail_578662.json#578662"
+        }
+      ],
+      "ids": [
+        "578662"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "578662",
+      "modified": "2026-10-29T17:04:58.3369171Z",
+      "modifiedJst": "2026-10-30",
+      "productCategories": [
+        "Developer tools"
+      ],
+      "products": [
+        "SDKs"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=578662",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "SDK and Tools"
+      ],
+      "title": "Generally Available: Azure MCP Server 3.0"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "578681",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-10-29T17:09:49.2718472Z",
+      "createdJst": "2026-10-30",
+      "description": "Announcing the general\navailability of the HTTP DDoS ruleset for Azure Web Application Firewall (WAF)\non Azure Front Door Premium. HTTP-layer DDoS attacks remain a leading cause of\napplication downtime, and static controls such as IP filters and fixed rate\nlimits often can't keep pace with distributed botnets. The HTTP DDoS ruleset\nprovides automated, adaptive layer 7 protection that learns, detects, and\ndefends with minimal configuration. Once assigned, it continuously baselines\nnormal traffic for each Azure Front Door profile and, when a surge indicates an\nattack, selectively mitigates offending clients with no emergency tuning required. With general availability, the HTTP DDoS ruleset features: Automated traffic baselines\nat both the profile and per-client level, with three sensitivity levels for\neach rule. Two generally available\nrules: one for clients sending anomalously high request rates, and one for\nsuspected bots identified by Microsoft Threat Intelligence. Support for WAF exceptions,\nso trusted traffic such as health probes and load tests can be exempted from\nthe ruleset. Two new geo rules in the ruleset are also available in preview.\nThey learn thresholds for the countries and regions that send most of your\ntraffic, plus a combined threshold for all others, to help mitigate highly\ndistributed attacks. All rules default to the Log action, so you can review\nmatches before enforcing them. Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "5bb245db7be7e0bd84c48f1b0455534027a04a0e012d19ce4deec39c47c4e42e",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-30T00:37:55.051Z",
+          "fingerprint": "a9775dc12efd1f22325a4e727887a98ba4e12dce418f4f605745a685badf93a6",
+          "modifiedAfter": "2026-10-29T17:09:49.2718472Z",
+          "modifiedBefore": null,
+          "rawRef": "20261030T003755051Z_list_sweep_o0.json#578681"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-30T00:38:04.860Z",
+          "fingerprint": "5bb245db7be7e0bd84c48f1b0455534027a04a0e012d19ce4deec39c47c4e42e",
+          "modifiedAfter": "2026-10-29T17:09:49.2718472Z",
+          "modifiedBefore": "2026-10-29T17:09:49.2718472Z",
+          "rawRef": "20261030T003804860Z_detail_578681.json#578681"
+        }
+      ],
+      "ids": [
+        "578681"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "security"
+        ]
+      },
+      "latestId": "578681",
+      "modified": "2026-10-29T17:09:49.2718472Z",
+      "modifiedJst": "2026-10-30",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Front Door",
+        "Web Application Firewall"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=578681",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Security"
+      ],
+      "title": "Generally Available: HTTP DDoS ruleset for Azure Front Door Premium WAF"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "578850",
+      "categories": [
+        "other"
+      ],
+      "created": "2026-10-29T21:19:52.9485924Z",
+      "createdJst": "2026-10-30",
+      "description": "Large OS Disk Encryption (LOSDE) is now generally available for Azure Confidential VM migration scenarios. Organizations can move larger, production-scale workloads into confidential computing with the OS disk fully protected, instead of being held back by disk size.During migration, the OS disk is encrypted with confidential disk encryption. This protects all critical partitions and binds the encryption keys to the VM's virtual TPM, so disk content is accessible only to that VM, not to the host or hypervisor. Keys are released only after the platform passes attestation. Because encryption happens as part of the move, teams don't have to shrink, rebuild or re-encrypt large system images, and workloads move into a hardware-enforced trusted execution environment without code changes. Customers keep control of their keys, using platform-managed keys or their own keys backed by Azure Key Vault Premium or Managed HSM.Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "788d1800c188c576afc6faa2a4c1a5a668c8ae81974519264eaf2fec5a89f9ac",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-10-30T00:37:55.051Z",
+          "fingerprint": "66584a25df7ca97aaef40aecf2de66854ac079734004ab5f14f3e00cc572e3b1",
+          "modifiedAfter": "2026-10-29T21:19:52.9485924Z",
+          "modifiedBefore": null,
+          "rawRef": "20261030T003755051Z_list_sweep_o0.json#578850"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-10-30T00:37:59.128Z",
+          "fingerprint": "788d1800c188c576afc6faa2a4c1a5a668c8ae81974519264eaf2fec5a89f9ac",
+          "modifiedAfter": "2026-10-29T21:19:52.9485924Z",
+          "modifiedBefore": "2026-10-29T21:19:52.9485924Z",
+          "rawRef": "20261030T003759128Z_detail_578850.json#578850"
+        }
+      ],
+      "ids": [
+        "578850"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "578850",
+      "modified": "2026-10-29T21:19:52.9485924Z",
+      "modifiedJst": "2026-10-30",
+      "productCategories": [],
+      "products": [],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=578850",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Large OS Disk Encryption for Azure Confidential VM migrations"
     }
   ],
   "month": "2026-10",

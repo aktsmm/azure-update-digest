@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "578681"
+  },
+  "fetchedAt": "2026-10-30T00:38:04.860Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "578681",
+    "created": "2026-10-29T17:09:49.2718472Z",
+    "description": "Announcing the general\navailability of the HTTP DDoS ruleset for Azure Web Application Firewall (WAF)\non Azure Front Door Premium. HTTP-layer DDoS attacks remain a leading cause of\napplication downtime, and static controls such as IP filters and fixed rate\nlimits often can't keep pace with distributed botnets. The HTTP DDoS ruleset\nprovides automated, adaptive layer 7 protection that learns, detects, and\ndefends with minimal configuration. Once assigned, it continuously baselines\nnormal traffic for each Azure Front Door profile and, when a surge indicates an\nattack, selectively mitigates offending clients with no emergency tuning required. With general availability, the HTTP DDoS ruleset features: Automated traffic baselines\nat both the profile and per-client level, with three sensitivity levels for\neach rule. Two generally available\nrules: one for clients sending anomalously high request rates, and one for\nsuspected bots identified by Microsoft Threat Intelligence. Support for WAF exceptions,\nso trusted traffic such as health probes and load tests can be exempted from\nthe ruleset. Two new geo rules in the ruleset are also available in preview.\nThey learn thresholds for the countries and regions that send most of your\ntraffic, plus a combined threshold for all others, to help mitigate highly\ndistributed attacks. All rules default to the Log action, so you can review\nmatches before enforcing them. Learn\nmore. ",
+    "generalAvailabilityDate": "2026-10",
+    "id": "578681",
+    "modified": "2026-10-29T17:09:49.2718472Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure Front Door",
+      "Web Application Firewall"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Generally Available: HTTP DDoS ruleset for Azure Front Door Premium WAF"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

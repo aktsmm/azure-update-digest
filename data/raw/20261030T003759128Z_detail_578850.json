@@ -1,0 +1,31 @@
+{
+  "args": {
+    "id": "578850"
+  },
+  "fetchedAt": "2026-10-30T00:37:59.128Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "578850",
+    "created": "2026-10-29T21:19:52.9485924Z",
+    "description": "Large OS Disk Encryption (LOSDE) is now generally available for Azure Confidential VM migration scenarios. Organizations can move larger, production-scale workloads into confidential computing with the OS disk fully protected, instead of being held back by disk size.During migration, the OS disk is encrypted with confidential disk encryption. This protects all critical partitions and binds the encryption keys to the VM's virtual TPM, so disk content is accessible only to that VM, not to the host or hypervisor. Keys are released only after the platform passes attestation. Because encryption happens as part of the move, teams don't have to shrink, rebuild or re-encrypt large system images, and workloads move into a hardware-enforced trusted execution environment without code changes. Customers keep control of their keys, using platform-managed keys or their own keys backed by Azure Key Vault Premium or Managed HSM.Learn more. ",
+    "generalAvailabilityDate": "2026-10",
+    "id": "578850",
+    "modified": "2026-10-29T21:19:52.9485924Z",
+    "productCategories": [],
+    "products": [],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Large OS Disk Encryption for Azure Confidential VM migrations"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
