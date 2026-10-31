@@ -1,0 +1,47 @@
+{
+  "args": {
+    "filter": "modified ge 2026-10-30T00:24:33Z and modified lt 2026-10-31T23:57:10Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-10-31T23:57:10.840Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "577491",
+        "created": "2026-10-30T17:16:27.273471Z",
+        "description": "With database-level managed identity in Azure SQL Database, you can use a user-assigned managed identity for each database to query files in Azure Blob Storage and Azure Data Lake Storage Gen2 through...",
+        "id": "577491",
+        "modified": "2026-10-30T17:16:27.273471Z",
+        "previewAvailabilityDate": "2026-10",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Support database-level managed identity (including FIC) in Create Database Scoped Credential T-SQL "
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 1,
+    "totalCount": 1
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}
