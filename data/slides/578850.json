@@ -1,0 +1,124 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["578850"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-01T21:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "578850",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "機密 VM 移行向けの大容量 OS ディスク暗号化（LOSDE）が GA に",
+        "subtitleJa": "ディスクサイズを理由に諦めていた大規模ワークロードも、OS ディスクを保護したまま機密コンピューティングへ移行できます",
+        "en": "Generally Available: Large OS Disk Encryption for Azure Confidential VM migrations"
+      },
+      "meta": {
+        "publishedJst": "2026-10-30",
+        "modifiedJst": "2026-10-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Confidential VM"],
+        "categories": ["other"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "大きな OS ディスクの **既存 VM を機密 VM へ移行したい**方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ディスクの縮小・再構築・再暗号化なしで、大規模な本番ワークロードを機密 VM へ移行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "大きな OS ディスクで移行を見送っていた場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "移行時に OS ディスクが機密ディスク暗号化で保護され、ディスクサイズが移行の障壁になりにくくなる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "移行時に OS ディスクを機密ディスク暗号化で保護（重要なパーティションを対象）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "鍵は VM の仮想 TPM に紐付き、ホストやハイパーバイザーからは読めない", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "鍵はプラットフォームの構成証明に成功した後にのみ解放される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "鍵の選択肢", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プラットフォーム管理キー、または顧客管理キーを選択できる", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview", "locator": "機密 OS ディスク暗号化", "retrievedAt": "2026-11-01T21:45:00Z" }] },
+            { "text": "独自キーは Azure Key Vault Premium または Managed HSM で保持できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "アプリケーションのコード変更なしで、ハードウェアで保護された実行環境へ移行", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "OS イメージは機密 VM の要件を満たす必要がある。暗号化設定はデプロイ後に変更できない", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview", "locator": "OS のサポート / 機密 OS ディスク暗号化", "retrievedAt": "2026-11-01T21:45:00Z" }] },
+            { "text": "自動キー回転は非対応（オフライン鍵ローテーションのみ）", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview", "locator": "機能のサポート", "retrievedAt": "2026-11-01T21:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連機能", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "機密一時ディスクの暗号化: 一時ディスクのページ ファイルなどもホストに公開しない（オプトイン）", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview", "locator": "機密一時ディスクの暗号化", "retrievedAt": "2026-11-01T21:45:00Z" }] },
+            { "text": "機密 OS ディスク暗号化を選ぶと、既定でセキュア ブートが提供される", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview", "locator": "機密 OS ディスク暗号化", "retrievedAt": "2026-11-01T21:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "システムイメージが大きく機密 VM 移行を見送っていた本番ワークロード", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "暗号化された OS ディスクは 2026 年 3 月 30 日以降コストが高くなる", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview", "locator": "暗号化価格の違い", "retrievedAt": "2026-11-01T21:45:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "confidential-vm", "term": "Azure 機密 VM", "type": "product", "oneLine": { "text": "ワークロードと仮想化スタックの間にハードウェアの境界を作り、VM の状態を保護する VM。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview", "locator": "冒頭", "retrievedAt": "2026-11-01T21:45:00Z" }] } },
+        { "termKey": "losde", "term": "LOSDE", "type": "feature", "oneLine": { "text": "大きな OS ディスクを持つ機密 VM 移行向けのディスク暗号化機能（Large OS Disk Encryption）。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "vtpm", "term": "仮想 TPM（vTPM）", "type": "term", "oneLine": { "text": "TPM 2.0 に準拠した、鍵や測定値を保持する VM 専用の安全なコンテナー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview", "locator": "構成証明と TPM", "retrievedAt": "2026-11-01T21:45:00Z" }] } },
+        { "termKey": "attestation", "term": "構成証明", "type": "term", "oneLine": { "text": "プラットフォームのブート設定やファームウェアなどを検証して証明する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview", "locator": "構成証明と TPM", "retrievedAt": "2026-11-01T21:45:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-01T21:45:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=578850",
+        "learn": [{ "title": "Azure の機密 VM について", "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "暗号化キーは自分で管理できますか？",
+            "a": "はい。プラットフォーム管理キーまたは顧客管理キーを選べます。顧客管理キーは Key Vault Premium / Managed HSM で保持できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview" }]
+          },
+          {
+            "q": "追加費用はかかりますか？",
+            "a": "暗号化された OS ディスクは 2026 年 3 月 30 日以降コストが高くなります。詳細はマネージド ディスクの料金ガイドを参照してください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview" }]
+          },
+          {
+            "q": "デプロイ後に暗号化設定を変えられますか？",
+            "a": "機密 OS ディスク暗号化の設定は、デプロイ後に変更できません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-vm-overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
