@@ -1,0 +1,110 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577689"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-01T21:56:00Z"
+  },
+  "slides": [
+    {
+      "key": "577689",
+      "kind": "announcement",
+      "kindSource": "tags",
+      "label": "アナウンス",
+      "title": {
+        "ja": "Container Apps の Log Analytics ログ宛先がレガシーに",
+        "subtitleJa": "Azure Monitor ログ宛先への移行を計画してください（既存環境は継続動作）",
+        "en": "Announcing: Migrate Azure Container Apps logging destination from Log Analytics to Azure Monitor"
+      },
+      "meta": {
+        "publishedJst": "2026-10-29",
+        "modifiedJst": "2026-10-29",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "September" }],
+        "status": null,
+        "products": ["Azure Container Apps"],
+        "categories": ["containers"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Container Apps の Log Analytics ログ宛先を使っている環境**の運用担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "既存環境は正常に動作し続けるが、Azure Monitor ログ宛先への移行が推奨される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "neutral"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "_CL テーブルを参照するクエリ、ダッシュボード、アラート、ブックを確認し、移行を計画する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": { "text": "Log Analytics 宛先: カスタム テーブル ContainerAppConsoleLogs_CL / ContainerAppSystemLogs_CL に書き込み", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-logs-azure-monitor", "locator": "モニタリング移行の計画", "retrievedAt": "2026-11-01T21:56:00Z" }] },
+        "after": { "text": "Azure Monitor 宛先: 診断設定で選んだワークスペースの ContainerAppConsoleLogs / ContainerAppSystemLogs に書き込み", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-logs-azure-monitor", "locator": "モニタリング移行の計画", "retrievedAt": "2026-11-01T21:56:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "適用範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ログ宛先が Log Analytics の Container Apps 環境が対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "背景: HTTP Data Collector API のサポートが 2026年9月14日に終了", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Express 環境モードは Azure Monitor 宛先が未提供のため、この移行の対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-logs-azure-monitor", "locator": "Important", "retrievedAt": "2026-11-01T21:56:00Z" }] }
+          ]
+        },
+        {
+          "id": "permissions", "heading": "前提・知っておくべき点", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "宛先を切り替えると、ルーティングは直ちに切り替わる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-logs-azure-monitor", "locator": "モニタリング移行の計画", "retrievedAt": "2026-11-01T21:56:00Z" }] },
+            { "text": "診断設定を作成するまでログは送信されず、反映に最大90分かかる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-logs-azure-monitor", "locator": "モニタリング移行の計画", "retrievedAt": "2026-11-01T21:56:00Z" }] },
+            { "text": "_CL テーブルを照会するアラートは、切替後に新しいデータを受信しなくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-logs-azure-monitor", "locator": "モニタリング移行の計画", "retrievedAt": "2026-11-01T21:56:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "どちらかの _CL テーブルを参照していれば、Log Analytics 宛先を使用中", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "同 API を直接呼ぶアプリは、Logs Ingestion API への移行も必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-logs-azure-monitor", "locator": "冒頭", "retrievedAt": "2026-11-01T21:56:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-container-apps", "term": "Azure Container Apps", "type": "product", "oneLine": { "text": "コンテナー化したアプリを実行する Azure のサービス。ログ設定は環境レベルで構成する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/log-options", "locator": "冒頭", "retrievedAt": "2026-11-01T21:56:00Z" }] } },
+        { "termKey": "log-destination", "term": "ログ宛先", "type": "feature", "oneLine": { "text": "環境のログの保存先で、Log Analytics・Azure Monitor・保存しない、から選ぶ設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/log-options", "locator": "ログのオプションを構成する", "retrievedAt": "2026-11-01T21:56:00Z" }] } },
+        { "termKey": "azure-monitor", "term": "Azure Monitor 宛先", "type": "feature", "oneLine": { "text": "診断設定を通じて、ログを Log Analytics・ストレージ・イベント ハブなどへルーティングする宛先。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/log-options", "locator": "冒頭", "retrievedAt": "2026-11-01T21:56:00Z" }] } },
+        { "termKey": "diagnostic-settings", "term": "診断設定", "type": "term", "oneLine": { "text": "ログのカテゴリごとに送信先を指定する設定で、環境に最大5つ作成できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/log-options", "locator": "環境レベルで診断設定を構成する", "retrievedAt": "2026-11-01T21:56:00Z" }] } },
+        { "termKey": "http-data-collector-api", "term": "HTTP Data Collector API", "type": "term", "oneLine": { "text": "Log Analytics 宛先が内部で使う API。非推奨化が進み、サポートは2026年9月14日に終了。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-logs-azure-monitor", "locator": "冒頭", "retrievedAt": "2026-11-01T21:56:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577689",
+        "learn": [
+          { "title": "Azure Container Apps のログ記録を Log Analytics から Azure Monitor に変更する", "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-logs-azure-monitor", "locale": "ja-jp" },
+          { "title": "Azure Container Apps のログ ストレージと監視オプション", "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/log-options", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存の環境はすぐ動かなくなりますか？",
+            "a": "Log Analytics 宛先の既存環境は引き続き正常に動作します。ただし Azure Monitor 宛先への移行が推奨されています。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=577689" }]
+          },
+          {
+            "q": "自分の環境が対象かどうかは、どう確認しますか？",
+            "a": "監視リソースが ContainerAppConsoleLogs_CL または ContainerAppSystemLogs_CL を参照していれば、Log Analytics 宛先を使用中です。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=577689" }, { "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-logs-azure-monitor" }]
+          },
+          {
+            "q": "移行時に注意すべき点は何ですか？",
+            "a": "切替後は診断設定が必要で、反映に最大90分かかります。_CL テーブルを参照するアラートは新しいデータを受信しなくなります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-logs-azure-monitor" }]
+          },
+          {
+            "q": "Express 環境も移行が必要ですか？",
+            "a": "Azure Monitor は Express 環境のログ宛先として現在利用できず、この移行は Express 環境モードの環境には適用されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/container-apps/migrate-logs-azure-monitor" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
