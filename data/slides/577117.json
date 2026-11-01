@@ -1,0 +1,116 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577117"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-01T22:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "577117",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Backup のクロステナント復元（CTR）がパブリック プレビュー",
+        "subtitleJa": "バックアップを別の Entra テナントへ復元し、独立した復旧経路を確保",
+        "en": "Public Preview: Cross Tenant Restore with Azure Backup"
+      },
+      "meta": {
+        "publishedJst": "2026-10-29",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "October" }],
+        "status": "In preview",
+        "products": ["Azure Backup"],
+        "categories": ["storage", "security", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "ランサムウェアやテナント障害に備えたい **Azure Backup 利用者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "既存のバックアップを使い、別テナントで復旧できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "検証向け。リソース ガードと所定のロールが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/tutorial-cross-tenant-restore", "locator": "Prerequisites", "retrievedAt": "2026-11-01T22:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "ソースとターゲットのボールトをマッピングし、ターゲット テナントからバックアップを復元できる。重複したバックアップ データは不要",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Recovery Services コンテナーと Backup コンテナーに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview", "locator": "冒頭", "retrievedAt": "2026-11-01T22:00:00Z" }] },
+            { "text": "Azure VM・Azure Files・SQL Server in VM・SAP HANA などが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview", "locator": "サポートされたワークロードと制限事項", "retrievedAt": "2026-11-01T22:00:00Z" }] },
+            { "text": "用途: テナント ロックアウト、ランサムウェア、テナント統合、DR", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview", "locator": "ユースケース例", "retrievedAt": "2026-11-01T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "復元は代替場所のみ。対象は保管庫の復旧ポイントのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview", "locator": "サポートされたワークロードと制限事項", "retrievedAt": "2026-11-01T22:00:00Z" }] },
+            { "text": "Azure VM は機密 VM・ADE 暗号化 VM・アーカイブ層が非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview", "locator": "サポートされたワークロードと制限事項", "retrievedAt": "2026-11-01T22:00:00Z" }] },
+            { "text": "ターゲット側にリソース ガードが必要。マッピング中は削除不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview", "locator": "Considerations", "retrievedAt": "2026-11-01T22:00:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象ワークロードか、別テナントとリソース ガードを用意できるかを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "必要ロール: ソース側 Backup Contributor、ターゲット側 CTR Creator / Contributor", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/tutorial-cross-tenant-restore", "locator": "必要なロールを割り当てる", "retrievedAt": "2026-11-01T22:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-backup", "term": "Azure Backup", "type": "product", "oneLine": { "text": "ボールトにバックアップ データを保管し、復旧ポイントから復元できるサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview", "locator": "冒頭", "retrievedAt": "2026-11-01T22:00:00Z" }] } },
+        { "termKey": "cross-tenant-restore", "term": "クロステナント復元", "type": "feature", "oneLine": { "text": "あるテナントのバックアップを別のテナントへ復元する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview", "locator": "冒頭", "retrievedAt": "2026-11-01T22:00:00Z" }] } },
+        { "termKey": "vault-mapping", "term": "ボールト マッピング", "type": "term", "oneLine": { "text": "ソース ボールトとターゲット ボールトを対応付ける設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview", "locator": "クロステナント復元の仕組み", "retrievedAt": "2026-11-01T22:00:00Z" }] } },
+        { "termKey": "resource-guard", "term": "リソース ガード", "type": "feature", "oneLine": { "text": "マルチユーザー認証でマッピング操作を保護する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview", "locator": "クロステナント復元の仕組み", "retrievedAt": "2026-11-01T22:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-01T22:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Recovery Services コンテナーは全パブリック リージョン。Backup コンテナーは対象リージョンが限定される",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview", "locator": "リージョンの可用性", "retrievedAt": "2026-11-01T22:00:00Z" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Recovery Services コンテナーはすべてのパブリック リージョンが対象です。Backup コンテナーは西ヨーロッパなど一部リージョンに限られます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview" }]
+          },
+          {
+            "q": "元の場所へ復元できますか？",
+            "a": "できません。代替場所への復元のみで、保管庫の復旧ポイントが対象です。スナップショットのみの復旧ポイントは対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview" }]
+          },
+          {
+            "q": "利用に必要な前提条件は？",
+            "a": "ターゲット テナントのリソース ガードと所定の Azure ロールが必要です。ソースとターゲットのボールトは同じリージョンにある必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/tutorial-cross-tenant-restore" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577117",
+        "learn": [
+          { "title": "Azure Backupのクロステナント復元とは何ですか? (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/backup/cross-tenant-restore-overview", "locale": "ja-jp" },
+          { "title": "チュートリアル: テナント間復元を構成し、テナント間でデータを復元する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/backup/tutorial-cross-tenant-restore", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
