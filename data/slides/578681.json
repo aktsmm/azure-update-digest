@@ -1,0 +1,112 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["578681"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-01T21:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "578681",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Front Door Premium の WAF に HTTP DDoS ルールセットが GA",
+        "subtitleJa": "通常トラフィックを学習し、攻撃元クライアントだけを自動で緩和するレイヤー 7 保護",
+        "en": "Generally Available: HTTP DDoS ruleset for Azure Front Door Premium WAF"
+      },
+      "meta": {
+        "publishedJst": "2026-10-30",
+        "modifiedJst": "2026-10-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Front Door", "Web Application Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Azure Front Door Premium** の WAF を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "静的な制御では追いにくい分散型の HTTP 攻撃に、最小限の設定で対処できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "既定は Log アクション。ログを確認してから適用を判断",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "HTTP DDoS ルールセットのしくみ", "retrievedAt": "2026-11-01T21:50:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プロファイルごとに通常トラフィックをベースライン化し、急増時に攻撃元を選択的に緩和", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "HTTP DDoS ルールセットのしくみ", "retrievedAt": "2026-11-01T21:50:00Z" }] },
+            { "text": "2 段階設計: プロファイルのしきい値を超えた時だけ、クライアント別のしきい値を適用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "HTTP DDoS ルールセットのしくみ", "retrievedAt": "2026-11-01T21:50:00Z" }] },
+            { "text": "各ルールに 3 段階の感度があり、推奨の既定は中感度", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "HTTP DDoS ルールセットのしくみ", "retrievedAt": "2026-11-01T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "割り当てると、ルールは Log アクション・中感度で有効になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "HTTP DDoS ルールセットのしくみ", "retrievedAt": "2026-11-01T21:50:00Z" }] },
+            { "text": "ログを確認し、アプリケーションに合わせて各ルールのアクションを設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "HTTP DDoS ルールセットのしくみ", "retrievedAt": "2026-11-01T21:50:00Z" }] },
+            { "text": "ヘルス プローブやロード テストは WAF 例外で対象から除外できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "信頼トラフィックをルールセットの適用対象から除外する", "retrievedAt": "2026-11-01T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "GA は 2 ルール（500100 / 500110）。geo ルール 2 件（500310 / 500320）はプレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "ルールセットの規則", "retrievedAt": "2026-11-01T21:50:00Z" }] },
+            { "text": "過去 7 日の 50% 以上の日にトラフィックがないプロファイルは、ベースライン確立まで検出されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "HTTP DDoS ルールセットのしくみ", "retrievedAt": "2026-11-01T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Allow のカスタム ルールでも本ルールセットは回避できない。除外には WAF 例外を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "HTTP DDoS ルールセットのしくみ（Important）", "retrievedAt": "2026-11-01T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "固定のレート制限や IP フィルターで追いきれない分散型攻撃への備えに", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "例外の範囲はできるだけ狭くする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "信頼トラフィックをルールセットの適用対象から除外する", "retrievedAt": "2026-11-01T21:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-front-door", "term": "Azure Front Door", "type": "product", "oneLine": { "text": "特定のリージョンにデプロイせず、グローバルに提供される Azure のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "Types of nonregional services", "retrievedAt": "2026-11-01T21:50:00Z" }] } },
+        { "termKey": "waf", "term": "WAF", "type": "feature", "oneLine": { "text": "Web アプリへの正当でない要求から保護する、Azure のファイアウォール機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-exclusion", "locator": "冒頭", "retrievedAt": "2026-11-01T21:50:00Z" }] } },
+        { "termKey": "http-ddos-ruleset", "term": "HTTP DDoS ルールセット", "type": "feature", "oneLine": { "text": "最小限の設定で学習・検出・防御を行う、WAF の自動化されたレイヤー 7 保護。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "冒頭", "retrievedAt": "2026-11-01T21:50:00Z" }] } },
+        { "termKey": "penalty-box", "term": "ペナルティ ボックス", "type": "term", "oneLine": { "text": "しきい値を超えたクライアント IP に、ルールのアクションを適用する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "ペナルティ ボックス", "retrievedAt": "2026-11-01T21:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-01T21:50:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-01T21:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Front Door はリージョンを選ばないグローバル サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "Azure Front Door", "retrievedAt": "2026-11-01T21:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=578681",
+        "learn": [{ "title": "HTTP DDoS ruleset in Azure Front Door WAF", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false },
+      "speakerNotes": {
+        "qa": [
+          { "q": "どの Front Door が対象ですか？", "a": "Azure Front Door Premium が対象です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset" }] },
+          { "q": "有効にするとすぐ攻撃をブロックしますか？", "a": "いいえ。ルールは既定で Log アクションなので、ログを確認してから各ルールのアクションを設定します。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset" }] },
+          { "q": "日本リージョンで使えますか？", "a": "Azure Front Door はグローバル サービスで、特定のリージョンにデプロイするものではありません。", "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services" }] },
+          { "q": "geo ルールも GA ですか？", "a": "いいえ。geo ルール（500310 / 500320）はプレビューで、残りのルールが GA です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset" }] }
+        ]
+      }
+    }
+  ]
+}
