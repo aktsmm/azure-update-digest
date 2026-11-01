@@ -1,0 +1,107 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577491"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-01T21:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "577491",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure SQL Database でデータベース単位のマネージド ID",
+        "subtitleJa": "SAS トークンなしで、データベースごとに Storage へ認証（パブリック プレビュー）",
+        "en": "Public Preview: Support database-level managed identity (including FIC) in Create Database Scoped Credential T-SQL"
+      },
+      "meta": {
+        "publishedJst": "2026-10-31",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "October" }],
+        "status": "In preview",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Azure SQL Database で Blob Storage / ADLS Gen2 の外部データを**クエリしている方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "SAS を保存せず、データベースごとに権限を分けられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。プレビュー追加利用規約が適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locator": "Note", "retrievedAt": "2026-11-01T21:38:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "論理サーバー上のすべてのデータベースがサーバーのマネージド ID を共有し、同じストレージに到達していた",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-11-01T21:38:00Z" }]
+        },
+        "after": {
+          "text": "データベースごとのユーザー割り当てマネージド ID で、必要なストレージだけに絞ってアクセスできる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-11-01T21:38:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "外部テーブルと OPENROWSET で Blob Storage / ADLS Gen2 を認証付きクエリ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "同一テナントは DATABASE MANAGED IDENTITY を指定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locator": "資格情報ID", "retrievedAt": "2026-11-01T21:38:00Z" }] },
+            { "text": "別テナントは DATABASE FEDERATED CLIENT IDENTITY（FIC）を指定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locator": "資格情報ID", "retrievedAt": "2026-11-01T21:38:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・制約", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "データベースに割り当てられる UAMI は 1 つのみ。事前に計画が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locator": "Important", "retrievedAt": "2026-11-01T21:38:00Z" }] },
+            { "text": "ストレージ側で Storage Blob Data Reader などのロール割り当てが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locator": "ステップ3", "retrievedAt": "2026-11-01T21:38:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "SAS やサーバー共有 ID を使う構成のうち、データベース単位で分離したいものを検証環境で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "顧客管理キーを使うデータベースは既存 ID を流用し、先に鍵アクセスを確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locator": "Important", "retrievedAt": "2026-11-01T21:38:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "論理サーバー上で個々のデータベースを提供する Azure のデータベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locator": "Prerequisites", "retrievedAt": "2026-11-01T21:38:00Z" }] } },
+        { "termKey": "uami", "term": "ユーザー割り当てマネージド ID", "type": "term", "oneLine": { "text": "Azure Storage などへの認証に使う、ユーザーが作成・管理するマネージド ID（UAMI）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-11-01T21:38:00Z" }] } },
+        { "termKey": "scoped-credential", "term": "データベース スコープ資格情報", "type": "feature", "oneLine": { "text": "外部データへのクエリで、どの ID で認証するかを指定する資格情報。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-11-01T21:38:00Z" }] } },
+        { "termKey": "fic", "term": "FIC", "type": "term", "oneLine": { "text": "別テナントのストレージへアクセスするための、フェデレーテッド ID 資格情報。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locator": "資格情報ID", "retrievedAt": "2026-11-01T21:38:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-01T21:38:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "前提条件に「すべてのサービス層とすべての Azure リージョンが対応」と記載",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locator": "Prerequisites", "retrievedAt": "2026-11-01T21:38:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577491",
+        "learn": [
+          { "title": "Azure SQL Database (preview) でデータベースレベルのマネージドアイデンティティを使おう", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql", "locale": "ja-jp" },
+          { "title": "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)", "url": "https://learn.microsoft.com/ja-jp/sql/t-sql/statements/create-database-scoped-credential-transact-sql?view=sql-server-ver17", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "Learn の前提条件に、すべてのサービス層とすべての Azure リージョンが対応と記載されています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql" }] },
+          { "q": "何が必要ですか？", "a": "同じサブスクリプションの UAMI、ストレージへのロール割り当て権限、対象の Blob Storage または ADLS Gen2 が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql" }] },
+          { "q": "別テナントのストレージにも使えますか？", "a": "DATABASE FEDERATED CLIENT IDENTITY を使い、フェデレーテッド ID 資格情報経由でアクセスします。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/database-level-managed-identity?view=azuresql" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
