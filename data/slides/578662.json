@@ -1,0 +1,128 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["578662"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-02T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "578662",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure MCP Server 3.0 が一般提供（GA）に",
+        "subtitleJa": "Terraform・バックアップ・コスト最適化のツールを追加。破壊的変更を含みます",
+        "en": "Generally Available: Azure MCP Server 3.0"
+      },
+      "meta": {
+        "publishedJst": "2026-10-30",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["SDKs"],
+        "categories": ["devtools"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "AI エージェントや開発ツールから Azure MCP Server を使っている**開発者・管理者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "対応ツールが増え、入力検証や既定値が厳格化される（破壊的変更あり）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "更新前にアップグレード ガイダンスを確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "MCP に対応した AI エージェントやクライアントが、ツール経由で Azure リソースを操作する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-mcp-server/overview", "locator": "主要な機能", "retrievedAt": "2026-11-02T00:00:00Z" }]
+            },
+            { "text": "新ツール: Terraform（ドキュメント・AVM・エクスポート・ポリシー検証）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "新ツール: Backup / Resilience Management、Advisor のコスト最適化", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "はじめ方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "VS Code や Visual Studio などのエディターから接続、または NuGet / npm / PyPI でインストール",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-mcp-server/get-started", "locator": "パッケージ マネージャーを使用して Azure MCP Server をインストールする", "retrievedAt": "2026-11-02T00:00:00Z" }]
+            },
+            { "text": "既存環境は更新前にアップグレード ガイダンスを確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ツールは既定で無効。GitHub Copilot サブスクリプションと Azure の RBAC 権限が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-mcp-server/overview", "locator": "前提条件", "retrievedAt": "2026-11-02T00:00:00Z" }]
+            },
+            { "text": "3.0 は破壊的変更を含む", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "3.0 の主な変更点", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ツール仕様の明確化、入力とエンドポイント検証の厳格化、構造化出力（オプトイン）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Storage・Event Hubs・NFS 共有・Recovery Services コンテナーの既定値が安全側に", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Terraform 作業やバックアップ準備、コスト確認を AI エージェントから行う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "ローカル MCP サーバーは組織内の開発者利用が目的。承認された開発環境外では使わない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-mcp-server/overview", "locator": "シナリオ", "retrievedAt": "2026-11-02T00:00:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-mcp-server", "term": "Azure MCP Server", "type": "product", "oneLine": { "text": "AI エージェントが自然言語で Azure リソースと対話できるようにするサーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-mcp-server/overview", "locator": "冒頭", "retrievedAt": "2026-11-02T00:00:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP", "type": "term", "oneLine": { "text": "言語モデルが外部ツールやコンテキストとやり取りするための、オープン プロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-mcp-server/overview", "locator": "概念", "retrievedAt": "2026-11-02T00:00:00Z" }] } },
+        { "termKey": "rbac", "term": "RBAC", "type": "term", "oneLine": { "text": "Azure のロールに基づくアクセス制御で、ユーザーごとに権限を細かく付与する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-mcp-server/overview", "locator": "シナリオ", "retrievedAt": "2026-11-02T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-02T00:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=578662",
+        "learn": [
+          { "title": "Azure MCP サーバーとは", "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-mcp-server/overview", "locale": "ja-jp" },
+          { "title": "Azure MCP サーバーを始める", "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-mcp-server/get-started", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "利用するのに必要な前提条件は？",
+            "a": "ツールは既定で無効で、GitHub Copilot サブスクリプションと適切な RBAC 権限を持つ Azure アカウントが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-mcp-server/overview", "locator": "前提条件", "retrievedAt": "2026-11-02T00:00:00Z" }]
+          },
+          {
+            "q": "既存環境の更新で注意することは？",
+            "a": "3.0 は破壊的変更を含むため、既存の統合や共有環境を更新する前にアップグレード ガイダンスを確認してください。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=578662" }]
+          },
+          {
+            "q": "インストール方法は？",
+            "a": "使用に必須ではありませんが、NuGet・npm・PyPI から直接インストールできます。エディター経由の接続も可能です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-mcp-server/get-started", "locator": "パッケージ マネージャーを使用して Azure MCP Server をインストールする", "retrievedAt": "2026-11-02T00:00:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
