@@ -1,0 +1,129 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577782"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-02T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "577782",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "VNet フロー ログのフィルター機能が一般提供（GA）に",
+        "subtitleJa": "記録するトラフィックを条件で絞り込み、ログ量とノイズを削減できます",
+        "en": "Generally Available: Network Watcher VNet flow logs filtering"
+      },
+      "meta": {
+        "publishedJst": "2026-10-27",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Network Watcher"],
+        "categories": ["networking", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Network Watcher の VNet フロー ログを使っている**ネットワーク／セキュリティ運用担当者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "必要なフローだけ記録でき、ストレージコストと分析時のノイズを減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "ログ量が多く困っていれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "IP・ポート・プロトコル・暗号化状態・方向で記録対象を指定", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-filtering", "locator": "サポートされているフィールド", "retrievedAt": "2026-11-02T00:00:00Z" }] },
+            { "text": "フロー状態（開始 / 継続 / 終了 / 拒否）でも絞り込める", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-filtering", "locator": "RecordTypes に基づくフィルター処理", "retrievedAt": "2026-11-02T00:00:00Z" }] },
+            { "text": "= / != と && / || で条件を組み合わせ可能", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-filtering", "locator": "サポートされているオペランド", "retrievedAt": "2026-11-02T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure portal または PowerShell でフィルター条件を設定できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "PowerShell: New-AzNetworkWatcherFlowLog の -EnabledFilteringCriteria で作成", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-filtering", "locator": "フィルター処理を有効にする", "retrievedAt": "2026-11-02T00:00:00Z" }] },
+            { "text": "既存のログは Set-AzNetworkWatcherFlowLog で再作成せず更新可能", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-filtering", "locator": "既存のフィルター処理を更新する", "retrievedAt": "2026-11-02T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "フィルター文字列は最大 1,000 文字。角かっこは未対応、AND が OR より先に評価", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-filtering", "locator": "サポートされている形式", "retrievedAt": "2026-11-02T00:00:00Z" }] },
+            { "text": "ストレージ アカウントは VNet と同じリージョンで Standard が必須", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-overview", "locator": "ストレージ アカウント", "retrievedAt": "2026-11-02T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "NSG フロー ログは NSG 単位、VNet フロー ログは仮想ネットワーク単位で記録", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-overview", "locator": "VNet フロー ログと NSG フロー ログの比較", "retrievedAt": "2026-11-02T00:00:00Z" }] },
+            { "text": "重複記録や追加コストを避けるため、同じワークロードでは NSG フロー ログを先に無効化", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-overview", "locator": "VNet フロー ログと NSG フロー ログの比較", "retrievedAt": "2026-11-02T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "拒否トラフィックのみ記録するなど、監視・調査の目的に絞って運用する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "監視・トラブルシューティング・セキュリティ・コンプライアンスの用途で必要な通信に集中できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "network-watcher", "term": "Network Watcher", "type": "product", "oneLine": { "text": "Azure のネットワークを監視・診断するためのサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-overview", "locator": "冒頭", "retrievedAt": "2026-11-02T00:00:00Z" }] } },
+        { "termKey": "vnet-flow-logs", "term": "VNet フロー ログ", "type": "feature", "oneLine": { "text": "仮想ネットワークを通過する IP トラフィックの情報を記録する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-overview", "locator": "冒頭", "retrievedAt": "2026-11-02T00:00:00Z" }] } },
+        { "termKey": "recordtypes", "term": "フロー状態", "type": "term", "oneLine": { "text": "開始・継続・終了・拒否といった接続のライフサイクル段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-filtering", "locator": "RecordTypes に基づくフィルター処理", "retrievedAt": "2026-11-02T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-02T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "VNet フロー ログを有効にできるリージョンに東日本・西日本が含まれる",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-overview", "locator": "Availability（東日本・西日本）", "retrievedAt": "2026-11-02T00:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577782",
+        "learn": [
+          { "title": "仮想ネットワーク フロー ログのフィルター処理", "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-filtering", "locale": "ja-jp" },
+          { "title": "仮想ネットワーク フロー ログ", "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "VNet フロー ログを有効にできるリージョンに東日本・西日本が含まれています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-overview" }]
+          },
+          {
+            "q": "既存のフロー ログにフィルターを追加できますか？",
+            "a": "Set-AzNetworkWatcherFlowLog で、フロー ログを再作成せずに条件を更新できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-filtering" }]
+          },
+          {
+            "q": "ストレージの前提条件はありますか？",
+            "a": "ストレージ アカウントは VNet と同じリージョンの Standard である必要があり、Premium は非対応です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
