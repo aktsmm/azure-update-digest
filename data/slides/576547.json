@@ -1,0 +1,137 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["576547"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-01T22:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "576547",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Marketplace のプライベート オファーを 1 ステップで購入",
+        "subtitleJa": "承諾と製品ごとの購入が一体化。対象は SaaS とプロフェッショナル サービス",
+        "en": "Generally Available: Marketplace private offer enhancements"
+      },
+      "meta": {
+        "publishedJst": "2026-10-29",
+        "availability": [
+          { "rawRing": "Private Preview", "year": 2026, "month": "July" },
+          { "rawRing": "General Availability", "year": 2026, "month": "October" }
+        ],
+        "status": "Launched",
+        "products": ["Microsoft Azure portal"],
+        "categories": ["ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Marketplace のプライベート オファーを購入する**課金管理者・購買担当の方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "対象オファーは、含まれる全製品を 1 ステップで購入できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "対象オファーを購入する際に新しい手順を確認", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": { "text": "オファーを「承諾」したあと、個別の製品を「購入」する必要があった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "対象オファーでは、含まれるすべての製品を 1 ステップで購入できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "対象範囲", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Azure portal での購入に対応する、新しい SaaS とプロフェッショナル サービスの対象オファーが対象",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/private-offers-single-click-purchase", "locator": "冒頭", "retrievedAt": "2026-11-01T22:10:00Z" }]
+            },
+            {
+              "text": "その他のオファーは、従来どおり個別の承諾と購入を使用する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/private-offers-single-click-purchase", "locator": "冒頭", "retrievedAt": "2026-11-01T22:10:00Z" }]
+            },
+            {
+              "text": "購入ガバナンスは、課金管理者ロールを通じた Azure RBAC に沿って維持される",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "対象は新規購入。既存の SaaS サブスクリプション、更新、プラン変更は対象外",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/private-offers-single-click-purchase", "locator": "始める前の準備", "retrievedAt": "2026-11-01T22:10:00Z" }]
+            },
+            {
+              "text": "複数製品を含むだけではシングル クリック購入の対象にならない。有効化は段階的に進行中",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/private-offers-single-click-purchase", "locator": "冒頭", "retrievedAt": "2026-11-01T22:10:00Z" }]
+            },
+            {
+              "text": "送信後は、全体の結果と各製品の状態を確認する。一部のみ成功する場合がある",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/private-offers-single-click-purchase", "locator": "購入結果を確認する", "retrievedAt": "2026-11-01T22:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "購入前に、組織の調達承認と課金アカウントのロール・アクセス許可を確認する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/private-offers-single-click-purchase", "locator": "始める前の準備", "retrievedAt": "2026-11-01T22:10:00Z" }]
+            },
+            {
+              "text": "手順は Private Offer Management の購入アクションから、製品・課金・規約を確認して完了",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/private-offers-single-click-purchase", "locator": "限定オファーを開く", "retrievedAt": "2026-11-01T22:10:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "private-offer", "term": "プライベート オファー", "type": "feature", "oneLine": { "text": "Microsoft Marketplace で、組織に合わせた価格や条件（柔軟な課金・契約期間など）を提供する仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "single-click-purchase", "term": "シングル クリック購入", "type": "feature", "oneLine": { "text": "対象のプライベート オファーで、同意と購入を一緒に送信できる購入方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/private-offers-single-click-purchase", "locator": "冒頭", "retrievedAt": "2026-11-01T22:10:00Z" }] } },
+        { "termKey": "azure-rbac", "term": "Azure RBAC", "type": "term", "oneLine": { "text": "ロールに基づいて、Azure リソースへのアクセスを管理する仕組み。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-01T22:10:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=576547",
+        "learn": [
+          { "title": "ワンクリックでプライベートオファーを購入する", "url": "https://learn.microsoft.com/ja-jp/marketplace/private-offers-single-click-purchase", "locale": "ja-jp" },
+          { "title": "手順 3 - プライベート オファーを購入してサブスクライブする", "url": "https://learn.microsoft.com/ja-jp/marketplace/private-offers-purchase", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存のサブスクリプションの更新にも使えますか？",
+            "a": "いいえ。対象は新規購入で、既存の SaaS サブスクリプション、更新、プラン変更は対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/private-offers-single-click-purchase" }]
+          },
+          {
+            "q": "従来の承諾・購入の手順は不要になりますか？",
+            "a": "対象外のオファーでは、従来の個別の承諾と購入が引き続き使われます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/private-offers-single-click-purchase" }]
+          },
+          {
+            "q": "購入後すぐに利用できますか？",
+            "a": "自動有効化されますが、ソフトウェアへのアクセスはプロバイダーのオンボーディング手順に従う必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/marketplace/private-offers-single-click-purchase" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
