@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "579021"
+  },
+  "fetchedAt": "2026-11-03T02:47:16.918Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "579021",
+    "created": "2026-11-02T18:00:51.0272861Z",
+    "description": "Geo-Replication on partitioned namespaces for\nAzure Service Bus Premium is now generally available. You can now combine the\nthroughput benefits of partitioning with the reliability of replicating your\nmessages and metadata to a secondary Azure region. Partitioned namespaces distribute queues and topics across\nmultiple message brokers and messaging stores within a region, allowing\nthroughput to scale beyond a single broker. You can enable Geo-Replication on an existing partitioned\nPremium namespace or configure both capabilities on a new namespace. Learn\nmore. ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "579021",
+    "modified": "2026-11-02T18:00:51.0272861Z",
+    "productCategories": [
+      "Integration"
+    ],
+    "products": [
+      "Service Bus"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Geo-Replication on partitioned namespaces for Azure Service Bus Premium"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

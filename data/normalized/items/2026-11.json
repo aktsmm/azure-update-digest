@@ -1,0 +1,600 @@
+{
+  "items": [
+    {
+      "availabilities": [
+        {
+          "month": "February",
+          "ring": "Retirement",
+          "year": 2027
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "570498",
+      "categories": [
+        "web-mobile"
+      ],
+      "created": "2026-11-02T19:01:41.6188992Z",
+      "createdJst": "2026-11-03",
+      "description": "On February 2, 2027, we will retire Azure Fluid Relay. After this date, Azure Fluid Relay will reach end of availability, and workloads that continue to depend on the service may experience disruption.The Fluid Framework remains available as an open-source framework for building distributed, real-time collaborative web applications. A self-hosted Fluid service solution is available as the replacement. You can continue using Azure Fluid Relay until February 1, 2027 while you complete your transition.How this affects you:If your applications continue to use Azure Fluid Relay after February 2, 2027, they may experience service disruption. Moving to the self-hosted solution means that you will be responsible for hosting and operating the Fluid service in your environment. Operational and infrastructure costs will depend on your deployment architecture, scale, and operational requirements.What you need to do:Transition workloads that depend on Azure Fluid Relay to a self-hosted Fluid service solution before February 2, 2027. Review your Azure subscriptions and identify applications that use Azure Fluid Relay, plan and complete the transition, and use the self-hosted Fluid service solution in the Fluid Framework GitHub repository as the migration and replacement resource.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "d395accd8a777203ce3dcd40c006d6c1f52b39950ce8e4376bfca14fbc342628",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-03T02:46:41.682Z",
+          "fingerprint": "7b2eb0e9cd605072f414edf9e5b3690b71c41d67d8e25e3c9121f9d7b03d2fcc",
+          "modifiedAfter": "2026-11-02T19:01:41.6188992Z",
+          "modifiedBefore": null,
+          "rawRef": "20261103T024641682Z_list_sweep_o0.json#570498"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-03T02:46:58.006Z",
+          "fingerprint": "d395accd8a777203ce3dcd40c006d6c1f52b39950ce8e4376bfca14fbc342628",
+          "modifiedAfter": "2026-11-02T19:01:41.6188992Z",
+          "modifiedBefore": "2026-11-02T19:01:41.6188992Z",
+          "rawRef": "20261103T024658006Z_detail_570498.json#570498"
+        }
+      ],
+      "ids": [
+        "570498"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "retire-tag",
+          "retire-ring",
+          "retire-title"
+        ],
+        "score": 10,
+        "topics": [
+          "retirement"
+        ]
+      },
+      "latestId": "570498",
+      "modified": "2026-11-02T19:01:41.6188992Z",
+      "modifiedJst": "2026-11-03",
+      "productCategories": [
+        "Web"
+      ],
+      "products": [
+        "Azure Fluid Relay"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=570498",
+      "status": null,
+      "tags": [
+        "Retirements"
+      ],
+      "title": "Retirement: Azure Fluid Relay"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "574541",
+      "categories": [
+        "databases",
+        "ops-governance"
+      ],
+      "created": "2026-11-02T19:20:33.9327007Z",
+      "createdJst": "2026-11-03",
+      "description": "You now have greater flexibility in network design for Azure Database for PostgreSQL Flexible Server workloads. Now you can change existing VNet-integrated servers from delegated-subnet networking to a private endpoint-capable configuration, enabling secure access over a private IP address through Azure Private Link. The migration retains existing backups; however, you should plan for a temporary connectivity interruption and configure a private endpoint or appropriate firewall rules after migration. Learn more.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "bb54c761c2ab03f8ac55c1f5a29bd321e98b26ae528c7dd52816a7f14a17cba2",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-03T02:46:41.682Z",
+          "fingerprint": "836fc5044f28d24c56cb42dafbdd506e6cf721687c067145590a29c343a79a3c",
+          "modifiedAfter": "2026-11-02T19:20:33.9327007Z",
+          "modifiedBefore": null,
+          "rawRef": "20261103T024641682Z_list_sweep_o0.json#574541"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-03T02:46:52.608Z",
+          "fingerprint": "bb54c761c2ab03f8ac55c1f5a29bd321e98b26ae528c7dd52816a7f14a17cba2",
+          "modifiedAfter": "2026-11-02T19:20:33.9327007Z",
+          "modifiedBefore": "2026-11-02T19:20:33.9327007Z",
+          "rawRef": "20261103T024652608Z_detail_574541.json#574541"
+        }
+      ],
+      "ids": [
+        "574541"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "574541",
+      "modified": "2026-11-02T19:20:33.9327007Z",
+      "modifiedJst": "2026-11-03",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure Database for PostgreSQL"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=574541",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Change from virtual network integration to a private endpoint capable network configuration in Azure Database for PostgreSQL flexible server  "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "Retirement",
+          "year": 2029
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "576255",
+      "categories": [
+        "security"
+      ],
+      "created": "2026-11-02T19:22:28.7388312Z",
+      "createdJst": "2026-11-03",
+      "description": "This is the formal notice that Microsoft plans to deprecate the operational technology (OT) security component of Microsoft Defender for IoT. The service will be fully deprecated in October 2029, following a three-year transition period.This change applies only to Defender for IoT OT Security. Enterprise IoT capabilities in Microsoft Defender for Endpoint are not affected. Device discovery and vulnerability assessment will continue to be available.When this will happenDeprecation is planned for October 2029. This notice begins the transition period and does not require you to immediately stop using your existing deployment. Complete your migration to an alternative OT security solution before retirement.How this will affect your organizationIf you use Defender for IoT OT Security, you will need to transition to an alternative solution before October 2029. During the transition, the service will remain supported with routine security updates and bug fixes, but no new OT-specific capabilities or feature investments will be introduced. Existing customer agreements and renewals will be honored through October 2029.What you can do to prepareAssess your environment. Review existing OT deployments, sensors, integrations, licenses, contracts, and security requirements.Evaluate your options. Select an OT security solution that meets your organization’s needs. Microsoft offers connectors for Armis, Dragos, and Forescout, but you are not required to use a specific provider. OT data connectors in Microsoft Security Exposure Management support these three providers.Understand Microsoft integrations. Supported third-party OT connectors can bring OT asset and vulnerability data into Microsoft Security Exposure Management and the Defender portal.  Third-party solutions require separate licensing and deployment.Build your transition plan. Account for procurement, testing, operational validation, continuity, data export, and sensor decommissioning, with migration completed before October 2029.Engage early. Contact OT security providers directly or work with your Microsoft account team to help coordinate an introduction.Learn more:OT data connectors Data connectors overview Enterprise IoT ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "327867153017e6ce5f089b4d8a7d992681177559f3f9cbb5c29692a9204d6a41",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-03T02:46:41.682Z",
+          "fingerprint": "66a7239392c29ce785c3b2332dbd66324814997288cee16a022505177fd57844",
+          "modifiedAfter": "2026-11-02T19:22:28.7388312Z",
+          "modifiedBefore": null,
+          "rawRef": "20261103T024641682Z_list_sweep_o0.json#576255"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-03T02:46:48.424Z",
+          "fingerprint": "327867153017e6ce5f089b4d8a7d992681177559f3f9cbb5c29692a9204d6a41",
+          "modifiedAfter": "2026-11-02T19:22:28.7388312Z",
+          "modifiedBefore": "2026-11-02T19:22:28.7388312Z",
+          "rawRef": "20261103T024648424Z_detail_576255.json#576255"
+        }
+      ],
+      "ids": [
+        "576255"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "retire-tag",
+          "retire-ring",
+          "retire-title",
+          "security-title"
+        ],
+        "score": 13,
+        "topics": [
+          "retirement",
+          "security"
+        ]
+      },
+      "latestId": "576255",
+      "modified": "2026-11-02T19:22:28.7388312Z",
+      "modifiedJst": "2026-11-03",
+      "productCategories": [],
+      "products": [],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=576255",
+      "status": null,
+      "tags": [
+        "Retirements"
+      ],
+      "title": "Retirement: OT security in Microsoft Defender for IoT"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-10",
+        "privatePreview": null
+      },
+      "canonicalKey": "577975",
+      "categories": [
+        "ops-governance"
+      ],
+      "created": "2026-11-02T19:37:11.4021224Z",
+      "createdJst": "2026-11-03",
+      "description": "Azure\nMigrate now supports discovery and assessment for network-attached storage,\nallowing customers and partners to plan migrations of Dell PowerScale (OneFS)\nand NetApp ONTAP storage to Azure. The Azure Migrate appliance connects\ndirectly to your NAS clusters using read-only credentials, inventories every\nSMB, NFS, and S3 share, and evaluates each share against Azure Files, Azure\nBlob Storage, and Azure NetApp Files. Key benefits include: Discover Dell PowerScale/Isilon and NetApp ONTAP/FAS clusters\nand the shares they host Group, tag, and filter NAS shares alongside your existing\nserver, application, and database inventory Assess each share with readiness, a right-sized Azure target\nconfiguration, and monthly cost estimates Generate a business case comparing Azure storage services\nagainst on-premises cost, and sequence moves using wave plans This capability replaces manual, spreadsheet-driven\nNAS planning with a verified per-share inventory and a defensible cost basis,\nespecially for large or multi-protocol storage estates. NAS\nis often the largest and least-understood part of an on-premises estate.\nBringing NAS discovery and assessment into Azure Migrate means storage is\nplanned in the same project, and the same business case, as the servers and\napplications that depend on it. Getting started: To\nget started, update your Azure Migrate appliance, add your NAS cluster as a\ndiscovery source, and run an assessment directly from the Azure portal. Write to us at azurestoragemigrations@microsoft.com with questions or feedback. Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "bc47311729880c26861681116a1e437d007eec6215b7f1ba80b336c93cc87312",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-03T02:46:41.682Z",
+          "fingerprint": "7e57690cfd63a8a9564726298bc951f7cdec150e88432e6832a44f29cbbb0b2d",
+          "modifiedAfter": "2026-11-02T19:37:11.4021224Z",
+          "modifiedBefore": null,
+          "rawRef": "20261103T024641682Z_list_sweep_o0.json#577975"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-03T02:46:44.194Z",
+          "fingerprint": "bc47311729880c26861681116a1e437d007eec6215b7f1ba80b336c93cc87312",
+          "modifiedAfter": "2026-11-02T19:37:11.4021224Z",
+          "modifiedBefore": "2026-11-02T19:37:11.4021224Z",
+          "rawRef": "20261103T024644194Z_detail_577975.json#577975"
+        }
+      ],
+      "ids": [
+        "577975"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "577975",
+      "modified": "2026-11-02T19:37:11.4021224Z",
+      "modifiedJst": "2026-11-03",
+      "productCategories": [
+        "Management and governance",
+        "Migration"
+      ],
+      "products": [
+        "Azure Migrate"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577975",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Services"
+      ],
+      "title": "Public Preview: On-prem NAS share discovery and assessment are now available using Azure Migrate"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "577992",
+      "categories": [
+        "databases",
+        "ops-governance"
+      ],
+      "created": "2026-11-02T18:02:48.2891474Z",
+      "createdJst": "2026-11-03",
+      "description": "You can now restart or fail over databases directly from the Azure portal, including single databases, Hyperscale databases, and databases in elastic pools, without writing scripts against the Rest API or contacting support.  Learn more.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "dd4e0cb4ebb982b643aaba44c85cfcca4bb8443f9ea9d597b5f954554abc8ef3",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-03T02:46:41.682Z",
+          "fingerprint": "ccc4ef7a84d968d983bfad5551323c063c984f1b7701ddcbc56b1101a29ac11d",
+          "modifiedAfter": "2026-11-02T18:02:48.2891474Z",
+          "modifiedBefore": null,
+          "rawRef": "20261103T024641682Z_list_sweep_o0.json#577992"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-03T02:47:10.474Z",
+          "fingerprint": "dd4e0cb4ebb982b643aaba44c85cfcca4bb8443f9ea9d597b5f954554abc8ef3",
+          "modifiedAfter": "2026-11-02T18:02:48.2891474Z",
+          "modifiedBefore": "2026-11-02T18:02:48.2891474Z",
+          "rawRef": "20261103T024710474Z_detail_577992.json#577992"
+        }
+      ],
+      "ids": [
+        "577992"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "577992",
+      "modified": "2026-11-02T18:02:48.2891474Z",
+      "modifiedJst": "2026-11-03",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure SQL Database"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577992",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Restart databases in Azure SQL DB via the Azure portal "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "578628",
+      "categories": [
+        "storage",
+        "databases"
+      ],
+      "created": "2026-11-02T18:34:01.6952101Z",
+      "createdJst": "2026-11-03",
+      "description": "Azure Storage Actions is introducing three enhancements to simplify task management and give you more control over automated data operations across Azure Blob and Data Lake Storage:Automatic propagation of task definition updates: When you update a storage task definition the changes now automatically apply to its existing assignments. Scheduled assignment runs use the updated definition on their next run, keeping your data management logic consistent without updating each assignment individually.Stop in-progress task assignment runs: You can request a stop for an individual task assignment’s in-progress run or across all assignments associated with a storage task. This gives you greater control when a run needs to be interrupted. Stop requests are processed asynchronously.Case-sensitive operators: Target data more precisely with case-sensitive variants of `equals`, `contains`, `startsWith`, `endsWith`, and `matches` string operators. These additional operators provide you more flexibility, helping you select the intended blobs when capitalization matters. Existing operators retain their case-insensitive behavior.Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "593a1bc0173a8aee078c965b935344a96d1bb8376b1c399a43118acab0c59d64",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-03T02:46:41.682Z",
+          "fingerprint": "02437e5734825035e4a171a15e5453f24edbd6be24cfdca425cd9b23b9b6a256",
+          "modifiedAfter": "2026-11-02T18:34:01.6952101Z",
+          "modifiedBefore": null,
+          "rawRef": "20261103T024641682Z_list_sweep_o0.json#578628"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-03T02:47:02.329Z",
+          "fingerprint": "593a1bc0173a8aee078c965b935344a96d1bb8376b1c399a43118acab0c59d64",
+          "modifiedAfter": "2026-11-02T18:34:01.6952101Z",
+          "modifiedBefore": "2026-11-02T18:34:01.6952101Z",
+          "rawRef": "20261103T024702329Z_detail_578628.json#578628"
+        }
+      ],
+      "ids": [
+        "578628"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "578628",
+      "modified": "2026-11-02T18:34:01.6952101Z",
+      "modifiedJst": "2026-11-03",
+      "productCategories": [
+        "Analytics",
+        "Storage"
+      ],
+      "products": [
+        "Azure Blob Storage",
+        "Azure Data Lake Storage",
+        "Azure Storage Actions"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=578628",
+      "status": "Launched",
+      "tags": [
+        "Feature",
+        "Services"
+      ],
+      "title": "Generally Available: Azure Storage Actions adds automatic task updates, execution controls, and case-sensitive matching"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "579021",
+      "categories": [
+        "integration"
+      ],
+      "created": "2026-11-02T18:00:51.0272861Z",
+      "createdJst": "2026-11-03",
+      "description": "Geo-Replication on partitioned namespaces for\nAzure Service Bus Premium is now generally available. You can now combine the\nthroughput benefits of partitioning with the reliability of replicating your\nmessages and metadata to a secondary Azure region. Partitioned namespaces distribute queues and topics across\nmultiple message brokers and messaging stores within a region, allowing\nthroughput to scale beyond a single broker. You can enable Geo-Replication on an existing partitioned\nPremium namespace or configure both capabilities on a new namespace. Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "f09436a323917f5a7ae70fc271e7fc1b921b96ac7a5bb01f1f1f3fd24ae64fd2",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-03T02:46:41.682Z",
+          "fingerprint": "3915b53609f3057d5a3c5c1ec28e3d5e99e5f1c0d06b3dab58d0ff5dc63c8cd9",
+          "modifiedAfter": "2026-11-02T18:00:51.0272861Z",
+          "modifiedBefore": null,
+          "rawRef": "20261103T024641682Z_list_sweep_o0.json#579021"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-03T02:47:16.918Z",
+          "fingerprint": "f09436a323917f5a7ae70fc271e7fc1b921b96ac7a5bb01f1f1f3fd24ae64fd2",
+          "modifiedAfter": "2026-11-02T18:00:51.0272861Z",
+          "modifiedBefore": "2026-11-02T18:00:51.0272861Z",
+          "rawRef": "20261103T024716918Z_detail_579021.json#579021"
+        }
+      ],
+      "ids": [
+        "579021"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "579021",
+      "modified": "2026-11-02T18:00:51.0272861Z",
+      "modifiedJst": "2026-11-03",
+      "productCategories": [
+        "Integration"
+      ],
+      "products": [
+        "Service Bus"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579021",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Geo-Replication on partitioned namespaces for Azure Service Bus Premium"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "October",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-10",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "579111",
+      "categories": [
+        "ops-governance"
+      ],
+      "created": "2026-11-02T17:49:48.2752135Z",
+      "createdJst": "2026-11-03",
+      "description": "Azure Site Recovery support for Azure Local is now generally available, making enterprise-grade disaster recovery simpler, accessible, easier to setup and secure than ever before. Customers can protect supported Windows and Linux virtual machines by replicating workloads to Azure, extending their disaster recovery capabilities to the cloud.With streamlined setup in the Azure portal, customers can validate their recovery plans without disrupting production replication, fail over to Azure during planned or unplanned outages, and return workloads to Azure Local when their on-premises environment is ready. The capability is available in all Azure Local-supported regions.Learn more: Tech\nCommunity blog Official\ndocumentation ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "ac6f01c76b4782fb83ce70671c60ea1c25f7d9f77c6498773e17546b41640f22",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-03T02:46:41.682Z",
+          "fingerprint": "977d5ea8262b43399b2187a6d20166aeafda48672aaf6e2b09fb1cbba3b56525",
+          "modifiedAfter": "2026-11-02T17:49:48.2752135Z",
+          "modifiedBefore": null,
+          "rawRef": "20261103T024641682Z_list_sweep_o0.json#579111"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-03T02:47:21.377Z",
+          "fingerprint": "ac6f01c76b4782fb83ce70671c60ea1c25f7d9f77c6498773e17546b41640f22",
+          "modifiedAfter": "2026-11-02T17:49:48.2752135Z",
+          "modifiedBefore": "2026-11-02T17:49:48.2752135Z",
+          "rawRef": "20261103T024721377Z_detail_579111.json#579111"
+        }
+      ],
+      "ids": [
+        "579111"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "579111",
+      "modified": "2026-11-02T17:49:48.2752135Z",
+      "modifiedJst": "2026-11-03",
+      "productCategories": [
+        "Hybrid + multicloud",
+        "Management and governance",
+        "Migration"
+      ],
+      "products": [
+        "Azure Arc",
+        "Azure Site Recovery"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579111",
+      "status": "Launched",
+      "tags": [
+        "Feature",
+        "Management"
+      ],
+      "title": "Generally Available: Azure Site Recovery for Azure Local"
+    }
+  ],
+  "month": "2026-11",
+  "schema": 1
+}

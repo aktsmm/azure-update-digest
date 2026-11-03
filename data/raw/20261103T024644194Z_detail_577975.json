@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "577975"
+  },
+  "fetchedAt": "2026-11-03T02:46:44.194Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "577975",
+    "created": "2026-11-02T19:37:11.4021224Z",
+    "description": "Azure\nMigrate now supports discovery and assessment for network-attached storage,\nallowing customers and partners to plan migrations of Dell PowerScale (OneFS)\nand NetApp ONTAP storage to Azure. The Azure Migrate appliance connects\ndirectly to your NAS clusters using read-only credentials, inventories every\nSMB, NFS, and S3 share, and evaluates each share against Azure Files, Azure\nBlob Storage, and Azure NetApp Files. Key benefits include: Discover Dell PowerScale/Isilon and NetApp ONTAP/FAS clusters\nand the shares they host Group, tag, and filter NAS shares alongside your existing\nserver, application, and database inventory Assess each share with readiness, a right-sized Azure target\nconfiguration, and monthly cost estimates Generate a business case comparing Azure storage services\nagainst on-premises cost, and sequence moves using wave plans This capability replaces manual, spreadsheet-driven\nNAS planning with a verified per-share inventory and a defensible cost basis,\nespecially for large or multi-protocol storage estates. NAS\nis often the largest and least-understood part of an on-premises estate.\nBringing NAS discovery and assessment into Azure Migrate means storage is\nplanned in the same project, and the same business case, as the servers and\napplications that depend on it. Getting started: To\nget started, update your Azure Migrate appliance, add your NAS cluster as a\ndiscovery source, and run an assessment directly from the Azure portal. Write to us at azurestoragemigrations@microsoft.com with questions or feedback. Learn\nmore. ",
+    "id": "577975",
+    "modified": "2026-11-02T19:37:11.4021224Z",
+    "previewAvailabilityDate": "2026-10",
+    "productCategories": [
+      "Management and governance",
+      "Migration"
+    ],
+    "products": [
+      "Azure Migrate"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Services"
+    ],
+    "title": "Public Preview: On-prem NAS share discovery and assessment are now available using Azure Migrate"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

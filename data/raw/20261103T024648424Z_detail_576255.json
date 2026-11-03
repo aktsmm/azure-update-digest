@@ -1,0 +1,29 @@
+{
+  "args": {
+    "id": "576255"
+  },
+  "fetchedAt": "2026-11-03T02:46:48.424Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "October",
+        "ring": "Retirement",
+        "year": 2029
+      }
+    ],
+    "baseId": "576255",
+    "created": "2026-11-02T19:22:28.7388312Z",
+    "description": "This is the formal notice that Microsoft plans to deprecate the operational technology (OT) security component of Microsoft Defender for IoT. The service will be fully deprecated in October 2029, following a three-year transition period.This change applies only to Defender for IoT OT Security. Enterprise IoT capabilities in Microsoft Defender for Endpoint are not affected. Device discovery and vulnerability assessment will continue to be available.When this will happenDeprecation is planned for October 2029. This notice begins the transition period and does not require you to immediately stop using your existing deployment. Complete your migration to an alternative OT security solution before retirement.How this will affect your organizationIf you use Defender for IoT OT Security, you will need to transition to an alternative solution before October 2029. During the transition, the service will remain supported with routine security updates and bug fixes, but no new OT-specific capabilities or feature investments will be introduced. Existing customer agreements and renewals will be honored through October 2029.What you can do to prepareAssess your environment. Review existing OT deployments, sensors, integrations, licenses, contracts, and security requirements.Evaluate your options. Select an OT security solution that meets your organization’s needs. Microsoft offers connectors for Armis, Dragos, and Forescout, but you are not required to use a specific provider. OT data connectors in Microsoft Security Exposure Management support these three providers.Understand Microsoft integrations. Supported third-party OT connectors can bring OT asset and vulnerability data into Microsoft Security Exposure Management and the Defender portal.  Third-party solutions require separate licensing and deployment.Build your transition plan. Account for procurement, testing, operational validation, continuity, data export, and sensor decommissioning, with migration completed before October 2029.Engage early. Contact OT security providers directly or work with your Microsoft account team to help coordinate an introduction.Learn more:OT data connectors Data connectors overview Enterprise IoT ",
+    "id": "576255",
+    "modified": "2026-11-02T19:22:28.7388312Z",
+    "productCategories": [],
+    "products": [],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: OT security in Microsoft Defender for IoT"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

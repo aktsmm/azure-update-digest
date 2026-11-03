@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "578628"
+  },
+  "fetchedAt": "2026-11-03T02:47:02.329Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "578628",
+    "created": "2026-11-02T18:34:01.6952101Z",
+    "description": "Azure Storage Actions is introducing three enhancements to simplify task management and give you more control over automated data operations across Azure Blob and Data Lake Storage:Automatic propagation of task definition updates: When you update a storage task definition the changes now automatically apply to its existing assignments. Scheduled assignment runs use the updated definition on their next run, keeping your data management logic consistent without updating each assignment individually.Stop in-progress task assignment runs: You can request a stop for an individual task assignment’s in-progress run or across all assignments associated with a storage task. This gives you greater control when a run needs to be interrupted. Stop requests are processed asynchronously.Case-sensitive operators: Target data more precisely with case-sensitive variants of `equals`, `contains`, `startsWith`, `endsWith`, and `matches` string operators. These additional operators provide you more flexibility, helping you select the intended blobs when capitalization matters. Existing operators retain their case-insensitive behavior.Learn\nmore.",
+    "generalAvailabilityDate": "2026-11",
+    "id": "578628",
+    "modified": "2026-11-02T18:34:01.6952101Z",
+    "productCategories": [
+      "Storage",
+      "Analytics"
+    ],
+    "products": [
+      "Azure Blob Storage",
+      "Azure Data Lake Storage",
+      "Azure Storage Actions"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Services",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure Storage Actions adds automatic task updates, execution controls, and case-sensitive matching"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

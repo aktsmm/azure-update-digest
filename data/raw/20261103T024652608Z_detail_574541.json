@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "574541"
+  },
+  "fetchedAt": "2026-11-03T02:46:52.608Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "574541",
+    "created": "2026-11-02T19:20:33.9327007Z",
+    "description": "You now have greater flexibility in network design for Azure Database for PostgreSQL Flexible Server workloads. Now you can change existing VNet-integrated servers from delegated-subnet networking to a private endpoint-capable configuration, enabling secure access over a private IP address through Azure Private Link. The migration retains existing backups; however, you should plan for a temporary connectivity interruption and configure a private endpoint or appropriate firewall rules after migration. Learn more.  ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "574541",
+    "modified": "2026-11-02T19:20:33.9327007Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Generally Available: Change from virtual network integration to a private endpoint capable network configuration in Azure Database for PostgreSQL flexible server  "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
