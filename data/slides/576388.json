@@ -1,0 +1,124 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["576388"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-04T23:13:00Z"
+  },
+  "slides": [
+    {
+      "key": "576388",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Application Gateway for Containers が MCP ゲートウェイに対応",
+        "subtitleJa": "新しい MCPRoute で MCP サーバーを 1 つのエンドポイントに集約（パブリック プレビュー）",
+        "en": "Public Preview: MCP gateway for Application Gateway for Containers"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "modifiedJst": "2026-11-04",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Application Gateway"],
+        "categories": ["networking", "security"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "AKS 上で MCP サーバーを公開する**プラットフォーム チーム**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "TLS・JWT 検証・WAF・ヘルス監視をゲートウェイに集約できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "MCPRoute の API はプレビューで、一般公開前に変更される場合がある。検証向け",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locator": "Important", "retrievedAt": "2026-11-04T23:13:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "汎用の HTTPRoute は MCP メッセージを転送できるが、各リクエストを独立して処理する",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locator": "Application Gateway for ContainersがMCPサポートを追加する方法", "retrievedAt": "2026-11-04T23:13:00Z" }]
+        },
+        "after": {
+          "text": "MCPRoute が MCP のフローを理解し、複数サーバーの探索を集約して、呼び出しを該当バックエンドへ振り分ける",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locator": "Application Gateway for ContainersがMCPサポートを追加する方法", "retrievedAt": "2026-11-04T23:13:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ホスト名とパスで MCP サーバーを公開（単一サーバーへの直接ルーティング）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locator": "MCPRoute を使用すると", "retrievedAt": "2026-11-04T23:13:00Z" }] },
+            { "text": "複数サーバーを集約し、ツール・リソース・プロンプトを統合カタログで提示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locator": "マルチサーバー集約", "retrievedAt": "2026-11-04T23:13:00Z" }] },
+            { "text": "JWT 検証・WAF・バックエンド TLS・ヘルスチェック・名前空間をまたぐ参照に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locator": "セキュリティとポリシー統合", "retrievedAt": "2026-11-04T23:13:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "MCPRoute は alb.networking.azure.io/v1alpha1 API。プレビュー API は変更される場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locator": "Important", "retrievedAt": "2026-11-04T23:13:00Z" }] },
+            { "text": "MCPRoute は Gateway に直接アタッチする。ListenerSet 経由は現在未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locator": "専用リスナーとルート分離 / Note", "retrievedAt": "2026-11-04T23:13:00Z" }] },
+            { "text": "集約は 1 ルートで最大 64 バックエンド。セッション アフィニティはベスト エフォート", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locator": "マルチサーバー集約 / ステートフルセッションとアフィニティ", "retrievedAt": "2026-11-04T23:13:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "集約時はサービス名が機能名に付くため、安定した名前を選び、まず検証環境で確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locator": "設計に関する推奨事項", "retrievedAt": "2026-11-04T23:13:00Z" }] },
+            { "text": "ルートの Accepted / ResolvedRefs 状態を、変更のたびに確認する", "origin": "learn", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agc", "term": "Application Gateway for Containers", "type": "product", "oneLine": { "text": "Kubernetes ワークロード向けのマネージドなレイヤー 7 負荷分散・イングレス サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/overview", "locator": "冒頭", "retrievedAt": "2026-11-04T23:13:00Z" }] } },
+        { "termKey": "mcp", "term": "Model Context Protocol (MCP)", "type": "term", "oneLine": { "text": "AI アプリが外部システムの機能を発見・利用するための標準的な方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locator": "冒頭", "retrievedAt": "2026-11-04T23:13:00Z" }] } },
+        { "termKey": "mcproute", "term": "MCPRoute", "type": "feature", "oneLine": { "text": "MCP 対応のルーティングと集約を行う、Application Gateway for Containers 固有のカスタム リソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locator": "Application Gateway for ContainersがMCPサポートを追加する方法", "retrievedAt": "2026-11-04T23:13:00Z" }] } },
+        { "termKey": "jwt", "term": "JWT 検証", "type": "term", "oneLine": { "text": "ゲートウェイがトークンの署名・発行者・有効期限・オーディエンスを確認すること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locator": "JWT検証", "retrievedAt": "2026-11-04T23:13:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-04T23:13:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-west",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Application Gateway for Containers の対応リージョンに西日本は含まれるが東日本は含まれない。MCP 機能単位のリージョン記載はない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/overview", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-04T23:13:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=576388",
+        "learn": [
+          { "title": "コンテナ向けアプリケーションゲートウェイにおけるモデルコンテキストプロトコル(MCP)機能", "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway", "locale": "ja-jp" },
+          { "title": "Application Gateway for Containers 用の MCP ゲートウェイを構成する - Gateway API", "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/how-to-mcp-gateway-gateway-api", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "HTTPRoute ではなく MCPRoute を使う理由は？",
+            "a": "MCPRoute は MCP のリクエスト フローを理解し、探索の集約と該当サーバーへの振り分けを行います。MCP サーバーには MCPRoute を使います。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Application Gateway for Containers の対応リージョンに西日本は含まれます。東日本は一覧にありません。MCP 機能単位の記載はありません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/overview" }]
+          },
+          {
+            "q": "本番で使えますか？",
+            "a": "MCPRoute は v1alpha1 のプレビュー API で、一般公開前に変更される場合があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/mcp-gateway" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
