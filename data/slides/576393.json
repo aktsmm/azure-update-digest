@@ -1,0 +1,100 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["576393"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-04T23:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "576393",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Application Gateway for Containers がプライベート イングレスに対応",
+        "subtitleJa": "パブリック IP なし。承認済みプライベート エンドポイント経由でのみ到達（パブリック プレビュー）",
+        "en": "Public Preview: Private ingress for Application Gateway for Containers"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Application Gateway"],
+        "categories": ["networking", "security"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "AKS のイングレスに **Application Gateway for Containers** を使い、非公開で公開したい方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "パブリック IP なしで、レイヤー 7 ルーティングや WAF を使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。プレビューの追加利用規約が適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/private-ingress", "locator": "Important", "retrievedAt": "2026-11-04T23:20:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "プライベート エンドポイント経由のみで到達でき、VNet ピアリングなしで VNet・サブスクリプション・テナント・リージョンをまたぐ接続が可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "フロントエンドからパブリック IP を削除し、承認済みプライベート エンドポイントの接続だけを受け付ける", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/private-ingress", "locator": "冒頭", "retrievedAt": "2026-11-04T23:20:00Z" }] },
+            { "text": "1 つのリソースで公開・非公開の両フロントエンドを持て、WAF ポリシーもフロントエンドごとに関連付け可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/private-ingress", "locator": "フロントエンドの型 / Web Application Firewall のサポート", "retrievedAt": "2026-11-04T23:20:00Z" }] },
+            { "text": "同一サブスクリプションは自動承認の場合あり。他サブスクリプション/テナントは手動承認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/private-ingress", "locator": "プライベート エンドポイント接続", "retrievedAt": "2026-11-04T23:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "条件: 2026/4/23 以降作成の関連付け、REST API 2026-03-01 以降、ALB コントローラー v1.13 以降", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/private-ingress", "locator": "Limitations", "retrievedAt": "2026-11-04T23:20:00Z" }] },
+            { "text": "プレビュー中は az rest で作成が必要（az network alb frontend create は未対応）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/how-to-private-ingress-gateway-api", "locator": "プライベートフロントエンドの設定", "retrievedAt": "2026-11-04T23:20:00Z" }] },
+            { "text": "Azure Firewall/NVA を前段に置くと SNAT により元のクライアント IP が見えなくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/private-ingress", "locator": "Important", "retrievedAt": "2026-11-04T23:20:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "公開不要な社内 API・共有サービス・クラスター間通信が対象か、クライアント IP が必須かを確認し、検証環境で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agc", "term": "Application Gateway for Containers", "type": "product", "oneLine": { "text": "Kubernetes ワークロード用のマネージドなレイヤー 7 負荷分散・イングレス サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/overview", "locator": "冒頭", "retrievedAt": "2026-11-04T23:20:00Z" }] } },
+        { "termKey": "private-endpoint", "term": "プライベート エンドポイント", "type": "feature", "oneLine": { "text": "Azure Private Link を使い、サービスへプライベート接続するための入口。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/private-ingress", "locator": "冒頭", "retrievedAt": "2026-11-04T23:20:00Z" }] } },
+        { "termKey": "private-ingress", "term": "プライベート イングレス", "type": "feature", "oneLine": { "text": "フロントエンドからパブリック IP を除き、プライベート エンドポイント経由だけで受け付ける構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/private-ingress", "locator": "冒頭", "retrievedAt": "2026-11-04T23:20:00Z" }] } },
+        { "termKey": "gateway-api", "term": "Gateway API", "type": "term", "oneLine": { "text": "Kubernetes でトラフィックの受け口とルーティングを定義する API。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/overview", "locator": "製品概要", "retrievedAt": "2026-11-04T23:20:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-04T23:20:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-west",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "サービスの提供リージョン一覧に西日本はあるが東日本は含まれない。本機能固有の一覧は確認できない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/overview", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-04T23:20:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=576393",
+        "learn": [
+          { "title": "コンテナ用アプリケーションゲートウェイによるプライベートイングレス", "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/private-ingress", "locale": "ja-jp" },
+          { "title": "Gateway API でプライベート イングレスを構成する", "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/how-to-private-ingress-gateway-api", "locale": "ja-jp" },
+          { "title": "Application Gateway for Containers とは", "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "サービス自体は西日本で提供されています。東日本は一覧になく、本機能のリージョン別提供はドキュメントに明記されていません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/overview", "locator": "サポートされているリージョン" }] },
+          { "q": "利用の前提条件は？", "a": "2026 年 4 月 23 日以降作成の関連付け、REST API 2026-03-01 以降、ALB コントローラー v1.13 以降が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/private-ingress", "locator": "Limitations" }] },
+          { "q": "接続の承認は必要ですか？", "a": "同一サブスクリプションでは自動承認される場合があり、サブスクリプションやテナントをまたぐ場合は所有者の手動承認が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/private-ingress", "locator": "プライベート エンドポイント接続" }] },
+          { "q": "クライアント IP は取得できますか？", "a": "Azure Firewall/NVA を前段に置くと SNAT により、X-Forwarded-For にはファイアウォールの IP が入ります。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/private-ingress", "locator": "Important" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
