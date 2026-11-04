@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "576388"
+  },
+  "fetchedAt": "2026-11-04T01:04:07.414Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "576388",
+    "created": "2026-11-03T21:16:36.3961615Z",
+    "description": "Application Gateway for Containers now supports Model\nContext Protocol routing through the new MCPRoute custom resource. Platform\nteams can publish MCP servers behind a stable hostname and path while\ncentralizing TLS, JWT validation, Web Application Firewall protection, backend\nhealth monitoring, and routing policy at the gateway. MCPRoute supports both direct routing to a single MCP\nserver and aggregation of multiple independent servers behind one logical\nendpoint. For aggregated deployments, Application Gateway for Containers merges\ntool, resource, and prompt discovery responses, namespaces capability names to\navoid collisions, and routes invocations to the backend that owns the selected\ncapability. Expose one governed\nendpoint for MCP clients and Kubernetes-hosted MCP servers Aggregate capabilities from\nmultiple MCP servers  Session affinity for MCP\nservers that maintain in-memory session state Apply JWT validation, WAF,\nbackend TLS, health checks, and cross-namespace references Learn more: Model Context Protocol capabilities in\nApplication Gateway for Containers Configure Model Context Protocol\nrouting for Application Gateway for Containers ",
+    "id": "576388",
+    "modified": "2026-11-03T21:16:36.3961615Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: MCP gateway for Application Gateway for Containers"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

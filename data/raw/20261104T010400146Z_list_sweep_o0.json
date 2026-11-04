@@ -1,0 +1,395 @@
+{
+  "args": {
+    "filter": "modified ge 2026-11-02T02:46:41Z and modified lt 2026-11-04T01:04:00Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-11-04T01:04:00.146Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "February",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "570498",
+        "created": "2026-11-02T19:01:41.6188992Z",
+        "description": "On February 2, 2027, we will retire Azure Fluid Relay. After this date, Azure Fluid Relay will reach end of availability, and workloads that continue to depend on the service may experience disruption...",
+        "id": "570498",
+        "modified": "2026-11-02T19:01:41.6188992Z",
+        "productCategories": [
+          "Web"
+        ],
+        "products": [
+          "Azure Fluid Relay"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure Fluid Relay"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "574541",
+        "created": "2026-11-02T19:20:33.9327007Z",
+        "description": "You now have greater flexibility in network design for Azure Database for PostgreSQL Flexible Server workloads. Now you can change existing VNet-integrated servers from delegated-subnet networking to ...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "574541",
+        "modified": "2026-11-02T19:20:33.9327007Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Change from virtual network integration to a private endpoint capable network configuration in Azure Database for PostgreSQL flexible server  "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Retirement",
+            "year": 2029
+          }
+        ],
+        "baseId": "576255",
+        "created": "2026-11-02T19:22:28.7388312Z",
+        "description": "This is the formal notice that Microsoft plans to deprecate the operational technology (OT) security component of Microsoft Defender for IoT. The service will be fully deprecated in October 2029, foll...",
+        "id": "576255",
+        "modified": "2026-11-02T19:22:28.7388312Z",
+        "productCategories": [],
+        "products": [],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: OT security in Microsoft Defender for IoT"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "576382",
+        "created": "2026-11-03T21:17:08.6435886Z",
+        "description": "Application Gateway for Containers now supports centralized\nJSON Web Token validation through the AuthPolicy custom resource. Teams can\nvalidate a token signature, issuer, lifetime, and configured aud...",
+        "id": "576382",
+        "modified": "2026-11-03T21:17:08.6435886Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: JWT validation for Application Gateway for Containers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "576388",
+        "created": "2026-11-03T21:16:36.3961615Z",
+        "description": "Application Gateway for Containers now supports Model\nContext Protocol routing through the new MCPRoute custom resource. Platform\nteams can publish MCP servers behind a stable hostname and path while\n...",
+        "id": "576388",
+        "modified": "2026-11-03T21:16:36.3961615Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: MCP gateway for Application Gateway for Containers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "576393",
+        "created": "2026-11-03T21:15:46.6456991Z",
+        "description": "Application\nGateway for Containers now supports private frontends that are reachable only\nthrough approved Azure Private Link private endpoints. This enables\norganizations to keep internal application...",
+        "id": "576393",
+        "modified": "2026-11-03T21:15:46.6456991Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Private ingress for Application Gateway for Containers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "577975",
+        "created": "2026-11-02T19:37:11.4021224Z",
+        "description": "Azure\nMigrate now supports discovery and assessment for network-attached storage,\nallowing customers and partners to plan migrations of Dell PowerScale (OneFS)\nand NetApp ONTAP storage to Azure. The A...",
+        "id": "577975",
+        "modified": "2026-11-02T19:37:11.4021224Z",
+        "previewAvailabilityDate": "2026-10",
+        "productCategories": [
+          "Management and governance",
+          "Migration"
+        ],
+        "products": [
+          "Azure Migrate"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Public Preview: On-prem NAS share discovery and assessment are now available using Azure Migrate"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577992",
+        "created": "2026-11-02T18:02:48.2891474Z",
+        "description": "You can now restart or fail over databases directly from the Azure portal, including single databases, Hyperscale databases, and databases in elastic pools, without writing scripts against the Rest AP...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "577992",
+        "modified": "2026-11-02T18:02:48.2891474Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Restart databases in Azure SQL DB via the Azure portal "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578628",
+        "created": "2026-11-02T18:34:01.6952101Z",
+        "description": "Azure Storage Actions is introducing three enhancements to simplify task management and give you more control over automated data operations across Azure Blob and Data Lake Storage:Automatic propagati...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "578628",
+        "modified": "2026-11-02T18:34:01.6952101Z",
+        "productCategories": [
+          "Storage",
+          "Analytics"
+        ],
+        "products": [
+          "Azure Blob Storage",
+          "Azure Data Lake Storage",
+          "Azure Storage Actions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Services",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Storage Actions adds automatic task updates, execution controls, and case-sensitive matching"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578655",
+        "created": "2026-11-03T20:20:29.2609469Z",
+        "description": "Advanced capacity insights are now available for preview in Azure Storage Discovery. Storage Discovery now provides greater visibility into storage usage through insights such as access patterns, data...",
+        "id": "578655",
+        "modified": "2026-11-03T20:20:29.2609469Z",
+        "previewAvailabilityDate": "2026-10",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Storage Accounts",
+          "Azure Storage Discovery"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Advanced capacity insights are now available in Azure Storage Discovery"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578926",
+        "created": "2026-11-03T18:32:01.6214795Z",
+        "description": "Azure Site Recovery now offers an enhanced disaster recovery experience for virtual machines in Virtual Machine Scale Sets with flexible orchestration. The update improves target configuration and end...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "578926",
+        "modified": "2026-11-03T18:32:01.6214795Z",
+        "productCategories": [
+          "Management and governance",
+          "Migration"
+        ],
+        "products": [
+          "Azure Site Recovery"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Enhanced Azure Site Recovery support for VMSS Flex"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "579021",
+        "created": "2026-11-02T18:00:51.0272861Z",
+        "description": "Geo-Replication on partitioned namespaces for\nAzure Service Bus Premium is now generally available. You can now combine the\nthroughput benefits of partitioning with the reliability of replicating your...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "579021",
+        "modified": "2026-11-02T18:00:51.0272861Z",
+        "productCategories": [
+          "Integration"
+        ],
+        "products": [
+          "Service Bus"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Geo-Replication on partitioned namespaces for Azure Service Bus Premium"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "579111",
+        "created": "2026-11-02T17:49:48.2752135Z",
+        "description": "Azure Site Recovery support for Azure Local is now generally available, making enterprise-grade disaster recovery simpler, accessible, easier to setup and secure than ever before. Customers can protec...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "579111",
+        "modified": "2026-11-02T17:49:48.2752135Z",
+        "productCategories": [
+          "Hybrid + multicloud",
+          "Management and governance",
+          "Migration"
+        ],
+        "products": [
+          "Azure Arc",
+          "Azure Site Recovery"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Management",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Site Recovery for Azure Local"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "579305",
+        "created": "2026-11-03T18:36:12.9198081Z",
+        "description": "With this enhancement, you have the ability to lock your retention to the configured PITR retention, beyond the default 7 days of immutable backups that are already available. This is especially usefu...",
+        "id": "579305",
+        "modified": "2026-11-03T18:36:12.9198081Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database",
+          "Azure SQL Managed Instance"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Extend immutability for PITR backups for Azure SQL Database and Azure SQL Managed Instance"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 14,
+    "totalCount": 14
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

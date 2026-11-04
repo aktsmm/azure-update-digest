@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "576393"
+  },
+  "fetchedAt": "2026-11-04T01:04:12.233Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "576393",
+    "created": "2026-11-03T21:15:46.6456991Z",
+    "description": "Application\nGateway for Containers now supports private frontends that are reachable only\nthrough approved Azure Private Link private endpoints. This enables\norganizations to keep internal applications, shared services, and cross-cluster\ntraffic on private connectivity while retaining Kubernetes-native Layer 7\nrouting, TLS, health probing, and Web Application Firewall capabilities. Private ingress supports connectivity across virtual\nnetworks, subscriptions, Microsoft Entra tenants, and Azure regions without\nrequiring VNet peering. A single Application Gateway for Containers resource\ncan also host public and private frontends, allowing teams to use separate\nexposure models and security policies for different workloads. Remove the public IP\naddress and direct internet path from the frontend Enforce access through\nexplicitly provisioned and approved private endpoints  Connect workloads across VNets, subscriptions,\ntenants, and regions, including environments with overlapping CIDR ranges  Place an Azure Firewall,\nnetwork virtual appliance, or another upstream service in front of Kubernetes\nworkloads Learn more:   Private ingress with Application\nGateway for Containers  Configure private ingress\nwith Application Gateway for Containers - Gateway API ",
+    "id": "576393",
+    "modified": "2026-11-03T21:15:46.6456991Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Private ingress for Application Gateway for Containers"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

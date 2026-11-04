@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "576382"
+  },
+  "fetchedAt": "2026-11-04T01:04:03.739Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "576382",
+    "created": "2026-11-03T21:17:08.6435886Z",
+    "description": "Application Gateway for Containers now supports centralized\nJSON Web Token validation through the AuthPolicy custom resource. Teams can\nvalidate a token signature, issuer, lifetime, and configured audience by using\nsigning keys retrieved from a trusted HTTPS JSON Web Key Set endpoint. Requests\nwith missing or invalid credentials are rejected at the gateway instead of\nbeing forwarded to the backend. AuthPolicy can protect an ApplicationLoadBalancer, Gateway,\nHTTPRoute, GRPCRoute, or MCPRoute. Policies inherit through the resource\nhierarchy, while a more specific route-level policy can replace an inherited\npolicy or explicitly opt a route out. Optional OAuth Protected Resource\nMetadata helps OAuth-aware clients discover authorization servers and supported\nscopes. Apply consistent JWT\nvalidation to HTTP, gRPC, and MCP routes \n Use\n     Microsoft Entra ID or third-party identity providers that publish trusted\n     JWKS signing keys \n Combine\n     JWT validation with WAF so malicious traffic is inspected before\n     authentication \n Publish\n     OAuth resource metadata to enable authorization server discovery Learn more: JWT validation for Application Gateway\nfor Containers Configure JWT validation for\nApplication Gateway for Containers - Gateway API ",
+    "id": "576382",
+    "modified": "2026-11-03T21:17:08.6435886Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: JWT validation for Application Gateway for Containers"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
