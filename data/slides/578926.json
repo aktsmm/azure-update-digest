@@ -1,0 +1,159 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["578926"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-04T23:35:00Z"
+  },
+  "slides": [
+    {
+      "key": "578926",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Site Recovery が VMSS Flex の VM 保護を強化（GA）",
+        "subtitleJa": "ターゲット スケール セットを指定して、フェールオーバー・再保護・フェールバックまで実行できます",
+        "en": "Generally Available: Enhanced Azure Site Recovery support for VMSS Flex"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Site Recovery"],
+        "categories": ["compute", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "フレキシブル オーケストレーションの **Virtual Machine Scale Sets 内の VM** を災害復旧したい方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ターゲット構成が改善され、復旧ワークフローを一貫して実行できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "VMSS Flex の VM を保護する計画があれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "スケール セット内の各 VM を個別の複製アイテムとして保護する（スケール セット単位では有効化しない）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "どのように機能するのか", "retrievedAt": "2026-11-04T23:33:00Z" }]
+            },
+            {
+              "text": "フェールオーバー時、回復 VM をターゲット スケール セットと設定したゾーン・フォールト ドメインに配置する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "どのように機能するのか", "retrievedAt": "2026-11-04T23:33:00Z" }]
+            },
+            {
+              "text": "再保護とフェイルバックでワークロードを元のソース VM に戻せる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "再保護とフェイルバック", "retrievedAt": "2026-11-04T23:33:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "復旧先にターゲットのフレキシブル スケール セットを作成してから、VM のレプリケーションを有効化",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "ターゲットスケールセットを準備します", "retrievedAt": "2026-11-04T23:33:00Z" }]
+            },
+            {
+              "text": "ターゲットの可用性で「仮想マシン スケール セット (フレキシブル)」を選び、ターゲット スケール セットを指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "レプリケーションを有効にする", "retrievedAt": "2026-11-04T23:33:00Z" }]
+            },
+            {
+              "text": "テスト フェールオーバーで検証後、フェールオーバー → 再保護 → フェイルバック",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "テスト フェールオーバーの実行", "retrievedAt": "2026-11-04T23:33:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ターゲット スケール セットは自分で作成。Site Recovery は設定・VM プロファイルを複製しない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "Limitations", "retrievedAt": "2026-11-04T23:33:00Z" }]
+            },
+            {
+              "text": "保護後はターゲットのゾーン・フォールト ドメインを変更不可（再有効化が必要）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "Limitations", "retrievedAt": "2026-11-04T23:33:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ゾーン間 DR は、ゾーン対応スケール セット内の VM と単一インスタンス ゾーン VM が対象。リージョン VM・可用性セットの VM は対象外",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "ソースVM展開", "retrievedAt": "2026-11-04T23:33:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "複数 VM をまとめてフェールオーバーするにはリカバリ プランに追加する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "どのように機能するのか", "retrievedAt": "2026-11-04T23:33:00Z" }]
+            },
+            { "text": "本番切替前にテスト フェールオーバーで配置先のゾーンを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "asr", "term": "Azure Site Recovery", "type": "product", "oneLine": { "text": "VM を別のリージョンやゾーンへレプリケートして、災害復旧を行うサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "冒頭", "retrievedAt": "2026-11-04T23:33:00Z" }] } },
+        { "termKey": "vmss-flex", "term": "VMSS Flex", "type": "feature", "oneLine": { "text": "Flexible オーケストレーションを使う Virtual Machine Scale Sets のこと。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "冒頭", "retrievedAt": "2026-11-04T23:33:00Z" }] } },
+        { "termKey": "failover", "term": "フェールオーバー", "type": "term", "oneLine": { "text": "障害時に、ワークロードを復旧先の VM へ切り替えること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "フェイルオーバー", "retrievedAt": "2026-11-04T23:33:00Z" }] } },
+        { "termKey": "reprotect-failback", "term": "再保護 / フェイルバック", "type": "term", "oneLine": { "text": "フェールオーバー後に元の場所へ複製し直し、ワークロードを戻すこと。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locator": "再保護の有効化とフェイルバック", "retrievedAt": "2026-11-04T23:33:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-04T23:33:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Site Recovery は全リージョンで提供される基盤サービス（GA 機能のため親サービスの提供状況を継承）",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-11-04T23:34:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=578926",
+        "learn": [{ "title": "柔軟なオーケストレーションでVirtual Machine Scale SetsのVMの災害復旧を有効にする", "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "スケール セット全体を一括で保護できますか？",
+            "a": "できません。スケール セット内の個々の VM を選んでレプリケーションを有効にします。まとめて切り替えるにはリカバリ プランを使います。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex" }]
+          },
+          {
+            "q": "ターゲット スケール セットは自動で作られますか？",
+            "a": "いいえ。復旧先に自分で作成し、その後にレプリケーションを有効にします。設定や VM プロファイルは複製されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/azure-to-azure-how-to-enable-replication-vmss-flex" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Site Recovery は基盤サービスとして、全リージョンで提供されるカテゴリに分類されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
