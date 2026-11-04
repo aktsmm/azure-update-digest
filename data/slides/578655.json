@@ -1,0 +1,93 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["578655"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-04T23:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "578655",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Storage Discovery に高度な容量インサイト",
+        "subtitleJa": "アクセス層・経過期間・サイズ分布などで容量を分析（パブリック プレビュー）",
+        "en": "Public Preview: Advanced capacity insights are now available in Azure Storage Discovery"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "October" }],
+        "status": "In preview",
+        "products": ["Azure Storage Discovery", "Storage Accounts"],
+        "categories": ["storage"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Blob Storage の容量・コストを管理する**ストレージ管理者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "アクセス層やデータの経過期間別に容量を把握し、増加要因を調べられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。有効化は Standard プランの既存ワークスペースが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/create-workspace", "locator": "高度な容量に関する分析情報を有効にする", "retrievedAt": "2026-11-04T23:30:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "「容量の詳細」レポートで階層・最新性・オブジェクト サイズ・最小保持期間を分析", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/analyze-blob-capacity-details", "locator": "冒頭", "retrievedAt": "2026-11-04T23:30:00Z" }] },
+            { "text": "バージョン、スナップショット、論理削除データの内訳や保持残り期間も確認可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/analyze-blob-capacity-details", "locator": "ストレージ構成を確認", "retrievedAt": "2026-11-04T23:30:00Z" }] },
+            { "text": "「リソースを表示」で対象リソースを調べ、CSV でダウンロード可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/analyze-blob-capacity-details", "locator": "チャートの背後にあるリソースを調べましょう", "retrievedAt": "2026-11-04T23:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "既存ワークスペースで有効化（Standard プランのみ）。反映まで最大 48 時間", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/create-workspace", "locator": "詳細な容量に関する分析情報を有効にする", "retrievedAt": "2026-11-04T23:30:00Z" }] },
+            { "text": "対象は Discovery スコープごとに最大 5 万アカウント、コンテナーは各アカウントの上位 100", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/analyze-blob-capacity-details", "locator": "プレビュー カバレッジ", "retrievedAt": "2026-11-04T23:30:00Z" }] },
+            { "text": "最終アクセス分析は最終アクセス時間追跡が有効なアカウントのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/analyze-blob-capacity-details", "locator": "アクセス層を最適化する", "retrievedAt": "2026-11-04T23:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Cool/Cold/Archive の最小保持期間内のデータを把握し、早期削除料金の見込みを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "storage-discovery", "term": "Azure Storage Discovery", "type": "product", "oneLine": { "text": "Microsoft Entra テナント全体のストレージ リソースを分析情報で把握するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/create-workspace", "locator": "冒頭", "retrievedAt": "2026-11-04T23:30:00Z" }] } },
+        { "termKey": "discovery-workspace", "term": "探索ワークスペース", "type": "term", "oneLine": { "text": "対象のストレージ リソースとレポートの区分を定義するリソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/create-workspace", "locator": "冒頭", "retrievedAt": "2026-11-04T23:30:00Z" }] } },
+        { "termKey": "capacity-details", "term": "容量の詳細レポート", "type": "feature", "oneLine": { "text": "Blob の階層化・保持・分布・変化を調べる高度な容量インサイトのレポート。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/analyze-blob-capacity-details", "locator": "冒頭", "retrievedAt": "2026-11-04T23:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-04T23:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビューの提供リージョン表に東日本・西日本が記載（2026 年 11 月 2 日以降）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/analyze-blob-capacity-details", "locator": "プレビュー期間中の利用可能リージョン表", "retrievedAt": "2026-11-04T23:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=578655",
+        "learn": [
+          { "title": "ブロブ容量の詳細を分析する", "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/analyze-blob-capacity-details", "locale": "ja-jp" },
+          { "title": "Azure Storage Discovery サービスをデプロイする", "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/create-workspace", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "プレビューの提供リージョン表に東日本・西日本が 2026 年 11 月 2 日以降として記載されています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/analyze-blob-capacity-details" }] },
+          { "q": "有効化の前提は？", "a": "Standard プランの既存ワークスペースで有効化します。無料プランはアップグレードが必要で、反映まで最大 48 時間です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/create-workspace" }] },
+          { "q": "個々の Blob の一覧は取得できますか？", "a": "メタデータをアカウント・コンテナー・プレフィックス単位で集約し、個々の Blob のインベントリは提供しません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/analyze-blob-capacity-details" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
