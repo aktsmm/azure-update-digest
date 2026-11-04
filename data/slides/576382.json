@@ -1,0 +1,118 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["576382"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-04T23:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "576382",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Application Gateway for Containers が JWT 検証に対応",
+        "subtitleJa": "AuthPolicy でゲートウェイに認証を集約（パブリック プレビュー）",
+        "en": "Public Preview: JWT validation for Application Gateway for Containers"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "modifiedJst": "2026-11-04",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Application Gateway"],
+        "categories": ["networking", "security"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "AKS で **Application Gateway for Containers** を使う／検討している方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "各アプリで実装せず、ゲートウェイで JWT 検証を一元化できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "冒頭", "retrievedAt": "2026-11-04T23:10:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。プレビューの追加利用規約が適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "Important", "retrievedAt": "2026-11-04T23:10:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "AuthPolicy で署名・発行者・有効期限・オーディエンスを検証し、無効なリクエストはバックエンドへ転送されない",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "JWT検証が提供するもの", "retrievedAt": "2026-11-04T23:10:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象: ApplicationLoadBalancer / Gateway / HTTPRoute / GRPCRoute / MCPRoute に AuthPolicy を接続", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "ポリシーのアタッチと継承", "retrievedAt": "2026-11-04T23:10:00Z" }] },
+            { "text": "ポリシーは継承され、ルートで上書きや空の jwt ブロックによるオプトアウトが可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "ポリシーのアタッチと継承", "retrievedAt": "2026-11-04T23:10:00Z" }] },
+            { "text": "OAuth 保護リソース メタデータ（RFC 9728）を任意で公開できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "OAuth保護リソースメタデータ", "retrievedAt": "2026-11-04T23:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Gateway API のみ対応（Ingress API は非対応）。ポリシーと対象は同じ名前空間", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "Considerations", "retrievedAt": "2026-11-04T23:10:00Z" }] },
+            { "text": "JWKS は HTTPS で、データ プレーンから名前解決・到達できる必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "Considerations", "retrievedAt": "2026-11-04T23:10:00Z" }] },
+            { "text": "認可の判断はアプリ側。トークン発行やサインインは対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "JWT検証が提供するもの", "retrievedAt": "2026-11-04T23:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "WAF が先に評価され、通過後に JWT を検証。401 / 403 の原因切り分けに両ログを確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "WAFでのJWT検証の仕組み", "retrievedAt": "2026-11-04T23:10:00Z" }] },
+            { "text": "検証環境で Entra ID などの発行者と JWKS を設定し、挙動を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agfc", "term": "Application Gateway for Containers", "type": "product", "oneLine": { "text": "Kubernetes ワークロード向けのマネージドなレイヤー 7 負荷分散・イングレス サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/overview", "locator": "冒頭", "retrievedAt": "2026-11-04T23:10:00Z" }] } },
+        { "termKey": "jwt", "term": "JWT", "type": "term", "oneLine": { "text": "JSON Web Token。ベアラー アクセス トークンとして使われるトークン形式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "冒頭", "retrievedAt": "2026-11-04T23:10:00Z" }] } },
+        { "termKey": "authpolicy", "term": "AuthPolicy", "type": "feature", "oneLine": { "text": "ゲートウェイでの JWT 検証を設定する Kubernetes カスタム リソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "JWTの検証の仕組み", "retrievedAt": "2026-11-04T23:10:00Z" }] } },
+        { "termKey": "jwks", "term": "JWKS", "type": "term", "oneLine": { "text": "JSON Web Key Set。ID プロバイダーが署名鍵を公開する HTTPS エンドポイント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "冒頭", "retrievedAt": "2026-11-04T23:10:00Z" }] } },
+        { "termKey": "waf", "term": "WAF", "type": "feature", "oneLine": { "text": "Web 攻撃などの望ましくない HTTP トラフィックからアプリを保護する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locator": "WAFでのJWT検証の仕組み", "retrievedAt": "2026-11-04T23:10:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-04T23:10:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-west",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Application Gateway for Containers の提供リージョン一覧に西日本が含まれる（東日本は一覧に含まれない）",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/overview", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-04T23:10:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=576382",
+        "learn": [
+          { "title": "コンテナ用アプリケーションゲートウェイのJWT検証", "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation", "locale": "ja-jp" },
+          { "title": "コンテナ用アプリケーションゲートウェイのJWT検証を設定する - ゲートウェイAPI", "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/how-to-jwt-validation-gateway-api", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "Ingress API でも使えますか？",
+            "a": "JWT 検証は Gateway API でのみサポートされ、Ingress API はサポートされていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "製品の提供リージョン一覧に西日本が含まれます。東日本は一覧に含まれていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/overview" }]
+          },
+          {
+            "q": "WAF との併用時の順序は？",
+            "a": "WAF が先にリクエストを検査し、通過したものに対して AuthPolicy の JWT 検証が行われます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/for-containers/jwt-validation" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
