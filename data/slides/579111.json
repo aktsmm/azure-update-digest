@@ -1,0 +1,157 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579111"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-05T00:36:59Z"
+  },
+  "slides": [
+    {
+      "key": "579111",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Local 向け Azure Site Recovery が一般提供（GA）に",
+        "subtitleJa": "Windows / Linux VM を Azure へレプリケートして災害対策、復旧後は Azure Local へ戻せます",
+        "en": "Generally Available: Azure Site Recovery for Azure Local"
+      },
+      "meta": {
+        "publishedJst": "2026-11-03",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure Arc", "Azure Site Recovery"],
+        "categories": ["ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Local 上の Windows / Linux VM** の災害対策を検討している方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Azure portal の簡素な設定で、Azure への災害対策を構成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Azure Local の VM に災害対策が必要なら検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "VM の仮想ハード ディスクを Azure Storage アカウントへレプリケートして保護",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery", "locator": "Azure Site Recovery と Azure Local サービス", "retrievedAt": "2026-11-05T00:40:00Z" }]
+            },
+            {
+              "text": "テスト フェールオーバーで、運用レプリケーションに影響なく計画を検証",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery", "locator": "テスト フェールオーバー", "retrievedAt": "2026-11-05T00:40:00Z" }]
+            },
+            {
+              "text": "計画済み / 計画外の停止時に Azure へフェールオーバーし、準備後にフェールバック",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Azure Local の [機能] → [ディザスター リカバリー] → [インフラストラクチャの準備]",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery", "locator": "手順 1: インフラストラクチャを準備する", "retrievedAt": "2026-11-05T00:40:00Z" }]
+            },
+            {
+              "text": "Recovery Services コンテナー、Hyper-V サイト、レプリケーション ポリシーを選択",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery", "locator": "手順 1: インフラストラクチャを準備する", "retrievedAt": "2026-11-05T00:40:00Z" }]
+            },
+            {
+              "text": "[レプリケーションを有効にする] で対象 VM を選択して開始",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery", "locator": "手順 2: VM のレプリケーションを有効にする", "retrievedAt": "2026-11-05T00:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure Local は登録済みで、レプリケート用のインターネット アクセスが必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery", "locator": "前提条件と計画", "retrievedAt": "2026-11-05T00:40:00Z" }]
+            },
+            {
+              "text": "コンテナーのオーナー権限と、Azure Local リソースの読み取り/書き込み権限が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery", "locator": "前提条件と計画", "retrievedAt": "2026-11-05T00:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する機能", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure Site Recovery は Hyper-V / VMware VM や物理サーバーも Azure へレプリケート可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-overview", "locator": "レプリケートできるのは何ですか？", "retrievedAt": "2026-11-05T00:40:00Z" }]
+            },
+            {
+              "text": "Azure Backup はデータを保護し復旧可能に保つ、別の BCDR サービス",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-overview", "locator": "Backup サービス", "retrievedAt": "2026-11-05T00:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "オンプレミス障害に備え、重要 VM の復旧先として Azure を確保する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "Azure 上では Arc 拡張機能の管理やゲスト構成ポリシーの実行が行われない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery", "locator": "注意事項", "retrievedAt": "2026-11-05T00:40:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-site-recovery", "term": "Azure Site Recovery", "type": "product", "oneLine": { "text": "障害時に備え、VM 上のワークロードをレプリケートする Azure サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery", "locator": "Azure Site Recovery と Azure Local サービス", "retrievedAt": "2026-11-05T00:40:00Z" }] } },
+        { "termKey": "azure-local", "term": "Azure Local", "type": "product", "oneLine": { "text": "オンプレミスで仮想マシン（VM）を実行できる Azure のハイブリッド基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery", "locator": "冒頭", "retrievedAt": "2026-11-05T00:40:00Z" }] } },
+        { "termKey": "failover", "term": "フェールオーバー", "type": "term", "oneLine": { "text": "ホストが使えなくなった際に、レプリケート済みの VM を Azure で起動すること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery", "locator": "Azureへのフェールオーバー", "retrievedAt": "2026-11-05T00:40:00Z" }] } },
+        { "termKey": "failback", "term": "フェールバック", "type": "term", "oneLine": { "text": "計画されたフェールオーバーで、VM を Azure からオンプレミスへ戻すこと。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery", "locator": "オンプレミスへの計画されたフェールオーバー", "retrievedAt": "2026-11-05T00:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-05T00:40:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579111",
+        "learn": [
+          { "title": "Azure Local で Azure Site Recovery を使用して VM ワークロードを保護する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery", "locale": "ja-jp" },
+          { "title": "Site Recovery について", "url": "https://learn.microsoft.com/ja-jp/azure/site-recovery/site-recovery-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "対象の VM は何ですか？",
+            "a": "サポート対象の Windows および Linux 仮想マシンです。Gen 1 / Gen 2 が Azure Local のサポート シナリオに記載されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery" }, { "url": "https://azure.microsoft.com/updates?id=579111" }]
+          },
+          {
+            "q": "利用できるリージョンは？",
+            "a": "発表では、Azure Local がサポートするすべてのリージョンで利用できるとされています。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=579111" }]
+          },
+          {
+            "q": "事前に必要な準備は？",
+            "a": "Azure Local の登録、レプリケート用のインターネット アクセス、コンテナーのオーナー権限が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-local/manage/azure-site-recovery" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
