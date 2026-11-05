@@ -802,6 +802,78 @@
       "availabilities": [
         {
           "month": "November",
+          "ring": "Effective",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "578966",
+      "categories": [
+        "networking"
+      ],
+      "created": "2026-11-04T18:39:41.8215548Z",
+      "createdJst": "2026-11-05",
+      "description": "Route maps for Azure Route Server are now generally available in the Azure public cloud. Route maps provide fine-grained control over inbound and outbound routing across hybrid connections. Customers can manage routes advertised to and from Azure Route Server BGP peerings with Network Virtual Appliances (NVAs), ExpressRoute gateways, and VPN gateways in the same virtual network. Route maps provide the following capabilities: Route summarization: Summarize routes when on-premises networks connect to the virtual network through ExpressRoute or VPN. Route control: Control routes entering and leaving Azure Route Server between on-premises networks, NVAs, and virtual networks. Path selection: Modify BGP attributes such as AS-PATH to make routes more or less preferred. Route tagging: Tag routes by using the BGP Community attribute.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "43bd2fb3e5604b9dc2db2b4c8f8288956fa2a5676e87a426ab08d719d5b5fbe0",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-05T01:19:04.021Z",
+          "fingerprint": "3346f7b75d4bde583e82bb0c29509adc97f85502370a9090736a4f6b7a59ef02",
+          "modifiedAfter": "2026-11-04T18:39:41.8215548Z",
+          "modifiedBefore": null,
+          "rawRef": "20261105T011904021Z_list_sweep_o0.json#578966"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-05T01:19:13.146Z",
+          "fingerprint": "43bd2fb3e5604b9dc2db2b4c8f8288956fa2a5676e87a426ab08d719d5b5fbe0",
+          "modifiedAfter": "2026-11-04T18:39:41.8215548Z",
+          "modifiedBefore": "2026-11-04T18:39:41.8215548Z",
+          "rawRef": "20261105T011913146Z_detail_578966.json#578966"
+        }
+      ],
+      "ids": [
+        "578966"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [
+          "ga-title"
+        ],
+        "score": 2,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "578966",
+      "modified": "2026-11-04T18:39:41.8215548Z",
+      "modifiedJst": "2026-11-05",
+      "productCategories": [
+        "Networking"
+      ],
+      "products": [
+        "Azure Route Server"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=578966",
+      "status": null,
+      "tags": [
+        "Features"
+      ],
+      "title": "Generally Available: Route maps for Azure Route Server"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
           "ring": "General Availability",
           "year": 2026
         }
@@ -951,6 +1023,160 @@
     {
       "availabilities": [
         {
+          "month": "June",
+          "ring": "Private Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": "2026-06"
+      },
+      "canonicalKey": "579162",
+      "categories": [
+        "compute",
+        "storage",
+        "security",
+        "ops-governance"
+      ],
+      "created": "2026-11-04T17:13:51.5498713Z",
+      "createdJst": "2026-11-05",
+      "description": "Multi-disk crash-consistent restore points for Azure virtual machines with Premium SSD v2 and Ultra data disks are now available in public preview on VMs with SCSI disk controllers. You can use this to capture the agent-less crash consistent restore point of a VM.This preview extends existing multi-disk crash-consistent restore point support to Premium SSD v2 and Ultra data disks. Existing support for Standard HDD, Standard SSD, and Premium SSD disks is unchanged.Instant Access is also supported for multi-disk crash-consistent restore points in this preview. This applies only to VMs with Premium SSD v2 and Ultra data disks. With Instant Access, you can begin restoring a disk as soon as the restore point is created instead of waiting for the background data copy to complete, helping reduce your recovery time objective.How to use itSet consistencyMode to CrashConsistent when creating a restore point in a restore point collection. Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "d93cf05ed2fed646338af87c5a5f220461c84c71c0c16bfecfeb3008b41c31e6",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-05T01:19:04.021Z",
+          "fingerprint": "f370a3516f99e393eee481abba7bbc86102bc9f26b089a6ed122e26382757ccb",
+          "modifiedAfter": "2026-11-04T17:13:51.5498713Z",
+          "modifiedBefore": null,
+          "rawRef": "20261105T011904021Z_list_sweep_o0.json#579162"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-05T01:19:21.344Z",
+          "fingerprint": "d93cf05ed2fed646338af87c5a5f220461c84c71c0c16bfecfeb3008b41c31e6",
+          "modifiedAfter": "2026-11-04T17:13:51.5498713Z",
+          "modifiedBefore": "2026-11-04T17:13:51.5498713Z",
+          "rawRef": "20261105T011921344Z_detail_579162.json#579162"
+        }
+      ],
+      "ids": [
+        "579162"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "compliance-tag"
+        ],
+        "score": 5,
+        "topics": [
+          "security"
+        ]
+      },
+      "latestId": "579162",
+      "modified": "2026-11-04T17:13:51.5498713Z",
+      "modifiedJst": "2026-11-05",
+      "productCategories": [
+        "Compute",
+        "Storage"
+      ],
+      "products": [
+        "Azure Disk Storage",
+        "Virtual Machines"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579162",
+      "status": "In preview",
+      "tags": [
+        "Compliance",
+        "Feature",
+        "Management"
+      ],
+      "title": "Public Preview: Multi-disk crash-consistent VM restore points for Premium SSD v2 and Ultra Disks on VMs with SCSI disk controller"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "579300",
+      "categories": [
+        "databases",
+        "ops-governance"
+      ],
+      "created": "2026-11-04T18:42:12.6780656Z",
+      "createdJst": "2026-11-05",
+      "description": "The Azure Database for PostgreSQL Flexible Server REST API version 2026-10-01 is now generally available. This stable API release introduces expanded capabilities for maintenance management, immutable backups, multi-tenant encryption (cross-tenant customer-managed keys (**CMKs**), Federal Information Processing Standards (**FIPS**) configuration, network migration, Premium SSD v2 storage, and major version upgrade prechecks. It also enhances autonomous tuning recommendations and introduces more flexible PostgreSQL version handling.These enhancements enable customers to automate more server management operations, strengthen security, and streamline database administration through a stable, production-ready API.Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "a9af5e4d68a345586a47dd1a18c1e52f7ac5fbbb24bbc43d58e75d0d03c17c80",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-05T01:19:04.021Z",
+          "fingerprint": "152664127659fc72f0b01c19938ae37d68535a012720c27e3ac5afe73081402f",
+          "modifiedAfter": "2026-11-04T18:42:12.6780656Z",
+          "modifiedBefore": null,
+          "rawRef": "20261105T011904021Z_list_sweep_o0.json#579300"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-05T01:19:08.667Z",
+          "fingerprint": "a9af5e4d68a345586a47dd1a18c1e52f7ac5fbbb24bbc43d58e75d0d03c17c80",
+          "modifiedAfter": "2026-11-04T18:42:12.6780656Z",
+          "modifiedBefore": "2026-11-04T18:42:12.6780656Z",
+          "rawRef": "20261105T011908667Z_detail_579300.json#579300"
+        }
+      ],
+      "ids": [
+        "579300"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "579300",
+      "modified": "2026-11-04T18:42:12.6780656Z",
+      "modifiedJst": "2026-11-05",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure Database for PostgreSQL"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579300",
+      "status": "Launched",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Generally Available: Azure Database for PostgreSQL stable REST API version 2026-10-01"
+    },
+    {
+      "availabilities": [
+        {
           "month": "November",
           "ring": "Preview",
           "year": 2026
@@ -1018,6 +1244,81 @@
         "Feature"
       ],
       "title": "Public Preview: Extend immutability for PITR backups for Azure SQL Database and Azure SQL Managed Instance"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "579507",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-11-04T18:09:43.6615776Z",
+      "createdJst": "2026-11-05",
+      "description": "Azure Firewall now supports application rules in IPv6\nPublic Preview, enabling layer 7 filtering for IPv6 HTTP and HTTPS traffic. The\nenhancement extends application-level controls to IPv6 and dual-stack\ndeployments, helping customers maintain consistent policies across IPv4 and\nIPv6 environments.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "44c3cad20dce6ee01c1dfe05b78a7cf99ac482af2d0ec2be76e6d741d7048cdb",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-05T01:19:04.021Z",
+          "fingerprint": "8423172df6e5a5eb72ef4676eedbd68632244553ded7fdfe979937c55dd3567f",
+          "modifiedAfter": "2026-11-04T18:09:43.6615776Z",
+          "modifiedBefore": null,
+          "rawRef": "20261105T011904021Z_list_sweep_o0.json#579507"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-05T01:19:15.980Z",
+          "fingerprint": "44c3cad20dce6ee01c1dfe05b78a7cf99ac482af2d0ec2be76e6d741d7048cdb",
+          "modifiedAfter": "2026-11-04T18:09:43.6615776Z",
+          "modifiedBefore": "2026-11-04T18:09:43.6615776Z",
+          "rawRef": "20261105T011915980Z_detail_579507.json#579507"
+        }
+      ],
+      "ids": [
+        "579507"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "security-tag"
+        ],
+        "score": 5,
+        "topics": [
+          "security"
+        ]
+      },
+      "latestId": "579507",
+      "modified": "2026-11-04T18:09:43.6615776Z",
+      "modifiedJst": "2026-11-05",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Firewall"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579507",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Security"
+      ],
+      "title": "Public Preview: Azure Firewall IPv6 now supports application rules"
     }
   ],
   "month": "2026-11",

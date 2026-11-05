@@ -1,0 +1,318 @@
+{
+  "args": {
+    "filter": "modified ge 2026-11-03T01:04:00Z and modified lt 2026-11-05T01:19:04Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-11-05T01:19:04.021Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "576382",
+        "created": "2026-11-03T21:17:08.6435886Z",
+        "description": "Application Gateway for Containers now supports centralized\nJSON Web Token validation through the AuthPolicy custom resource. Teams can\nvalidate a token signature, issuer, lifetime, and configured aud...",
+        "id": "576382",
+        "modified": "2026-11-03T21:17:08.6435886Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: JWT validation for Application Gateway for Containers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "576388",
+        "created": "2026-11-03T21:16:36.3961615Z",
+        "description": "Application Gateway for Containers now supports Model\nContext Protocol routing through the new MCPRoute custom resource. Platform\nteams can publish MCP servers behind a stable hostname and path while\n...",
+        "id": "576388",
+        "modified": "2026-11-03T21:16:36.3961615Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: MCP gateway for Application Gateway for Containers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "576393",
+        "created": "2026-11-03T21:15:46.6456991Z",
+        "description": "Application\nGateway for Containers now supports private frontends that are reachable only\nthrough approved Azure Private Link private endpoints. This enables\norganizations to keep internal application...",
+        "id": "576393",
+        "modified": "2026-11-03T21:15:46.6456991Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Private ingress for Application Gateway for Containers"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578655",
+        "created": "2026-11-03T20:20:29.2609469Z",
+        "description": "Advanced capacity insights are now available for preview in Azure Storage Discovery. Storage Discovery now provides greater visibility into storage usage through insights such as access patterns, data...",
+        "id": "578655",
+        "modified": "2026-11-03T20:20:29.2609469Z",
+        "previewAvailabilityDate": "2026-10",
+        "productCategories": [
+          "Storage"
+        ],
+        "products": [
+          "Storage Accounts",
+          "Azure Storage Discovery"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Advanced capacity insights are now available in Azure Storage Discovery"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578926",
+        "created": "2026-11-03T18:32:01.6214795Z",
+        "description": "Azure Site Recovery now offers an enhanced disaster recovery experience for virtual machines in Virtual Machine Scale Sets with flexible orchestration. The update improves target configuration and end...",
+        "generalAvailabilityDate": "2026-10",
+        "id": "578926",
+        "modified": "2026-11-03T18:32:01.6214795Z",
+        "productCategories": [
+          "Management and governance",
+          "Migration"
+        ],
+        "products": [
+          "Azure Site Recovery"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Enhanced Azure Site Recovery support for VMSS Flex"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "578966",
+        "created": "2026-11-04T18:39:41.8215548Z",
+        "description": "Route maps for Azure Route Server are now generally available in the Azure public cloud. Route maps provide fine-grained control over inbound and outbound routing across hybrid connections. Customers ...",
+        "id": "578966",
+        "modified": "2026-11-04T18:39:41.8215548Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Route Server"
+        ],
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Route maps for Azure Route Server"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Private Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "579162",
+        "created": "2026-11-04T17:13:51.5498713Z",
+        "description": "Multi-disk crash-consistent restore points for Azure virtual machines with Premium SSD v2 and Ultra data disks are now available in public preview on VMs with SCSI disk controllers. You can use this t...",
+        "id": "579162",
+        "modified": "2026-11-04T17:13:51.5498713Z",
+        "privatePreviewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Storage",
+          "Compute"
+        ],
+        "products": [
+          "Azure Disk Storage",
+          "Virtual Machines"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Compliance",
+          "Management",
+          "Feature"
+        ],
+        "title": "Public Preview: Multi-disk crash-consistent VM restore points for Premium SSD v2 and Ultra Disks on VMs with SCSI disk controller"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "579300",
+        "created": "2026-11-04T18:42:12.6780656Z",
+        "description": "The Azure Database for PostgreSQL Flexible Server REST API version 2026-10-01 is now generally available. This stable API release introduces expanded capabilities for maintenance management, immutable...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "579300",
+        "modified": "2026-11-04T18:42:12.6780656Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Database for PostgreSQL stable REST API version 2026-10-01"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "579305",
+        "created": "2026-11-03T18:36:12.9198081Z",
+        "description": "With this enhancement, you have the ability to lock your retention to the configured PITR retention, beyond the default 7 days of immutable backups that are already available. This is especially usefu...",
+        "id": "579305",
+        "modified": "2026-11-03T18:36:12.9198081Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database",
+          "Azure SQL Managed Instance"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Extend immutability for PITR backups for Azure SQL Database and Azure SQL Managed Instance"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "579507",
+        "created": "2026-11-04T18:09:43.6615776Z",
+        "description": "Azure Firewall now supports application rules in IPv6\nPublic Preview, enabling layer 7 filtering for IPv6 HTTP and HTTPS traffic. The\nenhancement extends application-level controls to IPv6 and dual-st...",
+        "id": "579507",
+        "modified": "2026-11-04T18:09:43.6615776Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Firewall"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Public Preview: Azure Firewall IPv6 now supports application rules"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "transition-to-azure-ad-to-query-data-from-azure-monitor-application-insights-by-31-march-2026",
+        "created": "2023-05-15T19:51:58Z",
+        "description": "*Note: We have extended the retirement date to March 31, 2027.On March 31, 2027 API keys used query application\ninsights will be retired. You'll need to transition to\nMicrosoft Entra ID (formerly know...",
+        "id": "transition-to-azure-ad-to-query-data-from-azure-monitor-application-insights-by-31-march-2026",
+        "modified": "2026-11-04T17:40:28.5148039Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Application Insights",
+          "Azure Monitor"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Transition to Entra ID (formerly known as Azure AD) to query data from Azure Monitor application insights by March 31, 2027"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 11,
+    "totalCount": 11
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

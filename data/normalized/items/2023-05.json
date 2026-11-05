@@ -1,0 +1,83 @@
+{
+  "items": [
+    {
+      "availabilities": [
+        {
+          "month": "March",
+          "ring": "Retirement",
+          "year": 2027
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "transition-to-azure-ad-to-query-data-from-azure-monitor-application-insights-by-31-march-2026",
+      "categories": [
+        "ops-governance",
+        "devtools"
+      ],
+      "created": "2023-05-15T19:51:58Z",
+      "createdJst": "2023-05-16",
+      "description": "*Note: We have extended the retirement date to March 31, 2027.On March 31, 2027 API keys used query application\ninsights will be retired. You'll need to transition to\nMicrosoft Entra ID (formerly known as Azure AD) which provides all the\nfunctionality of API keys plus new ones, including:  \n Microsoft\n     Entra ID (formerly Azure AD) Multi-Factor Authentication.  \n Hybrid\n     integration to write password changes back to on-premises\n     environment.  \n Hybrid\n     integration to enforce password protection policies for an on-premises\n     environment.  Recommended action:  To continue querying your application insights resource,\nswitch to Microsoft\nEntra authentication for application insights by March 31, 2027.  Help and support: Get answers from community experts\nin Microsoft Q&A. If\nyou have a support plan and you need technical help, create a support\nrequest:  For Issue\n     type, select Technical.    For Subscription,\n     select your subscription.    For Service,\n     click My services.    For Service\n     type, select Application Insights.    For Resource,\n     select the Azure resource that you are creating a support request\n     for.    For Summary,\n     type a description of your issue.    For Problem\n     type, select A feature that I use is deprecated and will be removed\n     from application insights.    For Problem\n     subtype, select API keys for querying are being\n     retiredMicros ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "c9233878fb2122f16901be2d6e0c08d3022296177b8b10ffdf34440fb9457191",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-05T01:19:04.021Z",
+          "fingerprint": "e3efed3b240749ff95f4e24a4a029e0885d6380bd964475de1afcb01acb2c65a",
+          "modifiedAfter": "2026-11-04T17:40:28.5148039Z",
+          "modifiedBefore": null,
+          "rawRef": "20261105T011904021Z_list_sweep_o0.json#transition-to-azure-ad-to-query-data-from-azure-monitor-application-insights-by-31-march-2026"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-05T01:19:25.733Z",
+          "fingerprint": "c9233878fb2122f16901be2d6e0c08d3022296177b8b10ffdf34440fb9457191",
+          "modifiedAfter": "2026-11-04T17:40:28.5148039Z",
+          "modifiedBefore": "2026-11-04T17:40:28.5148039Z",
+          "rawRef": "20261105T011925733Z_detail_transition-to-azure-ad-to-query-data-from-azure-monitor-application-insights-by-31-march-2026.json#transition-to-azure-ad-to-query-data-from-azure-monitor-application-insights-by-31-march-2026"
+        }
+      ],
+      "ids": [
+        "transition-to-azure-ad-to-query-data-from-azure-monitor-application-insights-by-31-march-2026"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "retire-tag",
+          "retire-ring",
+          "retire-title"
+        ],
+        "score": 10,
+        "topics": [
+          "retirement"
+        ]
+      },
+      "latestId": "transition-to-azure-ad-to-query-data-from-azure-monitor-application-insights-by-31-march-2026",
+      "modified": "2026-11-04T17:40:28.5148039Z",
+      "modifiedJst": "2026-11-05",
+      "productCategories": [
+        "DevOps",
+        "Management and governance"
+      ],
+      "products": [
+        "Application Insights",
+        "Azure Monitor"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=transition-to-azure-ad-to-query-data-from-azure-monitor-application-insights-by-31-march-2026",
+      "status": null,
+      "tags": [
+        "Retirements"
+      ],
+      "title": "Retirement: Transition to Entra ID (formerly known as Azure AD) to query data from Azure Monitor application insights by March 31, 2027"
+    }
+  ],
+  "month": "2023-05",
+  "schema": 1
+}

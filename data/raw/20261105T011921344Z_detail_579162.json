@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "579162"
+  },
+  "fetchedAt": "2026-11-05T01:19:21.344Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Private Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "579162",
+    "created": "2026-11-04T17:13:51.5498713Z",
+    "description": "Multi-disk crash-consistent restore points for Azure virtual machines with Premium SSD v2 and Ultra data disks are now available in public preview on VMs with SCSI disk controllers. You can use this to capture the agent-less crash consistent restore point of a VM.This preview extends existing multi-disk crash-consistent restore point support to Premium SSD v2 and Ultra data disks. Existing support for Standard HDD, Standard SSD, and Premium SSD disks is unchanged.Instant Access is also supported for multi-disk crash-consistent restore points in this preview. This applies only to VMs with Premium SSD v2 and Ultra data disks. With Instant Access, you can begin restoring a disk as soon as the restore point is created instead of waiting for the background data copy to complete, helping reduce your recovery time objective.How to use itSet consistencyMode to CrashConsistent when creating a restore point in a restore point collection. Learn more. ",
+    "id": "579162",
+    "modified": "2026-11-04T17:13:51.5498713Z",
+    "privatePreviewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Storage",
+      "Compute"
+    ],
+    "products": [
+      "Azure Disk Storage",
+      "Virtual Machines"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Compliance",
+      "Management",
+      "Feature"
+    ],
+    "title": "Public Preview: Multi-disk crash-consistent VM restore points for Premium SSD v2 and Ultra Disks on VMs with SCSI disk controller"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
