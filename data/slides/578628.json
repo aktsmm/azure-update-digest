@@ -1,0 +1,173 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["578628"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-05T00:22:00Z"
+  },
+  "slides": [
+    {
+      "key": "578628",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Storage Actions に自動反映・実行停止・大文字小文字区別が追加",
+        "subtitleJa": "タスク定義の更新が割り当てへ自動反映され、実行中の停止や _cs 演算子も使えます",
+        "en": "Generally Available: Azure Storage Actions adds automatic task updates, execution controls, and case-sensitive matching"
+      },
+      "meta": {
+        "publishedJst": "2026-11-03",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Blob Storage", "Azure Data Lake Storage", "Azure Storage Actions"],
+        "categories": ["storage", "databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Blob Storage / Data Lake Storage で **Storage Actions のタスク**を運用している方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "割り当ての個別更新が不要になり、実行制御と条件指定の精度が上がる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "共有タスクを更新する前に、参照する割り当てを確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-assignment", "locator": "ストレージタスク定義の更新", "retrievedAt": "2026-11-05T00:22:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "タスク定義の更新が既存の割り当てへ自動で適用され、各割り当てを個別に更新する必要がない",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "定義の更新は割り当てへ自動伝播し、スケジュール実行は次回から新定義を使用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-assignment", "locator": "ストレージタスク定義の更新", "retrievedAt": "2026-11-05T00:22:00Z" }]
+            },
+            { "text": "実行中の割り当てを個別、またはタスク配下の全割り当てで停止要求できる（非同期処理）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "equals_cs / contains_cs / startsWith_cs / endsWith_cs / matches_cs を追加",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-conditions", "locator": "サポートされている演算子", "retrievedAt": "2026-11-05T00:22:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ストレージ タスクで条件と操作を定義し、ストレージ アカウントへ割り当てて実行する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/overview", "locator": "コンポーネント", "retrievedAt": "2026-11-05T00:22:00Z" }]
+            },
+            {
+              "text": "既存の演算子は従来どおり大文字小文字を区別しない",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "キュー済み・進行中の実行は更新されず旧定義を使う。割り当ては汎用 v1 / レガシ Blob アカウントを対象にできない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [
+                { "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-assignment", "locator": "ストレージタスク定義の更新", "retrievedAt": "2026-11-05T00:22:00Z" },
+                { "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/overview", "locator": "実行", "retrievedAt": "2026-11-05T00:22:00Z" }
+              ]
+            },
+            {
+              "text": "matches / matches_cs は Metadata.Value と Tags.Value には使えない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-conditions", "locator": "サポートされている演算子", "retrievedAt": "2026-11-05T00:22:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "モック実行はデータを変更せず評価とレポートだけを行う。条件のプレビューは最大 5,000 件まで表示",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [
+                { "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-assignment", "locator": "模擬実行", "retrievedAt": "2026-11-05T00:22:00Z" },
+                { "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-conditions", "locator": "条件のプレビュー", "retrievedAt": "2026-11-05T00:22:00Z" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "共有タスクの変更は複数アカウントに影響するため、更新前に割り当てを見直す",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-assignment", "locator": "ストレージタスク定義の更新", "retrievedAt": "2026-11-05T00:22:00Z" }]
+            },
+            {
+              "text": "拡張子など、大文字小文字で対象が変わる名前の条件で _cs 演算子を検討する",
+              "origin": "editorial", "assertion": "recommendation", "verification": "unverified"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-storage-actions", "term": "Azure Storage Actions", "type": "product", "oneLine": { "text": "Blob Storage と Data Lake Storage のデータ管理タスクを自動化するフル マネージド プラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/overview", "locator": "冒頭", "retrievedAt": "2026-11-05T00:22:00Z" }] } },
+        { "termKey": "storage-task", "term": "ストレージ タスク", "type": "feature", "oneLine": { "text": "条件を満たす BLOB に対して操作を実行する、プロビジョニングするリソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/overview", "locator": "用語と定義", "retrievedAt": "2026-11-05T00:22:00Z" }] } },
+        { "termKey": "task-assignment", "term": "ストレージ タスクの割り当て", "type": "feature", "oneLine": { "text": "対象のストレージ アカウントとオブジェクト、実行時期、レポート保存先を指定するもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-assignment", "locator": "冒頭", "retrievedAt": "2026-11-05T00:22:00Z" }] } },
+        { "termKey": "case-sensitive-operator", "term": "_cs 演算子", "type": "term", "oneLine": { "text": "接尾辞 _cs が付き、大文字と小文字を区別して文字列を比較する演算子。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-conditions", "locator": "サポートされている演算子", "retrievedAt": "2026-11-05T00:22:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-05T00:22:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Storage Actions は東日本・西日本を含むリージョンで一般提供",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/overview", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-05T00:22:00Z" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Storage Actions は東日本・西日本を含むパブリック クラウド リージョンで一般提供されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/overview" }]
+          },
+          {
+            "q": "更新した定義は実行中のタスクにも反映されますか？",
+            "a": "いいえ。スケジュール済みの割り当ては次回実行から新定義を使い、キュー済み・進行中の実行は旧定義のままです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-assignment" }]
+          },
+          {
+            "q": "大文字小文字を区別する条件はどう書きますか？",
+            "a": "equals_cs や endsWith_cs など、演算子名に _cs を付けます。endsWith_cs(Name, '.CSV') は report.CSV にのみ一致します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-conditions" }]
+          },
+          {
+            "q": "費用はどう決まりますか？",
+            "a": "割り当ての実行ごとのタスク実行、スキャンしたオブジェクト数、実行した操作数に基づいて課金されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/overview" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=578628",
+        "learn": [
+          { "title": "ストレージ タスクの割り当て", "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-assignment", "locale": "ja-jp" },
+          { "title": "ストレージ タスクの条件", "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/storage-tasks/storage-task-conditions", "locale": "ja-jp" },
+          { "title": "Azure Storage Actions とは", "url": "https://learn.microsoft.com/ja-jp/azure/storage-actions/overview", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
