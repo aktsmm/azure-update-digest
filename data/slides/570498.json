@@ -1,0 +1,109 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["570498"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-05T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "570498",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Azure Fluid Relay が 2027-02-02 に廃止",
+        "subtitleJa": "2027-02-01 まで利用可能。期限までにセルフホスト型 Fluid サービスへ移行",
+        "en": "Retirement: Azure Fluid Relay"
+      },
+      "meta": {
+        "publishedJst": "2026-11-03",
+        "availability": [{ "rawRing": "Retirement", "year": 2027, "month": "February" }],
+        "status": null,
+        "products": ["Azure Fluid Relay"],
+        "categories": ["web-mobile"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Azure Fluid Relay を利用しているアプリケーションの開発・運用者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "廃止日以降はサービスが利用できなくなり、依存するワークロードで障害が発生する可能性がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "期限までにセルフホスト型 Fluid サービスへ移行する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2027-02-02", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-11-03", "precision": "day" } },
+        { "label": "最終利用日", "when": { "date": "2027-02-01", "precision": "day" } },
+        { "label": "廃止", "when": { "date": "2027-02-02", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "2027-02-02 に Azure Fluid Relay は提供終了となる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "2027-02-01 までは引き続き利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Fluid Framework 自体はオープンソースとして継続される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "セルフホスト型 Fluid サービス（Fluid Framework の GitHub リポジトリで提供）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ホスティングと運用は自社の責任。コストは構成・規模・運用要件による", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure サブスクリプションを確認し、Azure Fluid Relay を使うアプリケーションを洗い出す", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "移行を計画・実施し、2027-02-02 より前に切り替える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-fluid-relay", "term": "Azure Fluid Relay", "type": "product", "oneLine": { "text": "Fluid Framework 向けのマネージド オファリング。クライアント間で状態をリアルタイムに複製する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-fluid-relay/overview/overview", "locator": "冒頭", "retrievedAt": "2026-11-05T00:00:00Z" }] } },
+        { "termKey": "fluid-framework", "term": "Fluid Framework", "type": "term", "oneLine": { "text": "共有状態を分散・同期するためのオープンソースのクライアント ライブラリ群。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-fluid-relay/overview/overview", "locator": "Fluid Framework とは", "retrievedAt": "2026-11-05T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "サービス全体の廃止（リージョンを問わず適用）",
+        "evidence": [{ "url": "https://azure.microsoft.com/updates?id=570498" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=570498",
+        "learn": [
+          { "title": "Azure Fluid Relay の概要", "url": "https://learn.microsoft.com/ja-jp/azure/azure-fluid-relay/overview/overview", "locale": "ja-jp" },
+          { "title": "Azure Fluid Relay FAQ", "url": "https://learn.microsoft.com/ja-jp/azure/azure-fluid-relay/resources/faq", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "廃止日以降はどうなりますか？",
+            "a": "2027-02-02 以降、Azure Fluid Relay に依存するワークロードで障害が発生する可能性があります。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=570498" }]
+          },
+          {
+            "q": "いつまで使えますか？移行先は？",
+            "a": "2027-02-01 まで利用できます。移行先は Fluid Framework の GitHub リポジトリで提供されるセルフホスト型 Fluid サービスです。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=570498" }]
+          },
+          {
+            "q": "移行後の費用はどうなりますか？",
+            "a": "自社でホスティング・運用するため、運用・インフラのコストは構成、規模、運用要件によって異なります。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=570498" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
