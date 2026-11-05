@@ -1,0 +1,168 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579021"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-05T00:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "579021",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Service Bus Premium のパーティション分割名前空間で Geo-Replication が GA",
+        "subtitleJa": "スループット拡張と、セカンダリ リージョンへのメッセージ複製を併用できます",
+        "en": "Generally Available: Geo-Replication on partitioned namespaces for Azure Service Bus Premium"
+      },
+      "meta": {
+        "publishedJst": "2026-11-03",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Service Bus"],
+        "categories": ["integration"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Service Bus Premium のパーティション分割名前空間**を使う、または検討している方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "高スループットと、リージョン障害への備えを 1 つの名前空間で両立できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "リージョン障害対策が必要なら検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "メタデータとデータをプライマリからセカンダリ リージョンへ継続的にレプリケート",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication", "locator": "冒頭", "retrievedAt": "2026-11-05T00:30:00Z" }]
+            },
+            {
+              "text": "セカンダリはいつでもプライマリに昇格でき、ホスト名は新プライマリを指す",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication", "locator": "概要", "retrievedAt": "2026-11-05T00:30:00Z" }]
+            },
+            {
+              "text": "パーティション分割は、キューとトピックを複数ブローカーに分散する",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "既存のパーティション分割 Premium 名前空間で Geo-Replication を有効化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "新規作成時は、パーティション数を指定して作成し、セカンダリ リージョンを追加",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [
+                { "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/enable-partitions-premium", "locator": "Azure Portal の使用", "retrievedAt": "2026-11-05T00:30:00Z" },
+                { "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication", "locator": "セットアップ", "retrievedAt": "2026-11-05T00:30:00Z" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Premium 層が対象。セカンダリ リージョンは 1 つのみ、大きなメッセージは未対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication", "locator": "注・重要", "retrievedAt": "2026-11-05T00:30:00Z" }]
+            },
+            {
+              "text": "Geo-Disaster Recovery とは併用不可。パーティション数は作成後に変更不可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [
+                { "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication", "locator": "重要", "retrievedAt": "2026-11-05T00:30:00Z" },
+                { "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/enable-partitions-premium", "locator": "注", "retrievedAt": "2026-11-05T00:30:00Z" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Geo-Replication はデータも複製、Geo-Disaster Recovery はメタデータのみ複製",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication", "locator": "Geo-Replication と Geo-Disaster Recovery", "retrievedAt": "2026-11-05T00:30:00Z" }]
+            },
+            {
+              "text": "ほとんどのディザスター リカバリー シナリオで Geo-Replication を推奨",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication", "locator": "Geo-Replication と Geo-Disaster Recovery", "retrievedAt": "2026-11-05T00:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "計画メンテナンス時の昇格や、別リージョンへの移行にも使える",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication", "locator": "Azure リージョンの移行", "retrievedAt": "2026-11-05T00:30:00Z" }]
+            },
+            {
+              "text": "強制昇格ではデータの損失や重複が起こりうる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication", "locator": "レプリケーション モード", "retrievedAt": "2026-11-05T00:30:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "service-bus", "term": "Azure Service Bus", "type": "product", "oneLine": { "text": "キューとトピックでアプリ間のメッセージ交換を仲介するメッセージング サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/enable-partitions-premium", "locator": "冒頭", "retrievedAt": "2026-11-05T00:30:00Z" }] } },
+        { "termKey": "geo-replication", "term": "Geo-Replication", "type": "feature", "oneLine": { "text": "メタデータとメッセージ データをセカンダリ リージョンへ継続的に複製する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication", "locator": "冒頭", "retrievedAt": "2026-11-05T00:30:00Z" }] } },
+        { "termKey": "partitioned-namespace", "term": "パーティション分割された名前空間", "type": "feature", "oneLine": { "text": "エンティティを複数のメッセージ ブローカーに分散し、スループットを高める名前空間。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/enable-partitions-premium", "locator": "冒頭", "retrievedAt": "2026-11-05T00:30:00Z" }] } },
+        { "termKey": "promotion", "term": "昇格", "type": "term", "oneLine": { "text": "セカンダリ リージョンをプライマリに切り替え、ホスト名の向き先を変える操作。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication", "locator": "概要", "retrievedAt": "2026-11-05T00:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-05T00:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Service Bus は基盤サービスとして全リージョンで提供。パーティション分割は一部リージョンを除き利用可能",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-11-05T00:30:00Z" },
+          { "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/enable-partitions-premium", "locator": "注", "retrievedAt": "2026-11-05T00:30:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579021",
+        "learn": [
+          { "title": "Azure Service Bus の geo レプリケーション", "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication", "locale": "ja-jp" },
+          { "title": "Azure Service Bus Premium 名前空間のパーティション分割を有効にする", "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/enable-partitions-premium", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "Geo-Replication と Geo-Disaster Recovery は併用できますか?",
+            "a": "併用できません。Geo-Replication はデータも複製し、Geo-Disaster Recovery はメタデータのみを複製します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication" }]
+          },
+          {
+            "q": "セカンダリ リージョンはいくつ構成できますか?",
+            "a": "現在サポートされているセカンダリ リージョンは 1 つだけです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication" }]
+          },
+          {
+            "q": "既存の名前空間をパーティション分割に変更できますか?",
+            "a": "既存の名前空間でパーティション分割の設定は変更できません。作成時にパーティション数を設定します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/enable-partitions-premium" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
