@@ -1,0 +1,169 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577975"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-04T23:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "577975",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Migrate でオンプレミス NAS の共有を検出・評価",
+        "subtitleJa": "Dell PowerScale / NetApp ONTAP の共有を Azure 向けに評価できます（パブリック プレビュー）",
+        "en": "Public Preview: On-prem NAS share discovery and assessment are now available using Azure Migrate"
+      },
+      "meta": {
+        "publishedJst": "2026-11-03",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "October" }],
+        "status": "In preview",
+        "products": ["Azure Migrate"],
+        "categories": ["ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**オンプレミスの NAS（Dell PowerScale / NetApp ONTAP）を Azure へ移行検討中の方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "NAS の共有ごとの準備状況・構成・月額コストを、サーバーと同じプロジェクトで評価できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "NAS 移行を計画中なら、検証目的で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": { "text": "NAS の移行計画は、手作業のスプレッドシート中心だった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "アプライアンスが NAS を直接検出し、共有ごとの準備状況・Azure 構成・月額コストを評価できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "検出対象: Dell PowerScale（OneFS）/ NetApp ONTAP の SMB・NFS・S3 共有",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/add-server-credentials", "locator": "対応NASプラットフォーム", "retrievedAt": "2026-11-04T23:40:00Z" }]
+            },
+            {
+              "text": "評価先: Azure Files / Azure Blob Storage / Azure NetApp Files",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/create-file-share-assessment", "locator": "ターゲットサービス", "retrievedAt": "2026-11-04T23:40:00Z" }]
+            },
+            {
+              "text": "結果はビジネスケースやウェーブ計画にも利用できる",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・制約", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "アプライアンスに NAS クラスターの読み取り専用資格情報と検出ソースを追加する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/add-server-credentials", "locator": "NAS認証情報の追加", "retrievedAt": "2026-11-04T23:40:00Z" }]
+            },
+            {
+              "text": "SAN / LUN は対象外。共有とシステムのメタデータのみ収集し、ファイル内容は読まない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/add-server-credentials", "locator": "対応NASプラットフォーム", "retrievedAt": "2026-11-04T23:40:00Z" }]
+            },
+            {
+              "text": "Azure NetApp Files の推奨は NetApp 由来の共有のみ（PowerScale には出ない）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/create-file-share-assessment", "locator": "知っておくべきこと", "retrievedAt": "2026-11-04T23:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "limits", "heading": "評価の仕組み・限界", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "評価単位は共有。サイズ基準は現状のオンプレミスか実績に基づく",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/create-file-share-assessment", "locator": "前提条件", "retrievedAt": "2026-11-04T23:40:00Z" }]
+            },
+            {
+              "text": "Blob のサイズ設定は容量とアクセス頻度に基づき、性能検証はされない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/create-file-share-assessment", "locator": "知っておくべきこと", "retrievedAt": "2026-11-04T23:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "既存インベントリとの関係", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "NAS クラスターと共有は、Windows / Linux ファイル サーバーと同じプロジェクトに表示される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/add-server-credentials", "locator": "NASファイル共有のための認証情報とディスカバリーソースを指定", "retrievedAt": "2026-11-04T23:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象ベンダーか確認し、一部の共有で試して準備状況とコスト見積もりを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-migrate", "term": "Azure Migrate", "type": "product",
+          "oneLine": { "text": "オンプレミスのワークロードを検出・評価し、Azure への移行を支援するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/create-file-share-assessment", "locator": "冒頭", "retrievedAt": "2026-11-04T23:40:00Z" }] }
+        },
+        {
+          "termKey": "nas", "term": "NAS", "type": "term",
+          "oneLine": { "text": "ネットワーク経由でファイル共有を提供するストレージ（ネットワーク接続ストレージ）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/add-server-credentials", "locator": "NASファイル共有のための認証情報とディスカバリーソースを指定", "retrievedAt": "2026-11-04T23:40:00Z" }] }
+        },
+        {
+          "termKey": "appliance", "term": "Azure Migrate アプライアンス", "type": "feature",
+          "oneLine": { "text": "オンプレミスの環境を検出し、メタデータを Azure に送る軽量なアプライアンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/add-server-credentials", "locator": "冒頭", "retrievedAt": "2026-11-04T23:40:00Z" }] }
+        },
+        {
+          "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label",
+          "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-04T23:40:00Z" }] }
+        }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Migrate プロジェクトは「日本」地域（東日本または西日本）に作成可能",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/supported-geographies", "locator": "パブリック クラウド", "retrievedAt": "2026-11-04T23:40:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577975",
+        "learn": [
+          { "title": "Azure Files、Azure Blob、Azure NetApp Files へのファイル共有の評価", "url": "https://learn.microsoft.com/ja-jp/azure/migrate/create-file-share-assessment", "locale": "ja-jp" },
+          { "title": "インフラストラクチャ認証情報の提供（NAS 検出を含む）", "url": "https://learn.microsoft.com/ja-jp/azure/migrate/add-server-credentials", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どの NAS 製品が検出対象ですか？",
+            "a": "Dell PowerScale（OneFS）と Isilon、NetApp ONTAP AFF / FAS が対象で、SMB・NFS・S3 共有を検出します。SAN / LUN は対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/add-server-credentials" }]
+          },
+          {
+            "q": "NAS に必要な権限は何ですか？",
+            "a": "少なくとも読み取り専用のクラスタ レベル権限を持つアカウントが必要です。アプライアンスは NAS に書き込みません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/add-server-credentials" }]
+          },
+          {
+            "q": "日本のリージョンでプロジェクトを作れますか？",
+            "a": "Azure Migrate は「日本」地域でプロジェクトを作成でき、メタデータは東日本または西日本に保存されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/migrate/supported-geographies" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
