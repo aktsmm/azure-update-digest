@@ -1,0 +1,168 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["574541"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-05T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "574541",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "PostgreSQL フレキシブル サーバーを VNet 統合からプライベート エンドポイント対応へ変更可能に（GA）",
+        "subtitleJa": "既存サーバーを Private Link 経由のプライベート IP アクセス構成へ。バックアップは保持されます",
+        "en": "Generally Available: Change from virtual network integration to a private endpoint capable network configuration in Azure Database for PostgreSQL flexible server"
+      },
+      "meta": {
+        "publishedJst": "2026-11-03",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "委任サブネットで **VNet 統合の PostgreSQL フレキシブル サーバー**を運用している方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "既存サーバーのままネットワーク設計の柔軟性を高められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "変更は元に戻せず接続が中断するため、実施するなら計画的に", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server", "locator": "ネットワーク構成を変更する手順", "retrievedAt": "2026-11-05T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "VNet 統合では、サーバーは仮想ネットワーク内の委任されたサブネットに配置される",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server", "locator": "冒頭", "retrievedAt": "2026-11-05T00:00:00Z" }]
+        },
+        "after": {
+          "text": "プライベート エンドポイント対応の構成に変更し、Private Link 経由でプライベート IP アドレスからアクセスできる。既存のバックアップは保持される",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "VNet 統合を、プライベート エンドポイントをサポートする構成に置き換える",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server", "locator": "冒頭", "retrievedAt": "2026-11-05T00:00:00Z" }]
+            },
+            {
+              "text": "変更後はパブリック アクセスが既定で無効になる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server", "locator": "パブリック アクセスの設定", "retrievedAt": "2026-11-05T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ポータル: [ネットワーク] → 接続方法で「パブリック アクセス（許可された IP アドレス）とプライベート エンドポイント」を選び保存",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server", "locator": "ポータル", "retrievedAt": "2026-11-05T00:00:00Z" }]
+            },
+            {
+              "text": "CLI: az postgres flexible-server migrate-network を実行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server", "locator": "CLI", "retrievedAt": "2026-11-05T00:00:00Z" }]
+            },
+            {
+              "text": "完了後、プライベート エンドポイントを追加するかファイアウォール規則を設定して接続を復元",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server", "locator": "接続を復元する", "retrievedAt": "2026-11-05T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "元に戻せない（VNet 統合には戻せない）。通常は最大 20 分、うち最大 10 分は接続不可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server", "locator": "事前に知っておくべき詳細", "retrievedAt": "2026-11-05T00:00:00Z" }]
+            },
+            {
+              "text": "論理レプリケーションのパブリッシャーは、サブスクライバーが接続できなくなる場合がある",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server", "locator": "論理レプリケーション", "retrievedAt": "2026-11-05T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "VNet 統合は委任サブネットに配置、Private Link はプライベート エンドポイントで接続。後者が VNet 統合の代わりに推奨",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/concepts-networking-private-link", "locator": "冒頭", "retrievedAt": "2026-11-05T00:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Terraform 管理なら delegated_subnet_id を削除しないとサーバーの置き換えが計画される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server", "locator": "Terraform スクリプトを更新する", "retrievedAt": "2026-11-05T00:00:00Z" }]
+            },
+            { "text": "業務時間外に実施し、接続元の切り替え手順を事前に用意する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "postgresql-flexible", "term": "Azure Database for PostgreSQL", "type": "product", "oneLine": { "text": "PostgreSQL をマネージド サービスとして提供するフレキシブル サーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/overview", "locator": "冒頭", "retrievedAt": "2026-11-05T00:00:00Z" }] } },
+        { "termKey": "vnet-integration", "term": "VNet 統合", "type": "feature", "oneLine": { "text": "サーバーを仮想ネットワーク内の委任されたサブネットに配置する方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server", "locator": "冒頭", "retrievedAt": "2026-11-05T00:00:00Z" }] } },
+        { "termKey": "private-endpoint", "term": "プライベート エンドポイント", "type": "feature", "oneLine": { "text": "Private Link 経由で、仮想ネットワーク内のプライベート IP からサーバーに安全に接続する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server", "locator": "冒頭", "retrievedAt": "2026-11-05T00:00:00Z" }] } },
+        { "termKey": "private-link", "term": "Azure Private Link", "type": "product", "oneLine": { "text": "トラフィックを Microsoft バックボーン ネットワーク経由にし、インターネットに公開せず接続する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/concepts-networking-private-link", "locator": "冒頭", "retrievedAt": "2026-11-05T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-05T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Database for PostgreSQL は東日本・西日本の両リージョンで提供される",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/azure/postgresql/overview", "locator": "Azure regions", "retrievedAt": "2026-11-05T00:00:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=574541",
+        "learn": [
+          { "title": "仮想ネットワーク統合からプライベート エンドポイント対応のネットワーク構成に変更する", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server", "locale": "ja-jp" },
+          { "title": "Private Link を使用したネットワーク接続", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/concepts-networking-private-link", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "変更後に元の VNet 統合へ戻せますか？",
+            "a": "戻せません。変更は元に戻せない操作で、サーバーを仮想ネットワークに戻すことはできません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server" }]
+          },
+          {
+            "q": "どのくらい停止しますか？バックアップは？",
+            "a": "通常、変更に最大 20 分かかり、最大 10 分はアクセスできません。geo 冗長を含む既存バックアップは引き続き使用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/network/how-to-migrate-vnet-private-endpoint-capable-server" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Azure Database for PostgreSQL は Japan East と Japan West で提供されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
