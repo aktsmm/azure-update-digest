@@ -1,0 +1,108 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["576255"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-05T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "576255",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Defender for IoT の OT セキュリティが 2029年10月に廃止",
+        "subtitleJa": "3年間の移行期間を経て終了。Enterprise IoT は対象外",
+        "en": "Retirement: OT security in Microsoft Defender for IoT"
+      },
+      "meta": {
+        "publishedJst": "2026-11-03",
+        "modifiedJst": "2026-11-03",
+        "availability": [{ "rawRing": "Retirement", "year": 2029, "month": "October" }],
+        "status": null,
+        "products": [],
+        "categories": ["security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Defender for IoT の OT セキュリティを使っている**OT 環境のセキュリティ担当者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "廃止まで通常のセキュリティ更新とバグ修正は提供。新しい OT 機能の追加はなし", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "代替の OT セキュリティ ソリューションへの移行を 2029年10月までに完了する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "month": "2029-10", "precision": "month" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-11-03", "precision": "day" } },
+        { "label": "廃止", "when": { "month": "2029-10", "precision": "month" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Defender for IoT の OT セキュリティ コンポーネントが 2029年10月に完全廃止", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対象は OT セキュリティのみ。Defender for Endpoint の Enterprise IoT は影響なし", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既存の顧客契約と更新は 2029年10月まで有効", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Armis・Dragos・Forescout 向けコネクタを提供（特定ベンダーの利用は必須でない）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "OT データ コネクタで OT 資産・脆弱性データを Defender ポータルに取り込み可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/security-exposure-management/ot-data-connectors", "locator": "エクスポージャー管理の OT データ", "retrievedAt": "2026-11-05T00:00:00Z" }] },
+            { "text": "サードパーティ製品は別途ライセンスと展開が必要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "OT 展開、センサー、連携、ライセンス、契約を棚卸しして移行計画を作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "調達・検証・データ エクスポート・センサー廃止までを計画に含める", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "defender-for-iot", "term": "Microsoft Defender for IoT", "type": "product", "oneLine": { "text": "IoT / OT デバイス、脆弱性、脅威を特定する統合セキュリティ ソリューション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-iot/organizations/overview", "locator": "冒頭", "retrievedAt": "2026-11-05T00:00:00Z" }] } },
+        { "termKey": "ot", "term": "運用テクノロジ (OT)", "type": "term", "oneLine": { "text": "産業用機器などを制御・監視するシステムやネットワークの領域。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-iot/organizations/overview", "locator": "冒頭", "retrievedAt": "2026-11-05T00:00:00Z" }] } },
+        { "termKey": "enterprise-iot", "term": "Enterprise IoT", "type": "feature", "oneLine": { "text": "OT 以外の IoT デバイスを Defender for Endpoint で保護する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-iot/organizations/overview", "locator": "エンタープライズ IoT ネットワークを保護する", "retrievedAt": "2026-11-05T00:00:00Z" }] } },
+        { "termKey": "msem", "term": "Security Exposure Management", "type": "product", "oneLine": { "text": "エンドポイントや OT 環境などの資産の体制データを統合し、攻撃対象領域を把握する製品。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/security-exposure-management/overview-data-connectors", "locator": "冒頭", "retrievedAt": "2026-11-05T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "Microsoft Defender for IoT は非リージョン（グローバル）サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "List of nonregional services", "retrievedAt": "2026-11-05T00:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=576255",
+        "learn": [
+          { "title": "Microsoft Security Exposure Management の OT データ コネクター", "url": "https://learn.microsoft.com/ja-jp/security-exposure-management/ot-data-connectors", "locale": "ja-jp" },
+          { "title": "データ コネクタの概要", "url": "https://learn.microsoft.com/ja-jp/security-exposure-management/overview-data-connectors", "locale": "ja-jp" },
+          { "title": "IoT の Microsoft Defender とは", "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-iot/organizations/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "Enterprise IoT も廃止されますか？",
+            "a": "いいえ。廃止対象は OT セキュリティのみで、Defender for Endpoint の Enterprise IoT は影響を受けません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-iot/organizations/overview" }]
+          },
+          {
+            "q": "代替としてどの OT 製品に接続できますか？",
+            "a": "Exposure Management の OT データ コネクタは Armis、Dragos、Forescout をサポートしています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/security-exposure-management/ot-data-connectors" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
