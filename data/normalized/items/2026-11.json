@@ -434,6 +434,84 @@
     {
       "availabilities": [
         {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "577668",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-11-05T23:19:48.2874662Z",
+      "createdJst": "2026-11-06",
+      "description": "Azure Front Door now supports configurable TLS key exchange\npolicies, including hybrid post-quantum key exchange, to help you prepare for\nevolving cryptographic threats while meeting your security and client\ncompatibility requirements. Choose a predefined Standard or Enhanced policy, or\nuse a Custom policy to select supported classical and hybrid post-quantum key\nexchange groups, including the option to select X25519. Hybrid post-quantum key\nexchange requires TLS 1.3 and protects client-to-edge connections; it does not\napply to connections from Azure Front Door to your origin. \n\nFor additional control over TLS encryption,\nAzure Front Door also supports disabling the  TLS_AES_128_GCM_SHA256 \ncipher suite when TLS 1.3 is configured as the minimum TLS version in TLS\nPolicy. Together, these updates give you more flexibility to tailor key\nexchange and cipher suite settings to your application’s security requirements.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "c2afdb7aa7898a8d8011fe3e6962a88cc798bb14004b66ab08505cd3c8e9135a",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-06T01:23:12.430Z",
+          "fingerprint": "518cdd1c042dd1acb9c83c7497ef3494ad39627753e96f0ee8ce6f1e8bd946e0",
+          "modifiedAfter": "2026-11-05T23:19:48.2874662Z",
+          "modifiedBefore": null,
+          "rawRef": "20261106T012312430Z_list_sweep_o0.json#577668"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-06T01:23:16.833Z",
+          "fingerprint": "c2afdb7aa7898a8d8011fe3e6962a88cc798bb14004b66ab08505cd3c8e9135a",
+          "modifiedAfter": "2026-11-05T23:19:48.2874662Z",
+          "modifiedBefore": "2026-11-05T23:19:48.2874662Z",
+          "rawRef": "20261106T012316833Z_detail_577668.json#577668"
+        }
+      ],
+      "ids": [
+        "577668"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "security"
+        ]
+      },
+      "latestId": "577668",
+      "modified": "2026-11-05T23:19:48.2874662Z",
+      "modifiedJst": "2026-11-06",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Front Door"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577668",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Security"
+      ],
+      "title": "Generally Available: Azure Front Door TLS key exchange policy with post-quantum support "
+    },
+    {
+      "availabilities": [
+        {
           "month": "October",
           "ring": "Preview",
           "year": 2026
@@ -1098,6 +1176,85 @@
         "Management"
       ],
       "title": "Public Preview: Multi-disk crash-consistent VM restore points for Premium SSD v2 and Ultra Disks on VMs with SCSI disk controller"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "579280",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-11-05T17:11:31.2371706Z",
+      "createdJst": "2026-11-06",
+      "description": "WAF Insights for Azure Application Gateway Web Application Firewall (WAF) is now generally available. WAF Insights is a built-in experience in the WAF policy that brings WAF logs and metrics together in interactive dashboards, so you can investigate blocked requests, analyze attack patterns, and identify false positives without writing queries.With general availability, WAF Insights supports both Azure Diagnostics and resource-specific logs, renames the Triage tab to Investigate, and counts each request once by its final WAF outcome. Use the Monitor tab to track WAF activity and the most active rules, and the Investigate tab to drill down from a rule or a URL to the exact request and every rule it matched.Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "8b60e8b56544d20507b62c9534ef3561afc623bad84223705b38eeb0157cd6c9",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-06T01:23:12.430Z",
+          "fingerprint": "3ca97db4ee64263f1b99613cd6788c8753d3df673d26b95e4a06501740643c2e",
+          "modifiedAfter": "2026-11-05T17:11:31.2371706Z",
+          "modifiedBefore": null,
+          "rawRef": "20261106T012312430Z_list_sweep_o0.json#579280"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-06T01:23:20.002Z",
+          "fingerprint": "8b60e8b56544d20507b62c9534ef3561afc623bad84223705b38eeb0157cd6c9",
+          "modifiedAfter": "2026-11-05T17:11:31.2371706Z",
+          "modifiedBefore": "2026-11-05T17:11:31.2371706Z",
+          "rawRef": "20261106T012320002Z_detail_579280.json#579280"
+        }
+      ],
+      "ids": [
+        "579280"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "security"
+        ]
+      },
+      "latestId": "579280",
+      "modified": "2026-11-05T17:11:31.2371706Z",
+      "modifiedJst": "2026-11-06",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Application Gateway",
+        "Web Application Firewall"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579280",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Security"
+      ],
+      "title": "Generally Available: WAF Insights for Azure Application Gateway"
     },
     {
       "availabilities": [

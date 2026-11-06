@@ -1,0 +1,212 @@
+{
+  "args": {
+    "filter": "modified ge 2026-11-04T01:19:04Z and modified lt 2026-11-06T01:23:12Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-11-06T01:23:12.430Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577668",
+        "created": "2026-11-05T23:19:48.2874662Z",
+        "description": "Azure Front Door now supports configurable TLS key exchange\npolicies, including hybrid post-quantum key exchange, to help you prepare for\nevolving cryptographic threats while meeting your security and...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "577668",
+        "modified": "2026-11-05T23:19:48.2874662Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: Azure Front Door TLS key exchange policy with post-quantum support "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "578966",
+        "created": "2026-11-04T18:39:41.8215548Z",
+        "description": "Route maps for Azure Route Server are now generally available in the Azure public cloud. Route maps provide fine-grained control over inbound and outbound routing across hybrid connections. Customers ...",
+        "id": "578966",
+        "modified": "2026-11-04T18:39:41.8215548Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Route Server"
+        ],
+        "tags": [
+          "Features"
+        ],
+        "title": "Generally Available: Route maps for Azure Route Server"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Private Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "579162",
+        "created": "2026-11-04T17:13:51.5498713Z",
+        "description": "Multi-disk crash-consistent restore points for Azure virtual machines with Premium SSD v2 and Ultra data disks are now available in public preview on VMs with SCSI disk controllers. You can use this t...",
+        "id": "579162",
+        "modified": "2026-11-04T17:13:51.5498713Z",
+        "privatePreviewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Storage",
+          "Compute"
+        ],
+        "products": [
+          "Azure Disk Storage",
+          "Virtual Machines"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Compliance",
+          "Management",
+          "Feature"
+        ],
+        "title": "Public Preview: Multi-disk crash-consistent VM restore points for Premium SSD v2 and Ultra Disks on VMs with SCSI disk controller"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "579280",
+        "created": "2026-11-05T17:11:31.2371706Z",
+        "description": "WAF Insights for Azure Application Gateway Web Application Firewall (WAF) is now generally available. WAF Insights is a built-in experience in the WAF policy that brings WAF logs and metrics together ...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "579280",
+        "modified": "2026-11-05T17:11:31.2371706Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway",
+          "Web Application Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: WAF Insights for Azure Application Gateway"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "579300",
+        "created": "2026-11-04T18:42:12.6780656Z",
+        "description": "The Azure Database for PostgreSQL Flexible Server REST API version 2026-10-01 is now generally available. This stable API release introduces expanded capabilities for maintenance management, immutable...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "579300",
+        "modified": "2026-11-04T18:42:12.6780656Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure Database for PostgreSQL"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Database for PostgreSQL stable REST API version 2026-10-01"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "579507",
+        "created": "2026-11-04T18:09:43.6615776Z",
+        "description": "Azure Firewall now supports application rules in IPv6\nPublic Preview, enabling layer 7 filtering for IPv6 HTTP and HTTPS traffic. The\nenhancement extends application-level controls to IPv6 and dual-st...",
+        "id": "579507",
+        "modified": "2026-11-04T18:09:43.6615776Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Firewall"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Public Preview: Azure Firewall IPv6 now supports application rules"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "March",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "transition-to-azure-ad-to-query-data-from-azure-monitor-application-insights-by-31-march-2026",
+        "created": "2023-05-15T19:51:58Z",
+        "description": "*Note: We have extended the retirement date to March 31, 2027.On March 31, 2027 API keys used query application\ninsights will be retired. You'll need to transition to\nMicrosoft Entra ID (formerly know...",
+        "id": "transition-to-azure-ad-to-query-data-from-azure-monitor-application-insights-by-31-march-2026",
+        "modified": "2026-11-04T17:40:28.5148039Z",
+        "productCategories": [
+          "DevOps",
+          "Management and governance"
+        ],
+        "products": [
+          "Application Insights",
+          "Azure Monitor"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Transition to Entra ID (formerly known as Azure AD) to query data from Azure Monitor application insights by March 31, 2027"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 7,
+    "totalCount": 7
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

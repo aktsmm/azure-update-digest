@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "579280"
+  },
+  "fetchedAt": "2026-11-06T01:23:20.002Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "579280",
+    "created": "2026-11-05T17:11:31.2371706Z",
+    "description": "WAF Insights for Azure Application Gateway Web Application Firewall (WAF) is now generally available. WAF Insights is a built-in experience in the WAF policy that brings WAF logs and metrics together in interactive dashboards, so you can investigate blocked requests, analyze attack patterns, and identify false positives without writing queries.With general availability, WAF Insights supports both Azure Diagnostics and resource-specific logs, renames the Triage tab to Investigate, and counts each request once by its final WAF outcome. Use the Monitor tab to track WAF activity and the most active rules, and the Investigate tab to drill down from a rule or a URL to the exact request and every rule it matched.Learn\nmore. ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "579280",
+    "modified": "2026-11-05T17:11:31.2371706Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway",
+      "Web Application Firewall"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Generally Available: WAF Insights for Azure Application Gateway"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
