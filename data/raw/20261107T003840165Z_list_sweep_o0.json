@@ -1,0 +1,77 @@
+{
+  "args": {
+    "filter": "modified ge 2026-11-05T01:23:12Z and modified lt 2026-11-07T00:38:40Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-11-07T00:38:40.165Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577668",
+        "created": "2026-11-05T23:19:48.2874662Z",
+        "description": "Azure Front Door now supports configurable TLS key exchange\npolicies, including hybrid post-quantum key exchange, to help you prepare for\nevolving cryptographic threats while meeting your security and...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "577668",
+        "modified": "2026-11-05T23:19:48.2874662Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: Azure Front Door TLS key exchange policy with post-quantum support "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "579280",
+        "created": "2026-11-05T17:11:31.2371706Z",
+        "description": "WAF Insights for Azure Application Gateway Web Application Firewall (WAF) is now generally available. WAF Insights is a built-in experience in the WAF policy that brings WAF logs and metrics together ...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "579280",
+        "modified": "2026-11-05T17:11:31.2371706Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Application Gateway",
+          "Web Application Firewall"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Security"
+        ],
+        "title": "Generally Available: WAF Insights for Azure Application Gateway"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 2,
+    "totalCount": 2
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}
