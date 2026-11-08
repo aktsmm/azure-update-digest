@@ -1,0 +1,109 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": { "mode": "ids", "basis": "created", "ids": ["579300"], "coverage": "complete", "snapshotAt": "2026-11-08T21:50:00Z" },
+  "slides": [
+    {
+      "key": "579300",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "PostgreSQL フレキシブル サーバーの安定版 REST API 2026-10-01 が GA",
+        "subtitleJa": "メンテナンス管理・イミュータブル バックアップ・FIPS などを API で自動化できます",
+        "en": "Generally Available: Azure Database for PostgreSQL stable REST API version 2026-10-01"
+      },
+      "meta": {
+        "publishedJst": "2026-11-05",
+        "modifiedJst": "2026-11-05",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "REST API / ARM / Terraform で PostgreSQL を管理している**運用・自動化担当者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "新機能を安定版 API で自動化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "新機能が必要なときに API バージョンを更新", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "以前の安定版の全機能に加え、メンテナンス管理やネットワーク移行などが安定版 API で使える",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "API リリース 2026-10-01", "retrievedAt": "2026-11-08T21:50:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "追加された主な機能", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "メンテナンス: 計画メンテナンスの再スケジュール・即時適用・履歴取得", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "メンテナンス管理", "retrievedAt": "2026-11-08T21:50:00Z" }] },
+            { "text": "セキュリティ: イミュータブル バックアップ、FIPS の有効化・無効化、テナント間 CMK", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "FIPS / イミュータブル バックアップ / テナント間 CMK", "retrievedAt": "2026-11-08T21:50:00Z" }] },
+            { "text": "運用: VNet 統合からのネットワーク移行、メジャー バージョン アップグレードの事前チェック", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "ネットワーク / メジャー バージョンのアップグレード", "retrievedAt": "2026-11-08T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始めるには", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "リソース プロバイダーの API バージョンを 2026-10-01 に指定して呼び出す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "API リリース", "retrievedAt": "2026-11-08T21:50:00Z" }] },
+            { "text": "操作の一覧は安定版 API のドキュメントで確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "安定版 API の操作一覧", "retrievedAt": "2026-11-08T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Premium SSD v2 のストレージ プロパティは、先行して 2026-07-01-preview で追加されていた", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "2026-07-01-preview", "retrievedAt": "2026-11-08T21:50:00Z" }] },
+            { "text": "一覧にない API バージョンは、間もなく廃止される予定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "冒頭", "retrievedAt": "2026-11-08T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "プレビュー API との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "プレビュー API の機能は変更・削除される可能性がある。安定版は本番向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "Note", "retrievedAt": "2026-11-08T21:50:00Z" }] },
+            { "text": "プレビューのみの機能: PostgreSQL 19 対応、データベース エージェント", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "2026-07-01-preview", "retrievedAt": "2026-11-08T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Terraform の AzureRM は GA API ベース。未対応機能は AzAPI で呼び出せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "Terraform から Preview バージョンの API の使用", "retrievedAt": "2026-11-08T21:50:00Z" }] },
+            { "text": "自動チューニングに vacuumTable を追加。PostgreSQL バージョンの列挙制約も撤廃", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "自律チューニング / PostgreSQL バージョンの柔軟性", "retrievedAt": "2026-11-08T21:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-database-for-postgresql", "term": "Azure Database for PostgreSQL", "type": "product", "oneLine": { "text": "データベース管理機能や構成を細かく制御できる、フル マネージドのデータベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "冒頭", "retrievedAt": "2026-11-08T21:50:00Z" }] } },
+        { "termKey": "cmk", "term": "CMK（カスタマー マネージド キー）", "type": "feature", "oneLine": { "text": "顧客が管理するキーでデータを暗号化する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "データの暗号化", "retrievedAt": "2026-11-08T21:50:00Z" }] } },
+        { "termKey": "azapi", "term": "AzAPI プロバイダー", "type": "feature", "oneLine": { "text": "Azure Resource Manager REST API の上にある薄いレイヤーの Terraform プロバイダー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locator": "Terraform から Preview バージョンの API の使用", "retrievedAt": "2026-11-08T21:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-08T21:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "サービスは東日本・西日本で提供されている",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "Azure リージョン（東日本 / 西日本）", "retrievedAt": "2026-11-08T21:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579300",
+        "learn": [
+          { "title": "Azure Database for PostgreSQL フレキシブル サーバー向け REST API のリリース ノート", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api", "locale": "ja-jp" },
+          { "title": "Azure Database for PostgreSQL フレキシブル サーバーとは", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "どんな機能が追加されましたか", "a": "メンテナンス管理、イミュータブル バックアップ、テナント間 CMK、FIPS 設定、ネットワーク移行、アップグレード前チェックなどです。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api" }] },
+          { "q": "日本リージョンで使えますか", "a": "サービス自体は東日本・西日本で提供されています（東日本はゾーン冗長 HA 対応、西日本は同一ゾーン HA）。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview" }] },
+          { "q": "Terraform ではどう使いますか", "a": "AzureRM は GA の API に基づきます。未対応の機能は AzAPI プロバイダーで任意の API バージョンを呼び出せます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/release-notes/release-notes-api" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
