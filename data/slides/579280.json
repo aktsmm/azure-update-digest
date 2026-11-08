@@ -1,0 +1,146 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579280"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-08T21:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "579280",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Application Gateway の WAF Insights が一般提供（GA）に",
+        "subtitleJa": "ログとメトリックを対話型ダッシュボードで確認、クエリなしで攻撃パターンや誤検知を調査できます",
+        "en": "Generally Available: WAF Insights for Azure Application Gateway"
+      },
+      "meta": {
+        "publishedJst": "2026-11-06",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Application Gateway", "Web Application Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Application Gateway の WAF** を運用・監視しているセキュリティ / 運用担当の方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "クエリを書かずに、ブロックされた要求や誤検知を調査できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "WAF ログの調査を効率化したい場合に利用を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "WAF ポリシーに組み込まれ、WAF のログとメトリックを 1 つのダッシュボードに集約", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Monitor タブで WAF の動向と上位ルールを把握し、Investigate タブで調査", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ルールや URL から、該当する要求と一致した全ルールまで掘り下げられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始めるには", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "WAF データの表示には、Application Gateway の診断設定を有効にする",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/insights", "locator": "前提条件", "retrievedAt": "2026-11-08T21:40:00Z" }]
+            },
+            {
+              "text": "ダッシュボードは Azure Monitor ブックとして実装され、カスタマイズや拡張が可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/insights", "locator": "Azure ワークブック", "retrievedAt": "2026-11-08T21:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "診断ログがないとダッシュボードで WAF データを使えない。ログは取り込み遅延（通常 1〜5 分）が生じうる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/insights", "locator": "前提条件 / 制限事項と考慮事項", "retrievedAt": "2026-11-08T21:40:00Z" }]
+            },
+            { "text": "GA で Azure Diagnostics とリソース固有ログの両方に対応", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "メトリックは集計で異常検出向き、ログは要求ごとの詳細でフォレンジック調査向き",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/insights", "locator": "データ ソースとアーキテクチャ", "retrievedAt": "2026-11-08T21:40:00Z" }]
+            },
+            {
+              "text": "Log Analytics で KQL を書く従来の方法に対し、クエリ不要で調査できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/log-analytics", "locator": "例でデータを調べる", "retrievedAt": "2026-11-08T21:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ノイズの多いルールを確認して誤検知を見つけ、WAF 構成の調整に役立てる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/insights", "locator": "ベスト プラクティス", "retrievedAt": "2026-11-08T21:40:00Z" }]
+            },
+            { "text": "GA で Triage タブは Investigate に名称変更。要求は最終的な WAF の結果で 1 回だけ集計", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "waf-insights", "term": "WAF Insights", "type": "feature", "oneLine": { "text": "WAF の監視・調査・レポートを 1 つにまとめたダッシュボード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/insights", "locator": "冒頭", "retrievedAt": "2026-11-08T21:40:00Z" }] } },
+        { "termKey": "application-gateway", "term": "Application Gateway", "type": "product", "oneLine": { "text": "Web アプリへの通信を管理する、Web トラフィック用のロード バランサー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/application-gateway/overview", "locator": "冒頭", "retrievedAt": "2026-11-08T21:40:00Z" }] } },
+        { "termKey": "law", "term": "Log Analytics ワークスペース", "type": "term", "oneLine": { "text": "ログが格納され、クエリを実行できるリポジトリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/insights", "locator": "用語集", "retrievedAt": "2026-11-08T21:40:00Z" }] } },
+        { "termKey": "scope", "term": "スコープ", "type": "term", "oneLine": { "text": "WAF ポリシーが適用されるレベル（リスナー、URI パス、グローバル）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/insights", "locator": "用語集", "retrievedAt": "2026-11-08T21:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-08T21:40:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Application Gateway は全リージョンで提供される基盤サービス（機能単位のリージョン制限は確認できず、親サービスの提供状況に準ずる）",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-11-08T21:40:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579280",
+        "learn": [
+          { "title": "Azure Application Gateway WAF Insights", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/insights", "locale": "ja-jp" },
+          { "title": "Log Analytics を使用した WAF ログの調査", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/log-analytics", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "利用の前提条件は？",
+            "a": "監視対象の Application Gateway で診断設定を有効にする必要があります。診断ログがないと WAF データは表示されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/insights" }]
+          },
+          {
+            "q": "従来の Log Analytics でのクエリとの違いは？",
+            "a": "WAF Insights はクエリを書かずに、ブロックされた要求や攻撃パターン、誤検知を調査できるダッシュボードです。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=579280" }]
+          },
+          {
+            "q": "GA で変わった点は？",
+            "a": "Azure Diagnostics とリソース固有ログの両方に対応し、Triage タブは Investigate に変わり、要求は最終結果で 1 回集計されます。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=579280" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
