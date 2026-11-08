@@ -1,0 +1,88 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579507"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-09T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "579507",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Firewall の IPv6 でアプリケーション ルールが利用可能に",
+        "subtitleJa": "IPv6 の HTTP / HTTPS 通信にレイヤー 7 フィルタリング（パブリック プレビュー）",
+        "en": "Public Preview: Azure Firewall IPv6 now supports application rules"
+      },
+      "meta": {
+        "publishedJst": "2026-11-05",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "IPv6 / デュアルスタック環境で **Azure Firewall** を使う、または検討している方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "IPv6 でも IPv4 と一貫したアプリケーション レベルの制御ができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "IPv6 を使う予定があれば検証環境で評価", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "IPv6 とデュアルスタックの展開でも、HTTP / HTTPS トラフィックにアプリケーション ルールで L7 フィルタリングを適用できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "アプリケーション ルールで IPv6 トラフィックの許可・拒否ルールを作成できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall", "locator": "サポートされているシナリオ", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "ネットワーク ルールと DNS プロキシも IPv6 で利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall", "locator": "サポートされているシナリオ", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "IPv6 専用のファイアウォールは非対応。IPv4 専用かデュアルスタックで展開", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall", "locator": "冒頭", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "Classic・Virtual Hub 構成、DNAT ルール、脅威インテリジェンス、IDPS は IPv6 非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall", "locator": "制限事項", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "デュアルスタックにすると IPv4 専用モードには戻せない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall", "locator": "制限事項", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "IPv6 の通信要件と上記の非対応機能を照らし合わせ、まず検証環境で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-firewall", "term": "Azure Firewall", "type": "product", "oneLine": { "text": "Azure 上のリソースを保護する、ファイアウォール サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall", "locator": "冒頭", "retrievedAt": "2026-11-09T00:00:00Z" }] } },
+        { "termKey": "dual-stack", "term": "デュアルスタック", "type": "term", "oneLine": { "text": "IPv4 と IPv6 の両方を扱うファイアウォールの展開モード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall", "locator": "冒頭", "retrievedAt": "2026-11-09T00:00:00Z" }] } },
+        { "termKey": "application-rule", "term": "アプリケーション ルール", "type": "feature", "oneLine": { "text": "HTTP / HTTPS などのトラフィックを、アプリケーション レベルで許可・拒否するルール。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-09T00:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579507",
+        "learn": [{ "title": "Azure Firewall をデュアルスタック モードでデプロイする (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "IPv6 専用のファイアウォールは作れますか？", "a": "作れません。IPv4 専用か、IPv4 と IPv6 のデュアルスタックで展開します。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall" }] },
+          { "q": "既存のファイアウォールを IPv6 対応にできますか？", "a": "VNet に IPv6 アドレス空間とサブネット、パブリック IPv6 を追加して可能です。ただし IPv4 専用には戻せません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall" }] },
+          { "q": "IPv6 で使えない機能は？", "a": "DNAT ルール、脅威インテリジェンス、IDPS、明示的プロキシ、IP グループ、Classic と Virtual Hub 構成は非対応です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
