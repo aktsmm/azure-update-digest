@@ -1,0 +1,126 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579305"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-09T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "579305",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure SQL の PITR バックアップ不変性を最大 35 日までロック可能に",
+        "subtitleJa": "既定の 7 日を超え、設定した PITR 保持期間まで不変化（パブリック プレビュー）",
+        "en": "Public Preview: Extend immutability for PITR backups for Azure SQL Database and Azure SQL Managed Instance"
+      },
+      "meta": {
+        "publishedJst": "2026-11-04",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure SQL Database", "Azure SQL Managed Instance"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "PITR を 7 日超で運用する **Azure SQL Database / SQL Managed Instance の管理者**（金融系など）", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "不変性を設定した PITR 保持期間（最大 35 日）までロックできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "任意機能。ロックは恒久的なため、有効化前に保持期間を計画", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "ロックを有効にする前に計画を立ててください", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "既定で保護される不変期間は直近 7 日分の PITR バックアップのみ（35 日保持でも全期間は不変にならない）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "デフォルトのPITRバックアップ不変性", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+        "after": { "text": "オプションのロックで、設定した PITR 保持期間全体（例: 35 日）に不変性を拡張できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "PITR 保持期間の変更性をロック", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "既定の不変性（直近 7 日）は GA・追加料金なし。保持期間に連動したロックがプレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "保護には2つのレベルがあります", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "ポータル・Azure CLI・PowerShell で有効化（CLI は --lock-immutability true）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "ロックの不変性を有効にする", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "ロック後は PITR 保持期間の延長のみ可能。短縮やロック解除は不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "PITR 保持期間の変更性をロック", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ロックは恒久的。DB を削除しても保護は続き、削除自体は防げない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "データベースの削除とバックアップ保護", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "Hyperscale は未対応。SQL MI は「常に最新」または SQL Server 2025 更新ポリシーのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "Limitations", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "ロックは最大 PITR 保持期間を増やさない。35 日は全ティアで対応とは限らない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "Limitations", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "一時的なテストで有効化しない。ロックは解除できず保持期間を短縮できなくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "ロックの不変性を有効にする（Warning）", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "保護対象は PITR バックアップのみ。LTR の設定やリソース削除のロックはしない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "Limitations", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "compare", "heading": "既定の不変性との比較", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "既定: 設定不要で直近 7 日。ロック: オプションで設定済み PITR 保持期間全体", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "保護オプションを比較してください", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "usage", "heading": "利用上のメモ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ストレージ アカウントや不変性ポリシーの管理は不要（マネージド バックアップに統合）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "バックアップの保持・ストレージには通常のサービス料金が適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "ロックを有効にする前に計画を立ててください", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "pitr", "term": "PITR（ポイントインタイム リストア）", "type": "term", "oneLine": { "text": "バックアップを保持した期間内の任意の時点にデータベースを復元する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "保護オプションを比較してください", "retrievedAt": "2026-11-09T00:00:00Z" }] } },
+        { "termKey": "immutability", "term": "不変性（イミュータビリティ）", "type": "term", "oneLine": { "text": "不変期間中はバックアップの変更や削除ができない保護。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-11-09T00:00:00Z" }] } },
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "Azure のマネージド SQL データベース サービス（本更新の対象）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-11-09T00:00:00Z" }] } },
+        { "termKey": "azure-sql-mi", "term": "Azure SQL Managed Instance", "type": "product", "oneLine": { "text": "Azure のマネージド SQL インスタンス サービス（本更新の対象）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-11-09T00:00:00Z" }] } },
+        { "termKey": "ltr", "term": "LTR（長期保持）", "type": "term", "oneLine": { "text": "短期保持とは別に設定する長期のバックアップ保持。PITR のロックでは設定されない。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "保護オプションを比較してください", "retrievedAt": "2026-11-09T00:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-09T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure SQL Database / SQL Managed Instance は基盤サービス（全リージョンで提供）。機能単位のリージョン制限は確認できず親サービスの提供状況を継承",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-11-09T00:00:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579305",
+        "learn": [
+          { "title": "Azure SQL Database および Azure SQL Managed Instance 向けの自動バックアップの変更不可", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "ロックを有効にした後、元に戻せますか？",
+            "a": "できません。ロックは恒久的で、無効化も PITR 保持期間の短縮もできず、延長のみ可能です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "Important", "retrievedAt": "2026-11-09T00:00:00Z" }]
+          },
+          {
+            "q": "Hyperscale や SQL MI の全インスタンスで使えますか？",
+            "a": "Hyperscale は未対応です。SQL MI は更新ポリシーが「常に最新」または SQL Server 2025 のインスタンスが対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "Limitations", "retrievedAt": "2026-11-09T00:00:00Z" }]
+          },
+          {
+            "q": "追加費用はかかりますか？",
+            "a": "既定の不変性は追加料金なしです。バックアップの保持とストレージには通常のサービス料金が適用されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "ロックを有効にする前に計画を立ててください", "retrievedAt": "2026-11-09T00:00:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
