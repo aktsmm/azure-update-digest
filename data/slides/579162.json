@@ -1,0 +1,125 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579162"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-08T22:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "579162",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Premium SSD v2 / Ultra の VM でマルチディスク クラッシュ整合性復元ポイント",
+        "subtitleJa": "SCSI コントローラーの VM で、エージェントレスに取得（パブリック プレビュー）",
+        "en": "Public Preview: Multi-disk crash-consistent VM restore points for Premium SSD v2 and Ultra Disks on VMs with SCSI disk controller"
+      },
+      "meta": {
+        "publishedJst": "2026-11-05",
+        "modifiedJst": "2026-11-05",
+        "availability": [{ "rawRing": "Private Preview", "year": 2026, "month": "June" }],
+        "status": "In preview",
+        "products": ["Azure Disk Storage", "Virtual Machines"],
+        "categories": ["compute", "storage", "security", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Premium SSD v2 / Ultra のデータ ディスクを使う **SCSI コントローラーの VM** の運用者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "Instant Access で、復元ポイント作成直後からディスクの復元を開始でき、RTO の短縮につながる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/virtual-machines-create-restore-points", "locator": "インスタント アクセス", "retrievedAt": "2026-11-08T22:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューのため評価向け。本番利用は SLA が保証されない点に留意", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-08T22:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Premium SSD v2 / Ultra のデータ ディスクでも、複数ディスクにまたがるクラッシュ整合性復元ポイントを取得できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "note": "Standard HDD / Standard SSD / Premium SSD の既存サポートは変更なし"
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Premium SSD v2 / Ultra データ ディスクの VM が対象（SCSI コントローラーの VM のみ）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/concepts-restore-points", "locator": "Premium SSD v2 および Ultra ディスクのマルチディスク クラッシュ整合性", "retrievedAt": "2026-11-08T22:00:00Z" }] },
+            { "text": "エージェントレスでクラッシュ整合性復元ポイントを取得できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Instant Access に対応（API バージョン 2025-04-01 以降）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/concepts-restore-points", "locator": "インスタント アクセス", "retrievedAt": "2026-11-08T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "NVMe ディスク コントローラーや Azure Boost ハードウェア上の VM は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/concepts-restore-points", "locator": "Premium SSD v2 および Ultra ディスクのマルチディスク クラッシュ整合性", "retrievedAt": "2026-11-08T22:00:00Z" }] },
+            { "text": "米国中南部・West US 3・米国東部 2 を除くパブリック リージョンで利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/concepts-restore-points", "locator": "プレビューは、次を除くすべてのパブリック リージョンで利用できます", "retrievedAt": "2026-11-08T22:00:00Z" }] },
+            { "text": "Instant Access はポータル非対応（REST API・SDK・CLI・ARM テンプレート）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/virtual-machines-create-restore-points", "locator": "制限事項", "retrievedAt": "2026-11-08T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "usage", "heading": "使い方", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "復元ポイント作成時に consistencyMode を CrashConsistent に設定する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/virtual-machines-create-restore-points", "locator": "整合性モード", "retrievedAt": "2026-11-08T22:00:00Z" }] },
+            { "text": "Instant Access は復元ポイント コレクションで instantAccess を有効にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/virtual-machines-create-restore-points", "locator": "インスタント アクセスの主な概念", "retrievedAt": "2026-11-08T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "limits", "heading": "上限・頻度", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "クラッシュ整合性復元ポイントの最小間隔は 1 時間、VM あたり最大 500 個", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/concepts-restore-points", "locator": "サポート マトリックス / その他の制限事項", "retrievedAt": "2026-11-08T22:00:00Z" }] },
+            { "text": "Instant Access の同時作成は、リージョン・サブスクリプションごとに最大 50 個", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/virtual-machines-create-restore-points", "locator": "制限事項", "retrievedAt": "2026-11-08T22:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象 VM のディスク コントローラーと配置先が条件に合うか確認し、検証環境で復旧手順を試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "restore-point", "term": "VM 復元ポイント", "type": "feature", "oneLine": { "text": "VM の構成と、接続された全マネージド ディスクの特定時点のスナップショットを保持するもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/virtual-machines-create-restore-points", "locator": "冒頭", "retrievedAt": "2026-11-08T22:00:00Z" }] } },
+        { "termKey": "crash-consistent", "term": "クラッシュ整合性", "type": "term", "oneLine": { "text": "停電やクラッシュ後の VM の状態に相当する、書き込み順序整合性スナップショット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/virtual-machines-create-restore-points", "locator": "整合性モード", "retrievedAt": "2026-11-08T22:00:00Z" }] } },
+        { "termKey": "instant-access", "term": "Instant Access", "type": "feature", "oneLine": { "text": "完全ハイドレートを待たずに、スナップショットからディスクの復元を始められる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/virtual-machines-create-restore-points", "locator": "インスタント アクセス", "retrievedAt": "2026-11-08T22:00:00Z" }] } },
+        { "termKey": "scsi", "term": "SCSI ディスク コントローラー", "type": "term", "oneLine": { "text": "このプレビューで対象となる VM のディスク コントローラーの種類（NVMe は非対応）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/concepts-restore-points", "locator": "Premium SSD v2 および Ultra ディスクのマルチディスク クラッシュ整合性", "retrievedAt": "2026-11-08T22:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、全 Azure 顧客が評価とフィードバックのために使える段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-08T22:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "米国中南部・West US 3・米国東部 2 以外のパブリック リージョンが対象",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/concepts-restore-points", "locator": "プレビューは、次を除くすべてのパブリック リージョンで利用できます", "retrievedAt": "2026-11-08T22:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579162",
+        "learn": [
+          { "title": "VM 復元ポイントのサポート マトリックス", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/concepts-restore-points", "locale": "ja-jp" },
+          { "title": "仮想マシンの復元ポイントの概要", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/virtual-machines-create-restore-points", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "米国中南部・West US 3・米国東部 2 を除くすべてのパブリック リージョンで利用できるため、日本リージョンも対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/concepts-restore-points", "locator": "プレビューは、次を除くすべてのパブリック リージョンで利用できます", "retrievedAt": "2026-11-08T22:00:00Z" }]
+          },
+          {
+            "q": "自分の VM は対象ですか？",
+            "a": "Premium SSD v2 / Ultra のデータ ディスクを使う SCSI コントローラーの VM が対象です。NVMe や Azure Boost 上の VM は非対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/concepts-restore-points", "retrievedAt": "2026-11-08T22:00:00Z" }]
+          },
+          {
+            "q": "Instant Access の費用は？",
+            "a": "スナップショットのストレージ料金と、復元ごとの 1 回限りの復元料金が発生します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/virtual-machines-create-restore-points", "locator": "インスタント アクセスの主な概念", "retrievedAt": "2026-11-08T22:00:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
