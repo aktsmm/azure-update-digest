@@ -1,0 +1,107 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["578966"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-08T21:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "578966",
+      "kind": "update",
+      "kindSource": "title",
+      "label": "更新",
+      "title": {
+        "ja": "Azure Route Server のルート マップが一般提供（GA）に",
+        "subtitleJa": "BGP で受け渡すルートを、集約・制御・パス選択・タグ付けで細かく管理できます",
+        "en": "Generally Available: Route maps for Azure Route Server"
+      },
+      "meta": {
+        "publishedJst": "2026-11-05",
+        "modifiedJst": "2026-11-05",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "November" }],
+        "status": null,
+        "products": ["Azure Route Server"],
+        "categories": ["networking"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "NVA・ExpressRoute・VPN と **Azure Route Server** を使うネットワーク管理者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ハイブリッド接続のルートを、GA の機能で細かく制御できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "ルート数の上限やパス選択で課題があれば検討。利用には追加料金が発生", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "考慮事項と制限事項", "retrievedAt": "2026-11-08T21:50:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "できること", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ルート集約・フィルタリング・AS-PATH / BGP コミュニティの変更に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "ルートマップを適用できる場所", "retrievedAt": "2026-11-08T21:50:00Z" }] },
+            { "text": "適用先: NVA との BGP ピアリング、ExpressRoute / VPN ゲートウェイ接続、スポーク VNet 接続", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "ルートマップを適用できる場所", "retrievedAt": "2026-11-08T21:50:00Z" }] },
+            { "text": "インバウンド / アウトバウンドの方向ごとに適用（各接続点に 1 つ）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "Important", "retrievedAt": "2026-11-08T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure パブリック クラウドで GA。最初の作成時に最大 30 分のアップグレードが実行される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "考慮事項と制限事項", "retrievedAt": "2026-11-08T21:50:00Z" }] },
+            { "text": "2 バイト ASN のみ対応。Azure 予約の ASN / コミュニティは変更不可。P2S 構成の VPN ゲートウェイでは作成に失敗", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "考慮事項と制限事項", "retrievedAt": "2026-11-08T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-it-works", "heading": "ルールの仕組み", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ルールは一致条件（プレフィックス / コミュニティ / AS-PATH）とアクション（ドロップ / 修正）で構成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "ルートマップのルールとは何ですか?", "retrievedAt": "2026-11-08T21:50:00Z" }] },
+            { "text": "どのルールにも一致しないルートは、そのまま許可される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "一致条件", "retrievedAt": "2026-11-08T21:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "既存の BGP 構成は変わらない。必要な接続だけルート マップを作成して適用を検討する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "アウトバウンドのルート マップは広告のみを変更し、ベスト パス選択には影響しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "Important", "retrievedAt": "2026-11-08T21:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-route-server", "term": "Azure Route Server", "type": "product", "oneLine": { "text": "NVA と Azure 仮想ネットワーク間の動的ルーティングを簡略化する、フル マネージドのサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/overview", "locator": "冒頭", "retrievedAt": "2026-11-08T21:50:00Z" }] } },
+        { "termKey": "route-map", "term": "ルート マップ", "type": "feature", "oneLine": { "text": "ルートの広告やルーティング動作を制御する、ルールの順序付けされた集まり。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "冒頭", "retrievedAt": "2026-11-08T21:50:00Z" }] } },
+        { "termKey": "nva", "term": "NVA", "type": "term", "oneLine": { "text": "ファイアウォールや SD-WAN など、ネットワーク機能を提供する仮想アプライアンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/overview", "locator": "一般的なユース ケース", "retrievedAt": "2026-11-08T21:50:00Z" }] } },
+        { "termKey": "bgp", "term": "BGP", "type": "term", "oneLine": { "text": "ネットワーク間でルートを自動的に交換するための標準プロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/overview", "locator": "主な機能", "retrievedAt": "2026-11-08T21:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-08T21:50:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=578966",
+        "learn": [
+          { "title": "Azure Route Server のルートマップについて", "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locale": "ja-jp" },
+          { "title": "Azure Route Server のルート マップを構成する", "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-how-to", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "ルート マップに追加料金はかかりますか？",
+            "a": "はい。ルート マップの使用には追加料金が発生します。詳細は Azure Route Server の料金ページで確認できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "考慮事項と制限事項" }]
+          },
+          {
+            "q": "どの接続にルート マップを適用できますか？",
+            "a": "NVA との BGP ピアリング、同一 VNet 内の ExpressRoute / VPN ゲートウェイ接続、ピアリングされたスポーク VNet 接続に適用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "ルートマップを適用できる場所" }]
+          },
+          {
+            "q": "設定はどのツールでできますか？",
+            "a": "BGP ピアリングには Azure portal と Azure PowerShell で適用できます。ゲートウェイと VNet 接続への適用は Azure portal を使います。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "冒頭" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
