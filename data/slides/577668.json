@@ -1,0 +1,120 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577668"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-09T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "577668",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Front Door の TLS 鍵交換ポリシーが GA（ポスト量子対応）",
+        "subtitleJa": "ハイブリッド ポスト量子鍵交換を含む鍵交換グループを、ドメインごとに選べます",
+        "en": "Generally Available: Azure Front Door TLS key exchange policy with post-quantum support"
+      },
+      "meta": {
+        "publishedJst": "2026-11-06",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Front Door"],
+        "categories": ["networking", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Front Door Standard / Premium** のカスタム ドメインで HTTPS を使っている方", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "冒頭・ポリシーのオプション", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+        "change": { "text": "ポスト量子を含む鍵交換グループを、セキュリティと互換性の要件に合わせて選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "既存プロファイルは Standard が既定で移行は不要。変更したい場合のみ設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "ポリシーのオプション", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ポリシーは Standard / Enhanced / Custom から選択。Custom では X25519 も選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "ポリシーのオプション", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "ハイブリッド方式は古典的鍵交換と ML-KEM を組み合わせ、TLS 1.3 が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "TLSのバージョン互換性", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "対象はクライアントから Front Door の接続のみ。オリジン接続は対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "接続範囲", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "カスタム ドメイン単位で Standard / Enhanced / Custom を選び、Custom はグループを選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "鍵交換ポリシーの設定", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "本番利用の前に、代表的なクライアントで接続をテストする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "鍵交換ポリシーの設定", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "既定の Front Door ドメインは常に Standard で、ポリシーを変更できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "ポリシーのオプション", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "TLS 1.2 を許可するなら、Custom に古典的グループを 1 つ以上含める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "TLSのバージョン互換性", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "TLS ポリシー: バージョンと暗号スイート / 鍵交換ポリシー: 対応グループを制御", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-policy", "locator": "冒頭", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "最小 TLS を 1.3 にすると、TLS_AES_128_GCM_SHA256 を無効化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "まず Standard から始め、要件がある場合に Enhanced / Custom を検討する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "互換性と展開の考慮事項", "retrievedAt": "2026-11-09T00:00:00Z" }] },
+            { "text": "クライアントが対応する鍵交換を全て除外すると、接続できなくなる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "Warning", "retrievedAt": "2026-11-09T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-front-door", "term": "Azure Front Door", "type": "product", "oneLine": { "text": "Web アプリの入口となる、グローバルでスケーラブルなサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/security/fundamentals/network-overview#azure-front-door", "locator": "Azure Front Door", "retrievedAt": "2026-11-09T00:00:00Z" }] } },
+        { "termKey": "key-exchange", "term": "TLS 鍵交換", "type": "term", "oneLine": { "text": "TLS ハンドシェイク中に、クライアントと Front Door が接続の共有シークレットを確立する方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "冒頭", "retrievedAt": "2026-11-09T00:00:00Z" }] } },
+        { "termKey": "hybrid-pq", "term": "ハイブリッド ポスト量子鍵交換", "type": "term", "oneLine": { "text": "古典的な鍵交換と ML-KEM を組み合わせ、共有秘密を量子計算の脅威から守る方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "冒頭", "retrievedAt": "2026-11-09T00:00:00Z" }] } },
+        { "termKey": "tls-policy", "term": "TLS ポリシー", "type": "feature", "oneLine": { "text": "TLS のプロトコル バージョンと暗号スイートを制御する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-policy", "locator": "冒頭", "retrievedAt": "2026-11-09T00:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-09T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Front Door はグローバル サービス（特定リージョンにデプロイしない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "List of nonregional services", "retrievedAt": "2026-11-09T00:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577668",
+        "learn": [
+          { "title": "Azure Front Door の TLS キー交換ポリシー", "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locale": "ja-jp" },
+          { "title": "Azure Front Door の TLS ポリシーを構成する", "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-policy", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存の Front Door プロファイルは移行が必要ですか？",
+            "a": "不要です。既存プロファイルは後方互換性のため既定で Standard になります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "ポリシーのオプション", "retrievedAt": "2026-11-09T00:00:00Z" }]
+          },
+          {
+            "q": "ポスト量子鍵交換はオリジンとの通信にも効きますか？",
+            "a": "いいえ。クライアントから Front Door の接続のみが対象で、オリジンへの接続には鍵交換ポリシーを設定しません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "接続範囲", "retrievedAt": "2026-11-09T00:00:00Z" }]
+          },
+          {
+            "q": "設定時に気を付ける点は？",
+            "a": "クライアントが対応するグループを残してください。TLS 1.2 を許可する場合は古典的グループを含め、事前に代表的なクライアントで検証します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "互換性と展開の考慮事項", "retrievedAt": "2026-11-09T00:00:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
