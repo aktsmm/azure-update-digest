@@ -1,0 +1,67 @@
+{
+  "args": {
+    "filter": "modified ge 2026-11-08T00:34:16Z and modified lt 2026-11-10T03:11:39Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-11-10T03:11:39.753Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "575106",
+        "created": "2026-11-09T22:50:01.55125Z",
+        "description": "Support for .NET\n8 and .NET 9 will end on November 10, 2026. Please transition your managed Functions APIs to .NET 10 by that date. Your apps will continue to operate, but security updates\nwill no lon...",
+        "id": "575106",
+        "modified": "2026-11-09T22:50:01.55125Z",
+        "productCategories": [
+          "Compute",
+          "Web"
+        ],
+        "products": [
+          "Static Web Apps"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Support for .NET 8 and .NET 9 on Static Web Apps is ending November 10, 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "579854",
+        "created": "2026-11-09T17:20:57.324956Z",
+        "description": "Azure File Sync provides hybrid access or seamless migration of data from Windows Server to Azure Files while preserving the familiar local file server experience for users and applications. Now in pr...",
+        "id": "579854",
+        "modified": "2026-11-09T17:20:57.324956Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [],
+        "products": [],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Modernize Arc-enabled Windows Servers with Azure File Sync"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 2,
+    "totalCount": 2
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

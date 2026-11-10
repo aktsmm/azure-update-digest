@@ -152,6 +152,82 @@
     {
       "availabilities": [
         {
+          "month": "November",
+          "ring": "Retirement",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "575106",
+      "categories": [
+        "compute",
+        "web-mobile"
+      ],
+      "created": "2026-11-09T22:50:01.55125Z",
+      "createdJst": "2026-11-10",
+      "description": "Support for .NET\n8 and .NET 9 will end on November 10, 2026. Please transition your managed Functions APIs to .NET 10 by that date. Your apps will continue to operate, but security updates\nwill no longer be provided and support for .NET 8 and .NET 9 on Azure Functions\nwill end. Running apps on an unsupported runtime or language version might lead\nto security and performance issues. Upgrade to .NET 10 before November 10, 2026 to remain on\na supported version. Learn more about the .NET\nsupport policy and the Azure\nFunctions language support policy. Recommended action To avoid potential security vulnerabilities, minimize\nrisk for your Azure Static Web Apps managed Functions APIs, and take advantage\nof the latest features, act based on your current configuration. If your API currently uses the in-process model  Follow\n     the .NET 10 steps in Migrate\n     C# apps from the in-process model to the isolated worker model to\n     update the API project, packages, startup code, function code, and\n     configuration for the isolated worker model.  If your API is already using the isolated worker\nmodel  Follow\n     the C# steps in Update\n     language versions in Azure Functions to update the API project to\n     target net10.0.  For both configurations  Confirm that the API\nproject targets net10.0, and update the Functions SDK and worker packages\nto meet the .NET\n10 isolated worker project and package requirements. Build and test the API\nlocally before continuing.  Set\n     the API runtime in staticwebapp.config.json:   {\n  \"platform\": {\n    \"apiRuntime\": \"dotnet-isolated:10.0\"\n  }\n}  The API project's TargetFramework and\nthe platform.apiRuntime value\nin staticwebapp.config.json must describe the same runtime. Redeploy your static web app so Azure Static Web Apps rebuilds and publishes the managed API on .NET 10. Complete all required upgrades and ensure your API has moved\noff the in-process model before November 10, 2026.  Upcoming change  In November 2026, the default .NET runtime for Azure Static\nWeb Apps managed Functions APIs will be updated to .NET 10. The\nexplicit apiRuntime setting in the steps above ensures your app\nbuilds and runs on the intended runtime. See Supported\nlanguages and runtimes in Azure Static Web Apps.  Linked (bring-your-own) Function Apps have a separate\ndeployment lifecycle and must be upgraded and\ndeployed separately.  Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "9977c671b98d68468f5cb67a1ff4bf8aeb8e93f79dacb06888a6cfbf9b124ae9",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-10T03:11:39.753Z",
+          "fingerprint": "a2707478711f648f1b388f189ac8a88ba3dd8251dd565e2543dc49f76ff990df",
+          "modifiedAfter": "2026-11-09T22:50:01.55125Z",
+          "modifiedBefore": null,
+          "rawRef": "20261110T031139753Z_list_sweep_o0.json#575106"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-10T03:11:44.125Z",
+          "fingerprint": "9977c671b98d68468f5cb67a1ff4bf8aeb8e93f79dacb06888a6cfbf9b124ae9",
+          "modifiedAfter": "2026-11-09T22:50:01.55125Z",
+          "modifiedBefore": "2026-11-09T22:50:01.55125Z",
+          "rawRef": "20261110T031144125Z_detail_575106.json#575106"
+        }
+      ],
+      "ids": [
+        "575106"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "retire-tag",
+          "retire-ring",
+          "retire-title"
+        ],
+        "score": 10,
+        "topics": [
+          "retirement"
+        ]
+      },
+      "latestId": "575106",
+      "modified": "2026-11-09T22:50:01.55125Z",
+      "modifiedJst": "2026-11-10",
+      "productCategories": [
+        "Compute",
+        "Web"
+      ],
+      "products": [
+        "Static Web Apps"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=575106",
+      "status": null,
+      "tags": [
+        "Retirements"
+      ],
+      "title": "Retirement: Support for .NET 8 and .NET 9 on Static Web Apps is ending November 10, 2026"
+    },
+    {
+      "availabilities": [
+        {
           "month": "October",
           "ring": "Retirement",
           "year": 2029
@@ -1476,6 +1552,70 @@
         "Security"
       ],
       "title": "Public Preview: Azure Firewall IPv6 now supports application rules"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "579854",
+      "categories": [
+        "other"
+      ],
+      "created": "2026-11-09T17:20:57.324956Z",
+      "createdJst": "2026-11-10",
+      "description": "Azure File Sync provides hybrid access or seamless migration of data from Windows Server to Azure Files while preserving the familiar local file server experience for users and applications. Now in preview, users have a guided Azure portal experience to simplify onboarding Arc-enabled Windows Servers to Azure File Sync, taking you from agent installation and server registration to configuring synchronization with an Azure file share in one streamlined workflow.Key benefits:Simplify deployment: Set up Azure File Sync for Arc-enabled Windows Servers through a guided Azure portal experience.Centralize file data in Azure: Keep a complete copy of your file data in Azure Files while continuing to serve files through your existing Windows Servers.Optimize local storage: Use cloud tiering to keep frequently accessed files available locally while tiering less frequently accessed content to Azure.This new experience helps simplify Azure File Sync deployment for organizations managing Windows Servers through Azure Arc by bringing the key onboarding steps together in the Azure portal.Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "f8ed07b32f41e5942fccf9c904a468556c1e85c1a219c82e5cbc0708f748f4c1",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-10T03:11:39.753Z",
+          "fingerprint": "93f6312becda19ca3a59b52e34677cd8ab58084b6b0a18ecf56c9b0ff4e638eb",
+          "modifiedAfter": "2026-11-09T17:20:57.324956Z",
+          "modifiedBefore": null,
+          "rawRef": "20261110T031139753Z_list_sweep_o0.json#579854"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-10T03:11:47.358Z",
+          "fingerprint": "f8ed07b32f41e5942fccf9c904a468556c1e85c1a219c82e5cbc0708f748f4c1",
+          "modifiedAfter": "2026-11-09T17:20:57.324956Z",
+          "modifiedBefore": "2026-11-09T17:20:57.324956Z",
+          "rawRef": "20261110T031147358Z_detail_579854.json#579854"
+        }
+      ],
+      "ids": [
+        "579854"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "579854",
+      "modified": "2026-11-09T17:20:57.324956Z",
+      "modifiedJst": "2026-11-10",
+      "productCategories": [],
+      "products": [],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579854",
+      "status": "In preview",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Public Preview: Modernize Arc-enabled Windows Servers with Azure File Sync"
     }
   ],
   "month": "2026-11",

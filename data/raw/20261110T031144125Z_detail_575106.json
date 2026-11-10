@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "575106"
+  },
+  "fetchedAt": "2026-11-10T03:11:44.125Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Retirement",
+        "year": 2026
+      }
+    ],
+    "baseId": "575106",
+    "created": "2026-11-09T22:50:01.55125Z",
+    "description": "Support for .NET\n8 and .NET 9 will end on November 10, 2026. Please transition your managed Functions APIs to .NET 10 by that date. Your apps will continue to operate, but security updates\nwill no longer be provided and support for .NET 8 and .NET 9 on Azure Functions\nwill end. Running apps on an unsupported runtime or language version might lead\nto security and performance issues. Upgrade to .NET 10 before November 10, 2026 to remain on\na supported version. Learn more about the .NET\nsupport policy and the Azure\nFunctions language support policy. Recommended action To avoid potential security vulnerabilities, minimize\nrisk for your Azure Static Web Apps managed Functions APIs, and take advantage\nof the latest features, act based on your current configuration. If your API currently uses the in-process model  Follow\n     the .NET 10 steps in Migrate\n     C# apps from the in-process model to the isolated worker model to\n     update the API project, packages, startup code, function code, and\n     configuration for the isolated worker model.  If your API is already using the isolated worker\nmodel  Follow\n     the C# steps in Update\n     language versions in Azure Functions to update the API project to\n     target net10.0.  For both configurations  Confirm that the API\nproject targets net10.0, and update the Functions SDK and worker packages\nto meet the .NET\n10 isolated worker project and package requirements. Build and test the API\nlocally before continuing.  Set\n     the API runtime in staticwebapp.config.json:   {\n  \"platform\": {\n    \"apiRuntime\": \"dotnet-isolated:10.0\"\n  }\n}  The API project's TargetFramework and\nthe platform.apiRuntime value\nin staticwebapp.config.json must describe the same runtime. Redeploy your static web app so Azure Static Web Apps rebuilds and publishes the managed API on .NET 10. Complete all required upgrades and ensure your API has moved\noff the in-process model before November 10, 2026.  Upcoming change  In November 2026, the default .NET runtime for Azure Static\nWeb Apps managed Functions APIs will be updated to .NET 10. The\nexplicit apiRuntime setting in the steps above ensures your app\nbuilds and runs on the intended runtime. See Supported\nlanguages and runtimes in Azure Static Web Apps.  Linked (bring-your-own) Function Apps have a separate\ndeployment lifecycle and must be upgraded and\ndeployed separately.  Learn\nmore. ",
+    "id": "575106",
+    "modified": "2026-11-09T22:50:01.55125Z",
+    "productCategories": [
+      "Compute",
+      "Web"
+    ],
+    "products": [
+      "Static Web Apps"
+    ],
+    "tags": [
+      "Retirements"
+    ],
+    "title": "Retirement: Support for .NET 8 and .NET 9 on Static Web Apps is ending November 10, 2026"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

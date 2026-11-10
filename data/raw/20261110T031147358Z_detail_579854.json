@@ -1,0 +1,31 @@
+{
+  "args": {
+    "id": "579854"
+  },
+  "fetchedAt": "2026-11-10T03:11:47.358Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "579854",
+    "created": "2026-11-09T17:20:57.324956Z",
+    "description": "Azure File Sync provides hybrid access or seamless migration of data from Windows Server to Azure Files while preserving the familiar local file server experience for users and applications. Now in preview, users have a guided Azure portal experience to simplify onboarding Arc-enabled Windows Servers to Azure File Sync, taking you from agent installation and server registration to configuring synchronization with an Azure file share in one streamlined workflow.Key benefits:Simplify deployment: Set up Azure File Sync for Arc-enabled Windows Servers through a guided Azure portal experience.Centralize file data in Azure: Keep a complete copy of your file data in Azure Files while continuing to serve files through your existing Windows Servers.Optimize local storage: Use cloud tiering to keep frequently accessed files available locally while tiering less frequently accessed content to Azure.This new experience helps simplify Azure File Sync deployment for organizations managing Windows Servers through Azure Arc by bringing the key onboarding steps together in the Azure portal.Learn\nmore.",
+    "id": "579854",
+    "modified": "2026-11-09T17:20:57.324956Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [],
+    "products": [],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Modernize Arc-enabled Windows Servers with Azure File Sync"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
