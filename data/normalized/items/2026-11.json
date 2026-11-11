@@ -733,6 +733,79 @@
     {
       "availabilities": [
         {
+          "month": "June",
+          "ring": "Private Preview",
+          "year": 2026
+        },
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": "2026-06"
+      },
+      "canonicalKey": "578454",
+      "categories": [
+        "containers"
+      ],
+      "created": "2026-11-10T20:08:32.4161774Z",
+      "createdJst": "2026-11-11",
+      "description": "Distributed accelerator for cloud storage (DACS) is now in public preview for AI workloads running on Azure Kubernetes Service (AKS). DACS is a distributed read-through cache that runs within your AKS cluster and uses local NVMe disks across nodes to keep frequently read data from Azure Blob Storage close to GPU compute.For inference workloads, DACS helps reduce warm-model loading times and repeated Blob Storage reads as workloads scale out, restart, or recover from node replacement. New and replacement nodes can reuse model data already cached in the cluster instead of downloading it again from Blob Storage. DACS can also accelerate training workloads that repeatedly read the same portions of a dataset. Performance gains depend on how often data is reused and whether the cache is cold or warm.Enable and manage DACS on your AKS cluster through Azure Container Storage and integrate your workloads using Run:ai Model Streamer, BlobFuse2, or the native Python client. Azure Blob Storage remains the durable source of truth, with clients reading directly from Blob Storage when data isn't cached or the cache is unavailable.Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "d98e30aaf884337fb2dbc14cc9319c04aec6801dea9f8d5d6af6c355c17100fb",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-11T01:01:29.930Z",
+          "fingerprint": "6355ea31b6fc2fba7e740ad53f9dc319e4bd7841ca27448bed24815ae7359850",
+          "modifiedAfter": "2026-11-10T20:08:32.4161774Z",
+          "modifiedBefore": null,
+          "rawRef": "20261111T010129930Z_list_sweep_o0.json#578454"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-11T01:01:33.759Z",
+          "fingerprint": "d98e30aaf884337fb2dbc14cc9319c04aec6801dea9f8d5d6af6c355c17100fb",
+          "modifiedAfter": "2026-11-10T20:08:32.4161774Z",
+          "modifiedBefore": "2026-11-10T20:08:32.4161774Z",
+          "rawRef": "20261111T010133759Z_detail_578454.json#578454"
+        }
+      ],
+      "ids": [
+        "578454"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "578454",
+      "modified": "2026-11-10T20:08:32.4161774Z",
+      "modifiedJst": "2026-11-11",
+      "productCategories": [
+        "Containers"
+      ],
+      "products": [
+        "Azure Container Storage"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=578454",
+      "status": "In preview",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Public Preview: Distributed accelerator for cloud storage on AKS"
+    },
+    {
+      "availabilities": [
+        {
           "month": "November",
           "ring": "General Availability",
           "year": 2026
@@ -876,6 +949,85 @@
         "Feature"
       ],
       "title": "Public Preview: Advanced capacity insights are now available in Azure Storage Discovery"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "578773",
+      "categories": [
+        "compute",
+        "containers",
+        "iot"
+      ],
+      "created": "2026-11-10T20:07:45.4312431Z",
+      "createdJst": "2026-11-11",
+      "description": "Azure Functions support for .NET 11 is now generally available.You can now\nbuild Azure Functions apps targeting .NET 11 using the isolated worker model,\nwhile continuing to use the Azure Functions programming model and host\nintegration. Your\nserverless applications can now take advantage of the new runtime performance\noptimizations, richer APIs, and enhanced developer tooling through the latest\n.NET runtime, C#, library, and SDK improvements in this release. Learn\nmore.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "521df8d2c7025982c30317e7b48138a0f4361e0b3a0433598efa122e8961e46d",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-11T01:01:29.930Z",
+          "fingerprint": "f3e067472962959fa0641e7b44e97121f89083adf2ad61af2332d10d57ff0400",
+          "modifiedAfter": "2026-11-10T20:07:45.4312431Z",
+          "modifiedBefore": null,
+          "rawRef": "20261111T010129930Z_list_sweep_o0.json#578773"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-11T01:01:39.550Z",
+          "fingerprint": "521df8d2c7025982c30317e7b48138a0f4361e0b3a0433598efa122e8961e46d",
+          "modifiedAfter": "2026-11-10T20:07:45.4312431Z",
+          "modifiedBefore": "2026-11-10T20:07:45.4312431Z",
+          "rawRef": "20261111T010139550Z_detail_578773.json#578773"
+        }
+      ],
+      "ids": [
+        "578773"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "578773",
+      "modified": "2026-11-10T20:07:45.4312431Z",
+      "modifiedJst": "2026-11-11",
+      "productCategories": [
+        "Compute",
+        "Containers",
+        "Internet of Things"
+      ],
+      "products": [
+        "Azure Functions"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=578773",
+      "status": "Launched",
+      "tags": [
+        "Feature",
+        "Features",
+        "SDK and Tools"
+      ],
+      "title": "Generally Available: Azure Functions support for .NET 11"
     },
     {
       "availabilities": [
@@ -1482,6 +1634,153 @@
       "availabilities": [
         {
           "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "579310",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-11-10T18:55:09.7505976Z",
+      "createdJst": "2026-11-11",
+      "description": "Announcing the general availability of Azure Front Door edge\nactions (serverless compute at the edge). With edge actions, customers can execute lightweight\nJavaScript functions during Azure Front Door client request/response processing\nto make real-time decisions closer to users, improving performance, security,\nand application flexibility without adding complexity to origin infrastructure. Common scenarios include A/B testing, canary deployments,\nheader manipulation, request filtering, dynamic origin selection, advanced\nrouting, authentication/authorization at the edge, and many more.  Edge actions integrate seamlessly with Azure\nFront Door capabilities such as rules engine, caching, routing, and Web\nApplication Firewall (WAF). Built on Hyperlight, Microsoft’s secure micro-VM\ntechnology, edge actions provide hardware-backed isolation for customer code\nexecution.Learn\nmore.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "7e5b9e416339080528125761d4c798c4cca3445b486db1815429a6e83fa2bb9c",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-11T01:01:29.930Z",
+          "fingerprint": "b007fd1f6366a6766d0450f8f5e8bf8fd05201bafe78a430eacee1689c391ee0",
+          "modifiedAfter": "2026-11-10T18:55:09.7505976Z",
+          "modifiedBefore": null,
+          "rawRef": "20261111T010129930Z_list_sweep_o0.json#579310"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-11T01:01:47.462Z",
+          "fingerprint": "7e5b9e416339080528125761d4c798c4cca3445b486db1815429a6e83fa2bb9c",
+          "modifiedAfter": "2026-11-10T18:55:09.7505976Z",
+          "modifiedBefore": "2026-11-10T18:55:09.7505976Z",
+          "rawRef": "20261111T010147462Z_detail_579310.json#579310"
+        }
+      ],
+      "ids": [
+        "579310"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "579310",
+      "modified": "2026-11-10T18:55:09.7505976Z",
+      "modifiedJst": "2026-11-11",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Front Door"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579310",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Services"
+      ],
+      "title": "Generally Available: Azure Front Door edge actions "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "579383",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-11-10T18:55:53.5128625Z",
+      "createdJst": "2026-11-11",
+      "description": "Announcing the public preview of gRPC support in Azure Front\nDoor. Build and deliver gRPC applications through\nAzure Front Door Standard and Premium. Now in preview, gRPC support lets you\nroute calls to specific services and methods, distribute traffic across healthy\norigins, and use supported Azure Front Door security and routing capabilities. gRPC\nis supported over HTTP/2 and HTTPS from the client through Azure Front Door to\nthe origin, including unary and streaming RPCs. You can also configure gRPC\nhealth probes to load balance traffic to healthy origins.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "77d946d446be8cd37a494b44768809019c1e95c62708fb0f71a5fee5279cc5d6",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-11T01:01:29.930Z",
+          "fingerprint": "59052cb633eaef0f7a0a8e8c638786c355abf149444c2f97bb79ae500e01c65c",
+          "modifiedAfter": "2026-11-10T18:55:53.5128625Z",
+          "modifiedBefore": null,
+          "rawRef": "20261111T010129930Z_list_sweep_o0.json#579383"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-11T01:01:42.039Z",
+          "fingerprint": "77d946d446be8cd37a494b44768809019c1e95c62708fb0f71a5fee5279cc5d6",
+          "modifiedAfter": "2026-11-10T18:55:53.5128625Z",
+          "modifiedBefore": "2026-11-10T18:55:53.5128625Z",
+          "rawRef": "20261111T010142039Z_detail_579383.json#579383"
+        }
+      ],
+      "ids": [
+        "579383"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "579383",
+      "modified": "2026-11-10T18:55:53.5128625Z",
+      "modifiedJst": "2026-11-11",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Front Door"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579383",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Services"
+      ],
+      "title": "Public Preview: Azure Front Door adds native gRPC support "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
           "ring": "Preview",
           "year": 2026
         }
@@ -1552,6 +1851,74 @@
         "Security"
       ],
       "title": "Public Preview: Azure Firewall IPv6 now supports application rules"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Effective",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "579746",
+      "categories": [
+        "networking"
+      ],
+      "created": "2026-11-10T18:21:41.1197236Z",
+      "createdJst": "2026-11-11",
+      "description": "Azure Route Server now supports IPv4/IPv6 dual-stack mode in public preview, enabling route exchange for both address families across supported hybrid networking connections. Existing IPv4 connections remain unchanged, so organizations can adopt IPv6 routing in their Azure architectures while keeping their current IPv4 connectivity. In dual-stack mode, you can apply Azure Route Server route maps to ExpressRoute and VPN Gateway connections, and to network virtual appliance connections in hub or spoke virtual networks.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "440f3c5447f3570c17c2dcdedfcc0b4e9edf69bf37808861cd55ee4e3eacc10d",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-11T01:01:29.930Z",
+          "fingerprint": "d9160fdbb4e3694bc3bc5f079b06f42a70a151fdf76f0cf65f23f89669a31665",
+          "modifiedAfter": "2026-11-10T18:21:41.1197236Z",
+          "modifiedBefore": null,
+          "rawRef": "20261111T010129930Z_list_sweep_o0.json#579746"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-11T01:01:50.973Z",
+          "fingerprint": "440f3c5447f3570c17c2dcdedfcc0b4e9edf69bf37808861cd55ee4e3eacc10d",
+          "modifiedAfter": "2026-11-10T18:21:41.1197236Z",
+          "modifiedBefore": "2026-11-10T18:21:41.1197236Z",
+          "rawRef": "20261111T010150973Z_detail_579746.json#579746"
+        }
+      ],
+      "ids": [
+        "579746"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "579746",
+      "modified": "2026-11-10T18:21:41.1197236Z",
+      "modifiedJst": "2026-11-11",
+      "productCategories": [
+        "Networking"
+      ],
+      "products": [
+        "Azure Route Server"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579746",
+      "status": null,
+      "tags": [
+        "Features"
+      ],
+      "title": "Public Preview: Azure Route Server dual-stack IPv4/IPv6 support"
     },
     {
       "availabilities": [

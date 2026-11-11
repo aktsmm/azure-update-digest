@@ -1,0 +1,209 @@
+{
+  "args": {
+    "filter": "modified ge 2026-11-09T03:11:39Z and modified lt 2026-11-11T01:01:29Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-11-11T01:01:29.930Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Retirement",
+            "year": 2026
+          }
+        ],
+        "baseId": "575106",
+        "created": "2026-11-09T22:50:01.55125Z",
+        "description": "Support for .NET\n8 and .NET 9 will end on November 10, 2026. Please transition your managed Functions APIs to .NET 10 by that date. Your apps will continue to operate, but security updates\nwill no lon...",
+        "id": "575106",
+        "modified": "2026-11-09T22:50:01.55125Z",
+        "productCategories": [
+          "Compute",
+          "Web"
+        ],
+        "products": [
+          "Static Web Apps"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Support for .NET 8 and .NET 9 on Static Web Apps is ending November 10, 2026"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "June",
+            "ring": "Private Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578454",
+        "created": "2026-11-10T20:08:32.4161774Z",
+        "description": "Distributed accelerator for cloud storage (DACS) is now in public preview for AI workloads running on Azure Kubernetes Service (AKS). DACS is a distributed read-through cache that runs within your AKS...",
+        "id": "578454",
+        "modified": "2026-11-10T20:08:32.4161774Z",
+        "previewAvailabilityDate": "2026-11",
+        "privatePreviewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Storage"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Distributed accelerator for cloud storage on AKS"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578773",
+        "created": "2026-11-10T20:07:45.4312431Z",
+        "description": "Azure Functions support for .NET 11 is now generally available.You can now\nbuild Azure Functions apps targeting .NET 11 using the isolated worker model,\nwhile continuing to use the Azure Functions pro...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "578773",
+        "modified": "2026-11-10T20:07:45.4312431Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "SDK and Tools",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Functions support for .NET 11"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "579310",
+        "created": "2026-11-10T18:55:09.7505976Z",
+        "description": "Announcing the general availability of Azure Front Door edge\nactions (serverless compute at the edge). With edge actions, customers can execute lightweight\nJavaScript functions during Azure Front Door...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "579310",
+        "modified": "2026-11-10T18:55:09.7505976Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Front Door edge actions "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "579383",
+        "created": "2026-11-10T18:55:53.5128625Z",
+        "description": "Announcing the public preview of gRPC support in Azure Front\nDoor. Build and deliver gRPC applications through\nAzure Front Door Standard and Premium. Now in preview, gRPC support lets you\nroute calls ...",
+        "id": "579383",
+        "modified": "2026-11-10T18:55:53.5128625Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Public Preview: Azure Front Door adds native gRPC support "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "579746",
+        "created": "2026-11-10T18:21:41.1197236Z",
+        "description": "Azure Route Server now supports IPv4/IPv6 dual-stack mode in public preview, enabling route exchange for both address families across supported hybrid networking connections. Existing IPv4 connections...",
+        "id": "579746",
+        "modified": "2026-11-10T18:21:41.1197236Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Route Server"
+        ],
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure Route Server dual-stack IPv4/IPv6 support"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "579854",
+        "created": "2026-11-09T17:20:57.324956Z",
+        "description": "Azure File Sync provides hybrid access or seamless migration of data from Windows Server to Azure Files while preserving the familiar local file server experience for users and applications. Now in pr...",
+        "id": "579854",
+        "modified": "2026-11-09T17:20:57.324956Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [],
+        "products": [],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Modernize Arc-enabled Windows Servers with Azure File Sync"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 7,
+    "totalCount": 7
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

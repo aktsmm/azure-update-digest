@@ -1,0 +1,41 @@
+{
+  "args": {
+    "id": "578454"
+  },
+  "fetchedAt": "2026-11-11T01:01:33.759Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "June",
+        "ring": "Private Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578454",
+    "created": "2026-11-10T20:08:32.4161774Z",
+    "description": "Distributed accelerator for cloud storage (DACS) is now in public preview for AI workloads running on Azure Kubernetes Service (AKS). DACS is a distributed read-through cache that runs within your AKS cluster and uses local NVMe disks across nodes to keep frequently read data from Azure Blob Storage close to GPU compute.For inference workloads, DACS helps reduce warm-model loading times and repeated Blob Storage reads as workloads scale out, restart, or recover from node replacement. New and replacement nodes can reuse model data already cached in the cluster instead of downloading it again from Blob Storage. DACS can also accelerate training workloads that repeatedly read the same portions of a dataset. Performance gains depend on how often data is reused and whether the cache is cold or warm.Enable and manage DACS on your AKS cluster through Azure Container Storage and integrate your workloads using Run:ai Model Streamer, BlobFuse2, or the native Python client. Azure Blob Storage remains the durable source of truth, with clients reading directly from Blob Storage when data isn't cached or the cache is unavailable.Learn\nmore. ",
+    "id": "578454",
+    "modified": "2026-11-10T20:08:32.4161774Z",
+    "previewAvailabilityDate": "2026-11",
+    "privatePreviewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Container Storage"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Distributed accelerator for cloud storage on AKS"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
