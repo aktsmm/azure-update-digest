@@ -1,0 +1,168 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579310"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-12T00:13:06Z"
+  },
+  "slides": [
+    {
+      "key": "579310",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Front Door の Edge Actions が一般提供（GA）に",
+        "subtitleJa": "エッジで JavaScript を実行し、リクエスト／レスポンスをその場で加工できます",
+        "en": "Generally Available: Azure Front Door edge actions"
+      },
+      "meta": {
+        "publishedJst": "2026-11-11",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Front Door"],
+        "categories": ["networking", "security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Front Door（Standard / Premium）** でエッジの処理を自前で書きたい方", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "適用対象", "retrievedAt": "2026-11-12T00:15:00Z" }] },
+        "change": { "text": "オリジンを変えずに、ユーザーに近い場所でリクエストの判断・加工ができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "エッジでの加工が必要なシナリオがあれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "WAF 評価とルール エンジンの後、キャッシュ／オリジン処理の前に要求を加工",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "エッジアクションを用いた高レベルフロー", "retrievedAt": "2026-11-12T00:15:00Z" }]
+            },
+            {
+              "text": "クライアント応答の呼び出しポイントで、返す前の応答も加工できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "クライアント応答の呼び出し", "retrievedAt": "2026-11-12T00:15:00Z" }]
+            },
+            {
+              "text": "Hyperlight の隔離されたマイクロ VM 上でコードを実行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "エッジアクションを用いた高レベルフロー", "retrievedAt": "2026-11-12T00:15:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "プロファイルの [設定] → [エッジ アクション] → [+ 作成] で作成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "既存のAzure Front Doorプロファイルから作成", "retrievedAt": "2026-11-12T00:15:00Z" }]
+            },
+            {
+              "text": "バージョンでコードを編集・テストまたはアップロードし、既定に設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "Edge Actionの新しいバージョンを作成", "retrievedAt": "2026-11-12T00:15:00Z" }]
+            },
+            {
+              "text": "作成しただけではルートに紐づかないため、Front Door ルートへ関連付ける",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "Important", "retrievedAt": "2026-11-12T00:15:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "対象は Front Door Standard / Premium。言語は JavaScript のみ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "エッジアクションのサイズとリソース制限", "retrievedAt": "2026-11-12T00:15:00Z" }]
+            },
+            {
+              "text": "コード 16 KB、最大 3 バージョン、実行 10 ms、1 サブスクリプション 100 リソース",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "エッジアクションのサイズとリソース制限", "retrievedAt": "2026-11-12T00:15:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する機能", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ルール エンジンが呼び出しポイントでエッジ アクションへ要求をルーティングする",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "クライアント要求の呼び出し", "retrievedAt": "2026-11-12T00:15:00Z" }]
+            },
+            {
+              "text": "WAF・キャッシュ・ルーティングなど既存の Front Door 機能と連携する",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "A/B テスト、ヘッダー操作、リクエスト拒否、動的オリジン選択、URL 書き換え、JWT 検証",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "サポートされている機能", "retrievedAt": "2026-11-12T00:15:00Z" }]
+            },
+            {
+              "text": "10 ms を超えるとコードは停止され、加工なしで処理が続行される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "重要な考慮事項", "retrievedAt": "2026-11-12T00:15:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-front-door", "term": "Azure Front Door", "type": "product", "oneLine": { "text": "Web アプリの入口となる、グローバルに展開されるサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "Azure Front Door", "retrievedAt": "2026-11-12T00:15:00Z" }] } },
+        { "termKey": "edge-actions", "term": "Edge Actions", "type": "feature", "oneLine": { "text": "Front Door の PoP でカスタム JavaScript を実行し、要求・応答を変更する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "冒頭", "retrievedAt": "2026-11-12T00:15:00Z" }] } },
+        { "termKey": "pop", "term": "PoP", "type": "term", "oneLine": { "text": "ポイント オブ プレゼンス。Front Door がユーザーに近い場所で通信を受ける拠点。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "冒頭", "retrievedAt": "2026-11-12T00:15:00Z" }] } },
+        { "termKey": "hyperlight", "term": "Hyperlight", "type": "term", "oneLine": { "text": "Microsoft のセキュアなマイクロ VM 技術で、コードをハードウェアで隔離して実行する。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "rules-engine", "term": "ルール エンジン", "type": "feature", "oneLine": { "text": "Front Door で条件に応じた処理を設定する機能で、エッジ アクションの呼び出し元にもなる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "クライアント要求の呼び出し", "retrievedAt": "2026-11-12T00:15:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-12T00:15:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Front Door はリージョンを選ばないグローバル サービス",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "List of nonregional services", "retrievedAt": "2026-11-12T00:15:00Z" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分の Front Door は対象ですか？",
+            "a": "Learn の適用対象は Front Door Standard と Premium です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions" }]
+          },
+          {
+            "q": "どんな制限がありますか？",
+            "a": "コード 16 KB、3 バージョン、実行 10 ms、1 サブスクリプション 100 リソースまでで、言語は JavaScript のみです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions" }]
+          },
+          {
+            "q": "作ればすぐ動きますか？",
+            "a": "いいえ。作成後に Front Door ルートへ関連付ける必要があり、既定バージョンの設定も必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579310",
+        "learn": [{ "title": "Azure Front Door Edge アクションを使ったエッジでのカスタマイズ", "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
