@@ -1,0 +1,110 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577992"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-12T00:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "577992",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure SQL Database を Azure portal から再起動・フェールオーバー",
+        "subtitleJa": "スクリプトやサポート連絡なしで操作できます（一般提供）",
+        "en": "Generally Available: Restart databases in Azure SQL DB via the Azure portal"
+      },
+      "meta": {
+        "publishedJst": "2026-11-03",
+        "modifiedJst": "2026-11-03",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "October" }],
+        "status": "Launched",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure SQL Database**（単一 / Hyperscale / エラスティック プール）の運用担当者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "REST API のスクリプトやサポート連絡なしで、portal から再起動・フェールオーバーできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "一時的な接続・性能の問題の切り分けや耐障害性テストで必要になれば利用", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "単一データベース、Hyperscale、エラスティック プール内のデータベースを Azure portal から直接再起動・フェールオーバーできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "一時的な接続・性能の問題を解決するための操作。データ自体には影響しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database", "locator": "冒頭", "retrievedAt": "2026-11-12T00:50:00Z" }] },
+            { "text": "アプリの障害回復性テストに使う API と同じ API を利用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database", "locator": "冒頭", "retrievedAt": "2026-11-12T00:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure SQL ハブ → 対象データベース → [設定] の [メンテナンス] → [再起動] のリンクを選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database", "locator": "データベースを再起動する", "retrievedAt": "2026-11-12T00:50:00Z" }] },
+            { "text": "確認ダイアログでデータベース名を入力し、[再起動] を選択して開始", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database", "locator": "データベースを再起動する", "retrievedAt": "2026-11-12T00:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "再起動で一時的にオフラインとなり、短時間サービスが中断される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database", "locator": "冒頭", "retrievedAt": "2026-11-12T00:50:00Z" }] },
+            { "text": "フェールオーバー呼び出しは DB / プールごとに 15 分に 1 回まで", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database", "locator": "冒頭", "retrievedAt": "2026-11-12T00:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "他の実行手段との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "PowerShell・REST API でもフェールオーバーを開始できる（portal は追加の手段）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/high-availability-sla-local-zone-redundancy", "locator": "フェールオーバーの開始", "retrievedAt": "2026-11-12T00:50:00Z" }] },
+            { "text": "エラスティック プールの再起動は、プール内の全データベースが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database", "locator": "エラスティック プールを再起動する", "retrievedAt": "2026-11-12T00:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "広範な障害時は使わず、先に Azure Service Health で進行中の問題を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database", "locator": "冒頭", "retrievedAt": "2026-11-12T00:50:00Z" }] },
+            { "text": "手動フェールオーバーで、アプリへの影響を本番前に検証できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/high-availability-sla-local-zone-redundancy", "locator": "アプリケーションの障害回復性のテスト", "retrievedAt": "2026-11-12T00:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "Azure 上で提供される、マネージドなリレーショナル データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database", "locator": "冒頭", "retrievedAt": "2026-11-12T00:50:00Z" }] } },
+        { "termKey": "elastic-pool", "term": "エラスティック プール", "type": "feature", "oneLine": { "text": "複数のデータベースをまとめて管理する、Azure SQL Database のプール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database", "locator": "エラスティック プールを再起動する", "retrievedAt": "2026-11-12T00:50:00Z" }] } },
+        { "termKey": "failover", "term": "フェールオーバー", "type": "term", "oneLine": { "text": "クライアント接続を新しいプライマリへリダイレクトする操作。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/high-availability-sla-local-zone-redundancy", "locator": "アプリケーションの障害回復性のテスト", "retrievedAt": "2026-11-12T00:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-12T00:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure SQL Database は全リージョンで提供される基盤サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-11-12T00:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577992",
+        "learn": [
+          { "title": "データベースやエラスティック プールの再起動", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database", "locale": "ja-jp" },
+          { "title": "冗長性による可用性 - Azure SQL Database", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/high-availability-sla-local-zone-redundancy", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "再起動でデータは失われますか？", "a": "再起動中は短時間サービスが中断されますが、データベース内に格納されたデータには影響しません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database" }] },
+          { "q": "何度でも実行できますか？", "a": "データベースまたはエラスティック プールごとに、フェールオーバー呼び出しは 15 分に 1 回のみ許可されます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database" }] },
+          { "q": "エラスティック プールを再起動するとどうなりますか？", "a": "プール内のすべてのデータベースが再起動されます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/restart-database" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
