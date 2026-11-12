@@ -1,0 +1,109 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["575106"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-12T13:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "575106",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Static Web Apps の .NET 8 / 9 サポートが 2026-11-10 に終了",
+        "subtitleJa": "終了後もアプリは動くが、セキュリティ更新が止まる。.NET 10 へ移行を",
+        "en": "Retirement: Support for .NET 8 and .NET 9 on Static Web Apps is ending November 10, 2026"
+      },
+      "meta": {
+        "publishedJst": "2026-11-10",
+        "availability": [{ "rawRing": "Retirement", "year": 2026, "month": "November" }],
+        "status": null,
+        "products": ["Static Web Apps"],
+        "categories": ["compute", "web-mobile"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Static Web Apps のマネージド Functions API で **.NET 8 / .NET 9** を使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "終了日以降はセキュリティ更新が提供されなくなる（アプリは動作し続ける）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "API を .NET 10 に移行し、apiRuntime を指定して再デプロイする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2026-11-10", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-11-10", "precision": "day" } },
+        { "label": "サポート終了", "when": { "date": "2026-11-10", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象は .NET 8 インプロセス、.NET 8 / 9 分離ワーカーのマネージド関数", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/static-web-apps/languages-runtimes", "locator": "API", "retrievedAt": "2026-11-12T13:40:00Z" }] },
+            { "text": "サポート外のランタイムは、セキュリティやパフォーマンスの問題につながるおそれがある", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "リンク済み（独自）Function Apps は別ライフサイクルのため個別に更新する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": ".NET 10（dotnet-isolated:10.0、分離ワーカーモデルのみ）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/static-web-apps/languages-runtimes", "locator": ".NET", "retrievedAt": "2026-11-12T13:40:00Z" }] },
+            { "text": "インプロセスモデルの API は、先に分離ワーカーモデルへ移行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/static-web-apps/languages-runtimes", "locator": ".NET", "retrievedAt": "2026-11-12T13:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "TargetFramework を net10.0 にし、staticwebapp.config.json の apiRuntime を dotnet-isolated:10.0 に設定して再デプロイ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/static-web-apps/languages-runtimes", "locator": ".NET", "retrievedAt": "2026-11-12T13:40:00Z" }] },
+            { "text": "TargetFramework と apiRuntime の値は同じランタイムに揃える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/static-web-apps/languages-runtimes", "locator": ".NET", "retrievedAt": "2026-11-12T13:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-static-web-apps", "term": "Azure Static Web Apps", "type": "product", "oneLine": { "text": "フルスタックの Web アプリをコード リポジトリから Azure に自動的にデプロイするサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/static-web-apps/overview", "locator": "冒頭", "retrievedAt": "2026-11-12T13:40:00Z" }] } },
+        { "termKey": "managed-functions", "term": "マネージド Functions", "type": "feature", "oneLine": { "text": "Static Web Apps の API を支える、Azure Functions によるサーバーレスなバックエンド。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/static-web-apps/overview", "locator": "主要な機能", "retrievedAt": "2026-11-12T13:40:00Z" }] } },
+        { "termKey": "apiruntime", "term": "apiRuntime", "type": "term", "oneLine": { "text": "staticwebapp.config.json の platform に指定する、API の言語ランタイム バージョンの設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/static-web-apps/languages-runtimes", "locator": "API", "retrievedAt": "2026-11-12T13:40:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "Static Web Apps の API ランタイム サポート終了（全体に適用）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/static-web-apps/languages-runtimes", "locator": "API", "retrievedAt": "2026-11-12T13:40:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=575106",
+        "learn": [
+          { "title": "Azure Static Web Apps でサポートされている言語とランタイム", "url": "https://learn.microsoft.com/ja-jp/azure/static-web-apps/languages-runtimes", "locale": "ja-jp" },
+          { "title": "C# アプリをインプロセス モデルから分離ワーカー モデルに移行する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/migrate-dotnet-to-isolated-model", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どのランタイムが対象ですか？",
+            "a": ".NET 8 インプロセス、.NET 8 分離、.NET 9 分離のサポートが 2026年11月10日に終了します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/static-web-apps/languages-runtimes" }]
+          },
+          {
+            "q": "インプロセスモデルのまま .NET 10 にできますか？",
+            "a": ".NET 10 は分離ワーカーモデルのみ対応です。先に分離ワーカーモデルへ移行してください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/static-web-apps/languages-runtimes" }]
+          },
+          {
+            "q": "終了日を過ぎるとアプリは止まりますか？",
+            "a": "アプリは動作し続けますが、セキュリティ更新は提供されなくなります。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=575106" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
