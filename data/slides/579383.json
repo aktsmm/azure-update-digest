@@ -1,0 +1,108 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579383"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-12T00:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "579383",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Front Door が gRPC をネイティブ サポート",
+        "subtitleJa": "サービス／メソッド単位のルーティングと gRPC ヘルスプローブに対応（パブリック プレビュー）",
+        "en": "Public Preview: Azure Front Door adds native gRPC support"
+      },
+      "meta": {
+        "publishedJst": "2026-11-11",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Front Door"],
+        "categories": ["networking", "security"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "gRPC アプリを公開する **Front Door Standard / Premium** の利用者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "gRPC を Front Door 経由で配信し、正常なオリジンへ分散できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "gRPC を使う場合に検証。追加のプレビュー登録は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc", "locator": "Important", "retrievedAt": "2026-11-12T00:10:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象は Front Door Standard / Premium。クライアントからオリジンまで HTTP/2 と HTTPS", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc", "locator": "Azure Front Door での gRPC の動作", "retrievedAt": "2026-11-12T00:10:00Z" }] },
+            { "text": "/package.Service/Method の完全パスでメソッド単位にルート照合", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc", "locator": "ルートの照合", "retrievedAt": "2026-11-12T00:10:00Z" }] },
+            { "text": "gRPC ヘルスプローブ（grpc.health.v1.Health/Check）で正常なオリジンへ分散", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc", "locator": "オリジンとヘルスプローブの設定", "retrievedAt": "2026-11-12T00:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "キャッシュ、リダイレクト、Private Link は gRPC ルートで非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc", "locator": "プレビュー期間中の動作と制限", "retrievedAt": "2026-11-12T00:10:00Z" }] },
+            { "text": "WAF は Protobuf 本文を検査しない（メタデータのみ評価）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc", "locator": "Web アプリケーション ファイアウォールに関する考慮事項", "retrievedAt": "2026-11-12T00:10:00Z" }] },
+            { "text": "ルートのオリジン グループ内の全オリジンで gRPC 有効化が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc", "locator": "Prerequisites", "retrievedAt": "2026-11-12T00:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "オリジンの HTTP/2・TLS 対応とヘルス サービス実装を確認し、検証環境から試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "grpcurl で動作確認し、HTTP 200 でも gRPC ステータスを別途確認する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc", "locator": "gRPCトラフィックの監視", "retrievedAt": "2026-11-12T00:10:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-front-door", "term": "Azure Front Door", "type": "product", "oneLine": { "text": "Web アプリの入口となる、グローバルでスケーラブルなサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/security/fundamentals/network-overview#azure-front-door", "locator": "Azure Front Door", "retrievedAt": "2026-11-12T00:10:00Z" }] } },
+        { "termKey": "grpc", "term": "gRPC", "type": "feature", "oneLine": { "text": "クライアントがサービス契約を通じてリモートのメソッドを呼び出すオープンソース フレームワーク。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc", "locator": "gRPC とは", "retrievedAt": "2026-11-12T00:10:00Z" }] } },
+        { "termKey": "protobuf", "term": "Protocol Buffers", "type": "term", "oneLine": { "text": "言語やプラットフォームに依存しない、構造化データのシリアライズ形式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc", "locator": "プロトコルバッファとメソッドパス", "retrievedAt": "2026-11-12T00:10:00Z" }] } },
+        { "termKey": "http2", "term": "HTTP/2", "type": "term", "oneLine": { "text": "gRPC が使うプロトコルで、バイナリ フレームや接続多重化を備える。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc", "locator": "gRPC とは", "retrievedAt": "2026-11-12T00:10:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-12T00:10:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "Azure Front Door はグローバルな非リージョン サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "List of nonregional services", "retrievedAt": "2026-11-12T00:10:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "プレビュー参加に登録や申請は必要ですか？",
+            "a": "不要です。すべての Front Door Standard / Premium のお客様が、追加のアクセス要件なしで利用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc" }]
+          },
+          {
+            "q": "Private Link のオリジンでも使えますか？",
+            "a": "プレビュー期間中、gRPC 対応オリジンでは Private Link はサポートされていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc" }]
+          },
+          {
+            "q": "WAF で gRPC の本文も検査できますか？",
+            "a": "Protobuf メッセージはデコードされないため本文は検査されません。URI やヘッダーなどのメタデータが評価対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579383",
+        "learn": [{ "title": "Azure Front Door での gRPC サポート (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
