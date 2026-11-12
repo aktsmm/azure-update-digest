@@ -1,0 +1,151 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579746"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-12T00:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "579746",
+      "kind": "update",
+      "kindSource": "title",
+      "label": "更新",
+      "title": {
+        "ja": "Azure Route Server が IPv4/IPv6 デュアルスタックに対応（パブリック プレビュー）",
+        "subtitleJa": "ハイブリッド接続で IPv4 と IPv6 の両方のルートを交換できます",
+        "en": "Public Preview: Azure Route Server dual-stack IPv4/IPv6 support"
+      },
+      "meta": {
+        "publishedJst": "2026-11-11",
+        "modifiedJst": "2026-11-11",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "November" }],
+        "status": null,
+        "products": ["Azure Route Server"],
+        "categories": ["networking"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "IPv6 ルーティングを検討している **Azure Route Server** の利用者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "既存の IPv4 接続を変えずに、IPv6 ルートの交換を追加できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "IPv6 が必要なら検討。有効化は元に戻せず、プレビュー アクセスが有効なサブスクリプションが必要",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "冒頭・Important", "retrievedAt": "2026-11-12T00:20:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "できること", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "IPv4/IPv6 デュアルスタック モードで、両方のアドレス ファミリーのルートを交換", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ExpressRoute・VPN Gateway 接続と、ハブ／スポーク VNet 内の NVA 接続にルート マップを適用可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "既存の IPv4 専用接続は変更されない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "Prerequisites", "retrievedAt": "2026-11-12T00:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "RouteServerSubnet に IPv6 /64 プレフィックスが必要。IPv4/IPv6 デュアルスタックの VNet で利用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "Prerequisites", "retrievedAt": "2026-11-12T00:20:00Z" }]
+            },
+            {
+              "text": "提供リージョンは限定的（東アジア・韓国中部・インド中部など 11 リージョン）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "地域ごとの提供状況", "retrievedAt": "2026-11-12T00:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "RouteServerSubnet に IPv6 を追加 → Route Server の [構成] でデュアルスタック モードを有効化",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "デュアルスタックモードを有効にする", "retrievedAt": "2026-11-12T00:20:00Z" }]
+            },
+            {
+              "text": "有効化は完了まで最大 40 分かかることがある",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "デュアルスタックモードを有効にする", "retrievedAt": "2026-11-12T00:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "既存の Route Server で有効化すると不可逆。戻すには削除して再作成が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "Important", "retrievedAt": "2026-11-12T00:20:00Z" }]
+            },
+            {
+              "text": "ハブ・スポーク構成では、スポークのピアリングの再同期が必要になる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "デュアルスタックモードを有効にする", "retrievedAt": "2026-11-12T00:20:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-route-server", "term": "Azure Route Server", "type": "product", "oneLine": { "text": "NVA と Azure 仮想ネットワーク間の動的ルーティングを簡略化する、フル マネージドのサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/overview", "locator": "冒頭", "retrievedAt": "2026-11-12T00:20:00Z" }] } },
+        { "termKey": "dual-stack", "term": "デュアルスタック", "type": "feature", "oneLine": { "text": "IPv4 と IPv6 の両方のアドレス ファミリーを扱うモード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "冒頭", "retrievedAt": "2026-11-12T00:20:00Z" }] } },
+        { "termKey": "bgp", "term": "BGP", "type": "term", "oneLine": { "text": "Border Gateway Protocol。ルート情報を自動的に交換するためのプロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/overview", "locator": "冒頭", "retrievedAt": "2026-11-12T00:20:00Z" }] } },
+        { "termKey": "nva", "term": "NVA", "type": "term", "oneLine": { "text": "ファイアウォールや SD-WAN など、ネットワーク機能を提供する仮想アプライアンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/overview", "locator": "冒頭", "retrievedAt": "2026-11-12T00:20:00Z" }] } },
+        { "termKey": "route-map", "term": "ルート マップ", "type": "feature", "oneLine": { "text": "ルートのフィルタリングや BGP 属性の変更など、ルート広告を制御する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/overview", "locator": "主な機能", "retrievedAt": "2026-11-12T00:20:00Z" }] } },
+        { "termKey": "label-preview", "term": "パブリック プレビュー", "type": "label", "oneLine": { "text": "全 Azure 顧客が評価できる段階。通常 SLA はなく、本番利用は想定されない。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-12T00:20:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビューの提供リージョンは東アジア・韓国中部など 11 リージョンで、日本のリージョンは含まれない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "地域ごとの提供状況", "retrievedAt": "2026-11-12T00:20:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579746",
+        "learn": [
+          { "title": "Azure Route ServerでIPv4/IPv6デュアルスタックモードを有効にする", "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locale": "ja-jp" },
+          { "title": "Azure Route Server で Azure ポータルを使用してデュアルスタック ルート マップを設定する", "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-dual-stack-portal", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "現時点のプレビュー提供リージョンに日本は含まれません。東アジア、韓国中部、インド中部など 11 リージョンです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "地域ごとの提供状況", "retrievedAt": "2026-11-12T00:20:00Z" }]
+          },
+          {
+            "q": "有効化後に IPv4 専用へ戻せますか？",
+            "a": "戻せません。有効化は不可逆で、戻すには Route Server を削除して再作成する必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "Important", "retrievedAt": "2026-11-12T00:20:00Z" }]
+          },
+          {
+            "q": "事前に必要なものは？",
+            "a": "IPv4 専用の Route Server と、RouteServerSubnet 用の IPv6 /64 プレフィックスを持つデュアルスタック VNet が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "Prerequisites", "retrievedAt": "2026-11-12T00:20:00Z" }]
+          },
+          {
+            "q": "本番環境で使えますか？",
+            "a": "パブリック プレビューのため、通常は SLA がなく、本番利用は想定されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-12T00:20:00Z" }]
+          }
+        ]
+      }
+    }
+  ]
+}
