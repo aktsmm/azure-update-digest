@@ -56,7 +56,7 @@ jobs:
           case "$LIMIT" in ''|*[!0-9]*) echo "invalid limit"; exit 1;; esac
           [ "$LIMIT" -gt 30 ] && LIMIT=30
           case "$IDS" in *[!0-9,\ ]*) echo "invalid ids"; exit 1;; esac
-          open=$(gh pr list --state open --limit 200 --json headRefName -q '.[].headRefName' | grep -E '^slides?[/-]' || true)
+          open=$(for n in $(gh pr list --state open --limit 200 --label data --json number -q '.[].number'); do gh pr view $n --json files -q '.files[].path'; done | sed -n 's#^data/slides/\([0-9]*\)\.json$#slides-\1#p' || true)
           started=0
           if [ -n "$IDS" ]; then
             list=$(echo "$IDS" | tr ',' ' ')
