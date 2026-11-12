@@ -56,7 +56,7 @@ jobs:
           case "$LIMIT" in ''|*[!0-9]*) echo "invalid limit"; exit 1;; esac
           [ "$LIMIT" -gt 30 ] && LIMIT=30
           case "$IDS" in *[!0-9,\ ]*) echo "invalid ids"; exit 1;; esac
-          open=$(gh pr list --state open --limit 200 --json headRefName -q '.[].headRefName' | grep -E '^slides[/-]' || true)
+          open=$(gh pr list --state open --limit 200 --json headRefName -q '.[].headRefName' | grep -E '^slides?[/-]' || true)
           started=0
           if [ -n "$IDS" ]; then
             list=$(echo "$IDS" | tr ',' ' ')
@@ -67,7 +67,7 @@ jobs:
           fi
           for id in $list; do
             [ "$started" -ge "$LIMIT" ] && break
-            if echo "$open" | grep -Eq "^slides[/-]$id"; then echo "skip $id: open PR"; continue; fi
+            if echo "$open" | grep -Eq "^slides?[/-]$id"; then echo "skip $id: open PR"; continue; fi
             echo "dispatch $id $regen"
             gh workflow run slide.lock.yml -f id="$id" $regen
             started=$((started + 1))

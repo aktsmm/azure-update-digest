@@ -87,11 +87,11 @@ jobs:
           # after that, and for any other stuck generated PR, a single issue is opened for a human.
           old=$(date -u -d '12 hours ago' +%Y-%m-%dT%H:%M:%SZ)
           gh pr list --state open --limit 100 --json number,headRefName,createdAt,title \
-            -q ".[] | select((.headRefName | test(\"^(slides|summaries)[/-]\")) and .createdAt < \"$old\") | \"\(.number)|\(.headRefName)|\(.title)\"" |
+            -q ".[] | select((.headRefName | test(\"^(slides?|summaries)[/-]\")) and .createdAt < \"$old\") | \"\(.number)|\(.headRefName)|\(.title)\"" |
           while IFS='|' read -r n ref title; do
             echo "stuck: PR #$n ($ref)"
             id=""
-            case "$ref" in slides[/-]*) id=${ref#slides[/-]}; id=${id%%-*};; esac
+            case "$ref" in slide[/-]*|slides[/-]*) id=${ref#slides}; id=${id#slide}; id=${id#[/-]}; id=${id%%-*};; esac
             failed=0
             if [ -n "$id" ]; then
               failed=$(gh pr list --state closed --search "Add slide for update $id in:title" --json mergedAt -q '[.[] | select(.mergedAt == null)] | length')
