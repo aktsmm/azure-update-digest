@@ -1,0 +1,48 @@
+{
+  "args": {
+    "filter": "modified ge 2026-11-11T02:03:53Z and modified lt 2026-11-12T02:07:42Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-11-12T02:07:42.559Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "580155",
+        "created": "2026-11-11T18:18:27.6691522Z",
+        "description": "Announcing the public preview\nof rate limit grouping for Azure Web Application Firewall (WAF) on Azure Front\nDoor Premium. By default, a rate limit rule counts requests separately for\neach client IP a...",
+        "id": "580155",
+        "modified": "2026-11-11T18:18:27.6691522Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door",
+          "Web Application Firewall"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Rate limit grouping for Azure Front Door Premium WAF"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 1,
+    "totalCount": 1
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}
