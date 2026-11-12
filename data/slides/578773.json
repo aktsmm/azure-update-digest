@@ -1,0 +1,102 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["578773"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-12T00:03:00Z"
+  },
+  "slides": [
+    {
+      "key": "578773",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Functions が .NET 11 に対応（GA）",
+        "subtitleJa": "分離ワーカー モデルで .NET 11 を対象にした関数アプリを構築できます",
+        "en": "Generally Available: Azure Functions support for .NET 11"
+      },
+      "meta": {
+        "publishedJst": "2026-11-11",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Functions"],
+        "categories": ["compute", "containers", "iot"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**.NET の分離ワーカー モデル**で Azure Functions を開発している方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "最新の .NET ランタイム・C#・ライブラリ・SDK の改善をサーバーレスで活用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": ".NET 11 を使いたい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "分離ワーカー モデルで .NET 11 を対象にした関数アプリを構築できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Azure Functions のプログラミング モデルとホスト統合は従来どおり", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "分離ワーカー モデルでは、ランタイム コンポーネントとは別に .NET のバージョンを選べる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/dotnet-isolated-process-guide", "locator": "冒頭", "retrievedAt": "2026-11-12T00:03:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Visual Studio Code やコマンド ライン ツールで、分離ワーカー モデルの関数プロジェクトを作成できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/dotnet-isolated-process-guide", "locator": "冒頭の「はじめに」", "retrievedAt": "2026-11-12T00:03:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "利用できる .NET の最上位バージョンは、Functions ランタイムのバージョンとモデルごとに決まる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/dotnet-isolated-process-guide", "locator": "サポートされているバージョン", "retrievedAt": "2026-11-12T00:03:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "インプロセス モデルとの違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "インプロセス モデルのサポートは 2026 年 11 月 10 日に終了。完全なサポートには分離ワーカー モデルへの移行が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/dotnet-isolated-process-guide", "locator": "サポートされているバージョン 脚注 3", "retrievedAt": "2026-11-12T00:03:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "新しい .NET の性能改善や API を、サーバーレス アプリで使いたい場合に有効", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既存アプリは、まず検証環境で .NET 11 に更新して動作を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-functions", "term": "Azure Functions", "type": "product", "oneLine": { "text": "イベントに応じてコードを実行する、サーバーレスのコンピューティング サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-overview", "locator": "冒頭", "retrievedAt": "2026-11-12T00:03:00Z" }] } },
+        { "termKey": "isolated-worker", "term": "分離ワーカー モデル", "type": "feature", "oneLine": { "text": "関数を Functions ホストとは別のワーカー プロセスで実行し、.NET のバージョンを個別に選べるモデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/dotnet-isolated-process-guide", "locator": "冒頭", "retrievedAt": "2026-11-12T00:03:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-12T00:03:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=578773",
+        "learn": [{ "title": "分離ワーカー モデルで C# Azure Functionsを実行するためのガイド", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/dotnet-isolated-process-guide", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
