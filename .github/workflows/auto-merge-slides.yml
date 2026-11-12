@@ -77,7 +77,7 @@ jobs:
             rm -rf .slide-check
             gh pr merge "$n" --squash --match-head-commit "$sha" && merged=true
           done < <(gh pr list --state open --limit 100 --base "${{ github.event.repository.default_branch }}" --json number,headRefName,headRefOid,labels \
-              -q '.[] | select((.headRefName | test("^slides?[/-]")) and (.labels | map(.name) | index("data"))) | "\(.number) \(.headRefOid) \(.headRefName)"')
+              -q '.[] | select(.labels | map(.name) | index("data")) | "\(.number) \(.headRefOid) \(.headRefName)"')
           echo "merged=$merged" >> "$GITHUB_OUTPUT"
 
   deploy:

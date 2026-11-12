@@ -1,28 +1,25 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 
-// The slide agent has created branches named both "slides/<id>-<hash>" and "slide-<id>-<hash>" (and "summaries-..."/"summaries/...").
-// Every workflow that picks generated PRs by branch name must accept all of these, or the PR sits open unnoticed.
-const BRANCHES = ["slides/579507-d616cd44b0f9cb7d", "slides-576547-b31246b6d39900ef", "slide-579507-d616cd44b0f9cb7d", "summaries/2026-10-28-f9e63f3d8b94c8e1", "summaries-577491-d06de346b3818db7"];
+// The slide agent has named its branches "slides/<id>-…", "slides-<id>-…" and "slide-<id>-…". A branch-name filter silently
+// missed one spelling and left PRs open for 6 days, so generated PRs are recognised by the "data" label and their changed files.
 const read = (f: string) => readFileSync(`.github/workflows/${f}`, "utf8");
 
-describe("generated PR branch names", () => {
-  it("auto-merge-slides accepts every slide branch spelling", () => {
-    const m = read("auto-merge-slides.yml").match(/test\("(\^slides\??\[\/-\])"\)/);
-    expect(m, "branch filter not found").toBeTruthy();
-    const re = new RegExp(m![1]!);
-    for (const b of BRANCHES.filter((x) => x.startsWith("slide"))) expect(re.test(b), b).toBe(true);
+describe("generated PR selection", () => {
+  it("does not depend on branch names", () => {
+    for (const f of ["auto-merge-slides.yml", "auto-merge-summaries.yml", "slide-dispatch.yml", "watchdog.yml"]) {
+      const t = read(f);
+      expect(/test\(\\?"\^\(?slides?\|?summaries|test\("\^slides?\[|test\("\^summaries\[|grep -Eq? '\^slides/.test(t), `${f} filters by branch name`).toBe(false);
+    }
   });
-  it("watchdog covers slide, slides and summaries branches", () => {
-    const m = read("watchdog.yml").match(/test\(\\"(\^\([^"]*?\)\[\/-\])\\"\)/);
-    expect(m, "watchdog filter not found").toBeTruthy();
-    const re = new RegExp(m![1]!);
-    for (const b of BRANCHES) expect(re.test(b), b).toBe(true);
+  it("selects by the data label", () => {
+    expect(read("auto-merge-slides.yml")).toContain('index("data")');
+    expect(read("auto-merge-summaries.yml")).toContain('index("data")');
+    expect(read("watchdog.yml")).toContain("--label data");
+    expect(read("slide-dispatch.yml")).toContain("--label data");
   });
-  it("slide-dispatch treats every slide branch as an open PR", () => {
-    const m = read("slide-dispatch.yml").match(/grep -E '(\^slides\??\[\/-\])'/);
-    expect(m, "dispatch filter not found").toBeTruthy();
-    const re = new RegExp(m![1]!);
-    for (const b of BRANCHES.filter((x) => x.startsWith("slide"))) expect(re.test(b), b).toBe(true);
+  it("auto-merge still only merges a PR that changes exactly one allowed file", () => {
+    expect(read("auto-merge-slides.yml")).toContain("^data/slides/[0-9]{1,12}\\.json$");
+    expect(read("auto-merge-summaries.yml")).toContain("^data/(summaries|related)/");
   });
 });

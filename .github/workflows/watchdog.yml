@@ -58,14 +58,13 @@ jobs:
         run: |
           # GitHub sometimes drops the scheduled auto-merge runs; a generated PR then waits until the next one.
           old=$(date -u -d '60 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
-          for kind in slides summaries; do
-            n=$(gh pr list --state open --limit 100 --json headRefName,createdAt \
-              -q "[.[] | select((.headRefName | test(\"^$kind[/-]\")) and .createdAt < \"$old\")] | length")
-            if [ "${n:-0}" -gt 0 ]; then
-              echo "$n $kind PR(s) waiting > 60 min; starting auto-merge-$kind"
-              gh workflow run "auto-merge-$kind.yml" || true
-            fi
-          done
+          # generated PRs are recognised by their "data" label, not by branch name (the agent has used several spellings)
+          n=$(gh pr list --state open --limit 100 --label data --json createdAt -q "[.[] | select(.createdAt < \"$old\")] | length")
+          if [ "${n:-0}" -gt 0 ]; then
+            echo "$n generated PR(s) waiting > 60 min; starting auto-merge"
+            gh workflow run auto-merge-slides.yml || true
+            gh workflow run auto-merge-summaries.yml || true
+          fi
       - name: Start the daily collection if its scheduled run never happened
         run: |
           # The daily collection is due at 21:00 UTC. If the last successful scheduled run is older than ~27 h
@@ -86,12 +85,12 @@ jobs:
           # A slide PR open > 12 h is closed and its slide regenerated once more (max 2 failed PRs per update);
           # after that, and for any other stuck generated PR, a single issue is opened for a human.
           old=$(date -u -d '12 hours ago' +%Y-%m-%dT%H:%M:%SZ)
-          gh pr list --state open --limit 100 --json number,headRefName,createdAt,title \
-            -q ".[] | select((.headRefName | test(\"^(slides?|summaries)[/-]\")) and .createdAt < \"$old\") | \"\(.number)|\(.headRefName)|\(.title)\"" |
+          gh pr list --state open --limit 100 --label data --json number,headRefName,createdAt,title \
+            -q ".[] | select(.createdAt < \"$old\") | \"\(.number)|\(.headRefName)|\(.title)\"" |
           while IFS='|' read -r n ref title; do
             echo "stuck: PR #$n ($ref)"
             id=""
-            case "$ref" in slide[/-]*|slides[/-]*) id=${ref#slides}; id=${id#slide}; id=${id#[/-]}; id=${id%%-*};; esac
+            id=$(gh pr view "$n" --json files -q ".files[].path" | sed -n "s#^data/slides/\([0-9]\{1,12\}\)\.json\$#\1#p" | head -1)
             if [ -n "$id" ] && gh api "repos/$GH_REPO/contents/data/slides/$id.json?ref=${{ github.event.repository.default_branch }}" --silent 2>/dev/null \
                && [ "$(gh pr view "$n" --json mergeable -q .mergeable)" = "CONFLICTING" ]; then
               gh pr close "$n" --delete-branch --comment "同じスライドがすでに main にあり競合するため（重複）、閉じます。" || true
