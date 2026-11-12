@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "580155"
+  },
+  "fetchedAt": "2026-11-12T02:03:59.305Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580155",
+    "created": "2026-11-11T18:18:27.6691522Z",
+    "description": "Announcing the public preview\nof rate limit grouping for Azure Web Application Firewall (WAF) on Azure Front\nDoor Premium. By default, a rate limit rule counts requests separately for\neach client IP address. Distributed attacks get around this by spreading their\ntraffic across thousands of IP addresses, so that each one stays under the\nthreshold. Rate limit grouping adds new group-by options that count requests by\nan attribute those clients share, so traffic from many IP addresses counts\ntoward a single threshold.  With this preview, you can group each rate limit rule by: JA4 fingerprint, to limit\nattacks that rotate through many IP addresses but reuse the same client\nsoftware. AS number, to cap traffic\nfrom networks your users don't usually come from, such as hosting and cloud\nproviders, without maintaining lists of their IP ranges. Country/region, to cap the\ntraffic that any single country or region can send. You can also choose None to count all requests that match a\nrule together, for example to cap the total request rate to a sign-in page.\nExisting rate limit rules keep counting requests per IP address, so nothing\nchanges until you choose a grouping. Configure grouping in the Azure portal,\nARM templates, Bicep, the REST API, or Azure PowerShell, and keep a per-IP rule\nalongside your grouped rules. Learn\nmore.",
+    "id": "580155",
+    "modified": "2026-11-11T18:18:27.6691522Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure Front Door",
+      "Web Application Firewall"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features"
+    ],
+    "title": "Public Preview: Rate limit grouping for Azure Front Door Premium WAF"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,190 @@
+{
+  "args": {
+    "filter": "modified ge 2026-11-10T16:37:14Z and modified lt 2026-11-12T02:03:53Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-11-12T02:03:53.766Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "June",
+            "ring": "Private Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578454",
+        "created": "2026-11-10T20:08:32.4161774Z",
+        "description": "Distributed accelerator for cloud storage (DACS) is now in public preview for AI workloads running on Azure Kubernetes Service (AKS). DACS is a distributed read-through cache that runs within your AKS...",
+        "id": "578454",
+        "modified": "2026-11-10T20:08:32.4161774Z",
+        "previewAvailabilityDate": "2026-11",
+        "privatePreviewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Containers"
+        ],
+        "products": [
+          "Azure Container Storage"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Feature"
+        ],
+        "title": "Public Preview: Distributed accelerator for cloud storage on AKS"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578773",
+        "created": "2026-11-10T20:07:45.4312431Z",
+        "description": "Azure Functions support for .NET 11 is now generally available.You can now\nbuild Azure Functions apps targeting .NET 11 using the isolated worker model,\nwhile continuing to use the Azure Functions pro...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "578773",
+        "modified": "2026-11-10T20:07:45.4312431Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "SDK and Tools",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Functions support for .NET 11"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "579310",
+        "created": "2026-11-10T18:55:09.7505976Z",
+        "description": "Announcing the general availability of Azure Front Door edge\nactions (serverless compute at the edge). With edge actions, customers can execute lightweight\nJavaScript functions during Azure Front Door...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "579310",
+        "modified": "2026-11-10T18:55:09.7505976Z",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Generally Available: Azure Front Door edge actions "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "579383",
+        "created": "2026-11-10T18:55:53.5128625Z",
+        "description": "Announcing the public preview of gRPC support in Azure Front\nDoor. Build and deliver gRPC applications through\nAzure Front Door Standard and Premium. Now in preview, gRPC support lets you\nroute calls ...",
+        "id": "579383",
+        "modified": "2026-11-10T18:55:53.5128625Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features",
+          "Services"
+        ],
+        "title": "Public Preview: Azure Front Door adds native gRPC support "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Effective",
+            "year": 2026
+          }
+        ],
+        "baseId": "579746",
+        "created": "2026-11-10T18:21:41.1197236Z",
+        "description": "Azure Route Server now supports IPv4/IPv6 dual-stack mode in public preview, enabling route exchange for both address families across supported hybrid networking connections. Existing IPv4 connections...",
+        "id": "579746",
+        "modified": "2026-11-10T18:21:41.1197236Z",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Azure Route Server"
+        ],
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Azure Route Server dual-stack IPv4/IPv6 support"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "580155",
+        "created": "2026-11-11T18:18:27.6691522Z",
+        "description": "Announcing the public preview\nof rate limit grouping for Azure Web Application Firewall (WAF) on Azure Front\nDoor Premium. By default, a rate limit rule counts requests separately for\neach client IP a...",
+        "id": "580155",
+        "modified": "2026-11-11T18:18:27.6691522Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking",
+          "Security"
+        ],
+        "products": [
+          "Azure Front Door",
+          "Web Application Firewall"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Features"
+        ],
+        "title": "Public Preview: Rate limit grouping for Azure Front Door Premium WAF"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 6,
+    "totalCount": 6
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}
