@@ -1,0 +1,103 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["578454"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-11T23:57:37Z"
+  },
+  "slides": [
+    {
+      "key": "578454",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "AKS の AI ワークロード向けに分散アクセラレータ（DACS）",
+        "subtitleJa": "ローカル NVMe の分散キャッシュで Blob のモデル読み込みを高速化（パブリック プレビュー）",
+        "en": "Public Preview: Distributed accelerator for cloud storage on AKS"
+      },
+      "meta": {
+        "publishedJst": "2026-11-11",
+        "availability": [
+          { "rawRing": "Private Preview", "year": 2026, "month": "June" },
+          { "rawRing": "Preview", "year": 2026, "month": "November" }
+        ],
+        "status": "In preview",
+        "products": ["Azure Container Storage"],
+        "categories": ["containers"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Blob Storage のモデルやデータを読む AKS 上の **AI 推論・トレーニング** の運用者", "origin": "learn", "assertion": "inference", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "クラウドストレージに分散アクセラレータを使うべきタイミング", "retrievedAt": "2026-11-11T23:58:00Z" }] },
+        "change": { "text": "ウォーム モデルの読み込みやスケールアウト時の再ダウンロードを減らせる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "主な利点", "retrievedAt": "2026-11-11T23:58:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。プレビューは SLA なしで本番ワークロードには非推奨", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "Important", "retrievedAt": "2026-11-11T23:58:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "AKS 上の分散リードスルー キャッシュ。ノードのローカル NVMe にデータを保持", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "冒頭", "retrievedAt": "2026-11-11T23:58:00Z" }] },
+            { "text": "Azure Container Storage 経由で有効化・管理。Blob Storage が正本", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "マネージド デプロイ", "retrievedAt": "2026-11-11T23:58:00Z" }] },
+            { "text": "連携: BlobFuse2、Run:ai Model Streamer、ネイティブ Python クライアント", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "クライアント連携", "retrievedAt": "2026-11-11T23:58:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "最大 100 ノード。Linux ノードで専用のローカル NVMe が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "プレビューのサポートと制限", "retrievedAt": "2026-11-11T23:58:00Z" }] },
+            { "text": "永続ボリュームや StorageClass ではなく、Blob 以外の取得元は対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "概要", "retrievedAt": "2026-11-11T23:58:00Z" }] },
+            { "text": "キャッシュは一時的で、効果は再利用頻度とコールド／ウォームで変わる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "キャッシュのセマンティクス", "retrievedAt": "2026-11-11T23:58:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "モデルの再読み込みやスケールアウトが多いか、再利用されるデータ量を確認して小規模に検証する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "料金: DACS ソフトウェア自体は無料。VM・Blob・ネットワーク料金は別途発生", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "プレビューのサポートと制限", "retrievedAt": "2026-11-11T23:58:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "dacs", "term": "DACS", "type": "product", "oneLine": { "text": "AKS 上で Blob Storage のデータを NVMe にキャッシュする分散リードスルー キャッシュ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "冒頭", "retrievedAt": "2026-11-11T23:58:00Z" }] } },
+        { "termKey": "read-through-cache", "term": "リードスルー キャッシュ", "type": "term", "oneLine": { "text": "読み取り時にキャッシュにない分を取得元から読み込んで保持する方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "読み取りパス", "retrievedAt": "2026-11-11T23:58:00Z" }] } },
+        { "termKey": "azure-container-storage", "term": "Azure Container Storage", "type": "product", "oneLine": { "text": "DACS の有効化と管理に使うサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "マネージド デプロイ", "retrievedAt": "2026-11-11T23:58:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-11T23:58:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=578454",
+        "learn": [
+          { "title": "クラウドストレージ用の分散アクセラレータとは何ですか? (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locale": "ja-jp" },
+          { "title": "AKSでのクラウドストレージ用分散アクセラレータ(プレビュー)を始めましょう", "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-quickstart", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "キャッシュが使えないとき、データは読めますか？",
+            "a": "はい。キャッシュ ミスや利用不可の場合、クライアントは Azure Blob Storage から直接読み取ります。Blob が正本です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "キャッシュのセマンティクス", "retrievedAt": "2026-11-11T23:58:00Z" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "DACS ソフトウェアの料金はかかりません。Azure VM、Blob Storage、ネットワークの料金は引き続き適用されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "プレビューのサポートと制限", "retrievedAt": "2026-11-11T23:58:00Z" }]
+          },
+          {
+            "q": "本番で使えますか？",
+            "a": "プレビューは SLA なしで提供され、運用環境のワークロードには推奨されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "Important", "retrievedAt": "2026-11-11T23:58:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
