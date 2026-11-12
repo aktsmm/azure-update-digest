@@ -92,6 +92,11 @@ jobs:
             echo "stuck: PR #$n ($ref)"
             id=""
             case "$ref" in slide[/-]*|slides[/-]*) id=${ref#slides}; id=${id#slide}; id=${id#[/-]}; id=${id%%-*};; esac
+            if [ -n "$id" ] && gh api "repos/$GH_REPO/contents/data/slides/$id.json?ref=${{ github.event.repository.default_branch }}" --silent 2>/dev/null \
+               && [ "$(gh pr view "$n" --json mergeable -q .mergeable)" = "CONFLICTING" ]; then
+              gh pr close "$n" --delete-branch --comment "同じスライドがすでに main にあり競合するため（重複）、閉じます。" || true
+              continue
+            fi
             failed=0
             if [ -n "$id" ]; then
               failed=$(gh pr list --state closed --search "Add slide for update $id in:title" --json mergedAt -q '[.[] | select(.mergedAt == null)] | length')
