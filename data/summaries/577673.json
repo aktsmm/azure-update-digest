@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "canonicalKey": "577673",
+  "sourceFingerprint": "cd6c7751257d03ed517eabc7442c30def76b69aa0eed2043124951efab7e572a",
+  "titleJa": "Azure Front Door Premium の Auth Policy による JWT 検証がパブリックプレビューに",
+  "summaryJa": "Azure Front Door Premium で、Auth Policy を使った JSON Web Token（JWT）検証がパブリックプレビューになりました。Microsoft Entra ID が発行したベアラートークンをエッジで検証でき、プロファイル、ドメイン、ルートに関連付けて issuer と audience を設定します。Block モードでは無効なトークンを HTTP 401 で拒否し、Log モードでは遮断せず評価できます。アプリ固有の認可はアプリ側の責任で、オリジンへの直接アクセスも制限してください。",
+  "generatedBy": "gh-aw:summarize",
+  "generatedAt": "2026-11-13T07:30:00Z"
+}
