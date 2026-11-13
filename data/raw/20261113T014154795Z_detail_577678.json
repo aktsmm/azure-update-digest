@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "577678"
+  },
+  "fetchedAt": "2026-11-13T01:41:54.795Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "577678",
+    "created": "2026-11-12T22:27:35.8851339Z",
+    "description": "Mutual TLS (mTLS), also known as client certificate\nauthentication, is now generally available on Azure Front Door Premium. Use\nX.509 client certificates to help protect sensitive applications and APIs in\nbusiness-to-business, Internet of Things, financial services, and enterprise\nscenarios. Choose from four modes: require and validate, require\nwithout validation, validate when presented, or pass through to the origin.\nThese modes let you control whether client certificates are mandatory and\nwhether Azure Front Door or your origin performs certificate validation. When\nforwarded to the origin, the client certificate is provided in the\nX-Azure-ClientCertificate request header. General availability also simplifies trusted CA configuration. You can\nupload only the trusted root CA certificate to Azure Key Vault and associate it\nwith your Front Door custom domain, without uploading intermediate CA\ncertificates. With this configuration, clients must present their client\ncertificate and all required intermediate certificates during the TLS\nhandshake. When edge validation is enabled, Azure Front Door builds and\nvalidates the certificate chain at request time against the configured trusted\nroot CA.Learn more.",
+    "generalAvailabilityDate": "2026-11",
+    "id": "577678",
+    "modified": "2026-11-12T22:27:35.8851339Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure Front Door"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Security"
+    ],
+    "title": "Generally Available: Azure Front Door mutual TLS authentication"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

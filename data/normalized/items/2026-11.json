@@ -78,6 +78,74 @@
       "availabilities": [
         {
           "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "574158",
+      "categories": [
+        "databases"
+      ],
+      "created": "2026-11-12T16:59:40.8211798Z",
+      "createdJst": "2026-11-13",
+      "description": "The public preview of Microsoft-managed performance\nmonitoring for Azure SQL Managed Instance is now available. Customers monitoring business-critical SQL Managed Instance\nworkloads often rely on custom scripts and disconnected monitoring tools. This\nrequires them to manage telemetry infrastructure and manually correlate\nperformance insights across their SQL Managed Instance estate. The new experience collects and stores performance telemetry\nand provides resource-level and at-scale dashboards to help identify\nperformance trends, anomalies, and resource bottlenecks. For deeper analysis\nand custom visualizations, you can securely query their monitoring data using\nKusto Query Language (KQL) through an RBAC-protected Azure Data Explorer proxy\nendpoint. Learn more:  Documentation Announcement\nblog ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "eeaf1982c1193167815869fde1ec1bbfd991dde4a6c5c0734ed730bbafa0315f",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-13T01:41:44.845Z",
+          "fingerprint": "9eed2c9c18cd1208fd26efc92a9f18709fc11c8553cf35b707f47f40c827be9f",
+          "modifiedAfter": "2026-11-12T16:59:40.8211798Z",
+          "modifiedBefore": null,
+          "rawRef": "20261113T014144845Z_list_sweep_o0.json#574158"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-13T01:42:01.770Z",
+          "fingerprint": "eeaf1982c1193167815869fde1ec1bbfd991dde4a6c5c0734ed730bbafa0315f",
+          "modifiedAfter": "2026-11-12T16:59:40.8211798Z",
+          "modifiedBefore": "2026-11-12T16:59:40.8211798Z",
+          "rawRef": "20261113T014201770Z_detail_574158.json#574158"
+        }
+      ],
+      "ids": [
+        "574158"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "574158",
+      "modified": "2026-11-12T16:59:40.8211798Z",
+      "modifiedJst": "2026-11-13",
+      "productCategories": [
+        "Databases"
+      ],
+      "products": [
+        "Azure SQL Managed Instance"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=574158",
+      "status": "In preview",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Public Preview: SQL performance monitoring for Azure SQL Managed Instance"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
           "ring": "General Availability",
           "year": 2026
         }
@@ -588,6 +656,159 @@
     {
       "availabilities": [
         {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "577673",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-11-12T22:36:37.3662486Z",
+      "createdJst": "2026-11-13",
+      "description": "JSON Web Token (JWT) validation through Azure Front Door Auth Policy is now in public preview on Azure Front Door Premium. Validate bearer tokens issued by Microsoft Entra ID at the edge before requests reach your APIs or web applications, helping you centralize authentication checks and reduce unnecessary traffic to your origins.Associate an Auth Policy with a profile, domain, or route, and configure the expected issuer and audience for token validation. Use Block mode to reject requests with missing or invalid tokens with an HTTP 401 Unauthorized response or evaluate requests without blocking them in Log mode. This preview focuses on validating existing bearer tokens; your application remains responsible for application-specific authorization, and origin access should be restricted to prevent clients from bypassing Azure Front Door.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "cd6c7751257d03ed517eabc7442c30def76b69aa0eed2043124951efab7e572a",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-13T01:41:44.845Z",
+          "fingerprint": "76c0756ebcdb711df64854487d2bbceb2d7e722f06d7ac6358e6e02331789613",
+          "modifiedAfter": "2026-11-12T22:36:37.3662486Z",
+          "modifiedBefore": null,
+          "rawRef": "20261113T014144845Z_list_sweep_o0.json#577673"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-13T01:41:49.422Z",
+          "fingerprint": "cd6c7751257d03ed517eabc7442c30def76b69aa0eed2043124951efab7e572a",
+          "modifiedAfter": "2026-11-12T22:36:37.3662486Z",
+          "modifiedBefore": "2026-11-12T22:36:37.3662486Z",
+          "rawRef": "20261113T014149422Z_detail_577673.json#577673"
+        }
+      ],
+      "ids": [
+        "577673"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "security-tag"
+        ],
+        "score": 5,
+        "topics": [
+          "security"
+        ]
+      },
+      "latestId": "577673",
+      "modified": "2026-11-12T22:36:37.3662486Z",
+      "modifiedJst": "2026-11-13",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Front Door"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577673",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Security"
+      ],
+      "title": "Public Preview: JWT validation with Azure Front Door Auth Policy "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "577678",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-11-12T22:27:35.8851339Z",
+      "createdJst": "2026-11-13",
+      "description": "Mutual TLS (mTLS), also known as client certificate\nauthentication, is now generally available on Azure Front Door Premium. Use\nX.509 client certificates to help protect sensitive applications and APIs in\nbusiness-to-business, Internet of Things, financial services, and enterprise\nscenarios. Choose from four modes: require and validate, require\nwithout validation, validate when presented, or pass through to the origin.\nThese modes let you control whether client certificates are mandatory and\nwhether Azure Front Door or your origin performs certificate validation. When\nforwarded to the origin, the client certificate is provided in the\nX-Azure-ClientCertificate request header. General availability also simplifies trusted CA configuration. You can\nupload only the trusted root CA certificate to Azure Key Vault and associate it\nwith your Front Door custom domain, without uploading intermediate CA\ncertificates. With this configuration, clients must present their client\ncertificate and all required intermediate certificates during the TLS\nhandshake. When edge validation is enabled, Azure Front Door builds and\nvalidates the certificate chain at request time against the configured trusted\nroot CA.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "f61549ae04d6264445ccf1fe94306103891727882d5ef5f5c123e13baa40604d",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-13T01:41:44.845Z",
+          "fingerprint": "9489eba9509e88f5d85efcca32576f19f27a6ee6cbb3ffeee17b98914bc94f64",
+          "modifiedAfter": "2026-11-12T22:27:35.8851339Z",
+          "modifiedBefore": null,
+          "rawRef": "20261113T014144845Z_list_sweep_o0.json#577678"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-13T01:41:54.795Z",
+          "fingerprint": "f61549ae04d6264445ccf1fe94306103891727882d5ef5f5c123e13baa40604d",
+          "modifiedAfter": "2026-11-12T22:27:35.8851339Z",
+          "modifiedBefore": "2026-11-12T22:27:35.8851339Z",
+          "rawRef": "20261113T014154795Z_detail_577678.json#577678"
+        }
+      ],
+      "ids": [
+        "577678"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "security"
+        ]
+      },
+      "latestId": "577678",
+      "modified": "2026-11-12T22:27:35.8851339Z",
+      "modifiedJst": "2026-11-13",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Front Door"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577678",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Security"
+      ],
+      "title": "Generally Available: Azure Front Door mutual TLS authentication"
+    },
+    {
+      "availabilities": [
+        {
           "month": "October",
           "ring": "Preview",
           "year": 2026
@@ -729,6 +950,81 @@
         "Feature"
       ],
       "title": "Generally Available: Restart databases in Azure SQL DB via the Azure portal "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "578207",
+      "categories": [
+        "compute",
+        "containers",
+        "ops-governance",
+        "devtools"
+      ],
+      "created": "2026-11-12T18:23:52.2198592Z",
+      "createdJst": "2026-11-13",
+      "description": "Auto scaling introduces a\nper-workspace capability in Azure Monitor Workspace (AMW) to automatically\nscale ingestion limits based on observed usage patterns. When enabled, the\nsystem dynamically adjusts ingestion limits (quota ceiling) to maintain healthy\nutilization and reduce the need for manual limit management. Limits are increased as your metrics volume\ngrows and can be decreased when usage stays low for a sustained period of time.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "a58b4176f052cf540361b78e6d5f6b63f69cfcc7372190e2af9904ba25283e3b",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-13T01:41:44.845Z",
+          "fingerprint": "5b60e74360990637c9f353d1dfd369cc17860f2f4c02bbf4c01e7fb5a6069d01",
+          "modifiedAfter": "2026-11-12T18:23:52.2198592Z",
+          "modifiedBefore": null,
+          "rawRef": "20261113T014144845Z_list_sweep_o0.json#578207"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-13T01:41:58.290Z",
+          "fingerprint": "a58b4176f052cf540361b78e6d5f6b63f69cfcc7372190e2af9904ba25283e3b",
+          "modifiedAfter": "2026-11-12T18:23:52.2198592Z",
+          "modifiedBefore": "2026-11-12T18:23:52.2198592Z",
+          "rawRef": "20261113T014158290Z_detail_578207.json#578207"
+        }
+      ],
+      "ids": [
+        "578207"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "578207",
+      "modified": "2026-11-12T18:23:52.2198592Z",
+      "modifiedJst": "2026-11-13",
+      "productCategories": [
+        "Compute",
+        "Containers",
+        "DevOps",
+        "Management and governance"
+      ],
+      "products": [
+        "Azure Kubernetes Service (AKS)",
+        "Azure Monitor"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=578207",
+      "status": "In preview",
+      "tags": [
+        "Feature"
+      ],
+      "title": "Public Preview: Auto scaling of ingestion limits in Azure Monitor workspace"
     },
     {
       "availabilities": [

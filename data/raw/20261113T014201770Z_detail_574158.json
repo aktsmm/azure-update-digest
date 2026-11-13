@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "574158"
+  },
+  "fetchedAt": "2026-11-13T01:42:01.770Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "574158",
+    "created": "2026-11-12T16:59:40.8211798Z",
+    "description": "The public preview of Microsoft-managed performance\nmonitoring for Azure SQL Managed Instance is now available. Customers monitoring business-critical SQL Managed Instance\nworkloads often rely on custom scripts and disconnected monitoring tools. This\nrequires them to manage telemetry infrastructure and manually correlate\nperformance insights across their SQL Managed Instance estate. The new experience collects and stores performance telemetry\nand provides resource-level and at-scale dashboards to help identify\nperformance trends, anomalies, and resource bottlenecks. For deeper analysis\nand custom visualizations, you can securely query their monitoring data using\nKusto Query Language (KQL) through an RBAC-protected Azure Data Explorer proxy\nendpoint. Learn more:  Documentation Announcement\nblog ",
+    "id": "574158",
+    "modified": "2026-11-12T16:59:40.8211798Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure SQL Managed Instance"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: SQL performance monitoring for Azure SQL Managed Instance"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "578207"
+  },
+  "fetchedAt": "2026-11-13T01:41:58.290Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578207",
+    "created": "2026-11-12T18:23:52.2198592Z",
+    "description": "Auto scaling introduces a\nper-workspace capability in Azure Monitor Workspace (AMW) to automatically\nscale ingestion limits based on observed usage patterns. When enabled, the\nsystem dynamically adjusts ingestion limits (quota ceiling) to maintain healthy\nutilization and reduce the need for manual limit management. Limits are increased as your metrics volume\ngrows and can be decreased when usage stays low for a sustained period of time.Learn more.",
+    "id": "578207",
+    "modified": "2026-11-12T18:23:52.2198592Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "DevOps",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)",
+      "Azure Monitor"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Feature"
+    ],
+    "title": "Public Preview: Auto scaling of ingestion limits in Azure Monitor workspace"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
