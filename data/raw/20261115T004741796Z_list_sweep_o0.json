@@ -1,0 +1,45 @@
+{
+  "args": {
+    "filter": "modified ge 2026-11-13T01:18:02Z and modified lt 2026-11-15T00:47:41Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-11-15T00:47:41.796Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Retirement",
+            "year": 2029
+          }
+        ],
+        "baseId": "578818",
+        "created": "2026-11-13T19:54:45.4590064Z",
+        "description": "Azure Data Share will retire on November 12, 2029. Before that date, transition your data sharing workloads to Microsoft Fabric, which offers External data sharing, Cross tenant delegated shortcuts an...",
+        "id": "578818",
+        "modified": "2026-11-13T19:54:45.4590064Z",
+        "productCategories": [
+          "Analytics",
+          "Storage"
+        ],
+        "products": [
+          "Azure Data Share"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Azure Data Share will be retired on November 12, 2029 "
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 1,
+    "totalCount": 1
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}
