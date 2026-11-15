@@ -1,0 +1,118 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["578207"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-15T22:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "578207",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Monitor ワークスペースの取り込み上限を自動スケール",
+        "subtitleJa": "使用状況に応じて上限を自動で増減し、手動管理を削減（パブリック プレビュー）",
+        "en": "Public Preview: Auto scaling of ingestion limits in Azure Monitor workspace"
+      },
+      "meta": {
+        "publishedJst": "2026-11-13",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Kubernetes Service (AKS)", "Azure Monitor"],
+        "categories": ["compute", "containers", "ops-governance", "devtools"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Prometheus メトリックを Azure Monitor ワークスペースへ取り込む**運用担当者（AKS 利用者を含む）**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "取り込み上限が使用量に追従し、上限の手動管理やスロットリングの懸念を減らせる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits", "locator": "Autoscale ingestion limits in Azure Monitor workspace (Preview)", "retrievedAt": "2026-11-15T22:40:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "ワークスペース単位のオプトイン設定。上限管理に手間がある場合に検証", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits", "locator": "Turn on autoscale for your workspace", "retrievedAt": "2026-11-15T22:40:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "既定の上限は 100 万アクティブ時系列・1 分あたり 100 万イベント。引き上げはサポート チケットなどで依頼",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits", "locator": "Ingestion limits", "retrievedAt": "2026-11-15T22:40:00Z" }]
+        },
+        "after": {
+          "text": "有効化すると、使用量の増加で上限が上がり、低使用が続くと下がる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits", "locator": "Autoscale ingestion limits in Azure Monitor workspace (Preview)", "retrievedAt": "2026-11-15T22:40:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ワークスペース単位で、取り込み上限（クォータ上限）を使用状況に応じて自動調整", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "使用量が上限に近づくと引き上げ、低使用が続くと未使用分を回収（取り込みへの影響なし）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits", "locator": "Turn on autoscale for your workspace", "retrievedAt": "2026-11-15T22:40:00Z" }] },
+            { "text": "上限の変更はワークスペースのアクティビティ ログに記録される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits", "locator": "Monitor scale change in the Activity Log", "retrievedAt": "2026-11-15T22:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "オプトイン。ARM API で properties.limits.enableAutoScale=true を設定して有効化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits", "locator": "Turn on autoscale for your workspace", "retrievedAt": "2026-11-15T22:40:00Z" }] },
+            { "text": "課金は変わらず、実際の取り込み量に基づく。無効化（false）すると上限は固定に戻る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits", "locator": "Note / Turn on autoscale", "retrievedAt": "2026-11-15T22:40:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "スロットリングや上限引き上げ依頼が発生していないか確認し、検証用ワークスペースで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "75% / 95% 超過の推奨アラート規則で、使用率を併せて監視できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits", "locator": "Alerts", "retrievedAt": "2026-11-15T22:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-monitor-workspace", "term": "Azure Monitor ワークスペース", "type": "product", "oneLine": { "text": "Prometheus メトリックなどを保存する、Azure Monitor のメトリック用データ ストア。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-overview", "locator": "冒頭", "retrievedAt": "2026-11-15T22:40:00Z" }] } },
+        { "termKey": "ingestion-limit", "term": "取り込み上限（クォータ上限）", "type": "term", "oneLine": { "text": "ワークスペースが取り込めるメトリック量の上限。超えるとスロットリングが発生しうる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits", "locator": "冒頭", "retrievedAt": "2026-11-15T22:40:00Z" }] } },
+        { "termKey": "throttling", "term": "スロットリング", "type": "term", "oneLine": { "text": "上限に達したとき、メトリックの取り込みが制限（ドロップ）されること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits", "locator": "Why autoscale?", "retrievedAt": "2026-11-15T22:40:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-15T22:40:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Monitor ワークスペースは Japan East・Japan West で作成可能（親サービスの提供状況）",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-overview", "locator": "Regional availability", "retrievedAt": "2026-11-15T22:40:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=578207",
+        "learn": [
+          { "title": "Monitor Azure Monitor workspace metrics ingestion", "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits", "locale": "en-us" },
+          { "title": "Azure Monitor workspace", "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-overview", "locale": "en-us" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自動スケールを有効にすると料金は変わりますか？",
+            "a": "課金は変わりません。調整されるのは取り込み上限のみで、課金は実際の取り込み量に基づきます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits" }]
+          },
+          {
+            "q": "どうやって有効化・無効化しますか？",
+            "a": "ARM API でワークスペースの properties.limits.enableAutoScale を true に設定します。false にすると上限は固定に戻ります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-monitor-ingest-limits" }]
+          },
+          {
+            "q": "日本リージョンでワークスペースを作成できますか？",
+            "a": "Azure Monitor ワークスペースは Japan East と Japan West で作成できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-monitor/metrics/azure-monitor-workspace-overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
