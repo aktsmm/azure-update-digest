@@ -1,0 +1,97 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577673"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-15T22:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "577673",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Front Door Premium で JWT 検証（Auth Policy）がプレビューに",
+        "subtitleJa": "Microsoft Entra ID のベアラートークンをエッジで検証し、オリジンへの不要な通信を減らせます",
+        "en": "Public Preview: JWT validation with Azure Front Door Auth Policy"
+      },
+      "meta": {
+        "publishedJst": "2026-11-13",
+        "modifiedJst": "2026-11-13",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Front Door"],
+        "categories": ["networking", "security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "API や Web アプリの前段に **Front Door Premium** を使っている方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "認証チェックを入口に集約し、オリジンへの不要な通信を減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。本番環境での利用は推奨されていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy", "locator": "Important", "retrievedAt": "2026-11-15T22:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "Entra ID 発行のトークンを、プロファイル・ドメイン・ルート単位のポリシーでエッジ検証できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Entra ID 発行の JWT の署名・有効期限・issuer・audience を検証", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy", "locator": "How token validation works", "retrievedAt": "2026-11-15T22:30:00Z" }] },
+            { "text": "Block は無効・欠落トークンを HTTP 401 で拒否、Log は記録して通過", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy", "locator": "Policy actions", "retrievedAt": "2026-11-15T22:30:00Z" }] },
+            { "text": "関連付け先はプロファイル・ドメイン・ルート（優先は ルート > ドメイン > プロファイル）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy", "locator": "Policy scope and precedence", "retrievedAt": "2026-11-15T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象は Front Door Premium。Microsoft Entra ID 発行のトークンのみ対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy", "locator": "Limitations", "retrievedAt": "2026-11-15T22:30:00Z" }] },
+            { "text": "クラウド間トークンは非対応。パブリッククラウドの issuer ホストは 2 種類のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy", "locator": "Limitations", "retrievedAt": "2026-11-15T22:30:00Z" }] },
+            { "text": "アプリ固有の認可はアプリ側の責任。オリジンへの直接アクセスも制限が必要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Log モードなら遮断せずに検証結果を記録でき、適用前の評価に使える", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy", "locator": "冒頭", "retrievedAt": "2026-11-15T22:30:00Z" }] },
+            { "text": "Entra ID アプリ登録の issuer / audience を整理し、検証環境で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-front-door", "term": "Azure Front Door", "type": "product", "oneLine": { "text": "Web アプリの入口となる、グローバルでスケーラブルなサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/security/fundamentals/network-overview#azure-front-door", "locator": "Azure Front Door", "retrievedAt": "2026-11-15T22:30:00Z" }] } },
+        { "termKey": "jwt", "term": "JWT", "type": "term", "oneLine": { "text": "クライアントが送るトークンの形式で、署名・有効期限・issuer・audience を検証できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy", "locator": "How token validation works", "retrievedAt": "2026-11-15T22:30:00Z" }] } },
+        { "termKey": "auth-policy", "term": "Auth Policy", "type": "feature", "oneLine": { "text": "JWT をエッジで検証し、要件を満たさない要求に設定した動作を適用するポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy", "locator": "冒頭", "retrievedAt": "2026-11-15T22:30:00Z" }] } },
+        { "termKey": "entra-id", "term": "Microsoft Entra ID", "type": "product", "oneLine": { "text": "この機能が検証対象とするトークンの発行元（ID プロバイダー）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy", "locator": "Limitations", "retrievedAt": "2026-11-15T22:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-15T22:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "Front Door は特定のリージョンにデプロイしないグローバル サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "Azure Front Door (global)", "retrievedAt": "2026-11-15T22:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577673",
+        "learn": [{ "title": "Validate JSON Web Tokens with an authentication policy (preview)", "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy", "locale": "en-us" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "どの Front Door の SKU で使えますか", "a": "Azure Front Door Premium が対象です。プレビュー中の機能で、本番環境での利用は推奨されていません。", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy" }] },
+          { "q": "どのトークンを検証できますか", "a": "Microsoft Entra ID 発行のトークンのみ対応です。クラウド間トークンは非対応です。", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy" }] },
+          { "q": "いきなりブロックしても大丈夫ですか", "a": "Log アクションなら要求を遮断せず検証結果だけ記録できるため、適用前の評価に使えます。", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/authentication-policy" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
