@@ -1,0 +1,99 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["574158"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-15T22:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "574158",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "SQL Managed Instance に Microsoft 管理のパフォーマンス監視",
+        "subtitleJa": "テレメトリを自動収集し、KQL でクエリ可能（パブリック プレビュー）",
+        "en": "Public Preview: SQL performance monitoring for Azure SQL Managed Instance"
+      },
+      "meta": {
+        "publishedJst": "2026-11-13",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure SQL Managed Instance"],
+        "categories": ["databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "本番の **Azure SQL Managed Instance** を運用・監視している DBA／運用担当", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "独自スクリプトや別監視ツールなしで、性能の傾向・異常・ボトルネックを把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。有効化の追加費用はなし。プレビュー中は仕様が変わる可能性あり", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locator": "Important", "retrievedAt": "2026-11-15T22:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "独自スクリプトや分断された監視ツールに頼り、テレメトリ基盤の管理と手動での相関分析が必要", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "Microsoft 管理でテレメトリを収集・保存し、リソース単位と大規模向けのダッシュボードで確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "DMV のテレメトリを収集し、Microsoft 管理の Azure Data Explorer クラスターに保存", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locator": "冒頭", "retrievedAt": "2026-11-15T22:50:00Z" }] },
+            { "text": "KQL でクエリ可能。Reader 以上の Azure RBAC が必要で、見えるリソースの行だけ返る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locator": "Prerequisites", "retrievedAt": "2026-11-15T22:50:00Z" }] },
+            { "text": "有効化は master で T-SQL を実行（インスタンス全体に適用）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/add-sql", "locator": "Enable performance monitoring for Azure SQL Managed Instance", "retrievedAt": "2026-11-15T22:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "データベース ハブの「Performance」ページは MI 未対応。MI は KQL で参照", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/add-sql", "locator": "冒頭", "retrievedAt": "2026-11-15T22:50:00Z" }] },
+            { "text": "Azure 商用クラウドのみ。政府・ソブリン・エアギャップは対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locator": "Prerequisites", "retrievedAt": "2026-11-15T22:50:00Z" }] },
+            { "text": "保持期間は最大 7 日。Microsoft.Sql リソース プロバイダーの登録が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locator": "Retention", "retrievedAt": "2026-11-15T22:50:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "まず検証用インスタンスで有効化し、既存の監視手段で足りない観点を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "kql", "term": "KQL", "type": "term", "oneLine": { "text": "Azure Data Explorer などでデータを問い合わせるための Kusto クエリ言語。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locator": "冒頭", "retrievedAt": "2026-11-15T22:50:00Z" }] } },
+        { "termKey": "adx", "term": "Azure Data Explorer", "type": "product", "oneLine": { "text": "KQL でテレメトリなどを分析できるデータ分析サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locator": "Connect to the telemetry", "retrievedAt": "2026-11-15T22:50:00Z" }] } },
+        { "termKey": "dmv", "term": "DMV（動的管理ビュー）", "type": "term", "oneLine": { "text": "SQL リソースの状態や性能情報を参照できるビュー。監視テレメトリの収集元。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locator": "冒頭", "retrievedAt": "2026-11-15T22:50:00Z" }] } },
+        { "termKey": "rbac", "term": "Azure RBAC", "type": "term", "oneLine": { "text": "ロールに基づいて、サブスクリプション内のリソースへのアクセスを制御する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locator": "Prerequisites", "retrievedAt": "2026-11-15T22:50:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-15T22:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "対応リージョン一覧に Japan East あり（Japan West は一覧になし）",
+        "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/add-sql", "locator": "Regional availability and data handling", "retrievedAt": "2026-11-15T22:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=574158",
+        "learn": [
+          { "title": "クエリ パフォーマンス モニタリング テレメトリ（プレビュー）", "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locale": "ja-jp" },
+          { "title": "Enable performance monitoring for Microsoft SQL (preview)", "url": "https://learn.microsoft.com/fabric/database/hub/add-sql", "locale": "en-us" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "追加費用はかかりますか？", "a": "パフォーマンス監視を有効にしても追加コストは発生しないと記載されています。", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/add-sql", "locator": "冒頭", "retrievedAt": "2026-11-15T22:50:00Z" }] },
+          { "q": "日本リージョンで使えますか？", "a": "対応リージョン一覧に Japan East が含まれます。Japan West は一覧にありません。", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/add-sql", "locator": "Regional availability and data handling", "retrievedAt": "2026-11-15T22:50:00Z" }] },
+          { "q": "KQL でクエリするには何が必要ですか？", "a": "対象サブスクリプションの Reader 以上のロール、Microsoft.Sql の登録、Entra ID アカウントが必要です。", "evidence": [{ "url": "https://learn.microsoft.com/fabric/database/hub/microsoft-sql-query-performance-monitoring-telemetry", "locator": "Prerequisites", "retrievedAt": "2026-11-15T22:50:00Z" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
