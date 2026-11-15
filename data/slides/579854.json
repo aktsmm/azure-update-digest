@@ -1,0 +1,140 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579854"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-15T22:55:00Z"
+  },
+  "slides": [
+    {
+      "key": "579854",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Arc 対応 Windows Server の Azure File Sync 導入をポータルでガイド",
+        "subtitleJa": "エージェント導入・サーバー登録・同期構成を 1 つの流れで（パブリック プレビュー）",
+        "en": "Public Preview: Modernize Arc-enabled Windows Servers with Azure File Sync"
+      },
+      "meta": {
+        "publishedJst": "2026-11-10",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure File Sync", "Azure Arc"],
+        "categories": ["other"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Azure Arc 対応の **Windows Server** で Azure File Sync を導入したい方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "導入手順をポータルのガイド付き画面で一括して進められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Arc 対応サーバーで導入予定なら検証環境で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "エージェントのインストール、サーバー登録、Azure ファイル共有との同期構成を、Azure portal の 1 つのワークフローで実施できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Arc 対応サーバーの「Azure File Sync (Preview)」ページに 3 つのセクション: エージェントのインストール / サーバーの登録 / 構成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/file-sync/file-sync-deployment-guide", "locator": "Arc 対応サーバー上の Azure File Sync ページからインストールして登録する（プレビュー）", "retrievedAt": "2026-11-15T22:55:00Z" }]
+            },
+            {
+              "text": "構成では同期グループ、エンドポイント、クラウド階層化の設定を続けて行う",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/file-sync/file-sync-deployment-guide", "locator": "手順 5", "retrievedAt": "2026-11-15T22:55:00Z" }]
+            },
+            { "text": "クラウド階層化で、よく使うファイルをローカルに残し、他を Azure へ配置", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "エージェント拡張は Windows のみ対応。Linux の Arc 対応サーバーは非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/file-sync/file-sync-deployment-guide", "locator": "Azure Arc 対応サーバーでのインストール", "retrievedAt": "2026-11-15T22:55:00Z" }]
+            },
+            {
+              "text": "サーバーは 1 つのストレージ同期サービスにのみ登録できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/file-sync/file-sync-deployment-guide", "locator": "Windows Server をストレージ同期サービスに登録する", "retrievedAt": "2026-11-15T22:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象サーバーが Arc 対応済みの Windows Server か確認し、検証環境で導入手順を試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-file-sync", "term": "Azure File Sync", "type": "product",
+          "oneLine": { "text": "Windows Server を Azure ファイル共有の高速キャッシュに変え、ファイル共有を Azure Files に一元化する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/file-sync/file-sync-deployment-guide", "locator": "冒頭", "retrievedAt": "2026-11-15T22:55:00Z" }] }
+        },
+        {
+          "termKey": "azure-arc-servers", "term": "Azure Arc 対応サーバー", "type": "product",
+          "oneLine": { "text": "Azure Arc 経由で Azure に接続され、Azure portal から管理できる Windows / Linux サーバー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-arc/servers/windows-server-management-overview", "locator": "冒頭", "retrievedAt": "2026-11-15T22:55:00Z" }] }
+        },
+        {
+          "termKey": "storage-sync-service", "term": "ストレージ同期サービス", "type": "feature",
+          "oneLine": { "text": "サーバーを登録して信頼関係を結び、Azure ファイル共有との同期を管理する Azure File Sync のリソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/file-sync/file-sync-deployment-guide", "locator": "Windows Server をストレージ同期サービスに登録する", "retrievedAt": "2026-11-15T22:55:00Z" }] }
+        },
+        {
+          "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label",
+          "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-15T22:55:00Z" }] }
+        }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure File Sync の Japan East / Japan West エンドポイントが公開されている（プレビュー機能単体のリージョン記載はなし）",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/azure/storage/file-sync/file-sync-firewall-and-proxy", "locator": "Azure File Sync firewall settings", "retrievedAt": "2026-11-15T22:55:00Z" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どのサーバーが対象ですか？",
+            "a": "Azure Arc 対応の Windows サーバーです。エージェント拡張は Windows のみ対応で、Linux の Arc 対応サーバーは対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/file-sync/file-sync-deployment-guide" }]
+          },
+          {
+            "q": "費用面の優遇はありますか？",
+            "a": "Arc 対応 Windows サーバーには Azure File Sync のサーバー単価割引があります。適用はエージェント V22 以降で、特典の登録が前提です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-arc/servers/windows-server-management-overview" }]
+          },
+          {
+            "q": "ポータルでの手順の流れは？",
+            "a": "Arc のマシンから Azure File Sync (Preview) を開き、エージェントのインストール、サーバー登録、構成の順に進めます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/file-sync/file-sync-deployment-guide" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579854",
+        "learn": [
+          { "title": "Azure File Sync のデプロイ", "url": "https://learn.microsoft.com/ja-jp/azure/storage/file-sync/file-sync-deployment-guide", "locale": "ja-jp" },
+          { "title": "Azure File Sync のデプロイの計画", "url": "https://learn.microsoft.com/ja-jp/azure/storage/file-sync/file-sync-planning", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
