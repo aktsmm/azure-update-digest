@@ -1,0 +1,111 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["578818"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-15T22:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "578818",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Azure Data Share が 2029年11月12日に廃止",
+        "subtitleJa": "一対一の代替はなく自動移行もない。Fabric などへ計画的に移行",
+        "en": "Retirement: Azure Data Share will be retired on November 12, 2029"
+      },
+      "meta": {
+        "publishedJst": "2026-11-14",
+        "availability": [{ "rawRing": "Retirement", "year": 2029, "month": "November" }],
+        "status": null,
+        "products": ["Azure Data Share"],
+        "categories": ["storage", "databases"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Azure Data Share で共有を提供・受信・自動化している方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "新規アカウントは作成できず、既存機能は廃止日までメンテナンス モードになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "重要", "retrievedAt": "2026-11-15T22:30:00Z" }] },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "共有を棚卸しし、シナリオごとに移行先を選んで検証する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "移行計画の考慮事項", "retrievedAt": "2026-11-15T22:30:00Z" }] },
+        "deadline": { "date": "2029-11-12", "precision": "day" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-11-14", "precision": "day" } },
+        { "label": "廃止", "when": { "date": "2029-11-12", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "新規アカウントは作成不可。既存機能は廃止日までメンテナンス モード", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "重要", "retrievedAt": "2026-11-15T22:30:00Z" }] },
+            { "text": "Fabric の共有機能や Data Factory は一対一の代替ではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "シナリオごとの移行オプション", "retrievedAt": "2026-11-15T22:30:00Z" }] },
+            { "text": "自動移行の経路はなく、利用者が各共有を移行・検証する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-15T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Fabric の外部データ共有（OneLake データをコピーなしで共有）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/governance/external-data-sharing-overview", "locator": "冒頭", "retrievedAt": "2026-11-15T22:30:00Z" }] },
+            { "text": "Data Factory / Fabric Data Factory のパイプラインでコピー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "シナリオごとの移行オプション", "retrievedAt": "2026-11-15T22:30:00Z" }] },
+            { "text": "Azure Data Explorer はフォロワー データベースなど個別の手段", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "シナリオごとの移行オプション", "retrievedAt": "2026-11-15T22:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "アカウント、共有、スケジュール、API 統合などを一覧化する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "移行計画の考慮事項", "retrievedAt": "2026-11-15T22:30:00Z" }] },
+            { "text": "代替の検証が済むまで、本番の Data Share は削除・無効化しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "移行計画の考慮事項", "retrievedAt": "2026-11-15T22:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-data-share", "term": "Azure Data Share", "type": "product", "oneLine": { "text": "データの提供者と利用者の間で、データを共有するための Azure サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "冒頭", "retrievedAt": "2026-11-15T22:30:00Z" }] } },
+        { "termKey": "microsoft-fabric", "term": "Microsoft Fabric", "type": "product", "oneLine": { "text": "データ共有の移行先として案内されている、分析向けの統合プラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "冒頭", "retrievedAt": "2026-11-15T22:30:00Z" }] } },
+        { "termKey": "fabric-external-data-sharing", "term": "外部データ共有", "type": "feature", "oneLine": { "text": "OneLake のデータを、コピーせずに別の Fabric テナントへ読み取り専用で共有する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/governance/external-data-sharing-overview", "locator": "冒頭", "retrievedAt": "2026-11-15T22:30:00Z" }] } },
+        { "termKey": "onelake", "term": "OneLake", "type": "term", "oneLine": { "text": "Fabric のデータを保存する場所。外部データ共有の共有元になる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/governance/external-data-sharing-overview", "locator": "冒頭", "retrievedAt": "2026-11-15T22:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "サービス全体の廃止（リージョンに依存しない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "冒頭", "retrievedAt": "2026-11-15T22:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=578818",
+        "learn": [
+          { "title": "Azure Data Share の廃止", "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locale": "ja-jp" },
+          { "title": "Microsoft Fabric での外部データ共有", "url": "https://learn.microsoft.com/ja-jp/fabric/governance/external-data-sharing-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "Fabric の外部データ共有は一対一の代替ですか？",
+            "a": "いいえ。一対一の代替ではなく、データ配信や権限、ライフサイクル管理の違いを切り替え前に評価する必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement" }]
+          },
+          {
+            "q": "共有やデータは自動で移行されますか？",
+            "a": "自動移行は確立されていません。各関係を棚卸しし、移行経路を選んでエンドツーエンドで検証します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement" }]
+          },
+          {
+            "q": "廃止日までサポートは受けられますか？",
+            "a": "2029年11月12日までは、サポート対象のインシデントに既存の Azure サポート チャネルを利用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
