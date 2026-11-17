@@ -37,6 +37,10 @@
         "required": "optional",
         "summary": { "text": "プレビューは運用環境向けではない。検証環境で評価する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "Important", "retrievedAt": "2026-10-15T18:11:00Z" }] }
       },
+      "beforeAfter": {
+        "before": { "text": "ローカルのコントロール プレーンを持つ完全な Kubernetes クラスターを自分で構築・運用する方式", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "コントロール プレーンは Azure に置き、エッジや自社インフラではワーカーノードだけを動かせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
       "panels": [
         {
           "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
@@ -94,6 +98,25 @@
         "learn": [
           { "title": "外部コンピューティングを AKS 用のフレックス ノードとしてアタッチする (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locale": "ja-jp" },
           { "title": "AKS のフレックス ノードを計画する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/aks/plan-flex-nodes-deployment", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "運用環境で使えますか？",
+            "a": "プレビューは SLA の対象外で、運用環境での使用を目的としていません。検証環境での評価が前提です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "Important", "retrievedAt": "2026-11-17T19:30:00Z" }]
+          },
+          {
+            "q": "どんなホストを接続できますか？",
+            "a": "利用者が管理する仮想マシンまたはベア メタル ホストで、amd64 と arm64 の両方をサポートします。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/flex-nodes-for-aks-overview", "locator": "ラボ環境とテスト環境", "retrievedAt": "2026-11-17T19:30:00Z" }]
+          },
+          {
+            "q": "利用に必要な AKS 側の条件は？",
+            "a": "クラスターのリージョンで AKS リリース v20260904 以降が必要です。aks-preview 拡張機能 22.0.0b8 以降も使います。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/plan-flex-nodes-deployment", "locator": "コンポーネントのバージョン値", "retrievedAt": "2026-11-17T19:30:00Z" }]
+          }
         ]
       },
       "render": { "continuationRequired": false }
