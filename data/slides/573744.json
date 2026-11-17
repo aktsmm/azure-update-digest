@@ -37,6 +37,18 @@
         "required": "optional",
         "summary": { "text": "Ray 基盤が必要な場合に、対応リージョンで導入を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "使用状況は Azure に報告され、Anyscale クラウドを含む Azure サブスクリプションに請求される",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/anyscale-on-azure/overview", "locator": "Limitations", "retrievedAt": "2026-11-17T17:40:00Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Ray の分散 Python ワークロードを、AKS 上の Azure ネイティブ サービスとして一般提供の状態で利用できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
