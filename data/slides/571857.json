@@ -36,6 +36,31 @@
         "required": "optional",
         "summary": { "text": "評価向け。既存・新規どちらのデータベースでも有効化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "一時停止中はコンピューティング課金が止まり、ストレージ関連の料金のみ継続する",
+        "origin": "mrc", "assertion": "fact", "verification": "source-only",
+        "evidence": [{ "url": "https://azure.microsoft.com/updates?id=571857", "locator": "本文", "retrievedAt": "2026-11-17T18:30:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自動一時停止はどんな条件で始まりますか？",
+            "a": "遅延期間中、セッション数が 0 で、ユーザー ワークロードの CPU も 0 の場合に始まります。Hyperscale の最小遅延は 60 分です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-auto-pause-resume?view=azuresql" }]
+          },
+          {
+            "q": "一時停止中のデータベースに接続するとどうなりますか？",
+            "a": "最初の接続で再開が始まり、エラー 40613 が返ります。再開後に再試行すれば接続でき、通常 1 分以内に再開します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-auto-pause-resume?view=azuresql" }]
+          },
+          {
+            "q": "自動一時停止が使えない構成はありますか？",
+            "a": "ジオレプリケーション、長期バックアップ保持、DNS エイリアスの利用中は自動一時停止されません。名前付きレプリカはプレビューでは未対応です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/serverless-tier-auto-pause-resume?view=azuresql" }]
+          }
+        ]
+      },
       "panels": [
         {
           "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
