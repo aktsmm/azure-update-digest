@@ -36,6 +36,12 @@
         "required": "no",
         "summary": { "text": "対象テーブルが既に Basic / Auxiliary なら追加設定は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
       },
+      "beforeAfter": {
+        "after": {
+          "text": "Basic / Auxiliary プランに移した大量ログも、エージェントの対話型分析と詳細調査の対象になる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
