@@ -41,6 +41,12 @@
           "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "制限事項", "retrievedAt": "2026-10-15T17:45:00Z" }]
         }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "課金対象はプロビジョニング済みコンピューティング（コア時間）、使用ストレージ（GB/月）、バックアップ ストレージ",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "価格", "retrievedAt": "2026-11-17T19:15:00Z" }]
+      },
       "panels": [
         {
           "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
@@ -125,11 +131,30 @@
         }
       ],
       "region": {
-        "stamp": "japan-none",
+        "stamp": "japan-east",
         "scope": "feature",
         "basis": "confirmed",
-        "note": "提供リージョンに日本は含まれない（例: 韓国中部、オーストラリア東部）",
-        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "Azure リージョン", "retrievedAt": "2026-10-15T17:45:00Z" }]
+        "note": "提供リージョンに日本東部が含まれる（日本西部は一覧にない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "Azure リージョン", "retrievedAt": "2026-11-17T19:15:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "提供リージョンに日本東部が含まれます。日本西部は一覧にありません。一部のリージョンでは新規デプロイに制限がある場合があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "プロビジョニング済みコンピューティング、使用したデータベース ストレージ、バックアップ ストレージが課金対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview" }]
+          },
+          {
+            "q": "本番利用の前に確認すべき制限はありますか？",
+            "a": "バックアップ保持は 7 日間、リージョン間の読み取りレプリカや仮想ネットワーク統合は未対応で、暗号化はサービス マネージド キーのみです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview" }]
+          }
+        ]
       },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=573048",
