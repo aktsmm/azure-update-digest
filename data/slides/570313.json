@@ -55,7 +55,7 @@
           "items": [
             { "text": "Azure Key Vault Secret Store Extension（同等機能を提供）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
             { "text": "オフライン アクセス用にシークレットを Key Vault からクラスターへ自動同期する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension", "locator": "冒頭", "retrievedAt": "2026-10-14T15:50:00Z" }] },
-            { "text": "ワークロード ID フェデレーションに対応し、長期資格情報の保存が不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "ワークロード ID フェデレーションに対応し、長期資格情報の保存が不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension-migration", "locator": "冒頭", "retrievedAt": "2026-11-17T16:10:00Z" }] }
           ]
         },
         {
@@ -72,11 +72,19 @@
         { "termKey": "workload-identity-federation", "term": "ワークロード ID フェデレーション", "type": "term", "oneLine": { "text": "Secret Store Extension が Key Vault のシークレットへアクセスするために使う機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension", "locator": "ワークロード ID フェデレーション", "retrievedAt": "2026-10-14T15:50:00Z" }] } },
         { "termKey": "label-retirement", "term": "廃止", "type": "label", "oneLine": { "text": "廃止後は新機能・バグ修正・セキュリティ更新・技術サポートが提供されなくなること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
       ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "拡張機能の廃止は提供全体に適用される",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension-migration", "locator": "冒頭", "retrievedAt": "2026-11-17T16:10:00Z" }]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=570313",
         "learn": [
           { "title": "シークレット ストア拡張機能でオフライン アクセス用のシークレットをフェッチする", "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension", "locale": "ja-jp" },
-          { "title": "Key Vault シークレット プロバイダー拡張機能でシークレットをフェッチする", "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider", "locale": "ja-jp" }
+          { "title": "Key Vault シークレット プロバイダー拡張機能でシークレットをフェッチする", "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider", "locale": "ja-jp" },
+          { "title": "シークレット プロバイダー拡張機能からシークレット ストア拡張機能に移行する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension-migration", "locale": "ja-jp" }
         ]
       },
       "speakerNotes": {
@@ -95,6 +103,11 @@
             "q": "移行先を使うための前提条件はありますか？",
             "a": "Arc 対応クラスターで Kubernetes バージョン 1.27 以降が実行されている必要があります。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension", "locator": "前提条件", "retrievedAt": "2026-10-16T07:15:00Z" }]
+          },
+          {
+            "q": "移行時に注意することはありますか？",
+            "a": "認証方法とアプリでのシークレットの使い方が変わります。運用前に非運用クラスターで試行してください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/kubernetes/secret-store-extension-migration", "locator": "冒頭", "retrievedAt": "2026-11-17T16:10:00Z" }]
           }
         ]
       },
