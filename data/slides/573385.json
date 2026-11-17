@@ -72,6 +72,25 @@
           { "title": "クイックスタート: Azure Functions のホスト スキル キャンバスでホステッド スキルをビルド・テストする", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-hosted-skills-canvas", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "今すぐ使えますか？ 前提条件は？",
+            "a": "Azure Functions の hosted skills キャンバスはプレビューです。スタンドアロンの GitHub Copilot アプリ、Core Tools v4、Node.js 22 以降などが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-hosted-skills-canvas", "locator": "Prerequisites", "retrievedAt": "2026-11-17T18:00:00Z" }]
+          },
+          {
+            "q": "Copilot Business / Enterprise でも使えますか？",
+            "a": "管理者が GitHub Copilot アプリのポリシーを有効にする必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-hosted-skills-canvas", "locator": "Prerequisites", "retrievedAt": "2026-11-17T18:00:00Z" }]
+          },
+          {
+            "q": "作成したスキルを Azure にデプロイできますか？",
+            "a": "キャンバスから Azure Developer CLI でデプロイできます。Azure サブスクリプションと、リソース作成・ロール割り当ての権限が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-hosted-skills-canvas", "locator": "Azure に配置する", "retrievedAt": "2026-11-17T18:00:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
