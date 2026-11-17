@@ -36,6 +36,12 @@
         "required": "optional",
         "summary": { "text": "大規模な VNet 間接続が必要な場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "料金は、構成がデプロイされた仮想ネットワークの数に基づく。ピアリング料金は接続構成が管理する VNet のトラフィック量にも適用",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/faq", "locator": "料金に関する質問", "retrievedAt": "2026-11-17T19:55:00Z" }]
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
@@ -57,7 +63,12 @@
               "origin": "learn", "assertion": "fact", "verification": "verified",
               "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locator": "接続性の構成 / メッシュ型トポロジ", "retrievedAt": "2026-10-18T20:05:00Z" }]
             },
-            { "text": "より高いスケールの IP 接続は、リクエストにより利用可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+            { "text": "より高いスケールの IP 接続は、リクエストにより利用可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "AllowHighScaleConnectedGroup 機能の登録と有効化フォームの提出が必要", 
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locator": "接続されたグループ内で最大3,000の仮想ネットワークを有効にします", "retrievedAt": "2026-11-17T19:55:00Z" }]
+            }
           ]
         },
         {
@@ -106,6 +117,25 @@
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=571572",
         "learn": [{ "title": "Azure Virtual Network Manager の接続構成", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "費用はかかりますか？",
+            "a": "Virtual Network Manager の料金は、構成がデプロイされた仮想ネットワークの数に基づきます。ピアリングの料金も、管理対象 VNet のトラフィック量に適用されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/faq", "locator": "料金に関する質問", "retrievedAt": "2026-11-17T19:55:00Z" }]
+          },
+          {
+            "q": "使い始めるのに必要な手順は？",
+            "a": "Learn では、サブスクリプションでプレビュー機能 AllowHighScaleConnectedGroup を登録し、有効化フォームを提出する手順が案内されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locator": "接続されたグループ内で最大3,000の仮想ネットワークを有効にします", "retrievedAt": "2026-11-17T19:55:00Z" }]
+          },
+          {
+            "q": "異なるリージョンの VNet も接続できますか？",
+            "a": "既定はリージョン メッシュで同一リージョンのみ接続します。グローバル メッシュを有効にすると全リージョン間で接続できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-connectivity-configuration", "locator": "メッシュ型トポロジ", "retrievedAt": "2026-11-17T19:55:00Z" }]
+          }
+        ]
       },
       "render": { "continuationRequired": false }
     }
