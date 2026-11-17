@@ -6,9 +6,9 @@ name: Watchdog
 #  - retries or reports generated PRs that auto-merge keeps skipping (stuck for > 12 h), so a failing PR never sits unnoticed
 on:
   schedule:
-    # twice a day (05:41 and 17:41 JST = 20:41 and 08:41 UTC); GitHub scheduled runs are often delayed or dropped,
+    # every 3 hours (41 past 0, 3, 6, ... UTC); a hung agent run blocks the serialized slide queue, and scheduled runs are often delayed or dropped,
     # so the watchdog also starts auto-merge and the daily collection when they did not run
-    - cron: "41 8,20 * * *"
+    - cron: "41 */3 * * *"
   workflow_dispatch:
 
 permissions:
