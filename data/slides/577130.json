@@ -40,6 +40,12 @@
         "required": "optional",
         "summary": { "text": "HSM でのキー管理が要件なら検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "beforeAfter": {
+        "after": {
+          "text": "秘密キーを Managed HSM 内に保ったまま、Application Gateway で TLS 終端できる。ハンドシェイクの署名は HSM 内で実行され、キーはエクスポートされない",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
@@ -151,6 +157,11 @@
           {
             "q": "対応していない構成はありますか？",
             "a": "AGIC、WebSockets、L4 TCP/TLS プロキシ、FIPS モード、EC キーは非対応で、リスナーは TLS 1.2 以降が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls" }]
+          },
+          {
+            "q": "利用できる SSL ポリシーに制限はありますか？",
+            "a": "リスナーは TLS 1.2 以降が必要で、SSL ポリシーは AppGwSslPolicy20220101、AppGwSslPolicy20220101S、CustomV2 に限られます。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/keyless-tls" }]
           },
           {
