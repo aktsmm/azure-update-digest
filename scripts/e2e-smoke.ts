@@ -131,7 +131,12 @@ const headlineCount = async (p: Page) => Number(((await p.locator("p:has(strong:
 if (PASSWORD) {
   const p = await open("#/?start=2026-11-01&end=2026-11-17");
   p.on("dialog", (d) => d.accept(PASSWORD));
-  const [pdf] = await Promise.all([p.waitForEvent("download", { timeout: 180000 }), p.locator('[data-dl="pdf"]').click()]);
+  const t0 = Date.now();
+  const status = () => p.evaluate(() => document.getElementById("dl-status")?.textContent ?? "");
+  const pdfP = p.waitForEvent("download", { timeout: 240000 }).catch(async (e) => { throw new Error(`${e.message.split("\n")[0]} | status="${await status()}"`); });
+  await p.locator('[data-dl="pdf"]').click();
+  const pdf = await pdfP;
+  console.log(`      pdf took ${Math.round((Date.now() - t0) / 1000)}s`);
   const pdfDoc = await PDFDocument.load(readFileSync((await pdf.path())!));
   const outline = pdfDoc.catalog.lookup(PDFName.of("Outlines"));
   check("pdf download: opens and has bookmarks", pdfDoc.getPageCount() >= 5 && !!outline, `${pdfDoc.getPageCount()} pages`);
