@@ -92,6 +92,25 @@
         { "termKey": "isolated-worker", "term": "分離ワーカー モデル", "type": "feature", "oneLine": { "text": "関数を Functions ホストとは別のワーカー プロセスで実行し、.NET のバージョンを個別に選べるモデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/dotnet-isolated-process-guide", "locator": "冒頭", "retrievedAt": "2026-11-12T00:03:00Z" }] } },
         { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-12T00:03:00Z" }] } }
       ],
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どのプログラミング モデルで .NET 11 を使えますか？",
+            "a": "分離ワーカー モデルです。このモデルではランタイム コンポーネントとは別に .NET のバージョンを対象にできます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/dotnet-isolated-process-guide" }]
+          },
+          {
+            "q": "インプロセス モデルのアプリはどうなりますか？",
+            "a": "インプロセス モデルのサポートは 2026 年 11 月 10 日に終了しています。完全なサポートには分離ワーカー モデルへの移行が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/dotnet-isolated-process-guide" }]
+          },
+          {
+            "q": "プレビュー版の .NET でも動かせますか？",
+            "a": "Azure Functions は「プレビュー」や「ライブ開始」の .NET リリースでは動作しません。一般公開リリースを使用してください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/dotnet-isolated-process-guide" }]
+          }
+        ]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=578773",
         "learn": [{ "title": "分離ワーカー モデルで C# Azure Functionsを実行するためのガイド", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/dotnet-isolated-process-guide", "locale": "ja-jp" }]
