@@ -33,9 +33,11 @@ jobs:
         run: |
           limit=$(date -u -d '40 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
           for wf in slide.lock.yml summarize.lock.yml; do
-            for id in $(gh run list --workflow "$wf" --status in_progress --limit 20 --json databaseId,startedAt \
-                -q ".[] | select(.startedAt < \"$limit\") | .databaseId"); do
-              echo "cancel $wf #$id (running > 40 min)"
+            for id in $(gh run list --workflow "$wf" --status in_progress --limit 20 --json databaseId -q '.[].databaseId'); do
+              # the run's own start time includes the wait in the concurrency queue; the running job's start time is the real one
+              jobstart=$(gh api "repos/$GH_REPO/actions/runs/$id/jobs" -q '[.jobs[] | select(.status == "in_progress") | .started_at] | min // ""')
+              if [ -z "$jobstart" ] || [ "$jobstart" \> "$limit" ]; then continue; fi
+              echo "cancel $wf #$id (job running since $jobstart, > 40 min)"
               gh run cancel "$id" || true
               sleep 60
               if [ "$(gh run view "$id" --json status -q .status)" != "completed" ]; then
@@ -48,8 +50,8 @@ jobs:
           # a run that stays "queued" (never gets a runner) holds the serialized concurrency group and blocks every later run
           limit=$(date -u -d '40 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
           for wf in slide.lock.yml summarize.lock.yml; do
-            for id in $(gh run list --workflow "$wf" --status queued --limit 20 --json databaseId,createdAt \
-                -q ".[] | select(.createdAt < \"$limit\") | .databaseId"); do
+            for id in $(gh run list --workflow "$wf" --status queued --limit 20 --json databaseId,updatedAt \
+                -q ".[] | select(.updatedAt < \"$limit\") | .databaseId"); do
               echo "cancel queued $wf #$id (queued > 40 min)"
               gh run cancel "$id" || true
               sleep 30
