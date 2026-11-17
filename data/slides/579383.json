@@ -92,6 +92,11 @@
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc" }]
           },
           {
+            "q": "gRPC ヘルスプローブを使うための条件は？",
+            "a": "各オリジンが標準の grpc.health.v1.Health/Check RPC を実装する必要があります。HTTP / HTTPS プローブも代替として選べます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc" }]
+          },
+          {
             "q": "WAF で gRPC の本文も検査できますか？",
             "a": "Protobuf メッセージはデコードされないため本文は検査されません。URI やヘッダーなどのメタデータが評価対象です。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/grpc" }]
