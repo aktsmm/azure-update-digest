@@ -36,6 +36,15 @@
         "required": "optional",
         "summary": { "text": "評価向け。有効化は Standard プランの既存ワークスペースが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/create-workspace", "locator": "高度な容量に関する分析情報を有効にする", "retrievedAt": "2026-11-04T23:30:00Z" }] }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "Free プランの分析は無料。Standard プランはストレージ アカウント数とオブジェクト数に応じて課金",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/pricing", "locator": "課金について理解する", "retrievedAt": "2026-11-17T15:00:00Z" }]
+      },
+      "beforeAfter": {
+        "after": { "text": "階層・経過期間・オブジェクト サイズ・保持状態・バージョン別に、容量の消費状況を分析できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
       "panels": [
         {
           "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
@@ -84,6 +93,7 @@
         "qa": [
           { "q": "日本リージョンで使えますか？", "a": "プレビューの提供リージョン表に東日本・西日本が 2026 年 11 月 2 日以降として記載されています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/analyze-blob-capacity-details" }] },
           { "q": "有効化の前提は？", "a": "Standard プランの既存ワークスペースで有効化します。無料プランはアップグレードが必要で、反映まで最大 48 時間です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/create-workspace" }] },
+          { "q": "費用はかかりますか？", "a": "Free プランの分析は無料、Standard プランはストレージ アカウント数とオブジェクト数に応じた課金です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/pricing" }] },
           { "q": "個々の Blob の一覧は取得できますか？", "a": "メタデータをアカウント・コンテナー・プレフィックス単位で集約し、個々の Blob のインベントリは提供しません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage-discovery/analyze-blob-capacity-details" }] }
         ]
       },
