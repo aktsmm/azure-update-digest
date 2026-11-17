@@ -36,6 +36,18 @@
         "required": "optional",
         "summary": { "text": "リージョン障害対策が必要なら検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "全レプリカの合計 MU 数に基づいて課金。セカンダリへ複製したデータ量に応じた料金も発生",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication", "locator": "価格", "retrievedAt": "2026-11-18T00:30:00Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "パーティション分割された Premium 名前空間でも、メッセージとメタデータをセカンダリ リージョンへ複製できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
@@ -148,6 +160,11 @@
           {
             "q": "Geo-Replication と Geo-Disaster Recovery は併用できますか?",
             "a": "併用できません。Geo-Replication はデータも複製し、Geo-Disaster Recovery はメタデータのみを複製します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication" }]
+          },
+          {
+            "q": "追加の費用はかかりますか?",
+            "a": "全レプリカの合計 MU に基づいて課金され、セカンダリへ複製したデータ量に応じた料金も発生します。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/service-bus-messaging/service-bus-geo-replication" }]
           },
           {
