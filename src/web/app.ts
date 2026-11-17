@@ -128,7 +128,7 @@ function periodForm(q: Query, fixedMonth: string | null, dl: string): string {
     </div>`}
     <div class="row" style="margin-top:8px">
       <label>日付の基準 <select name="basis"><option value="created" ${q.basis === "created" ? "selected" : ""}>作成日</option><option value="modified" ${q.basis === "modified" ? "selected" : ""}>更新日</option></select></label>
-      <input type="search" name="q" placeholder="タイトル・要約・製品で検索" value="${esc(q.text)}">
+      <input type="search" name="q" aria-label="更新を検索" placeholder="タイトル・要約・製品で検索" value="${esc(q.text)}">
       <button type="button" data-reset title="期間・種類・カテゴリ・検索をすべて初期状態に戻す">条件をリセット</button>
       ${dl}
     </div>
@@ -189,7 +189,7 @@ function downloadBar(r: QueryResult, q: Query): string {
   const pptx = pdfCrypto && slideEntries.size
     ? `<button type="button" data-dl="pptx" title="選択した更新を編集できる PowerPoint（.pptx）で。ダウンロードにはパスワードが必要です"></button>`
     : "";
-  return `<span class="dl-actions" id="dl"><span class="selbar"><span id="selcount"></span><button type="button" class="mini" data-sel-all title="表示中の更新をすべて選択">全選択</button><button type="button" class="mini" data-sel-none title="表示中の更新をすべて解除">全解除</button></span><button type="button" data-dl="json" title="選択した更新（スライド JSON を含む）"></button>${pdf}${pptx}${sample}<span class="meta" id="dl-status"></span></span>`;
+  return `<span class="dl-actions" id="dl"><span class="selbar"><span id="selcount"></span><button type="button" class="mini" data-sel-all title="表示中の更新をすべて選択">全選択</button><button type="button" class="mini" data-sel-none title="表示中の更新をすべて解除">全解除</button></span><button type="button" data-dl="json" title="選択した更新（スライド JSON を含む）"></button>${pdf}${pptx}${sample}<span class="meta" id="dl-status" role="status" aria-live="polite"></span></span>`;
 }
 
 function bindDownload(r: QueryResult, q: Query) {
@@ -357,8 +357,15 @@ function highlightsOpen(): boolean {
   try { return localStorage.getItem(HL_KEY) !== "0"; } catch { return true; }
 }
 
+/** Announces a short result summary to screen readers (the page itself is not a live region, so a re-render does not read everything). */
+function announce(text: string) {
+  const el = document.getElementById("sr-live");
+  if (el) el.textContent = text;
+}
+
 function renderList(q: Query, heading: string, fixedMonth: string | null, basePath: string) {
   const r = runQuery(items, q, meta.coverage, meta.snapshotAt);
+  announce(`${r.items.length} 件の更新`);
   const basisLabel = q.mode === "availability" ? "提供・廃止予定（月単位）" : q.basis === "created" ? "作成日基準" : "更新日基準";
   const filtered = r.items.length !== r.periodTotal ? `（期間内 ${r.periodTotal} 件中、絞り込み後 ${r.items.length} 件）` : "";
   const empty = r.items.length === 0
