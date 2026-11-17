@@ -40,6 +40,19 @@
           "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "この機能が提供するもの", "retrievedAt": "2026-10-28T23:34:29Z" }]
         }
       },
+      "pricing": {
+        "kind": "free",
+        "text": "既定の不変性は追加料金なし（バックアップの保持とストレージは通常のサービス料金の対象）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "ロックを有効にする前に計画を立ててください", "retrievedAt": "2026-11-17T23:16:08Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "直近 7 日間の PITR バックアップが既定で不変になり、誤削除・悪意ある操作・管理者資格情報の侵害から回復ポイントを守れる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/automatic-backup-immutability?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-11-17T23:16:08Z" }]
+        }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
