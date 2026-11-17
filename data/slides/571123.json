@@ -36,6 +36,9 @@
         "required": "optional",
         "summary": { "text": "評価向け。プレビューは SLA なしで、運用環境は非推奨", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "Important", "retrievedAt": "2026-10-21T21:40:00Z" }] }
       },
+      "beforeAfter": {
+        "after": { "text": "Basic リスナー単位で HTTP/3 を有効にし、フロントエンドのクライアント接続を QUIC（1-RTT ハンドシェイク）で処理できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "冒頭 / HTTP/3の有効化", "retrievedAt": "2026-11-17T20:00:00Z" }] }
+      },
       "panels": [
         {
           "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
@@ -93,6 +96,11 @@
             "q": "どう有効化しますか？",
             "a": "Azure portal か REST API でリスナー単位に有効化します。新規作成フローでは設定できず、作成後に設定します。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "HTTP/3の有効化", "retrievedAt": "2026-10-21T21:40:00Z" }]
+          },
+          {
+            "q": "有効化の前提条件は？",
+            "a": "リスナーが TLS 1.3 対応の事前定義 TLS ポリシー（現在は 2022 年版のみ）を使う必要があります。REST API は 2023-02-01 以降です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/application-gateway/http3-quic-support", "locator": "HTTP/3の有効化", "retrievedAt": "2026-11-17T20:00:00Z" }]
           },
           {
             "q": "WAF を使っていても有効にできますか？",
