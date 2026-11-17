@@ -37,6 +37,10 @@
         "summary": { "text": "期限までに Java 25 へアップグレードする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "deadline": { "date": "2027-09-01", "precision": "day" }
       },
+      "beforeAfter": {
+        "before": { "text": "Java 8 / 11 / 17 は、App Service で提供・サポートされている", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-service/language-support-policy", "locator": "JDK のバージョンとメンテナンス", "retrievedAt": "2026-11-17T17:50:00Z" }] },
+        "after": { "text": "終了日以降もアプリは動作するが、セキュリティ更新とカスタマー サービスは提供されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
       "timeline": [
         { "label": "発表", "when": { "date": "2026-10-07", "precision": "day" } },
         { "label": "サポート終了", "when": { "date": "2027-09-01", "precision": "day" } }
