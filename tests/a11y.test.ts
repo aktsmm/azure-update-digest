@@ -19,6 +19,12 @@ describe("site accessibility guards", () => {
     expect(app).toMatch(/id="dl-status" role="status"/);
     expect(app).toContain("announce(");
   });
+  it("small controls keep a 24px target (WCAG 2.2 AA 2.5.8), checkboxes 32px", () => {
+    expect(css).toMatch(/\.card-head \.sel \{[^}]*min-width:32px; min-height:32px/);
+    expect(css).toMatch(/a\.anchor \{[^}]*min-width:24px; min-height:24px/);
+    expect(css).toMatch(/\.links a \{[^}]*min-height:24px/);
+    expect(css).toMatch(/@media \(pointer:coarse\)[^}]*min-width:44px/);
+  });
   it("keyboard focus is visible", () => {
     expect(css).toContain(":focus-visible");
     expect(css).toContain(".sr-only");
