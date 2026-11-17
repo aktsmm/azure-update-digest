@@ -69,6 +69,16 @@
         { "termKey": "agentless-sap-connector", "term": "agentless データ コネクタ", "type": "term", "oneLine": { "text": "SAP Integration Suite と SAP Cloud Connector に基づく、コンテナー管理が不要な SAP 向けコネクタ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "エージェントレス データ コネクタに移行する理由", "retrievedAt": "2026-10-18T20:12:00Z" }] } },
         { "termKey": "http-data-collector-api", "term": "HTTP Data Collector API", "type": "term", "oneLine": { "text": "既存の TLS 準拠エージェントがログ送信に使う、すでに廃止された API。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "冒頭", "retrievedAt": "2026-10-18T20:12:00Z" }] } }
       ],
+      "beforeAfter": {
+        "after": { "text": "コンテナー イメージ削除後は新規取得・再デプロイ・スケーリングができず、サポート対象の agentless コネクタが唯一の取り込み手段になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "冒頭 / 移行パス", "retrievedAt": "2026-11-17T19:55:00Z" }] }
+      },
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "コネクタ種別の廃止であり、リージョンに依存しない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sentinel/sap/sap-agent-migrate", "locator": "冒頭", "retrievedAt": "2026-11-17T19:55:00Z" }]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=571342",
         "learn": [
