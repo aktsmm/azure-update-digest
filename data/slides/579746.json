@@ -41,6 +41,17 @@
           "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "冒頭・Important", "retrievedAt": "2026-11-12T00:20:00Z" }]
         }
       },
+      "beforeAfter": {
+        "before": {
+          "text": "RouteServerSubnet に IPv4 プレフィックスのみを持つ IPv4 専用の Route Server だった",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/enable-route-server-dual-stack", "locator": "Prerequisites", "retrievedAt": "2026-11-17T13:30:00Z" }]
+        },
+        "after": {
+          "text": "デュアルスタック モードで IPv4 と IPv6 の両方のルートを交換できる。既存の IPv4 接続は変更されない",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
       "panels": [
         {
           "id": "scope", "heading": "できること", "availability": "present", "priority": "core",
