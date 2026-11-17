@@ -71,6 +71,19 @@
         { "termKey": "azure-container-storage", "term": "Azure Container Storage", "type": "product", "oneLine": { "text": "DACS の有効化と管理に使うサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "マネージド デプロイ", "retrievedAt": "2026-11-11T23:58:00Z" }] } },
         { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-11T23:58:00Z" }] } }
       ],
+      "pricing": {
+        "kind": "free",
+        "text": "DACS ソフトウェアの料金はかかりません（Azure VM・Blob Storage・ネットワーク料金は別途）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "プレビューのサポートと制限", "retrievedAt": "2026-11-17T13:50:00Z" }]
+      },
+      "region": {
+        "stamp": "japan-east",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "親サービス Azure Container Storage の提供リージョンに Japan East が含まれる。DACS 固有のリージョン一覧は公開ページにない",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/storage/container-storage/container-storage-introduction", "locator": "Regional availability", "retrievedAt": "2026-11-17T13:50:00Z" }]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=578454",
         "learn": [
@@ -81,14 +94,14 @@
       "speakerNotes": {
         "qa": [
           {
-            "q": "キャッシュが使えないとき、データは読めますか？",
-            "a": "はい。キャッシュ ミスや利用不可の場合、クライアントは Azure Blob Storage から直接読み取ります。Blob が正本です。",
-            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "キャッシュのセマンティクス", "retrievedAt": "2026-11-11T23:58:00Z" }]
+            "q": "日本リージョンで使えますか？",
+            "a": "親サービスの Azure Container Storage は Japan East で提供されます。DACS 固有のリージョン一覧は公開されていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/storage/container-storage/container-storage-introduction", "locator": "Regional availability", "retrievedAt": "2026-11-17T13:50:00Z" }]
           },
           {
-            "q": "費用はかかりますか？",
-            "a": "DACS ソフトウェアの料金はかかりません。Azure VM、Blob Storage、ネットワークの料金は引き続き適用されます。",
-            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "プレビューのサポートと制限", "retrievedAt": "2026-11-11T23:58:00Z" }]
+            "q": "どんな環境が対象ですか？",
+            "a": "AKS の Linux ノードで専用のローカル NVMe が必要です。最大 100 ノード、x64 と Arm64 に対応します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "プレビューのサポートと制限", "retrievedAt": "2026-11-17T13:50:00Z" }]
           },
           {
             "q": "本番で使えますか？",
