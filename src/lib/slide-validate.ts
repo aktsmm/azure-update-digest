@@ -23,6 +23,7 @@ export function renderedTexts(slide: any): string[] {
   const out: string[] = [slide.title?.ja ?? "", slide.title?.subtitleJa ?? "", slide.audience?.who?.text ?? "", slide.audience?.change?.text ?? "", slide.action?.summary?.text ?? ""];
   if (slide.beforeAfter?.before) out.push(slide.beforeAfter.before.text);
   if (slide.beforeAfter?.after) out.push(slide.beforeAfter.after.text);
+  if (slide.pricing) out.push(slide.pricing.text);
   for (const p of slide.panels ?? []) {
     out.push(p.heading ?? "");
     if (p.availability === "present") for (const i of p.items ?? []) out.push((i as Claim).text);
@@ -35,7 +36,7 @@ export function renderedTexts(slide: any): string[] {
 }
 
 function claimsOf(slide: any): Claim[] {
-  const c: Claim[] = [slide.audience?.who, slide.audience?.change, slide.action?.summary, slide.beforeAfter?.before, slide.beforeAfter?.after].filter(Boolean);
+  const c: Claim[] = [slide.audience?.who, slide.audience?.change, slide.action?.summary, slide.beforeAfter?.before, slide.beforeAfter?.after, slide.pricing].filter(Boolean);
   for (const p of slide.panels ?? []) for (const i of p.items ?? []) c.push(i);
   for (const g of slide.glossary ?? []) if (g.oneLine) c.push(g.oneLine);
   return c;

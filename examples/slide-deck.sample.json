@@ -36,6 +36,12 @@
         "required": "optional",
         "summary": { "text": "誤検知で困っていれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "pricing": {
+        "kind": "free",
+        "text": "追加料金なし（既存の WAF ポリシーの機能として利用できる）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/web-application-firewall/overview", "locator": "概要", "retrievedAt": "2026-10-14T20:31:00Z" }]
+      },
       "beforeAfter": {
         "before": {
           "text": "誤検知を抑える「除外」は、要求の一部（ヘッダー・Cookie・クエリ引数・本文の項目）を WAF の評価から外す方法",
@@ -147,6 +153,12 @@
         "required": "optional",
         "summary": { "text": "評価向け。本番利用は追加の利用規約を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/custom-rules-geo-based-ipv6", "locator": "Important", "retrievedAt": "2026-10-14T12:00:00Z" }] }
       },
+      "pricing": {
+        "kind": "free",
+        "text": "追加料金なし（既存の WAF ポリシーの機能として利用できる）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/web-application-firewall/overview", "locator": "概要", "retrievedAt": "2026-10-14T20:31:00Z" }]
+      },
       "beforeAfter": {
         "after": {
           "text": "デュアルスタックのアプリで、IPv4 と IPv6 の両方に同じセキュリティ制御（マネージド ルールセット・カスタム ルール・診断）を適用できる",
@@ -214,6 +226,12 @@
         "required": "yes",
         "summary": { "text": "期限までに Java 25 へアップグレードする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "deadline": { "date": "2027-09-01", "precision": "day" }
+      },
+      "pricing": {
+        "kind": "free",
+        "text": "追加料金なし（既存の WAF ポリシーの機能として利用できる）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/web-application-firewall/overview", "locator": "概要", "retrievedAt": "2026-10-14T20:31:00Z" }]
       },
       "beforeAfter": {
         "before": { "text": "終了日までは、Java 8 / 11 / 17 のアプリがセキュリティ更新とサポートを受けられる", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
@@ -304,6 +322,12 @@
         "required": "optional",
         "summary": { "text": "管理者は、テナント設定「Users can find objects in search」（既定で有効）を確認し、準備ができていなければ無効化する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "deadline": { "date": "2026-10-15", "precision": "day" }
+      },
+      "pricing": {
+        "kind": "free",
+        "text": "追加料金なし（既存の WAF ポリシーの機能として利用できる）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/web-application-firewall/overview", "locator": "概要", "retrievedAt": "2026-10-14T20:31:00Z" }]
       },
       "beforeAfter": {
         "before": { "text": "検索では、アイテム（セマンティック モデル、レイクハウスなど）が結果として表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/governance/onelake-catalog-explore", "locator": "アイテムリスト内のアイテムを検索する", "retrievedAt": "2026-10-14T12:00:00Z" }] },

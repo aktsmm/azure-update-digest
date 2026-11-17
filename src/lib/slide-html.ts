@@ -49,6 +49,7 @@ ul{margin:0;padding-left:20px;font-size:var(--fs);line-height:1.4}li{margin:calc
 .ba .bf{background:#f1f3f6;border:1.5px solid #c4ccd8}.ba .af{background:#e8f6ec;border:1.5px solid #1b7f3b}
 .ba .p b.l{display:block;font-size:12.5px;margin-bottom:2px}.ba .bf b.l{color:#5b6777}.ba .af b.l{color:#1b7f3b}
 .ba .ar{align-self:center;font-size:24px;color:#0b6bcb;font-weight:700}
+.pricing{border:1.5px solid #b26a00;background:#fff8ec;border-radius:6px;padding:4px 10px;font-size:calc(var(--fs) * .92);line-height:1.4}.pricing b{color:#8a5200;margin-right:8px}.pricing.pr-free{border-color:#1b7f3b;background:#eaf6ee}.pricing.pr-free b{color:#14602c}
 .term{font-size:calc(var(--fs) - 1px);line-height:1.4;margin:0 0 calc(var(--fs) * .4)}.term b{color:#0b2a4a}
 .term .k{display:inline-block;font-size:11px;background:#dbe9fb;color:#1c5aa0;border-radius:3px;padding:0 5px;margin-left:4px}
 .ft a{color:#0b5cad;text-decoration:underline}.lk .fl{font-weight:700;color:#3d4a5c;margin-right:4px}.lk .ls{line-height:1.35}
@@ -80,6 +81,7 @@ export interface Slide {
   audience: { who: { text: string }; change: { text: string }; changeNature: string };
   action: { required: string; summary: { text: string }; deadline?: { date?: string; month?: string; precision: string } };
   beforeAfter?: { before?: { text: string }; after?: { text: string } };
+  pricing?: { kind: string; text: string };
   timeline?: { label: string; when: { date?: string; month?: string } }[];
   panels: { id: string; heading: string; availability: string; priority: string; items?: { text: string; assertion: string }[] }[];
   glossary?: { term: string; type: string; oneLine: { text: string } }[];
@@ -105,13 +107,14 @@ export function slideHtml(s: Slide, o: SlideOptions): string {
   const items = (p: Slide["panels"][number]) => `<ul>${(p.items ?? []).map((i) => `<li>${rich(i.text)}</li>`).join("")}</ul>`;
   const panelCard = (p: Slide["panels"][number]) => `<div class="card ${/制約|注意|権限|影響/.test(p.heading) && s.kind !== "ga" ? "red" : ""}"><h3>${esc(p.heading)}</h3>${items(p)}</div>`;
   const ba = s.beforeAfter && (s.beforeAfter.before || s.beforeAfter.after)
-    ? `<div class="card hot"><h3>${s.beforeAfter.before ? "Before → After：何が変わるのか" : "何が嬉しいのか"}</h3><div class="ba">${s.beforeAfter.before ? `<div class="p bf"><b class="l">Before</b>${rich(s.beforeAfter.before.text)}</div><div class="ar">→</div>` : ""}${s.beforeAfter.after ? `<div class="p af"><b class="l">${s.beforeAfter.before ? "After" : "できるようになること"}</b>${rich(s.beforeAfter.after.text)}</div>` : ""}</div></div>`
+    ? `<div class="card hot"><h3>${s.beforeAfter.before ? "これまで → これから：何が変わるのか" : "何が嬉しいのか"}</h3><div class="ba">${s.beforeAfter.before ? `<div class="p bf"><b class="l">これまで</b>${rich(s.beforeAfter.before.text)}</div><div class="ar">→</div>` : ""}${s.beforeAfter.after ? `<div class="p af"><b class="l">${s.beforeAfter.before ? "これから" : "できるようになること"}</b>${rich(s.beforeAfter.after.text)}</div>` : ""}</div></div>`
     : "";
+  const pricing = s.pricing ? `<div class="pricing pr-${s.pricing.kind}"><b>課金</b>${rich(s.pricing.text)}</div>` : "";
   const corePanels = mainPanels.filter((p) => p.priority === "core");
   const detailPanels = mainPanels.filter((p) => p.priority !== "core");
   const detailRow = detailPanels.length ? `<div class="row2">${detailPanels.map(panelCard).join("")}</div>` : "";
   const detailsOnlyPage = !!o.continuation;
-  const mainHtml = detailsOnlyPage ? `<div class="row2">${detailPanels.map(panelCard).join("")}</div>` : `${ba}${corePanels.map(panelCard).join("")}${detailRow}`;
+  const mainHtml = detailsOnlyPage ? `<div class="row2">${detailPanels.map(panelCard).join("")}</div>` : `${ba}${pricing}${corePanels.map(panelCard).join("")}${detailRow}`;
   const tl = s.timeline?.length ? `<div class="tl">${s.timeline.map((t, i, a) => `<div class="pt"${i === a.length - 1 ? ' style="color:#c62828"' : ""}><b>${esc(when(t.when))}</b>${esc(t.label)}</div>${i < a.length - 1 ? '<div class="ln"></div>' : ""}`).join("")}</div>` : "";
   const glossary = (s.glossary ?? []).length
     ? `<div class="card gl"><h3>用語ミニ解説</h3>${(s.glossary ?? []).map((g) => `<div class="term"><b>${esc(g.term)}</b><span class="k">${esc(TYPE_JA[g.type] ?? g.type)}</span><br>${esc(g.oneLine.text)}</div>`).join("")}</div>`

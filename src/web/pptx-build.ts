@@ -250,6 +250,9 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
   const sug = shown.filter(isSug).map((p) => ({ ...toPanel(p), heading: `${p.heading}（提案）`, tone: "sug" as const }));
   const gloss = (sl.glossary ?? []).slice(0, 6);
   const ba = sl.beforeAfter && (sl.beforeAfter.before || sl.beforeAfter.after) ? sl.beforeAfter : null;
+  const pr = sl.pricing ?? null;
+  const prLines = (pt: number) => (pr ? lines(`課金  ${pr.text}`, pt - 0.5, mainW - 0.3) : 0);
+  const prH = (pt: number) => (pr ? 0.12 + prLines(pt) * lineH(pt - 0.5) + 0.06 : 0);
   const avail = footerTop - bodyTop - 0.14;
 
   // choose the largest font that fits both columns
@@ -258,7 +261,7 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
     const baH = ba ? 0.34 + Math.max(...[ba.before?.text ?? "", ba.after?.text ?? ""].map((t) => lines(t, pt, ba.before ? mainW / 2 - 0.65 : mainW - 0.3) * lineH(pt))) + 0.3 + lineH(pt - 1.5) + 0.02 : 0;
     const coreH = core.reduce((a, p) => a + panelHeight(p, pt, mainW) + 0.08, 0);
     const detH = detail.length ? Math.max(...detail.map((p) => panelHeight(p, pt, detW))) + 0.08 : 0;
-    return { total: baH + (ba ? 0.08 : 0) + coreH + detH, baH };
+    return { total: baH + (ba ? 0.08 : 0) + (pr ? prH(pt) + 0.08 : 0) + coreH + detH, baH };
   };
   const glossH = (sp: number) => gloss.reduce((a, g) => a + lineH(sp) * lines(`${g.term}  ${TYPE_JA[g.type] ?? g.type}`, sp * 1.08, sideW - 0.24) + lineH(sp - 1) * lines(g.oneLine.text, sp - 1, sideW - 0.24) + 0.09, 0.42);
   const sideFor = (sp: number) => {
@@ -297,21 +300,28 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
   if (ba) {
     const f = fitFor(pt);
     s.addShape("roundRect", { x: M, y, w: mainW, h: f.baH, fill: { color: "F3F8FF" }, line: { color: "0B6BCB", width: 1.25 }, rectRadius: 0.06 });
-    s.addText(ba.before ? "Before → After：何が変わるのか" : "何が嬉しいのか", { x: M + 0.1, y: y + 0.03, w: mainW - 0.2, h: 0.3, fontFace: FONT, fontSize: pt + 1.5, bold: true, color: "0B6BCB", margin: 0, valign: "middle" });
+    s.addText(ba.before ? "これまで → これから：何が変わるのか" : "何が嬉しいのか", { x: M + 0.1, y: y + 0.03, w: mainW - 0.2, h: 0.3, fontFace: FONT, fontSize: pt + 1.5, bold: true, color: "0B6BCB", margin: 0, valign: "middle" });
     const bw = (mainW - 0.6) / 2;
     const bt = y + 0.36, bh = f.baH - 0.44;
     if (ba.before) {
       s.addShape("roundRect", { x: M + 0.1, y: bt, w: bw, h: bh, fill: { color: "EEF1F5" }, line: { color: "C9D4E6", width: 1 }, rectRadius: 0.05 });
-      s.addText([{ text: "Before", options: { bold: true, fontSize: pt - 1.5, color: C.mute, breakLine: true } }, ...runs(ba.before.text, { fontSize: pt })], { x: M + 0.18, y: bt + 0.03, w: bw - 0.16, h: bh - 0.06, fontFace: FONT, color: "1F2A37", margin: 0, valign: "top", fit: "shrink" });
+      s.addText([{ text: "これまで", options: { bold: true, fontSize: pt - 1.5, color: C.mute, breakLine: true } }, ...runs(ba.before.text, { fontSize: pt })], { x: M + 0.18, y: bt + 0.03, w: bw - 0.16, h: bh - 0.06, fontFace: FONT, color: "1F2A37", margin: 0, valign: "top", fit: "shrink" });
       s.addText("→", { x: M + 0.1 + bw, y: bt, w: 0.4, h: bh, align: "center", valign: "middle", fontFace: FONT, fontSize: 18, bold: true, color: "0B6BCB", margin: 0 });
     }
     if (ba.after) {
       const ax = ba.before ? M + 0.1 + bw + 0.4 : M + 0.1;
       const aw = ba.before ? bw : mainW - 0.2;
       s.addShape("roundRect", { x: ax, y: bt, w: aw, h: bh, fill: { color: "E8F5EC" }, line: { color: C.green, width: 1 }, rectRadius: 0.05 });
-      s.addText([{ text: ba.before ? "After" : "できるようになること", options: { bold: true, fontSize: pt - 1.5, color: C.green, breakLine: true } }, ...runs(ba.after.text, { fontSize: pt })], { x: ax + 0.08, y: bt + 0.03, w: aw - 0.16, h: bh - 0.06, fontFace: FONT, color: "1F2A37", margin: 0, valign: "top", fit: "shrink" });
+      s.addText([{ text: ba.before ? "これから" : "できるようになること", options: { bold: true, fontSize: pt - 1.5, color: C.green, breakLine: true } }, ...runs(ba.after.text, { fontSize: pt })], { x: ax + 0.08, y: bt + 0.03, w: aw - 0.16, h: bh - 0.06, fontFace: FONT, color: "1F2A37", margin: 0, valign: "top", fit: "shrink" });
     }
     y += f.baH + gap;
+  }
+  if (pr) {
+    const h = prH(pt) * k;
+    const col = pr.kind === "free" ? C.green : "B26A00";
+    s.addShape("roundRect", { x: M, y, w: mainW, h, fill: { color: pr.kind === "free" ? "EAF6EE" : "FFF8EC" }, line: { color: col, width: 1.25 }, rectRadius: 0.05 });
+    s.addText([{ text: "課金　", options: { bold: true, color: pr.kind === "free" ? "14602C" : "8A5200" } }, ...runs(pr.text)], { x: M + 0.12, y: y + 0.02, w: mainW - 0.24, h: h - 0.04, fontFace: FONT, fontSize: pt - 0.5, color: "1F2A37", margin: 0, valign: "middle", fit: "shrink" });
+    y += h + gap;
   }
   for (const p of core) { const h = panelHeight(p, pt, mainW) * k; drawPanel(p, M, y, mainW, h); y += h + gap; }
   if (detail.length) {
