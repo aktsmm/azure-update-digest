@@ -37,6 +37,16 @@
         "summary": { "text": "対象サービスの移行と SDK の更新を 2028-09-30 までに計画する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "必要な対応", "retrievedAt": "2026-10-15T17:50:00Z" }] },
         "deadline": { "date": "2028-09-30", "precision": "day" }
       },
+      "pricing": {
+        "kind": "change",
+        "text": "サポート対象サービスへ移行すると、Microsoft 365 ライセンスや従量課金制サービスなど追加の費用・ライセンス費用が発生する場合がある",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "料金およびライセンス", "retrievedAt": "2026-11-17T19:30:00Z" }]
+      },
+      "beforeAfter": {
+        "before": { "text": "既存の ACS リソースは、通知日（2026年9月）から終了日まで引き続き利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "リソース、データ、コンプライアンス", "retrievedAt": "2026-11-17T19:30:00Z" }] },
+        "after": { "text": "2028-09-30 以降、対象サービスは利用不可。通話系 SDK は最新 SDK と Teams 併用時のみ動作", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
       "timeline": [
         { "label": "発表", "when": { "date": "2026-09-25", "precision": "day" } },
         { "label": "廃止予定サービスの新規オンボーディング制限開始", "when": { "date": "2026-10-23", "precision": "day" } },
@@ -85,6 +95,25 @@
         "learn": [
           { "title": "Azure Communication Servicesの退職および変更に関する詳細ガイド", "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locale": "ja-jp" },
           { "title": "Azure Communication Services とは", "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "廃止日までは既存の ACS リソースを使えますか？",
+            "a": "はい。既存の Azure リソースは通知日（2026年9月）から 2028-09-30 まで利用でき、現在の SLA も維持されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "リソース、データ、コンプライアンス", "retrievedAt": "2026-11-17T19:30:00Z" }]
+          },
+          {
+            "q": "2026-10-23 以降に何が変わりますか？",
+            "a": "その日以前に ACS リソースを作成していない顧客は、廃止予定サービスへのオンボーディングが制限され、PSTN 通話や SMS 用の電話番号を取得できません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "何が変わっているのか、なぜ変わっているのか?", "retrievedAt": "2026-11-17T19:30:00Z" }]
+          },
+          {
+            "q": "データのエクスポートは必要ですか？",
+            "a": "チャット メッセージや通話録音などのデータはエクスポート可能です。退役日以降、廃止サービスの関連データとテレメトリは廃止されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/communication-services/acs-retirement-and-breaking-changes-guide", "locator": "リソース、データ、コンプライアンス", "retrievedAt": "2026-11-17T19:30:00Z" }]
+          }
         ]
       },
       "render": { "continuationRequired": false }
