@@ -78,6 +78,7 @@
         "qa": [
           { "q": "IPv6 専用のファイアウォールは作れますか？", "a": "IPv6 専用のファイアウォールは非対応で、IPv4 専用またはデュアルスタックで展開します。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall" }] },
           { "q": "デュアルスタックにした後で戻せますか？", "a": "デュアルスタックから IPv4 専用モードへ戻すことは現時点でサポートされていません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall" }] },
+          { "q": "既存の IPv4 専用ファイアウォールの機能は影響を受けますか？", "a": "既存機能はデュアルスタックでも IPv4 で引き続きサポートされ、制限は IPv6 にのみ適用されます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall" }] },
           { "q": "どのファイアウォールが対象外ですか？", "a": "Classic と Virtual Hub ファイアウォールは IPv6 非対応です。DNAT や IDPS も IPv6 では未対応です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-dual-stack-firewall" }] }
         ]
       },
