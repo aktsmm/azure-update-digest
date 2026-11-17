@@ -328,6 +328,31 @@
           }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンでも使えますか？",
+            "a": "はい。サポート リージョン一覧に東日本（Japan East）が含まれています。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17" }
+            ]
+          },
+          {
+            "q": "利用するための前提条件は？",
+            "a": "アクティブな Azure サブスクリプションと Arc エージェントが必要で、リソース プロバイダーの登録も行います。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17" }
+            ]
+          },
+          {
+            "q": "Arc 対応サーバーとリージョンは揃える必要がありますか？",
+            "a": "はい。オンボードと機能のため、Arc 対応サーバーと SQL Server インスタンスに同じリージョンを割り当てます。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver17" }
+            ]
+          }
+        ]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=570696",
         "learn": [
