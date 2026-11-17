@@ -1,5 +1,5 @@
 import { addDays, isValidDateString, monthBounds, resolvePeriod, toJstDate, type Period } from "../lib/period.js";
-import { defaultQuery, runQuery, IMPORTANCE_LEVELS, type DigestItem, type ImportanceLevel, type Query, type QueryResult } from "../lib/query.js";
+import { defaultQuery, runQuery, matchedElsewhere, IMPORTANCE_LEVELS, type DigestItem, type ImportanceLevel, type Query, type QueryResult } from "../lib/query.js";
 import type { SiteMeta } from "../lib/site-data.js";
 import type { SlideEntry } from "./pdf-merge.js";
 import { orderSlides } from "../lib/slide-order.js";
@@ -97,7 +97,9 @@ function badges(i: DigestItem): string {
 // keys the user unchecked; everything is selected by default and the choice survives filter changes
 const deselected = new Set<string>();
 
-function card(i: DigestItem, idx = -1): string {
+function card(i: DigestItem, idx = -1, searchText = ""): string {
+  const found = matchedElsewhere(i, searchText);
+  const foundHtml = found.length ? `<div class="meta found">検索に一致: ${found.map(esc).join("、")}</div>` : "";
   const summary =
     i.summary.state === "generated" ? `<p class="summary">${esc(i.summary.text ?? "")}</p>`
     : i.summary.state === "stale" ? `<p class="summary missing">要約未生成（原文の更新により再生成待ち）</p>`
@@ -110,7 +112,7 @@ function card(i: DigestItem, idx = -1): string {
     <div class="card-head"><label class="sel" title="ダウンロード（JSON・PDF・PPTX）に含める"><input type="checkbox" data-sel="${esc(i.key)}" ${deselected.has(i.key) ? "" : "checked"} aria-label="ダウンロードに含める"></label>${idx >= 0 ? `<span class="no" title="この一覧の上から ${idx + 1} 番目">${idx + 1}</span>` : ""}<h3><a class="anchor" href="#update-${esc(i.key)}" title="この更新へのリンク">#</a><a class="title-link" href="${safeUrl(i.sourceUrl)}" target="_blank" rel="noopener noreferrer" title="原文（Azure Updates）を開く">${esc(i.titleJa ?? i.title)}</a></h3><span class="kind k-${i.kind}">${esc(KIND_LABEL[i.kind])}</span></div>
     ${i.titleJa ? `<div class="orig">${esc(i.title)}</div>` : ""}
     <div class="meta">作成 ${esc(i.createdJst)} ／ 更新 ${esc(i.modifiedJst)} ／ ID ${esc(i.key)}</div>
-    ${badges(i)}${summary}
+    ${badges(i)}${foundHtml}${summary}
     <div class="links"><a href="${safeUrl(i.sourceUrl)}" target="_blank" rel="noopener noreferrer">原文（Azure Updates）</a>${rel}</div>
   </article>`;
 }
@@ -370,12 +372,12 @@ function renderList(q: Query, heading: string, fixedMonth: string | null, basePa
   const filtered = r.items.length !== r.periodTotal ? `（期間内 ${r.periodTotal} 件中、絞り込み後 ${r.items.length} 件）` : "";
   const empty = r.items.length === 0
     ? `<div class="empty">${r.coverage.status === "complete" ? "条件に一致する更新はありません。" : "取得範囲外・一部取得のため、0件とは断定できません。取得状態を確認してください。"}</div>` : "";
-  const hl = q.mode === "dated" && r.highlights.length ? `<details class="fold" id="hl-fold" ${highlightsOpen() ? "open" : ""}><summary><h2>重要更新（${r.highlights.length}件）</h2><span class="fold-hint"></span></summary>${r.highlights.map((i, n) => card(i, n)).join("")}</details>` : "";
+  const hl = q.mode === "dated" && r.highlights.length ? `<details class="fold" id="hl-fold" ${highlightsOpen() ? "open" : ""}><summary><h2>重要更新（${r.highlights.length}件）</h2><span class="fold-hint"></span></summary>${r.highlights.map((i, n) => card(i, n, q.text)).join("")}</details>` : "";
   const note = q.mode === "availability" ? "<p class='meta'>提供時期は公式の月単位表記のまま表示しています（日付への換算はしていません）。</p>" : "";
   app.innerHTML = `${basePath === "/" ? `${hero()}` : `<h1>${esc(heading)}</h1>`}
     <p><strong>${esc(q.period.start)} 〜 ${esc(q.period.end)}</strong>（JST・${basisLabel}）: <strong>${r.items.length} 件</strong> ${filtered}</p>
     ${coverageBanner(r)}${backfillPanel()}${periodForm(q, fixedMonth, downloadBar(r, q))}${note}${hl}
-    <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${r.items.map((i, n) => card(i, n)).join("")}${empty}`;
+    <h2>${q.mode === "availability" ? "提供・廃止予定" : "新着"}（${r.items.length}件）</h2>${r.items.map((i, n) => card(i, n, q.text)).join("")}${empty}`;
   bind(q, fixedMonth, basePath);
   bindDownload(r, q);
   document.getElementById("hl-fold")?.addEventListener("toggle", (e) => {

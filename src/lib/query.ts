@@ -124,3 +124,16 @@ export function runQuery(all: DigestItem[], q: Query, coverage: CoverageInterval
 }
 
 export { addDays, jstStartMs };
+
+/** Products / tags / categories that matched the search text but are not visible in the title or summary, so a card can say why it was found. */
+export function matchedElsewhere(item: DigestItem, text: string): string[] {
+  const words = text.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  if (!words.length) return [];
+  const visible = [item.title, item.titleJa ?? "", item.summary.text ?? ""].join("\n").toLowerCase();
+  const out: string[] = [];
+  for (const v of [...item.products, ...item.tags, ...item.productCategories]) {
+    const lv = v.toLowerCase();
+    if (words.some((w) => lv.includes(w) && !visible.includes(w)) && !out.includes(v)) out.push(v);
+  }
+  return out;
+}
