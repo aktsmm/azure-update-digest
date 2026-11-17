@@ -80,6 +80,19 @@
         { "termKey": "image-template", "term": "イメージ テンプレート", "type": "feature", "oneLine": { "text": "構成を送信すると作成される、ビルド実行の対象となるリソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "しくみ", "retrievedAt": "2026-10-22T00:00:00Z" }] } },
         { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-22T00:00:00Z" }] } }
       ],
+      "pricing": {
+        "kind": "paid",
+        "text": "ビルド用のコンピューティング・ネットワーク・ストレージが Azure のレートで課金される",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "コスト", "retrievedAt": "2026-11-17T20:55:00Z" }]
+      },
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Learn のサービス提供リージョン一覧に東日本が含まれる。今回の GA の対象はソブリン クラウド",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/image-builder-overview", "locator": "リージョン", "retrievedAt": "2026-11-17T20:55:00Z" }]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=570105",
         "learn": [
