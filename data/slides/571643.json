@@ -37,6 +37,10 @@
         "required": "optional",
         "summary": { "text": "利用中の機能に関連する項目から順に試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "beforeAfter": {
+        "before": { "text": "Hyperscale Premium シリーズの最大コンピュートは 128 vCore", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "160 / 192 vCore を選択でき、従来の 128 vCore 上限より最大 50% 大きなコンピュートで運用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
@@ -83,6 +87,32 @@
         { "termKey": "ssms", "term": "SSMS", "type": "product", "oneLine": { "text": "SQL Server Management Studio の略称で、SQL の管理・開発ツール。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
         { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-14T22:15:00Z" }] } }
       ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Hyperscale Premium シリーズは東日本・西日本で利用可能",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/region-availability?view=azuresql", "locator": "Hyperscale Premium シリーズの可用性", "retrievedAt": "2026-11-17T18:50:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "インデックスの自動圧縮はすぐ有効になりますか？",
+            "a": "既定では無効です。ALTER DATABASE ... SET AUTOMATIC_INDEX_COMPACTION = ON でデータベースごとに有効化します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/relational-databases/indexes/automatic-index-compaction?view=azuresqldb-current" }]
+          },
+          {
+            "q": "日本リージョンで Hyperscale Premium シリーズを使えますか？",
+            "a": "東日本と西日本の両方で Premium シリーズが利用可能と記載されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/region-availability?view=azuresql" }]
+          },
+          {
+            "q": "Premium シリーズでサーバーレスは使えますか？",
+            "a": "Premium シリーズではサーバーレス コンピューティングは現在サポートされません。サーバーレスは Standard シリーズ (Gen5) のみです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/service-tier-hyperscale?view=azuresql" }]
+          }
+        ]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=571643",
         "learn": [
