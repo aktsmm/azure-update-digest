@@ -36,6 +36,12 @@
         "required": "optional",
         "summary": { "text": "エッジでの加工が必要なシナリオがあれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "呼び出し回数と、1 ms を超える実行時間に基づく従量課金",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions", "locator": "Pricing", "retrievedAt": "2026-11-17T14:30:00Z" }]
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
@@ -149,6 +155,11 @@
           {
             "q": "どんな制限がありますか？",
             "a": "コード 16 KB、3 バージョン、実行 10 ms、1 サブスクリプション 100 リソースまでで、言語は JavaScript のみです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "呼び出し回数と、各呼び出しの実行時間が 1 ms を超える分に基づく 2 段階の価格モデルです。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/edge-actions" }]
           },
           {
