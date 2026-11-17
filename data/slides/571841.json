@@ -36,6 +36,18 @@
         "required": "optional",
         "summary": { "text": "Azure Local で SQL Server を使う計画があれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "SQL Server ライセンスが必要。Azure Arc 経由で従量課金、または既存ライセンスを宣言",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/deploy?view=sql-server-ver17", "locator": "Azure Arcを通じてライセンスを設定する", "retrievedAt": "2026-11-17T18:20:00Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "接続モードの SQL Server が GA。Azure Arc で管理・ガバナンス・監視・セキュリティ・ライセンスを一元化できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
@@ -84,6 +96,25 @@
         "learn": [
           { "title": "Azure Local 上の SQL Server の概要", "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locale": "ja-jp" },
           { "title": "Azure Local に SQL Server をデプロイする", "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/deploy?view=sql-server-ver17", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "利用に必要な前提は何ですか？",
+            "a": "Azure Local 対応ハードウェア、Azure サブスクリプション、Azure との接続、Windows Server / Linux イメージ、SQL Server ライセンスが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/deploy?view=sql-server-ver17", "locator": "前提条件", "retrievedAt": "2026-11-17T18:20:00Z" }]
+          },
+          {
+            "q": "Azure に接続できない環境でも使えますか？",
+            "a": "切断運用でも動作しますが、Azure Arc の SQL Server 拡張機能（インベントリ等）は利用できません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locator": "切断運用", "retrievedAt": "2026-11-17T18:20:00Z" }]
+          },
+          {
+            "q": "ライセンスはどう扱いますか？",
+            "a": "Azure Arc で従量課金、または Software Assurance / サブスクリプションの既存ライセンスを宣言します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/deploy?view=sql-server-ver17", "locator": "Azure Arcを通じてライセンスを設定する", "retrievedAt": "2026-11-17T18:20:00Z" }]
+          }
         ]
       },
       "render": { "continuationRequired": false }
