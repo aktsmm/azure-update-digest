@@ -30,6 +30,12 @@
         "required": "optional",
         "summary": { "text": "評価向け。プレビューは追加の利用規約の対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "Important", "retrievedAt": "2026-10-25T22:14:00Z" }] }
       },
+      "beforeAfter": {
+        "after": {
+          "text": "Front Door のエッジで X.509 クライアント証明書を検証でき、証明書はオリジンへ転送される",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
       "panels": [
         {
           "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
@@ -73,6 +79,7 @@
           { "q": "対象のティアはどれですか？", "a": "Learn では Front Door Premium が適用対象とされています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "適用対象", "retrievedAt": "2026-10-25T22:14:00Z" }] },
           { "q": "既存のドメインで有効化できますか？", "a": "有効化・無効化にはダウンタイムが伴うため、新しいドメインやエンドポイントでの有効化が推奨されています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "重要な設計上の考慮事項", "retrievedAt": "2026-10-25T22:14:00Z" }] },
           { "q": "証明書が拒否されたとき、理由は分かりますか？", "a": "リクエストにヘッダー X-Azure-DebugInfo:1 を付けると、応答のデバッグ ヘッダーでエラーの可能性を確認できます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "Unexpected 403", "retrievedAt": "2026-10-25T22:14:00Z" }] },
+          { "q": "失効した証明書はどう扱われますか？", "a": "失効確認は既定で有効で、OCSP を使います。失効していれば HTTP 403 が返されます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/mutual-tls", "locator": "証明書失効の確認", "retrievedAt": "2026-11-17T22:40:00Z" }] },
           { "q": "本番で使えますか？", "a": "パブリック プレビューは、明示がない限り本番ワークロード向けではありません。", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-10-25T22:14:00Z" }] }
         ]
       },
