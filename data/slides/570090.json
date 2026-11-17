@@ -141,6 +141,11 @@
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "インプレース移行", "retrievedAt": "2026-10-18T21:40:00Z" }]
           },
           {
+            "q": "FIPS 対応イメージは必須ですか？",
+            "a": "Windows Server 2025 ノード プールには FIPS 対応イメージが必要です。追加時は --enable-fips-image（CLI）または -EnableFIPS（PowerShell）を指定します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "新しいノード プールへの手動移行", "retrievedAt": "2026-11-17T20:50:00Z" }]
+          },
+          {
             "q": "Windows Server 2022 はいつまで使えますか？",
             "a": "2028 年 6 月 30 日から、AKS はノード プールの Windows Server 2022 をサポートしなくなります。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/upgrade-windows-os", "locator": "Important", "retrievedAt": "2026-10-18T21:40:00Z" }]
