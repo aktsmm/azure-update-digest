@@ -134,6 +134,25 @@
           { "title": "Azure Extended Zones に関する FAQ", "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/faq", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "すべての Azure サービスを拡張ゾーンで使えますか？",
+            "a": "いいえ。拡張ゾーンで提供されるのは Azure サービスのサブセットのみです。親リージョンではすべての Azure サービスを利用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/faq" }]
+          },
+          {
+            "q": "顧客データはどこに保存されますか？",
+            "a": "顧客データは拡張ゾーンの場所に保存・処理されます。親リージョンが同じ国・地域内なら、データは関連付けられた地域内に残ります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/faq" }]
+          },
+          {
+            "q": "課金や割引、予約は通常の Azure と同じですか？",
+            "a": "課金エクスペリエンスは Azure の他の部分と一致しています。予約インスタンスと節約プランにも対応しています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/extended-zones/faq" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
