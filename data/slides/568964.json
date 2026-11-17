@@ -38,6 +38,16 @@
         "summary": { "text": "サービスプリンシパルの利用は課金対象。Genie Code は対象外のため利用状況を確認する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "deadline": { "date": "2027-01-31", "precision": "day" }
       },
+      "pricing": {
+        "kind": "change",
+        "text": "Genie One / Genie Agents の無料利用は 2027年1月31日まで（ユーザー利用のみ。サービスプリンシパルは課金）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/genie/", "locator": "Genie の予算を管理する", "retrievedAt": "2026-11-17T22:50:00Z" }]
+      },
+      "beforeAfter": {
+        "before": { "text": "Genie One と Genie Agents の無料利用は 2026-07-31 まで", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "無料利用が 2027-01-31 まで延長。期間中は予算管理が適用されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
       "timeline": [
         { "label": "従来の無料期間の終了日", "when": { "date": "2026-07-31", "precision": "day" } },
         { "label": "延長後の無料期間の終了日", "when": { "date": "2027-01-31", "precision": "day" } }
