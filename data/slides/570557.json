@@ -161,6 +161,11 @@
             "q": "別リージョンのプールを使えますか？",
             "a": "はい。1 つのプールを複数リージョンの仮想ネットワークに関連付けられ、PowerShell と Azure CLI が対応しています。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-ip-address-management", "locator": "複数のリージョンにわたる IP アドレス空間の管理", "retrievedAt": "2026-10-18T21:18:00Z" }]
+          },
+          {
+            "q": "IPAM で何ができますか？",
+            "a": "IP アドレス プールの作成、重複しない CIDR の自動割り当て、予約済み IP の作成、使用状況の監視ができ、IPv4 と IPv6 のプールに対応します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-network-manager/concept-ip-address-management", "locator": "IP アドレス管理 (IPAM) とは", "retrievedAt": "2026-11-17T20:30:00Z" }]
           }
         ]
       },
