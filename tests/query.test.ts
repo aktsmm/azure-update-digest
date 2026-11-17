@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import { runQuery, defaultQuery, type DigestItem } from "../src/lib/query.js";
+import { runQuery, defaultQuery, matchedElsewhere, type DigestItem } from "../src/lib/query.js";
 import { classifyCategories, scoreImportance } from "../src/lib/classify.js";
 import { stableStringify } from "../src/lib/stable.js";
 
@@ -95,5 +95,18 @@ describe("classification", () => {
 describe("stable json", () => {
   it("is key-order independent", () => {
     expect(stableStringify({ b: 1, a: { d: 1, c: 2 } })).toBe(stableStringify({ a: { c: 2, d: 1 }, b: 1 }));
+  });
+});
+
+describe("matchedElsewhere", () => {
+  const aks = item("9", "2026-02-10", { title: "Auto scaling of ingestion limits", titleJa: "取り込み上限の自動スケール", products: ["Azure Kubernetes Service (AKS)", "Azure Monitor"], tags: ["Feature"], summary: { state: "generated", text: "Azure Monitor の取り込み上限を自動で調整します" } });
+  it("names the product that matched when it is not visible in the title or summary", () => {
+    expect(matchedElsewhere(aks, "kubernetes")).toEqual(["Azure Kubernetes Service (AKS)"]);
+  });
+  it("says nothing when the text is already visible, is empty, or does not match", () => {
+    expect(matchedElsewhere(aks, "monitor")).toEqual([]);
+    expect(matchedElsewhere(aks, "")).toEqual([]);
+    expect(matchedElsewhere(aks, "  ")).toEqual([]);
+    expect(matchedElsewhere(aks, "postgresql")).toEqual([]);
   });
 });
