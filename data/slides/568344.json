@@ -36,6 +36,9 @@
         "required": "optional",
         "summary": { "text": "評価向け。リージョンと前提条件（Elastic SAN ZRS）を確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/instance-zone-redundancy-configure?view=azuresql", "locator": "考慮事項", "retrievedAt": "2026-10-25T21:30:00Z" }] }
       },
+      "beforeAfter": {
+        "after": { "text": "アプリケーション構成を変えずに、コンピュートとデータを可用性ゾーンに分散し、最大 99.995% の稼働率を目指せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
       "panels": [
         {
           "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
