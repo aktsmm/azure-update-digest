@@ -36,6 +36,18 @@
         "required": "optional",
         "summary": { "text": "コスト最適化や容量計画をしたい場合に有効化を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "pricing": {
+        "kind": "free",
+        "text": "Log Analytics ワークスペースに送信されるデータ、クエリ、ストレージに追加料金なし",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/metrics/metrics-usage-insights", "locator": "冒頭", "retrievedAt": "2026-11-17T16:00:00Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "メトリック使用量の要因、未使用メトリック、使用傾向、取り込み量の変化を GA の機能として確認できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
