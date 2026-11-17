@@ -36,6 +36,14 @@
         "required": "optional",
         "summary": { "text": "WAF ログの調査を効率化したい場合に利用を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "beforeAfter": {
+        "before": {
+          "text": "プレビュー時点の Learn 記載では、リソース固有テーブルは非対応で、Azure Diagnostics モードの診断設定のみが対象",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/insights", "locator": "制限事項と考慮事項", "retrievedAt": "2026-11-17T14:40:00Z" }]
+        },
+        "after": { "text": "Azure Diagnostics とリソース固有ログの両方に対応し、調査用タブは Investigate に名称変更。要求は最終的な WAF の結果で 1 回だけ集計", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
@@ -137,6 +145,11 @@
             "q": "GA で変わった点は？",
             "a": "Azure Diagnostics とリソース固有ログの両方に対応し、Triage タブは Investigate に変わり、要求は最終結果で 1 回集計されます。",
             "evidence": [{ "url": "https://azure.microsoft.com/updates?id=579280" }]
+          },
+          {
+            "q": "ログの反映に遅延はありますか？",
+            "a": "メトリックはほぼリアルタイムですが、ログには取り込み遅延が生じることがあり、通常は 1〜5 分です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/insights" }]
           }
         ]
       },
