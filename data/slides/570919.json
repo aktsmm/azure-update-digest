@@ -36,6 +36,18 @@
         "required": "optional",
         "summary": { "text": "テスト実行環境の運用負荷を下げたい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "従量課金制（無料試用は 30 日・100 ブラウザー通話分まで。超過分は従量課金）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/how-to-try-playwright-workspaces-free", "locator": "無料試用版の制限", "retrievedAt": "2026-11-17T20:20:00Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "東日本を含む 3 リージョンで GA となり、既存の Playwright テストをクラウド ブラウザーで並列実行できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
@@ -148,6 +160,11 @@
             "q": "利用開始に必要な前提は？",
             "a": "Azure サブスクリプション、所有者または共同作成者などのロール、Playwright プロジェクト、Azure CLI が必要です。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/quickstart-run-end-to-end-tests", "locator": "前提条件", "retrievedAt": "2026-10-18T21:08:00Z" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "無料試用は 30 日・100 分までで、超過分は従量課金制になります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/app-testing/playwright-workspaces/how-to-try-playwright-workspaces-free", "locator": "無料試用版の制限", "retrievedAt": "2026-11-17T20:20:00Z" }]
           },
           {
             "q": "データはどこに保存されますか？",
