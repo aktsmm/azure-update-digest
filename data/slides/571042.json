@@ -40,6 +40,18 @@
           "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/how-to-troubleshooting-guides", "locator": "前提条件", "retrievedAt": "2026-10-16T06:50:00Z" }]
         }
       },
+      "pricing": {
+        "kind": "free",
+        "text": "ガイド自体の追加費用なし（既に支払っている Log Analytics の取り込みを超えるコストはかからない）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/troubleshoot/concepts-troubleshooting-guides", "locator": "冒頭", "retrievedAt": "2026-11-17T19:50:00Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "CPU・メモリ・IOPS・一時ファイル・autovacuum の問題を、メトリック・クエリ ストア・セッション・ログを関連付けて調査する手順が公開された",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
