@@ -103,6 +103,11 @@
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "ポリシーのオプション", "retrievedAt": "2026-11-09T00:00:00Z" }]
           },
           {
+            "q": "既定の Front Door ドメインでもポリシーを変更できますか？",
+            "a": "できません。既定の Front Door ドメインは常に Standard で、カスタマイズは不可です。選択できるのはカスタム ドメインです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "ポリシーのオプション", "retrievedAt": "2026-11-17T00:00:00Z" }]
+          },
+          {
             "q": "ポスト量子鍵交換はオリジンとの通信にも効きますか？",
             "a": "いいえ。クライアントから Front Door の接続のみが対象で、オリジンへの接続には鍵交換ポリシーを設定しません。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/frontdoor/tls-key-exchange-policy", "locator": "接続範囲", "retrievedAt": "2026-11-09T00:00:00Z" }]
