@@ -36,6 +36,9 @@
         "required": "optional",
         "summary": { "text": "7.6 を使いたい場合に、バージョンを更新する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "beforeAfter": {
+        "after": { "text": "PowerShell 7.6 でアプリをローカル開発し、Azure Functions のプランへデプロイできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
@@ -120,6 +123,25 @@
         "learn": [
           { "title": "Azure Functions PowerShell 開発者ガイド", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locale": "ja-jp" },
           { "title": "Azure Functions で言語スタックのバージョンを更新する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分のホスティング プランで PowerShell 7.6 は使えますか？",
+            "a": "Linux Consumption を除くプランで使えます。Windows Consumption、Premium、Dedicated、Flex Consumption が対象です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locator": "PowerShell のバージョン", "retrievedAt": "2026-11-17T19:40:00Z" }]
+          },
+          {
+            "q": "ローカルで 7.6 を試すには何が必要ですか？",
+            "a": "PowerShell 7.6 は .NET 10 が必要です。local.settings.json の FUNCTIONS_WORKER_RUNTIME_VERSION を 7.6 に設定します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locator": "特定のバージョンでのローカルな実行", "retrievedAt": "2026-11-17T19:40:00Z" }]
+          },
+          {
+            "q": "「~7」と指定すれば 7.6 に自動で上がりますか？",
+            "a": "上がりません。「~7」は 7.0.x を指すため、7.6 のようにメジャーとマイナーの両方を指定します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-reference-powershell", "locator": "特定のバージョンでのローカルな実行", "retrievedAt": "2026-11-17T19:40:00Z" }]
+          }
         ]
       },
       "render": { "continuationRequired": false }
