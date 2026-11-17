@@ -43,6 +43,10 @@
         { "label": "1 年・3 年 RI の購入・更新終了", "when": { "date": "2026-07-01", "precision": "day" } },
         { "label": "廃止", "when": { "date": "2029-11-15", "precision": "day" } }
       ],
+      "beforeAfter": {
+        "before": { "text": "廃止日までは、これらのシリーズは Azure SLA で引き続きサポートされる（容量拡張の制限は適用）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirements-and-capacity-restrictions", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-18T00:00:00Z" }] },
+        "after": { "text": "2029-11-15 以降は Retired 段階となりサポート対象外。作成・サイズ変更・実行・購入ができない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirements-and-capacity-restrictions", "locator": "汎用の廃止サイズ", "retrievedAt": "2026-11-18T00:00:00Z" }] }
+      },
       "panels": [
         {
           "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
@@ -85,6 +89,25 @@
         "learn": [
           { "title": "VM サイズ シリーズの提供終了、容量拡張の制限、モダナイゼーション ガイダンス", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirements-and-capacity-restrictions", "locale": "ja-jp" },
           { "title": "v5 VM シリーズに最新化する", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/sizes-v5-modernization-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "廃止日より前でも影響はありますか？",
+            "a": "2026 年 7 月から容量拡張の制限があり、対象シリーズのクォータ引き上げや新規サブスクリプションでのデプロイはできません。既存の承認済みクォータ内の運用は可能です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirements-and-capacity-restrictions", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-18T00:00:00Z" }]
+          },
+          {
+            "q": "Azure Government やソブリン クラウドも対象ですか？",
+            "a": "この廃止は Azure Government、21Vianet 運用の Azure、ソブリン クラウド リージョンには適用されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirements-and-capacity-restrictions", "locator": "汎用の廃止サイズ", "retrievedAt": "2026-11-18T00:00:00Z" }]
+          },
+          {
+            "q": "移行先はどのシリーズを選べばよいですか？",
+            "a": "最もスムーズなのは v5 シリーズです。最新の機能と性能を求める場合は v6 / v7 シリーズへの最新化が案内されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirements-and-capacity-restrictions", "locator": "汎用の廃止サイズ", "retrievedAt": "2026-11-18T00:00:00Z" }]
+          }
         ]
       },
       "render": { "continuationRequired": false }
