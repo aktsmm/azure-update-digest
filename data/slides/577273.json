@@ -37,13 +37,23 @@
         "summary": { "text": "SMS・音声が必要なユーザーを洗い出し、パスキー等で代替できるか確認。必要ならプロバイダーを選定する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "deadline": { "date": "2026-10-30", "precision": "day" }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "プロバイダーの SMS・音声配信費用と、サブスクリプションにデプロイする Azure 関数など Azure リソースの費用が発生する場合がある",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "コストを理解する", "retrievedAt": "2026-11-18T00:00:00Z" }]
+      },
+      "beforeAfter": {
+        "before": { "text": "SMS・音声認証は Microsoft が配信している（2027-02-01 から廃止開始予定）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "組織が選んだサードパーティのプロバイダー経由で SMS・音声を配信できる。OTP の生成と検証は Entra が引き続き管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "CYOT のしくみ", "retrievedAt": "2026-11-18T00:00:00Z" }] }
+      },
       "panels": [
         {
           "id": "scope", "heading": "適用範囲", "availability": "present", "priority": "core",
           "items": [
             { "text": "2026-10-30 から CYOT を有効化できる（構成画面もこの日以降）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "Important", "retrievedAt": "2026-10-26T00:00:00Z" }] },
             { "text": "プロバイダーは Microsoft Security Store から選び、契約は組織が直接管理", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
-            { "text": "プライベート プレビューの初期プロバイダーは Soprano と Telesign", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "使用可能なテレフォニー プロバイダー", "retrievedAt": "2026-10-26T00:00:00Z" }] }
+            { "text": "Learn 掲載のプロバイダーは Soprano、Telesign、Infobip", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers", "locator": "使用可能なテレフォニー プロバイダー", "retrievedAt": "2026-11-18T00:00:00Z" }] }
           ]
         },
         {
@@ -96,7 +106,12 @@
           },
           {
             "q": "どのプロバイダーを選べますか？",
-            "a": "初期は Soprano と Telesign で、一般提供に伴い増える予定です。Microsoft Security Store から選びます。",
+            "a": "Learn 掲載は Soprano、Telesign、Infobip で、Microsoft Security Store から選びます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers" }]
+          },
+          {
+            "q": "費用はどうなりますか？",
+            "a": "プロバイダーの配信費用と、Azure 関数など自分のサブスクリプションの Azure リソース費用の両方を確認します。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-phone-providers" }]
           }
         ]
