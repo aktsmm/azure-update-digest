@@ -148,6 +148,11 @@
             "q": "拡張機能はどう配布できますか？",
             "a": "URL ベースやファイル ベースの拡張機能ソース、または自己完結型の .zip バンドルで配布・インストールできます。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "拡張機能ソースを管理する", "retrievedAt": "2026-10-18T21:15:00Z" }]
+          },
+          {
+            "q": "プロジェクトで必要な拡張機能を指定できますか？",
+            "a": "azure.yaml の requiredVersions.extensions に、latest・正確なバージョン・セマンティック バージョン制約で宣言できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/azure-developer-cli/extensions/overview", "locator": "プロジェクトで必要な拡張機能を宣言する", "retrievedAt": "2026-10-18T21:15:00Z" }]
           }
         ]
       },
