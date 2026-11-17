@@ -82,3 +82,6 @@ a { color:var(--accent); }
 .fold > summary { display:flex; align-items:center; gap:8px; cursor:pointer; list-style:none; } .fold > summary::-webkit-details-marker { display:none; } .fold > summary h2 { margin:24px 0 8px; } .fold > summary::before { content:'▸'; color:var(--muted); font-size:.9rem; transition:transform .15s; margin-top:16px; } .fold[open] > summary::before { transform:rotate(90deg); } .fold > summary:focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:4px; } .fold > summary .fold-hint::after { content:'クリックで折りたたむ'; font-size:.78rem; color:var(--muted); margin-top:16px; display:inline-block; } .fold:not([open]) > summary .fold-hint::after { content:'クリックで開く'; }
 .skip-link { position:absolute; left:8px; top:-48px; z-index:100; background:#0b2a4a; color:#fff; padding:8px 14px; border-radius:6px; font-weight:700; text-decoration:none; } .skip-link:focus { top:8px; outline:2px solid #fff; outline-offset:2px; }
 #app:focus { outline:none; }
+.sr-only { position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline:3px solid #0b6bcb; outline-offset:2px; }
+.site-header a:focus-visible, .skip-link:focus-visible { outline-color:#fff; }
