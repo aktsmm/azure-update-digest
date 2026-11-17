@@ -158,6 +158,11 @@
             "q": "外部のモデルやツールも管理できますか？",
             "a": "OpenAI・Anthropic などの外部モデルや、外部の MCP サーバー、外部コーディング エージェントにも同じ管理を適用できます。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/ai-gateway/ai-governance" }]
+          },
+          {
+            "q": "アクセス権はどう管理しますか？",
+            "a": "モデル サービス・モデル プロバイダー・MCP は Unity Catalog のセキュリティ保護可能なオブジェクトで、EXECUTE などの権限でユーザーやグループに付与します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/unity-gateway/concepts" }]
           }
         ]
       },
