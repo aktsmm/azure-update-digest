@@ -131,6 +131,25 @@
           { "title": "SQL Server Management Studio におけるデータベース DevOps", "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops", "locale": "ja-jp" },
           { "title": "SQL データベース プロジェクトとは", "url": "https://learn.microsoft.com/ja-jp/sql/tools/sql-database-projects/sql-database-projects", "locale": "ja-jp" }
         ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "利用に必要な前提条件は？",
+            "a": ".NET SDK、SSMS、SSMS の Database DevOps ワークロードのインストールが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops" }]
+          },
+          {
+            "q": "Visual Studio で作成した既存の SQL プロジェクトは開けますか？",
+            "a": "SSMS は SDK スタイルの Microsoft.Build.Sql（SDK 2.1.0 以上）のみ対応で、従来形式は変換が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops" }]
+          },
+          {
+            "q": "データベースに接続せずに開発できますか？",
+            "a": "SQL データベース プロジェクトの開発は、データベースに接続せずオフラインで行えます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/ssms/database-devops" }]
+          }
+        ]
       }
     }
   ]
