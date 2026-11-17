@@ -26,6 +26,12 @@
         "change": { "text": "クラウド接続なしで、データ・AI モデル・SQL Server を同じ境界内に置ける", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "changeNature": "benefit"
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "SQL Server のライセンスと、切断運用プラットフォームのライセンスが別途必要",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/deploy-disconnected?view=sql-server-ver17", "locator": "Licensing and support boundaries", "retrievedAt": "2026-11-17T18:13:00Z" }]
+      },
       "action": {
         "required": "optional",
         "summary": { "text": "切断環境で SQL Server を使う予定があれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
@@ -129,6 +135,25 @@
         "learn": [
           { "title": "切断された環境で Azure Local に SQL Server をデプロイする", "url": "https://learn.microsoft.com/ja-jp/sql/sql-server/azure-local/deploy-disconnected?view=sql-server-ver17", "locale": "ja-jp" },
           { "title": "SQL Server on Azure Local overview", "url": "https://learn.microsoft.com/sql/sql-server/azure-local/overview?view=sql-server-ver17", "locale": "en-us" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "Azure Arc の SQL Server 拡張機能は使えますか？",
+            "a": "使えません。Azure Arc の SQL Server インベントリや Azure 側の管理機能は利用できず、各 VM でローカル ツールを使って管理・監視します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/deploy-disconnected?view=sql-server-ver17" }]
+          },
+          {
+            "q": "SQL Server のバックアップはプラットフォームで取得されますか？",
+            "a": "されません。切断運用のバックアップ機能は制御プレーンの VM データのみが対象で、SQL Server は別途バックアップを構成します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/deploy-disconnected?view=sql-server-ver17" }]
+          },
+          {
+            "q": "ライセンスはどうなりますか？",
+            "a": "適切な SQL Server ライセンスに加え、切断運用プラットフォームのライセンスが別途必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/sql/sql-server/azure-local/deploy-disconnected?view=sql-server-ver17" }]
+          }
         ]
       },
       "render": { "continuationRequired": false }
