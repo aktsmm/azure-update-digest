@@ -37,6 +37,10 @@
         "summary": { "text": "共有を棚卸しし、シナリオごとに移行先を選んで検証する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "移行計画の考慮事項", "retrievedAt": "2026-11-15T22:30:00Z" }] },
         "deadline": { "date": "2029-11-12", "precision": "day" }
       },
+      "beforeAfter": {
+        "before": { "text": "廃止日までは、既存の Data Share をメンテナンス モードで利用でき、サポート対象のインシデントは既存の Azure サポート チャネルで扱われる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/data-share/retirement", "locator": "重要 / サポートとエスカレーション", "retrievedAt": "2026-11-17T13:30:00Z" }] },
+        "after": { "text": "2029年11月12日に廃止。共有ワークロードを Fabric などの代替手段へ移行しておく必要がある", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
       "timeline": [
         { "label": "発表", "when": { "date": "2026-11-14", "precision": "day" } },
         { "label": "廃止", "when": { "date": "2029-11-12", "precision": "day" } }
