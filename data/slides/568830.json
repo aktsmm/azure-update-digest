@@ -28,6 +28,12 @@
         "categories": ["compute", "containers", "ops-governance", "devtools"],
         "importance": "notable"
       },
+      "pricing": {
+        "kind": "free",
+        "text": "API サーバーと etcd のプラットフォーム メトリックは無料で自動収集",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor", "locator": "コントロール プレーン プラットフォームのメトリック", "retrievedAt": "2026-11-18T00:00:00Z" }]
+      },
       "audience": {
         "who": { "text": "**AKS クラスターの運用・プラットフォーム チーム**（Managed Prometheus を使う／検討している方）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "change": { "text": "コントロール プレーンとワークロード／スケーリングの相互作用を、メトリックで継続的に把握できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
@@ -102,7 +108,7 @@
         "qa": [
           { "q": "利用の前提条件は？", "a": "Managed Prometheus とマネージド ID 認証が必要です。Azure Private Link は非対応です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor" }] },
           { "q": "費用はかかりますか？", "a": "Managed Prometheus は収集データのインジェストとクエリに基づく課金です。API サーバー等のプラットフォーム メトリックは無料です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/essentials/prometheus-metrics-overview" }, { "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor" }] },
-          { "q": "既存クラスターで有効にするには？", "a": "Managed Prometheus 有効済みなら、az aks update に --enable-control-plane-metrics を指定します。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor" }] },
+          { "q": "既存クラスターで有効にするには？", "a": "Managed Prometheus 有効済みなら、az aks update に --enable-control-plane-metrics を指定します。プレビュー中に有効化済みのクラスターは自動的に有効になります。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/control-plane-metrics-monitor" }] },
           { "q": "日本リージョンで使えますか？", "a": "AKS は全リージョンで提供される基盤サービスに分類されています。", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category" }] }
         ]
       },
