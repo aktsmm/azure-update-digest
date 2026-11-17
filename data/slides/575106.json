@@ -37,6 +37,10 @@
         "summary": { "text": "API を .NET 10 に移行し、apiRuntime を指定して再デプロイする", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "deadline": { "date": "2026-11-10", "precision": "day" }
       },
+      "beforeAfter": {
+        "before": { "text": "終了日までは、.NET 8 / .NET 9 のマネージド Functions API がサポートされる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/static-web-apps/languages-runtimes", "locator": "API", "retrievedAt": "2026-11-17T13:50:00Z" }] },
+        "after": { "text": "終了日以降もアプリは動作するが、セキュリティ更新は提供されない。.NET 10 への移行が必要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
       "timeline": [
         { "label": "発表", "when": { "date": "2026-11-10", "precision": "day" } },
         { "label": "サポート終了", "when": { "date": "2026-11-10", "precision": "day" } }
