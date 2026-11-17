@@ -84,6 +84,25 @@
           { "title": "Azure Arc から SCVMM 環境を削除する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-arc/system-center-virtual-machine-manager/remove-scvmm-from-azure-arc", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "廃止後も今の SCVMM 環境は使い続けられますか？",
+            "a": "オンプレミスの SCVMM 自体は引き続き利用できます。廃止されるのは Azure Arc 対応 SCVMM のみで、既存の機能は 2029 年 9 月まで利用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-arc/system-center-virtual-machine-manager/transition-guidance" }]
+          },
+          {
+            "q": "新規にオンボードできますか？",
+            "a": "新規のオンボードは 2026 年 10 月で終了します。新規の場合は Azure Arc 対応サーバーや Azure Local の評価が案内されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-arc/system-center-virtual-machine-manager/transition-guidance" }]
+          },
+          {
+            "q": "どの移行先を選べばよいですか？",
+            "a": "Azure 管理サービスのみ利用なら Azure Arc 対応サーバーです。VM ライフサイクル操作も使う場合は arc-vmm-feedback@microsoft.com へ連絡します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/azure-arc/system-center-virtual-machine-manager/transition-guidance" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
