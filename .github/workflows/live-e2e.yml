@@ -1,0 +1,37 @@
+name: Live site e2e
+
+# 公開サイトを実際のブラウザで毎日通して検査する（AI は使わない）。
+# 検索・絞り込み・期間・アーカイブ・選択と JSON・PDF/PPTX のダウンロード・キーボード・スマホ幅・コンソールエラーを確かめる。
+# 失敗すると heal-on-failure が保守エージェントを起動する。
+# 毎日 12:30 JST（03:30 UTC）。収集とデプロイが終わったあとの時間帯。実行は遅れることがある。
+on:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: live-e2e
+  cancel-in-progress: false
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      BASE_URL: https://aktsmm.github.io/azure-update-digest/
+      CHROME_PATH: /usr/bin/google-chrome
+      E2E_PDF_PASSWORD: ${{ secrets.PDF_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Run the live-site smoke test
+        run: npx tsx scripts/e2e-smoke.ts
