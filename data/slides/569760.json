@@ -48,6 +48,20 @@
           "origin": "editorial", "assertion": "recommendation", "verification": "unverified"
         }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "トライアル中は常時稼働の基本料金なし。エージェントが作業した分の AAU のみ課金（通常の常時稼働料金はエージェント時間あたり 4 AAU）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/pricing-billing", "locator": "常時稼働フロー (固定コスト)", "retrievedAt": "2026-11-17T21:10:00Z" }
+        ]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "新規のお客様は、30 日間のトライアルで SRE Agent を作成し、運用ツールやデータソースに接続して試せる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
