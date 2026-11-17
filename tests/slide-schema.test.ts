@@ -18,6 +18,7 @@ function renderedTexts(deck: any): string[] {
     out.push(s.title.ja, s.title.subtitleJa ?? "", s.audience.who.text, s.audience.change.text, s.action.summary.text);
     if (s.beforeAfter?.before) out.push(s.beforeAfter.before.text);
     if (s.beforeAfter?.after) out.push(s.beforeAfter.after.text);
+    if (s.pricing) out.push(s.pricing.text);
     for (const p of s.panels) if (p.availability === "present") for (const i of p.items) out.push(i.text);
     for (const g of s.glossary ?? []) out.push(g.oneLine.text);
     if (s.region?.note) out.push(s.region.note);
@@ -30,6 +31,19 @@ describe("slide-deck schema", () => {
     const ok = validate(sample);
     expect(validate.errors ?? []).toEqual([]);
     expect(ok).toBe(true);
+  });
+
+  it("pricing is optional, needs evidence and a known kind", () => {
+    expect(sample.slides.some((s: any) => s.pricing)).toBe(true);
+    const noEvidence = clone(sample);
+    delete noEvidence.slides.find((s: any) => s.pricing).pricing.evidence;
+    expect(validate(noEvidence)).toBe(false);
+    const badKind = clone(sample);
+    badKind.slides.find((s: any) => s.pricing).pricing.kind = "cheap";
+    expect(validate(badKind)).toBe(false);
+    const without = clone(sample);
+    delete without.slides.find((s: any) => s.pricing).pricing;
+    expect(validate(without)).toBe(true);
   });
 
   it("speaker-notes Q&A is optional, needs evidence, and is capped", () => {

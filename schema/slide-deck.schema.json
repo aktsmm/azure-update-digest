@@ -168,6 +168,18 @@
           "properties": { "before": { "$ref": "#/$defs/claim" }, "after": { "$ref": "#/$defs/claim" }, "note": { "type": "string" } },
           "description": "before is shown only when a first-party source describes the earlier behaviour; otherwise omit it (the slide degrades to after-only)."
         },
+        "pricing": {
+          "type": "object", "additionalProperties": false, "required": ["kind", "text", "origin", "assertion", "verification", "evidence"],
+          "description": "Billing / cost note. Include only when a first-party source states it (free, paid, billing starts, price or billing change); otherwise omit the whole object.",
+          "properties": {
+            "kind": { "enum": ["free", "paid", "change"], "description": "free = no extra charge; paid = billed; change = a price or billing change." },
+            "text": { "type": "string", "minLength": 1 },
+            "origin": { "enum": ["mrc", "learn", "derived", "editorial"] },
+            "assertion": { "enum": ["fact", "inference", "recommendation"] },
+            "verification": { "enum": ["verified", "source-only", "unverified", "stale"] },
+            "evidence": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/evidence" } }
+          }
+        },
         "timeline": {
           "type": "array",
           "items": { "type": "object", "required": ["label", "when"], "additionalProperties": false, "properties": { "label": { "type": "string" }, "when": { "$ref": "#/$defs/precisionDate" } } }
