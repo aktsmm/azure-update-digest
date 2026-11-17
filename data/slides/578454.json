@@ -39,6 +39,9 @@
         "required": "optional",
         "summary": { "text": "評価向け。プレビューは SLA なしで本番ワークロードには非推奨", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/container-storage/distributed-accelerator-for-cloud-storage-overview", "locator": "Important", "retrievedAt": "2026-11-11T23:58:00Z" }] }
       },
+      "beforeAfter": {
+        "after": { "text": "クラスター内のローカル NVMe キャッシュを再利用し、スケールアウトやノード交換時の Blob からの再ダウンロードを減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
       "panels": [
         {
           "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
