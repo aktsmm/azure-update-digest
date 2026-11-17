@@ -6,6 +6,8 @@ import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
  */
 const CHANGE_NATURE: Record<string, string> = { risk: "breaking", warning: "breaking", negative: "breaking", positive: "benefit", none: "neutral", info: "neutral" };
 
+const PRICING_KIND: Record<string, string> = { included: "free", "no-charge": "free", none: "free", "free-of-charge": "free", billed: "paid", charged: "paid", "price-change": "change", "pricing-change": "change", "billing-change": "change" };
+
 export function repairSlide(deck: any): string[] {
   const fixes: string[] = [];
   for (const s of deck?.slides ?? []) {
@@ -13,6 +15,11 @@ export function repairSlide(deck: any): string[] {
     if (a && typeof a.changeNature === "string" && CHANGE_NATURE[a.changeNature]) {
       fixes.push(`audience.changeNature ${a.changeNature} -> ${CHANGE_NATURE[a.changeNature]}`);
       a.changeNature = CHANGE_NATURE[a.changeNature];
+    }
+    const pr = s?.pricing;
+    if (pr && typeof pr.kind === "string" && PRICING_KIND[pr.kind]) {
+      fixes.push(`pricing.kind ${pr.kind} -> ${PRICING_KIND[pr.kind]}`);
+      pr.kind = PRICING_KIND[pr.kind];
     }
     const r = s?.region;
     // "confirmed" means the feature itself was checked; evidence about the service or a policy is "service-level" / "policy"
