@@ -139,6 +139,11 @@
             "q": "リンクを受け取った人は資格情報なしで接続できますか？",
             "a": "できません。リンクに資格情報は含まれないため、管理者がサインイン資格情報を別途提供する必要があります。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "VM への接続", "retrievedAt": "2026-10-21T22:10:00Z" }]
+          },
+          {
+            "q": "リンクの作成や削除は誰でもできますか？",
+            "a": "既定では組織内のユーザーは読み取り権限のみで、作成・削除はできません。IAM で Bastion ホストに対する該当のアクセス許可を付与します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/shareable-link", "locator": "アクセス許可", "retrievedAt": "2026-11-17T21:14:00Z" }]
           }
         ]
       },
