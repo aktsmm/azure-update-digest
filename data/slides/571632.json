@@ -36,6 +36,37 @@
         "required": "optional",
         "summary": { "text": "メモリや書き込み性能に課題があれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "追加メモリは 1 時間あたり GB 単位で課金（課金対象 = 合計メモリ − 既定メモリ）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "価格設定", "retrievedAt": "2026-11-17T19:00:00Z" }]
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "既定ではメモリは vCore 数で決まる静的な値（メモリ増には vCore の追加が必要）",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql", "locator": "フレキシブルメモリ", "retrievedAt": "2026-11-17T19:00:00Z" }]
+        },
+        "after": {
+          "text": "vCore 数を変えずにメモリ量を変更でき、Business Critical はより高いログ書き込み上限に対応",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "メモリ変更に追加費用はかかりますか？",
+            "a": "追加メモリは 1 時間あたり GB 単位で課金されます。課金対象は合計メモリから既定メモリを引いた量です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql" }]
+          },
+          {
+            "q": "メモリはどの範囲で選べますか？",
+            "a": "vCore 数ごとに最小・最大が決まっています。たとえば 4 vCore では 28、32、40、48 GB から選べます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/resource-limits?view=azuresql" }]
+          }
+        ]
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
