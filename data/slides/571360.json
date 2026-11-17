@@ -212,6 +212,15 @@
             ]
           },
           {
+            "q": "自分の組織は対象ですか？",
+            "a": "Windows App で Azure Virtual Desktop に接続し、端末側にファイアウォールやプロキシ等の制御を適用している組織が対象です。",
+            "evidence": [
+              {
+                "url": "https://azure.microsoft.com/updates?id=571360"
+              }
+            ]
+          },
+          {
             "q": "許可する通信のポートとプロトコルは何ですか？",
             "a": "3 つの FQDN すべてで TCP 443 の送信通信です。",
             "evidence": [
