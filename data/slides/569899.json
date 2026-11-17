@@ -158,6 +158,11 @@
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/logs-table-plans", "locator": "テーブル プランを変更する", "retrievedAt": "2026-10-18T22:08:00Z" }]
           },
           {
+            "q": "プランを変更するのに必要な権限は？",
+            "a": "Log Analytics ワークスペースに対する workspaces/write と workspaces/tables/write の権限が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/logs-table-plans", "locator": "必要なアクセス許可", "retrievedAt": "2026-11-17T20:55:00Z" }]
+          },
+          {
             "q": "従来の価格レベルのワークスペースでも使えますか？",
             "a": "使えません。Basic と Auxiliary プランは従来の価格レベルのワークスペースでは利用できません。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-monitor/logs/data-platform-logs", "locator": "テーブル プランの比較", "retrievedAt": "2026-10-18T22:08:00Z" }]
