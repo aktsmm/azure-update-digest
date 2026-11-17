@@ -47,7 +47,7 @@ const input = {
   existingSummaryJa: summary && summary.sourceFingerprint === item.fingerprint ? summary.summaryJa : null,
   verifiedLearnCandidates: (related?.candidates ?? []).filter((c) => c.verified).map((c) => ({ title: c.title, url: c.url, locale: c.locale })),
   snapshotDateJst: toJstDate(Date.now()),
-  ...(regenerate ? { regenerate: { existingSlide: `data/slides/${item.canonicalKey}.json`, instruction: "The slide already exists. Overwrite that file with an improved version: keep every statement that the sources still support (same wording where possible) and add the optional speakerNotes.qa. Do not call noop because the file exists." } } : {}),
+  ...(regenerate ? { regenerate: { existingSlide: `data/slides/${item.canonicalKey}.json`, instruction: "The slide already exists. Overwrite that file with an improved version: keep every statement that the sources still support (same wording where possible) add the optional speakerNotes.qa, fill beforeAfter.before when a first-party source states the previous behavior, and add pricing only when a first-party source states billing (free / paid / change) with evidence. Do not call noop because the file exists." } } : {}),
 };
 
 mkdirSync(out.replace(/[\\/][^\\/]+$/, ""), { recursive: true });

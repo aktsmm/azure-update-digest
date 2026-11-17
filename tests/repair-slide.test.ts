@@ -16,6 +16,13 @@ describe("repairSlide", () => {
     expect(validateDeck(deck)).toEqual([]);
   });
 
+  it("maps pricing.kind spelling slips to the schema vocabulary", () => {
+    const deck = load("573415");
+    deck.slides[0].pricing = { kind: "included", text: "追加料金なし", origin: "learn", assertion: "fact", verification: "verified", evidence: [{ url: "https://learn.microsoft.com/azure/x", locator: "a", retrievedAt: "2026-10-21T00:00:00Z" }] };
+    expect(repairSlide(deck)).toEqual(["pricing.kind included -> free"]);
+    expect(validateDeck(deck)).toEqual([]);
+  });
+
   it("leaves a valid slide untouched", () => {
     const deck = load("573415");
     const before = JSON.stringify(deck);
