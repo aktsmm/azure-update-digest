@@ -36,6 +36,12 @@
         "required": "optional",
         "summary": { "text": "ログ量が多く困っていれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "収集されたフロー ログのギガバイト単位で課金（1 サブスクリプションあたり月 5 GB まで無料）。ストレージは別課金",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-overview", "locator": "価格", "retrievedAt": "2026-11-17T15:40:00Z" }]
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
@@ -115,6 +121,11 @@
             "q": "既存のフロー ログにフィルターを追加できますか？",
             "a": "Set-AzNetworkWatcherFlowLog で、フロー ログを再作成せずに条件を更新できます。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-filtering" }]
+          },
+          {
+            "q": "費用はどうなりますか？",
+            "a": "VNet フロー ログは収集したログ量（GB）で課金され、1 サブスクリプションあたり月 5 GB まで無料です。ストレージは別課金です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/network-watcher/vnet-flow-logs-overview" }]
           },
           {
             "q": "ストレージの前提条件はありますか？",
