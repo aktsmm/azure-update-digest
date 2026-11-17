@@ -1,0 +1,112 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["580155"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-17T23:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "580155",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Front Door Premium の WAF でレート制限のグループ化が可能に",
+        "subtitleJa": "JA4・AS 番号・国/地域・None で数え、分散攻撃に対応（パブリック プレビュー）",
+        "en": "Public Preview: Rate limit grouping for Azure Front Door Premium WAF"
+      },
+      "meta": {
+        "publishedJst": "2026-11-12",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Front Door", "Web Application Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Azure Front Door Premium の WAF** で分散型攻撃対策を行う方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "複数 IP に分散した攻撃を、共通の属性でまとめてレート制限できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "既存ルールは変わらない。必要なルールだけグループ化を選択する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "グループのレート制限トラフィック (プレビュー)", "retrievedAt": "2026-11-17T23:35:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "レート制限ルールはクライアント IP アドレスごとに個別にリクエストをカウントしていた", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "JA4 フィンガープリント・AS 番号・国/地域・None でカウントでき、複数 IP のトラフィックを 1 つのしきい値で制限できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "グループ化基準: JA4 フィンガープリント / AS 番号 / 国・地域 / None（一致を合算）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "グループのレート制限トラフィック (プレビュー)", "retrievedAt": "2026-11-17T23:35:00Z" }] },
+            { "text": "設定先: Azure portal、ARM、Bicep、REST API（groupBy）、Azure PowerShell", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "グループ設定時の注意点", "retrievedAt": "2026-11-17T23:35:00Z" }] },
+            { "text": "IP アドレス単位のカウント（既定）は一般提供のまま", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "Important", "retrievedAt": "2026-11-17T23:35:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プレビューのグループ化は Front Door Premium のみ。1 ルールにつき 1 変数でグループ化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "グループ設定時の注意点", "retrievedAt": "2026-11-17T23:35:00Z" }] },
+            { "text": "グループ内の正規ユーザーも攻撃と共に制限される可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "グループ化されたレート制限に関する考慮事項", "retrievedAt": "2026-11-17T23:35:00Z" }] },
+            { "text": "プロキシや CDN 経由では、IP・国/地域・AS 番号・JA4 がプロキシのものになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "グループ化されたレート制限に関する考慮事項", "retrievedAt": "2026-11-17T23:35:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "通常トラフィックのピークからしきい値を決め、まずログ アクションで展開する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "グループ化されたレート制限に関する考慮事項", "retrievedAt": "2026-11-17T23:35:00Z" }] },
+            { "text": "グループ化ルールは IP 単位のルールと併用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "グループ化されたレート制限に関する考慮事項", "retrievedAt": "2026-11-17T23:35:00Z" }] }
+          ]
+        }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Front Door はグローバルなサービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "List of nonregional services", "retrievedAt": "2026-11-17T23:35:00Z" }]
+      },
+      "glossary": [
+        { "termKey": "front-door", "term": "Azure Front Door", "type": "product", "oneLine": { "text": "グローバルなサービスとして提供される、Azure のフロントエンド配信サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "Types of nonregional services", "retrievedAt": "2026-11-17T23:35:00Z" }] } },
+        { "termKey": "waf", "term": "Web Application Firewall (WAF)", "type": "product", "oneLine": { "text": "Front Door と併用して、一部のサービス拒否攻撃などを軽減する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "冒頭", "retrievedAt": "2026-11-17T23:35:00Z" }] } },
+        { "termKey": "rate-limit", "term": "レート制限", "type": "term", "oneLine": { "text": "異常に多いトラフィックを検出してブロックする、カスタム WAF ルール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "冒頭", "retrievedAt": "2026-11-17T23:35:00Z" }] } },
+        { "termKey": "ja4", "term": "JA4 フィンガープリント", "type": "term", "oneLine": { "text": "TLS のネゴシエーション方法から得られるクライアントの識別情報。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "グループ化基準の表", "retrievedAt": "2026-11-17T23:35:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "一般提供の前に、評価とフィードバックのために全顧客へ公開される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-17T23:35:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=580155",
+        "learn": [
+          { "title": "Azure Front Door のレート制限とは何ですか?", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locale": "ja-jp" },
+          { "title": "Azure Web Application Firewall のレート制限規則を構成する", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit-configure", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存のレート制限ルールに影響はありますか？",
+            "a": "グループ化を指定しないルールはソケット IP アドレスごとにカウントするため、既存ルールは影響を受けません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "グループ設定時の注意点", "retrievedAt": "2026-11-17T23:35:00Z" }]
+          },
+          {
+            "q": "Front Door Standard でも使えますか？",
+            "a": "プレビューのグループ化は Azure Front Door Premium でのみ利用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "グループ設定時の注意点", "retrievedAt": "2026-11-17T23:35:00Z" }]
+          },
+          {
+            "q": "導入時に気をつける点は？",
+            "a": "通常トラフィックからしきい値を決め、まずログ アクションで展開します。IP 単位のルールも併用してください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-rate-limit", "locator": "グループ化されたレート制限に関する考慮事項", "retrievedAt": "2026-11-17T23:35:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
