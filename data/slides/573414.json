@@ -37,6 +37,16 @@
         "summary": { "text": "NVadsA10_v5 などのサポートされる VM シリーズへ移行する（UAE North は 2027-01-31 まで）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "deadline": { "date": "2026-09-30", "precision": "day" }
       },
+      "pricing": {
+        "kind": "change",
+        "text": "残っている NVv3 VM は割り当て解除状態になり、課金は発生しなくなる",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "どのような影響を受けますか", "retrievedAt": "2026-11-17T18:00:00Z" }]
+      },
+      "beforeAfter": {
+        "before": { "text": "廃止日までは NVv3 VM が稼働し、SLA とサポートの対象だった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "2026-09-30 以降、残る VM は割り当て解除となり、停止・課金なし・SLA とサポート対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "どのような影響を受けますか", "retrievedAt": "2026-11-17T18:00:00Z" }] }
+      },
       "timeline": [
         { "label": "RI 購入終了", "when": { "date": "2025-11-02", "precision": "day" } },
         { "label": "廃止", "when": { "date": "2026-09-30", "precision": "day" } },
@@ -78,6 +88,32 @@
         { "termKey": "deallocated", "term": "割り当て解除", "type": "term", "oneLine": { "text": "VM が機能せず、課金も発生しなくなる状態。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "どのような影響を受けますか", "retrievedAt": "2026-10-14T20:30:00Z" }] } },
         { "termKey": "nvadsa10v5", "term": "NVadsA10_v5", "type": "product", "oneLine": { "text": "NVIDIA A10 GPU と AMD EPYC プロセッサを搭載し、部分的な GPU を使える VM シリーズ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "移行の概要", "retrievedAt": "2026-10-14T20:30:00Z" }] } }
       ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "VM サイズ シリーズの廃止ポリシー（全リージョン共通。UAE North のみ 2027-01-31 まで延長）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement", "locator": "冒頭の Note", "retrievedAt": "2026-11-17T18:00:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "廃止後、残っている VM はどうなりますか？",
+            "a": "割り当て解除状態になり、機能が停止します。課金は発生せず、SLA とサポートの対象外になります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement" }]
+          },
+          {
+            "q": "移行先はどのシリーズが推奨ですか？",
+            "a": "NVadsA10_v5 が推奨です。用途により NC_RTXPRO6000BSE_v6、オフライン推論では NCasT4_v3 も候補です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement" }]
+          },
+          {
+            "q": "UAE North の期限はいつですか？",
+            "a": "UAE North は 2027 年 1 月 31 日まで継続利用でき、それまでに移行が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/nvv3-series-retirement" }]
+          }
+        ]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=573414",
         "learn": [
