@@ -34,4 +34,6 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Run the live-site smoke test
-        run: npx tsx scripts/e2e-smoke.ts
+        run: |
+          # a deploy that happens to be running makes the encrypted PDFs briefly unavailable; retry once before reporting a failure
+          npx tsx scripts/e2e-smoke.ts || { echo "retrying once in 2 minutes"; sleep 120; npx tsx scripts/e2e-smoke.ts; }
