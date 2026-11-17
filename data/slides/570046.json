@@ -107,6 +107,30 @@
           { "title": "Azure Batch とは", "url": "https://learn.microsoft.com/ja-jp/azure/batch/batch-technical-overview", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "提供終了後、既存のクラスターは動かなくなりますか？",
+            "a": "いいえ。既存のクラスターは引き続き実行されますが、2027年8月27日以降はサポートされません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/high-performance-computing/hpc-pack-2019-retirement-migration-guide?view=hpc19-ps", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-17T18:30:00Z" }]
+          },
+          {
+            "q": "HPC Pack からの直接アップグレード パスはありますか？",
+            "a": "新しい HPC Pack バージョンはありません。サポートされている Azure の HPC ソリューションへ移行する必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/high-performance-computing/hpc-pack-2019-retirement-migration-guide?view=hpc19-ps", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-17T18:30:00Z" }]
+          },
+          {
+            "q": "移行先の候補は何ですか？",
+            "a": "Azure CycleCloud、Azure Batch、Azure 仮想マシン（HB / HC / ND シリーズなど）が推奨オプションとして案内されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/high-performance-computing/hpc-pack-2019-retirement-migration-guide?view=hpc19-ps", "locator": "推奨される移行オプション", "retrievedAt": "2026-11-17T18:30:00Z" }]
+          },
+          {
+            "q": "終了日以降もサポートを延長してもらえますか？",
+            "a": "さらに時間が必要な場合は、サポート延長アンケートでシナリオを製品チームに共有できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/powershell/high-performance-computing/hpc-pack-2019-retirement-migration-guide?view=hpc19-ps", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-17T18:30:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
