@@ -55,6 +55,27 @@
         },
         "changeNature": "benefit"
       },
+      "beforeAfter": {
+        "before": {
+          "text": "VNet 統合がない場合、エージェントの送信通信は公共インターネット経由で流れる",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/azure/sre-agent/network-integration",
+              "locator": "冒頭",
+              "retrievedAt": "2026-11-17T21:00:00Z"
+            }
+          ]
+        },
+        "after": {
+          "text": "送信通信が VNet を経由し、NSG・ファイアウォール・プライベート DNS などの既存のネットワーク制御を適用できる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
       "action": {
         "required": "optional",
         "summary": {
