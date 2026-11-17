@@ -37,6 +37,16 @@
         "summary": { "text": "期限までに移行先シリーズへ VM のサイズを変更する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
         "deadline": { "date": "2026-09-01", "precision": "day" }
       },
+      "pricing": {
+        "kind": "change",
+        "text": "SKU を切り替えると価格が変更される場合がある。廃止日以降、対象 VM は課金も発生しない",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "移行は現在の課金にどのように影響しますか?", "retrievedAt": "2026-11-17T23:05:00Z" }]
+      },
+      "beforeAfter": {
+        "before": { "text": "廃止日までは SLA、インフラストラクチャの更新、メンテナンスを受けながら利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "現在のワークロードは Microsoft によって引き続きサポートされますか?", "retrievedAt": "2026-11-17T23:05:00Z" }] },
+        "after": { "text": "2026-09-01 以降は利用も購入もできず、サイズ変更していない VM は割り当て解除される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
       "timeline": [
         { "label": "発表", "when": { "date": "2026-08-05", "precision": "day" } },
         { "label": "容量制限（新規サブスクリプション不可）", "when": { "date": "2026-06-30", "precision": "day" } },
@@ -85,6 +95,13 @@
         { "termKey": "vm-resize", "term": "サイズ変更", "type": "term", "oneLine": { "text": "ポータル、PowerShell、CLI で VM のサイズを切り替える操作。VM は再起動される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "ターゲット VM シリーズにサイズを変更する", "retrievedAt": "2026-10-28T23:10:00Z" }] } },
         { "termKey": "vm-series-retirement", "term": "シリーズの廃止", "type": "label", "oneLine": { "text": "その日以降、対象シリーズの VM が動作を停止すること。事前の移行が必要。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "この提供終了は、私にどのような影響を与えるでしょうか。", "retrievedAt": "2026-10-28T23:10:00Z" }] } }
       ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "特定のリージョンに限らず、cc_v5 シリーズ自体の廃止が対象",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/lifecycle/retirement/ecccv5-series-retirement", "locator": "この提供終了は、私にどのような影響を与えるでしょうか。", "retrievedAt": "2026-11-17T23:05:00Z" }]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=568661",
         "learn": [
