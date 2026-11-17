@@ -120,6 +120,13 @@
         { "termKey": "attack-path", "term": "攻撃パス分析", "type": "term", "oneLine": { "text": "リスクの高い関係性や露出経路を示し、修復の優先順位付けに役立つ分析。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "主な機能", "retrievedAt": "2026-10-18T21:35:00Z" }] } },
         { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-18T21:35:00Z" }] } }
       ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "前提の Defender CSPM は、サポート対象外リージョンを除くすべてのリージョンで利用可能（日本は対象外に含まれない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/defender-for-cloud/regional-availability", "locator": "Defender CSPM", "retrievedAt": "2026-11-17T20:35:00Z" }]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=570282",
         "learn": [
@@ -137,6 +144,14 @@
             "q": "有効化してすぐに結果は見えますか？",
             "a": "初回の反映には最大 24 時間かかる場合があります。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers", "locator": "サーバーレス コンテナーの体制のしくみ" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "前提の Defender CSPM はすべてのリージョンで利用可能とされ、日本のリージョンはサポート対象外に含まれていません。ソブリン クラウドは対象外です。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/azure/defender-for-cloud/regional-availability" },
+              { "url": "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/posture-for-serverless-containers" }
+            ]
           },
           {
             "q": "実行時の脅威検出も含まれますか？",
