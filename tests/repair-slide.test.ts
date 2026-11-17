@@ -23,6 +23,15 @@ describe("repairSlide", () => {
     expect(validateDeck(deck)).toEqual([]);
   });
 
+  it("trims speaker-notes Q&A to the schema limit of 4", () => {
+    const deck = load("569236");
+    const qa = deck.slides[0].speakerNotes.qa;
+    deck.slides[0].speakerNotes.qa = [...qa, ...qa];
+    expect(validateDeck(deck).length).toBeGreaterThan(0);
+    expect(repairSlide(deck)).toEqual(["speakerNotes.qa 6 -> 4 items"]);
+    expect(validateDeck(deck)).toEqual([]);
+  });
+
   it("leaves a valid slide untouched", () => {
     const deck = load("573415");
     const before = JSON.stringify(deck);

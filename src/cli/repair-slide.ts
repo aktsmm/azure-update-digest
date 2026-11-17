@@ -16,6 +16,12 @@ export function repairSlide(deck: any): string[] {
       fixes.push(`audience.changeNature ${a.changeNature} -> ${CHANGE_NATURE[a.changeNature]}`);
       a.changeNature = CHANGE_NATURE[a.changeNature];
     }
+    // the schema allows at most 4 anticipated Q&A; keep the first 4 (the agent writes the most important first)
+    const qa = s?.speakerNotes?.qa;
+    if (Array.isArray(qa) && qa.length > 4) {
+      fixes.push(`speakerNotes.qa ${qa.length} -> 4 items`);
+      s.speakerNotes.qa = qa.slice(0, 4);
+    }
     const pr = s?.pricing;
     if (pr && typeof pr.kind === "string" && PRICING_KIND[pr.kind]) {
       fixes.push(`pricing.kind ${pr.kind} -> ${PRICING_KIND[pr.kind]}`);
