@@ -80,6 +80,32 @@
         { "termKey": "ha", "term": "高可用性（HA）", "type": "term", "oneLine": { "text": "障害時にスタンバイへ切り替えて稼働を続ける構成。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/configure-maintain/concepts-logical", "locator": "スロットと HA フェールオーバー", "retrievedAt": "2026-10-15T19:00:00Z" }] } },
         { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-10-15T19:00:00Z" }] } }
       ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Database for PostgreSQL は東日本・西日本で提供（機能単位のリージョン制限は記載なし）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "Azureリージョン", "retrievedAt": "2026-11-17T19:40:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Azure Database for PostgreSQL フレキシブル サーバーは東日本・西日本で提供されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "Azureリージョン", "retrievedAt": "2026-11-17T19:40:00Z" }]
+          },
+          {
+            "q": "メトリックの値はどう読めばよいですか？",
+            "a": "HA のプライマリとスタンバイ間でスロットが同期されていれば 1、されていなければ 0 です。0 はフェールオーバーに対して安全でない可能性を示します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/monitor/concepts-monitoring", "locator": "論理レプリケーション スロット同期の状態", "retrievedAt": "2026-11-17T19:40:00Z" }]
+          },
+          {
+            "q": "アラートは設定できますか？",
+            "a": "はい。Azure Database for PostgreSQL のメトリックにはアラートを構成できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/monitor/concepts-monitoring", "locator": "Metrics", "retrievedAt": "2026-11-17T19:40:00Z" }]
+          }
+        ]
+      },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=568414",
         "learn": [
