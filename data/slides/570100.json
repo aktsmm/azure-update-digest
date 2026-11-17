@@ -132,11 +132,26 @@
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "前提条件", "retrievedAt": "2026-10-18T21:48:00Z" }]
           },
           {
+            "q": "日本リージョンで使えますか？",
+            "a": "AKS は全リージョンで提供される基本サービスです。ただし CVM サイズが対象リージョンのサブスクリプションで利用可能である必要があります。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/azure/reliability/availability-service-by-category", "locator": "基本サービス", "retrievedAt": "2026-11-17T20:45:00Z" },
+              { "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "前提条件", "retrievedAt": "2026-11-17T20:45:00Z" }
+            ]
+          },
+          {
             "q": "費用はどこで確認できますか？",
             "a": "価格は機密 VM のサイズによって異なります。Linux Virtual Machines の料金ページで確認できます。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/virtual-machine-options", "locator": "価格", "retrievedAt": "2026-10-18T21:48:00Z" }]
           }
         ]
+      },
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "AKS は全リージョンで提供される基盤サービス。CVM サイズは対象リージョンで利用可能であることが前提",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/reliability/availability-service-by-category", "locator": "基本サービス", "retrievedAt": "2026-11-17T20:45:00Z" }]
       },
       "references": {
         "announcement": "https://azure.microsoft.com/updates?id=570100",
