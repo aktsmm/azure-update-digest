@@ -87,6 +87,25 @@
           { "title": "Azure Functions で言語スタックのバージョンを更新する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "2026-11-10 を過ぎると、関数アプリは止まりますか？",
+            "a": "アプリは動作し続けますが、.NET 8 / .NET 9 のセキュリティ更新は提供されなくなります。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=572838" }]
+          },
+          {
+            "q": "インプロセス モデルのアプリはどう移行すればよいですか？",
+            "a": "先に分離ワーカー モデルへ移行し、その後 .NET 10 へ更新します。手順は移行ガイドに掲載されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/migrate-dotnet-to-isolated-model", "locator": "冒頭", "retrievedAt": "2026-11-17T19:30:00Z" }]
+          },
+          {
+            "q": "言語バージョンの更新時にダウンタイムは発生しますか？",
+            "a": "更新時の再起動で通常 30～60 秒使用できなくなります。ステージング スロットの利用でダウンタイムを最小限にできます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/update-language-versions", "locator": "ステージング スロット / 再起動", "retrievedAt": "2026-11-17T19:30:00Z" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
