@@ -138,6 +138,25 @@
           { "title": "Visual Studio Code のための MSSQL 拡張機能", "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code?view=sql-server-ver17", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "保存時に自動で整形できますか？",
+            "a": "できます。settings.json で [sql] の editor.formatOnSave を true に設定すると、保存のたびに T-SQL が整形されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17" }]
+          },
+          {
+            "q": "整形スタイルはカスタマイズできますか？",
+            "a": "できます。設定 UI または settings.json の mssql.format.* で、キーワードの大文字小文字、位置合わせ、カンマ位置などを変更できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17" }]
+          },
+          {
+            "q": "MSSQL 拡張機能を既定のフォーマッターにするには？",
+            "a": "「既定のフォーマッターを構成」で SQL Server (mssql) を選ぶか、settings.json の [sql] に editor.defaultFormatter として ms-mssql.mssql を指定します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-sql-formatter?view=sql-server-ver17" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
