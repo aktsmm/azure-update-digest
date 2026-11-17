@@ -18,6 +18,11 @@ describe("generated PR selection", () => {
     expect(read("watchdog.yml")).toContain("--label data");
     expect(read("slide-dispatch.yml")).toContain("--label data");
   });
+  it("the watchdog judges a hung run by its job start time, not the run start (which includes the concurrency wait)", () => {
+    const w = read("watchdog.yml");
+    expect(w).toContain('select(.status == "in_progress") | .started_at');
+    expect(/--status in_progress[^\n]*startedAt/.test(w), "run-level startedAt cancels healthy runs that waited in the queue").toBe(false);
+  });
   it("auto-merge still only merges a PR that changes exactly one allowed file", () => {
     expect(read("auto-merge-slides.yml")).toContain("^data/slides/[0-9]{1,12}\\.json$");
     expect(read("auto-merge-summaries.yml")).toContain("^data/(summaries|related)/");
