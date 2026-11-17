@@ -37,6 +37,12 @@
         "required": "optional",
         "summary": { "text": "ルート数の上限やパス選択で課題があれば検討。利用には追加料金が発生", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "考慮事項と制限事項", "retrievedAt": "2026-11-08T21:50:00Z" }] }
       },
+      "pricing": {
+        "kind": "paid",
+        "text": "ルート マップの使用には追加料金が発生する（料金は Azure Route Server の料金ページを参照）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/route-server/route-maps-about", "locator": "考慮事項と制限事項", "retrievedAt": "2026-11-17T13:50:00Z" }]
+      },
       "panels": [
         {
           "id": "scope", "heading": "できること", "availability": "present", "priority": "core",
