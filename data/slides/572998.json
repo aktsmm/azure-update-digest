@@ -66,6 +66,20 @@
           { "title": "Azure SQL Database とは", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/sql-database-paas-overview", "locale": "ja-jp" }
         ]
       },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "プレビュー版の Azure SQL Dev Hub を本番で使えますか？",
+            "a": "パブリック プレビューは特に明記がない限り運用ワークロード向けではなく、通常 SLA もありません。評価用途での利用が前提です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/lifecycle/faq/azure-infrastructure", "locator": "パブリック プレビュー", "retrievedAt": "2026-11-17T19:05:00Z" }]
+          },
+          {
+            "q": "どの言語での接続ガイダンスがありますか？",
+            "a": ".NET、Python、Node.js、Java から Azure SQL へ接続するガイダンスのほか、実行可能なサンプルやトラブルシューティング情報が案内されています。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=572998" }]
+          }
+        ]
+      },
       "render": { "continuationRequired": false }
     }
   ]
