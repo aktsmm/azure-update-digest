@@ -142,6 +142,11 @@
             "q": "設定ファイルを直接編集できますか？",
             "a": "できます。コマンドは keybindings.json、結果ビューは settings.json の mssql.shortcuts で手動設定できます。",
             "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-keyboard-shortcuts" }]
+          },
+          {
+            "q": "変更時に注意することはありますか？",
+            "a": "既存のショートカットを上書きする場合があります。保存前にキーボード ショートカット エディターで競合がないか確認してください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-keyboard-shortcuts" }]
           }
         ]
       },
