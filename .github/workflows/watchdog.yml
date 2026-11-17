@@ -43,6 +43,21 @@ jobs:
               fi
             done
           done
+      - name: Cancel agent runs stuck in the queue
+        run: |
+          # a run that stays "queued" (never gets a runner) holds the serialized concurrency group and blocks every later run
+          limit=$(date -u -d '40 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
+          for wf in slide.lock.yml summarize.lock.yml; do
+            for id in $(gh run list --workflow "$wf" --status queued --limit 20 --json databaseId,createdAt \
+                -q ".[] | select(.createdAt < \"$limit\") | .databaseId"); do
+              echo "cancel queued $wf #$id (queued > 40 min)"
+              gh run cancel "$id" || true
+              sleep 30
+              if [ "$(gh run view "$id" --json status -q .status)" != "completed" ]; then
+                gh api -X POST "repos/$GH_REPO/actions/runs/$id/force-cancel" || true
+              fi
+            done
+          done
       - name: Re-run a failed Pages deploy once
         run: |
           read -r id attempt concl created < <(gh run list --workflow pages.yml --limit 1 --json databaseId,attempt,conclusion,createdAt \
