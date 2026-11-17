@@ -68,7 +68,8 @@
         {
           "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
           "items": [
-            { "text": "Allow のカスタム ルールでも本ルールセットは回避できない。除外には WAF 例外を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "HTTP DDoS ルールセットのしくみ（Important）", "retrievedAt": "2026-11-01T21:50:00Z" }] }
+            { "text": "Allow のカスタム ルールでも本ルールセットは回避できない。除外には WAF 例外を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "HTTP DDoS ルールセットのしくみ（Important）", "retrievedAt": "2026-11-01T21:50:00Z" }] },
+            { "text": "geo ルールは 500100 の後に評価され、IP 単位のしきい値内の分散トラフィックに適用される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset", "locator": "ジオルールの仕組み", "retrievedAt": "2026-11-17T15:30:00Z" }] }
           ]
         },
         {
@@ -104,6 +105,7 @@
           { "q": "どの Front Door が対象ですか？", "a": "Azure Front Door Premium が対象です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset" }] },
           { "q": "有効にするとすぐ攻撃をブロックしますか？", "a": "いいえ。ルールは既定で Log アクションなので、ログを確認してから各ルールのアクションを設定します。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset" }] },
           { "q": "日本リージョンで使えますか？", "a": "Azure Front Door はグローバル サービスで、特定のリージョンにデプロイするものではありません。", "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services" }] },
+          { "q": "有効になっているか確認する方法はありますか？", "a": "「Web Application Firewall HTTPDDoSRuleset Is Active」メトリックが 1 なら、学習が完了し対処できる状態です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset" }] },
           { "q": "geo ルールも GA ですか？", "a": "いいえ。geo ルール（500310 / 500320）はプレビューで、残りのルールが GA です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/http-ddos-ruleset" }] }
         ]
       }
