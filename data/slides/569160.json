@@ -36,6 +36,18 @@
         "required": "optional",
         "summary": { "text": "開発・検証用 DB が必要なら試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
       },
+      "pricing": {
+        "kind": "free",
+        "text": "無料枠の範囲内は無料。月次の枠を超えた場合は、自動一時停止か標準サーバーレス レートでの継続を選択",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/sql/tools/visual-studio-code-extensions/mssql/mssql-azure-integration", "locator": "冒頭 / Features", "retrievedAt": "2026-11-17T21:35:00Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "エディターを離れずに、無料の Azure SQL Database を作成して接続できる。ARM / Bicep / Terraform テンプレートも利用できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
       "panels": [
         {
           "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
