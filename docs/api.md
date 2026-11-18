@@ -8,7 +8,7 @@ GitHub Pages から配信する、読み取り専用の静的 JSON です。認�
 
 | パス | 内容 |
 | --- | --- |
-| `api/v1/index.json` | バージョン、取得時点（`snapshotAt`）、件数、月の一覧と取得状態、エンドポイント一覧、注意書き |
+| `api/v1/index.json` | バージョン、取得時点（`snapshotAt`）、件数、月の一覧と取得状態、エンドポイント一覧、注意書き。公式の一括登録日がある月は `months[].bulkRegistration`（`date`・`count`）|
 | `api/v1/latest.json` | 直近 30 日（取得時点の JST 日付まで）の更新 |
 | `api/v1/months/YYYY-MM.json` | 月別の更新一覧（作成日の JST 月） |
 | `api/v1/updates/{id}.json` | 1 件の詳細。スライド JSON があれば `slide` に含む |

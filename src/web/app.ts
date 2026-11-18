@@ -1,5 +1,5 @@
 import { addDays, isValidDateString, monthBounds, resolvePeriod, toJstDate, type Period } from "../lib/period.js";
-import { defaultQuery, runQuery, matchedElsewhere, IMPORTANCE_LEVELS, type DigestItem, type ImportanceLevel, type Query, type QueryResult } from "../lib/query.js";
+import { defaultQuery, runQuery, matchedElsewhere, bulkRegistrationDays, IMPORTANCE_LEVELS, type DigestItem, type ImportanceLevel, type Query, type QueryResult } from "../lib/query.js";
 import type { SiteMeta } from "../lib/site-data.js";
 import type { SlideEntry } from "./pdf-merge.js";
 import { orderSlides } from "../lib/slide-order.js";
@@ -391,11 +391,15 @@ function renderArchive() {
   const status = new Map(meta.backfill.months.map((m) => [m.month, m.status]));
   const names: Record<string, string> = { complete: "全件", partial: "部分", "in-progress": "取得中", failed: "失敗" };
   const months = [...new Set([...counts.keys(), ...status.keys()])].sort().reverse();
+  const bulk = bulkRegistrationDays(items);
   const rows = months.map((m) => {
     const st = status.get(m);
-    return `<tr><td><a href="#/archive/${m}">${m}</a></td><td>${counts.get(m) ?? 0} 件</td><td>${st ? (names[st] ?? "未取得") : "日次収集"}</td></tr>`;
+    const batch = [...bulk].filter(([d]) => d.startsWith(m)).map(([d, n]) => `${d} に ${n} 件`);
+    const note = batch.length ? `<div class="meta">一括登録を含む（${batch.join("、")}）</div>` : "";
+    return `<tr><td><a href="#/archive/${m}">${m}</a></td><td>${counts.get(m) ?? 0} 件${note}</td><td>${st ? (names[st] ?? "未取得") : "日次収集"}</td></tr>`;
   }).join("");
-  app.innerHTML = `<h1>月別アーカイブ</h1><p class="meta">件数は取得済みの更新です。取得状態が「全件」以外の月は、件数が全件とは限りません。</p>${backfillPanel()}<table><thead><tr><th>月 (JST)</th><th>取得済み件数</th><th>取得状態</th></tr></thead><tbody>${rows}</tbody></table>`;
+  const bulkNote = bulk.size ? `<p class="meta">月によっては、公式（Microsoft Release Communications）が過去の更新をまとめて登録した日があり、その月の件数が実際の更新数より多く見えます。各更新の提供時期（GA・プレビュー）は、更新ごとの表示が正です。</p>` : "";
+  app.innerHTML = `<h1>月別アーカイブ</h1><p class="meta">件数は取得済みの更新です。取得状態が「全件」以外の月は、件数が全件とは限りません。</p>${bulkNote}${backfillPanel()}<table><thead><tr><th>月 (JST)</th><th>取得済み件数</th><th>取得状態</th></tr></thead><tbody>${rows}</tbody></table>`;
 }
 
 function route() {
