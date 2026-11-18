@@ -1,4 +1,5 @@
 import * as PptxNs from "pptxgenjs";
+import JSZip from "jszip";
 import type { Slide } from "../lib/slide-html.js";
 import { CATEGORY_JA } from "../lib/slide-html.js";
 import { KIND_COLOR_HEX, KIND_ICON, paginateRows, sectionByKind } from "../lib/kind-section.js";
@@ -110,7 +111,7 @@ export async function buildDeckPptx(o: PptxOptions): Promise<ArrayBuffer> {
     tintShape(s, W * 0.68);
     frame(s, `作成日 ${o.createdUtc.slice(0, 10)}（UTC）`, source);
     s.addText("Microsoft Azure", { x: 0.9, y: 2.3, w: 8, h: 0.4, fontFace: FONT, fontSize: 18, bold: true, color: C.blue, margin: 0 });
-    s.addText("Azure アップデート情報", { x: 0.9, y: 2.8, w: 11, h: 1.0, fontFace: FONT, fontSize: 48, bold: true, color: C.navy, margin: 0 });
+    s.addText("Azure アップデート情報", { objectName: TITLE_NAME, x: 0.9, y: 2.8, w: 11, h: 1.0, fontFace: FONT, fontSize: 48, bold: true, color: C.navy, margin: 0 });
     let y = 4.0;
     if (o.periodLabel) { s.addText(`対象期間 ${o.periodLabel}`, { x: 0.9, y, w: 10, h: 0.5, fontFace: FONT, fontSize: 22, bold: true, color: C.blue, margin: 0 }); y += 0.65; }
     s.addText([{ text: String(order.length), options: { fontSize: 34, bold: true, color: C.navy } }, { text: " 件", options: { fontSize: 18, color: C.gray } }], { x: 0.9, y, w: 11, h: 0.7, fontFace: FONT, margin: 0, valign: "middle" });
@@ -133,7 +134,7 @@ export async function buildDeckPptx(o: PptxOptions): Promise<ArrayBuffer> {
     const s = pptx.addSlide();
     s.background = { color: C.white };
     frame(s, "Azure アップデート情報", source);
-    s.addText(t === 0 ? "目次" : "目次（続き）", { x: 0.7, y: 0.4, w: 6, h: 0.6, fontFace: FONT, fontSize: 28, bold: true, color: C.navy, margin: 0 });
+    s.addText(t === 0 ? "目次" : "目次（続き）", { objectName: TITLE_NAME, x: 0.7, y: 0.4, w: 6, h: 0.6, fontFace: FONT, fontSize: 28, bold: true, color: C.navy, margin: 0 });
     (tocPageRows[t] ?? []).forEach((r, i) => {
       const y = 1.25 + i * 0.4;
       const col = KIND_COLOR_HEX[r.kind];
@@ -155,7 +156,7 @@ export async function buildDeckPptx(o: PptxOptions): Promise<ArrayBuffer> {
     const s = pptx.addSlide();
     s.background = { color: C.white };
     frame(s, "Azure アップデート情報", source);
-    s.addText("概要", { x: 0.7, y: 0.4, w: 6, h: 0.6, fontFace: FONT, fontSize: 28, bold: true, color: C.navy, margin: 0 });
+    s.addText("概要", { objectName: TITLE_NAME, x: 0.7, y: 0.4, w: 6, h: 0.6, fontFace: FONT, fontSize: 28, bold: true, color: C.navy, margin: 0 });
     const kinds = new Map<string, number>();
     const cats = new Map<string, number>();
     for (const e of order) { kinds.set(e.label, (kinds.get(e.label) ?? 0) + 1); for (const c of e.meta.categories) cats.set(c, (cats.get(c) ?? 0) + 1); }
@@ -179,7 +180,7 @@ export async function buildDeckPptx(o: PptxOptions): Promise<ArrayBuffer> {
     const col = KIND_COLOR_HEX[sec.kind];
     ss.addShape("rect", { x: 1.0, y: 2.4, w: 1.6, h: 1.6, fill: { color: col }, line: { color: col, width: 0 } });
     ss.addText(KIND_ICON[sec.kind], { x: 1.0, y: 2.4, w: 1.6, h: 1.6, fontFace: FONT, fontSize: 60, bold: true, color: C.white, margin: 0, align: "center", valign: "middle" });
-    ss.addText(sec.label, { x: 3.0, y: 2.35, w: 9, h: 1.0, fontFace: FONT, fontSize: 44, bold: true, color: C.navy, margin: 0, valign: "middle" });
+    ss.addText(sec.label, { objectName: TITLE_NAME, x: 3.0, y: 2.35, w: 9, h: 1.0, fontFace: FONT, fontSize: 44, bold: true, color: C.navy, margin: 0, valign: "middle" });
     ss.addText(`${sec.items.length} 件`, { x: 3.0, y: 3.4, w: 9, h: 0.6, fontFace: FONT, fontSize: 24, color: C.gray, margin: 0, valign: "middle" });
     for (const sl of sec.items) addUpdateSlide(pptx, sl, labels);
   }
@@ -190,7 +191,7 @@ export async function buildDeckPptx(o: PptxOptions): Promise<ArrayBuffer> {
     s.background = { color: C.white };
     tintShape(s, W * 0.6);
     frame(s, "© 2026 yamapan（GitHub: aktsmm）  CC BY-NC-SA 4.0", source);
-    s.addText("以上", { x: 0, y: 2.6, w: W, h: 1.0, align: "center", fontFace: FONT, fontSize: 48, bold: true, color: C.navy, margin: 0 });
+    s.addText("以上", { objectName: TITLE_NAME, x: 0, y: 2.6, w: W, h: 1.0, align: "center", fontFace: FONT, fontSize: 48, bold: true, color: C.navy, margin: 0 });
     s.addText("Azure アップデート情報", { x: 0, y: 3.7, w: W, h: 0.5, align: "center", fontFace: FONT, fontSize: 20, bold: true, color: C.blue, margin: 0 });
     s.addText([
       { text: "GitHub Actions ＋ Agentic Workflow（GitHub Copilot）で生成しています。改善要望は GitHub（Issue）で対応します。", options: { breakLine: true } },
@@ -198,7 +199,29 @@ export async function buildDeckPptx(o: PptxOptions): Promise<ArrayBuffer> {
     ], { x: 0.9, y: 5.9, w: 11.5, h: 0.65, fontFace: FONT, fontSize: 10.5, color: C.gray, margin: 0, valign: "bottom" });
   }
 
-  return (await pptx.write({ outputType: "arraybuffer" })) as ArrayBuffer;
+  return addTitleRoles((await pptx.write({ outputType: "arraybuffer" })) as ArrayBuffer);
+}
+
+/** Name given to each slide's heading box so it can be marked as the slide title after pptxgenjs has written the file. */
+const TITLE_NAME = "Slide title";
+
+/**
+ * pptxgenjs writes every text box as a plain shape, so no slide has a title. A title is what screen readers, the outline view,
+ * slide navigation and PowerPoint's accessibility checker read as the slide's name. This adds the title role to the heading
+ * box of each slide and leaves its position and formatting untouched (a title placeholder in a master would override both).
+ */
+export async function addTitleRoles(bytes: ArrayBuffer): Promise<ArrayBuffer> {
+  const zip = await JSZip.loadAsync(bytes);
+  const marker = `name="${TITLE_NAME}"`;
+  for (const name of Object.keys(zip.files).filter((n) => /^ppt\/slides\/slide\d+\.xml$/.test(n))) {
+    const xml = await zip.file(name)!.async("string");
+    const i = xml.indexOf(marker);
+    if (i < 0) continue;
+    const end = xml.indexOf("<p:nvPr></p:nvPr>", i);
+    if (end < 0 || end - i > 400) continue;
+    zip.file(name, xml.slice(0, end) + `<p:nvPr><p:ph type="title"/></p:nvPr>` + xml.slice(end + "<p:nvPr></p:nvPr>".length));
+  }
+  return zip.generateAsync({ type: "arraybuffer", compression: "DEFLATE" });
 }
 
 function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string>) {
@@ -210,7 +233,7 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
   // header
   // PowerPoint does not apply fit: shrink until the text is edited, so pick the largest size that keeps the title on one line
   const titlePt = [24, 22, 21, 20, 19, 18, 17, 16].find((x) => lines(sl.title.ja, x * 1.06, W - M - 2.5) === 1) ?? 16;
-  s.addText(sl.title.ja, { x: M, y: 0.22, w: W - M - 2.5, h: 0.5, fontFace: FONT, fontSize: titlePt, bold: true, color: "0B2A4A", margin: 0, fit: "shrink" });
+  s.addText(sl.title.ja, { objectName: TITLE_NAME, x: M, y: 0.22, w: W - M - 2.5, h: 0.5, fontFace: FONT, fontSize: titlePt, bold: true, color: "0B2A4A", margin: 0, fit: "shrink" });
   if (sl.title.subtitleJa) s.addText(`― ${sl.title.subtitleJa}`, { x: M, y: 0.74, w: W - M - 2.5, h: 0.32, fontFace: FONT, fontSize: oneLinePt(`― ${sl.title.subtitleJa}`, 13, 9, W - M - 2.5), bold: true, color: C.navy, margin: 0, fit: "shrink" });
   s.addText([{ text: sl.title.en, options: { color: "8A95A6" } }, { text: `　${dateLine}`, options: { color: C.gray, bold: true } }], { x: M, y: 1.06, w: W - 2 * M, h: 0.26, fontFace: FONT, fontSize: 9.5, margin: 0, fit: "shrink" });
   s.addShape("roundRect", { x: W - M - 1.9, y: 0.25, w: 1.9, h: 0.42, fill: { color: KIND_COLOR[sl.kind] ?? C.mute }, line: { color: KIND_COLOR[sl.kind] ?? C.mute, width: 0 }, rectRadius: 0.2 });

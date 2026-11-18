@@ -12,6 +12,39 @@ const slideXml = async (s: unknown) => {
   return (await Promise.all(names.map((n) => zip.file(n)!.async("string")))).join("\n");
 };
 
+const slideFiles = async (s: unknown) => {
+  const zip = await JSZip.loadAsync(await buildDeckPptx({ slides: [s], categoryLabels: {}, periodLabel: null, totalInPeriod: 1, createdUtc: "2026-01-01T00:00:00Z" } as never));
+  const names = Object.keys(zip.files).filter((n) => /^ppt\/slides\/slide\d+\.xml$/.test(n)).sort((a, b) => Number(a.match(/\d+/)![0]) - Number(b.match(/\d+/)![0]));
+  return Promise.all(names.map((n) => zip.file(n)!.async("string")));
+};
+
+/** The whole <p:sp> element that carries the title role. */
+const titleShape = (xml: string) => {
+  const at = xml.indexOf('<p:ph type="title"/>');
+  return xml.slice(xml.lastIndexOf("<p:sp>", at), xml.indexOf("</p:sp>", at));
+};
+
+describe("PPTX slide titles", () => {
+  it("every slide (cover, contents, summary, section, update, ending) has a title that holds its heading", async () => {
+    const xmls = await slideFiles(base());
+    expect(xmls.length).toBeGreaterThanOrEqual(6);
+    for (const [i, x] of xmls.entries()) {
+      expect(x, `slide ${i + 1} has no title role`).toContain('<p:ph type="title"/>');
+      expect(x.match(/<p:ph type="title"\/>/g)!.length, `slide ${i + 1} must have exactly one title`).toBe(1);
+    }
+    // the update slide is the one whose own title shape holds the heading (the contents page only lists it in a table)
+    const update = xmls.find((x) => titleShape(x).includes(base().title.ja));
+    expect(update, "no slide has the update heading as its title").toBeTruthy();
+    expect(titleShape(xmls[0]!)).toContain("Azure アップデート情報");
+  });
+  it("keeps the heading's position and size (a title placeholder in a master would have overridden them)", async () => {
+    const xmls = await slideFiles(base());
+    const sp = titleShape(xmls.find((x) => titleShape(x).includes(base().title.ja))!);
+    expect(sp).toMatch(/<a:off x="\d+" y="\d+"\/><a:ext cx="\d+" cy="\d+"\/>/);
+    expect(sp).toMatch(/sz="\d+"/);
+  });
+});
+
 describe("これまで / これから and pricing rendering", () => {
   it("PDF html uses Japanese labels and shows the pricing strip only when present", () => {
     const o = { fs: 14, sfs: 14, includeDetail: true } as never;
