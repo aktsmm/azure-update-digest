@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "580624"
+  },
+  "fetchedAt": "2026-11-18T02:56:38.822Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580624",
+    "created": "2026-11-17T20:00:24.008474Z",
+    "description": "Announcing the limited preview of Azure compute templates, a new capability that simplifies virtual machine (VM) configuration management by enabling customers to define, version, and reuse standardized VM configurations across deployments.With compute templates, customers can create a reusable configuration baseline for common VM settings, including OS, storage, and security, and store it as a versioned instance profile in Azure Compute Gallery.Key benefits include:Simplified VM deployments: Define common configurations once and reuse them across supported VM deployments.Improved consistency: Reduce configuration drift and maintenance overhead through standardized, versioned configurations.Flexible deployment options: Apply templates to single-instance VMs and VM adaptive placement while supporting deployment-specific settings and overrides.Streamlined management: Manage reusable configurations independently of individual deployment requests.During the limited preview, compute templates are available through REST APIs for supported single-instance VMs, including VM adaptive placement. Preview registration and subscription enablement are required. VM scale sets and Azure Compute Fleet are not currently supported.Learn more:Announcement blog Azure compute templates documentation",
+    "id": "580624",
+    "modified": "2026-11-17T20:00:24.008474Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Limited Preview: Compute templates for Azure"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

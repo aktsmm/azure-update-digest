@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "579928"
+  },
+  "fetchedAt": "2026-11-18T02:53:06.616Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "579928",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure HorizonDB now supports database auditing with the pgAudit\nextension. You can capture selected PostgreSQL database activities, including\ndata access, modifications, role changes, and DDL operations, and send audit\nlogs to Azure Monitor Log Analytics through diagnostic settings for centralized\nquerying and analysis.\nThis capability helps organizations improve visibility into database activity\nand support security, governance, and compliance scenarios.Learn\nmore. ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "579928",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure HorizonDB"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure HorizonDB Auditing"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

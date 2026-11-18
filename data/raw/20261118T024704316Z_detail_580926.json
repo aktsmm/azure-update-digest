@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "580926"
+  },
+  "fetchedAt": "2026-11-18T02:47:04.316Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580926",
+    "created": "2026-11-17T20:15:03.877447Z",
+    "description": "Azure ExpressRoute is introducing link groups for ExpressRoute Direct, enabling high-throughput workloads to scale network connectivity while reducing operational complexity. Instead of managing multiple independent ExpressRoute connections, you can aggregate multiple physical links into a single logical connection.With link groups, you can:Scale connectivity capacity by grouping multiple ExpressRoute Direct links into a single logical connection.Improve resiliency with Link Aggregation Control Protocol (LACP), including dynamic link negotiation and failover.Simplify operations by managing aggregated connectivity and monitoring at the group level instead of operating independent connections.Customize availability behavior by configuring the minimum number of active links required for the group to remain operational.Learn more.",
+    "id": "580926",
+    "modified": "2026-11-17T20:15:03.877447Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Hybrid + multicloud",
+      "Networking"
+    ],
+    "products": [
+      "Azure ExpressRoute"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Scale ExpressRoute Direct connectivity with link groups"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

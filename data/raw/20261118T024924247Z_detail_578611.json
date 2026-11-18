@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "578611"
+  },
+  "fetchedAt": "2026-11-18T02:49:24.247Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578611",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Auto-create connection monitor introduces a new, faster way to set up network monitoring across an entire\nAzure subscription. Until now, connection monitor tests were created one\nconnection at a time, with each region, source, destination, test configuration\nand alert set up by hand. That approach gives precise control, but setting up\nbroad coverage takes significant effort. With this release, customers can\nchoose auto-create next to the existing manual option: select a subscription as\nthe scope, and Connection Monitor recommends what to monitor. With auto-create connection monitor, the service scans\nthe subscription's resource topology. It discovers Application Gateways, Load\nBalancers, VPN and ExpressRoute gateways, virtual network and local network\ngateways, private endpoints and SQL servers. It then recommends the connections\nmost worth monitoring, skips tests that already exist, and explains the\nreasoning behind each recommendation. Customers can review, filter and edit the\nrecommended tests and see the estimated monthly cost before creating them all\nin a single step. Auto-create complements manual setup instead of\nreplacing it. Customers can use Auto-Create to quickly establish\nsubscription-wide coverage, and keep creating individual tests manually when\nthey need fine-grained control over specific connections. This helps teams\nreduce blind spots while keeping full transparency and control over every test. By adding auto-create to connection monitor, Azure\ngives customers a choice in how they set up monitoring. They can get broad,\nreliable coverage in minutes or tailor each test by hand, so connectivity\nissues are detected earlier and resolved faster across their Azure workloads. Learn more.",
+    "id": "578611",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Management and governance",
+      "Networking"
+    ],
+    "products": [
+      "Network Watcher"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Management",
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Network Watcher – Auto-create connection monitor"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

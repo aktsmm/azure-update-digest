@@ -1,0 +1,41 @@
+{
+  "args": {
+    "id": "571821"
+  },
+  "fetchedAt": "2026-11-18T02:56:42.120Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "571821",
+    "created": "2026-09-18T17:23:21.3964293Z",
+    "description": "Network egress controls govern the outbound connections a Foundry hosted agent can make, is generally available. Ordered rules match on destination host (FQDN, with wildcards such as *.contoso.com) and apply an Allow, Deny, or Rewrite (redirect to another destination) action, or a header-modification action that changes outbound request headers. Rules are part of the agent's Responsible AI policy and are enforced inside the Foundry-managed agent sandbox before traffic leaves the runtime. Two enforcement modes are supported: Audit mode logs deny decisions without blocking traffic, and Enforce mode blocks denied traffic. Learn more.",
+    "generalAvailabilityDate": "2026-11",
+    "id": "571821",
+    "modified": "2026-11-17T21:51:16.0320686Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft.AspNetCore.OData.Formatter.Value.EdmUntypedCollection"
+    ],
+    "title": "Generally Available: Network egress controls for hosted agents in Microsoft Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

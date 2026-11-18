@@ -1,0 +1,43 @@
+{
+  "args": {
+    "id": "579374"
+  },
+  "fetchedAt": "2026-11-18T02:51:59.169Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "July",
+        "ring": "Preview",
+        "year": 2026
+      },
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "579374",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Building on the public\npreview introduced in July 2026, this release enables customers and partners to\nuse symmetric encryption capabilities with the oct-HSM key type and the\nAdvanced Encryption Standard (AES) algorithm directly within Azure Key Vault Premium\nfor production workloads. Customers can use AES\nalgorithms to encrypt, decrypt, wrap, and unwrap data while continuing to\nbenefit from Azure-managed security, compliance, and operational controls.AES algorithms with 256-bit\nkeys are aligned with CNSA 2.0 requirements and can help organizations prepare\nfor post-quantum cryptography readiness scenarios.Key benefits include: Centralized\n     key management: Securely manage symmetric keys through Azure Key Vault\n     Premium. Hardware-backed\n     key protection: Support for oct-HSM symmetric keys. AES\n     cryptographic operations: Support for encryption,\n     decryption, key wrapping, and unwrapping. Production\n     readiness: Ready with the performance,\n     scalability, and reliability required for production workloads. Simplified\n     integration: Integrate symmetric key management with existing Azure\n     security workflows. Consistent\n     security controls: Benefit from Azure-managed security, compliance, and\n     operational capabilities. Learn more:Learn about keysRead the documentation",
+    "generalAvailabilityDate": "2026-11",
+    "id": "579374",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-07",
+    "productCategories": [
+      "Security"
+    ],
+    "products": [
+      "Key Vault"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Security",
+      "Feature"
+    ],
+    "title": "Generally Available: Symmetric keys on Azure Key Vault Premium "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

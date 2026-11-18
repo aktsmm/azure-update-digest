@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "580136"
+  },
+  "fetchedAt": "2026-11-18T02:53:39.218Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "580136",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Today, we are excited to announce the general availability of Microsoft Azure Red Hat OpenShift with hosted control planes. This new deployment option separates the OpenShift control plane from the worker nodes running your applications. The control plane runs as a fully managed service in a Microsoft-managed Azure subscription. Azure Red Hat Openshift with hosted control planes helps organizations accelerate application modernization, increase developer velocity, streamline operations, and strengthen security while maintaining the familiar OpenShift experience jointly engineered and supported by Microsoft and Red Hat. Azure Red Hat OpenShift with standard architecture remains fully supported.Azure Red Hat OpenShift with hosted control planes also supports Red Hat OpenShift 5, helping customers adopt the latest Red Hat OpenShift capabilities on Azure with an integrated support experience.Key capabilities at general availabilityProvision clusters faster: Clusters with hosted control planes provision in approximately 15 to 20 minutes.Create clusters through a familiar Azure experience: Create and configure clusters directly in the Azure portal, or use the Azure CLI, ARM templates, or Bicep, to provision clusters as part of automated, infrastructure-as-code workflows.Maintain control of encryption keys: Every cluster encrypts its OS disks with customer-managed keys, allowing you to provide and control the keys used to protect your data.Use your preferred identity provider: Configure your own identity provider to authenticate and authorize administrators and users, helping you apply consistent access policies across your environment.Manage clusters with greater consistency: With Red Hat Advanced Cluster Management for Kubernetes 5, you can create, upgrade, modify, and delete hosted control plane clusters from the Advanced Cluster Management console and apply preconfigured governance policies, bringing these clusters into a single view with the rest of your Red Hat OpenShift and Kubernetes estate for centralized governance and observability.  Deploy closer to your applications and users: Generally available in 8 regions globally - UK South, Canada Central, Australia East, Switzerland North, Brazil South, Central India, US East 2, WestEurope. More regions to follow post GA.Learn more:Watch the interactive demoRead the documentation",
+    "generalAvailabilityDate": "2026-11",
+    "id": "580136",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Containers"
+    ],
+    "products": [
+      "Azure Red Hat OpenShift"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Open Source",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure Red Hat OpenShift with hosted control planes"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

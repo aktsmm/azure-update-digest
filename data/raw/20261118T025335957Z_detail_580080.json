@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "580080"
+  },
+  "fetchedAt": "2026-11-18T02:53:35.957Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "580080",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure AI Gateway, previously available as the AI Gateway tier of API Management, is now generally available as a fully managed Azure service for connecting users, applications, and agents to AI models and MCP tools across providers.Platform teams can centralize authentication and authorization, enforce policies, route calls across providers, monitor usage, and attribute and control costs without managing gateway infrastructure.As AI adoption scales, developers need the flexibility to build with models and tools across providers, while platform teams need consistent security, governance, and visibility across AI interactions. Azure AI Gateway brings these capabilities together in one place, helping organizations accelerate AI development while maintaining control.With Azure AI Gateway, customers can:Accelerate AI development: Give developers easy access to AI models and MCP tools across providers through a single gateway. Simplify integrations with client-stable model aliases, choose models for the prompt with intelligent model selection, route across model deployments using priorities and weights, optimize cost and latency with session affinity, and increase reliability with automatic failover.Govern and observe AI interactions: Centralize authentication and authorization, curate models and tools available to users and agents, apply content safety guardrails, and gain visibility into usage, performance, errors, and traces.Control AI spend: Monitor and attribute token consumption and estimated costs across users, teams, applications, and agents. Enforce budgets, quotas, and rate limits to keep AI spending within defined limits.Azure AI Gateway integrates with Microsoft Foundry, Microsoft Agent 365, Microsoft Entra ID, and Azure Application Insights helping organizations build on their existing Azure investments to extend security, governance, and observability across their AI applications and agents.Customers can get started with 10,000 free gateway requests per subscription each month, with usage-based pricing as their needs grow.Learn more.",
+    "generalAvailabilityDate": "2026-11",
+    "id": "580080",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Integration",
+      "Internet of Things",
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "API Management"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Azure AI Gateway "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

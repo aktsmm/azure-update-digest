@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "578845"
+  },
+  "fetchedAt": "2026-11-18T02:50:26.567Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578845",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Hosted Skill and Agent bindings for Azure Functions are now available in public preview. Adding agents to an application often requires setup and lifecycle code before developers can focus on business logic. These bindings reduce that plumbing while keeping your function code in control of validation, when agents run, and how results are used.Choose from three approaches:Hosted Skill Binding: Invoke Markdown-defined hosted skill through a simple API without working directly with the underlying agent SDK. Reuse skill configuration, tools, and conversation history, with support for streaming results and continuing conversations.Microsoft Agent Framework Agent Binding: Work directly with a native Microsoft Agent Framework agent, including SDK APIs, your own model client, and custom Python tools.GitHub Copilot Agent Binding: Work directly with a native GitHub Copilot SDK session, including its session APIs, hostools, and configuration options.Learn\nmore.",
+    "id": "578845",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Hosted Skill and Agent Bindings for Azure Functions"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

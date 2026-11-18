@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "579221"
+  },
+  "fetchedAt": "2026-11-18T02:46:09.395Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "579221",
+    "created": "2026-11-17T22:35:29.1058717Z",
+    "description": "Native cross-database queries in Azure SQL Database Hyperscale let applications access and join data across databases in the same Hyperscale elastic pool on a logical server, using familiar T-SQL three-part names such as `database.schema.object`. This enables cross-database reporting, shared reference data, and remote stored procedure calls without copying data, consolidating databases, or configuring external tables. Importantly, it unblocks SQL Server migration scenarios that depend on cross-database queries, reducing the need for query rewrites and application redesign when moving to Azure SQL Database. Applications retain separate databases with permissions enforced in each, while transactions can read across multiple databases and write to one database per transaction.This capability is available in a limited preview, and customers must sign up to participate.Learn more. ",
+    "id": "579221",
+    "modified": "2026-11-17T22:35:29.1058717Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure SQL DB Hyperscale Cross Database Querying"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "580036"
+  },
+  "fetchedAt": "2026-11-18T02:53:19.573Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "580036",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure API Management now offers the Unified Model API, a standardized way to connect applications to AI models from multiple providers without managing different API interfaces and integration requirements.Building applications with multiple AI models often requires developers to accommodate provider-specific APIs, SDKs, and request formats. The Unified Model API removes this complexity by translating requests and responses between a common API format, such as OpenAI Chat Completions, and supported model providers, including OpenAI and Anthropic.This capability enables organizations to:Accelerate AI application development: Integrate with multiple model providers using a single API interface and familiar development tools.Enable model choice and portability: Adopt new models, switch providers, and implement failover strategies with minimal application changes.Maintain consistent governance: Secure, monitor, and manage model traffic through a centralized API management platform, regardless of the underlying provider.With the Unified Model API, organizations can evolve their AI architectures as model capabilities and business requirements change, while maintaining a consistent developer experience and centralized control.Learn more.",
+    "generalAvailabilityDate": "2026-11",
+    "id": "580036",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Integration",
+      "Internet of Things",
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "API Management"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Unified Model API in Azure API Management "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

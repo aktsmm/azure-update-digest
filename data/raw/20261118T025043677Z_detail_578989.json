@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "578989"
+  },
+  "fetchedAt": "2026-11-18T02:50:43.677Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578989",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Task Queues for Azure Functions durable task scheduler are now available in public preview. Workloads sharing a task hub can have different throughput requirements and downstream service limits. Create named queues within a task hub and configure a shared actions-per-second dispatch rate for orchestration and activity work.Select a queue by setting the DTS_TaskQueue tag to the queue’s name when starting a workflow. Teams can pace workloads and assign separate throughput budgets without changing function names. The rate controls work-item dispatch, not execution concurrency.Learn more.",
+    "id": "578989",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Task Queues for Azure Functions durable task scheduler"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

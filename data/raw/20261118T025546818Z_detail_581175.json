@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "581175"
+  },
+  "fetchedAt": "2026-11-18T02:55:46.818Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581175",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure DDoS Protection peacetime telemetry is now in public\npreview. Customers can now see the traffic reaching their protected public IP\naddresses during normal operation, not only while a DDoS mitigation is active. Previously, outside an active mitigation, a protected public\nIP address showed only its mitigation-trigger metrics. With peacetime\ntelemetry, the existing incoming DDoS traffic metrics (total, TCP, SYN, UDP and\nother traffic) show data during normal operation. Customers can use this data to understand normal traffic\npatterns, compare everyday traffic with mitigation triggers, create Azure\nMonitor metric alerts with workload-specific thresholds, and test dashboards\nand alerts without simulating an attack. Peacetime telemetry works automatically for public IP\naddresses protected by DDoS Network Protection or DDoS IP Protection, with no\nregistration and no new metric names. Viewing the metrics doesn't require Log\nAnalytics or diagnostic settings, and protection and mitigation behavior don't\nchange. There's no additional cost beyond existing DDoS Protection pricing;\nstandard Azure Monitor charges apply to alert rules. During the preview,\npeacetime telemetry is available in the Azure public cloud. Learn more: Read\nabout peacetime telemetry availability Set\nup traffic-condition alerts during peacetime ",
+    "id": "581175",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure DDoS Protection"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite",
+      "Security"
+    ],
+    "title": "Public Preview: Azure DDoS Protection peacetime telemetry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

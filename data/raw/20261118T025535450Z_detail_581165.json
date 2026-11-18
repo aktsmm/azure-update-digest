@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "581165"
+  },
+  "fetchedAt": "2026-11-18T02:55:35.450Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "581165",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure Linux 4.0 is being introduced as part of Microsoft Ignite. The general availability of Azure Linux 4.0 for Azure Virtual Machines and VM Scale Sets is Microsoft's first-party open-source Linux distribution purpose-built for Azure. It brings a modernized stack — including Linux kernel 6.18 LTS, dnf5 package manager, glibc 2.42, OpenSSL 3.5, and Python 3.14 — optimized for Azure compute, storage, and networking. It delivers faster VM startup and provisioning with a reduced package footprint and a security-first design.  Key highlights: Azure-tuned kernel — Linux 6.18 LTS with improved Hyper-V integration, GPU/AI accelerator support, and new hardware drivers Secure by default — Secure Boot, Trusted Launch, SELinux support, kernel hardening, and SBOMs published with target SLSA Level 3 Minimal footprint — Ships only the packages required for cloud workloads, reducing attack surface from day one No additional OS licensing cost — Included with Azure compute; no separate OS licensing fees or support contracts Microsoft-owned supply chain — From kernel to CVE response, enabling fast-track Critical/High CVE patches with monthly security updates Predictable lifecycle —full support with LTS kernel and annual HWE kernel updates for new hardware platforms Container images — Base, and distroless images available on Microsoft Container Registry (MCR)Learn more: Ignite 2026 blog GitHub Documentation ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "581165",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [],
+    "products": [
+      "Azure Linux"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Azure Linux 4.0"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

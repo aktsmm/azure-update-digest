@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "578623"
+  },
+  "fetchedAt": "2026-11-18T02:49:32.791Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578623",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Resource health metrics in connection monitor brings resource health and key performance metrics into the Connection\nMonitor test topology, powered by Network Watcher topology. Until now, the\ntopology showed the path between source and destination, but it didn't show the\nhealth of the resources along that path. When a test reported packet loss or\nhigh latency, customers had to switch between tabs and blades to check each\nresource's health and metrics. That slowed down investigations and made it hard\nto connect the dots. With this release, health and metrics now appear directly\nin the topology. Customers can now click any resource in the connection monitor topology to see its resource health status and time-series metrics in\nthe same view. For example, selecting a load balancer shows its health along\nwith data path availability, health probe status, SNAT connection count and SYN count. Customers can view these metrics alongside connection monitor's own\npacket loss and latency over the same time window. This makes it easy to see\nwhether a drop in a resource's health lines up with a connectivity issue. This enhancement brings loss, latency, health and\ntopology together in one view. When a resource is unhealthy, its metrics are a\nclick away, with no need to switch tabs or tools. Customers can correlate\nresource health signals with connectivity results to reach the root cause\nfaster. It requires no setup and is available for all new and existing connection monitor tests. By surfacing resource health directly in the connection monitor topology, Azure helps customers go from detecting a\nconnectivity issue to understanding its cause faster, so they can resolve\nproblems sooner and keep their workloads running reliably. Learn more.",
+    "id": "578623",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Management and governance",
+      "Networking"
+    ],
+    "products": [
+      "Network Watcher"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Management",
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Network Watcher – Resource health and topology in connection monitor tests"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

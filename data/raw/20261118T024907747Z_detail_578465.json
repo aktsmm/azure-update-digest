@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "578465"
+  },
+  "fetchedAt": "2026-11-18T02:49:07.747Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "578465",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "In mid-November 2026, the following updates and enhancements were made to Azure SQL Managed Instance: \n Boost\n     transaction throughput in Next-gen General Purpose Azure SQL Managed\n     Instance with increased log rates of up to 220 MiB/s and higher per vCore\n     throughput, improving performance for transaction-intensive workloads. \n Right-size\n     storage and compute more efficiently in Next-gen General Purpose Azure SQL\n     Managed Instance with improved storage-to-vCore ratios and finer-grained\n     storage scaling, reducing the need to overprovision vCores for\n     storage-intensive workloads. \n Right-size\n     memory independently of vCores for zone-redundant Next-gen General Purpose\n     Azure SQL Managed Instances, helping optimize performance and resource\n     utilization without overprovisioning compute. Learn more:\n New capabilities in Next-gen\n     General Purpose\n Flexible Memory in Azure SQL\n     Managed Instance ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "578465",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure SQL Managed Instance"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure SQL Managed Instance updates for mid-November 2026 "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

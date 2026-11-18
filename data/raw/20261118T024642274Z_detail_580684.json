@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "580684"
+  },
+  "fetchedAt": "2026-11-18T02:46:42.274Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580684",
+    "created": "2026-11-17T20:47:31.8431798Z",
+    "description": "Agent Grid is now in public preview, bringing identity-based Zero\nTrust network security to AI agents on supported Azure environments. Security\nteams can govern communications among agents, models, tools, and external\nservices through centrally managed policies. Enforcement operates outside the\nagent’s trust boundary, without agent code changes or customer-managed\nsidecars. Preview capabilities include TLS inspection, fully qualified domain\nname (FQDN) filtering, URL filtering, granular Model Context Protocol (MCP)\ntool filtering, and Azure Content Safety integration for Prompt Shields.\nAdministrators can allow specific tools on an approved MCP server while\nblocking sensitive operations, restrict outbound destinations, and inspect\nsupported content for prompt-injection attacks. Agent Grid applies common policies across onboarded ACI Agent Groups,\nAKS Agent Sandbox using Kata Containers, and native Kubernetes workloads on\nAzure Kubernetes Service (AKS). Verified workload identities, mutually\nauthenticated encrypted connectivity, and centralized enforcement visibility\nhelp security teams protect agent workflows across supported hosting\nenvironments. Learn more:DocumentationAnnouncement blog",
+    "id": "580684",
+    "modified": "2026-11-17T20:47:31.8431798Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [],
+    "products": [],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Security",
+      "Services"
+    ],
+    "title": "Public Preview: Agent Grid helping secure AI agent communications"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

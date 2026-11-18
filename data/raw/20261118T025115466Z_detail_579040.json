@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "579040"
+  },
+  "fetchedAt": "2026-11-18T02:51:15.466Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "579040",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Announcing the GA of smart tier for Azure Blob and Data Lake Storage (ADLS) in Azure Government and China regions.Smart tier is a fully managed and automated data tiering solution, avoiding manual tier placement for object storage standard online tiers.   Smart tier automatically moves your data between hot, cool, and cold access tiers based on usage patterns, optimizing your costs for these access tiers automatically. New data is stored in the hot tier. Any object that isn’t accessed for 30 days is moved to the cool tier; after 90 days of inactivity, it transitions to the cold tier. If objects are accessed, they are transitioning back to the hot tier and restart their tiering cycle.   Learn more.",
+    "generalAvailabilityDate": "2026-11",
+    "id": "579040",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Storage",
+      "Analytics"
+    ],
+    "products": [
+      "Azure Blob Storage",
+      "Azure Data Lake Storage"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Generally Available: Smart Tier (Azure Blob and Data Lake Storage) in Azure Government and China regions"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

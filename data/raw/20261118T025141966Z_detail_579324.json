@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "579324"
+  },
+  "fetchedAt": "2026-11-18T02:51:41.966Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "579324",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure Application Gateway advanced routing rules is now available in public preview. Advanced routing rules enables you to create flexible, condition-based routing logic using HTTP\nrequest attributes, extending Application Gateway routing beyond traditional\npath-based routing. You can define routing\nconditions based on HTTP headers, query strings, client IP addresses, HTTP\nmethods, and request paths, and route matching requests to different backend\npools. Rules support priority-based evaluation, exact-value and pattern matching,\nand default routing when no rule matches. Advanced routing rules enables\nscenarios such as A/B testing and canary deployments, API versioning,\nmulti-tenant applications, traffic segmentation, and routing requests to\ndifferent application backends based on request characteristics. Learn\nmore.",
+    "id": "579324",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Application Gateway advanced routing rules "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

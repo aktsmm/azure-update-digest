@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "574153"
+  },
+  "fetchedAt": "2026-11-18T02:46:28.597Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "574153",
+    "created": "2026-11-17T20:56:06.295633Z",
+    "description": "You can now connect to Azure HorizonDB clusters privately through Azure Private Link, using a private IP address from your virtual network. Private DNS integration makes connection setup easier, while the option to disable public access keeps database traffic off the public internet.   Connections are supported from: Azure virtual networks. Peered networks. On-premises environments through VPN or Azure ExpressRoute.  Learn more.",
+    "generalAvailabilityDate": "2026-11",
+    "id": "574153",
+    "modified": "2026-11-17T20:56:06.295633Z",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure HorizonDB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Generally Available: Private endpoint support for Azure HorizonDB clusters"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "581249"
+  },
+  "fetchedAt": "2026-11-18T02:56:23.084Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581249",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure Artifact Validation, in public preview, lets VM image publishers and enterprise platform teams run Azure's certification-grade quality and security checks on their images in their own Azure subscriptions, at any point in the build process.Previously, these checks ran only when you submitted an Azure Marketplace offer in Partner Center. Now you can validate Windows and Linux images bound for Azure Marketplace, galleries or other distribution platforms, and find issues while they're still inexpensive to fix.Key capabilities:Self-service validation runs in your own subscription, with your choice of tests and timingChecks for bootability, OS configuration and platform compatibility, plus malware and vulnerability scanning powered by Microsoft DefenderA native Azure resource with an API, so you can add validation to CI/CD pipelines as a release gatePer-test results with stable error codes and clear reasonsArtifact Validation complements Azure Marketplace certification and doesn't replace it; final certification still runs through Partner Center.Available in Central US, North Central US, South Central US, Sweden Central, Japan East and Australia East through the REST API, ARM templates and Azure SDKs.Learn more.",
+    "id": "581249",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Azure Artifact Validation for VM images"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

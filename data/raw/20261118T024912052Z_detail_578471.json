@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "578471"
+  },
+  "fetchedAt": "2026-11-18T02:49:12.052Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "578471",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "In mid-November 2026, the following updates and\nenhancements were made to Azure SQL:   \n Fuzzy\n     string matching enables you to compare strings based on similarity rather\n     than relying only on exact matches. Using built-in functions, you can\n     measure the difference or similarity between strings with algorithms such\n     as Damerau-Levenshtein (OSA) and Jaro-Winkler. \n Regex-based\n     Dynamic Data Masking extends the built-in DDM feature in Azure SQL\n     Database with flexible, pattern-based masking using regular\n     expressions—centrally enforced at the database layer. \n AES\n     keys support for Transparent Data Encryption (TDE) with customer-managed\n     keys in Azure SQL Database are now generally available, providing an\n     alternative to RSA keys for protecting data at rest and helping you\n     prepare for the evolving quantum threat landscape. \n You\n     can now customize how numeric values appear in the SSMS results grid\n     without changing your queries or Windows regional settings. Choose your\n     preferred digit grouping and decimal symbols, or use your system defaults.\n     A live preview shows how your selections will look, and changes apply to\n     open grids without restarting SSMS or rerunning your query. Learn more: Fuzzy string matchingRegex-based\nDynamic Data MaskingAES\nkeys support for Transparent Data Encryption (TDE) with customer-managed keys\nin Azure SQL DatabaseCustomize numeric values",
+    "generalAvailabilityDate": "2026-11",
+    "id": "578471",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure SQL updates for mid-November 2026 "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "579540"
+  },
+  "fetchedAt": "2026-11-18T02:52:24.422Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "579540",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Customer-managed keys (CMK) for encryption at rest are now available in public preview for Azure HorizonDB.   By default, Azure HorizonDB uses service\\-managed keys (SMK) to encrypt data at rest, with Azure managing the encryption keys on your behalf. With CMK, you can instead control the key encryption key (KEK) used to protect your data by managing it in your own Azure Key Vault or Azure Key Vault Managed HSM.  CMKs provide greater control over your encryption key lifecycle and can help you meet your organization’s security and compliance requirements. With CMK, you can: Control access to encrypted data, including revoking key access to make the Azure HorizonDB database inaccessible. Manage the key lifecycle, including key rotation, in accordance with your organization’s compliance policies. Centrally manage and organize encryption keys in Azure Key Vault. Support separation of duties across security officers, database administrators, and system administrators.  Learn more. ",
+    "id": "579540",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure HorizonDB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Encryption at rest with customer-managed keys in Azure HorizonDB"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

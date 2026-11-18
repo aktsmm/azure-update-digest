@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "578262"
+  },
+  "fetchedAt": "2026-11-18T02:48:46.262Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578262",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure DocumentDB now offers granular role-based access control (RBAC) , well beyond the cluster-level permissions that have been offered in the service. You can now use database-level and collection-level RBAC to manage data access. Instead of relying only on cluster-scoped roles, you can create custom roles for a specific database or individual collection and assign the supported data privileges your users and applications require.  This update gives you greater control over who can access and modify your data, helping you apply least-privilege access across databases, applications, and workloads while keeping permissions scoped to where they are needed.  Learn more.",
+    "id": "578262",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure DocumentDB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Fine-grained role-based access control for databases and collections in Azure DocumentDB "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

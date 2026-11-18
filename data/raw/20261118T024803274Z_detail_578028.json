@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "578028"
+  },
+  "fetchedAt": "2026-11-18T02:48:03.274Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "578028",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "You can now use a single Azure SQL Managed Instance link to extend a SQL Server Always On Availability Group with multiple databases to Azure SQL Managed Instance. You can extend an existing availability group or create a new one with multiple databases, providing a simpler path to minimum-downtime migrations and disaster recovery in Azure. With Managed Instance link, you can continuously replicate your databases to and from Azure and perform bidirectional failovers between supported SQL Server versions and Azure SQL Managed Instance. This enhancement streamlines migration and failover for enterprise applications that rely on multiple related databases running together in the same availability group, giving you greater flexibility to migrate, reverse migrate, or set up disaster recovery in Azure while minimizing application disruption.  Learn more. ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "578028",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure SQL Managed Instance"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure SQL Managed Instance link support for availability groups with multiple databases "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

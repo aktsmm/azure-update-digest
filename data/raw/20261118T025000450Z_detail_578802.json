@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "578802"
+  },
+  "fetchedAt": "2026-11-18T02:50:00.450Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578802",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure Functions support for Python 3.15 is now in public preview.Developers can evaluate Python applications, dependencies, native extensions and deployment workflows using the existing v1 and v2 programming models.Dependency overlap between the Python worker’s gRPC messaging packages and application dependencies can create compatibility conflicts. A new Rust-based transport addresses this by handling host messaging and embedding CPython without depending on the Python grpcio and protobuf packages, reducing dependency overlap and introducing performance benefits. Applications can still use these packages, and existing Python execution libraries continue to run functions. Developers continue writing Python, not Rust.Planned scope: Linux x64 on Flex Consumption, Elastic Premium and Dedicated (App Service), where each plan is offered.Learn\nmore.",
+    "id": "578802",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "SDK and Tools",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Functions support for Python 3.15"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

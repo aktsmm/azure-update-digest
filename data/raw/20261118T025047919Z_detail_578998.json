@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "578998"
+  },
+  "fetchedAt": "2026-11-18T02:50:47.919Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "578998",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Fuzzy string match is now generally available across Microsoft SQL offerings, including Azure SQL Database, Azure SQL Managed Instanced, SQL database in Microsoft Fabric, and SQL Server 2025. You can compare strings based on how similar or different they are, rather than relying only on exact matches. It can measure the distance between two strings, including how many changes are required to make them identical, or evaluate their similarity using different fuzzy matching algorithms.  This feature makes it easier to work with imperfect or inconsistent real-world data. You can use fuzzy string match to help simplify data matching, cleansing, deduplication, fuzzy search, and other scenarios where traditional exact string comparisons may not be sufficient.  Learn more. ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "578998",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud"
+    ],
+    "products": [
+      "Azure SQL Database",
+      "Azure SQL Managed Instance"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Generally Available: Fuzzy string match is available across Microsoft SQL offerings "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

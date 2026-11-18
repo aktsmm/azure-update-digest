@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "580862"
+  },
+  "fetchedAt": "2026-11-18T02:55:05.502Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580862",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure DDoS Protection now\ncovers the public IPs behind Azure NAT Gateway StandardV2, in public preview.\nYou can protect the IPv4 and IPv6 addresses that carry your outbound internet\ntraffic from network-layer DDoS attacks, using the same DDoS Network Protection\nor IP Protection you already have. There’s no new API, feature registration or\nappliance to manage, and no unsolicited inbound connections are opened to your\ngateway. Why it matters: NAT Gateway doesn’t accept inbound\nconnections, but its public IPs are still reachable from the internet, and\nthey’re the identity of everything behind them. Partners, SaaS providers and\nbanks often allow-list these IPs, so anyone who learns them can aim traffic at\nthem. Every VM in the associated subnets shares the same IPs, so a single flood\ncan cut off API calls, partner integrations, updates and telemetry all at once.\nAn attacker doesn’t need to reach your workloads to cause an outage, only to\nbreak their path to the internet. Now your outbound IPs get\nautomatic network-layer mitigation, plus the DDoS metrics, diagnostics and\nalerts you already rely on. It also simplifies compliance, because policies\nrequiring DDoS protection on all public IPs no longer need an exception for NAT\nGateway. Learn\nmore. ",
+    "id": "580862",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure DDoS Protection"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Security",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure DDoS Protection support for NAT Gateway v2 IP"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

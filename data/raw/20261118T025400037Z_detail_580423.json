@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "580423"
+  },
+  "fetchedAt": "2026-11-18T02:54:00.037Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580423",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Advanced load balancing for Azure Application Gateway\nis now available in public preview, giving you greater control over how traffic is\ndistributed across backends supporting different workloads, including AI\napplications and web traffic. New server-level algorithms and backend pool\ncontrols let you tailor traffic distribution to your application’s capacity and\nrouting requirements. At the backend pool level, priority controls let\nyou designate preferred pools, while weights let you configure the\nrelative traffic share across eligible pools. For AI applications, you can\nprioritize pools hosting preferred large language model (LLM) deployments. For\nweb applications, you can adjust traffic distribution across pools to reflect\ndifferences in backend capacity and deployment needs. Within each backend pool,\nLeast Connections directs traffic to servers with fewer active\nconnections, while Weighted Round Robin distributes traffic according to\nconfigured server weights. Together, these capabilities provide flexible,\npolicy-driven traffic management for AI and web workloads.Learn more.",
+    "id": "580423",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Advanced load balancing in Azure Application Gateway"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

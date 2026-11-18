@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "580418"
+  },
+  "fetchedAt": "2026-11-18T02:53:55.655Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580418",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Announcing the public preview of centralized user authentication for\nAzure Application Gateway, along with an updated JWT validation\nexperience. User authentication enables Application Gateway to sign\nusers in with OpenID Connect before traffic reaches a web application. With\ncentralized authentication policies, customers can configure authentication\nonce and apply it consistently across routing rules and multiple Application\nGateways. This approach helps simplify application architecture, reduce\nauthentication code in backend applications, and provide a consistent sign-in\nexperience across protected web apps.As part of this centralized policy model, Application\nGateway also includes an updated JWT validation experience for scenarios such\nas APIs and service-to-service traffic. JWT validation helps validate bearer\ntokens at the gateway before requests reach backend applications, supporting a\nmore consistent security posture across applications. The updated JWT validation\nexperience is a revision of the existing Application Gateway JWT validation\npreview. The existing preview will not move forward to general availability,\nand Microsoft plans to deprecate it. A separate deprecation notice will be\npublished with the deprecation date, retirement timeline, and transition\nguidance. This announcement is not the formal deprecation notice.Learn more:JWT validationUser authentication",
+    "id": "580418",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Application Gateway"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Centralized user authentication + JWT validation for Azure Application Gateway"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

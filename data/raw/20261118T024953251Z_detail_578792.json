@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "578792"
+  },
+  "fetchedAt": "2026-11-18T02:49:53.251Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578792",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure Network Watcher VNet\nFlow Logs now supports flow log enrichment for Azure Private Link Service,\nproviding greater visibility into network traffic flowing through Private Link\nService. With this capability,\nVirtual Network Flow Logs retain backend flow details while adding context\nabout the original source, translated Private Link Service address information, and the Private\nLink connection identifier. This helps service providers trace connections from\nthe original client, through the Private Endpoint and Private Link Service translation layer, to\nthe backend workload. Traffic Analytics also\nsupports this enriched Private Link Service traffic, extending its monitoring and analytics\ncapabilities to Private Link Service scenarios. You can now use Traffic\nAnalytics to visualize traffic patterns, monitor network communication,\ninvestigate connectivity and security issues, and gain actionable insights into\nworkloads exposed through Private Link Service. Learn\nmore.",
+    "id": "578792",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Networking",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure Private Link",
+      "Network Watcher"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Network Watcher Private Link support"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

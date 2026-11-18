@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "581125"
+  },
+  "fetchedAt": "2026-11-18T02:46:22.014Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581125",
+    "created": "2026-11-17T21:00:05.0228282Z",
+    "description": "Regulated customers running AKS Confidential VM node pools protect workloads in memory today, but the OS disk isn't encrypted at rest, so they have to close the data-at-rest gap outside the platform. In Preview, Ubuntu 26.04 Confidential VM node pools enable OS Disk Encryption by default on both Intel TDX and AMD SEV-SNP SKUs, so the OS disk is protected with a CVM-bound key from first boot. Confidential workloads get end-to-end confidentiality (memory and OS disk) without new configuration, new API surface, or changes to existing tooling.Learn more.",
+    "id": "581125",
+    "modified": "2026-11-17T21:00:05.0228282Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Confidential VMs with OS Disk Encryption support on AKS"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

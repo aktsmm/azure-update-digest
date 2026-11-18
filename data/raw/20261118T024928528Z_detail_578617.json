@@ -1,0 +1,40 @@
+{
+  "args": {
+    "id": "578617"
+  },
+  "fetchedAt": "2026-11-18T02:49:28.528Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578617",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Connection analyzer for ExpressRoute Circuit introduces a faster, evidence-based way to find where packet loss\noccurs on an ExpressRoute circuit. When customers see packet loss between Azure\nand on-premises today, it is often hard to tell whether the problem lies with\nthe Microsoft Enterprise Edge (MSEE), the connectivity provider, or the\ncustomer's own network. That leads to guesswork and long back-and-forth\ninvestigations. With this release, customers can pinpoint whether the loss originates\nat the MSEE. Connection analyzer runs on-demand iPerf test traffic\nfrom an Azure virtual machine to an on-premises destination over the\nExpressRoute circuit, and captures packets at the MSEE. It then reports whether\npacket loss is occurring at the MSEE and flags out-of-order packet delivery.\nThe full packet capture (pcap) is available to download for deeper analysis. This enhancement replaces guesswork with proof. If the\nloss is at the MSEE, customers have clear evidence to act on. If it isn't, they\ncan quickly focus their investigation on the provider or customer side of the\ncircuit. Built specifically for Azure-to-on-premises traffic, it helps teams\nnarrow down the source of connectivity issues without lengthy manual analysis. By bringing packet-level visibility to the Microsoft\nedge, Azure helps customers isolate ExpressRoute issues faster, shorten time to\nresolution, and keep their hybrid workloads running reliably. Learn more.",
+    "id": "578617",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Hybrid + multicloud",
+      "Networking",
+      "Management and governance"
+    ],
+    "products": [
+      "Azure ExpressRoute",
+      "Network Watcher"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Management",
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Network Watcher – Connection analyzer"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

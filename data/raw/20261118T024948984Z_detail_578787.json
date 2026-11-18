@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "578787"
+  },
+  "fetchedAt": "2026-11-18T02:49:48.984Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578787",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure Network Watcher VNet\nFlow Logs now provides enhanced capture-side interface context with the\nnetworkInterfaceIP field. The networkInterfaceIP\nfield records the IP address or addresses of the network interface where a flow\nwas captured, making it easier to identify the resource associated with the\ncaptured traffic, determine the next hops in the network traffic flow, and attribute\nflow records to the correct resource ID. This additional context\nprovides greater visibility into how traffic moves through your network,\nincluding for interfaces using IPv4 or dual-stack addressing. It helps you\ntrace traffic paths, identify the resources involved at different points in the\nflow, and simplify network monitoring and troubleshooting. Learn\nmore.",
+    "id": "578787",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Management and governance",
+      "Networking"
+    ],
+    "products": [
+      "Network Watcher"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Network Watcher VNet Flow Logs enriched with networkInterfaceIP field"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

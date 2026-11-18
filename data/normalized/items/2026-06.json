@@ -7370,10 +7370,15 @@
           "month": "June",
           "ring": "Preview",
           "year": 2026
+        },
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
         }
       ],
       "availabilityDates": {
-        "general": null,
+        "general": "2026-11",
         "preview": "2026-06",
         "privatePreview": null
       },
@@ -7383,10 +7388,10 @@
       ],
       "created": "2026-06-02T19:00:47.5410367Z",
       "createdJst": "2026-06-03",
-      "description": "Microsoft Foundry IQ now supports external MCP servers as federated knowledge sources in public preview, expanding retrieval beyond data customers index themselves. Teams can register MCP servers from systems like Salesforce, Atlassian, Confluence, and ServiceNow, then query them alongside indexed sources in a single agentic retrieval call. Foundry IQ handles cross-source selection automatically, choosing which sources to consult per query and merging results with citations. Because the federation uses MCP, partners and customers can plug in any compliant server without building a custom connector. Source-system permissions still gate the data, so an agent only retrieves records the calling user can see. This release helps organizations make agents useful against systems of record without copying data into a separate index. Learn more.",
+      "description": "Foundry IQ supported Model Context Protocol (MCP) servers as federated knowledge sources, is generally available. Customers register an MCP server as a read-only knowledge source in Foundry IQ. MCP knowledge sources participate in Foundry IQ cross-source selection alongside other knowledge sources, such as web search and unstructured data in blob storage synced into Azure AI Search vector indexes. Learn more.",
       "descriptionSource": "detail",
       "detailState": "ok",
-      "fingerprint": "72da157d09b238670a83ff25a2dc7d0e3e0f1838a1a3ce04454837d284da6072",
+      "fingerprint": "582185f60c8ac9d9ff34a8f1c250ae03a70c4650c4788e06996a3291bcebe258",
       "history": [
         {
           "changedFields": [
@@ -7405,20 +7410,50 @@
           "modifiedAfter": "2026-06-02T19:00:47.5410367Z",
           "modifiedBefore": "2026-06-02T19:00:47.5410367Z",
           "rawRef": "20261014T103733699Z_detail_563411.json#563411"
+        },
+        {
+          "changedFields": [
+            "availabilities",
+            "general",
+            "modified",
+            "status",
+            "tags",
+            "title"
+          ],
+          "fetchedAt": "2026-11-18T02:44:28.799Z",
+          "fingerprint": "8e29eb6221b7b93aa8f1c455fe6bc98e7bf320e850bd5480c9339ba250fb4082",
+          "modifiedAfter": "2026-11-17T21:21:27.3293968Z",
+          "modifiedBefore": "2026-06-02T19:00:47.5410367Z",
+          "rawRef": "20261118T024428799Z_list_sweep_o0.json#563411"
+        },
+        {
+          "changedFields": [
+            "description"
+          ],
+          "fetchedAt": "2026-11-18T02:56:50.584Z",
+          "fingerprint": "582185f60c8ac9d9ff34a8f1c250ae03a70c4650c4788e06996a3291bcebe258",
+          "modifiedAfter": "2026-11-17T21:21:27.3293968Z",
+          "modifiedBefore": "2026-11-17T21:21:27.3293968Z",
+          "rawRef": "20261118T025650584Z_detail_563411.json#563411"
         }
       ],
       "ids": [
         "563411"
       ],
       "importance": {
-        "level": "normal",
-        "reasons": [],
-        "score": 0,
-        "topics": []
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
       },
       "latestId": "563411",
-      "modified": "2026-06-02T19:00:47.5410367Z",
-      "modifiedJst": "2026-06-03",
+      "modified": "2026-11-17T21:21:27.3293968Z",
+      "modifiedJst": "2026-11-18",
       "productCategories": [
         "AI + machine learning"
       ],
@@ -7426,12 +7461,13 @@
         "Microsoft Foundry"
       ],
       "sourceUrl": "https://azure.microsoft.com/updates?id=563411",
-      "status": "In preview",
+      "status": "Launched",
       "tags": [
         "Feature",
-        "Microsoft Build"
+        "Microsoft Build",
+        "Microsoft Ignite"
       ],
-      "title": "Public Preview: MCP Server Knowledge Source in Microsoft Foundry IQ"
+      "title": "Generally Available: MCP server knowledge sources in Foundry IQ"
     },
     {
       "availabilities": [
@@ -8987,10 +9023,15 @@
           "month": "June",
           "ring": "Preview",
           "year": 2026
+        },
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
         }
       ],
       "availabilityDates": {
-        "general": null,
+        "general": "2026-11",
         "preview": "2026-06",
         "privatePreview": null
       },
@@ -9000,10 +9041,10 @@
       ],
       "created": "2026-06-04T19:00:34.7881254Z",
       "createdJst": "2026-06-05",
-      "description": "Azure AI Search now supports Content Understanding chunking and image verbalization in public preview, expanding the built-in skill that parses rich documents during indexing. Indexers can split documents into semantically meaningful chunks and generate text descriptions of embedded images, charts, and diagrams in the same pass. Retrieval-augmented generation apps benefit because each chunk carries the visual context that used to be lost when images were stripped out. Customers indexing slide decks, technical manuals, and scanned forms get higher answer quality without running a separate vision pipeline. The skill plugs into existing integrated vectorization workflows, so teams can add it to current skillsets without rebuilding indexes from scratch. This release ships under the same Azure AI Search billing and data residency commitments customers already use today. Learn more.",
+      "description": "The Azure Content Understanding skill in Azure AI Search is generally available for semantic chunking and AI-generated image descriptions, for use with Foundry IQ and Azure AI Search. The skill produces semantically coherent chunks with structured Markdown, location metadata, and searchable image descriptions in an Azure AI Search enrichment pipeline. Learn more.",
       "descriptionSource": "detail",
       "detailState": "ok",
-      "fingerprint": "2aeeb52d1b22cd3d1e01e7c9b443cecd7ece2a1daf90fbd958023881c686446d",
+      "fingerprint": "05c3e5a1ad2911818d2723ad9a4abb9338742ecef479fdc48e30ff112d4812e0",
       "history": [
         {
           "changedFields": [
@@ -9022,20 +9063,50 @@
           "modifiedAfter": "2026-06-04T19:00:34.7881254Z",
           "modifiedBefore": "2026-06-04T19:00:34.7881254Z",
           "rawRef": "20261014T102500000Z_detail_563661.json#563661"
+        },
+        {
+          "changedFields": [
+            "availabilities",
+            "general",
+            "modified",
+            "status",
+            "tags",
+            "title"
+          ],
+          "fetchedAt": "2026-11-18T02:44:28.799Z",
+          "fingerprint": "854c162d6d9b94e563d752378ab15c67dd9ca6f3620da2224d0c7f29bb8c5efb",
+          "modifiedAfter": "2026-11-17T21:17:15.9306275Z",
+          "modifiedBefore": "2026-06-04T19:00:34.7881254Z",
+          "rawRef": "20261118T024428799Z_list_sweep_o0.json#563661"
+        },
+        {
+          "changedFields": [
+            "description"
+          ],
+          "fetchedAt": "2026-11-18T02:56:47.349Z",
+          "fingerprint": "05c3e5a1ad2911818d2723ad9a4abb9338742ecef479fdc48e30ff112d4812e0",
+          "modifiedAfter": "2026-11-17T21:17:15.9306275Z",
+          "modifiedBefore": "2026-11-17T21:17:15.9306275Z",
+          "rawRef": "20261118T025647349Z_detail_563661.json#563661"
         }
       ],
       "ids": [
         "563661"
       ],
       "importance": {
-        "level": "normal",
-        "reasons": [],
-        "score": 0,
-        "topics": []
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
       },
       "latestId": "563661",
-      "modified": "2026-06-04T19:00:34.7881254Z",
-      "modifiedJst": "2026-06-05",
+      "modified": "2026-11-17T21:17:15.9306275Z",
+      "modifiedJst": "2026-11-18",
       "productCategories": [
         "AI + machine learning"
       ],
@@ -9043,12 +9114,12 @@
         "Microsoft Foundry"
       ],
       "sourceUrl": "https://azure.microsoft.com/updates?id=563661",
-      "status": "In preview",
+      "status": "Launched",
       "tags": [
         "Feature",
-        "Microsoft Build"
+        "Microsoft Ignite"
       ],
-      "title": "Public Preview: Content Understanding chunking and image verbalization in Azure AI Search"
+      "title": "Generally Available: Semantic chunking and AI-generated image descriptions with Azure Content Understanding in Azure AI Search"
     },
     {
       "availabilities": [
@@ -11394,10 +11465,15 @@
           "month": "May",
           "ring": "Preview",
           "year": 2026
+        },
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
         }
       ],
       "availabilityDates": {
-        "general": null,
+        "general": "2026-11",
         "preview": "2026-05",
         "privatePreview": null
       },
@@ -11413,7 +11489,7 @@
       "description": "Azure Backup now supports snapshot-based backup for SQL Server running on Azure Virtual Machines. This new capability uses Azure disk snapshots combined with native SQL transaction log backups to deliver near-instant, low-impact full backups for large SQL databases, significantly improving backup performance and reducing the load on production workloads compared to streaming backups. You can protect multiple databases under a SQL instance with a single policy and restore using different mechanisms with point-in-time recovery enabled by log chaining on top of snapshot recovery points.All restore points get stored in Azure Recovery Services Vault which provides long term retention and added security for your data in case of Ransomware attacks and any other disasters.Learn\nmore. ",
       "descriptionSource": "detail",
       "detailState": "ok",
-      "fingerprint": "dcefc87fee188b0e1bcdb228e353fe544754b1f4ac0266495b9a32588dd2efa5",
+      "fingerprint": "2cb783ef4e8f77d83fc892ab18ff8fa11096bdcf2eab7685765123e7d30cf976",
       "history": [
         {
           "changedFields": [
@@ -11432,6 +11508,21 @@
           "modifiedAfter": "2026-06-02T15:15:36.2086399Z",
           "modifiedBefore": "2026-06-02T15:15:36.2086399Z",
           "rawRef": "20261014T103922035Z_detail_564668.json#564668"
+        },
+        {
+          "changedFields": [
+            "availabilities",
+            "general",
+            "modified",
+            "status",
+            "tags",
+            "title"
+          ],
+          "fetchedAt": "2026-11-18T02:44:28.799Z",
+          "fingerprint": "4ad733809bc3e3ae1f7681d4ff4b0f4ae307f8c11ce3052b9d3d2ffaf2fbce21",
+          "modifiedAfter": "2026-11-17T21:15:38.5959556Z",
+          "modifiedBefore": "2026-06-02T15:15:36.2086399Z",
+          "rawRef": "20261118T024428799Z_list_sweep_o0.json#564668"
         }
       ],
       "ids": [
@@ -11441,16 +11532,19 @@
         "level": "high",
         "reasons": [
           "security-tag",
-          "compliance-tag"
+          "compliance-tag",
+          "ga-ring",
+          "ga-title"
         ],
-        "score": 10,
+        "score": 15,
         "topics": [
+          "ga",
           "security"
         ]
       },
       "latestId": "564668",
-      "modified": "2026-06-02T15:15:36.2086399Z",
-      "modifiedJst": "2026-06-03",
+      "modified": "2026-11-17T21:15:38.5959556Z",
+      "modifiedJst": "2026-11-18",
       "productCategories": [
         "Management and governance",
         "Storage"
@@ -11459,15 +11553,16 @@
         "Azure Backup"
       ],
       "sourceUrl": "https://azure.microsoft.com/updates?id=564668",
-      "status": "In preview",
+      "status": "Launched",
       "tags": [
         "Compliance",
-        "Features",
+        "Feature",
         "Management",
+        "Microsoft Ignite",
         "Security",
         "Services"
       ],
-      "title": "Public Preview: Snapshot backup for SQL Server in Azure VMs"
+      "title": "Generally Available: Snapshot backup for SQL Server in Azure VMs"
     },
     {
       "availabilities": [

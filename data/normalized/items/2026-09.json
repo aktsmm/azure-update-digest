@@ -3681,10 +3681,15 @@
           "month": "July",
           "ring": "Preview",
           "year": 2026
+        },
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
         }
       ],
       "availabilityDates": {
-        "general": null,
+        "general": "2026-11",
         "preview": "2026-07",
         "privatePreview": null
       },
@@ -3694,10 +3699,10 @@
       ],
       "created": "2026-09-18T17:23:21.3964293Z",
       "createdJst": "2026-09-19",
-      "description": "In public preview, Microsoft Foundry now lets customers govern the outbound connections a hosted agent can make. Customers author ordered rules matched on destination host, including FQDN with wildcards such as *.contoso.com, with actions to allow, deny, transform outbound request headers, or rewrite the destination. Rules live in the agent's Responsible AI policy and are enforced inside the Foundry-managed agent sandbox before traffic leaves the runtime, so no separate network appliance is required for basic allow-listing. Two enforcement modes are supported: audit, which logs would-deny decisions without blocking, and enforce, which blocks denied traffic, letting teams observe real traffic before switching on enforcement. Every egress decision is emitted to Application Insights for audit. The preview is intended for evaluation and is not covered by production SLAs. To get started, configure egress controls under Guardrails in the Foundry portal. Learn more.",
+      "description": "Network egress controls govern the outbound connections a Foundry hosted agent can make, is generally available. Ordered rules match on destination host (FQDN, with wildcards such as *.contoso.com) and apply an Allow, Deny, or Rewrite (redirect to another destination) action, or a header-modification action that changes outbound request headers. Rules are part of the agent's Responsible AI policy and are enforced inside the Foundry-managed agent sandbox before traffic leaves the runtime. Two enforcement modes are supported: Audit mode logs deny decisions without blocking traffic, and Enforce mode blocks denied traffic. Learn more.",
       "descriptionSource": "detail",
       "detailState": "ok",
-      "fingerprint": "926e837d98faa83b324db057cfdfc4a1e92f5ffc40492b7d1cc293133b769822",
+      "fingerprint": "ef8ef0c554423601d35e42690717b1ba3da112f3c274a801ec1752a69db6cb1f",
       "history": [
         {
           "changedFields": [
@@ -3716,20 +3721,50 @@
           "modifiedAfter": "2026-09-18T17:23:21.3964293Z",
           "modifiedBefore": "2026-09-18T17:23:21.3964293Z",
           "rawRef": "20261014T101052574Z_detail_571821.json#571821"
+        },
+        {
+          "changedFields": [
+            "availabilities",
+            "general",
+            "modified",
+            "status",
+            "tags",
+            "title"
+          ],
+          "fetchedAt": "2026-11-18T02:44:28.799Z",
+          "fingerprint": "ac626e00e6d5b34befee14136f663711fbc8381769b3ad6aff4de0270d862769",
+          "modifiedAfter": "2026-11-17T21:51:16.0320686Z",
+          "modifiedBefore": "2026-09-18T17:23:21.3964293Z",
+          "rawRef": "20261118T024428799Z_list_sweep_o0.json#571821"
+        },
+        {
+          "changedFields": [
+            "description"
+          ],
+          "fetchedAt": "2026-11-18T02:56:42.120Z",
+          "fingerprint": "ef8ef0c554423601d35e42690717b1ba3da112f3c274a801ec1752a69db6cb1f",
+          "modifiedAfter": "2026-11-17T21:51:16.0320686Z",
+          "modifiedBefore": "2026-11-17T21:51:16.0320686Z",
+          "rawRef": "20261118T025642120Z_detail_571821.json#571821"
         }
       ],
       "ids": [
         "571821"
       ],
       "importance": {
-        "level": "normal",
-        "reasons": [],
-        "score": 0,
-        "topics": []
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
       },
       "latestId": "571821",
-      "modified": "2026-09-18T17:23:21.3964293Z",
-      "modifiedJst": "2026-09-19",
+      "modified": "2026-11-17T21:51:16.0320686Z",
+      "modifiedJst": "2026-11-18",
       "productCategories": [
         "AI + machine learning"
       ],
@@ -3737,11 +3772,11 @@
         "Microsoft Foundry"
       ],
       "sourceUrl": "https://azure.microsoft.com/updates?id=571821",
-      "status": "In preview",
+      "status": "Launched",
       "tags": [
-        "Feature"
+        "Microsoft.AspNetCore.OData.Formatter.Value.EdmUntypedCollection"
       ],
-      "title": "Public Preview: Network egress controls for hosted agents in Microsoft Foundry"
+      "title": "Generally Available: Network egress controls for hosted agents in Microsoft Foundry"
     },
     {
       "availabilities": [

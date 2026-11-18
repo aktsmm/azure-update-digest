@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "579031"
+  },
+  "fetchedAt": "2026-11-18T02:51:10.141Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "579031",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure Blob\nStorage turbo tier is now in Public Preview, bringing SSD-backed performance to\nperformance-sensitive data in eligible Azure Blob Storage accounts. Designed\nfor AI training, inference, analytics, and other demanding data workloads, turbo tier delivers high throughput and low latency for active data while\nallowing less-active data to remain on cost-efficient HDD-backed access tiers. Smart\nplacement helps manage the active working set as access patterns change, while\ncustomers retain a single storage\naccount with their data, namespace, and Blob API surface. Turbo tier\npublic preview is available for eligible Azure Blob Storage LRS accounts in\nselected regions. Preview access is subject to regional capacity and\neligibility. Learn more. ",
+    "id": "579031",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Storage",
+      "Analytics"
+    ],
+    "products": [
+      "Azure Blob Storage",
+      "Azure Data Lake Storage"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Blob Storage turbo tier"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

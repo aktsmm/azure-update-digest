@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "580041"
+  },
+  "fetchedAt": "2026-11-18T02:53:23.864Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "580041",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure Connector Namespace is now generally available, providing a fully managed integration service that enables developers to connect applications and AI agents to hundreds of Microsoft, SaaS, and enterprise systems using prebuilt, reusable connectors. Developers can access connectors from Azure Functions, Azure Container Apps, and custom applications through familiar SDKs and HTTP APIs. Building integrations across business systems often requires developers to manage authentication, credentials, API clients, event handling, and retry logic. Azure Connector Namespace simplifies this complexity by providing a consistent programming model while managing the underlying integration infrastructure, helping teams build and scale connected applications faster. With Azure Connector Namespace, customers can: Accelerate application development: Connect to hundreds of business systems using prebuilt connectors and SDKs for .NET, Node.js, and Python, without writing and maintaining custom API integration code. Simplify integration management: Centralize connections and credentials while offloading authentication, credential rotation, polling, webhooks, retries, and throttling to a managed Azure service. Build AI agents with enterprise tools: Expose connectors as MCP tools and deploy managed MCP servers, enabling AI agents to securely interact with business applications and data without custom tool implementations. Integrate across Azure compute: Reuse connectors and connections across Azure Functions, Container Apps, App Service, and custom applications without requiring a workflow engine. Azure Connector Namespace helps organizations build integrations, automation solutions, and AI-powered applications faster while reducing development complexity and operational overhead. Learn more. ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "580041",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Integration",
+      "Internet of Things"
+    ],
+    "products": [
+      "Logic Apps"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Azure Connector Namespace"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

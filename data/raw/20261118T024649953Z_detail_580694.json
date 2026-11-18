@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "580694"
+  },
+  "fetchedAt": "2026-11-18T02:46:49.953Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580694",
+    "created": "2026-11-17T20:27:29.9074105Z",
+    "description": "AI Security, a new add-on for Azure\nFirewall Premium, is now in public preview. Announced at Microsoft Ignite, it\nintroduces five capabilities to help you protect AI applications, safeguard\nsensitive data, strengthen malware and application defenses, and simplify\nfirewall policy management. Prompt injection protection\nuses Azure AI Content Safety Prompt Shields to detect and block\nprompt-injection attempts in selected traffic, without per-application SDK\nintegration.  Network DLP\nintegrates with Microsoft Purview to help prevent sensitive corporate data from\nbeing uploaded to destinations your organization does not sanction, including\nAI applications and models.  Malware detection\nand application vulnerability protection bring purpose-built small\nlanguage models (SLMs), fine-tuned for network security and optimized to run on\nCPUs, into inline inspection. These models analyze binary files and application\nrequests in transit to detect malware and exploit attempts, enabling policy\nenforcement before identified threats reach their destinations. AI policy\ncombines firewall configuration with observed network traffic to provide\ncontextual insights and recommendations. Use these insights to review unused\nrules, identify opportunities to improve rule order, and investigate traffic\nanomalies. Review recommendations and validate changes with a dry-run before\napplying them.  Together, these capabilities bring\nAI-powered intelligence to network protection and policy management. Learn more:DocumentationAnnouncement\nblog",
+    "id": "580694",
+    "modified": "2026-11-17T20:27:29.9074105Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure Firewall"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Security",
+      "Services",
+      "Feature"
+    ],
+    "title": "Public Preview: AI Security add-on for Azure Firewall Premium"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

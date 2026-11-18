@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "579354"
+  },
+  "fetchedAt": "2026-11-18T02:51:46.992Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "579354",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "You can now send a query to any node in a multi-shard Azure DocumentDB cluster. The node can handle the query locally or route it to the shard or shards that contain the data. In effect, the nodes in a multi-shard cluster function as a router, being fully shard aware, with the ability to either serve the requests locally, route the request to the appropriate shard containing the data, or route a query across multiple shards, gather the results, and present them as one.  This optimization guarantees performance regardless of the number of shards in a cluster and the size of the shards. For both 1x and 100x of steady state request volume, querying from any node ensures consistent performance at any scale.   Previously, request routing relied on a single coordinator. Now, every node can route requests to the appropriate shards.  Learn more. ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "579354",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure DocumentDB"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure DocumentDB elasticity—query from any node "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

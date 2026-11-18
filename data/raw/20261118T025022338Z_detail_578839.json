@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "578839"
+  },
+  "fetchedAt": "2026-11-18T02:50:22.338Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578839",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Geo-redundancy in Azure App Service, now in public preview, helps customers build more resilient web applications across Azure regions without independently creating and managing an App Service deployment in each region. App Service creates and manages regional application replicas, synchronizes supported application content and configuration, and provides a global endpoint for traffic across regions. Customers can choose Passive mode for regional failover or Active mode to distribute traffic across healthy regions.\nLearn more.",
+    "id": "578839",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Compute",
+      "Mobile",
+      "Web"
+    ],
+    "products": [
+      "App Service"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Geo-redundancy on Azure App Service"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

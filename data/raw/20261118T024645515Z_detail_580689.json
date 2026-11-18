@@ -1,0 +1,33 @@
+{
+  "args": {
+    "id": "580689"
+  },
+  "fetchedAt": "2026-11-18T02:46:45.515Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580689",
+    "created": "2026-11-17T20:29:13.694311Z",
+    "description": "Azure Adaptive Virtual Patching\nintroduces an AI-orchestrated Adaptive Shield designed to reduce exposure to\nnew, emerging, and newly disclosed zero-day vulnerabilities while customers\ntest and deploy software patches. The initial workload focus is Linux Virtual Machines\n(VM) and Virtual Machine Scale Sets (VMSS) on Azure. The service connects three semantic layers: a knowledge graph of\nvulnerabilities and exploit conditions, a map of the customer’s actual\nworkloads and runtime context, and an orchestration layer that identifies\nrelevant exposure and generates workload-specific mitigations. AI-synthesized\npolicies use explicit matching conditions and enforcement actions, combining\nadaptive reasoning with deterministic runtime enforcement. The Adaptive Shield\narchitecture coordinates eBPF-based workload protection and network-based\ncompensating controls to address relevant attack paths. Customers onboard workloads as Protected Resources. A workload\nextension collects telemetry and deploys mitigations directed by the service’s\nAI core, helping protection adapt as threats and workload conditions change.\nAzure Adaptive Virtual Patching complements existing security investments and\ngives customers time to patch safely. It applies temporary mitigations rather\nthan installing software fixes; the corresponding mitigations can be rolled\nback after patching and confirmed remediation. Learn more:DocumentationAnnouncement blog",
+    "id": "580689",
+    "modified": "2026-11-17T20:29:13.694311Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [],
+    "products": [],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Security",
+      "Services"
+    ],
+    "title": "Public Preview: Azure Adaptive Virtual Patching"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

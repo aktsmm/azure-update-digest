@@ -1,0 +1,32 @@
+{
+  "args": {
+    "id": "580975"
+  },
+  "fetchedAt": "2026-11-18T02:55:15.380Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580975",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure SRE\nAgent now natively supports AWS and Google Cloud through built-in connectors,\navailable in public preview. Bring operational evidence together to investigate\napplications and dependencies across Azure and your connected AWS or Google\nCloud environments. The connectors\nuse an Azure managed identity and identity federation with AWS IAM roles and Google Cloud Workload\nIdentity Federation.\nThere's no need to manage AWS access keys or Google Cloud service account keys,\nbuild custom connectors, or host MCP servers. Use separate\nconnections for multiple AWS accounts, or one Google Cloud connection across\nprojects where the federated identity has permissions. Ask in natural language,\nor automate investigations with incident response plans, scheduled tasks, and\nworkflows. Cloud IAM, SRE\nAgent run modes, and tool approvals govern access and operations. Supported\nactivity can be audited in AWS CloudTrail and Google Cloud Audit Logs when\nlogging is configured. Learn more: AWS connector\nguide   Google Cloud\nconnector guide ",
+    "id": "580975",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [],
+    "products": [],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Native AWS and Google Cloud support in Azure SRE Agent"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "581145"
+  },
+  "fetchedAt": "2026-11-18T02:55:26.992Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581145",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure Compute Spot plus, now in public preview, is an enhanced tier of Azure Spot Virtual Machines, bringing greater runtime consistency and earlier eviction signals to interruption-tolerant workloads.Standard Spot suits highly resilient workloads focused on savings. Spot plus offers more predictability and time to respond to interruptions.Key capabilities:Targets at least 60 minutes of runtime on a best-effort basis, while remaining evictableIf Azure evicts a Spot plus VM to reclaim capacity within the first 60 minutes, you aren't charged for that VM's usageUp to 2 minutes' eviction notice to checkpoint or drain workRebalance notifications, typically 30 seconds to 15 minutes ahead, signal elevated eviction riskSpot plus costs more than standard Spot and remains well below pay-as-you-go pricing. Deploy through the Compute API, ARM templates, Azure portal, Azure CLI, Azure PowerShell and Azure SDKs, on single-instance VMs and Virtual Machine Scale Sets with Flexible or Uniform orchestration.Register your subscription for the Spot plus preview feature and deploy a VM or scale set with SpotPlus priority using API version 2026-04-01 or later.Learn more.",
+    "id": "581145",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Azure Compute Spot plus"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

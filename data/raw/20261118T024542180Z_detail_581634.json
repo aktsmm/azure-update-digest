@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "581634"
+  },
+  "fetchedAt": "2026-11-18T02:45:42.180Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581634",
+    "created": "2026-11-17T22:54:18.7005995Z",
+    "description": "Azure Elastic SAN Next Generation is now in public preview. Elastic SAN Next Generation keeps the core benefits customers value in Elastic SAN today: a single SAN resource hierarchy to consolidate block storage workloads and dynamically share performance, simplifying storage management and lowering total cost of ownership at scale. As a cloud SAN offering, Elastic SAN supports SAN migrations such as datacenter exits and hardware refreshes through iSCSI connectivity, along with the scale needed for cloud-native workloads.Next Generation builds on that foundation to support mission-critical workloads and advanced storage capabilities such as thin provisioning and autoscaling, helping customers further optimize storage costs while expanding Elastic SAN's fit across SAN migrations and cloud-native applications.Run mission-critical and general-purpose workloads on the same SAN with noisy-neighbor protection.Quality of service (QoS) tiers at the volume-group level let customers match performance to workload requirements:Business Critical: Reserved performance with low sub-millisecond latency, up to 400,000 IOPS and 10,000 MBps per volume. Built for SAP HANA, Epic, and I/O-intensive OLTP.General Purpose - Direct Attach: Shared performance with sub-millisecond latency, up to 80,000 IOPS and 2,000 MBps per volume. Built for vector and OSS databases.General Purpose - iSCSI: Shared performance with low single-digit millisecond latency, up to 80,000 IOPS and 1,280 MBps per volume. Built for external storage needs such as Azure VMware Solution (AVS) or customers who prefer iSCSI connectivity.Efficient provisioning for lower storage TCOProvision for workload growth without paying for the full logical capacity of volumes upfront, while scaling capacity and performance independently:Thin provisioning: Size volumes for anticipated growth while consuming physical capacity as data is written, up to 5x the SAN's provisioned capacity.Autoscaling: Automatically add SAN capacity based on customer-defined thresholds.Independent capacity and performance provisioning: Provision capacity, IOPS, and throughput independently at the SAN level.Thin clones (coming soon): Create space-efficient, mountable dev/test copies of Business Critical volumes.Crash-consistent snapshots: Protect volumes with point-in-time snapshots.A Next Generation SAN can scale up to 1 PiB, 4 million IOPS, and 160 GBps. Sign up for Azure Elastic SAN Next Generation preview.",
+    "id": "581634",
+    "modified": "2026-11-17T22:54:18.7005995Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Elastic SAN"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Pulic Preview: Azure Elastic SAN Next Generation"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

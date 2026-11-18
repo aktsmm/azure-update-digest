@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "578444"
+  },
+  "fetchedAt": "2026-11-18T02:49:02.459Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578444",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "You can now use the AI-assisted Data Modeler in Visual Studio Code to design an effective Azure Cosmos DB data model earlier in the development lifecycle. It analyzes document structure, query patterns, write distribution, expected scale, and data growth to recommend suitable partition keys and container configurations.  Recommendations are grounded in Azure Cosmos DB best practices. You can compare alternatives, understand trade-offs, and identify risks such as hot partitions, uneven data distribution, and costly cross-partition queries before deploying. You can then generate an implementation-ready Bicep, Terraform, or SDK configuration without leaving Visual Studio Code.  The updated extension also introduces an account dashboard that provides a centralized view of an Azure Cosmos DB account and its resources. You can quickly understand your account, navigate to databases and containers, and access common development workflows from one place.  Learn more. ",
+    "id": "578444",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Cosmos DB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview:  AI-assisted data modeler and other updates in Azure Cosmos DB extension for VS Code "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,32 @@
+{
+  "args": {
+    "id": "580758"
+  },
+  "fetchedAt": "2026-11-18T02:54:45.108Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580758",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure SRE Agent now supports the open Agent-to-Agent (A2A)\nprotocol in public preview. SRE agents can hand tasks to other agents and\naccept tasks from them while each agent retains its own team’s permissions. For\nexample, an application team’s agent investigating a latency spike can ask a\ndatabase team’s agent to check query performance and bring the findings back\ninto the same investigation. Administrators determine which agents an SRE agent can call,\napprove incoming callers in the same Microsoft Entra tenant, and select which\ncustom agent handles their requests. Connections use managed identity and do\nnot give remote agents direct access to the caller’s tools or permissions. Learn more.",
+    "id": "580758",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [],
+    "products": [],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Agent-to-Agent (A2A) protocol support in Azure SRE Agent"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

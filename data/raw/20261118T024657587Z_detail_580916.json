@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "580916"
+  },
+  "fetchedAt": "2026-11-18T02:46:57.587Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580916",
+    "created": "2026-11-17T20:15:03.877447Z",
+    "description": "Running AI agents that execute untrusted, model-generated code requires isolated environments for each session. Today, teams building on Kubernetes assemble their own sandbox lifecycle, storage, and warm-up logic, adding operational overhead and making users wait while fresh environments initialize.  We’re introducing the Agent Sandbox cluster extension. Built on the open-source Kubernetes Agent Sandbox project, the managed extension provides declarative sandbox creation, lifecycle management, and pre-warmed pools. Together, Agent Sandbox cluster extension and Pod Snapshot cluster extension enable isolated agent environments to be snapshotted and restored while preserving runtime state across the sandbox lifecycle.Learn more.",
+    "id": "580916",
+    "modified": "2026-11-17T20:15:03.877447Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Agent Sandbox cluster extension"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

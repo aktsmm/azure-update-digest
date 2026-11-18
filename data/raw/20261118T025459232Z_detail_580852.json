@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "580852"
+  },
+  "fetchedAt": "2026-11-18T02:54:59.232Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "580852",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure DDoS Protection custom policy is now generally\navailable, and it’s one of our most requested features. By default,\nmachine-learning auto-tuning sets detection thresholds for each protected\nresource, which works well for most workloads. But latency-sensitive apps,\nhigh-throughput services, and gaming or event-driven workloads with planned\nspikes often need a fixed threshold. Custom policy lets you set your own for\nindividual protocols, across Azure resources with public IP endpoints, on both\nNetwork Protection and IP Protection SKUs. Each policy holds one or more rules that define a protocol\n(TCP, UDP or TCP SYN), an inbound direction, and a packets-per-second threshold\nthat triggers mitigation. You can link a policy to up to 1,000 resources, and\nyou can create it first and add associations later. Setting a threshold turns\noff auto-tuning for that protocol only, so everything else stays\nmachine-learning tuned. Settings now persist with your resource, so they\nsurvive workload removal or VM shutdown, and you manage them yourself without\non-call support. Take control of how your workloads are protected. Learn\nmore.",
+    "generalAvailabilityDate": "2026-11",
+    "id": "580852",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Networking",
+      "Security"
+    ],
+    "products": [
+      "Azure DDoS Protection"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Security",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure DDoS Protection custom policy "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

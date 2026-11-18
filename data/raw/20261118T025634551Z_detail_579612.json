@@ -1,0 +1,40 @@
+{
+  "args": {
+    "id": "579612"
+  },
+  "fetchedAt": "2026-11-18T02:56:34.551Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "579612",
+    "created": "2026-11-17T20:00:24.008474Z",
+    "description": "Now you can migrate existing Azure Database for PostgreSQL workloads to Azure HorizonDB through a seamless, managed experience powered by Azure Database Migration Service (DMS). With this update, you can extend the DMS V2 architecture with HorizonDB as a supported PostgreSQL target, allowing you to modernize onto a high-performance, scalable PostgreSQL platform without building or operating custom migration infrastructure.  You can initiate and manage a migration through the Azure portal or command-line interfaces. DMS validates source and target connectivity, discovers database objects, provisions isolated migration compute on demand, and orchestrates the end-to-end workflow, including initial data copy, continuous synchronization for online migrations, progress monitoring, error handling, cancellation, and planned cutover. Migration state and operation history are persisted centrally, so you and your support teams have consistent visibility throughout the lifecycle.   Learn\nmore.  ",
+    "id": "579612",
+    "modified": "2026-11-17T20:00:24.008474Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Databases",
+      "Hybrid + multicloud",
+      "Migration"
+    ],
+    "products": [
+      "Azure Database for PostgreSQL",
+      "Azure Database Migration Service",
+      "Azure HorizonDB"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Migrate Azure Database for PostgreSQL to Azure HorizonDB with Azure Database Migration Service (DMS) "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

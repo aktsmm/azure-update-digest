@@ -1,0 +1,1421 @@
+{
+  "args": {
+    "filter": "modified ge 2026-11-16T03:25:32Z and modified lt 2026-11-18T02:44:28Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-11-18T02:44:28.799Z",
+  "ok": true,
+  "response": {
+    "hasMore": true,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "563097",
+        "created": "2026-11-17T23:42:10.1696012Z",
+        "description": "AI model management in Azure HorizonDB is now in limited preview, designed to simplify how you bring AI into your database. With just a single step, you can provision fully managed AI models for embed...",
+        "id": "563097",
+        "modified": "2026-11-17T23:42:10.1696012Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure HorizonDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Limited Preview: AI model management in Azure HorizonDB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563411",
+        "created": "2026-06-02T19:00:47.5410367Z",
+        "description": "Foundry IQ supported Model Context Protocol (MCP) servers as federated knowledge sources, is generally available. Customers register an MCP server as a read-only knowledge source in Foundry IQ. MCP kn...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "563411",
+        "modified": "2026-11-17T21:21:27.3293968Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature",
+          "Microsoft Build"
+        ],
+        "title": "Generally Available: MCP server knowledge sources in Foundry IQ"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "563661",
+        "created": "2026-06-04T19:00:34.7881254Z",
+        "description": "The Azure Content Understanding skill in Azure AI Search is generally available for semantic chunking and AI-generated image descriptions, for use with Foundry IQ and Azure AI Search. The skill produc...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "563661",
+        "modified": "2026-11-17T21:17:15.9306275Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Semantic chunking and AI-generated image descriptions with Azure Content Understanding in Azure AI Search"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "May",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "564668",
+        "created": "2026-06-02T15:15:36.2086399Z",
+        "description": "Azure Backup now supports snapshot-based backup for SQL Server running on Azure Virtual Machines. This new capability uses Azure disk snapshots combined with native SQL transaction log backups to deli...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "564668",
+        "modified": "2026-11-17T21:15:38.5959556Z",
+        "previewAvailabilityDate": "2026-05",
+        "productCategories": [
+          "Management and governance",
+          "Storage"
+        ],
+        "products": [
+          "Azure Backup"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Management",
+          "Microsoft Ignite",
+          "Security",
+          "Services",
+          "Feature",
+          "Compliance"
+        ],
+        "title": "Generally Available: Snapshot backup for SQL Server in Azure VMs"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571488",
+        "created": "2026-11-17T23:44:26.7661152Z",
+        "description": "We're excited to announce the general availability of throughput buckets in Azure Cosmos DB. You can manage the resource consumption of multiple workloads using the same container by limiting the maxi...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "571488",
+        "modified": "2026-11-17T23:44:26.7661152Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Throughput buckets in Azure Cosmos DB "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "July",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "571821",
+        "created": "2026-09-18T17:23:21.3964293Z",
+        "description": "Network egress controls govern the outbound connections a Foundry hosted agent can make, is generally available. Ordered rules match on destination host (FQDN, with wildcards such as *.contoso.com) an...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "571821",
+        "modified": "2026-11-17T21:51:16.0320686Z",
+        "previewAvailabilityDate": "2026-07",
+        "productCategories": [
+          "AI + machine learning"
+        ],
+        "products": [
+          "Microsoft Foundry"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft.AspNetCore.OData.Formatter.Value.EdmUntypedCollection"
+        ],
+        "title": "Generally Available: Network egress controls for hosted agents in Microsoft Foundry"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "572591",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Teams running Windows workloads on AKS often need stronger boot-chain protection for regulated or security-sensitive environments, but Trusted Launch support has historically stopped short of Windows ...",
+        "id": "572591",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Compute",
+          "Containers"
+        ],
+        "products": [
+          "Azure Kubernetes Service (AKS)"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Windows Trusted Launch "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "574153",
+        "created": "2026-11-17T20:56:06.295633Z",
+        "description": "You can now connect to Azure HorizonDB clusters privately through Azure Private Link, using a private IP address from your virtual network. Private DNS integration makes connection setup easier, while...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "574153",
+        "modified": "2026-11-17T20:56:06.295633Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure HorizonDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Private endpoint support for Azure HorizonDB clusters"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "574163",
+        "created": "2026-11-17T23:46:26.346276Z",
+        "description": "You can now configure backup retention for your Azure HorizonDB deployments from 1 to 35 days, giving you greater flexibility to align backup retention with your application and data protection requir...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "574163",
+        "modified": "2026-11-17T23:46:26.346276Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure HorizonDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Customize backup retention from 1 to 35 days in Azure HorizonDB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "574168",
+        "created": "2026-11-17T23:47:55.1848678Z",
+        "description": "Geo-redundant backup and restore for Azure HorizonDB is now available. You can use geo-redundant backups to strengthen data protection and restore your HorizonDB deployment in another Azure region whe...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "574168",
+        "modified": "2026-11-17T23:47:55.1848678Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure HorizonDB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Geo-redundant backup and restore for Azure HorizonDB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "575069",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "User-assigned managed identity (UMI) support is now generally available for Azure HorizonDB, enabling you to assign and centrally manage Azure identities for your HorizonDB clusters. With UMI, you can...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "575069",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure HorizonDB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: User-assigned managed identity for Azure HorizonDB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "575111",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Microsoft Entra authentication is now generally available for Azure HorizonDB, providing a more secure, identity-based approach to database authentication. You can use Microsoft Entra authentication t...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "575111",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure HorizonDB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Microsoft Entra authentication for Azure HorizonDB"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "577515",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Azure Database for MySQL now supports Premium SSD v2 (managed disks) in public preview. Premium SSD v2 provides higher performance and better price-performance compared to Premium File Share, with the...",
+        "id": "577515",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure Database for MySQL"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Database for MySQL on Premium SSD v2 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "June",
+            "ring": "Preview",
+            "year": 2026
+          },
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577520",
+        "created": "2026-11-17T23:07:42.4494806Z",
+        "description": "Semantic Reranker in Azure Cosmos DB improves search relevance by reordering candidate results based on the meaning of the search text and surrounding context. It uses an AI model to evaluate candidat...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "577520",
+        "modified": "2026-11-17T23:07:42.4494806Z",
+        "previewAvailabilityDate": "2026-06",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Semantic Reranker in Azure Cosmos DB "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577531",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Azure Cosmos DB full-text search now includes BM25 score projection, giving you clear visibility into why results appear in the order they do. Your app can now access the relevance score for each resu...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "577531",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Cosmos DB full-text search BM25 score projection"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577553",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Improved database integration guidance for Azure Managed Redis helps you add caching to applications built with Azure Database for PostgreSQL flexible server, Azure Cosmos DB, and Azure SQL. You can u...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "577553",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [],
+        "products": [
+          "Azure Managed Redis"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Managed Redis database integration guidance "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577558",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Keyspace notifications are now generally available for Azure Managed Redis, enabling your applications to receive events through pub/sub when data in your cache changes. You can configure the event ty...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "577558",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [],
+        "products": [
+          "Azure Managed Redis"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Managed Redis keyspace notifications "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "577568",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "The Azure Managed Redis agent kit makes guidance for building and operating production-ready Redis applications available directly into your AI-assisted development workflows. You get recommendations ...",
+        "id": "577568",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [],
+        "products": [
+          "Azure Managed Redis"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Managed Redis agent kit"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "577579",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "The general availability of built-in DNS migration tooling simplifies endpoint migration from Azure Cache for Redis Basic, Standard, and Premium tiers to Azure Managed Redis. The tooling lets you redi...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "577579",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [],
+        "products": [
+          "Azure Managed Redis"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Cache for Redis to Azure Managed Redis migration tooling "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "577589",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Azure Managed Redis now supports adding firewall rules for accessing data, and it gives you greater control over network access to your caches. You can restrict connections to approved source IP addre...",
+        "id": "577589",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [],
+        "products": [
+          "Azure Managed Redis"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: IP filtering in Azure Managed Redis "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "577594",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Redis 8 is now available in Azure Managed Redis, bringing the latest Redis innovation to Azure's fully managed Redis service. With richer queries, atomic JSON updates, field-level expiration, and fine...",
+        "id": "577594",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [],
+        "products": [
+          "Azure Managed Redis"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Redis 8 in Azure Managed Redis "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "577599",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Azure Managed Redis now provides shard-level metrics, giving you greater visibility into the performance of individual shards. This added granularity helps you understand workload distribution, identi...",
+        "id": "577599",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [],
+        "products": [
+          "Azure Managed Redis"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Shard-level metrics in Azure Managed Redis "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578028",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "You can now use a single Azure SQL Managed Instance link to extend a SQL Server Always On Availability Group with multiple databases to Azure SQL Managed Instance. You can extend an existing availabil...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "578028",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure SQL Managed Instance"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure SQL Managed Instance link support for availability groups with multiple databases "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578033",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Zone redundancy for the Next-gen General Purpose service tier helps improve the resiliency of Azure SQL Managed Instance by distributing critical service components across availability zones. This upd...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "578033",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure SQL Managed Instance"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Zone-redundant Next-gen GP tier in Azure SQL Managed Instance "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578044",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Vaulted backups add an independent protection layer by storing immutable backup copies in an Azure Backup vault, isolated from the source Azure Cosmos DB account, and managed through Azure Backup. Thi...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "578044",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Backup for Azure Cosmos DB "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578049",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Embedding generation converts content into vector embeddings that capture semantic meaning, helping applications find relevant information beyond exact keyword matches. It uses specialized Azure Data-...",
+        "id": "578049",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Embedding generation in Azure Cosmos DB "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578054",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "The Azure Cosmos DB SDK for Rust gives you a native Rust client for building applications on Azure Cosmos DB for NoSQL. You get access to database operations directly from Rust, with built-in performa...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "578054",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Cosmos DB SDK for Rust "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578172",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Packet capture Insights uses\nAI-assisted analysis to surface key findings from packet captures and can\ningest structured protocol logs into log analytics ingestion for deeper investigation. Packet cap...",
+        "id": "578172",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Management and governance",
+          "Networking"
+        ],
+        "products": [
+          "Network Watcher"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Network Watcher – Packet capture insights"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578232",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "You can use full-text search in Azure DocumentDB, in public preview, with BM25 indexing, relevance-based sorting, and access to relevance scores. Fuzzy and proximity search help you handle typos and f...",
+        "id": "578232",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure DocumentDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Full-text search in Azure DocumentDB "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578237",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "DocumentDB for VS Code is now generally available. This free, open-source extension brings Azure DocumentDB and the open-source DocumentDB project into Visual Studio Code, supporting any MongoDB API-c...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "578237",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure DocumentDB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: DocumentDB extension for VS Code "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578242",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "With the public preview of DocumentDB enabled by Azure Arc, you can deploy DocumentDB on supported Azure Arc-enabled Kubernetes clusters across on-premises, edge, and multicloud environments. Run Mong...",
+        "id": "578242",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Hybrid + multicloud",
+          "Databases"
+        ],
+        "products": [
+          "Azure Arc",
+          "Azure DocumentDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: DocumentDB enabled by Azure Arc"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578255",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "With the public preview of DocumentDB on Azure Local, you can run MongoDB-compatible document workloads on your own infrastructure. Deploy applications and their data close together to address latency...",
+        "id": "578255",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure DocumentDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: DocumentDB on Azure Local "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578262",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Azure DocumentDB now offers granular role-based access control (RBAC) , well beyond the cluster-level permissions that have been offered in the service. You can now use database-level and collection-l...",
+        "id": "578262",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure DocumentDB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Fine-grained role-based access control for databases and collections in Azure DocumentDB "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578314",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Azure HorizonDB is expanding to additional Azure regions, giving you greater flexibility to deploy PostgreSQL workloads closer to your applications and users.  With expanded regional availability, you...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "578314",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure HorizonDB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure HorizonDB now available in 15 regions"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578434",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "We’re announcing the preview of the Azure Cosmos DB hosted MCP experience, enabling enterprise AI agents to securely connect to business data through a standard, managed MCP endpoint. Agents can disco...",
+        "id": "578434",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Managed MCP Server in Azure Cosmos DB "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578439",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "We’re excited to announce the general availability of Azure Cosmos DB Shell, a command-line experience that makes it easier for you and for AI agents to work with Azure Cosmos DB.  Azure Cosmos DB She...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "578439",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure Cosmos DB Shell "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578444",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "You can now use the AI-assisted Data Modeler in Visual Studio Code to design an effective Azure Cosmos DB data model earlier in the development lifecycle. It analyzes document structure, query pattern...",
+        "id": "578444",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Databases",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Cosmos DB"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview:  AI-assisted data modeler and other updates in Azure Cosmos DB extension for VS Code "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578465",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "In mid-November 2026, the following updates and enhancements were made to Azure SQL Managed Instance: \n Boost\n     transaction throughput in Next-gen General Purpose Azure SQL Managed\n     Instance wi...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "578465",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Databases"
+        ],
+        "products": [
+          "Azure SQL Managed Instance"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure SQL Managed Instance updates for mid-November 2026 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578471",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "In mid-November 2026, the following updates and\nenhancements were made to Azure SQL:   \n Fuzzy\n     string matching enables you to compare strings based on similarity rather\n     than relying only on ...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "578471",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Databases",
+          "Hybrid + multicloud"
+        ],
+        "products": [
+          "Azure SQL Database"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Azure SQL updates for mid-November 2026 "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578579",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Announcing Public Preview support for SQL Server 2025 on Ubuntu 26.04 LTS, allowing you to evaluate, test, and deploy SQL Server on Canonical's latest long-term supported platform.  Learn more.  ",
+        "id": "578579",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [],
+        "products": [],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: SQL Server 2025 support on Ubuntu 26.04 LTS "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578602",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "AI-summarized connection troubleshoot results introduces a faster, clearer way to understand connectivity test\nresults in Azure. Connection troubleshoot runs four diagnostic tests, each\ngiving a diffe...",
+        "id": "578602",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Management and governance",
+          "Networking"
+        ],
+        "products": [
+          "Network Watcher"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Management",
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Network Watcher – AI summary of connection troubleshoot results"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578611",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Auto-create connection monitor introduces a new, faster way to set up network monitoring across an entire\nAzure subscription. Until now, connection monitor tests were created one\nconnection at a time,...",
+        "id": "578611",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Management and governance",
+          "Networking"
+        ],
+        "products": [
+          "Network Watcher"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Management",
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Network Watcher – Auto-create connection monitor"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578617",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Connection analyzer for ExpressRoute Circuit introduces a faster, evidence-based way to find where packet loss\noccurs on an ExpressRoute circuit. When customers see packet loss between Azure\nand on-pr...",
+        "id": "578617",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Hybrid + multicloud",
+          "Networking",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure ExpressRoute",
+          "Network Watcher"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Management",
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Network Watcher – Connection analyzer"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578623",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Resource health metrics in connection monitor brings resource health and key performance metrics into the Connection\nMonitor test topology, powered by Network Watcher topology. Until now, the\ntopology...",
+        "id": "578623",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Management and governance",
+          "Networking"
+        ],
+        "products": [
+          "Network Watcher"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Management",
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Azure Network Watcher – Resource health and topology in connection monitor tests"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578748",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "The Durable Task SDK\nfor Go is available in public preview. Developers can write orchestrations,\nactivities, and durable entities in Go, with Durable Task Scheduler managing\nexecution history and work...",
+        "id": "578748",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Durable Task SDK for Go "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "October",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578762",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Disaster recovery for Azure Functions durable task scheduler is now available in public preview for the Dedicated SKU in supported Azure regions.Recover business-critical workflows from regional outag...",
+        "id": "578762",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-10",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Native disaster recovery for Azure Functions durable task scheduler"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578768",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Customer-managed keys for Azure Functions Durable Task Scheduler are now generally available for Dedicated SKU schedulers.Organizations that need to manage their own encryption keys can now use custom...",
+        "generalAvailabilityDate": "2026-09",
+        "id": "578768",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "status": "Launched",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Generally Available: Customer-managed keys for Azure Functions durable task scheduler "
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578787",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Azure Network Watcher VNet\nFlow Logs now provides enhanced capture-side interface context with the\nnetworkInterfaceIP field. The networkInterfaceIP\nfield records the IP address or addresses of the net...",
+        "id": "578787",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Management and governance",
+          "Networking"
+        ],
+        "products": [
+          "Network Watcher"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Network Watcher VNet Flow Logs enriched with networkInterfaceIP field"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "578792",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Azure Network Watcher VNet\nFlow Logs now supports flow log enrichment for Azure Private Link Service,\nproviding greater visibility into network traffic flowing through Private Link\nService. With this ...",
+        "id": "578792",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking",
+          "Management and governance"
+        ],
+        "products": [
+          "Azure Private Link",
+          "Network Watcher"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Network Watcher Private Link support"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "General Availability",
+            "year": 2026
+          }
+        ],
+        "baseId": "578797",
+        "created": "2026-11-17T20:00:32.9099044Z",
+        "description": "Azure Network Watcher rule recommendation\nis now in public preview, helping you proactively identify opportunities to\nimprove network security based on observed network traffic. With this capability, ...",
+        "generalAvailabilityDate": "2026-11",
+        "id": "578797",
+        "modified": "2026-11-17T20:00:32.9099044Z",
+        "productCategories": [
+          "Management and governance",
+          "Networking"
+        ],
+        "products": [
+          "Network Watcher"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Microsoft Ignite",
+          "Feature"
+        ],
+        "title": "Public Preview: Network Watcher rule recommendation"
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 50,
+    "totalCount": 165
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}

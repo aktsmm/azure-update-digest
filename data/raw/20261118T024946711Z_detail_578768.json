@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "578768"
+  },
+  "fetchedAt": "2026-11-18T02:49:46.711Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "September",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "578768",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Customer-managed keys for Azure Functions Durable Task Scheduler are now generally available for Dedicated SKU schedulers.Organizations that need to manage their own encryption keys can now use customer-managed keys to protect their workflow data, supporting separation of duties, centralized auditing of key access, and customer-defined key rotation policies.Customers can use a key they own in Azure Key Vault or Azure Managed Hardware Security Module (HSM) to protect scheduler data at rest. Configuration is available through the ARM REST API, Azure CLI using az rest, or Bicep. Learn more. ",
+    "generalAvailabilityDate": "2026-09",
+    "id": "578768",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Generally Available: Customer-managed keys for Azure Functions durable task scheduler "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

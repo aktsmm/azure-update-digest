@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "578602"
+  },
+  "fetchedAt": "2026-11-18T02:49:19.782Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578602",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "AI-summarized connection troubleshoot results introduces a faster, clearer way to understand connectivity test\nresults in Azure. Connection troubleshoot runs four diagnostic tests, each\ngiving a different view of the network path. Making sense of these results\ntogether has required strong networking expertise and manual correlation across\ntests. With this release, AI does that correlation for customers. AI reviews the results of all four tests together and\nreturns a single, easy-to-read summary. The summary states what is happening,\nthe probable cause and how confident the AI is in that cause. It then\nrecommends next steps to resolve the issue. For example, if all probes to a\ndestination fail and the diagnostics show no service listening on the tested\nport, the summary points to the destination VM as the likely cause. It rates\nthat finding with high confidence and suggests checking the service status and\nport configuration. This enhancement removes the need to interpret and\ncorrelate each test's results by hand. Customers get a clear explanation of\nwhat went wrong and why, along with practical guidance on what to fix. Teams\nwithout deep networking expertise can act on the results themselves, and\nexperienced engineers can confirm the root cause faster. By adding AI-powered summaries to connection troubleshoot, Azure helps customers move from raw diagnostic data to a\nconfident, actionable answer in minutes. That makes troubleshooting faster,\nsimpler and more accessible across their Azure workloads. Learn more.",
+    "id": "578602",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Management and governance",
+      "Networking"
+    ],
+    "products": [
+      "Network Watcher"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Management",
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Network Watcher – AI summary of connection troubleshoot results"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

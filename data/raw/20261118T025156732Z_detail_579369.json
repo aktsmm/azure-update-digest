@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "579369"
+  },
+  "fetchedAt": "2026-11-18T02:51:56.732Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "579369",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure Files now supports NFS shares on HDD in public preview, expanding beyond the existing SSD offering with a cost-effective, fully managed option for Linux workloads such as general-purpose applications, shared datasets, and backups where cost efficiency is the priority.Key benefits:Align storage spending with workload needs: Choose HDD for cost-sensitive data and SSD for performance-sensitive application data.Retain familiar NFS access: Move Linux workloads from on-premises file servers and NAS environments to a fully managed service.Configure capacity and performance independently: Provision capacity, IOPS, and throughput to match workload requirements with Provisioned v2 billing.To get started, complete the NFS HDD signup survey to request access. For questions or feedback, contact azfilespreview@microsoft.com.Learn more:Azure Files NFS learning documentationNFS HDD signup survey",
+    "id": "579369",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Files"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Pricing & Offerings",
+      "Feature"
+    ],
+    "title": "Public Preview: Azure Files NFS shares on HDD"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

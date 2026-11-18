@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "580306"
+  },
+  "fetchedAt": "2026-11-18T02:53:51.310Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580306",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Session-based authentication is now in public preview\nfor Azure Blob and Data Lake Storage.Session-based\nauthentication reduces the per-request authentication and authorization time\nfor AI agents and applications while preserving the security controls\norganizations already rely on.With\nsession-based authentication, an agent or application authenticates once with\nMicrosoft Entra ID, establishes a short-lived session for a container, and uses\nthat session for subsequent reads.Session-based\nauthentication provides three benefits:Improved\n     performance. Identity\n     and permissions are verified once when the session is created. Subsequent\n     read requests to the container use that session which reduces per-request\n     authentication and authorization latency.The\n     same least privileged access, now short-lived. Sessions use your organization’s\n     existing permission model for least privileged access, Azure RBAC and\n     Azure ABAC. Each session is also scoped to one container, expires after\n     five minutes, is bound to the client that created it, and requires every\n     request to be signed.Full traceability.  Azure Storage diagnostic logs currently record the Microsoft Entra\nID identity behind each request, and the same is true with sessions. With\nsessions, every request remains tied to the Microsoft Entra ID identity that\ncreated the session, so security teams keep visibility into which identity,\nhuman or agent, accessed what data, and when. This preview\nis available in all public regions, supports the Get Blob operation, and is\navailable through the REST API and Azure Storage SDKs. With the SDK, enabling\nsession-based authentication is a single client configuration option, with no\nchanges to your application logic.Creating a\nsession is billed as a write transaction. Read requests made with a session are\nbilled at the standard transaction rates for your storage account type.Learn more: Blog  Documentation ",
+    "id": "580306",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Blob Storage"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Security",
+      "Feature"
+    ],
+    "title": "Public Preview: Session-based authentication for Azure Blob and Data Lake Storage"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "580921"
+  },
+  "fetchedAt": "2026-11-18T02:55:11.848Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "580921",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Restarting a sandboxed workload means losing in-memory state and repeating costly initialization. AI environments must reload models and rebuild runtime context; other sandboxed applications must repeat Java Virtual Machine (JVM) warmup or repopulate caches. Users wait while work that was already completed runs again. We’re introducing the Pod Snapshot cluster extension to capture a supported pod runtime state and restore it on demand, preserving memory and process state in Azure Blob instead of cold-starting. Paired with the Agent Sandbox cluster extension, it lets teams capture and restore isolated agent environments. For both agent and other supported sandboxed workloads, resuming from captured state reduces repeated initialization and the wait before work can continue. Learn more.",
+    "id": "580921",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Compute",
+      "Containers"
+    ],
+    "products": [
+      "Azure Kubernetes Service (AKS)"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Pod snapshot cluster extension"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

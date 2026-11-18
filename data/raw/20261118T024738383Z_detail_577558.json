@@ -1,0 +1,34 @@
+{
+  "args": {
+    "id": "577558"
+  },
+  "fetchedAt": "2026-11-18T02:47:38.383Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "577558",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Keyspace notifications are now generally available for Azure Managed Redis, enabling your applications to receive events through pub/sub when data in your cache changes. You can configure the event types that matter to your application and subscribe to notifications for selected keys or operations.  These notifications help you build event-driven applications that monitor key changes, respond to expirations, and trigger downstream actions without continuously polling the cache. You can update the notification settings as your application requirements evolve. Learn more. ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "577558",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [],
+    "products": [
+      "Azure Managed Redis"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure Managed Redis keyspace notifications "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

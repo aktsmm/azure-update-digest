@@ -1,0 +1,39 @@
+{
+  "args": {
+    "id": "579147"
+  },
+  "fetchedAt": "2026-11-18T02:51:21.822Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "579147",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Azure Backup for Azure Cosmos DB is now generally available.\nVaulted backup protects your Azure Cosmos DB accounts with immutable, long-term\nbackups stored in a logically air-gapped backup vault, isolated from your\nproduction environment. It complements native continuous\nbackups, which provide up to 35 days of operational recovery, by adding\nretention of up to 10 years for compliance, audit and ransomware recovery. With vaulted backup you get WORM immutability, soft delete,\nmulti-user authorization, Azure RBAC and encryption with customer-managed keys,\nall managed centrally alongside your other Azure Backup workloads. New since public preview: Daily incremental backups with a weekly full\nbackup, for a 1-day RPO Support for accounts with up to 2,500 physical\npartitions (about 125 TB) Cross-region restore to the Azure paired region,\nin addition to cross-subscription restore Availability in all Azure public cloud regions Auto-heal retries of scheduled backups that fail\nbecause of transient issues Supported for NoSQL and MongoDB (RU-based) accounts with\ncontinuous backup enabled. Get started today from Resiliency in the Azure\nportal or with the Azure CLI. Learn more: Documentation Tutorial Pricing details Pricing calculator ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "579147",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Management and governance",
+      "Storage",
+      "Databases",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Backup",
+      "Azure Cosmos DB"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Azure Backup for Azure Cosmos DB"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

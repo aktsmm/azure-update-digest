@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "581503"
+  },
+  "fetchedAt": "2026-11-18T02:44:51.468Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581503",
+    "created": "2026-11-18T00:00:09.005872Z",
+    "description": "Immutable snapshots for Azure Disk Storage are now available in public preview. Immutable snapshots complement Azure Backup immutable vaults. Use vaults for cost-efficient long-term retention, and immutable snapshots for short-term backups that need faster restore. Snapshots are read-only after creation, and you can apply an immutability policy to existing snapshots of any Azure disk type to prevent deletion for up to 90 days. While the policy is active, no one can delete the snapshot, regardless of role or permissions. This helps protect your backups from accidental or malicious deletion and supports regulatory data retention requirements. You can still restore disks, copy snapshots to other regions, and perform all other snapshot operations. Choose between two types of immutability policies: Unlocked policies let authorized users test a policy before locking it. Authorized users can extend, shorten, or remove an unlocked policy.Locked policies provide compliance-grade protection. They can only be extended. No one, including administrators and Azure, can shorten or remove them, so the snapshot can't be deleted until the retention period ends. Use them to protect backups from ransomware, meet regulatory requirements for short-term backups that need fast restore, and guard against rogue AI agent behavior.There's no additional charge for immutability policies; protected snapshots continue to be billed at standard managed disk snapshot rates until you delete them. Learn more:\n Pricing\n     page\n Documentation",
+    "id": "581503",
+    "modified": "2026-11-18T00:00:09.005872Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Storage"
+    ],
+    "products": [
+      "Azure Disk Storage"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Compliance",
+      "Microsoft Ignite",
+      "Security"
+    ],
+    "title": "Public Preview: Immutable snapshots for Azure Disk Storage "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

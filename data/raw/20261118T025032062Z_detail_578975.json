@@ -1,0 +1,38 @@
+{
+  "args": {
+    "id": "578975"
+  },
+  "fetchedAt": "2026-11-18T02:50:32.062Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "578975",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "OS-level dependency support via containers for Azure Functions Flex Consumption is now in preview. Previously, Flex Consumption apps ran in a Microsoft-managed worker environment that customers couldn’t extend with native executables, system libraries, or other OS-level components. Workloads with these requirements often had to be redesigned, move the dependency to a separate service, or use another hosting option. You can now build a Linux worker image that packages your function code, a supported Azure Functions language worker, language dependencies, and required OS-level software. This enables scenarios such as browser automation with Puppeteer and Chromium, PDF generation with Puppeteer Sharp, data encryption with GnuPG, and workloads that require system packages, executables, custom fonts, certificates, native libraries, drivers, or command-line tools. The worker-image model lets you version and promote a tested application environment by image digest and update its runtime and dependencies on your own release cycle. Azure manages and services the Functions host separately while continuing to provide trigger integration, request routing, and event-driven scaling. The preview currently supports .NET isolated, Python, Go, and Node.js, with additional language support planned in the following weeks. Learn more. ",
+    "id": "578975",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Compute",
+      "Containers",
+      "Internet of Things"
+    ],
+    "products": [
+      "Azure Functions"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Public Preview: OS-level dependency support via containers for Azure Functions Flex Consumption"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

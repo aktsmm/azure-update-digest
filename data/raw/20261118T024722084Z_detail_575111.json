@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "575111"
+  },
+  "fetchedAt": "2026-11-18T02:47:22.084Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "575111",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "Microsoft Entra authentication is now generally available for Azure HorizonDB, providing a more secure, identity-based approach to database authentication. You can use Microsoft Entra authentication to centrally manage identities and access instead of relying solely on locally managed database passwords, helping you reduce credential-management overhead and strengthen your security posture.  Microsoft Entra authentication is the recommended authentication approach for HorizonDB. You can use Microsoft Entra authentication exclusively for stronger protection against password-based risks or enable it alongside HorizonDB password authentication when you still require local credentials.  Learn more. ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "575111",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Databases"
+    ],
+    "products": [
+      "Azure HorizonDB"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite",
+      "Feature"
+    ],
+    "title": "Generally Available: Microsoft Entra authentication for Azure HorizonDB"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

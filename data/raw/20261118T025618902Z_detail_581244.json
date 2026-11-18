@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "581244"
+  },
+  "fetchedAt": "2026-11-18T02:56:18.902Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581244",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "VM adaptive placement, now in public preview, helps increase Azure VM deployment success when capacity is constrained.With a standard VM create, you specify one exact size, and the deployment fails if that size isn't available. With adaptive placement, you specify a preferred size instead. Azure deploys your preferred size when it can. If it isn't available, Azure deploys a compatible alternative with the same vCPU count, the same or newer generation, and equivalent performance.Adaptive placement isn't a new VM type or pricing offer. You get a regular Azure VM, billed at standard rates for the deployed size, with no additional charge.Key capabilities:Replace custom retry loops and fallback lists with a placement decision Azure makes at request timeSee both your preferred size and the deployed size on the VMUse it for new VMs or update existing VMsDuring preview, preferred sizes can come from the D-, E- and F-series families. Adaptive placement is for single VMs and isn't supported with Capacity Reservations, Dedicated Hosts, Availability Sets or Proximity Placement Groups. It works within your quota and isn't a capacity guarantee. Use the REST API, Azure PowerShell or the .NET and Python SDKs; the Azure portal isn't supported in preview.Learn more.",
+    "id": "581244",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: VM adaptive placement"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

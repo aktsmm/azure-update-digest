@@ -1,0 +1,35 @@
+{
+  "args": {
+    "id": "581160"
+  },
+  "fetchedAt": "2026-11-18T02:55:30.249Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "581160",
+    "created": "2026-11-17T20:00:32.9099044Z",
+    "description": "We’re excited to announce the general availability of Azure Ebsv6 and Ebdsv6 VMs, powered by 5th Gen Intel® Xeon® processors and Azure Boost, delivering enhanced storage performance for I/O-intensive workloads.Designed for relational databases, in-memory analytics, and data warehousing, these remote storage optimized VMs provide improved compute and storage performance over the previous generation.Key benefits include:Enhanced storage performance: Up to 800K IOPS and 12.5 GB/s remote storage throughput with Azure Boost, supporting Premium SSD v2 and Ultra Disk.Improved efficiency: Up to 15% higher remote storage performance per vCPU and 15–30% improved CPU performance.High scalability: Up to 96 vCPUs and 768 GiB memory, with 192-vCPU sizes and up to 1.8 TB memory coming soon.Flexible configurations: Choose Ebsv6 for memory-intensive workloads or Ebdsv6 with local NVMe temporary storage.Enhanced security and connectivity: Up to 200 Gbps networking and Intel Total Memory Encryption enabled by default.Ebsv6 and Ebdsv6 VMs are now generally available across multiple Azure regions.Learn more:Announcement blogEbdsv6\nVM series documentationEbsv6\nVM series documentation ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "581160",
+    "modified": "2026-11-17T20:00:32.9099044Z",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Azure Ebsv6 and Ebdsv6"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
