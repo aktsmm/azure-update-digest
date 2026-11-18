@@ -28,19 +28,19 @@ $bad = @()
 $n = 0
 foreach ($sl in $pres.Slides) {
   $n++
-  $over = @(); $bottom = 0.0; $isUpdate = $false
+  $over = @(); $bottom = 0.0; $isUpdate = $false; $sid = ''
   foreach ($sh in $sl.Shapes) {
     if ($sh.HasTextFrame -and $sh.TextFrame.HasText) {
       $d = $sh.TextFrame.TextRange.BoundHeight - $sh.Height
       # headings are single-line and centred vertically, so ignore a couple of points there
       if ($d -gt $Tolerance) { $over += ("{0:N1}pt '{1}'" -f $d, $sh.TextFrame.TextRange.Text.Substring(0, [math]::Min(20, $sh.TextFrame.TextRange.Text.Length))) }
-      if ($sh.TextFrame.TextRange.Text -match 'ID \d{5,}') { $isUpdate = $true }
+      if ($sh.TextFrame.TextRange.Text -match 'ID (\d{5,})') { $isUpdate = $true; $sid = $Matches[1] }
     }
     if ($sh.Top + $sh.Height -lt $footerLine + 1 -and $sh.Top -gt 150) { $bottom = [math]::Max($bottom, $sh.Top + $sh.Height) }
   }
   if (-not $isUpdate) { continue }
   $blank = ($footerLine - $bottom) / 72
-  if ($over.Count -gt 0 -or $blank -gt $MaxBlankInches) { $bad += [pscustomobject]@{ Slide = $n; Over = ($over -join '; '); BlankIn = [math]::Round($blank, 2) } }
+  if ($over.Count -gt 0 -or $blank -gt $MaxBlankInches) { $bad += [pscustomobject]@{ Slide = $n; Id = $sid; Over = ($over -join '; '); BlankIn = [math]::Round($blank, 2) } }
 }
 $pres.Close()
 "update slides checked: $($keys.Count); flagged: $($bad.Count)"
