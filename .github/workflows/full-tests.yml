@@ -35,5 +35,20 @@ jobs:
         run: |
           npm run validate
           npm run validate:slides
+      - name: Check repository settings that keep the repo tidy and safe
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Merged PR branches pile up (451 once) and dependency alerts go unnoticed when these are switched off.
+          s=$(gh api "repos/${{ github.repository }}" -q '[.delete_branch_on_merge, .security_and_analysis.dependabot_security_updates.status, .security_and_analysis.secret_scanning.status, .security_and_analysis.secret_scanning_push_protection.status] | @tsv' || true)
+          echo "settings: $s"
+          if [ -z "$s" ]; then echo "::warning::could not read repository settings (token scope); skipped"; exit 0; fi
+          set -- $s
+          bad=""
+          [ "$1" = "true" ] || bad="$bad delete_branch_on_merge"
+          [ "$2" = "enabled" ] || bad="$bad dependabot_security_updates"
+          [ "$3" = "enabled" ] || bad="$bad secret_scanning"
+          [ "$4" = "enabled" ] || bad="$bad secret_scanning_push_protection"
+          if [ -n "$bad" ]; then echo "::error::repository settings drifted:$bad"; exit 1; fi
       - name: Run the full test suite (builds the site and checks links)
         run: npm test
