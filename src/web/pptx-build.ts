@@ -63,6 +63,8 @@ function lines(s: string, pt: number, boxW: number): number {
   return n;
 }
 const lineH = (pt: number) => (pt * 1.22) / 72;
+/** Largest size (down to minPt) at which the text stays on one line; PowerPoint does not apply fit: shrink until a box is edited. */
+const oneLinePt = (text: string, maxPt: number, minPt: number, boxW: number) => { for (let p = maxPt; p > minPt; p -= 0.5) if (lines(text, p * 1.06, boxW) === 1) return p; return minPt; };
 
 interface Panel { heading: string; items: string[]; tone: "normal" | "warn" | "sug" }
 
@@ -73,8 +75,8 @@ function tintShape(s: PptxSlide, topLeft: number) {
 }
 
 function panelHeight(p: Panel, pt: number, w: number): number {
-  const body = p.items.reduce((a, t) => a + lines(t, pt, w - 0.34) * lineH(pt), 0);
-  return 0.34 + body + 0.1 + (p.items.length - 1) * 0.03;
+  const body = p.items.reduce((a, t) => a + (lines(t, pt, w - 0.4) + (/[\x21-\x7E]{14,}/.test(t) ? 0.6 : 0)) * lineH(pt), 0);
+  return 0.34 + body + 0.15 + (p.items.length - 1) * 0.03;
 }
 
 function dateJa(a: Slide["meta"]["availability"][number]): string {
@@ -209,7 +211,7 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
   // PowerPoint does not apply fit: shrink until the text is edited, so pick the largest size that keeps the title on one line
   const titlePt = [24, 22, 21, 20, 19, 18, 17, 16].find((x) => lines(sl.title.ja, x * 1.06, W - M - 2.5) === 1) ?? 16;
   s.addText(sl.title.ja, { x: M, y: 0.22, w: W - M - 2.5, h: 0.5, fontFace: FONT, fontSize: titlePt, bold: true, color: "0B2A4A", margin: 0, fit: "shrink" });
-  if (sl.title.subtitleJa) s.addText(`― ${sl.title.subtitleJa}`, { x: M, y: 0.74, w: W - M - 2.5, h: 0.32, fontFace: FONT, fontSize: 13, bold: true, color: C.navy, margin: 0, fit: "shrink" });
+  if (sl.title.subtitleJa) s.addText(`― ${sl.title.subtitleJa}`, { x: M, y: 0.74, w: W - M - 2.5, h: 0.32, fontFace: FONT, fontSize: oneLinePt(`― ${sl.title.subtitleJa}`, 13, 9, W - M - 2.5), bold: true, color: C.navy, margin: 0, fit: "shrink" });
   s.addText([{ text: sl.title.en, options: { color: "8A95A6" } }, { text: `　${dateLine}`, options: { color: C.gray, bold: true } }], { x: M, y: 1.06, w: W - 2 * M, h: 0.26, fontFace: FONT, fontSize: 9.5, margin: 0, fit: "shrink" });
   s.addShape("roundRect", { x: W - M - 1.9, y: 0.25, w: 1.9, h: 0.42, fill: { color: KIND_COLOR[sl.kind] ?? C.mute }, line: { color: KIND_COLOR[sl.kind] ?? C.mute, width: 0 }, rectRadius: 0.2 });
   s.addText(sl.label, { x: W - M - 1.9, y: 0.25, w: 1.9, h: 0.42, align: "center", valign: "middle", fontFace: FONT, fontSize: 14, bold: true, color: C.white, margin: 0 });
@@ -292,7 +294,7 @@ function addUpdateSlide(pptx: PptxDeck, sl: Slide, labels: Record<string, string
   const drawPanel = (p: Panel, x: number, y: number, w: number, h: number, pt = mainPt) => {
     const col = p.tone === "warn" ? C.red : p.tone === "sug" ? "A8710F" : "0B6BCB";
     s.addShape("roundRect", { x, y, w, h, fill: { color: p.tone === "warn" ? "FFF4F4" : p.tone === "sug" ? "FFF8E8" : C.white }, line: { color: p.tone === "warn" ? C.red : p.tone === "sug" ? "D9A441" : C.line, width: 1.25, ...(p.tone === "sug" ? { dashType: "dash" } : {}) }, rectRadius: 0.06 });
-    s.addText(p.heading, { x: x + 0.1, y: y + 0.03, w: w - 0.2, h: 0.3, fontFace: FONT, fontSize: Math.min(pt + 1.5, 16), bold: true, color: col, margin: 0, valign: "middle" });
+    s.addText(p.heading, { x: x + 0.1, y: y + 0.03, w: w - 0.2, h: 0.3, fontFace: FONT, fontSize: oneLinePt(p.heading, Math.min(pt + 1.5, 16), 8, w - 0.2), bold: true, color: col, margin: 0, valign: "middle" });
     s.addText(p.items.map((t) => ({ text: t, options: { bullet: { indent: 12 }, breakLine: true } })), { x: x + 0.12, y: y + 0.34, w: w - 0.24, h: h - 0.38, fontFace: FONT, fontSize: pt, color: "1F2A37", valign: "top", margin: 0, paraSpaceAfter: 2, fit: "shrink" });
   };
 
