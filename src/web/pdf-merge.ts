@@ -1,4 +1,4 @@
-import { PDFDocument, PDFHexString, PDFName, concatTransformationMatrix, PDFString, pushGraphicsState, rgb, type PDFFont, type PDFPage } from "pdf-lib";
+import { PDFDocument, PDFHexString, PDFName, concatTransformationMatrix, PDFString, popGraphicsState, pushGraphicsState, rgb, setLineWidth, setStrokingRgbColor, setTextRenderingMode, type PDFFont, type PDFPage, type RGB } from "pdf-lib";
 import fontkit from "@pdf-lib/fontkit";
 import { KIND_COLOR_HEX, KIND_ICON, paginateRows, sectionByKind } from "../lib/kind-section.js";
 import type { SlideKind } from "../lib/slide-kind.js";
@@ -49,8 +49,13 @@ class Painter {
   constructor(private font: PDFFont) {}
   text(p: PDFPage, s: string, x: number, top: number, size: number, color = NAVY, bold = false) {
     const y = H - top - size;
+    if (!bold) { p.drawText(s, { x, y, size, font: this.font, color }); return; }
+    // Bold is one draw with a thin outline in the same colour (text rendering mode 2). The former second, shifted draw put every
+    // bold word into the text layer twice, so search, copy and screen readers read it twice.
+    const c = color as RGB;
+    p.pushOperators(pushGraphicsState(), setTextRenderingMode(2), setLineWidth(size * 0.03), setStrokingRgbColor(c.red, c.green, c.blue));
     p.drawText(s, { x, y, size, font: this.font, color });
-    if (bold) p.drawText(s, { x: x + size * 0.025, y, size, font: this.font, color });
+    p.pushOperators(popGraphicsState());
   }
   width(s: string, size: number) { return this.font.widthOfTextAtSize(s, size); }
   fit(s: string, size: number, max: number) {
