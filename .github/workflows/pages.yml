@@ -11,6 +11,8 @@ on:
       - "site/**"
       - "config/**"
       - "package-lock.json"
+      # a change to the deploy workflow itself must deploy once, so a broken action update (e.g. a Dependabot bump) shows up right away
+      - ".github/workflows/pages.yml"
 
 permissions:
   contents: read
