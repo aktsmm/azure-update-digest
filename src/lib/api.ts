@@ -1,4 +1,4 @@
-import type { DigestItem } from "./query.js";
+import { bulkRegistrationDays, type DigestItem } from "./query.js";
 import type { SiteMeta } from "./site-data.js";
 import { addDays, toJstDate } from "./period.js";
 
@@ -34,6 +34,8 @@ export function buildApi(items: DigestItem[], meta: SiteMeta, slides: Map<string
   }
   const monthStatus = new Map(meta.backfill.months.map((m) => [m.month, m.status]));
   const monthKeys = [...months.keys()].sort().reverse();
+  const bulk = bulkRegistrationDays(items);
+  const bulkDays = (m: string) => { const d = [...bulk].filter(([day]) => day.startsWith(m)).map(([day, n]) => ({ date: day, count: n })); return d.length ? d : null; };
 
   files.push({
     path: `${BASE}/index.json`,
@@ -49,11 +51,12 @@ export function buildApi(items: DigestItem[], meta: SiteMeta, slides: Map<string
         "Static JSON files; there is no query endpoint. Filter on the client side.",
         "Original announcement text is not republished. Summaries and slides are written in Japanese from Microsoft Release Communications metadata and Microsoft Learn; each slide claim carries its evidence URLs.",
         "Dates are JST calendar dates. Availability (GA / Preview / retirement) stays at month granularity as published.",
+        ...(bulk.size ? [`On ${[...bulk].map(([d, n]) => `${d} (${n} updates)`).join(", ")} Microsoft Release Communications registered a large batch of earlier updates at once, so the month count is higher than the real number of new announcements; use each update's availabilities for its real GA / preview month.`] : []),
         "A month with coverage other than complete may be missing updates; do not read a short list as zero.",
       ],
       categories: meta.categories,
       importanceLevels: meta.importanceLevels,
-      months: monthKeys.map((m) => ({ month: m, count: months.get(m)!.length, coverage: monthStatus.get(m) ?? "daily", url: `${BASE}/months/${m}.json` })),
+      months: monthKeys.map((m) => ({ month: m, count: months.get(m)!.length, coverage: monthStatus.get(m) ?? "daily", ...(bulkDays(m) ? { bulkRegistration: bulkDays(m) } : {}), url: `${BASE}/months/${m}.json` })),
       endpoints: {
         latest: `${BASE}/latest.json`,
         month: `${BASE}/months/{YYYY-MM}.json`,

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import { runQuery, defaultQuery, matchedElsewhere, type DigestItem } from "../src/lib/query.js";
+import { runQuery, defaultQuery, matchedElsewhere, bulkRegistrationDays, type DigestItem } from "../src/lib/query.js";
 import { classifyCategories, scoreImportance } from "../src/lib/classify.js";
 import { stableStringify } from "../src/lib/stable.js";
 
@@ -108,5 +108,25 @@ describe("matchedElsewhere", () => {
     expect(matchedElsewhere(aks, "")).toEqual([]);
     expect(matchedElsewhere(aks, "  ")).toEqual([]);
     expect(matchedElsewhere(aks, "postgresql")).toEqual([]);
+  });
+});
+
+describe("bulkRegistrationDays", () => {
+  const day = (d: string, n: number, start = 0) => Array.from({ length: n }, (_, i) => item(`${d}-${start + i}`, d));
+  const normal = [...day("2026-05-01", 6), ...day("2026-05-02", 7), ...day("2026-05-03", 8), ...day("2026-05-04", 5), ...day("2026-05-05", 9)];
+  it("flags a day with a registration batch far above the usual", () => {
+    const all = [...normal, ...day("2026-06-03", 130)];
+    expect([...bulkRegistrationDays(all).entries()]).toEqual([["2026-06-03", 130]]);
+  });
+  it("does not flag a busy but ordinary day, nor small data sets", () => {
+    expect(bulkRegistrationDays([...normal, ...day("2026-06-03", 30)]).size).toBe(0);
+    expect(bulkRegistrationDays(day("2026-06-03", 10)).size).toBe(0);
+    expect(bulkRegistrationDays([]).size).toBe(0);
+  });
+  it("finds the two batches in the real data and no other day", () => {
+    const real = JSON.parse(readFileSync("data/normalized/items/2025-11.json", "utf8")).items.map((x: any) => item(x.canonicalKey, x.createdJst));
+    const june = JSON.parse(readFileSync("data/normalized/items/2026-06.json", "utf8")).items.map((x: any) => item(x.canonicalKey, x.createdJst));
+    const days = [...bulkRegistrationDays([...real, ...june]).keys()].sort();
+    expect(days).toEqual(["2025-11-19", "2026-06-03"]);
   });
 });

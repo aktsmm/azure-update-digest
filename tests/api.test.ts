@@ -26,6 +26,15 @@ describe("buildApi", () => {
     expect(buildApi(items, meta, slides)).toEqual(files);
     expect(files.map((f) => f.path)).toEqual([...files.map((f) => f.path)].sort());
   });
+  it("tells readers about a bulk-registration day instead of letting a month look busy", () => {
+    const many = Array.from({ length: 60 }, (_, i) => item(`b${i}`, "2026-09-15", []));
+    const few = [item("1", "2026-10-01", []), item("2", "2026-09-02", []), item("3", "2026-08-03", []), item("4", "2026-08-04", []), item("5", "2026-08-05", [])];
+    const idx = buildApi([...few, ...many], meta, new Map()).find((f) => f.path === "api/v1/index.json")!.body as any;
+    expect(idx.months.find((m: any) => m.month === "2026-09").bulkRegistration).toEqual([{ date: "2026-09-15", count: 60 }]);
+    expect(idx.months.find((m: any) => m.month === "2026-10").bulkRegistration).toBeUndefined();
+    expect(idx.notes.some((n: string) => /registered a large batch/.test(n))).toBe(true);
+  });
+
   it("builds index, months, updates, categories and latest", () => {
     expect(get("api/v1/index.json").months.map((m: any) => m.month)).toEqual(["2026-10", "2026-09", "2026-08"]);
     expect(get("api/v1/months/2026-09.json").items).toHaveLength(1);

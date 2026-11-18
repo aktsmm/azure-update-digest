@@ -137,3 +137,20 @@ export function matchedElsewhere(item: DigestItem, text: string): string[] {
   }
   return out;
 }
+
+/**
+ * Days on which Microsoft Release Communications registered an unusually large batch of updates at once
+ * (measured: 139 on 2025-11-19 and 130 on 2026-06-03, against about 7 per day at the 90th percentile).
+ * Those updates keep their original GA / preview month in `availabilities`, so a month that contains such a day
+ * looks much busier than it really was. A day counts as a bulk day when it has at least `minCount` items and at
+ * least `factor` times the median day with updates.
+ */
+export function bulkRegistrationDays(all: DigestItem[], minCount = 40, factor = 5): Map<string, number> {
+  const perDay = new Map<string, number>();
+  for (const i of all) perDay.set(i.createdJst, (perDay.get(i.createdJst) ?? 0) + 1);
+  const counts = [...perDay.values()].sort((a, b) => a - b);
+  const median = counts.length ? counts[Math.floor(counts.length / 2)]! : 0;
+  const out = new Map<string, number>();
+  for (const [day, n] of perDay) if (n >= minCount && n >= median * factor) out.set(day, n);
+  return out;
+}
