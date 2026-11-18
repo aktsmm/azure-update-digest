@@ -42,7 +42,8 @@ jobs:
           # Merged PR branches pile up (451 once) and dependency alerts go unnoticed when these are switched off.
           s=$(gh api "repos/${{ github.repository }}" -q '[.delete_branch_on_merge, .security_and_analysis.dependabot_security_updates.status, .security_and_analysis.secret_scanning.status, .security_and_analysis.secret_scanning_push_protection.status] | @tsv' || true)
           echo "settings: $s"
-          if [ -z "$s" ]; then echo "::warning::could not read repository settings (token scope); skipped"; exit 0; fi
+          # the workflow token cannot read repository settings (they come back empty); that is a skip, not a drift
+          if [ -z "$(echo "$s" | tr -d '[:space:]')" ]; then echo "::warning::could not read repository settings with the workflow token; skipped"; exit 0; fi
           set -- $s
           bad=""
           [ "$1" = "true" ] || bad="$bad delete_branch_on_merge"
