@@ -1,0 +1,115 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["580694"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T02:15:00Z"
+  },
+  "slides": [
+    {
+      "key": "580694",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Firewall Premium に「AI Security」アドオンが登場",
+        "subtitleJa": "プロンプト インジェクション対策・Network DLP・AI によるポリシー分析（パブリック プレビュー）",
+        "en": "Public Preview: AI Security add-on for Azure Firewall Premium"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Firewall"],
+        "categories": ["networking", "ai", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "AI アプリや機密データを扱う **Azure Firewall Premium の利用者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ファイアウォールで AI トラフィックの検査や機密データの流出防止を行える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "評価向け。既存ファイアウォールへの有効化にはダウンタイムが必要",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locator": "共有依存関係と展開計画", "retrievedAt": "2026-11-19T02:16:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Premium のアドオンとして、AI トラフィック検査・マルウェア／アプリ脅威対策・Network DLP・ポリシー アドバイザーを利用できる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locator": "能力", "retrievedAt": "2026-11-19T02:16:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プロンプト脅威保護: AI トラフィックのプロンプト インジェクションを検出し、ブロックも可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locator": "能力", "retrievedAt": "2026-11-19T02:16:00Z" }] },
+            { "text": "マルウェア・アプリ脅威対策: ファイルとアプリ要求を解析し、アラートか拒否を適用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locator": "能力", "retrievedAt": "2026-11-19T02:16:00Z" }] },
+            { "text": "Network DLP は Purview と連携。ポリシー アドバイザーは所見を提示（自動変更なし）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locator": "能力", "retrievedAt": "2026-11-19T02:16:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "構成は Azure ポータルのみ。PowerShell・CLI・Terraform・REST API は未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locator": "可用性、制限、および利用資格", "retrievedAt": "2026-11-19T02:16:00Z" }] },
+            { "text": "プレビュー提供リージョンは東アジア・英国南部・米国中西部", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locator": "可用性、制限、および利用資格", "retrievedAt": "2026-11-19T02:16:00Z" }] },
+            { "text": "有効化に加え、適用ルール・保護設定・TLS 検査の成立が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locator": "Azure Firewall Premium との関係", "retrievedAt": "2026-11-19T02:16:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "提供リージョンとメンテナンス時間の確保を確認し、まず検証環境で効果を確かめる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-firewall-premium", "term": "Azure Firewall Premium", "type": "product", "oneLine": { "text": "TLS 検査や署名ベースの侵入検知・防止などを提供する Azure Firewall の SKU。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locator": "Azure Firewall Premium との関係", "retrievedAt": "2026-11-19T02:16:00Z" }] } },
+        { "termKey": "ai-security-addon", "term": "AI Security アドオン", "type": "feature", "oneLine": { "text": "Premium に別途有効化して追加する、AI 向け保護とポリシー分析のオプション機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locator": "冒頭", "retrievedAt": "2026-11-19T02:16:00Z" }] } },
+        { "termKey": "network-dlp", "term": "ネットワーク DLP", "type": "term", "oneLine": { "text": "Purview の分類とポリシー判断で、検査したトラフィック内の機密データを守る機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locator": "能力", "retrievedAt": "2026-11-19T02:16:00Z" }] } },
+        { "termKey": "prompt-injection", "term": "プロンプト インジェクション", "type": "term", "oneLine": { "text": "AI への入力に悪意ある指示を紛れ込ませる攻撃。直接型と間接型がある。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locator": "能力", "retrievedAt": "2026-11-19T02:16:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T02:16:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビューの提供リージョンは東アジア・英国南部・米国中西部",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locator": "可用性、制限、および利用資格", "retrievedAt": "2026-11-19T02:16:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=580694",
+        "learn": [{ "title": "Azure Firewall AI Security 概念(プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "プレビューの提供リージョンは東アジア・英国南部・米国中西部で、日本リージョンは含まれていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts" }]
+          },
+          {
+            "q": "既存の Firewall に有効化できますか？",
+            "a": "Premium のアドオンとして有効化できますが、既存のファイアウォールではダウンタイムが必要なためメンテナンスとして計画してください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts" }]
+          },
+          {
+            "q": "Terraform や CLI で構成できますか？",
+            "a": "プレビュー中は Azure ポータルでの構成のみです。PowerShell、CLI、Terraform、REST API は未対応です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/ai-security-concepts" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
