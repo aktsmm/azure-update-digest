@@ -1,0 +1,172 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["574153"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T01:51:00Z"
+  },
+  "slides": [
+    {
+      "key": "574153",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure HorizonDB のプライベート エンドポイントが GA",
+        "subtitleJa": "Private Link で、VNet のプライベート IP からクラスターに接続できます",
+        "en": "Generally Available: Private endpoint support for Azure HorizonDB clusters"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure HorizonDB"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure HorizonDB** をインターネット非公開で使いたい方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "パブリック アクセスを無効化し、DB 通信をパブリック インターネットから切り離せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プライベート接続が必要な場合にエンドポイントを作成", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Azure Private Link により、仮想ネットワークのプライベート IP アドレスから HorizonDB クラスターへ接続できる。プライベート DNS 統合で設定も容易",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "プライベート エンドポイントは、サブネットのプライベート IP を持つネットワーク インターフェイス",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link", "locator": "プライベート エンドポイント", "retrievedAt": "2026-11-19T01:55:00Z" }]
+            },
+            {
+              "text": "トラフィックはパブリック インターネットでなく Microsoft バックボーンを通る",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link", "locator": "冒頭", "retrievedAt": "2026-11-19T01:55:00Z" }]
+            },
+            {
+              "text": "接続元: VNet、ピアリング済み VNet、VPN / ExpressRoute 経由のオンプレミス",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "クラスター → [ネットワーク] → [プライベート エンドポイント] タブ → [プライベート エンドポイントの作成]",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link", "locator": "プライベート エンドポイントの作成", "retrievedAt": "2026-11-19T01:55:00Z" }]
+            },
+            {
+              "text": "公開を止めるには publicAccess プロパティを Disabled に設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link", "locator": "プライベート エンドポイントとパブリック アクセス", "retrievedAt": "2026-11-19T01:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "アクティブなプールを持つクラスターと、VNet・サブネット、作成・承認の権限が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link", "locator": "Prerequisites", "retrievedAt": "2026-11-19T01:55:00Z" }]
+            },
+            {
+              "text": "1 つのエンドポイントは読み取り/書き込みか読み取り専用のどちらか 1 つ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link", "locator": "制限事項と考慮事項", "retrievedAt": "2026-11-19T01:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "プライベート エンドポイントを作成しても、パブリック アクセスは自動では無効にならない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link", "locator": "プライベート エンドポイントとパブリック アクセス", "retrievedAt": "2026-11-19T01:55:00Z" }]
+            },
+            {
+              "text": "仮想ネットワーク統合（VNet インジェクション）は未対応で、Private Link は対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/horizondb/overview/overview", "locator": "Limitations", "retrievedAt": "2026-11-19T01:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "他クラスターへは到達できず、データ流出リスクを軽減できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link", "locator": "Private Link の主な利点", "retrievedAt": "2026-11-19T01:55:00Z" }]
+            },
+            {
+              "text": "ピアリング・オンプレミス側のルーティングと DNS は利用者が構成する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link", "locator": "Private Link の主な利点", "retrievedAt": "2026-11-19T01:55:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-horizondb", "term": "Azure HorizonDB", "type": "product", "oneLine": { "text": "Azure が提供する PostgreSQL 互換のマネージド データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/horizondb/overview/overview", "locator": "冒頭", "retrievedAt": "2026-11-19T01:55:00Z" }] } },
+        { "termKey": "private-link", "term": "Azure Private Link", "type": "feature", "oneLine": { "text": "仮想ネットワーク内のプライベート エンドポイント経由で Azure サービスに接続する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link", "locator": "冒頭", "retrievedAt": "2026-11-19T01:55:00Z" }] } },
+        { "termKey": "private-endpoint", "term": "プライベート エンドポイント", "type": "term", "oneLine": { "text": "VNet のサブネットからプライベート IP アドレスを取得するネットワーク インターフェイス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link", "locator": "プライベート エンドポイント", "retrievedAt": "2026-11-19T01:55:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-19T01:55:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "プライベート エンドポイントは HorizonDB が使えるすべてのリージョンで利用可。HorizonDB の日本リージョンは Japan East",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-19T01:55:00Z" },
+          { "url": "https://learn.microsoft.com/azure/horizondb/overview/overview", "locator": "Azure regions", "retrievedAt": "2026-11-19T01:55:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=574153",
+        "learn": [{ "title": "Azure HorizonDB のプライベート エンドポイントを使用したネットワーク", "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "プライベート エンドポイントは HorizonDB が使えるリージョンで利用可能で、HorizonDB の提供リージョンには Japan East が含まれます。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link" },
+              { "url": "https://learn.microsoft.com/azure/horizondb/overview/overview" }
+            ]
+          },
+          {
+            "q": "作成するとパブリック アクセスは止まりますか？",
+            "a": "止まりません。プライベート接続のみにするには、クラスターの publicAccess プロパティを Disabled に設定します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link" }]
+          },
+          {
+            "q": "読み取り専用エンドポイントにも使えますか？",
+            "a": "使えますが、1 つのプライベート エンドポイントは 1 つのエンドポイントのみ対応です。両方に接続するには 2 つ作成します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/network/concepts-network-private-link" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
