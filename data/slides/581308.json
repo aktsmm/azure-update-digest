@@ -1,0 +1,100 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581308"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T01:26:24Z"
+  },
+  "slides": [
+    {
+      "key": "581308",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "第 6 世代 AMD EPYC（Venice）搭載の DHasv8 / DHalsv8 / EHasv8 VM",
+        "subtitleJa": "最大 480 コア・最大 3.8 TiB メモリ。プライベート プレビューを開始",
+        "en": "Private Preview: Azure DH/EHasv8 VMs based on 6th Gen AMD EPYC™ (“Venice”) processors "
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Private Preview", "year": 2026, "month": "November" }],
+        "status": "In development",
+        "products": ["Virtual Machines"],
+        "categories": ["compute"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "大規模な**データベース・エンタープライズ・AI ワークロード**向けに次世代 VM を評価したい Azure VM の利用者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "コア数・メモリ・ストレージ IOPS・ネットワーク帯域が拡張された VM を先行評価できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プライベート プレビューは招待制で、本番ワークロード向けではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Private preview", "retrievedAt": "2026-11-19T01:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "汎用（DHasv8 / DHalsv8）とメモリ最適化（EHasv8）で、ローカル ディスクありなしの構成を選べる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "汎用: DHasv8 / DHalsv8 シリーズ、メモリ最適化: EHasv8 シリーズ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "いずれもローカル ディスクありとなしの構成を用意", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "プロセッサは第 6 世代 AMD EPYC™（コード名 Venice）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "主な強化点", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "VM サイズは最大 480 コア", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "EHasv8 のメモリは最大 3.8 TiB", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "最大サイズで、リモート ストレージ IOPS とネットワーク帯域が従来世代の最大 2 倍", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "現行の v7 世代（例: Dasv7 は最大 160 vCPU・640 GiB）と比べ、必要なコア数・メモリ量を見直す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dasv7-series", "locator": "冒頭", "retrievedAt": "2026-11-19T01:30:00Z" }] },
+            { "text": "プレビュー参加は Microsoft の窓口や案内ページの手順に従う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Private preview", "retrievedAt": "2026-11-19T01:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-virtual-machines", "term": "Azure Virtual Machines", "type": "product", "oneLine": { "text": "Azure が提供する、オンデマンドでスケーラブルなコンピューティング リソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/overview", "locator": "冒頭", "retrievedAt": "2026-11-19T01:30:00Z" }] } },
+        { "termKey": "amd-epyc", "term": "AMD EPYC", "type": "term", "oneLine": { "text": "Azure の AMD 系 VM シリーズが利用する AMD 製サーバー プロセッサ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dasv7-series", "locator": "冒頭", "retrievedAt": "2026-11-19T01:30:00Z" }] } },
+        { "termKey": "label-private-preview", "term": "Private Preview", "type": "label", "oneLine": { "text": "限られた顧客が招待制で早期機能を評価する段階。本番ワークロード向けではない。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Private preview", "retrievedAt": "2026-11-19T01:30:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581308",
+        "learn": [
+          { "title": "Dasv7 のサイズ シリーズ", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/sizes/general-purpose/dasv7-series", "locale": "ja-jp" },
+          { "title": "Azure 内の仮想マシン", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "誰でもすぐに使えますか？",
+            "a": "プライベート プレビューは招待制で、限られた顧客が対象です。本番ワークロード向けではありません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Private preview" }]
+          },
+          {
+            "q": "従来世代から何が強化されますか？",
+            "a": "最大 480 コア、EHasv8 は最大 3.8 TiB メモリ。最大サイズでストレージ IOPS とネットワーク帯域が従来世代の最大 2 倍です。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=581308" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
