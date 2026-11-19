@@ -1,0 +1,145 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579349"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T01:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "579349",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure DocumentDB の M10〜M30 がほぼ即時プロビジョニングに（GA）",
+        "subtitleJa": "従来は無料レベルのみだった即時作成が、M10〜M30 のクラスターにも拡大",
+        "en": "Generally Available: Near-instant provisioning for Azure DocumentDB clusters"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure DocumentDB"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Azure DocumentDB で検証・開発・本番の立ち上げを行う**開発者・AI エージェント利用者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "クラスター作成の待ち時間を抑えて試せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "新規作成時に自動で適用。必要なら M10 で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "即時プロビジョニングは無料レベルのみ。クラスターの利用開始まで 10〜15 分待つ必要があった",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        },
+        "after": {
+          "text": "M10〜M30 のレベルでも、ほぼ即時にクラスターをプロビジョニングできる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象は M10〜M30 のクラスター レベル。待ち時間なしで検証を開始できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "M10 は基本的な機能テストや実験、M30 は本番向けの標準的な入口", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "[リソースの作成] で Azure DocumentDB を選び、[クラスター層] で M10〜M30 を構成して作成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/documentdb/quickstart-portal", "locator": "クラスターの作成", "retrievedAt": "2026-11-19T01:38:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "M10 は 1 vCore・2 GiB RAM、M30 は 2 vCore・8 GiB RAM（シャードあたり）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/documentdb/compute-storage", "locator": "Azure DocumentDB でのコンピューティング", "retrievedAt": "2026-11-19T01:38:00Z" }]
+            },
+            {
+              "text": "前提は Azure サブスクリプションのみ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/documentdb/quickstart-portal", "locator": "Prerequisites", "retrievedAt": "2026-11-19T01:38:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "M10・M20・M25 はバースト可能（アイドル時は CPU を抑え、負荷時にフル性能）、M30 は固定の 2 vCore",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/documentdb/compute-storage", "locator": "バーストが可能なコンピューティングとは", "retrievedAt": "2026-11-19T01:38:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "AI エージェントがクラスター作成を待たずに実験を始められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "成長に応じて、より上位のクラスター レベルへスケールできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-documentdb", "term": "Azure DocumentDB", "type": "product", "oneLine": { "text": "フル マネージドで MongoDB 互換のオープンソース ドキュメント データベース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/documentdb/overview", "locator": "冒頭", "retrievedAt": "2026-11-19T01:38:00Z" }] } },
+        { "termKey": "cluster-tier", "term": "クラスター レベル（M10〜M30）", "type": "feature", "oneLine": { "text": "クラスターの仮想コア数とシャードあたりの RAM を決める構成区分。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/documentdb/compute-storage", "locator": "Azure DocumentDB でのコンピューティング", "retrievedAt": "2026-11-19T01:38:00Z" }] } },
+        { "termKey": "vcore", "term": "仮想コア（vCore）", "type": "term", "oneLine": { "text": "基になるハードウェアの論理 CPU を表すコンピューティング リソースの単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/documentdb/compute-storage", "locator": "冒頭", "retrievedAt": "2026-11-19T01:38:00Z" }] } },
+        { "termKey": "burstable", "term": "バースト可能", "type": "term", "oneLine": { "text": "アイドル時は CPU を抑え、需要増に応じてフル性能までスケールアップできるレベル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/documentdb/compute-storage", "locator": "バーストが可能なコンピューティングとは", "retrievedAt": "2026-11-19T01:38:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-19T01:38:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure DocumentDB は Japan East / Japan West で提供されるサービス",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/azure/documentdb/regional-availability", "locator": "Azure", "retrievedAt": "2026-11-19T01:38:00Z" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Azure DocumentDB 自体は Japan East と Japan West で提供されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/documentdb/regional-availability" }]
+          },
+          {
+            "q": "作成に必要な前提条件は？",
+            "a": "Azure portal でクラスターを作成する前提は Azure サブスクリプションです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/documentdb/quickstart-portal" }]
+          },
+          {
+            "q": "M10 と M30 の違いは？",
+            "a": "M10 は 1 vCore・2 GiB RAM（バースト可能）、M30 は 2 vCore・8 GiB RAM です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/documentdb/compute-storage" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579349",
+        "learn": [
+          { "title": "Azure DocumentDB のコンピューティングとストレージの構成", "url": "https://learn.microsoft.com/ja-jp/azure/documentdb/compute-storage", "locale": "ja-jp" },
+          { "title": "クイック スタート: Azure portal を使用して Azure DocumentDB クラスターを作成する", "url": "https://learn.microsoft.com/ja-jp/azure/documentdb/quickstart-portal", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
