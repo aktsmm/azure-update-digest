@@ -1,0 +1,143 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579644"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T01:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "579644",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Fabric Database Hub のリアルタイム パフォーマンス ダッシュボードが GA",
+        "subtitleJa": "SQL・PostgreSQL・Cosmos DB の CPU や接続数などを一か所で確認できます",
+        "en": "Generally Available: Database Hub real-time performance dashboards"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Cosmos DB", "Azure Database for PostgreSQL", "Azure SQL Database", "Azure SQL Managed Instance", "SQL Server on Azure Virtual Machines"],
+        "categories": ["compute", "databases", "ops-governance", "iot"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**複数のデータベース エンジンを運用するデータベース管理者・運用チーム**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ポータルを切り替えず、性能問題を横断して調査できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "性能監視を一元化したい場合に試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "pricing": {
+        "kind": "free",
+        "text": "Fabric Free ライセンスで利用可能。Fabric 容量や別途の Database Hub ライセンスは不要",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/overview", "locator": "ライセンス", "retrievedAt": "2026-11-19T01:30:00Z" }]
+      },
+      "beforeAfter": {
+        "after": { "text": "Microsoft SQL・PostgreSQL・Cosmos DB のリアルタイム性能ダッシュボードを Database Hub の Performance ページで利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Performance ページで CPU・メモリ・ストレージ・IO・接続数などを確認", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "データの移動やミラーリング、監視基盤の構築は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "データベースは既存のサブスクリプションやオンプレミスに残る",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/overview", "locator": "概要", "retrievedAt": "2026-11-19T01:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Fabric Free に登録し、Database Hub を開いてアクセス可能なデータベースを確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/overview", "locator": "ライセンス", "retrievedAt": "2026-11-19T01:30:00Z" }]
+            },
+            {
+              "text": "Performance ページを開き、対象のサーバーやアカウントを絞り込む",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/overview", "locator": "パフォーマンスを監視", "retrievedAt": "2026-11-19T01:30:00Z" }]
+            },
+            {
+              "text": "SQL はテンプレートからカスタム モニターを作成し、共有できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/monitor-sql", "locator": "カスタムSQLモニターを作成する", "retrievedAt": "2026-11-19T01:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "各サブスクリプションで Reader 以上のロールが必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/overview", "locator": "前提条件", "retrievedAt": "2026-11-19T01:30:00Z" }]
+            },
+            {
+              "text": "SQL はリソース プロバイダーの登録と監視の有効化が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/monitor-sql", "locator": "前提条件", "retrievedAt": "2026-11-19T01:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する機能", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure Data Explorer 互換エンドポイントで性能テレメトリをクエリ可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/overview", "locator": "パフォーマンスを監視", "retrievedAt": "2026-11-19T01:30:00Z" }]
+            },
+            { "text": "SQL のカスタム モニターは Fabric Real-Time Dashboard として作成", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "複数エンジンの性能問題を最初に一覧で切り分ける", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "表示内容は既存の権限、テナント構成、リージョンに依存する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/overview", "locator": "ライセンス", "retrievedAt": "2026-11-19T01:30:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "fabric", "term": "Microsoft Fabric", "type": "product", "oneLine": { "text": "Database Hub を含む、データ関連の体験を提供する Microsoft のプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/overview", "locator": "冒頭", "retrievedAt": "2026-11-19T01:30:00Z" }] } },
+        { "termKey": "database-hub", "term": "Database Hub", "type": "feature", "oneLine": { "text": "データベース資産全体の問題や機会を検出・調査・対応するための一つの場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/overview", "locator": "冒頭", "retrievedAt": "2026-11-19T01:30:00Z" }] } },
+        { "termKey": "rbac", "term": "Azure RBAC", "type": "term", "oneLine": { "text": "Database Hub が既存の権限として利用する、Azure のロールベースのアクセス制御。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/monitor-sql", "locator": "前提条件", "retrievedAt": "2026-11-19T01:30:00Z" }] } },
+        { "termKey": "rtd", "term": "Real-Time Dashboard", "type": "feature", "oneLine": { "text": "SQL のカスタム モニターとして作成される Fabric のダッシュボード。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/monitor-sql", "locator": "カスタムSQLモニターを作成する", "retrievedAt": "2026-11-19T01:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-19T01:30:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579644",
+        "learn": [
+          { "title": "データベースハブとは何ですか?", "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/overview", "locale": "ja-jp" },
+          { "title": "Database Hub で Microsoft SQL データベースを監視する", "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/monitor-sql", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "追加のライセンスや費用は必要ですか？", "a": "Fabric Free ライセンスで利用でき、Fabric 容量や別途の Database Hub ライセンスは不要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/overview" }] },
+          { "q": "データを Fabric に移す必要はありますか？", "a": "不要です。データベースは既存のサブスクリプションや環境に残り、Database Hub が運用メタデータとシグナルをまとめます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/overview" }] },
+          { "q": "利用に必要な権限は？", "a": "監視するリソースを含む各サブスクリプションで Reader 以上のロールが必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/overview" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
