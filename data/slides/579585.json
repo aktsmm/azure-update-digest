@@ -1,0 +1,366 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579585"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T00:15:00Z"
+  },
+  "slides": [
+    {
+      "key": "579585",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "PostgreSQL フレキシブル サーバーで Cobalt 200 が GA に",
+        "subtitleJa": "Microsoft 設計の ARM64 コンピューティングを、Intel / AMD に並ぶ選択肢として利用できます",
+        "en": "Generally Available: Cobalt 200 compute for Azure Database for PostgreSQL"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [
+          { "rawRing": "General Availability", "year": 2026, "month": "November" }
+        ],
+        "status": "Launched",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": {
+          "text": "**Azure Database for PostgreSQL フレキシブル サーバー**のコンピューティングを選ぶ方",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "ワークロードや互換性の要件に合わせて、ARM64 を選べるようになる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "ARM64 を試したい場合に SKU 選択を検討",
+          "origin": "editorial",
+          "assertion": "recommendation",
+          "verification": "unverified"
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Microsoft 設計の ARM64 ベースの Cobalt 200 が加わり、ワークロード・互換性・インフラ要件に合うアーキテクチャを選べる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works",
+          "heading": "仕組み",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "第 2 世代の Microsoft 設計 Arm64 プロセッサ Azure Cobalt 200 をサポート",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview",
+                  "locator": "Cobalt 200 ARM SKU ファミリー",
+                  "retrievedAt": "2026-11-19T00:15:00Z"
+                }
+              ]
+            },
+            {
+              "text": "汎用は Dpsv7、メモリ最適化は Epsv7 の 2 ファミリ",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview",
+                  "locator": "Cobalt 200 ARM SKU ファミリー",
+                  "retrievedAt": "2026-11-19T00:15:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Cobalt 200 では 1 vCore が物理 CPU コア 1 つに相当",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute",
+                  "locator": "コンピューティング レベル、仮想コア、サーバーの種類",
+                  "retrievedAt": "2026-11-19T00:15:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start",
+          "heading": "始め方",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "性能要件や価格性能目標に基づき、Cobalt 200 と x64 ベースから選択",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview",
+                  "locator": "Cobalt 200 ARM SKU ファミリー",
+                  "retrievedAt": "2026-11-19T00:15:00Z"
+                }
+              ]
+            },
+            {
+              "text": "サイズは D2ps_v7〜D128ps_v7 / E2ps_v7〜E128ps_v7 から選ぶ",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute",
+                  "locator": "サーバーの種類",
+                  "retrievedAt": "2026-11-19T00:15:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits",
+          "heading": "前提・制限",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "Cobalt 200 SKU からバースト可能レベルへのスケーリングは不可",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview",
+                  "locator": "制限事項",
+                  "retrievedAt": "2026-11-19T00:15:00Z"
+                }
+              ]
+            },
+            {
+              "text": "弾性クラスターと pg_diskann 拡張機能は非対応",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview",
+                  "locator": "制限事項",
+                  "retrievedAt": "2026-11-19T00:15:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "related-features",
+          "heading": "他のコンピューティングとの違い",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "Cobalt 200 は Arm64、Intel / AMD は x64 ベースのプロセッサ",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview",
+                  "locator": "Cobalt 200 ARM SKU ファミリー",
+                  "retrievedAt": "2026-11-19T00:15:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Cobalt 200 ファミリにはローカルの一時ストレージが含まれない",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute",
+                  "locator": "コンピューティング レベル、仮想コア、サーバーの種類",
+                  "retrievedAt": "2026-11-19T00:15:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "use-case",
+          "heading": "使いどころ",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "Dpsv7: 汎用 DB、トランザクション アプリ、SaaS、高コンカレンシー OLTP",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview",
+                  "locator": "Cobalt 200 ARM SKU ファミリー",
+                  "retrievedAt": "2026-11-19T00:15:00Z"
+                }
+              ]
+            },
+            {
+              "text": "Epsv7: メモリ集約型 DB、大規模ワーキング セット、接続数の多いアプリ",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview",
+                  "locator": "Cobalt 200 ARM SKU ファミリー",
+                  "retrievedAt": "2026-11-19T00:15:00Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "cobalt-200",
+          "term": "Cobalt 200",
+          "type": "feature",
+          "oneLine": {
+            "text": "Microsoft が設計した第 2 世代のカスタム Arm64 プロセッサ。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview",
+                "locator": "Cobalt 200 ARM SKU ファミリー",
+                "retrievedAt": "2026-11-19T00:15:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "postgresql-flexible",
+          "term": "PostgreSQL フレキシブル サーバー",
+          "type": "product",
+          "oneLine": {
+            "text": "データベース管理機能と構成設定を細かく制御できる、フル マネージドの PostgreSQL サービス。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview",
+                "locator": "冒頭",
+                "retrievedAt": "2026-11-19T00:15:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "vcore",
+          "term": "vCore（仮想コア）",
+          "type": "term",
+          "oneLine": {
+            "text": "基になるハードウェアの論理 CPU を表す単位。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute",
+                "locator": "コンピューティング レベル、仮想コア、サーバーの種類",
+                "retrievedAt": "2026-11-19T00:15:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-ga",
+          "term": "GA（一般提供）",
+          "type": "label",
+          "oneLine": {
+            "text": "機能が完全にリリースされ、本番利用でサポートされる段階。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure",
+                "locator": "General availability (GA)",
+                "retrievedAt": "2026-11-19T00:15:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579585",
+        "learn": [
+          {
+            "title": "Azure Database for PostgreSQL フレキシブル サーバーのコンピューティング オプション",
+            "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute",
+            "locale": "ja-jp"
+          },
+          {
+            "title": "Azure Database for PostgreSQL フレキシブル サーバーとは",
+            "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "Cobalt 200 ではどのサイズを選べますか？",
+            "a": "汎用の Dpsv7 とメモリ最適化の Epsv7 の 2 ファミリで、いずれも 2〜128 vCore のサイズがあります。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute" }
+            ]
+          },
+          {
+            "q": "Cobalt 200 に制限はありますか？",
+            "a": "バースト可能レベルへのスケーリング、弾性クラスター、pg_diskann 拡張機能は非対応です。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview" }
+            ]
+          },
+          {
+            "q": "x64 との選び分けの基準は？",
+            "a": "ワークロードの特性、性能要件、価格性能目標に基づいて、Arm64 か Intel / AMD の x64 を選択できます。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview" }
+            ]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
