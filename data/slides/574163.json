@@ -1,0 +1,173 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["574163"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T00:23:00Z"
+  },
+  "slides": [
+    {
+      "key": "574163",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure HorizonDB のバックアップ保持期間を 1〜35 日で設定可能に（GA）",
+        "subtitleJa": "データ保護の要件に合わせて、保持期間を選べます",
+        "en": "Generally Available: Customize backup retention from 1 to 35 days in Azure HorizonDB"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure HorizonDB"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure HorizonDB** でデータベースを運用している方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ワークロードや復旧の要件に合わせて保持期間を選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "保持要件に合わせて期間を見直したい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "pricing": {
+        "kind": "paid",
+        "text": "保有期間を長くすると、保持するバックアップ データ量に応じて料金が増える",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "バックアップ保有期間", "retrievedAt": "2026-11-19T00:25:00Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "バックアップの保持期間を 1〜35 日の範囲で設定できる。バックアップ自体は Azure HorizonDB が管理する",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "スナップショットと WAL の継続アーカイブで自動バックアップ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "Backup の概要", "retrievedAt": "2026-11-19T00:25:00Z" }]
+            },
+            {
+              "text": "保有期間が、ポイントインタイム リストアで復元できる期間を決める",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "バックアップ保有期間", "retrievedAt": "2026-11-19T00:25:00Z" }]
+            },
+            {
+              "text": "既定の保持期間は 7 日間",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "バックアップ保有期間", "retrievedAt": "2026-11-19T00:25:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "確認のしかた", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Azure portal のクラスター → [監視] → [メトリック] で「使用済みバックアップ」を確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "バックアップ メトリック", "retrievedAt": "2026-11-19T00:25:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "長期保持（LTR）は未提供。保持期間の上限は 35 日",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview/overview", "locator": "制限事項", "retrievedAt": "2026-11-19T00:25:00Z" }]
+            },
+            {
+              "text": "ポイントインタイム リストアは、現在時刻の 5 分以上前の時点が対象",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "バックアップの制限事項", "retrievedAt": "2026-11-19T00:25:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連機能", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "geo 冗長バックアップはクラスター作成時のみ有効化でき、ペア リージョンへ復元可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "地理的に冗長化されたバックアップと復元", "retrievedAt": "2026-11-19T00:25:00Z" }]
+            },
+            {
+              "text": "geo 冗長バックアップとカスタマー マネージド キーの併用は未対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "バックアップの制限事項", "retrievedAt": "2026-11-19T00:25:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "復旧要件と、バックアップ ストレージのコストを比べて期間を決める", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "書き込みの多いワークロードはバックアップ量が増えやすい",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "バックアップ ストレージのコスト", "retrievedAt": "2026-11-19T00:25:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-horizondb", "term": "Azure HorizonDB", "type": "product", "oneLine": { "text": "PostgreSQL 上に構築された、クラウドネイティブのフル マネージド データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview/overview", "locator": "冒頭", "retrievedAt": "2026-11-19T00:25:00Z" }] } },
+        { "termKey": "pitr", "term": "ポイントインタイム リストア", "type": "feature", "oneLine": { "text": "保持期間内の特定の時点にデータベースを復元する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "Backup の概要", "retrievedAt": "2026-11-19T00:25:00Z" }] } },
+        { "termKey": "wal", "term": "WAL（先行書き込みログ）", "type": "term", "oneLine": { "text": "データベースの変更を記録するトランザクション ログ。バックアップとして継続的にアーカイブされる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "Backup の概要", "retrievedAt": "2026-11-19T00:25:00Z" }] } },
+        { "termKey": "geo-redundant-backup", "term": "geo 冗長バックアップ", "type": "feature", "oneLine": { "text": "バックアップをペア リージョンへ非同期に複製し、別リージョンへの復元を可能にする設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "地理的に冗長化されたバックアップと復元", "retrievedAt": "2026-11-19T00:25:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-19T00:25:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure HorizonDB は日本では東日本（Japan East）で提供。機能固有のリージョン制限の記載はない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview/overview", "locator": "Azure リージョン", "retrievedAt": "2026-11-19T00:25:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=574163",
+        "learn": [
+          { "title": "Azure HorizonDB のバックアップ", "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locale": "ja-jp" },
+          { "title": "Azure HorizonDB とは", "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "保持期間の範囲と既定値は？",
+            "a": "1〜35 日の範囲で設定でき、既定は 7 日間です。この期間内の時点へポイントインタイム リストアで復元できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore" }]
+          },
+          {
+            "q": "保持期間を延ばすと費用は増えますか？",
+            "a": "保有期間を長くすると、保持されるバックアップ データ量に基づく料金が発生し、コストが増える可能性があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Azure HorizonDB は提供リージョンに Japan East（東日本）が含まれています。西日本は一覧に含まれていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview/overview" }]
+          },
+          {
+            "q": "35 日を超える長期保持はできますか？",
+            "a": "長期保持（LTR）は現在提供されておらず、バックアップの保持期間は最大 35 日です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview/overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
