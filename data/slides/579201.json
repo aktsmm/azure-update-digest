@@ -1,0 +1,115 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579201"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T02:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "579201",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "ネットワーク セキュリティ境界で「サービス タグ」を受信規則に使用可能に",
+        "subtitleJa": "IP プレフィックスの管理を Microsoft に任せられます（パブリック プレビュー）",
+        "en": "Public Preview: Service tags for inbound rules in network security perimeter"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Private Link"],
+        "categories": ["networking"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "ネットワーク セキュリティ境界で PaaS を保護している**ネットワーク／セキュリティ管理者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "サービス タグの IP プレフィックスは Microsoft が自動更新するため、IP の手動管理を減らせる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "冒頭 / よく寄せられる質問", "retrievedAt": "2026-11-19T02:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。運用環境のワークロードには推奨されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "Important", "retrievedAt": "2026-11-19T02:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "受信アクセス規則のソースの種類として「サービス タグ」を選べる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "インバウンドアクセスルールの設定", "retrievedAt": "2026-11-19T02:00:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "サービス タグは Azure サービスの IP プレフィックスのグループで、Microsoft が自動更新する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "冒頭", "retrievedAt": "2026-11-19T02:00:00Z" }] },
+            { "text": "プロファイルの受信アクセス規則で、ソースの種類に「サービス タグ」を選んで追加する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "インバウンドアクセスルールの設定", "retrievedAt": "2026-11-19T02:00:00Z" }] },
+            { "text": "現在は境界内の Key Vault と Azure Monitor のリソースで対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "制限事項", "retrievedAt": "2026-11-19T02:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure Storage は非対応。使うと動作が不安定になる可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "制限事項", "retrievedAt": "2026-11-19T02:00:00Z" }] },
+            { "text": "すべてのサービス タグが使えるわけではなく、一覧には対応する GA のタグのみ表示される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "インバウンドアクセスルールの設定 / 制限事項", "retrievedAt": "2026-11-19T02:00:00Z" }] },
+            { "text": "マルチテナントのワークロードを含むため、広い信頼になる点に注意", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "注記", "retrievedAt": "2026-11-19T02:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "要件に合う最も狭いサービス タグを選び、可能なら地域のサービス タグを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "ベスト プラクティス", "retrievedAt": "2026-11-19T02:00:00Z" }] },
+            { "text": "強制モードの前にトランジション モードで接続性とアクセス ログを確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "ベスト プラクティス", "retrievedAt": "2026-11-19T02:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "nsp", "term": "ネットワーク セキュリティ境界", "type": "feature", "oneLine": { "text": "仮想ネットワーク外の PaaS リソースの周囲に論理的なネットワーク境界を作る機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/network-security-perimeter-concepts", "locator": "冒頭", "retrievedAt": "2026-11-19T02:00:00Z" }] } },
+        { "termKey": "service-tag", "term": "サービス タグ", "type": "feature", "oneLine": { "text": "Azure サービスの IP アドレス プレフィックスのグループ。Microsoft が自動更新する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "冒頭", "retrievedAt": "2026-11-19T02:00:00Z" }] } },
+        { "termKey": "access-rule", "term": "アクセス規則", "type": "term", "oneLine": { "text": "境界内のリソースに対し、境界外との受信・送信アクセスを許可する規則。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/network-security-perimeter-concepts", "locator": "ネットワーク セキュリティ境界のコンポーネント", "retrievedAt": "2026-11-19T02:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T02:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "ネットワーク セキュリティ境界はすべての Azure パブリック クラウド リージョンで利用可能",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/network-security-perimeter-concepts", "locator": "ネットワーク セキュリティ境界はどこで利用可能ですか?", "retrievedAt": "2026-11-19T02:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579201",
+        "learn": [
+          { "title": "Azure Network Security Perimeter でサービス タグ アクセスを構成する", "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locale": "ja-jp" },
+          { "title": "ネットワークセキュリティ境界とは何ですか？", "url": "https://learn.microsoft.com/ja-jp/azure/private-link/network-security-perimeter-concepts", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どのサービスで使えますか？",
+            "a": "サービス タグの受信規則は、現在 Azure Key Vault と Azure Monitor のリソースで対応しています。Storage は非対応です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "制限事項", "retrievedAt": "2026-11-19T02:00:00Z" }]
+          },
+          {
+            "q": "運用環境で使えますか？",
+            "a": "プレビューでサービス レベル契約がなく、運用ワークロードには推奨されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "Important", "retrievedAt": "2026-11-19T02:00:00Z" }]
+          },
+          {
+            "q": "既存の IP ベースの規則はどうなりますか？",
+            "a": "サービス タグは既存の受信規則機能を補完するもので、CIDR ルールも引き続き使えます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-network-security-perimeter-service-tag", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-19T02:00:00Z" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "ネットワーク セキュリティ境界は、すべての Azure パブリック クラウド リージョンで利用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/network-security-perimeter-concepts", "locator": "ネットワーク セキュリティ境界はどこで利用可能ですか?", "retrievedAt": "2026-11-19T02:00:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
