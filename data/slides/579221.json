@@ -1,0 +1,85 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579221"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T01:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "579221",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Hyperscale でデータベース間クエリ（三部構成名）が可能に",
+        "subtitleJa": "同一エラスティック プール内のデータベースを結合（限定プレビュー）",
+        "en": "Public Preview: Azure SQL DB Hyperscale Cross Database Querying"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "SQL Server からの移行を検討する **Azure SQL Database Hyperscale の利用者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "クエリの書き換えを減らして移行しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "限定プレビューのため、利用にはサインアップが必要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "同じ論理サーバーの Hyperscale エラスティック プール内で、database.schema.object 形式の三部構成名でデータベース間を参照・結合できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "同じ論理サーバー上の Hyperscale エラスティック プール内のデータベースが対象", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "データの複製・統合や外部テーブルの設定なしで、レポートや共有参照データ、リモート ストアド プロシージャ呼び出しが可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "限定プレビューで、参加にはサインアップが必要", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "トランザクションは複数 DB を読み取れるが、書き込みは 1 トランザクションにつき 1 DB のみ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "データベースは分離されたままで、権限は各データベースで適用される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "移行元でデータベース間クエリに依存しているか、対象 DB が同一プールに収まるかを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "hyperscale", "term": "Hyperscale", "type": "product", "oneLine": { "text": "Azure SQL Database のサービス レベルの 1 つで、コンピューティング・ストレージ・ログを分離したアーキテクチャを持つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/hyperscale-elastic-pool-overview?view=azuresql", "locator": "アーキテクチャ", "retrievedAt": "2026-11-19T01:35:00Z" }] } },
+        { "termKey": "hyperscale-elastic-pool", "term": "Hyperscale エラスティック プール", "type": "feature", "oneLine": { "text": "プール内の Hyperscale データベース間でコンピューティング リソースとログ リソースを共有する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/hyperscale-elastic-pool-overview?view=azuresql", "locator": "アーキテクチャ", "retrievedAt": "2026-11-19T01:35:00Z" }] } },
+        { "termKey": "cross-database-query", "term": "データベース間クエリ", "type": "term", "oneLine": { "text": "複数のデータベースにまたがる T-SQL クエリを実行すること。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/elastic-query-overview?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-11-19T01:35:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T01:35:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579221",
+        "learn": [
+          { "title": "Azure SQL Database の Hyperscale Elastic Pool の概要", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/hyperscale-elastic-pool-overview?view=azuresql", "locale": "ja-jp" },
+          { "title": "Azure SQL Database のエラスティック クエリの概要 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/database/elastic-query-overview?view=azuresql", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
