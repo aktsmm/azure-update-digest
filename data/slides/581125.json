@@ -1,0 +1,90 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581125"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T01:45:00Z"
+  },
+  "slides": [
+    {
+      "key": "581125",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "AKS の機密 VM ノード プールで OS ディスク暗号化が既定に",
+        "subtitleJa": "Ubuntu 26.04 の Intel TDX / AMD SEV-SNP 両方で対応（パブリック プレビュー）",
+        "en": "Public Preview: Confidential VMs with OS Disk Encryption support on AKS"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "containers"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "機密ワークロードを AKS で動かす**規制業種などの AKS 利用者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "メモリに加え OS ディスクも保護され、追加設定なしで保存データの保護を補える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューのため評価向け。Kubernetes 1.36 以降とプレビュー機能の登録が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "前提条件 / Note", "retrievedAt": "2026-11-19T01:42:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "CVM ノード プールはメモリを保護する一方、OS ディスクは保存時に暗号化されず、プラットフォーム外での対応が必要だった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "Ubuntu 26.04 CVM ノード プールで OS ディスク暗号化が既定で有効。CVM に紐づくキーで初回起動から保護される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象は Ubuntu 26.04 の CVM ノード プール（Intel TDX と AMD SEV-SNP の両 SKU）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ディスク暗号化キーは VM の vTPM に関連付けられ、その VM のみが内容にアクセス可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "セキュリティ機能", "retrievedAt": "2026-11-19T01:42:00Z" }] },
+            { "text": "新しい設定・API・既存ツールの変更は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "OS ディスク暗号化は Ubuntu 26.04 CVM に留まる間は無効化できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "制限事項", "retrievedAt": "2026-11-19T01:42:00Z" }] },
+            { "text": "FIPS、ARM64、Trusted Launch、Pod sandboxing、NAP などは CVM ノード プールで使用不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "制限事項", "retrievedAt": "2026-11-19T01:42:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Ubuntu 26.04 と Kubernetes 1.36 以降へ移行できるか、制限事項と両立するかを検証環境で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aks", "term": "AKS", "type": "product", "oneLine": { "text": "マネージド Kubernetes クラスターを Azure に簡単にデプロイできるサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-node-pool-aks", "locator": "冒頭", "retrievedAt": "2026-11-19T01:41:00Z" }] } },
+        { "termKey": "cvm", "term": "機密 VM（CVM）", "type": "feature", "oneLine": { "text": "ハイパーバイザーやホスト管理コードから VM のメモリと状態へのアクセスを拒否する、ハードウェア ベースの VM。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "冒頭", "retrievedAt": "2026-11-19T01:42:00Z" }] } },
+        { "termKey": "tdx-snp", "term": "Intel TDX / AMD SEV-SNP", "type": "term", "oneLine": { "text": "CVM が利用する、VM 単位の信頼実行環境（TEE）を提供するハードウェア セキュリティ機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "冒頭", "retrievedAt": "2026-11-19T01:42:00Z" }] } },
+        { "termKey": "vtpm", "term": "vTPM", "type": "term", "oneLine": { "text": "VM 内のキーとシークレットの構成証明と保護に使う、専用の仮想トラステッド プラットフォーム モジュール。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "セキュリティ機能", "retrievedAt": "2026-11-19T01:42:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581125",
+        "learn": [
+          { "title": "AKS クラスターで Confidential Virtual Machines (CVM) を使用する", "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locale": "ja-jp" },
+          { "title": "AKS での機密 VM ノード プールのサポート", "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-node-pool-aks", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "OS ディスク暗号化は無効にできますか？", "a": "Ubuntu 26.04 CVM ノード プールでは既定で有効で、Ubuntu 26.04 CVM に留まる間は無効にできません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "制限事項" }] },
+          { "q": "利用するための前提条件は？", "a": "AKS Kubernetes 1.36 以降、プレビュー Azure CLI 21.0.0b14 以降、Ubuntu2604Preview の機能登録が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "前提条件" }] },
+          { "q": "Intel TDX の VM サイズでも使えますか？", "a": "はい。Intel TDX の VM サイズと既定の OS ディスク暗号化には Ubuntu 26.04 CVM ノード プールが必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "サポートされている OS のバージョン" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
