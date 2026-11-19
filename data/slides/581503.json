@@ -1,0 +1,103 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581503"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-18T23:55:00Z"
+  },
+  "slides": [
+    {
+      "key": "581503",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure ディスクのスナップショットに不変ポリシー",
+        "subtitleJa": "最大 90 日間の削除を防止（パブリック プレビュー）",
+        "en": "Public Preview: Immutable snapshots for Azure Disk Storage"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Disk Storage"],
+        "categories": ["storage", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "マネージド ディスクのバックアップを運用し、**ランサムウェア対策や保持規制**に対応したい方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ロール／権限に関係なく、保持期間中はスナップショットを削除できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "冒頭", "retrievedAt": "2026-11-18T23:55:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "対象リージョンが限られるプレビュー。まず対象リージョンで検証", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "Limitations", "retrievedAt": "2026-11-18T23:55:00Z" }] }
+      },
+      "pricing": {
+        "kind": "free",
+        "text": "不変ポリシーに追加料金なし。スナップショットは標準レートで課金",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "Billing", "retrievedAt": "2026-11-18T23:55:00Z" }]
+      },
+      "beforeAfter": {
+        "after": { "text": "既存スナップショットに不変ポリシーを設定し、最大 90 日間の削除を防止できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "冒頭", "retrievedAt": "2026-11-18T23:55:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ポリシーは Unlocked（拡張・短縮・解除可）と Locked（拡張のみ）の 2 種類", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "不変ポリシーの種類", "retrievedAt": "2026-11-18T23:55:00Z" }] },
+            { "text": "ディスク復元やリージョン間コピーは可能。ブロックされるのは削除のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "許可された操作とブロックされた操作", "retrievedAt": "2026-11-18T23:55:00Z" }] },
+            { "text": "Locked ポリシーは SEC 17a-4 などの保存要件を満たすと Cohasset が検証", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "規制に対するコンプライアンス", "retrievedAt": "2026-11-18T23:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プレビュー中は PowerShell／REST API のみ。ポータルと CLI は GA で対応予定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "Limitations", "retrievedAt": "2026-11-18T23:55:00Z" }] },
+            { "text": "Locked は Azure を含め誰も短縮・削除できず、期間満了まで削除不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "不変ポリシーの種類", "retrievedAt": "2026-11-18T23:55:00Z" }] },
+            { "text": "設定は作成後のみ。最大保持期間は 90 日。コピーはポリシーを継承しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "Limitations", "retrievedAt": "2026-11-18T23:55:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "まず Unlocked で動作を確認し、要件に合う場合のみ Locked を適用する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "長期保持にはコスト効率に優れる Azure Backup 不変コンテナーを使用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "Limitations", "retrievedAt": "2026-11-18T23:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-disk-storage", "term": "Azure Disk Storage", "type": "product", "oneLine": { "text": "Azure VM で使われる、Azure が管理するブロックレベルのストレージ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/managed-disks-overview", "locator": "冒頭", "retrievedAt": "2026-11-18T23:55:00Z" }] } },
+        { "termKey": "snapshot", "term": "スナップショット", "type": "feature", "oneLine": { "text": "作成後にデータを変更・上書きできない、ディスクの時点コピー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "冒頭", "retrievedAt": "2026-11-18T23:55:00Z" }] } },
+        { "termKey": "immutability-policy", "term": "不変ポリシー", "type": "feature", "oneLine": { "text": "指定した保持期間、スナップショットの削除を防ぐ設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "冒頭", "retrievedAt": "2026-11-18T23:55:00Z" }] } },
+        { "termKey": "worm", "term": "WORM", "type": "term", "oneLine": { "text": "Write Once, Read Many。書き込みは一度きりで、読み取りのみ可能な方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "冒頭", "retrievedAt": "2026-11-18T23:55:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-18T23:55:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビューの対象は 10 リージョン（日本リージョンは含まれない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locator": "Limitations", "retrievedAt": "2026-11-18T23:55:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581503",
+        "learn": [{ "title": "マネージド ディスク スナップショットの不変性を設定する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "プレビュー対象は東アジアや米国東部など 10 リージョンで、日本は含まれません。他リージョンはフォームで要求できます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability" }] },
+          { "q": "追加費用はかかりますか？", "a": "不変ポリシーに追加料金はありません。スナップショットは削除するまで標準レートで課金されます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability" }] },
+          { "q": "Azure ポータルから設定できますか？", "a": "プレビュー中は PowerShell または REST API のみです。ポータルと CLI は GA で対応予定です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability" }] },
+          { "q": "Locked ポリシーは後で解除できますか？", "a": "できません。Azure を含め誰も短縮・削除できず、延長のみ可能です。期間満了までスナップショットは削除できません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/snapshot-configure-immutability" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
