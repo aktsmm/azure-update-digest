@@ -1,0 +1,111 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["571488"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T00:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "571488",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Cosmos DB の「スループット バケット」が一般提供（GA）に",
+        "subtitleJa": "同じコンテナーを共有するワークロードごとに、使える最大スループットを制限できます",
+        "en": "Generally Available: Throughput buckets in Azure Cosmos DB"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Cosmos DB"],
+        "categories": ["databases", "iot"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "同じコンテナーを複数のワークロードで共有する **Azure Cosmos DB の利用者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ワークロードごとの消費スループットに上限を設け、リソースの競合を抑えられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "共有コンテナーで競合が起きている場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "コンテナーを共有する複数ワークロードの消費スループットを、バケットごとの最大値で制限できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "バケットごとに最大スループットの割合を設定し、コンテナー全体に対する上限とする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets", "locator": "スループット バケットのしくみ", "retrievedAt": "2026-11-19T00:30:00Z" }] },
+            { "text": "上限を超えたバケットの要求は調整される。スループットはバケットに予約されず共有のまま", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets", "locator": "スループット バケットのしくみ", "retrievedAt": "2026-11-19T00:30:00Z" }] },
+            { "text": "バケットに割り当てない要求は、制限なしでコンテナーのスループットを消費する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets", "locator": "スループット バケットのしくみ（注）", "retrievedAt": "2026-11-19T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "データ エクスプローラー → コンテナーの [スケールと設定] → [スループット バケット] タブ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets", "locator": "スループット バケットの構成", "retrievedAt": "2026-11-19T00:30:00Z" }] },
+            { "text": "バケットを「アクティブ」にし、最大スループットの割合を設定。要求側は SDK でバケット ID を指定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets", "locator": "スループット バケットの構成 / SDK 要求でのスループット バケットの使用", "retrievedAt": "2026-11-19T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "共有スループット データベース内のコンテナーとサーバーレス アカウントは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets", "locator": "制限事項", "retrievedAt": "2026-11-19T00:30:00Z" }] },
+            { "text": "1 コンテナーあたり最大 5 バケット（ID 1〜5）。構成の変更は 10 分ごと", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets-faq", "locator": "よく寄せられる質問", "retrievedAt": "2026-11-19T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連する動作", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "上限超過の要求は HTTP 429（副状態 3212）。割り当てた要求はバースト容量を使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets-faq", "locator": "バケットが最大スループットを超えるとどうなりますか", "retrievedAt": "2026-11-19T00:30:00Z" }, { "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets", "locator": "制限事項", "retrievedAt": "2026-11-19T00:30:00Z" }] },
+            { "text": "既定バケットを設定すると、バケット未指定の要求が自動でそのバケットに割り当てられる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets", "locator": "既定のスループット バケットの構成", "retrievedAt": "2026-11-19T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ISV のマルチテナント、ETL の一括実行、データ取り込み・移行、変更フィード処理で有用", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "使用状況は ThroughputBucket で分割したメトリックで監視できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets", "locator": "スループット バケットの監視", "retrievedAt": "2026-11-19T00:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "cosmos-db", "term": "Azure Cosmos DB", "type": "product", "oneLine": { "text": "Azure の NoSQL データベース サービス。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "throughput-bucket", "term": "スループット バケット", "type": "feature", "oneLine": { "text": "ワークロードが消費できる最大スループットを制限し、リソース消費を管理する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets", "locator": "スループット バケットのしくみ", "retrievedAt": "2026-11-19T00:30:00Z" }] } },
+        { "termKey": "container", "term": "コンテナー", "type": "term", "oneLine": { "text": "Cosmos DB でデータを格納し、複数のワークロードが共有しうる単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets", "locator": "冒頭", "retrievedAt": "2026-11-19T00:30:00Z" }] } },
+        { "termKey": "data-explorer", "term": "データ エクスプローラー", "type": "term", "oneLine": { "text": "Azure portal 上でバケットの作成や設定ができる画面。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets", "locator": "スループット バケットの構成", "retrievedAt": "2026-11-19T00:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-19T00:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Cosmos DB は全リージョンで提供される基盤サービス",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-11-19T00:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=571488",
+        "learn": [
+          { "title": "Azure Cosmos DB のスループット バケット", "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets", "locale": "ja-jp" },
+          { "title": "スループット バケットに関してよく寄せられる質問", "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets-faq", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "どのコンテナーが対象ですか？", "a": "共有スループット データベース内のコンテナーとサーバーレス アカウントは対象外です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets" }] },
+          { "q": "上限を超えるとどうなりますか？", "a": "そのバケットの後続の要求は、副状態コード 3212 の HTTP 429 を受け取ります。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets-faq" }] },
+          { "q": "バケットはいくつ作れますか？", "a": "コンテナーごとに最大 5 つです。名前は付けられず、1〜5 の ID が自動で割り当てられます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/throughput-buckets-faq" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
