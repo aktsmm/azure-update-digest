@@ -1,0 +1,94 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["580091"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T21:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "580091",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Database Agent が根拠付きの推奨事項を提示",
+        "subtitleJa": "検出された DB の問題に原因と次のステップを提示（パブリック プレビュー）",
+        "en": "Public Preview: Database Agent for SQL with contextual Copilot"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": [],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Azure SQL Database を運用する**データベース管理者**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-faq", "locator": "可用性とサポート", "retrievedAt": "2026-11-19T21:00:00Z" }] },
+        "change": { "text": "問題の重要性・想定原因・次のステップをまとめて確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビュー中。対応は手動で行い、エージェントは DB を変更しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/review-performance-issue", "locator": "Important", "retrievedAt": "2026-11-19T21:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "AI 生成の根拠付き推奨事項で、問題の重要性・想定原因・推奨する次のステップを確認できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "観測された証拠と AI の結論を区別し、不確かな点も伝える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対応製品: Azure SQL Database と Azure Database for PostgreSQL フレキシブル サーバー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-faq", "locator": "可用性とサポート", "retrievedAt": "2026-11-19T21:00:00Z" }] },
+            { "text": "コンテキスト AI 支援は高 CPU と長時間クエリの問題で利用可能（SQL）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-faq", "locator": "コンテキストに応じた AI 支援", "retrievedAt": "2026-11-19T21:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "問題から DB 変更は適用できない。推奨は手動で実行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-faq", "locator": "Important", "retrievedAt": "2026-11-19T21:00:00Z" }] },
+            { "text": "SQL はサーバーレスとハイパースケールが対象。エラスティック プールや SQL Managed Instance は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-faq", "locator": "可用性とサポート", "retrievedAt": "2026-11-19T21:00:00Z" }] },
+            { "text": "コンテキスト AI は管理者が割り当てた Copilot 容量が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/review-performance-issue", "locator": "Prerequisites", "retrievedAt": "2026-11-19T21:00:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "推奨を実行する前に、稼働中の DB の状態を再確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/review-performance-issue", "locator": "手動で応答し、条件を確認してください", "retrievedAt": "2026-11-19T21:00:00Z" }] },
+            { "text": "まず検証用のデータベースで、検出される問題の内容を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "database-agent", "term": "Database Agent", "type": "product", "oneLine": { "text": "データベースの問題を調査し、手動対応のためのガイダンスを提供するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-faq", "locator": "冒頭", "retrievedAt": "2026-11-19T21:00:00Z" }] } },
+        { "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product", "oneLine": { "text": "Database Agent が対応するデータベース製品の 1 つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-faq", "locator": "可用性とサポート", "retrievedAt": "2026-11-19T21:00:00Z" }] } },
+        { "termKey": "contextual-ai", "term": "コンテキスト AI 支援", "type": "feature", "oneLine": { "text": "問題やクエリの文脈で、説明や提案を生成する任意の支援機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/review-performance-issue", "locator": "コンテキスト AI で調査する", "retrievedAt": "2026-11-19T21:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T21:00:00Z" }] } }
+      ],
+      "speakerNotes": {
+        "qa": [
+          { "q": "どのデータベースが対象ですか？", "a": "Azure SQL Database（サーバーレスとハイパースケール）と Azure Database for PostgreSQL フレキシブル サーバーです。エラスティック プールは非対応です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-faq" }] },
+          { "q": "推奨事項は自動で適用されますか？", "a": "いいえ。データベースエージェントは DB 変更を実行しないため、推奨は承認済みのワークフローで手動実行します。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-faq" }] },
+          { "q": "コンテキスト AI の前提条件は？", "a": "管理者が割り当てた Copilot 容量と、該当する Copilot のテナント設定および容量設定の有効化が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/review-performance-issue" }] }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=580091",
+        "learn": [
+          { "title": "データベースエージェントに関するよくある質問", "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-faq", "locale": "ja-jp" },
+          { "title": "データベースエージェントのパフォーマンス問題を確認する", "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/review-performance-issue", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
