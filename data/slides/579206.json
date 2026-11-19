@@ -1,0 +1,130 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579206"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T02:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "579206",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "ネットワークセキュリティ境界の Perimeter link（境界間接続）",
+        "subtitleJa": "異なる境界のリソース同士を安全に接続（パブリック プレビュー）",
+        "en": "Public Preview: Perimeter link (cross perimeter) in network security perimeter"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Private Link"],
+        "categories": ["networking"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "複数のネットワークセキュリティ境界で PaaS を保護している**ネットワーク／セキュリティ管理者**", "origin": "learn", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "境界をまたぐ通信用のアクセス規則が自動生成され、手動作成が不要になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview", "locator": "冒頭", "retrievedAt": "2026-11-19T02:00:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューのため評価向け。必要な場合のみ検証環境で試す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T02:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "異なるネットワークセキュリティ境界のリソースが、境界ベースのアクセス制御を保ったまま安全に通信できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "2 つの境界のプロファイルを 1 本のリンクで接続し、両境界間に信頼関係を確立", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview", "locator": "周辺リンクの仕組み", "retrievedAt": "2026-11-19T02:00:00Z" }] },
+            { "text": "対応 PaaS: SQL Database / Storage / Cosmos DB / Key Vault / Azure Monitor / Service Bus", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview", "locator": "サポートされたPaaSサービス", "retrievedAt": "2026-11-19T02:00:00Z" }] },
+            { "text": "Azure ポータル・CLI・PowerShell・API から利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview", "locator": "Important", "retrievedAt": "2026-11-19T02:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "マネージド ID（MSI）認証が必須。他の認証方法は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview", "locator": "Authentication", "retrievedAt": "2026-11-19T02:00:00Z" }] },
+            { "text": "1 つの境界あたりのリンクは最大 10 本", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview", "locator": "Limitations", "retrievedAt": "2026-11-19T02:00:00Z" }] },
+            { "text": "自動承認は同一サブスクリプション内のみ。別サブスクリプションは Contributor などの権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview", "locator": "Limitations", "retrievedAt": "2026-11-19T02:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "境界をまたぐ通信が必要なリソースの組み合わせが、対応 PaaS に含まれるかを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "プレビューには SLA が通常ないため、まず検証環境で挙動を確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T02:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "unlink", "heading": "リンク削除時の挙動", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "削除すると自動生成された規則が消え、境界間の信頼に依存する通信は拒否される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview", "locator": "周辺リンクを外したときの挙動", "retrievedAt": "2026-11-19T02:00:00Z" }] },
+            { "text": "削除にリモート側管理者の承認は不要で、どちらの境界の管理者も実行できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview", "locator": "周辺リンクを外したときの挙動", "retrievedAt": "2026-11-19T02:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "nsp", "term": "ネットワークセキュリティ境界", "type": "feature", "oneLine": { "text": "VNet 外の PaaS リソースの周囲に論理的なネットワーク境界を作り、公共アクセスを制御する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/network-security-perimeter-concepts", "locator": "冒頭", "retrievedAt": "2026-11-19T02:00:00Z" }] } },
+        { "termKey": "perimeter-link", "term": "Perimeter link", "type": "feature", "oneLine": { "text": "別々の境界内のリソースが追加の規則なしで通信できるようにする接続（クロスペリメーター接続）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview", "locator": "冒頭", "retrievedAt": "2026-11-19T02:00:00Z" }] } },
+        { "termKey": "profile", "term": "プロファイル", "type": "term", "oneLine": { "text": "関連付けられたリソースに適用されるアクセス規則の集まり。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/network-security-perimeter-concepts", "locator": "コンポーネント", "retrievedAt": "2026-11-19T02:00:00Z" }] } },
+        { "termKey": "paas", "term": "PaaS", "type": "term", "oneLine": { "text": "Platform as a Service。ここでは Storage や Key Vault など、VNet 外にデプロイされるサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/network-security-perimeter-concepts", "locator": "冒頭", "retrievedAt": "2026-11-19T02:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、すべての Azure 顧客が評価とフィードバックのために使える段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T02:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Perimeter link はネットワークセキュリティ境界に対応するすべての Azure パブリック リージョンで利用可能。境界はすべてのパブリック クラウド リージョンで提供",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview", "locator": "Important", "retrievedAt": "2026-11-19T02:00:00Z" },
+          { "url": "https://learn.microsoft.com/ja-jp/azure/private-link/network-security-perimeter-concepts", "locator": "どこで利用可能ですか", "retrievedAt": "2026-11-19T02:00:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579206",
+        "learn": [
+          { "title": "Network Security Perimeter(プレビュー版)におけるPerimeter Link機能", "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview", "locale": "ja-jp" },
+          { "title": "ネットワークセキュリティ境界間のペリメーターリンクの設定(プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/private-link/configure-perimeter-link", "locale": "ja-jp" },
+          { "title": "ネットワークセキュリティ境界とは何ですか？", "url": "https://learn.microsoft.com/ja-jp/azure/private-link/network-security-perimeter-concepts", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Perimeter link は、ネットワークセキュリティ境界に対応するすべての Azure パブリック リージョンで利用可能とされています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview" }]
+          },
+          {
+            "q": "どのサービスが対象ですか？",
+            "a": "プレビュー期間中は SQL Database、Storage、Cosmos DB、Key Vault、Azure Monitor、Service Bus が対応しています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview" }]
+          },
+          {
+            "q": "別サブスクリプションの境界とも接続できますか？",
+            "a": "Contributor 権限などの要件を満たせば可能です。自動承認は同一サブスクリプション内の境界に限られます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview" }]
+          },
+          {
+            "q": "認証方式に制限はありますか？",
+            "a": "マネージド ID（MSI）認証が必須で、他の認証方法はサポートされていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/private-link/perimeter-links-overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
