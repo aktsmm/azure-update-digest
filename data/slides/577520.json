@@ -1,0 +1,128 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577520"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T00:55:00Z"
+  },
+  "slides": [
+    {
+      "key": "577520",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Cosmos DB のセマンティック リランカーが一般提供（GA）に",
+        "subtitleJa": "検索結果を AI で意図に合う順に並べ替え、RAG や検索の関連性を高めます",
+        "en": "Generally Available: Semantic Reranker in Azure Cosmos DB"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [
+          { "rawRing": "Preview", "year": 2026, "month": "June" },
+          { "rawRing": "General Availability", "year": 2026, "month": "November" }
+        ],
+        "status": "Launched",
+        "products": ["Azure Cosmos DB"],
+        "categories": ["databases", "iot"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Cosmos DB で**検索・RAG・エージェント**を作っている開発者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "独自のランキング処理を作り込まず、検索の関連性を高められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "検索の関連性に課題があれば、レイテンシ増加と合わせて効果を評価", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "Why use semantic reranker?", "retrievedAt": "2026-11-19T00:55:00Z" }] }
+      },
+      "pricing": {
+        "kind": "paid",
+        "text": "1,000 回のリランク呼び出しあたり 1 USD（リージョン・クラウドにより異なる場合あり）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "Pricing", "retrievedAt": "2026-11-19T00:55:00Z" }]
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "できること", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "検索結果を AI モデルで評価し、意図に合う候補を上位へ並べ替える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ベクター・フルテキスト・ハイブリッド検索などの結果に適用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "冒頭", "retrievedAt": "2026-11-19T00:55:00Z" }] },
+            { "text": "応答に 0〜1 の関連性スコアなどを含められる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "Semantic reranker output", "retrievedAt": "2026-11-19T00:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・制限", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "1 回のリランクで最大 50 ドキュメント、1 組あたり最大 2,048 トークン", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "Limitations", "retrievedAt": "2026-11-19T00:55:00Z" }] },
+            { "text": "候補の取得は Cosmos DB SDK、リランクは Azure Data AI SDK を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "冒頭", "retrievedAt": "2026-11-19T00:55:00Z" }] },
+            { "text": "推論アカウントの作成権限とロール割り当てが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "Prerequisites and setup", "retrievedAt": "2026-11-19T00:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "ga-timing", "heading": "提供時期", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "プレビューは 2026 年 6 月、一般提供は 2026 年 11 月", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "setup", "heading": "設定の流れ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure portal の Cosmos DB アカウントで [Semantic Reranker] を有効化できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "Optional: Set up reranking in the Azure portal", "retrievedAt": "2026-11-19T00:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "リランクは追加のネットワーク呼び出しと推論時間を伴う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "Why use semantic reranker?", "retrievedAt": "2026-11-19T00:55:00Z" }] },
+            { "text": "適用前後で関連性を比較し、遅延に見合う改善かを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "semantic-reranker", "term": "セマンティック リランカー", "type": "feature", "oneLine": { "text": "AI モデルで検索結果をスコア付けし、関連性の高い順に並べ替える機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "冒頭", "retrievedAt": "2026-11-19T00:55:00Z" }] } },
+        { "termKey": "relevance-score", "term": "関連性スコア", "type": "term", "oneLine": { "text": "検索語句やコンテキストとの意味的な関連性を示す 0〜1 の値。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "セマンティック リランカーの出力", "retrievedAt": "2026-11-19T00:55:00Z" }] } },
+        { "termKey": "ai-semantic-ranker", "term": "Microsoft AI Semantic Ranker", "type": "term", "oneLine": { "text": "Azure AI 検索のセマンティック ランカーでも使われる、Microsoft 開発のモデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "冒頭", "retrievedAt": "2026-11-19T00:55:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-19T00:55:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T00:55:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "推論リージョンは eastus2・westus3・uksouth",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "Select your existing account", "retrievedAt": "2026-11-19T00:55:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577520",
+        "learn": [
+          { "title": "Azure Cosmos DB for NoSQL のセマンティック リランカー", "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/semantic-reranker", "locale": "ja-jp" },
+          { "title": "Semantic reranker in Azure Cosmos DB", "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locale": "en-us" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "費用はどのくらいかかりますか？",
+            "a": "1,000 回のリランク呼び出しあたり 1 USD です。リージョンやクラウドにより価格が異なる場合があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "Pricing", "retrievedAt": "2026-11-19T00:55:00Z" }]
+          },
+          {
+            "q": "一度に何件のドキュメントを渡せますか？",
+            "a": "1 回のリランク呼び出しで最大 50 ドキュメント、1 組あたり最大 2,048 トークンです。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "Limitations", "retrievedAt": "2026-11-19T00:55:00Z" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Learn に記載の推論リージョンは eastus2・westus3・uksouth で、日本リージョンは含まれていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/semantic-reranker", "locator": "Select your existing account", "retrievedAt": "2026-11-19T00:55:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
