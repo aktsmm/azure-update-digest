@@ -1,0 +1,131 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": { "mode": "ids", "basis": "created", "ids": ["563097"], "coverage": "complete", "snapshotAt": "2026-11-19T00:40:00Z" },
+  "slides": [
+    {
+      "key": "563097",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure HorizonDB の AI モデル管理が限定プレビューに",
+        "subtitleJa": "埋め込み・再ランク・生成モデルをワンステップで用意し、PostgreSQL の AI 関数から使えます",
+        "en": "Limited Preview: AI model management in Azure HorizonDB"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure HorizonDB"],
+        "categories": ["databases", "ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Azure HorizonDB** で AI 機能（埋め込み・RAG など）を使いたい方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "モデルのエンドポイントや資格情報を自分で管理せず、DB 内の AI 関数をすぐ使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用したい場合は限定プレビューの参加フォームで申請", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "pricing": {
+        "kind": "paid",
+        "text": "機能の有効化自体に追加料金なし。モデル使用量は Microsoft Foundry と同じメーター・料金で課金",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-model-management", "locator": "価格の詳細", "retrievedAt": "2026-11-19T00:40:00Z" }]
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "複数の Azure サービスでモデルのデプロイ、エンドポイントのコピー、資格情報の管理が必要だった",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-model-management", "locator": "冒頭", "retrievedAt": "2026-11-19T00:40:00Z" }]
+        },
+        "after": { "text": "1 回の操作でマネージド AI モデルを用意し、PostgreSQL の AI 関数から直接利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "埋め込み・セマンティック ランキング・生成用モデルを Microsoft Foundry 経由でプロビジョニング", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "既定エイリアス: default-embedding / default-chat / default-reranker の 3 モデルを登録",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-model-management", "locator": "マネージド モデル", "retrievedAt": "2026-11-19T00:40:00Z" }]
+            },
+            { "text": "Foundry にデプロイ済みの既存モデルも登録して AI 関数から利用可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "限定プレビューのため、参加フォームでのアクセス申請が必要", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "有効化時に利用規約への同意が必要。AI 関数の例は azure_ai 2.5.6 以降が前提",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-model-management", "locator": "AI モデル管理を有効にする", "retrievedAt": "2026-11-19T00:40:00Z" }]
+            }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "how-to-start", "heading": "有効化の流れ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Azure portal で HorizonDB → [AI モデル マネージャー] → マネージド モデルを有効化 → 保存 → 規約に同意",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-model-management", "locator": "AI モデル管理を有効にする", "retrievedAt": "2026-11-19T00:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "マネージドと BYOM の違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "マネージド: 3 モデルを自動配備・更新 / BYOM: 自分の Foundry モデルをレジストリに登録",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-model-management", "locator": "主要な機能", "retrievedAt": "2026-11-19T00:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "RAG やセマンティック検索の検証で、既定モデルの精度と課金を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-horizondb", "term": "Azure HorizonDB", "type": "product", "oneLine": { "text": "PostgreSQL 上に構築された、クラウドネイティブのフル マネージドで AI 対応のデータベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "冒頭", "retrievedAt": "2026-11-19T00:40:00Z" }] } },
+        { "termKey": "aimm", "term": "AI モデル管理", "type": "feature", "oneLine": { "text": "データベース内で AI モデルをプロビジョニング、構成、使用できる HorizonDB のプレミアム機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-model-management", "locator": "冒頭", "retrievedAt": "2026-11-19T00:40:00Z" }] } },
+        { "termKey": "embedding", "term": "埋め込み", "type": "term", "oneLine": { "text": "意味が近い内容をベクター空間で近い点に対応付ける、機械学習モデルが生成するベクター。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-overview", "locator": "埋め込み、ベクター、ベクター検索", "retrievedAt": "2026-11-19T00:40:00Z" }] } },
+        { "termKey": "rag", "term": "RAG", "type": "term", "oneLine": { "text": "関連ドキュメントを取得して LLM に渡し、実データに基づく応答を生成するパターン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-overview", "locator": "検索拡張生成 (RAG)", "retrievedAt": "2026-11-19T00:40:00Z" }] } },
+        { "termKey": "byom", "term": "BYOM", "type": "term", "oneLine": { "text": "マネージド モデルとは別に、独自の Microsoft Foundry モデルを登録して使う機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-model-management", "locator": "独自のモデルを持ち込む", "retrievedAt": "2026-11-19T00:40:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T00:40:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure HorizonDB 本体の提供リージョンに日本東部が含まれる",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "Azure リージョン", "retrievedAt": "2026-11-19T00:40:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=563097",
+        "learn": [
+          { "title": "Azure HorizonDB での AI モデル管理 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-model-management", "locale": "ja-jp" },
+          { "title": "Azure HorizonDB の AI 機能は何ですか?", "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "追加料金はかかりますか？", "a": "機能の有効化自体に追加料金はありません。モデル使用量は Foundry と同じメーター・料金で、HorizonDB リソースに課金されます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-model-management" }] },
+          { "q": "独自の Foundry モデルも使えますか？", "a": "はい。BYOM で既存の Foundry モデルをモデル レジストリに登録し、AI 関数から利用できます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/ai/ai-model-management" }] },
+          { "q": "Azure HorizonDB は日本のリージョンで使えますか？", "a": "Azure HorizonDB 本体は日本東部で提供されています。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
