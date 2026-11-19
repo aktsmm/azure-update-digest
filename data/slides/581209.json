@@ -1,0 +1,161 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581209"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T01:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "581209",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Workload Center for SAP と Run SAP Agent が限定プレビュー",
+        "subtitleJa": "Workload Virtual Instance を基盤に、SAP ワークロードの健全性把握と構成検証を支援",
+        "en": "Limited Preview: Azure Workload Center for SAP and Azure Copilot Run SAP Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [
+          { "rawRing": "Private Preview", "year": 2026, "month": "June" },
+          { "rawRing": "Preview", "year": 2026, "month": "November" }
+        ],
+        "status": "In preview",
+        "products": ["Azure Workload Center for SAP", "Azure Copilot"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Azure 上で SAP システムを運用している**SAP 運用チーム**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "SAP ワークロードの健全性確認や構成検証を、ワークロード単位で行える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "非本番の SAP 環境で試したい場合は、サインアップ フォームで申請",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/azure-workloads-center-sap-overview", "locator": "プレビューにアクセスする", "retrievedAt": "2026-11-19T01:08:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "各ワークロードを WVI として表し、構成・依存関係・運用コンテキストを 1 つのビューで把握できる。AI エージェントが変更点や影響の把握を支援する",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "WVI が SAP システム・ワークロード コンポーネント・Azure リソースの関係を表す",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/azure-workloads-center-sap-overview", "locator": "ワークロード仮想インスタンス(プレビュー)", "retrievedAt": "2026-11-19T01:08:00Z" }]
+            },
+            {
+              "text": "構成検証、正常性の可観測性、Run SAP エージェントによる AI 支援の調査",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/azure-workloads-center-sap-overview", "locator": "ワークロード仮想インスタンス(プレビュー)", "retrievedAt": "2026-11-19T01:08:00Z" }]
+            },
+            {
+              "text": "検出方式は API ベース / Azure Resource Graph クエリ / 手動マッピング",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/discovery-resource-association", "locator": "リソースの関連付けがどのように確立されるか", "retrievedAt": "2026-11-19T01:09:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "限定プレビュー。サインアップ フォームの送信後、製品チームが確認して対象のお客様に提供",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/azure-workloads-center-sap-overview", "locator": "プレビューにアクセスする", "retrievedAt": "2026-11-19T01:08:00Z" }]
+            },
+            {
+              "text": "プレビュー中の WVI は非本番環境向け。本番環境は VIS（一般提供）を使用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/azure-workloads-center-sap-overview", "locator": "適切なエクスペリエンスを選択する", "retrievedAt": "2026-11-19T01:08:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "非本番の SAP システムで、構成検証や正常性の見え方を確認する",
+              "origin": "editorial", "assertion": "recommendation", "verification": "unverified"
+            },
+            {
+              "text": "SAP システムの構成に合う検出方式を選び、リソースの関連付けを実環境と揃える",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/discovery-resource-association", "locator": "リソースの関連付けがどのように確立されるか", "retrievedAt": "2026-11-19T01:09:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-workload-center-sap", "term": "Azure Workload Center for SAP", "type": "product",
+          "oneLine": { "text": "Azure 上の SAP ワークロードを管理・運用するための集中型エクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/azure-workloads-center-sap-overview", "locator": "冒頭", "retrievedAt": "2026-11-19T01:08:00Z" }] }
+        },
+        {
+          "termKey": "wvi", "term": "WVI（Workload Virtual Instance）", "type": "feature",
+          "oneLine": { "text": "SAP システム、そのコンポーネント、支える Azure リソースを表すワークロード コンテキスト。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/azure-workloads-center-sap-overview", "locator": "ワークロード仮想インスタンス(プレビュー)", "retrievedAt": "2026-11-19T01:08:00Z" }] }
+        },
+        {
+          "termKey": "vis", "term": "VIS（Virtual Instance for SAP solutions）", "type": "feature",
+          "oneLine": { "text": "旧 Azure Center for SAP solutions の一般提供エクスペリエンスで、本番環境向け。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/azure-workloads-center-sap-overview", "locator": "適切なエクスペリエンスを選択する", "retrievedAt": "2026-11-19T01:08:00Z" }] }
+        },
+        {
+          "termKey": "run-sap-agent", "term": "Azure Copilot Run SAP Agent", "type": "feature",
+          "oneLine": { "text": "WVI のワークロード コンテキストを用いて、AI 支援の調査を行うエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/azure-workloads-center-sap-overview", "locator": "ワークロード仮想インスタンス(プレビュー)", "retrievedAt": "2026-11-19T01:08:00Z" }] }
+        },
+        {
+          "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label",
+          "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T01:08:00Z" }] }
+        }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "告知の提供リージョンに Japan East を含む（Japan West は記載の一覧にない）",
+        "evidence": [{ "url": "https://azure.microsoft.com/updates?id=581209", "locator": "Availability", "retrievedAt": "2026-11-19T01:08:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581209",
+        "learn": [
+          { "title": "Azure Workload Center for SAP 概要", "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/azure-workloads-center-sap-overview", "locale": "ja-jp" },
+          { "title": "Azure Workload Center for SAP における検出とリソース関連付け", "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/discovery-resource-association", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "本番の SAP システムでも使えますか？",
+            "a": "プレビュー中の WVI は非本番環境向けです。本番環境には一般提供の VIS を使用するよう案内されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/azure-workloads-center-sap-overview" }]
+          },
+          {
+            "q": "どうすれば利用できますか？",
+            "a": "サインアップ フォームを送信すると、製品チームがリクエストを確認し、対象のお客様にアクセスを提供します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/azure-workloads-center-sap-overview" }]
+          },
+          {
+            "q": "SAP システムのリソース関連付けはどう維持されますか？",
+            "a": "API ベースと Resource Graph ベースの検出は毎時実行されます。手動マッピングは自動検出されず、利用者が整合性を保ちます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/sap/center-sap-solutions/discovery-resource-association" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
