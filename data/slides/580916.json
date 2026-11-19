@@ -1,0 +1,101 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["580916"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T02:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "580916",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "AKS の Agent Sandbox クラスター拡張機能がパブリック プレビュー",
+        "subtitleJa": "信頼できないモデル生成コードを、Sandbox ごとに分離して実行できます",
+        "en": "Public Preview: Agent Sandbox cluster extension"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "ai", "containers"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "AKS 上で**モデル生成コードを実行する AI エージェント**を構築するチーム", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "サンドボックスの作成・管理・事前ウォームを自前で組まずに済む", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューは本番利用を想定しない。検証環境で評価する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/agent-sandbox-cluster-extension", "locator": "Important", "retrievedAt": "2026-11-19T02:28:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "Kubernetes 上でサンドボックスのライフサイクル・ストレージ・ウォームアップを自前で構築し、環境の初期化を待つ必要があった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "オープンソースの Agent Sandbox を基盤に、宣言的な作成・ライフサイクル管理・事前ウォーム済みプールをマネージド拡張機能で利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Kubernetes の Sandbox リソースに、イメージ・ランタイム・リソース要件を記述して実行環境を管理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/agent-sandbox-cluster-extension", "locator": "冒頭", "retrievedAt": "2026-11-19T02:28:00Z" }] },
+            { "text": "ポッド スナップショット拡張機能と併用すると、サンドボックスの状態を保存・復元できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・制約", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Kubernetes 1.35 以降、マネージド ID、ポッド サンドボックス（Kata VM 分離 v2）有効のクラスターが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/agent-sandbox-cluster-extension", "locator": "Prerequisites", "retrievedAt": "2026-11-19T02:28:00Z" }] },
+            { "text": "AKS Automatic は未サポート。リージョンは Kata VM 分離 v2 対応の AKS リリースに依存", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/agent-sandbox-cluster-extension", "locator": "Limitations", "retrievedAt": "2026-11-19T02:28:00Z" }] },
+            { "text": "ポッド サンドボックスは v6 VM SKU（Dasv6、Easv6 など）のみ対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/agent-sandbox-cluster-extension", "locator": "Prerequisites", "retrievedAt": "2026-11-19T02:28:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "既存クラスターが Kubernetes 1.35 以降・Kata v2 対応か、利用リージョンで使えるかを先に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aks", "term": "Azure Kubernetes Service (AKS)", "type": "product", "oneLine": { "text": "コンテナー化アプリのデプロイと管理を行うマネージド Kubernetes サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/what-is-aks", "locator": "冒頭", "retrievedAt": "2026-11-19T02:28:00Z" }] } },
+        { "termKey": "agent-sandbox", "term": "Agent Sandbox", "type": "feature", "oneLine": { "text": "AI エージェントの実行環境などステートフルなワークロードを管理する、宣言型 API を持つ Kubernetes プロジェクト。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/agent-sandbox-cluster-extension", "locator": "冒頭", "retrievedAt": "2026-11-19T02:28:00Z" }] } },
+        { "termKey": "pod-sandboxing", "term": "ポッドのサンドボックス化", "type": "term", "oneLine": { "text": "選択したランタイムでワークロードを分離して実行する AKS の仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/agent-sandbox-cluster-extension", "locator": "冒頭", "retrievedAt": "2026-11-19T02:28:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "全 Azure 顧客が評価とフィードバックのために利用できる、GA 前の段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T02:28:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=580916",
+        "learn": [
+          { "title": "エージェント サンドボックス クラスター拡張機能を使用して分離された AI エージェント ワークロードを実行する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/aks/agent-sandbox-cluster-extension", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "本番環境で使えますか？",
+            "a": "AKS のプレビュー機能は SLA の対象外で、本番利用を目的としていません。まず検証環境での評価が適切です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/agent-sandbox-cluster-extension" }]
+          },
+          {
+            "q": "利用の前提条件は何ですか？",
+            "a": "Kubernetes 1.35 以降でマネージド ID を使い、ポッド サンドボックス（Kata VM 分離 v2）を有効にしたクラスターが必要です。Azure CLI 2.85.0 以降も要ります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/agent-sandbox-cluster-extension" }]
+          },
+          {
+            "q": "AKS Automatic でも使えますか？",
+            "a": "現時点のプレビューでは AKS Automatic はサポートされていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/agent-sandbox-cluster-extension" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
