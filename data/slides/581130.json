@@ -1,0 +1,170 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581130"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T01:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "581130",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "AKS の機密 VM ノード プールで Intel TDX が一般提供（GA）に",
+        "subtitleJa": "AMD SEV-SNP と並んで Intel TDX を選べます。追加の AKS 設定や API は不要です",
+        "en": "Generally Available: Confidential VMs with Intel TDX support on AKS"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "containers"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Intel TDX を基準に機密ワークロードを運用している **AKS ユーザー**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "アテステーション モデルを変えずに機密ワークロードを AKS に移せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Intel TDX で標準化している場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": { "text": "CVM ノード イメージは AMD SEV-SNP のみに対応しており、Intel TDX のワークロードは機密 VM ノード プールで実行できなかった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "機密 VM ノード プールで Intel TDX と AMD SEV-SNP の両方を利用でき、VM SKU から適切な CVM イメージが自動選択される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "VM SKU に応じて適切な CVM イメージが自動で選択される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "CVM はハイパーバイザーやホスト管理コードから VM のメモリと状態へのアクセスを拒否する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "冒頭", "retrievedAt": "2026-11-19T01:50:00Z" }]
+            },
+            {
+              "text": "CVM ノード上のすべての Pod は同じ信頼境界に含まれる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "それはどのように動作しますか?", "retrievedAt": "2026-11-19T01:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "az aks nodepool add の --node-vm-size に機密 VM サイズを指定する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "CVM を持つノード プールを AKS クラスターに追加する", "retrievedAt": "2026-11-19T01:50:00Z" }]
+            },
+            {
+              "text": "Intel TDX のサイズは DCesv6 / DCedsv6 / ECesv6 / ECedsv6 シリーズ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/virtual-machine-options", "locator": "サイズ", "retrievedAt": "2026-11-19T01:50:00Z" }]
+            },
+            {
+              "text": "az aks nodepool show で vmSize と nodeImageVersion を確認できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "ノード プールで CVM が使用されていることを確認する", "retrievedAt": "2026-11-19T01:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "対象リージョンのサブスクリプションで CVM サイズが使え、十分なクォータがあること",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "前提条件", "retrievedAt": "2026-11-19T01:50:00Z" }]
+            },
+            {
+              "text": "Intel TDX の VM サイズには Ubuntu 26.04（プレビュー）の CVM ノード プールが必要と記載されている",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "サポートされている OS のバージョン", "retrievedAt": "2026-11-19T01:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "AMD SEV-SNP は第 3 世代 AMD EPYC、Intel TDX は第 5 世代 Intel Xeon で導入された技術",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/virtual-machine-options", "locator": "冒頭", "retrievedAt": "2026-11-19T01:50:00Z" }]
+            },
+            {
+              "text": "CVM は VM サイズの機能に従い、個別にオン・オフできない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "制限事項", "retrievedAt": "2026-11-19T01:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "機密性の高い顧客データや、コンプライアンス要件のあるワークロードで CVM が必要になる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "冒頭", "retrievedAt": "2026-11-19T01:50:00Z" }]
+            },
+            {
+              "text": "Ubuntu / Azure Linux の CVM ノード プールでは FIPS や Pod sandboxing は使えない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "制限事項", "retrievedAt": "2026-11-19T01:50:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aks", "term": "AKS", "type": "product", "oneLine": { "text": "マネージド Kubernetes クラスターを Azure に簡単にデプロイできるサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/confidential-node-pool-aks", "locator": "冒頭", "retrievedAt": "2026-11-19T01:50:00Z" }] } },
+        { "termKey": "cvm", "term": "機密 VM（CVM）", "type": "feature", "oneLine": { "text": "ハードウェアベースの信頼実行環境で、VM のメモリと状態をホストから保護する VM。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "冒頭", "retrievedAt": "2026-11-19T01:50:00Z" }] } },
+        { "termKey": "intel-tdx", "term": "Intel TDX", "type": "feature", "oneLine": { "text": "第 5 世代 Intel Xeon で導入された、Intel ベースの機密 VM の技術。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/virtual-machine-options", "locator": "冒頭", "retrievedAt": "2026-11-19T01:50:00Z" }] } },
+        { "termKey": "amd-sev-snp", "term": "AMD SEV-SNP", "type": "feature", "oneLine": { "text": "第 3 世代 AMD EPYC で導入された、AMD ベースの機密 VM の技術。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/virtual-machine-options", "locator": "冒頭", "retrievedAt": "2026-11-19T01:50:00Z" }] } },
+        { "termKey": "tee", "term": "TEE（信頼実行環境）", "type": "term", "oneLine": { "text": "ハイパーバイザーなどから VM のメモリと状態へのアクセスを拒否する、ハードウェアベースの実行環境。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locator": "冒頭", "retrievedAt": "2026-11-19T01:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-19T01:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "AKS は基盤サービスとして提供。利用には対象リージョンで CVM サイズが使えることが前提",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/reliability/availability-service-by-category", "locator": "基本サービス", "retrievedAt": "2026-11-19T01:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581130",
+        "learn": [
+          { "title": "AKS クラスターで Confidential Virtual Machines (CVM) を使用する", "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm", "locale": "ja-jp" },
+          { "title": "Azure 機密 VM のオプション", "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/virtual-machine-options", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "Intel TDX の機密 VM はどのサイズで使えますか？",
+            "a": "DCesv6、DCedsv6、ECesv6、ECedsv6 シリーズが Intel TDX です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/confidential-computing/virtual-machine-options" }]
+          },
+          {
+            "q": "CVM を後からオン・オフできますか？",
+            "a": "CVM は VM サイズの機能に従い、個別にオン・オフすることはできません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm" }]
+          },
+          {
+            "q": "利用に必要な前提条件は何ですか？",
+            "a": "既存の AKS クラスターと、対象リージョンで使える CVM サイズ、十分なクォータが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-cvm" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
