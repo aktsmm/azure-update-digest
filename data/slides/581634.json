@@ -1,0 +1,93 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581634"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T01:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "581634",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Elastic SAN Next Generation が パブリック プレビュー",
+        "subtitleJa": "QoS 階層・シン プロビジョニング・オートスケールに対応（パブリック プレビュー）",
+        "en": "Public Preview: Azure Elastic SAN Next Generation"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Elastic SAN"],
+        "categories": ["storage"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "SAN の移行（データセンター撤退・ハードウェア更新）や、**SAP HANA などの高 I/O ワークロード**を Azure で動かす利用者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "同一 SAN で用途別の性能保証とコスト最適化を両立しやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。利用にはプレビューへのサインアップと機能登録が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/elastic-san/next-generation-create", "locator": "プレビューに登録する", "retrievedAt": "2026-11-19T01:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "QoS 階層、シン プロビジョニング、オートスケール、クラッシュ整合性スナップショットを備え、最大 1 PiB・400 万 IOPS・160 GBps まで拡張できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "QoS 階層: Business Critical（最大 40 万 IOPS）/ General Purpose の Direct Attach・iSCSI（最大 8 万 IOPS）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "シン プロビジョニング（SAN の確保容量の最大 5 倍）とオートスケール、容量・IOPS・スループットの個別指定", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "クラッシュ整合性スナップショットに対応。シン クローンは近日対応予定", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プレビュー中は LRS のみ。Business Critical は Direct Attach 接続のみ対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/elastic-san/next-generation-create", "locator": "Limitations", "retrievedAt": "2026-11-19T01:00:00Z" }] },
+            { "text": "ボリューム グループ作成後は、接続タイプと QoS 階層を変更できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/elastic-san/next-generation-create", "locator": "Limitations", "retrievedAt": "2026-11-19T01:00:00Z" }] },
+            { "text": "Direct Attach のボリューム グループはプラットフォーム管理キーのみ対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/elastic-san/next-generation-create", "locator": "Limitations", "retrievedAt": "2026-11-19T01:00:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ワークロードに合う QoS 階層と接続方式（Direct Attach / iSCSI）を検証環境で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "elastic-san", "term": "Azure Elastic SAN", "type": "product", "oneLine": { "text": "単一の SAN リソース階層でブロック ストレージを統合し、性能を動的に共有できるクラウド SAN。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "qos", "term": "QoS（サービス品質）階層", "type": "term", "oneLine": { "text": "ボリューム グループ単位でワークロードに合う性能を選ぶ区分。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "thin-provisioning", "term": "シン プロビジョニング", "type": "term", "oneLine": { "text": "データが書き込まれた分だけ物理容量を消費する割り当て方式。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T01:00:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581634",
+        "learn": [
+          { "title": "Azure Elastic SAN Next Generation Preview を展開する", "url": "https://learn.microsoft.com/ja-jp/azure/storage/elastic-san/next-generation-create", "locale": "ja-jp" },
+          { "title": "VMがElastic SAN Next Generationボリュームに接続したときのパフォーマンスはどう動作するのか", "url": "https://learn.microsoft.com/ja-jp/azure/storage/elastic-san/next-generation-performance", "locale": "ja-jp" },
+          { "title": "Azure Elastic SAN 次世代スナップショットの概要", "url": "https://learn.microsoft.com/ja-jp/azure/storage/elastic-san/next-generation-snapshots-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "プレビューを使うには何が必要ですか？", "a": "プレビューのサインアップと、対象サブスクリプションの機能登録（承認済みで Registered）が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/elastic-san/next-generation-create" }] },
+          { "q": "冗長性の選択肢は？", "a": "プレビュー中はローカル冗長ストレージ（LRS）のみがサポートされます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/storage/elastic-san/next-generation-create" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
