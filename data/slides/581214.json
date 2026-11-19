@@ -1,0 +1,103 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581214"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T01:11:00Z"
+  },
+  "slides": [
+    {
+      "key": "581214",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Workload Center for Oracle と Run Oracle エージェントが限定プレビュー",
+        "subtitleJa": "Oracle システムをワークロード単位で把握し、構成逸脱やヘルスを一画面で確認",
+        "en": "Limited Preview: Azure Workload Center for Oracle and Azure Copilot Run Oracle Agent"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [
+          { "rawRing": "Private Preview", "year": 2026, "month": "June" },
+          { "rawRing": "Preview", "year": 2026, "month": "November" }
+        ],
+        "status": "In preview",
+        "products": [],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Azure 上で Oracle システムを運用する**運用・基盤チーム**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview", "locator": "Azure Workload Center for Oracleとは何ですか?", "retrievedAt": "2026-11-19T01:11:00Z" }] },
+        "change": { "text": "構成逸脱やヘルス問題を早期に見つけ、Copilot エージェントに質問できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview", "locator": "利点", "retrievedAt": "2026-11-19T01:11:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用には限定プレビューへの参加登録が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview", "locator": "Important", "retrievedAt": "2026-11-19T01:11:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Oracle システムを Workload Virtual Instance（WVI）として登録し、構成検証・ヘルス監視・Copilot ガイダンスを利用できる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview", "locator": "概要", "retrievedAt": "2026-11-19T01:11:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Oracle AI Database@Azure または Azure VM 上の Oracle システムが対象", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview", "locator": "Azure Workload Center for Oracleとは何ですか?", "retrievedAt": "2026-11-19T01:11:00Z" }] },
+            { "text": "構成検証、Azure Monitor ヘルスモデル、Advisor 推奨、Run Oracle エージェント", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview", "locator": "ワークロード仮想インスタンスは何を可能にしますか?", "retrievedAt": "2026-11-19T01:11:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "限定プレビュー。サブスクリプションへのアクセスには参加希望の登録が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview", "locator": "Important", "retrievedAt": "2026-11-19T01:11:00Z" }] },
+            { "text": "WVI は論理的な表現で、システムのリソースを移動・変更しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview", "locator": "ワークロード仮想インスタンスとは何ですか?", "retrievedAt": "2026-11-19T01:11:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "リソースの関連付けは Azure Resource Graph の検出ルール（毎時再実行）か手動マッピング", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/discovery-resource-association", "locator": "ワークロードコンテキストの維持", "retrievedAt": "2026-11-19T01:11:00Z" }] },
+            { "text": "対象リージョンに自社の環境があるかを確認し、検証環境で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "wvi", "term": "Workload Virtual Instance（WVI）", "type": "feature", "oneLine": { "text": "Azure 上で動作する Oracle システムの論理的な表現（Azure リソース）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview", "locator": "ワークロード仮想インスタンスとは何ですか?", "retrievedAt": "2026-11-19T01:11:00Z" }] } },
+        { "termKey": "workload-center-oracle", "term": "Azure Workload Center for Oracle", "type": "product", "oneLine": { "text": "Azure 上の Oracle ワークロードを管理・運用するための Azure エクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview", "locator": "冒頭", "retrievedAt": "2026-11-19T01:11:00Z" }] } },
+        { "termKey": "oracle-ai-database-azure", "term": "Oracle AI Database@Azure", "type": "product", "oneLine": { "text": "Oracle が Azure データセンターで運用する Oracle データベース サービス群。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview", "locator": "Azure Workload Center for Oracleとは何ですか?", "retrievedAt": "2026-11-19T01:11:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T01:11:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "発表時の提供リージョンに Japan East が含まれる",
+        "evidence": [{ "url": "https://azure.microsoft.com/updates?id=581214", "locator": "Availability", "retrievedAt": "2026-11-19T01:11:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581214",
+        "learn": [
+          { "title": "Azure Workload Center for Oracle 概要(プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview", "locale": "ja-jp" },
+          { "title": "発見とリソースの関連付け", "url": "https://learn.microsoft.com/ja-jp/azure/oracle/discovery-resource-association", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "どうすれば利用できますか？", "a": "限定プレビューのため、サブスクリプションへのアクセスには参加希望の登録が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview", "locator": "Important" }] },
+          { "q": "どんな Oracle 環境が対象ですか？", "a": "Oracle AI Database@Azure または Azure VM 上で動作する Oracle システムを WVI として登録します。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/oracle/overview" }] },
+          { "q": "日本リージョンで使えますか？", "a": "発表の提供リージョンに Japan East が含まれます。", "evidence": [{ "url": "https://azure.microsoft.com/updates?id=581214" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
