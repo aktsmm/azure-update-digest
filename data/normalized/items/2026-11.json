@@ -9635,6 +9635,78 @@
       "availabilities": [
         {
           "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "579943",
+      "categories": [
+        "databases",
+        "ai",
+        "ops-governance"
+      ],
+      "created": "2026-11-18T17:58:45.3920431Z",
+      "createdJst": "2026-11-19",
+      "description": "Modernize CLI brings application and database modernization\ntogether as one connected, agentic journey. It assesses application\narchitecture, dependencies, and cloud readiness while discovering the databases\nthe application relies on and invoking specialized database skills for\ncompatibility, migration readiness, and target recommendations. The combined\ninsights create a coordinated modernization plan spanning application code and\nthe data layer. You can then use GitHub Copilot to remediate the application\nand database changes and validate the workload end to end on Azure,\ntransforming what were traditionally separate modernization efforts into a\nsingle integrated experience. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "9e4cce42d02e4a751ec1140b1e003e689bf7afa770e7299fc2c6ef36bb9dd453",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-19T02:17:54.861Z",
+          "fingerprint": "d4aef9d720ef3ef9f3b964200447353343c0b804c2e2280bf06e88e4723eb92d",
+          "modifiedAfter": "2026-11-18T17:58:45.3920431Z",
+          "modifiedBefore": null,
+          "rawRef": "20261119T021754861Z_list_sweep_o100.json#579943"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-19T02:18:17.914Z",
+          "fingerprint": "9e4cce42d02e4a751ec1140b1e003e689bf7afa770e7299fc2c6ef36bb9dd453",
+          "modifiedAfter": "2026-11-18T17:58:45.3920431Z",
+          "modifiedBefore": "2026-11-18T17:58:45.3920431Z",
+          "rawRef": "20261119T021817914Z_detail_579943.json#579943"
+        }
+      ],
+      "ids": [
+        "579943"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "579943",
+      "modified": "2026-11-18T17:58:45.3920431Z",
+      "modifiedJst": "2026-11-19",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure SQL Database"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579943",
+      "status": "In preview",
+      "tags": [
+        "Feature",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: AI-powered application and database modernization with Modernize CLI"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
           "ring": "General Availability",
           "year": 2026
         }
@@ -12223,6 +12295,89 @@
     {
       "availabilities": [
         {
+          "month": "April",
+          "ring": "Preview",
+          "year": 2026
+        },
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": "2026-04",
+        "privatePreview": null
+      },
+      "canonicalKey": "581048",
+      "categories": [
+        "compute",
+        "storage",
+        "ops-governance"
+      ],
+      "created": "2026-11-18T18:00:04.9934447Z",
+      "createdJst": "2026-11-19",
+      "description": "Azure Backup now supports cross-subscription backup for Azure Virtual Machines, enabling customers to protect VMs using a Recovery Services vault located in a different Azure subscription within the same tenant.This capability allows organizations to centralize backup management across multiple subscriptions, simplifying backup administration, improving governance, and reducing the need to maintain separate backup vaults in each subscription. It is particularly valuable for enterprises managing large Azure environments with dedicated subscriptions for backup and security operations.Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "1a180ff18ef49921f7deb133cd208798e67b7204a8e6a462701f801dbca2409c",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-19T02:17:54.861Z",
+          "fingerprint": "39f5f9b0294055156f54233dd972678024fd264fe9cd2f831de6107316671f1d",
+          "modifiedAfter": "2026-11-18T18:00:04.9934447Z",
+          "modifiedBefore": null,
+          "rawRef": "20261119T021754861Z_list_sweep_o100.json#581048"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-19T02:18:12.980Z",
+          "fingerprint": "1a180ff18ef49921f7deb133cd208798e67b7204a8e6a462701f801dbca2409c",
+          "modifiedAfter": "2026-11-18T18:00:04.9934447Z",
+          "modifiedBefore": "2026-11-18T18:00:04.9934447Z",
+          "rawRef": "20261119T021812980Z_detail_581048.json#581048"
+        }
+      ],
+      "ids": [
+        "581048"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "581048",
+      "modified": "2026-11-18T18:00:04.9934447Z",
+      "modifiedJst": "2026-11-19",
+      "productCategories": [
+        "Management and governance",
+        "Storage"
+      ],
+      "products": [
+        "Azure Backup"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581048",
+      "status": "Launched",
+      "tags": [
+        "Feature",
+        "Management",
+        "Microsoft Ignite"
+      ],
+      "title": "Generally Available: Cross-subscription backup for Azure Virtual Machines in Azure Backup"
+    },
+    {
+      "availabilities": [
+        {
           "month": "November",
           "ring": "Preview",
           "year": 2026
@@ -14065,6 +14220,84 @@
         "preview": "2026-11",
         "privatePreview": null
       },
+      "canonicalKey": "581604",
+      "categories": [
+        "networking",
+        "ai",
+        "security"
+      ],
+      "created": "2026-11-18T18:27:29.1275597Z",
+      "createdJst": "2026-11-19",
+      "description": "Announcing the public preview\nof the AI bot ruleset for Azure Web Application Firewall (WAF) on Azure Front\nDoor Premium. AI crawlers and agents visit your site for different reasons,\nand you may want to allow some but not others. Robots.txt only works when a bot\nchooses to follow it, and some bots pretend to be a well-known AI crawler. The\nAI bot ruleset identifies AI bots, groups them by purpose, and enforces your\nchoice for each group at the edge. With this preview, you can choose an action for each of four\ncategories: AI training, for verified\ncrawlers that collect public content to train or fine-tune AI models. AI search, for verified\ncrawlers that index content to power AI search, answers, and summaries. AI interactive agents, for\nverified agents that fetch pages in real time when a person asks an AI\nassistant. Miscellaneous AI agents,\nfor AI bots that can't be verified, including bots that falsely claim to be a\nwell-known AI crawler. Microsoft keeps the AI bot\nsignatures up to date, with no ruleset version change needed. Every rule starts\nwith the Log action, so you can review your AI bot traffic in WAF logs and WAF\ninsights before anything is blocked. You can set each category to Allow, Block,\nLog, JS challenge, or CAPTCHA, and configure the ruleset in the Azure portal,\nAzure PowerShell, Azure CLI, or Bicep. Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "471903717296f1c24318a0f55b9848b9834b67f9daac48c6de3a5f5e87a6dc83",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-19T02:18:00.463Z",
+          "fingerprint": "b1988f8f36f5d488ffbe26b2e076361631efd7e0335479c47244211648508688",
+          "modifiedAfter": "2026-11-18T18:27:29.1275597Z",
+          "modifiedBefore": null,
+          "rawRef": "20261119T021800463Z_list_sweep_o150.json#581604"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-19T02:18:05.400Z",
+          "fingerprint": "471903717296f1c24318a0f55b9848b9834b67f9daac48c6de3a5f5e87a6dc83",
+          "modifiedAfter": "2026-11-18T18:27:29.1275597Z",
+          "modifiedBefore": "2026-11-18T18:27:29.1275597Z",
+          "rawRef": "20261119T021805400Z_detail_581604.json#581604"
+        }
+      ],
+      "ids": [
+        "581604"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "security-tag"
+        ],
+        "score": 5,
+        "topics": [
+          "security"
+        ]
+      },
+      "latestId": "581604",
+      "modified": "2026-11-18T18:27:29.1275597Z",
+      "modifiedJst": "2026-11-19",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Front Door",
+        "Web Application Firewall"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581604",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite",
+        "Security"
+      ],
+      "title": "Public Preview: AI bot ruleset for Azure Front Door Premium WAF"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
       "canonicalKey": "581634",
       "categories": [
         "storage"
@@ -14120,6 +14353,77 @@
         "Microsoft Ignite"
       ],
       "title": "Pulic Preview: Azure Elastic SAN Next Generation"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Effective",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "581645",
+      "categories": [
+        "databases",
+        "ai"
+      ],
+      "created": "2026-11-18T18:01:03.3565183Z",
+      "createdJst": "2026-11-19",
+      "description": "A new Azure Databricks environment is now available in Beta on\nMicrosoft Azure Government. It brings the modern data and AI platform from\nglobal Azure to U.S. public sector agencies and their partners, delivered as a\nfirst-party Azure service. The Beta includes Unity Catalog for unified governance across data\nand AI assets, and Databricks SQL with serverless compute for scalable\nanalytics without managing infrastructure. It also includes system tables for\nusage, audit and cost visibility. The Compliance Security Profile is on by\ndefault in every workspace, Azure Private Link is required, and customer data\nstays in the US Gov Virginia and US Gov Arizona regions. The Beta is for non-production workloads only and must not be used\nto process Controlled Unclassified Information (CUI) or other regulated data.\nAccess is enabled per subscription.  Learn\nmore. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "d502309772d0473f792d082157e0301a677fec240c62bf89674b687cd4ae1dad",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-19T02:18:00.463Z",
+          "fingerprint": "049bf79a692f45268c0b09c0e2f595d1fde7183af63b052f91d3dfbca20d0838",
+          "modifiedAfter": "2026-11-18T18:01:03.3565183Z",
+          "modifiedBefore": null,
+          "rawRef": "20261119T021800463Z_list_sweep_o150.json#581645"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-19T02:18:09.782Z",
+          "fingerprint": "d502309772d0473f792d082157e0301a677fec240c62bf89674b687cd4ae1dad",
+          "modifiedAfter": "2026-11-18T18:01:03.3565183Z",
+          "modifiedBefore": "2026-11-18T18:01:03.3565183Z",
+          "rawRef": "20261119T021809782Z_detail_581645.json#581645"
+        }
+      ],
+      "ids": [
+        "581645"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581645",
+      "modified": "2026-11-18T18:01:03.3565183Z",
+      "modifiedJst": "2026-11-19",
+      "productCategories": [
+        "AI + machine learning",
+        "Analytics"
+      ],
+      "products": [
+        "Azure Databricks"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581645",
+      "status": null,
+      "tags": [
+        "Announcement",
+        "Microsoft Ignite"
+      ],
+      "title": "Announcing: The new Azure Databricks on Azure Government is now in Beta"
     }
   ],
   "month": "2026-11",
