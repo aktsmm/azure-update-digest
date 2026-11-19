@@ -1,0 +1,117 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["580689"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T02:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "580689",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Adaptive Virtual Patching がパブリック プレビューに",
+        "subtitleJa": "パッチ適用までの間、AI が生成した一時的な緩和策でゼロデイ脆弱性への露出を減らします",
+        "en": "Public Preview: Azure Adaptive Virtual Patching"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": [],
+        "categories": ["security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Azure 上の **Linux VM / VM Scale Sets** を運用し、脆弱性対応を担う方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "パッチの検証・展開中も、一時的な緩和策で悪用リスクを下げられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビュー中は本番ではなくテスト環境で評価する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locator": "プレビューの制限事項", "retrievedAt": "2026-11-19T02:20:00Z" }] }
+      },
+      "pricing": {
+        "kind": "paid",
+        "text": "プレビュー中は料金の 50% を支払う（料金は Adaptive Shield 数と保護対象リソース数に基づく）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locator": "Pricing", "retrievedAt": "2026-11-19T02:20:00Z" }]
+      },
+      "beforeAfter": {
+        "after": { "text": "AI が脆弱性とワークロードの状況から緩和策を生成し、パッチ展開までの間の露出を減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "対象: VM と統一 VMSS。Azure Linux / Ubuntu（カーネル 4.19 以降）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locator": "プレビューの制限事項", "retrievedAt": "2026-11-19T02:20:00Z" }] },
+            { "text": "Adaptive Shield に VM / VMSS を登録すると Neuron 拡張機能が自動導入される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/deploy-adaptive-shield-portal", "locator": "Neuron拡張機能を確認する", "retrievedAt": "2026-11-19T02:20:00Z" }] },
+            { "text": "緩和策は手動承認か自動モードで適用でき、ロールバックも可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locator": "主な利点", "retrievedAt": "2026-11-19T02:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Windows、VMSS Flex、Kubernetes、コンテナは非対応。VM と VMSS の混在も不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locator": "プレビューの制限事項", "retrievedAt": "2026-11-19T02:20:00Z" }] },
+            { "text": "1 サブスクリプション 2 シールド、1 シールドあたり最大 40 VM インスタンス", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locator": "プレビューの制限事項", "retrievedAt": "2026-11-19T02:20:00Z" }] },
+            { "text": "プレビュー機能の登録、マネージド ID、アウトバウンド接続が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/deploy-adaptive-shield-portal", "locator": "Prerequisites", "retrievedAt": "2026-11-19T02:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-it-works", "heading": "保護の流れ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "検出 → マッチ → 推奨 → 検証 → 適用 → 再検証の 6 段階を繰り返す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locator": "どのように機能するのか", "retrievedAt": "2026-11-19T02:20:00Z" }] },
+            { "text": "脆弱性を修復するものではなく、恒久対策までの一時的な保護層", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locator": "主な利点", "retrievedAt": "2026-11-19T02:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "setup", "heading": "導入手順", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ポータルで Adaptive Shield をデプロイし、重大度しきい値と対応戦略を設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/deploy-adaptive-shield-portal", "locator": "適応シールドを作成する", "retrievedAt": "2026-11-19T02:20:00Z" }] },
+            { "text": "Shield と保護対象リソースは同一リージョンに配置する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/deploy-adaptive-shield-portal", "locator": "Prerequisites", "retrievedAt": "2026-11-19T02:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象 OS・規模が自環境に合うか、テスト環境で緩和策の挙動を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "adaptive-shield", "term": "Adaptive Shield", "type": "feature", "oneLine": { "text": "Azure リソースを保護するトップレベルのリソースで、検出結果と緩和策を管理する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locator": "重要な概念", "retrievedAt": "2026-11-19T02:20:00Z" }] } },
+        { "termKey": "protected-resource", "term": "保護されたリソース", "type": "term", "oneLine": { "text": "Adaptive Shield に登録されている VM または VMSS インスタンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locator": "重要な概念", "retrievedAt": "2026-11-19T02:20:00Z" }] } },
+        { "termKey": "mitigation", "term": "緩和策", "type": "term", "oneLine": { "text": "検出結果への露出を減らすための推奨アクション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locator": "重要な概念", "retrievedAt": "2026-11-19T02:20:00Z" }] } },
+        { "termKey": "zero-day", "term": "ゼロデイ", "type": "term", "oneLine": { "text": "脆弱性の公開とパッチ展開の間のギャップで悪用されうる脅威。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locator": "冒頭", "retrievedAt": "2026-11-19T02:20:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T02:20:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビューの対象リージョンに東日本を含む（西日本は一覧になし）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-19T02:20:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "プレビューの対象リージョンに東日本が含まれます。西日本は一覧に含まれていません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview" }] },
+          { "q": "費用はどうなりますか？", "a": "Adaptive Shield 数と保護対象リソース数で決まり、プレビュー中は料金の 50% を支払います。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview" }] },
+          { "q": "Windows VM は対象ですか？", "a": "対象外です。Azure Linux と Ubuntu の VM、およびカーネル 4.19 以降の VMSS が対象です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview" }] }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=580689",
+        "learn": [
+          { "title": "Azure Adaptive Virtual Patching とは何ですか?", "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/overview", "locale": "ja-jp" },
+          { "title": "Azure Adaptive Virtual Patching をデプロイする", "url": "https://learn.microsoft.com/ja-jp/azure/adaptive-virtual-patching/deploy-adaptive-shield-portal", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
