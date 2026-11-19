@@ -1,0 +1,92 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581120"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T00:57:00Z"
+  },
+  "slides": [
+    {
+      "key": "581120",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "AKS Pod Sandboxing の新ランタイム kata-vm-isolation-v2 がプレビューに",
+        "subtitleJa": "事前初期化したテンプレートから Pod を作成し、VM 分離のまま起動を速く・メモリを抑える（パブリック プレビュー）",
+        "en": "Public Preview: Pod Sandboxing kata-vm-isolation-v2 runtime class"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "containers"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "AKS で Pod Sandboxing を使う、または検討している**クラスター管理者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "Pod ごとの起動遅延とメモリ オーバーヘッドを抑えつつ、VM レベルの分離を維持できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。プレビューは運用環境での使用を目的としていない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing", "locator": "kata-vm-isolation-v2 を使用する (プレビュー)", "retrievedAt": "2026-11-19T00:57:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "従来の kata-vm-isolation では、各サンドボックスをコールド ブートで起動していた", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/considerations-pod-sandboxing", "locator": "ランタイム クラス v2 の機能強化", "retrievedAt": "2026-11-19T00:57:00Z" }] },
+        "after": { "text": "事前初期化したサンドボックス VM テンプレートから Pod を作成し、Kata の Rust ランタイムで効率を高める", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Pod マニフェストで runtimeClassName: kata-vm-isolation-v2 を指定して使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing", "locator": "概要", "retrievedAt": "2026-11-19T00:57:00Z" }] },
+            { "text": "ノード プールは引き続き --workload-runtime KataVmIsolation。v1/v2 は Pod 単位で選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing", "locator": "kata-vm-isolation-v2 を使用する (プレビュー)", "retrievedAt": "2026-11-19T00:57:00Z" }] },
+            { "text": "Rust ランタイムと、テンプレートからの複製で起動待ち時間を短縮", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/considerations-pod-sandboxing", "locator": "ランタイム クラス v2 の機能強化", "retrievedAt": "2026-11-19T00:57:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・制約", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "機能フラグ KataVMIsolationV2Preview の登録と、Azure Linux ノード イメージ 202610.30.1 以降が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing", "locator": "前提条件", "retrievedAt": "2026-11-19T00:57:00Z" }] },
+            { "text": "対応 VM SKU は v6 / v7 系（Dasv6、Easv6 など）。Azure Linux のみで Arm64 は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing", "locator": "前提条件・制限事項", "retrievedAt": "2026-11-19T00:57:00Z" }] },
+            { "text": "ホスト ネットワーク アクセス非対応。Defender for Containers は Kata Pod を評価しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing", "locator": "制限事項", "retrievedAt": "2026-11-19T00:57:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "テンプレート初期化後は、Pod の制限に関係なく 1 Pod あたり 2 GiB・2 vCPU のゲストになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing", "locator": "制限事項", "retrievedAt": "2026-11-19T00:57:00Z" }] },
+            { "text": "移行は明示的なワークロード変更。まず検証環境で動作とストレージを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aks", "term": "Azure Kubernetes Service (AKS)", "type": "product", "oneLine": { "text": "Azure でマネージドな Kubernetes クラスターを実行するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing", "locator": "冒頭", "retrievedAt": "2026-11-19T00:57:00Z" }] } },
+        { "termKey": "pod-sandboxing", "term": "Pod Sandboxing", "type": "feature", "oneLine": { "text": "Kata コンテナーで各 Pod を軽量 VM 内で実行し、ホストや他の Pod から分離する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing", "locator": "冒頭", "retrievedAt": "2026-11-19T00:57:00Z" }] } },
+        { "termKey": "kata", "term": "Kata コンテナー", "type": "term", "oneLine": { "text": "独自のゲスト カーネルを持つ軽量 VM でコンテナーを実行する技術。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing", "locator": "冒頭", "retrievedAt": "2026-11-19T00:57:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-19T00:57:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581120",
+        "learn": [
+          { "title": "Azure Kubernetes Service (AKS)を使用したポッドのサンドボックス化", "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing", "locale": "ja-jp" },
+          { "title": "AKS に関するポッドのサンドボックス化に関する考慮事項", "url": "https://learn.microsoft.com/ja-jp/azure/aks/considerations-pod-sandboxing", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "使うための前提条件は？", "a": "KataVMIsolationV2Preview 機能フラグの登録と、Azure Linux ノード イメージ 202610.30.1 以降が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing" }] },
+          { "q": "本番で使えますか？", "a": "プレビューは SLA の対象外で、運用環境での使用を目的としていません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing" }] },
+          { "q": "既存の kata-vm-isolation から移行するには？", "a": "v1 から v2 への移行は明示的なワークロード変更です。同じ動作を前提とせず、事前に検証してください。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-pod-sandboxing" }, { "url": "https://learn.microsoft.com/ja-jp/azure/aks/considerations-pod-sandboxing" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
