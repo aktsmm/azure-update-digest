@@ -1,0 +1,150 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579590"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-19T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "579590",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "PostgreSQL フレキシブル サーバーの Intel / AMD v6（ローカル一時ディスク付き）が GA",
+        "subtitleJa": "性能とスケールが向上した v6 コンピュートを、従来どおりの操作感で選べます",
+        "en": "Generally Available: Intel and AMD v6 with temp disk for Azure Database for PostgreSQL"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Database for PostgreSQL フレキシブル サーバー**の利用者・導入検討者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "v6 の Intel / AMD を、ローカル一時ディスク付きで選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "性能や一時領域に課題があれば v6 を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Intel と AMD の v6 コンピュート（ローカル一時ディスク付き）が GA。高性能・大規模・価格性能比の向上を、従来の使い勝手のまま利用できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "v6 は汎用・メモリ最適化の両レベルで Intel / AMD を提供",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/overview", "locator": "V6 SKU family (Generally Available)", "retrievedAt": "2026-11-19T00:02:00Z" }]
+            },
+            {
+              "text": "ローカル一時 SSD 構成は、ソートや複雑なクエリなど一時領域を多く使う処理向け",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/overview", "locator": "V6 SKU family (Generally Available)", "retrievedAt": "2026-11-19T00:02:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "選び方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "サーバーの作成時、または [コンピューティングとストレージ] で v6 の SKU（例: D4ds_v6、D4ads_v6）を選択",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "料金 / 使用可能なサーバーの種類", "retrievedAt": "2026-11-19T00:02:00Z" }]
+            },
+            {
+              "text": "コンピューティング レベル作成後も、仮想コア数は数秒で変更できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "冒頭", "retrievedAt": "2026-11-19T00:02:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "v6 から Burstable レベルへのスケールは未サポート。提供状況はリージョンと構成で異なる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/overview", "locator": "V6 SKU family / Limitations", "retrievedAt": "2026-11-19T00:02:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ディスクレス v6（Dsv6 など）や Cobalt 200 にはローカル一時ストレージがない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "コンピューティング レベル、仮想コア、サーバーの種類", "retrievedAt": "2026-11-19T00:02:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "一時領域を多く使うソート・分析系の処理には、ローカル一時 SSD 構成が向く",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/overview", "locator": "V6 SKU family (Generally Available)", "retrievedAt": "2026-11-19T00:02:00Z" }]
+            },
+            { "text": "SKU ごとの IOPS・帯域を確認して、ワークロードに合うサイズを選ぶ", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "postgresql-flexible-server", "term": "Azure Database for PostgreSQL フレキシブル サーバー", "type": "product", "oneLine": { "text": "PostgreSQL を管理運用の手間なく使える、フル マネージドのデータベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/overview", "locator": "冒頭", "retrievedAt": "2026-11-19T00:02:00Z" }] } },
+        { "termKey": "compute-tier", "term": "コンピューティング レベル", "type": "term", "oneLine": { "text": "バースト可能・汎用・メモリ最適化の 3 つから選ぶ、サーバーの価格レベル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "冒頭", "retrievedAt": "2026-11-19T00:02:00Z" }] } },
+        { "termKey": "vcore", "term": "仮想コア（vCore）", "type": "term", "oneLine": { "text": "基になるハードウェアの論理 CPU を表す単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "コンピューティング レベル、仮想コア、サーバーの種類", "retrievedAt": "2026-11-19T00:02:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-19T00:02:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "ローカル一時 SSD の v6 は、Japan East で Intel / AMD、Japan West では AMD が一覧に掲載されている",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/overview", "locator": "Azure regions（Japan East / Japan West）", "retrievedAt": "2026-11-19T00:02:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579590",
+        "learn": [
+          { "title": "Azure Database for PostgreSQL フレキシブル サーバーのコンピューティング オプション", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locale": "ja-jp" },
+          { "title": "What is Azure Database for PostgreSQL flexible server?", "url": "https://learn.microsoft.com/azure/postgresql/overview", "locale": "en-us" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "リージョン一覧では、ローカル一時 SSD の v6 は Japan East で Intel / AMD、Japan West では AMD が掲載されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/overview" }]
+          },
+          {
+            "q": "ローカル一時ディスクなしの v6 との違いは？",
+            "a": "ディスクレス v6 はローカル一時ストレージを持ちません。一時領域を多く使う処理にはローカル一時 SSD 構成が向きます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute" }, { "url": "https://learn.microsoft.com/azure/postgresql/overview" }]
+          },
+          {
+            "q": "v6 から Burstable に戻せますか？",
+            "a": "v6 SKU ファミリーから Burstable レベルへのスケールはサポートされていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/postgresql/overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
