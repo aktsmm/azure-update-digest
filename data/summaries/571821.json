@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "canonicalKey": "571821",
-  "titleJa": "Microsoft Foundry ホスト型エージェントのネットワーク egress 制御がプレビューに",
-  "sourceFingerprint": "926e837d98faa83b324db057cfdfc4a1e92f5ffc40492b7d1cc293133b769822",
-  "summaryJa": "Microsoft Foundry で、ホステッドエージェントの送信接続を制御するネットワーク egress コントロールがパブリックプレビューになりました。宛先ホストに基づく順序付きルールで許可、拒否、ヘッダー変換などを行え、audit と enforce の2つのモードがあります。評価用で本番 SLA の対象外です。",
+  "sourceFingerprint": "ef8ef0c554423601d35e42690717b1ba3da112f3c274a801ec1752a69db6cb1f",
+  "titleJa": "Microsoft Foundry のホステッド エージェント向けネットワーク送信制御が一般提供（GA）に",
+  "summaryJa": "Microsoft Foundry のホステッド エージェントが行える送信接続を制御する、ネットワーク送信制御が一般提供になりました。宛先ホスト（FQDN、ワイルドカード可）に一致する順序付きルールで、許可、拒否、書き換え、ヘッダー変更を指定でき、Foundry 管理のサンドボックス内で適用されます。拒否をログだけに残す Audit モードと、ブロックする Enforce モードがあります。",
   "generatedBy": "gh-aw:summarize",
-  "generatedAt": "2026-10-14T17:50:00Z"
+  "generatedAt": "2026-11-20T07:50:00Z"
 }
