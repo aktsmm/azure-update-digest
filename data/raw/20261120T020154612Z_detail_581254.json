@@ -1,0 +1,32 @@
+{
+  "args": {
+    "id": "581254"
+  },
+  "fetchedAt": "2026-11-20T02:01:54.612Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581254",
+    "created": "2026-11-19T20:34:19.2046614Z",
+    "description": "Zone resilience for Azure VMs, now in public preview, lets you recover an eligible zonal VM in another availability zone in the same region, retaining the existing VM resource and configuration.ZRS managed disks replicate data synchronously across zones but don't restart an affected VM. Zone resilience reuses supported disks and configuration, with a near-zero recovery point objective (RPO) for data committed to disks.Key capabilities:Change zone placement without creating a new VM resourceRecover with existing OS and data disks rather than restoring copiesChoose the target zone and when recovery startsZone resilience is a customer-initiated recovery option, not automatic failover. Recovery involves downtime and depends on available capacity in the target zone. Enable it while the source zone is healthy, on a standalone zonal VM that uses Premium SSD ZRS or Standard SSD ZRS for the OS disk and every data disk. The preview doesn't support Virtual Machine Scale Sets, On-demand Capacity Reservations, Azure Site Recovery or write-accelerated data disks. It provides in-region recovery and doesn't replace regional disaster recovery or multi-zone high availability designs. Use the preview for evaluation and testing with nonproduction VMs.",
+    "id": "581254",
+    "modified": "2026-11-19T20:34:19.2046614Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [],
+    "products": [],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Inspire"
+    ],
+    "title": "Public Preview: Zone resilience for Azure VMs"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

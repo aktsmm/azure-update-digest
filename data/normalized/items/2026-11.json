@@ -660,6 +660,77 @@
       "availabilities": [
         {
           "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "574587",
+      "categories": [
+        "databases",
+        "ops-governance"
+      ],
+      "created": "2026-11-19T23:25:49.6660496Z",
+      "createdJst": "2026-11-20",
+      "description": "You can now try PostgreSQL 19 in public preview on Azure Database for PostgreSQL – Flexible Server in the East Asia region. With this preview, you can provision new PostgreSQL 19 servers through the Azure portal and Azure CLI, enabling you to test major version upgrades from supported earlier PostgreSQL versions to PostgreSQL 19. This release gives you early access to PostgreSQL 19 in a fully managed Azure environment and additional time to validate new deployments and upgrade scenarios before general availability. You can test application compatibility, evaluate workloads, and prepare your PostgreSQL estate for broader adoption of PostgreSQL 19.  Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "b8f5c2563344e87947ec8025129a903583f04815d9d33a0ff16817a1e3eb859f",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-20T02:01:35.221Z",
+          "fingerprint": "d491986ad80447bf948e238836610d007cb280022f084f7c701900bdc0eb7388",
+          "modifiedAfter": "2026-11-19T23:25:49.6660496Z",
+          "modifiedBefore": null,
+          "rawRef": "20261120T020135221Z_list_sweep_o0.json#574587"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-20T02:01:51.166Z",
+          "fingerprint": "b8f5c2563344e87947ec8025129a903583f04815d9d33a0ff16817a1e3eb859f",
+          "modifiedAfter": "2026-11-19T23:25:49.6660496Z",
+          "modifiedBefore": "2026-11-19T23:25:49.6660496Z",
+          "rawRef": "20261120T020151166Z_detail_574587.json#574587"
+        }
+      ],
+      "ids": [
+        "574587"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "574587",
+      "modified": "2026-11-19T23:25:49.6660496Z",
+      "modifiedJst": "2026-11-20",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure Database for PostgreSQL"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=574587",
+      "status": "In preview",
+      "tags": [
+        "Feature",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: PostgreSQL 19 on Azure Database for PostgreSQL  "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
           "ring": "General Availability",
           "year": 2026
         }
@@ -8375,6 +8446,78 @@
       "availabilities": [
         {
           "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "579579",
+      "categories": [
+        "databases",
+        "ai",
+        "ops-governance"
+      ],
+      "created": "2026-11-19T17:25:28.7060942Z",
+      "createdJst": "2026-11-20",
+      "description": "Database Agent helps you detect, understand, and respond to database health and performance issues more quickly in Azure Database for PostgreSQL. It proactively monitors database health to identify issues, brings together database metrics, configuration, workload signals, query plans, and logs to determine the likely root cause, and explains the supporting evidence in clear language.  Database Agent also provides actionable remediation guidance so you can review the evidence and decide what to do next. Instead of manually correlating telemetry and diagnostic data for each issue, you can spend less time investigating database problems and more time resolving them.  Learn more. ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "52636b2ebb1872090c2e8c3c56983c05a8c9c760d4dc7f9b03cb5de18abee732",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-20T02:01:35.221Z",
+          "fingerprint": "5344c9ad7303baa66a104f5791d7eaaa4de84ea4649769f6901d1104478b4581",
+          "modifiedAfter": "2026-11-19T17:25:28.7060942Z",
+          "modifiedBefore": null,
+          "rawRef": "20261120T020135221Z_list_sweep_o0.json#579579"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-20T02:01:58.237Z",
+          "fingerprint": "52636b2ebb1872090c2e8c3c56983c05a8c9c760d4dc7f9b03cb5de18abee732",
+          "modifiedAfter": "2026-11-19T17:25:28.7060942Z",
+          "modifiedBefore": "2026-11-19T17:25:28.7060942Z",
+          "rawRef": "20261120T020158237Z_detail_579579.json#579579"
+        }
+      ],
+      "ids": [
+        "579579"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "579579",
+      "modified": "2026-11-19T17:25:28.7060942Z",
+      "modifiedJst": "2026-11-20",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure Database for PostgreSQL"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579579",
+      "status": "In preview",
+      "tags": [
+        "Feature",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Database Agent for Azure Database for PostgreSQL "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
           "ring": "General Availability",
           "year": 2026
         }
@@ -11535,6 +11678,75 @@
       "availabilities": [
         {
           "month": "November",
+          "ring": "Effective",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "580700",
+      "categories": [
+        "other"
+      ],
+      "created": "2026-11-20T00:00:14.3678929Z",
+      "createdJst": "2026-11-20",
+      "description": "Multiparty private offers give Microsoft partners a way to procure third-party cloud and AI solutions for customers through Marketplace. Software companies can expand into new markets by working with partners that bring established customer relationships, while customers rely on their trusted partners to manage their cloud and AI initiatives.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "a9809fbef6971ecf1eb15be7fff52116fdb8c47e09af2e4b53b19298a108d6fe",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-20T02:01:35.221Z",
+          "fingerprint": "7b01d7a8d7c501dd20a0c04626264274a0ecdd6a608c6a786b8a8a6bbeaae786",
+          "modifiedAfter": "2026-11-20T00:00:14.3678929Z",
+          "modifiedBefore": null,
+          "rawRef": "20261120T020135221Z_list_sweep_o0.json#580700"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-20T02:01:40.750Z",
+          "fingerprint": "a9809fbef6971ecf1eb15be7fff52116fdb8c47e09af2e4b53b19298a108d6fe",
+          "modifiedAfter": "2026-11-20T00:00:14.3678929Z",
+          "modifiedBefore": "2026-11-20T00:00:14.3678929Z",
+          "rawRef": "20261120T020140750Z_detail_580700.json#580700"
+        }
+      ],
+      "ids": [
+        "580700"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [
+          "region-title"
+        ],
+        "score": 3,
+        "topics": [
+          "region"
+        ]
+      },
+      "latestId": "580700",
+      "modified": "2026-11-20T00:00:14.3678929Z",
+      "modifiedJst": "2026-11-20",
+      "productCategories": [],
+      "products": [],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=580700",
+      "status": null,
+      "tags": [
+        "Announcement",
+        "Microsoft Ignite"
+      ],
+      "title": "Announcing: Multiparty private offers in Microsoft Marketplace expands to Malaysia and Saudi Arabia"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
           "ring": "General Availability",
           "year": 2026
         }
@@ -13851,6 +14063,71 @@
       "availabilities": [
         {
           "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581254",
+      "categories": [
+        "other"
+      ],
+      "created": "2026-11-19T20:34:19.2046614Z",
+      "createdJst": "2026-11-20",
+      "description": "Zone resilience for Azure VMs, now in public preview, lets you recover an eligible zonal VM in another availability zone in the same region, retaining the existing VM resource and configuration.ZRS managed disks replicate data synchronously across zones but don't restart an affected VM. Zone resilience reuses supported disks and configuration, with a near-zero recovery point objective (RPO) for data committed to disks.Key capabilities:Change zone placement without creating a new VM resourceRecover with existing OS and data disks rather than restoring copiesChoose the target zone and when recovery startsZone resilience is a customer-initiated recovery option, not automatic failover. Recovery involves downtime and depends on available capacity in the target zone. Enable it while the source zone is healthy, on a standalone zonal VM that uses Premium SSD ZRS or Standard SSD ZRS for the OS disk and every data disk. The preview doesn't support Virtual Machine Scale Sets, On-demand Capacity Reservations, Azure Site Recovery or write-accelerated data disks. It provides in-region recovery and doesn't replace regional disaster recovery or multi-zone high availability designs. Use the preview for evaluation and testing with nonproduction VMs.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "fecaa6cf1825942e3d2257990e8fc53d7238da4ff4c8c6c3ff7eacd57532d7c7",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-20T02:01:35.221Z",
+          "fingerprint": "7123c98f56357a85c178c641f19e9ddcfc696e261024ba0bb10ab2d1fc7fbd9c",
+          "modifiedAfter": "2026-11-19T20:34:19.2046614Z",
+          "modifiedBefore": null,
+          "rawRef": "20261120T020135221Z_list_sweep_o0.json#581254"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-20T02:01:54.612Z",
+          "fingerprint": "fecaa6cf1825942e3d2257990e8fc53d7238da4ff4c8c6c3ff7eacd57532d7c7",
+          "modifiedAfter": "2026-11-19T20:34:19.2046614Z",
+          "modifiedBefore": "2026-11-19T20:34:19.2046614Z",
+          "rawRef": "20261120T020154612Z_detail_581254.json#581254"
+        }
+      ],
+      "ids": [
+        "581254"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581254",
+      "modified": "2026-11-19T20:34:19.2046614Z",
+      "modifiedJst": "2026-11-20",
+      "productCategories": [],
+      "products": [],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581254",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Inspire"
+      ],
+      "title": "Public Preview: Zone resilience for Azure VMs"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
           "ring": "General Availability",
           "year": 2026
         }
@@ -14424,6 +14701,76 @@
         "Microsoft Ignite"
       ],
       "title": "Announcing: The new Azure Databricks on Azure Government is now in Beta"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "581907",
+      "categories": [
+        "other"
+      ],
+      "created": "2026-11-19T23:47:55.3863601Z",
+      "createdJst": "2026-11-20",
+      "description": "Soft delete in Azure Compute Gallery is now generally available, so you can recover image versions that were deleted by accident. You can set a retention period of 7 to 365 days. During retention, you can still deploy from soft-deleted images (API version 2026-03-03). When the retention period ends, a configurable grace period of 7 to 90 days begins. During the grace period, images can no longer be used for deployments but can still be recovered. Soft Delete works with Private, Direct Shared and Community galleries. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "2d2473aab8c6d0beebb9b73f2bc35f6f53702751316082ddf3f444bd6629b074",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-20T02:01:35.221Z",
+          "fingerprint": "a12e78c4ebf6a623ee86b3d81b8bfb4827653f77cb22a2b2864bd240a2e00dbf",
+          "modifiedAfter": "2026-11-19T23:47:55.3863601Z",
+          "modifiedBefore": null,
+          "rawRef": "20261120T020135221Z_list_sweep_o0.json#581907"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-20T02:01:45.063Z",
+          "fingerprint": "2d2473aab8c6d0beebb9b73f2bc35f6f53702751316082ddf3f444bd6629b074",
+          "modifiedAfter": "2026-11-19T23:47:55.3863601Z",
+          "modifiedBefore": "2026-11-19T23:47:55.3863601Z",
+          "rawRef": "20261120T020145063Z_detail_581907.json#581907"
+        }
+      ],
+      "ids": [
+        "581907"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "581907",
+      "modified": "2026-11-19T23:47:55.3863601Z",
+      "modifiedJst": "2026-11-20",
+      "productCategories": [],
+      "products": [],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581907",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Generally Available: Soft delete in Azure Compute Gallery "
     }
   ],
   "month": "2026-11",
