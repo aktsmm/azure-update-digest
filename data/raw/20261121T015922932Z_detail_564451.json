@@ -1,0 +1,43 @@
+{
+  "args": {
+    "id": "564451"
+  },
+  "fetchedAt": "2026-11-21T01:59:22.932Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "June",
+        "ring": "Private Preview",
+        "year": 2026
+      },
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "564451",
+    "created": "2026-06-02T21:00:30.592373Z",
+    "description": "The general purpose Dpsv7 and Dplsv7, memory-optimized Epsv7, high-memory Mpsv4, and dense storage Lpsv5 VMs are now generally available. These virtual machines deliver significant enhancements over the previous generation Cobalt 100 VMs, offering improved CPU performance, greater scalability, and expanded configuration options to meet the demands of a wide range of workloads. Key improvements include:Up to 50% improvement in CPU performance (workload dependent)20% improvement in remote storage IOPS with NVMe10% better remote storage throughput with NVMe15% improvement in network bandwidthLearn more.",
+    "generalAvailabilityDate": "2026-11",
+    "id": "564451",
+    "modified": "2026-11-20T18:50:52.5532253Z",
+    "privatePreviewAvailabilityDate": "2026-06",
+    "productCategories": [
+      "Compute"
+    ],
+    "products": [
+      "Virtual Machines"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Build",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Azure Cobalt 200 Arm-based Dpsv7, Dplsv7, Epsv7, Mpsv4, and Lpsv5-series Virtual Machines "
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

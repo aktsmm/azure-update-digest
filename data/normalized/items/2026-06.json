@@ -11034,10 +11034,15 @@
           "month": "June",
           "ring": "Private Preview",
           "year": 2026
+        },
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
         }
       ],
       "availabilityDates": {
-        "general": null,
+        "general": "2026-11",
         "preview": null,
         "privatePreview": "2026-06"
       },
@@ -11047,10 +11052,10 @@
       ],
       "created": "2026-06-02T21:00:30.592373Z",
       "createdJst": "2026-06-03",
-      "description": "The general purpose Dpsv7 and Dplsv7, memory-optimized Epsv7, high-memory Mpsv4, and dense storage Lpsv5 VMs are now available in preview. These virtual machines deliver significant enhancements over the previous generation Cobalt 100 VMs, offering improved CPU performance, greater scalability, and expanded configuration options to meet the demands of a wide range of workloads. Key improvements include:Up to 50% improvement in CPU performance (workload dependent)20% improvement in remote storage IOPS with NVMe10% better remote storage throughput with NVMe15% improvement in network bandwidthLearn more.",
+      "description": "The general purpose Dpsv7 and Dplsv7, memory-optimized Epsv7, high-memory Mpsv4, and dense storage Lpsv5 VMs are now generally available. These virtual machines deliver significant enhancements over the previous generation Cobalt 100 VMs, offering improved CPU performance, greater scalability, and expanded configuration options to meet the demands of a wide range of workloads. Key improvements include:Up to 50% improvement in CPU performance (workload dependent)20% improvement in remote storage IOPS with NVMe10% better remote storage throughput with NVMe15% improvement in network bandwidthLearn more.",
       "descriptionSource": "detail",
       "detailState": "ok",
-      "fingerprint": "80739a547094446d7ec43d3f0894c8bb1496f9a702e31f74ec14174d23970c21",
+      "fingerprint": "6f09cf1cf9e11d4b81ce27c775f2672541868eae353c1a5cba59a4c5bc353daf",
       "history": [
         {
           "changedFields": [
@@ -11069,20 +11074,50 @@
           "modifiedAfter": "2026-06-02T21:00:30.592373Z",
           "modifiedBefore": "2026-06-02T21:00:30.592373Z",
           "rawRef": "20261014T102708780Z_detail_564451.json#564451"
+        },
+        {
+          "changedFields": [
+            "availabilities",
+            "general",
+            "modified",
+            "status",
+            "tags",
+            "title"
+          ],
+          "fetchedAt": "2026-11-21T01:58:45.772Z",
+          "fingerprint": "75a9e38e2eb4ee6464f51042310e320af2f09288a398c4ca5e0586d977848349",
+          "modifiedAfter": "2026-11-20T18:50:52.5532253Z",
+          "modifiedBefore": "2026-06-02T21:00:30.592373Z",
+          "rawRef": "20261121T015845772Z_list_sweep_o0.json#564451"
+        },
+        {
+          "changedFields": [
+            "description"
+          ],
+          "fetchedAt": "2026-11-21T01:59:22.932Z",
+          "fingerprint": "6f09cf1cf9e11d4b81ce27c775f2672541868eae353c1a5cba59a4c5bc353daf",
+          "modifiedAfter": "2026-11-20T18:50:52.5532253Z",
+          "modifiedBefore": "2026-11-20T18:50:52.5532253Z",
+          "rawRef": "20261121T015922932Z_detail_564451.json#564451"
         }
       ],
       "ids": [
         "564451"
       ],
       "importance": {
-        "level": "normal",
-        "reasons": [],
-        "score": 0,
-        "topics": []
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
       },
       "latestId": "564451",
-      "modified": "2026-06-02T21:00:30.592373Z",
-      "modifiedJst": "2026-06-03",
+      "modified": "2026-11-20T18:50:52.5532253Z",
+      "modifiedJst": "2026-11-21",
       "productCategories": [
         "Compute"
       ],
@@ -11090,12 +11125,13 @@
         "Virtual Machines"
       ],
       "sourceUrl": "https://azure.microsoft.com/updates?id=564451",
-      "status": "In development",
+      "status": "Launched",
       "tags": [
         "Features",
-        "Microsoft Build"
+        "Microsoft Build",
+        "Microsoft Ignite"
       ],
-      "title": "Preview: Azure Cobalt 200 Arm-based Dpsv7, Dplsv7, Epsv7, Mpsv4, and Lpsv5-series Virtual Machines "
+      "title": "Generally Available: Azure Cobalt 200 Arm-based Dpsv7, Dplsv7, Epsv7, Mpsv4, and Lpsv5-series Virtual Machines "
     },
     {
       "availabilities": [

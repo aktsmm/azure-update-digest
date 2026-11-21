@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "581746"
+  },
+  "fetchedAt": "2026-11-21T01:59:10.803Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581746",
+    "created": "2026-11-20T22:56:51.8149877Z",
+    "description": "Multi-turn evaluation is now in public preview in Microsoft Foundry. You can assess complete agent conversations against your quality standards, not only individual responses.A response can look correct on its own and still be part of a conversation that fails the user. For example, an agent can repeat the same failing action across several turns and leave the request unresolved. Turn-level scores do not show this pattern.With multi-turn evaluation, you set the evaluation level of a run to score each turn or the conversation as a whole. Conversation-level evaluators, such as task completion, customer satisfaction, coherence, groundedness and tool use quality, find problems like incomplete task resolution, user frustration and tool-call regressions. You provide conversation data as JSONL with a full messages array, including tool calls and tool definitions, and run the evaluation with the Foundry SDK.Learn more.",
+    "id": "581746",
+    "modified": "2026-11-20T22:56:51.8149877Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Multi-turn evaluation in Microsoft Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

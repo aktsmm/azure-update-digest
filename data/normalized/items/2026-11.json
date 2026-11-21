@@ -9849,6 +9849,86 @@
     {
       "availabilities": [
         {
+          "month": "April",
+          "ring": "Retirement",
+          "year": 2027
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "579952",
+      "categories": [
+        "compute",
+        "ai",
+        "containers",
+        "iot"
+      ],
+      "created": "2026-11-20T23:16:31.6464092Z",
+      "createdJst": "2026-11-21",
+      "description": "Support for Azure Functions OpenAI extension will end on April 20, 2027. Please migrate to OpenAI, Microsoft Foundry, or Azure AI Search SDKs directly, depending on your scenario, by that date.   Until you migrate to the appropriate scenario SDK, .NET apps will continue to run, and non-.NET apps can continue to run if configured to use a preview extension bundle version earlier than 4.60.0. However, after April 20, 2027, these apps will be unsupported, and Microsoft will no longer provide security updates, patches, or technical support for the Azure Functions OpenAI extension.Running function apps on unsupported extension, runtime or language version, may lead to issues and degraded performance. Recommended actionTo avoid potential security vulnerabilities, minimize risk for your Azure Functions apps, and take advantage of latest features, migrate to the OpenAI, Microsoft Foundry, or Azure AI Search SDKs directly before April 20, 2027. Learn more: Azure Functions OpenAI Extension\ndocumentation Bundle\nfor Azure Functions OpenAI Extension",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "3782ba5e53241bf40480369d23226258f9dee6a53089c07560c8d0b545c8c2ec",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-21T01:58:45.772Z",
+          "fingerprint": "ae4ea02b30c9e2833f45ea0b06a38a9e5adf7ff9d502c9ca3483fa80347bd431",
+          "modifiedAfter": "2026-11-20T23:16:31.6464092Z",
+          "modifiedBefore": null,
+          "rawRef": "20261121T015845772Z_list_sweep_o0.json#579952"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-21T01:59:03.068Z",
+          "fingerprint": "3782ba5e53241bf40480369d23226258f9dee6a53089c07560c8d0b545c8c2ec",
+          "modifiedAfter": "2026-11-20T23:16:31.6464092Z",
+          "modifiedBefore": "2026-11-20T23:16:31.6464092Z",
+          "rawRef": "20261121T015903068Z_detail_579952.json#579952"
+        }
+      ],
+      "ids": [
+        "579952"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "retire-tag",
+          "retire-ring",
+          "retire-title"
+        ],
+        "score": 10,
+        "topics": [
+          "retirement"
+        ]
+      },
+      "latestId": "579952",
+      "modified": "2026-11-20T23:16:31.6464092Z",
+      "modifiedJst": "2026-11-21",
+      "productCategories": [
+        "Compute",
+        "Containers",
+        "Internet of Things"
+      ],
+      "products": [
+        "Azure Functions"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579952",
+      "status": null,
+      "tags": [
+        "Microsoft Ignite",
+        "Retirements"
+      ],
+      "title": "Retirement: Support for Azure Functions OpenAI Extension ends on April 20, 2027"
+    },
+    {
+      "availabilities": [
+        {
           "month": "November",
           "ring": "General Availability",
           "year": 2026
@@ -14411,6 +14491,149 @@
       "availabilities": [
         {
           "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "581463",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-21T00:45:13.3888976Z",
+      "createdJst": "2026-11-21",
+      "description": "Microsoft Foundry governance guidance is now available in Foundry Canvas and the Foundry Toolkit for Visual Studio Code. As developers build agents, both experiences surface relevant policies for agent types, models, toolboxes, and guardrails, with warnings and next steps to address them. In VS Code, policy-specific errors identify disallowed tools when saving an agent or toolbox and link to policy details in the Foundry portal. Policy administration remains centralized in Foundry, so developers can act within their workflow without managing separate rules.Learn more: Set\nup Microsoft Foundry developer tools Explore Foundry DevTools\non GitHub ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "e4c07850cbce03bf3e1ec038335bf8530e3a9ec91327b52be3979a78ca6e144d",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-21T01:58:45.772Z",
+          "fingerprint": "8d81716fde3f873c4d4cddace0a91b4ef89c6cd2b5013a27f2cab61b3ba1af18",
+          "modifiedAfter": "2026-11-21T00:45:13.3888976Z",
+          "modifiedBefore": null,
+          "rawRef": "20261121T015845772Z_list_sweep_o0.json#581463"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-21T01:58:51.370Z",
+          "fingerprint": "e4c07850cbce03bf3e1ec038335bf8530e3a9ec91327b52be3979a78ca6e144d",
+          "modifiedAfter": "2026-11-21T00:45:13.3888976Z",
+          "modifiedBefore": "2026-11-21T00:45:13.3888976Z",
+          "rawRef": "20261121T015851370Z_detail_581463.json#581463"
+        }
+      ],
+      "ids": [
+        "581463"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "581463",
+      "modified": "2026-11-21T00:45:13.3888976Z",
+      "modifiedJst": "2026-11-21",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581463",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Generally Available: Governance policy guidance in Foundry Canvas and VS Code"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581468",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-21T00:43:13.2945869Z",
+      "createdJst": "2026-11-21",
+      "description": "Agent Builder in Microsoft Foundry Toolkit for Visual Studio Code supports prompt agents that use the Microsoft Copilot harness in public preview. Developers can configure tools and skills, edit local YAML definitions, deploy changes to Foundry, and run deployed agent versions from VS Code. Foundry manages the harness and execution environment for supported multi-step workflows involving tools, skills, files, and commands.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "1a44bef3926fdf68a4c4bd58e4a44bb15005110d7a265fba66fab276521a882a",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-21T01:58:45.772Z",
+          "fingerprint": "c911670b3a0772ee5425ff6ce239ae894940fbda49d968c9de1e7f1051794300",
+          "modifiedAfter": "2026-11-21T00:43:13.2945869Z",
+          "modifiedBefore": null,
+          "rawRef": "20261121T015845772Z_list_sweep_o0.json#581468"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-21T01:58:56.692Z",
+          "fingerprint": "1a44bef3926fdf68a4c4bd58e4a44bb15005110d7a265fba66fab276521a882a",
+          "modifiedAfter": "2026-11-21T00:43:13.2945869Z",
+          "modifiedBefore": "2026-11-21T00:43:13.2945869Z",
+          "rawRef": "20261121T015856692Z_detail_581468.json#581468"
+        }
+      ],
+      "ids": [
+        "581468"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581468",
+      "modified": "2026-11-21T00:43:13.2945869Z",
+      "modifiedJst": "2026-11-21",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581468",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Microsoft Copilot harness support in Foundry Toolkit for VS Code"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
           "ring": "Preview",
           "year": 2026
         }
@@ -14706,6 +14929,144 @@
       "availabilities": [
         {
           "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581713",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-20T22:58:28.8978219Z",
+      "createdJst": "2026-11-21",
+      "description": "Programmed Training, an API for building your own post-training loop over open-weight models, is available in public preview in Microsoft Foundry. Access is available by request through the preview sign-up form.Managed training jobs work well when you only need to choose a dataset, a grader or job settings. Research teams that need a custom learning signal or control over each update have had to run and maintain their own GPU training infrastructure.With Programmed Training, your Python program controls the experiment while Foundry runs sampling and low-rank adaptation (LoRA) updates on serverless GPUs. Your code decides how rollouts are collected, how rewards and advantages are computed, which tokens contribute to learning, and when to apply each optimizer update. The same building blocks support reinforcement learning, supervised learning, preference learning, distillation and custom-loss workflows. You can save adapter and optimizer state and resume training in a compatible session.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "55be986ceba8bf60b7ed0e6d744431d6c727e777e6a43ef5031ac32d0647c748",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-21T01:58:45.772Z",
+          "fingerprint": "ea1661f727c851ba18f506f8d68ba7b7c55a3990ca7b6e40261cdfab5bf2a26c",
+          "modifiedAfter": "2026-11-20T22:58:28.8978219Z",
+          "modifiedBefore": null,
+          "rawRef": "20261121T015845772Z_list_sweep_o0.json#581713"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-21T01:59:07.520Z",
+          "fingerprint": "55be986ceba8bf60b7ed0e6d744431d6c727e777e6a43ef5031ac32d0647c748",
+          "modifiedAfter": "2026-11-20T22:58:28.8978219Z",
+          "modifiedBefore": "2026-11-20T22:58:28.8978219Z",
+          "rawRef": "20261121T015907520Z_detail_581713.json#581713"
+        }
+      ],
+      "ids": [
+        "581713"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581713",
+      "modified": "2026-11-20T22:58:28.8978219Z",
+      "modifiedJst": "2026-11-21",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581713",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Programmed Training in Microsoft Foundry"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581746",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-20T22:56:51.8149877Z",
+      "createdJst": "2026-11-21",
+      "description": "Multi-turn evaluation is now in public preview in Microsoft Foundry. You can assess complete agent conversations against your quality standards, not only individual responses.A response can look correct on its own and still be part of a conversation that fails the user. For example, an agent can repeat the same failing action across several turns and leave the request unresolved. Turn-level scores do not show this pattern.With multi-turn evaluation, you set the evaluation level of a run to score each turn or the conversation as a whole. Conversation-level evaluators, such as task completion, customer satisfaction, coherence, groundedness and tool use quality, find problems like incomplete task resolution, user frustration and tool-call regressions. You provide conversation data as JSONL with a full messages array, including tool calls and tool definitions, and run the evaluation with the Foundry SDK.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "3d080d7592d3a86262bc345a1c173a39dc110f967859c4069ffdb3b7f98dca7d",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-21T01:58:45.772Z",
+          "fingerprint": "896a63f0e7047e7f74114227a9688ebd8e3540fe858dadbf601c2e9226a9917b",
+          "modifiedAfter": "2026-11-20T22:56:51.8149877Z",
+          "modifiedBefore": null,
+          "rawRef": "20261121T015845772Z_list_sweep_o0.json#581746"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-21T01:59:10.803Z",
+          "fingerprint": "3d080d7592d3a86262bc345a1c173a39dc110f967859c4069ffdb3b7f98dca7d",
+          "modifiedAfter": "2026-11-20T22:56:51.8149877Z",
+          "modifiedBefore": "2026-11-20T22:56:51.8149877Z",
+          "rawRef": "20261121T015910803Z_detail_581746.json#581746"
+        }
+      ],
+      "ids": [
+        "581746"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581746",
+      "modified": "2026-11-20T22:56:51.8149877Z",
+      "modifiedJst": "2026-11-21",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581746",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Multi-turn evaluation in Microsoft Foundry"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
           "ring": "General Availability",
           "year": 2026
         }
@@ -14771,6 +15132,87 @@
         "Microsoft Ignite"
       ],
       "title": "Generally Available: Soft delete in Azure Compute Gallery "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581963",
+      "categories": [
+        "compute",
+        "networking",
+        "security",
+        "containers"
+      ],
+      "created": "2026-11-20T20:05:17.771145Z",
+      "createdJst": "2026-11-21",
+      "description": "Azure Firewall for Containers\nextends Azure Firewall protection to containerized workloads, providing a\ncentralized approach to securing network traffic for container environments.\nCustomers can use Azure Firewall capabilities as part of their container networking\narchitecture while maintaining consistent network security and control. With this preview, organizations can strengthen\nprotection for container workloads while using Azure Firewall as part of their\nbroader Azure network security strategy.Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "7b3c4173cb03f6b6cb8fbfc05e01ac38b21430fd091211dba60822d049823c55",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-21T01:58:45.772Z",
+          "fingerprint": "b3a97a06d08b6251053202f74bf371c72d78cda9a9e4b62a1a7e74e7ae034a84",
+          "modifiedAfter": "2026-11-20T20:05:17.771145Z",
+          "modifiedBefore": null,
+          "rawRef": "20261121T015845772Z_list_sweep_o0.json#581963"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-21T01:59:17.527Z",
+          "fingerprint": "7b3c4173cb03f6b6cb8fbfc05e01ac38b21430fd091211dba60822d049823c55",
+          "modifiedAfter": "2026-11-20T20:05:17.771145Z",
+          "modifiedBefore": "2026-11-20T20:05:17.771145Z",
+          "rawRef": "20261121T015917527Z_detail_581963.json#581963"
+        }
+      ],
+      "ids": [
+        "581963"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "security-tag"
+        ],
+        "score": 5,
+        "topics": [
+          "security"
+        ]
+      },
+      "latestId": "581963",
+      "modified": "2026-11-20T20:05:17.771145Z",
+      "modifiedJst": "2026-11-21",
+      "productCategories": [
+        "Compute",
+        "Containers",
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Firewall",
+        "Azure Kubernetes Service (AKS)"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581963",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite",
+        "Security"
+      ],
+      "title": "Public Preview: Azure Firewall for Containers"
     }
   ],
   "month": "2026-11",

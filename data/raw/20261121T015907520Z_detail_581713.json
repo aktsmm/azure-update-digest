@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "581713"
+  },
+  "fetchedAt": "2026-11-21T01:59:07.520Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581713",
+    "created": "2026-11-20T22:58:28.8978219Z",
+    "description": "Programmed Training, an API for building your own post-training loop over open-weight models, is available in public preview in Microsoft Foundry. Access is available by request through the preview sign-up form.Managed training jobs work well when you only need to choose a dataset, a grader or job settings. Research teams that need a custom learning signal or control over each update have had to run and maintain their own GPU training infrastructure.With Programmed Training, your Python program controls the experiment while Foundry runs sampling and low-rank adaptation (LoRA) updates on serverless GPUs. Your code decides how rollouts are collected, how rewards and advantages are computed, which tokens contribute to learning, and when to apply each optimizer update. The same building blocks support reinforcement learning, supervised learning, preference learning, distillation and custom-loss workflows. You can save adapter and optimizer state and resume training in a compatible session.Learn more.",
+    "id": "581713",
+    "modified": "2026-11-20T22:58:28.8978219Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Programmed Training in Microsoft Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
