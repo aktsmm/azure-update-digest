@@ -1,0 +1,77 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": { "mode": "ids", "basis": "created", "ids": ["580700"], "coverage": "complete", "snapshotAt": "2026-11-23T00:00:00Z" },
+  "slides": [
+    {
+      "key": "580700",
+      "kind": "announcement",
+      "kindSource": "tags",
+      "label": "アナウンス",
+      "title": {
+        "ja": "マルチパーティ プライベート オファーが、マレーシアとサウジアラビアに拡大",
+        "subtitleJa": "パートナー経由で、サードパーティのクラウド／AI ソリューションを Marketplace で調達できます",
+        "en": "Announcing: Multiparty private offers in Microsoft Marketplace expands to Malaysia and Saudi Arabia"
+      },
+      "meta": {
+        "publishedJst": "2026-11-20",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "November" }],
+        "status": null,
+        "products": [],
+        "categories": ["other"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Marketplace で販売する**ソフトウェア企業とチャネル パートナー**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "マレーシアとサウジアラビアでも、パートナー経由の調達・販売が進めやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "対象市場で販売する場合は、前提条件（税プロファイル等）を満たしているか確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "マルチパーティ プライベート オファーの対象がマレーシアとサウジアラビアに拡大される", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "適用範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Microsoft Marketplace のマルチパーティ プライベート オファーの対象市場に、マレーシアとサウジアラビアが加わる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "パートナーが顧客向けにサードパーティのクラウド／AI ソリューションを調達する手段", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "permissions", "heading": "知っておくべき点（前提条件）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "チャネル パートナーは Microsoft AI Cloud Partner Program への登録と Marketplace アカウントが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/multiparty-private-offers-for-channel-partners", "locator": "チャネル パートナーの前提条件", "retrievedAt": "2026-11-23T00:00:00Z" }] },
+            { "text": "対象国の Marketplace 販売者 ID に、完了した税プロファイルの関連付けが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/multiparty-private-offers-for-channel-partners", "locator": "注", "retrievedAt": "2026-11-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [{ "text": "両国の顧客や取引先がある場合は、対象市場の条件を確認してから提案する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }]
+        }
+      ],
+      "glossary": [
+        { "termKey": "marketplace", "term": "Microsoft Marketplace", "type": "product", "oneLine": { "text": "パートナーがオファーを公開し、顧客が購入できる Microsoft のマーケットプレース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/multiparty-private-offers-for-channel-partners", "locator": "冒頭", "retrievedAt": "2026-11-23T00:00:00Z" }] } },
+        { "termKey": "mpo", "term": "マルチパーティ プライベート オファー", "type": "feature", "oneLine": { "text": "ソフトウェア会社とチャネル パートナーが、顧客向けに個別のオファーを作成して販売できる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/multiparty-private-offers-for-channel-partners", "locator": "冒頭", "retrievedAt": "2026-11-23T00:00:00Z" }] } },
+        { "termKey": "macc", "term": "MACC", "type": "term", "oneLine": { "text": "Microsoft Azure Consumption Commitment。対象ソリューションの購入額がコミットメントに計上される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/multiparty-private-offers-for-channel-partners", "locator": "冒頭", "retrievedAt": "2026-11-23T00:00:00Z" }] } }
+      ],
+      "speakerNotes": {
+        "qa": [
+          { "q": "チャネル パートナーが販売するための前提条件は？", "a": "AI Cloud Partner Program への登録、Marketplace アカウント、対象国の税プロファイルなどが必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/multiparty-private-offers-for-channel-partners" }] },
+          { "q": "MACC には計上されますか？", "a": "MACC をお持ちの顧客が対象ソリューションを購入すると、販売金額すべてが MACC コミットメントにカウントされます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/multiparty-private-offers-for-channel-partners" }] }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=580700",
+        "learn": [
+          { "title": "(チャネル パートナー向け) マルチパーティ プライベート オファー", "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/multiparty-private-offers-for-channel-partners", "locale": "ja-jp" },
+          { "title": "マルチパーティ プライベート オファー (ソフトウェア企業向け)", "url": "https://learn.microsoft.com/ja-jp/partner-center/marketplace-offers/multiparty-private-offers-for-isvs", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
