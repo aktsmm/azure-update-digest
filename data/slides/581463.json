@@ -1,0 +1,123 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581463"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-22T23:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "581463",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Foundry Canvas と VS Code でガバナンス ポリシーのガイダンスが GA",
+        "subtitleJa": "エージェント開発中にポリシーの警告と対処手順を確認できます",
+        "en": "Generally Available: Governance policy guidance in Foundry Canvas and VS Code"
+      },
+      "meta": {
+        "publishedJst": "2026-11-21",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Foundry でエージェントを開発する方**（Foundry Canvas / VS Code）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ポリシー違反に開発中に気づき、ポータルへ移らず対処できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Foundry でポリシーを運用中なら開発者へ周知", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "エージェントの種類・モデル・ツールボックス・ガードレールのポリシーが、開発中に警告と次の手順つきで表示される",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Foundry Canvas と VS Code 向け Foundry Toolkit で関連ポリシーを表示", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "VS Code ではエージェント／ツールボックス保存時に許可されないツールをエラーで通知", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "エラーから Foundry ポータルのポリシー詳細へ移動できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "VS Code に Foundry Toolkit を入れ、Azure にサインインして Foundry プロジェクトを開く", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/get-started-projects-visual-studio-code", "locator": "Foundry リソースの管理", "retrievedAt": "2026-11-22T23:08:00Z" }] },
+            { "text": "ポリシー管理は引き続き Foundry で一元的に行う（開発者側で別ルールは不要）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ポリシーの割り当てには、対象スコープの所有者またはリソース ポリシー共同作成者ロールが必要", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-tools", "locator": "Prerequisites", "retrievedAt": "2026-11-22T23:08:00Z" }] },
+            { "text": "Azure Policy の変更が有効になるまで最大 30 分かかることがある", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-tools", "locator": "ツールの Azure Policy を割り当てる", "retrievedAt": "2026-11-22T23:08:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure Policy は保存時の構成を評価、プロジェクト ツール コントロールは実行時のツール使用を制限", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-tools", "locator": "2 つのコントロールを理解する", "retrievedAt": "2026-11-22T23:08:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Audit で影響を評価してから Deny に切り替える（Learn の推奨）", "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-tools", "locator": "ツールの Azure Policy を割り当てる", "retrievedAt": "2026-11-22T23:08:00Z" }] },
+            { "text": "開発の早い段階で許可されないツールに気づける", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "foundry-governance", "term": "Foundry ガバナンス", "type": "feature", "oneLine": { "text": "エンタープライズ AI フリートを一元的に管理する Foundry のエクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/overview", "locator": "冒頭", "retrievedAt": "2026-11-22T23:08:00Z" }] } },
+        { "termKey": "foundry-toolkit", "term": "Foundry Toolkit for VS Code", "type": "product", "oneLine": { "text": "AI アプリやエージェントの構築・デプロイ・評価を行う VS Code 拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/get-started-projects-visual-studio-code", "locator": "冒頭", "retrievedAt": "2026-11-22T23:08:00Z" }] } },
+        { "termKey": "azure-policy", "term": "Azure Policy", "type": "product", "oneLine": { "text": "構成を組織の基準と比較評価し、非準拠の作成・更新を Deny でブロックできる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-tools", "locator": "2 つのコントロールを理解する", "retrievedAt": "2026-11-22T23:08:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-22T23:08:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581463",
+        "learn": [
+          { "title": "Foundry ガバナンス", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/overview", "locale": "ja-jp" },
+          { "title": "Microsoft Foundry Toolkit for Visual Studio Codeの概要", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/get-started-projects-visual-studio-code", "locale": "ja-jp" },
+          { "title": "Microsoft Foundry のツールを管理する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-tools", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "ポリシーはどこで管理しますか？",
+            "a": "ポリシー管理は引き続き Foundry で一元的に行います。開発者は VS Code や Canvas 上で警告を確認し、対処します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/overview", "locator": "冒頭" }]
+          },
+          {
+            "q": "ポリシーを割り当てるのに必要な権限は？",
+            "a": "割り当てスコープの所有者またはリソース ポリシー共同作成者ロールが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-tools", "locator": "Prerequisites" }]
+          },
+          {
+            "q": "ポリシー変更はすぐ反映されますか？",
+            "a": "Azure Policy の変更が有効になるまで最大 30 分かかることがあります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/control-plane/govern-tools", "locator": "ツールの Azure Policy を割り当てる" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
