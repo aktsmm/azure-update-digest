@@ -1,0 +1,99 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581468"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-22T23:13:23Z"
+  },
+  "slides": [
+    {
+      "key": "581468",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Foundry Toolkit for VS Code が Microsoft Copilot harness に対応",
+        "subtitleJa": "Agent Builder で harness 利用のプロンプト エージェントを作成・デプロイ（パブリック プレビュー）",
+        "en": "Public Preview: Microsoft Copilot harness support in Foundry Toolkit for VS Code"
+      },
+      "meta": {
+        "publishedJst": "2026-11-21",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "VS Code で Foundry の**プロンプト エージェントを開発する開発者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ツール・スキルを使う複数ステップのエージェントを VS Code 内で作成から実行まで行える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "検証用途で試し、挙動を確認してから本番利用を判断する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Agent Builder で Microsoft Copilot harness を使うプロンプト エージェントを、VS Code から構成・デプロイ・実行できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ツールとスキルの構成、ローカル YAML 定義の編集", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "変更を Foundry にデプロイし、デプロイ済みバージョンを VS Code から実行", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ツール・スキル・ファイル・コマンドを伴う複数ステップのワークフローに対応", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "harness と実行環境は Foundry が管理する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Agent Builder の利用には Foundry プロジェクトの権限とモデルのデプロイが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/create-prompt-agent-visual-studio-code", "locator": "前提条件", "retrievedAt": "2026-11-22T23:10:00Z" }] },
+            { "text": "「Foundry に保存」はバージョン保存であり、アプリケーションの発行は別操作", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/create-prompt-agent-visual-studio-code", "locator": "下書きとバージョンを保存する", "retrievedAt": "2026-11-22T23:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象ワークフローが複数ステップのツール利用を要するか確認し、検証環境で試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "foundry-toolkit", "term": "Foundry Toolkit for VS Code", "type": "product", "oneLine": { "text": "AI アプリとエージェントの構築・テスト・デプロイ・評価・監視を行う VS Code 拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/get-started-projects-visual-studio-code", "locator": "冒頭", "retrievedAt": "2026-11-22T23:10:00Z" }] } },
+        { "termKey": "agent-builder", "term": "Agent Builder", "type": "feature", "oneLine": { "text": "プロンプト エージェントのモデル・手順・ツールを構成し、テストやバージョン保存を行う機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/create-prompt-agent-visual-studio-code", "locator": "冒頭", "retrievedAt": "2026-11-22T23:10:00Z" }] } },
+        { "termKey": "prompt-agent", "term": "プロンプト エージェント", "type": "term", "oneLine": { "text": "ホスト型エージェントのコード プロジェクトなしで、モデル・命令・ツールを構成して作るエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/get-started-projects-visual-studio-code", "locator": "エージェントの構築と運用", "retrievedAt": "2026-11-22T23:10:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-22T23:10:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581468",
+        "learn": [
+          { "title": "Microsoft Foundry Toolkit for Visual Studio Code を使用してプロンプト エージェントを作成する", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/create-prompt-agent-visual-studio-code", "locale": "ja-jp" },
+          { "title": "Microsoft Foundry Toolkit for Visual Studio Codeの概要", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/get-started-projects-visual-studio-code", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "利用するための前提条件は？",
+            "a": "Foundry Toolkit のインストール、Foundry プロジェクトの選択（エージェント作成の権限が必要）、プロジェクト内のモデルのデプロイが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/create-prompt-agent-visual-studio-code" }]
+          },
+          {
+            "q": "「Foundry に保存」するとアプリとして公開されますか？",
+            "a": "いいえ。エージェントのバージョンが保存されるだけで、安定したエンドポイントを持つアプリケーションの発行は別の操作です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/create-prompt-agent-visual-studio-code" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
