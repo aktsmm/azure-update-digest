@@ -1,0 +1,128 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581907"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-22T23:45:00Z"
+  },
+  "slides": [
+    {
+      "key": "581907",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Compute Gallery の論理削除が一般提供（GA）に",
+        "subtitleJa": "誤って削除したイメージ バージョンを、保持期間・猶予期間のあいだ復旧できます",
+        "en": "Generally Available: Soft delete in Azure Compute Gallery "
+      },
+      "meta": {
+        "publishedJst": "2026-11-20",
+        "modifiedJst": "2026-11-20",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Compute Gallery"],
+        "categories": ["other"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Azure Compute Gallery で **VM イメージを管理している方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "誤削除したイメージ バージョンを復旧でき、保持期間中はデプロイにも使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "誤削除対策が必要なギャラリーで有効化を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "pricing": {
+        "kind": "free",
+        "text": "論理削除自体は無料。ただし保持・猶予期間中も残るレプリカには課金される",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "Billing", "retrievedAt": "2026-11-22T23:45:00Z" }]
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "API バージョン 2026-03-03 より前は、論理削除したイメージで VM やスケール セットを作成できない",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "冒頭の説明", "retrievedAt": "2026-11-22T23:45:00Z" }]
+        },
+        "after": {
+          "text": "保持期間（7〜365 日）はデプロイに使え、猶予期間（7〜90 日）は復旧のみ可能",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "保持期間・猶予期間", "retrievedAt": "2026-11-22T23:45:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "削除したバージョンは即時には消えず「論理的に削除」状態になる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "ライフサイクル", "retrievedAt": "2026-11-22T23:45:00Z" }] },
+            { "text": "保持期間: 復旧もデプロイも可。猶予期間: 復旧のみ可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "ライフサイクル", "retrievedAt": "2026-11-22T23:45:00Z" }] },
+            { "text": "猶予期間が終わるとプラットフォームが完全に削除する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "完全な削除", "retrievedAt": "2026-11-22T23:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ポータルのギャラリー作成時、[基本] タブで論理削除を有効化して期間を設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "ギャラリーで論理的な削除を有効にする", "retrievedAt": "2026-11-22T23:45:00Z" }] },
+            { "text": "既存ギャラリーは REST の softDeletePolicy に両期間を指定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "REST", "retrievedAt": "2026-11-22T23:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "期間の設定と保持期間中の利用には API バージョン 2026-03-03 が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "前提条件", "retrievedAt": "2026-11-22T23:45:00Z" }] },
+            { "text": "一般提供は 24 リージョン。ギャラリーとバージョンが別リージョンだと復旧不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "制限事項", "retrievedAt": "2026-11-22T23:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "復旧が不要なら Soft delete を回避して完全削除もできる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "冒頭の説明", "retrievedAt": "2026-11-22T23:45:00Z" }] },
+            { "text": "VM アプリの回復は非対応（現在はイメージのみ）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "制限事項", "retrievedAt": "2026-11-22T23:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Private・Direct Shared・Community の各ギャラリーで利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "冒頭", "retrievedAt": "2026-11-22T23:45:00Z" }] },
+            { "text": "レプリカ課金を早く止めたい場合は、ハード削除を使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "Billing", "retrievedAt": "2026-11-22T23:45:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-compute-gallery", "term": "Azure Compute Gallery", "type": "product", "oneLine": { "text": "イメージやアプリケーションを構造化して格納・共有できるサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/azure-compute-gallery", "locator": "冒頭", "retrievedAt": "2026-11-22T23:45:00Z" }] } },
+        { "termKey": "soft-delete", "term": "論理削除（Soft delete）", "type": "feature", "oneLine": { "text": "誤って削除したイメージ バージョンを、完全削除の前に復旧できる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "冒頭", "retrievedAt": "2026-11-22T23:45:00Z" }] } },
+        { "termKey": "retention", "term": "保持期間", "type": "term", "oneLine": { "text": "論理削除後もイメージを復旧でき、API 2026-03-03 では使用もできる期間。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "保持期間", "retrievedAt": "2026-11-22T23:45:00Z" }] } },
+        { "termKey": "grace", "term": "猶予期間", "type": "term", "oneLine": { "text": "保持期間の後に始まり、復旧のみ可能でデプロイには使えない期間。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "猶予期間", "retrievedAt": "2026-11-22T23:45:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-22T23:45:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "一般提供のリージョン一覧に東日本は含まれるが、西日本は含まれない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "制限事項", "retrievedAt": "2026-11-22T23:45:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581907",
+        "learn": [
+          { "title": "Azure Compute Gallery での論理的な削除", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locale": "ja-jp" },
+          { "title": "Azure Compute Gallery でリソースを格納、共有する", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/azure-compute-gallery", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "一般提供の対象 24 リージョンに東日本は含まれますが、西日本は一覧にありません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "制限事項" }] },
+          { "q": "追加費用はかかりますか？", "a": "論理削除自体は無料です。ただし完全削除までの保持・猶予期間中は、残るレプリカに課金されます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "Billing" }] },
+          { "q": "保持期間と猶予期間の違いは？", "a": "保持期間はイメージを復旧にもデプロイにも使えます。猶予期間は復旧のみ可能で、終了後に完全削除されます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "ライフサイクル" }] },
+          { "q": "対応する API バージョンは？", "a": "論理削除は 2024-03-03 以降で使えます。期間のカスタマイズと保持期間中の利用には 2026-03-03 が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/soft-delete-gallery", "locator": "前提条件" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
