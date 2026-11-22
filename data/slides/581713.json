@@ -1,0 +1,112 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581713"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-22T23:22:56Z"
+  },
+  "slides": [
+    {
+      "key": "581713",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Microsoft Foundry の Programmed Training がパブリック プレビュー",
+        "subtitleJa": "オープンウェイト モデル向けに独自のポストトレーニング ループを Python で制御（申請制）",
+        "en": "Public Preview: Programmed Training in Microsoft Foundry"
+      },
+      "meta": {
+        "publishedJst": "2026-11-21",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Foundry で学習ループ自体を設計したい**ML 研究チーム・実務者**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/overview", "locator": "最適な用途", "retrievedAt": "2026-11-22T23:25:00Z" }] },
+        "change": { "text": "GPU 基盤を自前で運用せず、報酬や更新タイミングを自由に制御できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用にはサインアップ フォームで申請し、承認を待つ必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/programmed-training/overview", "locator": "Important", "retrievedAt": "2026-11-22T23:25:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "カスタムの学習シグナルや更新の細かな制御には、自前の GPU 学習基盤の運用が必要だった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "Python プログラムが実験を制御し、Foundry がサーバーレス GPU でサンプリングと LoRA 更新を実行する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/programmed-training/overview", "locator": "冒頭", "retrievedAt": "2026-11-22T23:25:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ロールアウト収集・報酬・アドバンテージ・更新タイミングをコードで制御", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "強化学習・教師あり・選好学習・蒸留・カスタム損失に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/programmed-training/overview", "locator": "冒頭", "retrievedAt": "2026-11-22T23:25:00Z" }] },
+            { "text": "アダプターとオプティマイザーの状態を保存し、互換セッションで再開可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/programmed-training/overview", "locator": "コア概念とプリミティブ", "retrievedAt": "2026-11-22T23:25:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "明示的なアクセス承認が必要。申請して承認後にセッションを作成", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/programmed-training/overview", "locator": "Important", "retrievedAt": "2026-11-22T23:25:00Z" }] },
+            { "text": "プレビューは SLA なしで、運用ワークロードでの使用は非推奨", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/programmed-training/overview", "locator": "Important", "retrievedAt": "2026-11-22T23:25:00Z" }] },
+            { "text": "Foundry プロジェクトのリージョンにより対応状況が異なる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/overview", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-22T23:25:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "定義済みのワークフローで足りるか、ループ制御が必要かを見極める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/overview", "locator": "ヒント", "retrievedAt": "2026-11-22T23:25:00Z" }] },
+            { "text": "初めてのカスタマイズはマネージド トレーニングから始めるのが推奨", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/overview", "locator": "ヒント", "retrievedAt": "2026-11-22T23:25:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-foundry", "term": "Microsoft Foundry", "type": "product", "oneLine": { "text": "モデルのトレーニングやデプロイを管理する Azure の AI プラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/overview", "locator": "冒頭", "retrievedAt": "2026-11-22T23:25:00Z" }] } },
+        { "termKey": "programmed-training", "term": "Programmed Training", "type": "feature", "oneLine": { "text": "オープンウェイト モデルに独自のトレーニング後ループを構築するための API。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/programmed-training/overview", "locator": "冒頭", "retrievedAt": "2026-11-22T23:25:00Z" }] } },
+        { "termKey": "lora", "term": "LoRA", "type": "term", "oneLine": { "text": "低ランク適応。モデル全体ではなくアダプターを更新する手法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/programmed-training/overview", "locator": "冒頭", "retrievedAt": "2026-11-22T23:25:00Z" }] } },
+        { "termKey": "rollout", "term": "ロールアウト", "type": "term", "oneLine": { "text": "強化学習でプロンプトごとに収集するモデルの応答。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/programmed-training/overview", "locator": "RL ループのしくみ", "retrievedAt": "2026-11-22T23:25:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-22T23:25:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Programmed Training の対応リージョン表で東日本は非対応",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/overview", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-22T23:25:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581713",
+        "learn": [
+          { "title": "Microsoft Foundry のプログラム型トレーニング (プレビュー) とは何ですか？", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/programmed-training/overview", "locale": "ja-jp" },
+          { "title": "Microsoft Foundry でのトレーニング", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "誰でもすぐに使えますか？",
+            "a": "いいえ。プレビュー サインアップ フォームでアクセスを申請し、承認を待ってからセッションを作成します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/programmed-training/overview" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "対応リージョン表では、東日本は Programmed Training 非対応です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/overview" }]
+          },
+          {
+            "q": "マネージド トレーニングとの使い分けは？",
+            "a": "グレーダーやジョブ設定だけでなくループ自体の制御が必要な場合に選びます。初めてならマネージド トレーニングが推奨です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/programmed-training/overview" }, { "url": "https://learn.microsoft.com/ja-jp/azure/foundry/fine-tuning/overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
