@@ -1,0 +1,119 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579579"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "579579",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "PostgreSQL 向け Database Agent がプレビューに",
+        "subtitleJa": "問題の検出から原因の根拠・対処ガイダンスまでを提示（限定プレビュー）",
+        "en": "Public Preview: Database Agent for Azure Database for PostgreSQL"
+      },
+      "meta": {
+        "publishedJst": "2026-11-20",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases", "ai", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Azure Database for PostgreSQL **フレキシブル サーバー**の運用・DBA の方", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "Prerequisites", "retrievedAt": "2026-11-23T00:00:00Z" }] },
+        "change": { "text": "DB の問題の調査を、根拠付きで効率化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "対象リージョンの方は、参加申請して評価を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "pricing": {
+        "kind": "free",
+        "text": "限定プレビュー中は課金なし。一般提供の前に課金が始まり、登録済みの顧客には事前に通知される",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "How Database Agents uses AI", "retrievedAt": "2026-11-23T00:00:00Z" }]
+      },
+      "beforeAfter": {
+        "after": { "text": "メトリック・構成・クエリ プラン・ログを突き合わせた推定原因と根拠、対処ガイダンスを Database Agent が提示する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "検出・調査・ガイダンス提示・状況の追跡までを行う（対処は手動）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "How Database Agents works", "retrievedAt": "2026-11-23T00:00:00Z" }] },
+            { "text": "対象は PostgreSQL 16 以降のフレキシブル サーバー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "Supported databases and servers", "retrievedAt": "2026-11-23T00:00:00Z" }] },
+            { "text": "接続枯渇・ロック競合・高 CPU・クエリ プラン退行などを調査", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "1. Detect a supported issue", "retrievedAt": "2026-11-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "限定プレビュー。利用には参加フォームでの申請と承認が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "Prerequisites", "retrievedAt": "2026-11-23T00:00:00Z" }] },
+            { "text": "提供リージョンは South Central US・West US 3・Sweden Central（日本は対象外）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "Limitations of public preview", "retrievedAt": "2026-11-23T00:00:00Z" }] },
+            { "text": "現在は Visual Studio Code の PostgreSQL 拡張機能（1.32.0 以降）から利用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "Prerequisites", "retrievedAt": "2026-11-23T00:00:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "調査は AI 支援。診断や提案 SQL は本番適用前に検証が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "2. Review the investigation and evidence", "retrievedAt": "2026-11-23T00:00:00Z" }] },
+            { "text": "変更は画面から直接適用できず、承認済みの運用手順で実施する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "Important", "retrievedAt": "2026-11-23T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "database-agent", "term": "Database Agent", "type": "term", "oneLine": { "text": "データベースの性能問題を検出・調査し、根拠と対処ガイダンスを示す機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "冒頭", "retrievedAt": "2026-11-23T00:00:00Z" }] } },
+        { "termKey": "azure-postgresql", "term": "Azure Database for PostgreSQL", "type": "product", "oneLine": { "text": "Azure 上のマネージド PostgreSQL。このプレビューはフレキシブル サーバーが対象。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "冒頭", "retrievedAt": "2026-11-23T00:00:00Z" }] } },
+        { "termKey": "limited-preview", "term": "限定プレビュー", "type": "term", "oneLine": { "text": "承認を受けた参加者だけが使えるプレビュー。参加フォームでの申請が必要。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "Prerequisites", "retrievedAt": "2026-11-23T00:00:00Z" }] } },
+        { "termKey": "azure-rbac", "term": "Azure RBAC", "type": "term", "oneLine": { "text": "Azure リソースへのアクセスを役割で制御する仕組み。エージェント設定にはサーバーへの書き込み権限が必要。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "Prerequisites", "retrievedAt": "2026-11-23T00:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-23T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "限定プレビューの対象は South Central US・West US 3・Sweden Central",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "Limitations of public preview", "retrievedAt": "2026-11-23T00:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579579",
+        "learn": [{ "title": "データベースエージェントとは何ですか?", "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "現時点の限定プレビューは South Central US、West US 3、Sweden Central のサーバーが対象で、日本リージョンは含まれていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "Limitations of public preview", "retrievedAt": "2026-11-23T00:00:00Z" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "限定プレビュー中は PostgreSQL の調査に料金は発生しません。GA の前に課金が始まり、登録済みの顧客には事前に通知されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "How Database Agents uses AI", "retrievedAt": "2026-11-23T00:00:00Z" }]
+          },
+          {
+            "q": "利用の前提条件は？",
+            "a": "参加フォームの承認、PostgreSQL 16 以降のフレキシブル サーバー、VS Code と PostgreSQL 拡張機能 1.32.0 以降が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "Prerequisites", "retrievedAt": "2026-11-23T00:00:00Z" }]
+          },
+          {
+            "q": "設定変更は自動で行われますか？",
+            "a": "いいえ。ガイダンスを提示するだけで、データベースやサーバーの変更は承認済みの運用手順で手動実施します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/fabric/database/hub/database-agents", "locator": "Important", "retrievedAt": "2026-11-23T00:00:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
