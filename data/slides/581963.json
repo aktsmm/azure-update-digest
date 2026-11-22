@@ -1,0 +1,112 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581963"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-22T23:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "581963",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Firewall for Containers がパブリック プレビュー",
+        "subtitleJa": "AKS ワークロードのポッド送信トラフィックを Azure Firewall で保護",
+        "en": "Public Preview: Azure Firewall for Containers"
+      },
+      "meta": {
+        "publishedJst": "2026-11-21",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Firewall", "Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "networking", "security", "containers"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "AKS のコンテナー ワークロードを **Azure Firewall で保護したい**ネットワーク／セキュリティ担当者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "コンテナー ネットワークに Azure Firewall の機能を組み込める（評価向け）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。CRD は一般提供前に変更される可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "プレビューの制限事項", "retrievedAt": "2026-11-22T23:35:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Kubernetes のカスタム リソースで、AKS ワークロードの Azure Firewall 保護を管理できる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "冒頭", "retrievedAt": "2026-11-22T23:35:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure Firewall Controller が CRD を Azure Firewall の設定とポリシーに変換する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "冒頭", "retrievedAt": "2026-11-22T23:35:00Z" }] },
+            { "text": "CRD は AzureFirewall / SecurityPolicy / SecurityPolicyAttachment の 3 種類", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "構成モデルを理解する", "retrievedAt": "2026-11-22T23:35:00Z" }] },
+            { "text": "ポッド／名前空間セレクターに対応。IDPS・DNS・脅威インテリジェンス・SNAT も設定可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "構成モデルを理解する", "retrievedAt": "2026-11-22T23:35:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure CNI Overlay は非対応。仮想ネットワークのポッド IP を使う Azure CNI が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "Prerequisites", "retrievedAt": "2026-11-22T23:35:00Z" }] },
+            { "text": "ポッドの送信のみ検査し、IPv4 のみ対応。1 クラスターにつきファイアウォール 1 つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "プレビューの制限事項", "retrievedAt": "2026-11-22T23:35:00Z" }] },
+            { "text": "Azure パブリック クラウドの、一覧にあるプレビュー リージョンのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "プレビューの制限事項", "retrievedAt": "2026-11-22T23:35:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "既定は Premium SKU。既存の Standard SKU では IDPS・TLS 検査・URL フィルタリングは使えない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "プレビューの制限事項", "retrievedAt": "2026-11-22T23:35:00Z" }] },
+            { "text": "ルート テーブルや送信タイプの変更は接続断の恐れがあるため、隔離した評価環境で試す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "Warning", "retrievedAt": "2026-11-22T23:35:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-firewall-for-containers", "term": "Azure Firewall for Containers", "type": "product", "oneLine": { "text": "Kubernetes のカスタム リソースで AKS ワークロードの Azure Firewall 保護を管理する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "冒頭", "retrievedAt": "2026-11-22T23:35:00Z" }] } },
+        { "termKey": "aks", "term": "AKS", "type": "product", "oneLine": { "text": "Azure Kubernetes Service。Azure 上で Kubernetes クラスターを動かすサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "冒頭", "retrievedAt": "2026-11-22T23:35:00Z" }] } },
+        { "termKey": "crd", "term": "CRD", "type": "term", "oneLine": { "text": "カスタム リソース定義。Kubernetes に独自のリソース種類を追加する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "構成モデルを理解する", "retrievedAt": "2026-11-22T23:35:00Z" }] } },
+        { "termKey": "idps", "term": "IDPS", "type": "term", "oneLine": { "text": "侵入検知・防止。ファイアウォールの高度な設定の 1 つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "構成モデルを理解する", "retrievedAt": "2026-11-22T23:35:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "一般公開前の段階。追加のプレビュー利用条件が適用される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "Important", "retrievedAt": "2026-11-22T23:35:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビュー リージョンは米国中部・米国中西部・東アジア・英国南部など（日本は含まれない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locator": "Prerequisites（プレビュー リージョン表）", "retrievedAt": "2026-11-22T23:35:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581963",
+        "learn": [{ "title": "Azure Firewall for Containers (preview) の展開", "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "プレビュー リージョンは米国中部、米国中西部、東アジア、英国南部などで、日本リージョンは一覧に含まれていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers" }]
+          },
+          {
+            "q": "自分の AKS クラスターは対象ですか？",
+            "a": "仮想ネットワークのポッド IP を使う Azure CNI が必要です。Azure CNI Overlay は対応していません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers" }]
+          },
+          {
+            "q": "Standard SKU のファイアウォールでも使えますか？",
+            "a": "既存の Standard SKU も利用できますが、Premium 専用の IDPS・TLS 検査・URL フィルタリングは使えません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/deploy-firewall-for-containers" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
