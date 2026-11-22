@@ -1,0 +1,111 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581254"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-22T23:55:00Z"
+  },
+  "slides": [
+    {
+      "key": "581254",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure VM のゾーン回復性がパブリック プレビューに",
+        "subtitleJa": "既存の VM を構成のまま、同じリージョンの別の可用性ゾーンへ復旧（利用者が開始）",
+        "en": "Public Preview: Zone resilience for Azure VMs"
+      },
+      "meta": {
+        "publishedJst": "2026-11-20",
+        "modifiedJst": "2026-11-20",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Virtual Machines"],
+        "categories": ["other"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "ゾーン VM を使い、**ゾーン障害からの復旧手段**を評価したい方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "新しい VM を作らず、既存の VM と ZRS ディスクを使って別ゾーンで復旧できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "冒頭", "retrievedAt": "2026-11-22T23:55:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価・テスト向け。運用環境の VM では使用しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "Important", "retrievedAt": "2026-11-22T23:55:00Z" }] }
+      },
+      "pricing": {
+        "kind": "change",
+        "text": "プレビュー中は機能料金なし。GA 時に有料機能になる（VM・ZRS ディスク等は標準料金）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "Cost", "retrievedAt": "2026-11-22T23:55:00Z" }]
+      },
+      "beforeAfter": {
+        "after": { "text": "利用者の操作で、VM のリソース ID・VM ID・NIC・ZRS ディスクを保持したまま別ゾーンへ移動できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "冒頭", "retrievedAt": "2026-11-22T23:55:00Z" }] }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "利用者が開始するフェールオーバー。ゾーン配置を変更し、代わりの VM は作らない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "冒頭", "retrievedAt": "2026-11-22T23:55:00Z" }] },
+            { "text": "ZRS ディスクにコミットされたデータの RPO はほぼゼロ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "冒頭", "retrievedAt": "2026-11-22T23:55:00Z" }] },
+            { "text": "ターゲット ゾーンの VM サイズ対応と空き容量が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "ゾーン フェールオーバーのしくみ", "retrievedAt": "2026-11-22T23:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "OS・データの全ディスクが Premium SSD ZRS か Standard SSD ZRS であること", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "Requirements", "retrievedAt": "2026-11-22T23:55:00Z" }] },
+            { "text": "VM スケール セット・Azure Site Recovery・オンデマンド容量予約は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "Limitations", "retrievedAt": "2026-11-22T23:55:00Z" }] },
+            { "text": "復旧中は VM が割り当て解除されダウンタイムが発生。自動ではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "ゾーン フェールオーバーのしくみ", "retrievedAt": "2026-11-22T23:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ソース ゾーンが正常なうちに有効化する。LRS ディスクは ZRS への準備が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "ゾーン フェールオーバー用に VM を準備する", "retrievedAt": "2026-11-22T23:55:00Z" }] },
+            { "text": "リージョン障害や複数ゾーンにまたがる障害には対応しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "Limitations", "retrievedAt": "2026-11-22T23:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "availability-zone", "term": "可用性ゾーン", "type": "term", "oneLine": { "text": "同じ Azure リージョン内にある、障害の影響を分けるためのゾーン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "ゾーン フェールオーバーのしくみ", "retrievedAt": "2026-11-22T23:55:00Z" }] } },
+        { "termKey": "zrs", "term": "ZRS（ゾーン冗長ストレージ）", "type": "term", "oneLine": { "text": "マネージド ディスクのデータを可用性ゾーン間で同期的にレプリケートする冗長化方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "冒頭", "retrievedAt": "2026-11-22T23:55:00Z" }] } },
+        { "termKey": "rpo", "term": "RPO（目標復旧時点）", "type": "term", "oneLine": { "text": "障害時に許容できるデータ損失の範囲を示す指標。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-22T23:55:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581254",
+        "learn": [{ "title": "Azure VM のゾーンの回復性 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "本番環境の VM で使えますか？",
+            "a": "いいえ。プレビューは非運用 VM での評価とテスト専用で、運用環境の VM には使用しないでください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "Important", "retrievedAt": "2026-11-22T23:55:00Z" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "プレビュー中は機能料金は発生しません。GA 時は有料機能になり、VM やディスクには標準料金が適用されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "Cost", "retrievedAt": "2026-11-22T23:55:00Z" }]
+          },
+          {
+            "q": "対象になる VM の条件は？",
+            "a": "特定ゾーンの VM で、OS と全データ ディスクが Premium SSD ZRS または Standard SSD ZRS である必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "Requirements", "retrievedAt": "2026-11-22T23:55:00Z" }]
+          },
+          {
+            "q": "自動でフェールオーバーしますか？",
+            "a": "しません。利用者が開始する復旧で、VM の割り当て解除によるダウンタイムが発生します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/virtual-machines/zone-resilience", "locator": "ゾーン フェールオーバーのしくみ", "retrievedAt": "2026-11-22T23:55:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
