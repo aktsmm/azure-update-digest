@@ -1,0 +1,114 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581746"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-22T23:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "581746",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Microsoft Foundry でマルチターン評価がパブリック プレビューに",
+        "subtitleJa": "エージェントの会話全体を品質基準で評価。ターン単位との切り替えも可能",
+        "en": "Public Preview: Multi-turn evaluation in Microsoft Foundry"
+      },
+      "meta": {
+        "publishedJst": "2026-11-21",
+        "modifiedJst": "2026-11-21",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Foundry で**エージェントを開発・運用し、会話品質を評価したい方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ターン単位では見えない、会話全体の問題を検出できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビュー機能。会話データ（JSONL）を用意して試せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/cloud-evaluation-conversations", "locator": "会話データを準備する", "retrievedAt": "2026-11-22T23:28:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "評価レベルを turn / conversation で選び、会話全体をスコア付けできる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/cloud-evaluation-conversations", "locator": "評価レベルを選択する", "retrievedAt": "2026-11-22T23:28:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "評価レベルは turn（各ターン）か conversation（会話全体）。既定は turn", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/cloud-evaluation-conversations", "locator": "評価レベルを選択する", "retrievedAt": "2026-11-22T23:28:00Z" }] },
+            { "text": "会話レベル対応: タスク完了・顧客満足度・一貫性・グラウンディング・ツール使用品質など", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/cloud-evaluation-conversations", "locator": "会話レベルの評価をサポートするエバリュエーター", "retrievedAt": "2026-11-22T23:28:00Z" }] },
+            { "text": "タスクの未解決、ユーザーの不満、ツール呼び出しの回帰を検出", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/cloud-evaluation-conversations", "locator": "会話データセットを評価する", "retrievedAt": "2026-11-22T23:28:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "各行に messages 配列を持つ JSONL を用意（ツール定義・呼び出しも含められる）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/cloud-evaluation-conversations", "locator": "会話データを準備する", "retrievedAt": "2026-11-22T23:28:00Z" }] },
+            { "text": "fluency・relevance などターン専用の評価器は会話レベルではスキップされる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/cloud-evaluation-conversations", "locator": "エバリュエーターの互換性", "retrievedAt": "2026-11-22T23:28:00Z" }] },
+            { "text": "Foundry SDK で実行。クラウド評価の前提条件とクライアント設定が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/cloud-evaluation-conversations", "locator": "前提条件", "retrievedAt": "2026-11-22T23:28:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "複数ターンで同じ失敗を繰り返すエージェントがあるか、少量の会話データで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-foundry", "term": "Microsoft Foundry", "type": "product", "oneLine": { "text": "AI アプリやエージェントの開発・評価・運用を行うための Azure のプラットフォーム。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "multi-turn", "term": "マルチターン", "type": "term", "oneLine": { "text": "ユーザーとエージェントが複数回やり取りする、会話全体のこと。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/cloud-evaluation-conversations", "locator": "冒頭", "retrievedAt": "2026-11-22T23:28:00Z" }] } },
+        { "termKey": "evaluator", "term": "エバリュエーター", "type": "feature", "oneLine": { "text": "一貫性や接地など、エージェントの出力品質をスコア付けする評価器。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/cloud-evaluation-conversations", "locator": "前提条件", "retrievedAt": "2026-11-22T23:28:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-22T23:28:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Foundry のバッチ評価のサポート リージョンに東日本・西日本が含まれる",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/evaluation-regions-limits-virtual-network", "locator": "バッチ評価でサポートされているリージョン", "retrievedAt": "2026-11-22T23:29:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581746",
+        "learn": [
+          { "title": "Microsoft Foundry SDK を使用して会話データセットを評価する", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/cloud-evaluation-conversations", "locale": "ja-jp" },
+          { "title": "評価のためのレート制限、リージョンのサポート、エンタープライズ機能", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/evaluation-regions-limits-virtual-network", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "ターン単位の評価と何が違いますか？",
+            "a": "会話全体をスコア付けでき、タスクの未解決やツール呼び出しの回帰など、ターン単位では見逃す問題を特定できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/cloud-evaluation-conversations" }]
+          },
+          {
+            "q": "どの評価器が会話レベルに対応しますか？",
+            "a": "task_completion、customer_satisfaction、coherence、groundedness、tool_use_quality などが対応します。fluency などターン専用の評価器はスキップされます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/cloud-evaluation-conversations" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Foundry のバッチ評価のサポート リージョンに東日本・西日本が含まれます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/evaluation-regions-limits-virtual-network" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
