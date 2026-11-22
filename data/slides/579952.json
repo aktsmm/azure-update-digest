@@ -1,0 +1,114 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579952"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-22T23:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "579952",
+      "kind": "retirement",
+      "kindSource": "ring",
+      "label": "廃止",
+      "title": {
+        "ja": "Azure Functions の OpenAI 拡張機能が 2027-04-20 にサポート終了",
+        "subtitleJa": "期限までに OpenAI / Microsoft Foundry / Azure AI Search の SDK へ直接移行",
+        "en": "Retirement: Support for Azure Functions OpenAI Extension ends on April 20, 2027"
+      },
+      "meta": {
+        "publishedJst": "2026-11-21",
+        "modifiedJst": "2026-11-21",
+        "availability": [{ "rawRing": "Retirement", "year": 2027, "month": "April" }],
+        "status": null,
+        "products": ["Azure Functions"],
+        "categories": ["compute", "ai", "containers", "iot"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Azure Functions で **OpenAI 拡張機能** のバインディングを使っている方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "2027-04-20 以降はセキュリティ更新・パッチ・技術サポートが提供されなくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "breaking"
+      },
+      "action": {
+        "required": "yes",
+        "summary": { "text": "2027-04-20 までに、シナリオに合う SDK を直接使う構成へ移行する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "deadline": { "date": "2027-04-20", "precision": "day" }
+      },
+      "beforeAfter": {
+        "before": { "text": "拡張機能のトリガーとバインドで、Azure OpenAI の機能を関数コードに統合できた", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-openai", "locator": "冒頭", "retrievedAt": "2026-11-22T23:20:00Z" }] },
+        "after": { "text": "2027-04-20 以降は拡張機能のサポートがなく、各 SDK の直接利用が必要", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "timeline": [
+        { "label": "発表", "when": { "date": "2026-11-21", "precision": "day" } },
+        { "label": "サポート終了", "when": { "date": "2027-04-20", "precision": "day" } }
+      ],
+      "panels": [
+        {
+          "id": "impact", "heading": "知っておきたいこと", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "移行までは .NET アプリは動作を続ける", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": ".NET 以外は、バンドル 4.60.0 より前のプレビュー版なら動作する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-openai", "locator": "冒頭の警告", "retrievedAt": "2026-11-22T23:20:00Z" }] },
+            { "text": "古いバンドルの固定や NuGet の継続利用でもサポートは延長されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-openai", "locator": "冒頭の警告", "retrievedAt": "2026-11-22T23:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "migration", "heading": "移行先", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "OpenAI、Microsoft Foundry、Azure AI Search の SDK を直接利用", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "どの SDK かはシナリオに応じて選ぶ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "action-plan", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "利用中の関数アプリで OpenAI 拡張機能のバインディングを棚卸しし、期限から逆算して移行を計画する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "SDK 移行後の接続・認証は、選んだ SDK のガイダンスに従う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-openai", "locator": "接続", "retrievedAt": "2026-11-22T23:20:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-functions", "term": "Azure Functions", "type": "product", "oneLine": { "text": "他の Azure サービスと簡単に接続できる、イベントドリブンのコンピューティング サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-openai", "locator": "冒頭", "retrievedAt": "2026-11-22T23:20:00Z" }] } },
+        { "termKey": "functions-openai-extension", "term": "OpenAI 拡張機能", "type": "feature", "oneLine": { "text": "Azure OpenAI の機能を関数コードに統合する、トリガーとバインドの一式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-openai", "locator": "冒頭", "retrievedAt": "2026-11-22T23:20:00Z" }] } },
+        { "termKey": "extension-bundle", "term": "拡張バンドル", "type": "term", "oneLine": { "text": "host.json でバージョン範囲を指定する、Functions の拡張機能の配布単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-openai", "locator": "バンドルのインストール", "retrievedAt": "2026-11-22T23:20:00Z" }] } },
+        { "termKey": "label-retirement", "term": "廃止", "type": "label", "oneLine": { "text": "期限以降、セキュリティ更新や技術サポートが提供されなくなること。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "拡張機能のサポート終了であり、リージョンを問わず適用される",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-openai", "locator": "冒頭の警告", "retrievedAt": "2026-11-22T23:20:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579952",
+        "learn": [
+          { "title": "Azure Functions 用の Azure OpenAI 拡張機能", "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-openai", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "期限後、既存のアプリは止まりますか？",
+            "a": "期限後は未サポートとなり、セキュリティ更新・パッチ・技術サポートが提供されません。動作の継続可否は保証されません。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=579952" }]
+          },
+          {
+            "q": "古いバンドルを固定すればサポートされますか？",
+            "a": "いいえ。バンドルを [4.*, 4.60.0) に固定しても、NuGet パッケージを使い続けても、2027-04-20 以降のサポートは延長されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-openai", "locator": "冒頭の警告", "retrievedAt": "2026-11-22T23:20:00Z" }]
+          },
+          {
+            "q": "移行先はどれですか？",
+            "a": "シナリオに応じて、OpenAI、Microsoft Foundry、Azure AI Search の SDK を直接利用してください。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-functions/functions-bindings-openai", "locator": "冒頭の警告", "retrievedAt": "2026-11-22T23:20:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
