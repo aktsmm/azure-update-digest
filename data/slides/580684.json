@@ -1,0 +1,100 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["580684"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T00:35:00Z"
+  },
+  "slides": [
+    {
+      "key": "580684",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Agent Grid が AI エージェントの通信を保護",
+        "subtitleJa": "ID ベースのゼロトラスト ネットワーク セキュリティ（パブリック プレビュー）",
+        "en": "Public Preview: Agent Grid helping secure AI agent communications"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Agent Grid"],
+        "categories": ["ai", "security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "ACI / AKS で AI エージェントを動かす**セキュリティ・基盤担当者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "エージェント コードを変えずに、通信を一元ポリシーで制御できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Learn 上は限定プレビュー。アクセス申請後に評価", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview", "locator": "冒頭", "retrievedAt": "2026-11-23T00:35:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "エージェント、モデル、ツール、外部サービス間の通信を、ID ベースの一元ポリシーで制御できる。TLS 検査、FQDN・URL フィルタリング、MCP ツール単位のフィルタリングに対応",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ワークロード ID と mTLS で、エージェントの通信を認証・暗号化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview", "locator": "主な機能", "retrievedAt": "2026-11-23T00:35:00Z" }] },
+            { "text": "FQDN / URL フィルタリング、MCP ポリシー、TLS 検査に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview", "locator": "主な機能", "retrievedAt": "2026-11-23T00:35:00Z" }] },
+            { "text": "対象: ACI サンドボックス グループ、AKS のエージェント サンドボックス", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview", "locator": "サポートされている計算処理", "retrievedAt": "2026-11-23T00:35:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "TCP と IPv4 のみ対応。プライベート AKS クラスターは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview", "locator": "Limitations", "retrievedAt": "2026-11-23T00:35:00Z" }] },
+            { "text": "Container Apps や Foundry ホスト型エージェントは未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview", "locator": "Limitations", "retrievedAt": "2026-11-23T00:35:00Z" }] },
+            { "text": "提供リージョンは米国中部・米国西部2・スウェーデン中部ほか", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview", "locator": "リージョンの可用性", "retrievedAt": "2026-11-23T00:35:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象の計算環境とリージョンに合うか確認し、検証環境で MCP ポリシーなどの挙動を確かめる", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "agent-grid", "term": "Agent Grid", "type": "product", "oneLine": { "text": "AI エージェントとその接続先を保護する Azure のネットワーク セキュリティ機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview", "locator": "冒頭", "retrievedAt": "2026-11-23T00:35:00Z" }] } },
+        { "termKey": "mcp", "term": "MCP（Model Context Protocol）", "type": "term", "oneLine": { "text": "エージェントがツールを呼び出すためのプロトコル。Agent Grid はツール単位で制御できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview", "locator": "主な機能", "retrievedAt": "2026-11-23T00:35:00Z" }] } },
+        { "termKey": "mtls", "term": "mTLS", "type": "term", "oneLine": { "text": "双方が認証し合う暗号化通信。Agent Grid はこれでトラフィックを運ぶ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview", "locator": "主な機能", "retrievedAt": "2026-11-23T00:35:00Z" }] } },
+        { "termKey": "prompt-shields", "term": "Prompt Shields", "type": "feature", "oneLine": { "text": "Azure AI Content Safety の機能で、プロンプト インジェクションを検査する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview", "locator": "主な機能", "retrievedAt": "2026-11-23T00:35:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-23T00:35:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "限定プレビュー期間の提供リージョンに日本は含まれない",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview", "locator": "リージョンの可用性", "retrievedAt": "2026-11-23T00:35:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=580684",
+        "learn": [
+          { "title": "Azure Agent Gridとは何ですか? (限定プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview", "locale": "ja-jp" },
+          { "title": "Azure Agent Grid を構成する(限定プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/configure-agent-grid", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "限定プレビュー期間の提供先は米国中部、米国西部2、スウェーデン中部、オーストラリア東部、インドネシア中部です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview" }] },
+          { "q": "どの環境が対象ですか？", "a": "ACI の AI サンドボックスと AKS が対象です。Container Apps や Foundry ホスト型エージェントは非対応です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview" }] },
+          { "q": "利用するには何が必要ですか？", "a": "アクセス申請フォームの記入が必要です。AKS クラスターは Microsoft Entra 連携が必須です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/agent-grid/overview" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
