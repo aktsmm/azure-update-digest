@@ -1,0 +1,136 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["574168"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T00:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "574168",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure HorizonDB の geo 冗長バックアップと復元が GA に",
+        "subtitleJa": "別リージョンへクラスターを復元でき、災害復旧に備えられます",
+        "en": "Generally Available: Geo-redundant backup and restore for Azure HorizonDB"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure HorizonDB"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure HorizonDB** でリージョン障害に備えたい方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "別の Azure リージョンへ復元する選択肢が増える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "DR 要件があれば、クラスター作成時に geo 冗長を選択",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "地理的に冗長化されたバックアップと復元", "retrievedAt": "2026-11-23T00:30:00Z" }]
+        }
+      },
+      "pricing": {
+        "kind": "paid",
+        "text": "バックアップ ストレージは消費量（GB/月）に応じて課金される",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "バックアップ ストレージのコスト", "retrievedAt": "2026-11-23T00:30:00Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "geo 冗長バックアップを使い、必要に応じて別の Azure リージョンで HorizonDB のデプロイを復元できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "バックアップと WAL をペアリージョンへ非同期にレプリケート", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "地理的に冗長化されたバックアップと復元", "retrievedAt": "2026-11-23T00:30:00Z" }] },
+            { "text": "復元はペアリージョンの最新バックアップを使用（時点指定は不可）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/how-to-restore-paired-region", "locator": "Note", "retrievedAt": "2026-11-23T00:30:00Z" }] },
+            { "text": "RPO は最大 1 時間。RTO は通常数分から数時間", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "地理的に冗長化されたバックアップと復元", "retrievedAt": "2026-11-23T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "クラスター作成時に geo 冗長バックアップを有効化", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "地理的に冗長化されたバックアップと復元", "retrievedAt": "2026-11-23T00:30:00Z" }] },
+            { "text": "作成後 1 時間以上待ち、[概要] の [復元] で geo 冗長復元とターゲット リージョンを選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/how-to-restore-paired-region", "locator": "手順", "retrievedAt": "2026-11-23T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "既存クラスターでは有効化不可。CMK とは併用できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "バックアップの制限事項", "retrievedAt": "2026-11-23T00:30:00Z" }] },
+            { "text": "ペアリージョンへのポイントインタイム リストアは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "地理的に冗長化されたバックアップと復元", "retrievedAt": "2026-11-23T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "PITR は保有期間（1〜35 日）内の時点へ復元。geo リストアは別リージョン向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "バックアップ保有期間", "retrievedAt": "2026-11-23T00:30:00Z" }] },
+            { "text": "別リージョンのリーダー ノードは非対応。DR は geo 復元を利用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/horizondb/overview", "locator": "Limitations", "retrievedAt": "2026-11-23T00:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "プライマリが使えなくても、既存クラスターの geo リストアは可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "Important", "retrievedAt": "2026-11-23T00:30:00Z" }] },
+            { "text": "事業継続計画で RPO 最大 1 時間が許容できるか確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "horizondb", "term": "Azure HorizonDB", "type": "product", "oneLine": { "text": "PostgreSQL をベースにした、クラウド ネイティブのフル マネージド データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/horizondb/overview", "locator": "冒頭", "retrievedAt": "2026-11-23T00:30:00Z" }] } },
+        { "termKey": "geo-backup", "term": "geo 冗長バックアップ", "type": "feature", "oneLine": { "text": "バックアップ データと WAL をペアのリージョンへ非同期にレプリケートする機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "地理的に冗長化されたバックアップと復元", "retrievedAt": "2026-11-23T00:30:00Z" }] } },
+        { "termKey": "wal", "term": "WAL", "type": "term", "oneLine": { "text": "トランザクションのコミットごとにアーカイブされる先書きログ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "Backup の概要", "retrievedAt": "2026-11-23T00:30:00Z" }] } },
+        { "termKey": "rpo-rto", "term": "RPO / RTO", "type": "term", "oneLine": { "text": "目標復旧ポイント（データ損失の許容範囲）と目標復旧時間。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "地理的に冗長化されたバックアップと復元", "retrievedAt": "2026-11-23T00:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-23T00:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "HorizonDB の提供リージョンに Japan East が含まれる（Japan West は含まれない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/horizondb/overview", "locator": "Azure regions", "retrievedAt": "2026-11-23T00:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=574168",
+        "learn": [
+          { "title": "Azure HorizonDB のバックアップ", "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locale": "ja-jp" },
+          { "title": "Azure HorizonDB のペアリージョンへの復元 (geo リストア)", "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/how-to-restore-paired-region", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存のクラスターで geo 冗長バックアップを有効にできますか？",
+            "a": "できません。クラスターの作成時に有効にする必要があります。また CMK とは併用できません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/concepts-backup-restore", "locator": "地理的に冗長化されたバックアップと復元" }]
+          },
+          {
+            "q": "復元後のデータはどれくらい古くなりますか？",
+            "a": "レプリケーションは非同期のため、最大 1 時間遅れる可能性があります。時点の指定はできません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/backup-restore/how-to-restore-paired-region", "locator": "Note" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "HorizonDB は Japan East で提供されています。Japan West は提供リージョンの一覧にありません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/horizondb/overview", "locator": "Azure regions" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
