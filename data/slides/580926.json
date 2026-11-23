@@ -1,0 +1,89 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": { "mode": "ids", "basis": "created", "ids": ["580926"], "coverage": "complete", "snapshotAt": "2026-11-23T00:40:00Z" },
+  "slides": [
+    {
+      "key": "580926",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "ExpressRoute Direct のリンク グループがパブリック プレビューに",
+        "subtitleJa": "複数の物理リンクを 1 つの論理接続に集約し、容量と運用性を高めます",
+        "en": "Public Preview: Scale ExpressRoute Direct connectivity with link groups"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure ExpressRoute"],
+        "categories": ["networking", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "高スループットな通信が必要な **ExpressRoute Direct の利用者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "複数リンクを 1 つの論理接続として扱え、容量拡張と運用の簡素化ができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "大容量化や運用簡素化を検討する場合に、検証環境で評価する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": { "text": "複数の独立した ExpressRoute 接続を個別に管理する必要があった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "複数の物理リンクを 1 つの論理接続に集約し、グループ単位で管理・監視できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "リンク グループでできること", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "複数の ExpressRoute Direct リンクを 1 つの論理接続にまとめ、接続容量を拡張", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "LACP により、動的なリンク ネゴシエーションとフェールオーバーで復元性を向上", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "グループが稼働し続けるために必要な最小アクティブ リンク数を設定可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ExpressRoute Direct が前提。利用にはサブスクリプションの AllowExpressRoutePorts 登録が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/expressroute-erdirect-about", "locator": "ExpressRoute Direct へのオンボード", "retrievedAt": "2026-11-23T00:45:00Z" }] },
+            { "text": "プレビューは通常 SLA がなく、原則として本番ワークロード向けではない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-23T00:45:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "現在の ExpressRoute Direct の帯域と接続数が不足していないか、グループ化の要否を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "最小アクティブ リンク数の設定が自社の可用性要件に合うか、検証環境で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-expressroute", "term": "Azure ExpressRoute", "type": "product", "oneLine": { "text": "オンプレミスと Azure を、公衆インターネットを経由せずに専用接続するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/expressroute/expressroute-faqs", "locator": "What is ExpressRoute?", "retrievedAt": "2026-11-23T00:45:00Z" }] } },
+        { "termKey": "expressroute-direct", "term": "ExpressRoute Direct", "type": "product", "oneLine": { "text": "Microsoft のグローバル ネットワークへ、ピアリングの場所で直接接続する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/expressroute-erdirect-about", "locator": "冒頭", "retrievedAt": "2026-11-23T00:45:00Z" }] } },
+        { "termKey": "link-group", "term": "リンク グループ", "type": "term", "oneLine": { "text": "複数の ExpressRoute Direct リンクを 1 つの論理接続に集約する機能。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために全 Azure 顧客へ提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-23T00:45:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=580926",
+        "learn": [{ "title": "ExpressRoute Direct について", "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/expressroute-erdirect-about", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "利用の前提条件は何ですか？",
+            "a": "ExpressRoute Direct が前提で、利用開始にはサブスクリプションを AllowExpressRoutePorts に登録する必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/expressroute/expressroute-erdirect-about" }]
+          },
+          {
+            "q": "本番環境で使えますか？",
+            "a": "パブリック プレビューは通常 SLA がなく、明示がない限り本番ワークロード向けではありません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
