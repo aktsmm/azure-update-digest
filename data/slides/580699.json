@@ -1,0 +1,116 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["580699"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T00:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "580699",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Bastion の RDP / SSH vision がパブリック プレビュー",
+        "subtitleJa": "記録した特権セッションを AI が要約し、リスクのある操作を優先的に確認できます",
+        "en": "Public Preview: Azure Bastion RDP and SSH vision"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Bastion"],
+        "categories": ["networking", "security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Bastion Premium でセッション記録を使う**セキュリティ・運用チーム**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "録画全体を見直さずに、注意が必要な操作から調査できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビュー中の評価向け。Premium SKU とセッション記録の設定が前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "Considerations / Prerequisites", "retrievedAt": "2026-11-23T00:40:00Z" }] }
+      },
+      "pricing": {
+        "kind": "free",
+        "text": "プレビュー中は RDP / SSH vision の請求なし。Bastion Premium とストレージの通常料金は適用",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "Pricing", "retrievedAt": "2026-11-23T00:40:00Z" }]
+      },
+      "beforeAfter": {
+        "after": { "text": "セッション終了後に AI が RDP 録画・SSH コマンド ログを解析し、要約とリスクのある操作を示す", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "機能の範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "RDP vision: グラフィカルなセッション録画を解析し、該当する録画内の時間範囲を示す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "RDP Vision と SSH Vision の仕組み", "retrievedAt": "2026-11-23T00:40:00Z" }] },
+            { "text": "SSH vision: コマンド ログを解析し、リスクのある実行コマンドを示す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "RDP Vision と SSH Vision の仕組み", "retrievedAt": "2026-11-23T00:40:00Z" }] },
+            { "text": "要約・全体リスク レベル・重大度と信頼度付きの分類を Azure portal で確認", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "RDP Vision と SSH Vision の仕組み", "retrievedAt": "2026-11-23T00:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Premium SKU が必須。有効化後に記録したセッションのみ解析される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "Considerations", "retrievedAt": "2026-11-23T00:40:00Z" }] },
+            { "text": "ネイティブ クライアントのセッションは対象外。設定は Azure portal のみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "Considerations", "retrievedAt": "2026-11-23T00:40:00Z" }] },
+            { "text": "AI 生成のため見落としあり。元の録画やログでの確認が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "Considerations", "retrievedAt": "2026-11-23T00:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "プレビュー対象リージョンを確認し、まず検証環境でセッション記録とあわせて試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-bastion", "term": "Azure Bastion", "type": "product", "oneLine": { "text": "VM へ TLS 経由で安全に RDP/SSH 接続できる、フル マネージドの PaaS サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/bastion/bastion-overview", "locator": "冒頭", "retrievedAt": "2026-11-23T00:40:00Z" }] } },
+        { "termKey": "bastion-premium", "term": "Premium SKU", "type": "term", "oneLine": { "text": "Standard の機能に、コンプライアンス向けのセッション記録などを加えた SKU。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/bastion/bastion-overview", "locator": "SKUs", "retrievedAt": "2026-11-23T00:40:00Z" }] } },
+        { "termKey": "session-recording", "term": "セッション記録", "type": "feature", "oneLine": { "text": "RDP/SSH のセッションを記録し、指定したストレージ コンテナに保存する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "Prerequisites", "retrievedAt": "2026-11-23T00:40:00Z" }] } },
+        { "termKey": "vision", "term": "RDP / SSH vision", "type": "feature", "oneLine": { "text": "セッションの記録やコマンド ログから AI が洞察を生成する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "RDP Vision と SSH Vision の仕組み", "retrievedAt": "2026-11-23T00:40:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-23T00:40:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "プレビュー対象は米国中部 EUAP・東アジア・米国東部 2 EUAP・英国南部・米国中西部",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-23T00:40:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=580699",
+        "learn": [
+          { "title": "RDP/SSH Visionの設定(プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locale": "ja-jp" },
+          { "title": "Bastion セッション レコーディングを構成する", "url": "https://learn.microsoft.com/ja-jp/azure/bastion/session-recording", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "プレビュー中は米国中部 EUAP・東アジア・米国東部 2 EUAP・英国南部・米国中西部で利用可能で、日本は含まれません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-23T00:40:00Z" }]
+          },
+          {
+            "q": "追加料金はかかりますか？",
+            "a": "プレビュー中は RDP / SSH vision の請求は有効ではありません。Bastion Premium とストレージの通常料金は適用されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "Pricing", "retrievedAt": "2026-11-23T00:40:00Z" }]
+          },
+          {
+            "q": "利用の前提条件は何ですか？",
+            "a": "Premium SKU の Bastion と、セッション記録用のストレージ コンテナが必要です。有効化前に記録したセッションは解析されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/bastion/rdp-ssh-vision", "locator": "Prerequisites / Considerations", "retrievedAt": "2026-11-23T00:40:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
