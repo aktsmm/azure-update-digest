@@ -1,0 +1,166 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581277"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T00:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "581277",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "API Management の「Applications」がパブリック プレビューに",
+        "subtitleJa": "API を使うアプリ単位で登録し、Entra ID でアクセスを管理できます（登録不要）",
+        "en": "Public Preview: Azure API Management Application"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["API Management"],
+        "categories": ["integration", "iot", "web-mobile"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "API Management で **API を公開・管理する API 提供者** と、API を利用するアプリの開発者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "アプリ単位の登録と Entra ID による ID ベースのアクセス管理ができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "アプリ単位で API アクセスを管理したい場合に評価", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "API を使うアプリケーションを API Management に登録し、製品に関連付けて、Entra ID と OAuth 2.0 クライアント資格情報でアクセスを制御できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "全顧客が対象で、サインアップや登録は不要", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "対象は Developer / Basic / Standard / Premium レベルのインスタンス",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "前提条件", "retrievedAt": "2026-11-23T00:50:00Z" }]
+            },
+            {
+              "text": "製品でアプリケーション ベースのアクセスを有効化し、アプリを関連付ける",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "製品のアプリケーション ベースのアクセスを有効にする", "retrievedAt": "2026-11-23T00:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・制約", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "発行済みで API が割り当てられた製品が 1 つ以上必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "前提条件", "retrievedAt": "2026-11-23T00:50:00Z" }]
+            },
+            {
+              "text": "マネージド ID に Entra の「アプリケーション管理者」ロールの付与が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "マネージド ID を構成する", "retrievedAt": "2026-11-23T00:50:00Z" }]
+            },
+            {
+              "text": "各アプリの所有者は 1 人で、所有者のみが製品 API にアクセス可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "クライアント アプリケーションを登録して製品にアクセスする", "retrievedAt": "2026-11-23T00:50:00Z" }]
+            }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "flow", "heading": "利用の流れ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "アプリ登録 → クライアント シークレット生成（有効期間 1 年）→ トークンで API 呼び出し",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "クライアント シークレットを生成する", "retrievedAt": "2026-11-23T00:50:00Z" }]
+            },
+            {
+              "text": "ゲートウェイがトークンを検証。サブスクリプション キーとの併用も可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "製品のアプリケーション ベースのアクセスを有効にする", "retrievedAt": "2026-11-23T00:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "portal", "heading": "ポータルでの注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "アプリケーション機能用のカスタム URL で Azure portal にサインインする",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "トラブルシューティング", "retrievedAt": "2026-11-23T00:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "検証用の製品とアプリで、トークン取得から API 呼び出しまで動作を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "api-management", "term": "API Management", "type": "product",
+          "oneLine": { "text": "API を公開・保護・管理するための Azure のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "冒頭", "retrievedAt": "2026-11-23T00:50:00Z" }] }
+        },
+        {
+          "termKey": "entra-app", "term": "Microsoft Entra アプリケーション", "type": "feature",
+          "oneLine": { "text": "Entra ID に登録し、OAuth 2.0 で API へのアクセスを認可するクライアント アプリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "冒頭", "retrievedAt": "2026-11-23T00:50:00Z" }] }
+        },
+        {
+          "termKey": "client-credentials", "term": "クライアント資格情報フロー", "type": "term",
+          "oneLine": { "text": "クライアント ID とシークレットでトークンを取得する OAuth 2.0 の認可方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "トークンを作成し、API 呼び出しで使用する", "retrievedAt": "2026-11-23T00:50:00Z" }] }
+        },
+        {
+          "termKey": "product", "term": "製品（Product）", "type": "term",
+          "oneLine": { "text": "API Management で 1 つ以上の API をまとめ、アクセスを制御する単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "前提条件", "retrievedAt": "2026-11-23T00:50:00Z" }] }
+        },
+        {
+          "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label",
+          "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-23T00:50:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581277",
+        "learn": [
+          { "title": "Microsoft Entra アプリケーションを使用して製品と API に安全にアクセスする", "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どの API Management レベルで使えますか？",
+            "a": "Developer、Basic、Standard、Premium レベルにデプロイされたインスタンスが前提条件として記載されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "前提条件" }]
+          },
+          {
+            "q": "利用開始に必要な準備は？",
+            "a": "発行済みで API を割り当てた製品が必要です。また、マネージド ID に Entra の「アプリケーション管理者」ロールを割り当てます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "前提条件" }]
+          },
+          {
+            "q": "クライアント シークレットの有効期間は？",
+            "a": "シークレットは 1 年間有効で、いつでも再生成できます。生成後は値を再取得できないため、安全に保存します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/api-management/applications", "locator": "クライアント シークレットを生成する" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
