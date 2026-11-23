@@ -1,0 +1,96 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581604"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T00:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "581604",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Front Door Premium の WAF に「AI bot ルールセット」（プレビュー）",
+        "subtitleJa": "AI ボットを目的別 4 カテゴリに分類し、カテゴリごとに対応を選べる",
+        "en": "Public Preview: AI bot ruleset for Azure Front Door Premium WAF"
+      },
+      "meta": {
+        "publishedJst": "2026-11-19",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Front Door", "Web Application Firewall"],
+        "categories": ["networking", "ai", "security"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "AI クローラーやエージェントのアクセスを制御したい **Azure Front Door Premium の WAF 利用者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "AI ボットを目的別に識別し、エッジでカテゴリごとに許可・ブロック等を選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "まずは既定の Log で AI ボットのトラフィックを確認してから、アクションを変更する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset", "locator": "AIボットのルールセットを設定する", "retrievedAt": "2026-11-23T00:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "AI ボットを 4 カテゴリに分類し、各カテゴリに Allow・Block・Log・JS challenge・CAPTCHA 等を設定できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "AI トレーニング / AI 検索 / AI インタラクティブ エージェント / その他の AI エージェントの 4 カテゴリ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset", "locator": "ルールセット内のルール", "retrievedAt": "2026-11-23T00:00:00Z" }] },
+            { "text": "Azure 管理のルールセット。シグネチャは Microsoft が更新し、バージョン変更は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset", "locator": "AIボットのルールセットの仕組み", "retrievedAt": "2026-11-23T00:00:00Z" }] },
+            { "text": "Azure portal・PowerShell・Bicep などで設定できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset", "locator": "AIボットのルールセットを設定する", "retrievedAt": "2026-11-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Front Door Premium のプロファイルと Premium ティアの WAF ポリシーが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset", "locator": "AIボットのルールセットを設定する", "retrievedAt": "2026-11-23T00:00:00Z" }] },
+            { "text": "割り当て時は全ルールが Log。ルール変更までトラフィックはブロックされない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset", "locator": "AIボットのルールセットの仕組み", "retrievedAt": "2026-11-23T00:00:00Z" }] },
+            { "text": "その他（800104）を Block 等にする場合、許可したい他カテゴリは Log でなく Allow に設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset", "locator": "ルールセット内のルール", "retrievedAt": "2026-11-23T00:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Log のまま WAF ログと WAF インサイトで AI ボットの流入を把握してから変更する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset", "locator": "AIボットのルールセットを監視", "retrievedAt": "2026-11-23T00:00:00Z" }] },
+            { "text": "特定の AI オペレーターのみ許可するには、AIProvider を使う例外を利用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset", "locator": "信頼できるAIボットやエージェントを許可しましょう", "retrievedAt": "2026-11-23T00:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "front-door", "term": "Azure Front Door", "type": "product", "oneLine": { "text": "Web コンテンツや API をグローバルに高速配信し、セキュリティも提供する CDN サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/frontdoor/front-door-overview", "locator": "冒頭", "retrievedAt": "2026-11-23T00:00:00Z" }] } },
+        { "termKey": "waf", "term": "Web Application Firewall (WAF)", "type": "product", "oneLine": { "text": "Web アプリケーションへのリクエストを検査し、一般的な攻撃から保護する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/web-application-firewall/overview", "locator": "概要", "retrievedAt": "2026-11-23T00:00:00Z" }] } },
+        { "termKey": "ai-bot-ruleset", "term": "AI bot ruleset", "type": "feature", "oneLine": { "text": "AI ボットのリクエストを識別して目的別にグループ化する、Azure 管理のルールセット。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset", "locator": "冒頭", "retrievedAt": "2026-11-23T00:00:00Z" }] } },
+        { "termKey": "robots-txt", "term": "robots.txt", "type": "term", "oneLine": { "text": "各ボットが従うかどうかに依存する、クロールに関する指示ファイル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset", "locator": "冒頭", "retrievedAt": "2026-11-23T00:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-23T00:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Front Door はグローバル サービス（特定のリージョンにデプロイしない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "Azure Front Door (global)", "retrievedAt": "2026-11-23T00:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581604",
+        "learn": [{ "title": "Azure Front Door WAF (preview) のAI bot ruleset", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "どの Front Door が対象ですか？", "a": "Azure Front Door Premium が対象で、Premium ティアの WAF ポリシーが必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset" }] },
+          { "q": "有効にするとすぐにブロックされますか？", "a": "いいえ。割り当て直後は全ルールが Log で、アクションを変更するまでブロックされません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset" }] },
+          { "q": "特定の AI 事業者だけ許可できますか？", "a": "AIProvider マッチ変数を使う例外で、信頼する AI オペレーターを許可できます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/ai-bot-ruleset" }] },
+          { "q": "日本リージョンで使えますか？", "a": "Front Door はグローバル サービスで、特定のリージョンにデプロイしません。", "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
