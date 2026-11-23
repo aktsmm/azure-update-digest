@@ -1,0 +1,108 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579595"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T00:25:00Z"
+  },
+  "slides": [
+    {
+      "key": "579595",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "PostgreSQL Flexible Server の Intel / AMD v5 ディスクレスが GA",
+        "subtitleJa": "ローカル一時 SSD を持たない General Purpose / Memory Optimized の SKU を選べます",
+        "en": "Generally Available: Intel and AMD v5 diskless tier for Azure Database for PostgreSQL"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Azure Database for PostgreSQL フレキシブル サーバー**でコンピューティングを選ぶ方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ローカル一時ストレージが不要なら、ディスクレスの v5 構成を選べる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "ローカル一時ストレージが不要なワークロードなら選択を検討", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Intel / AMD の v5 コンピューティングに、ローカル一時 SSD を含まない General Purpose と Memory Optimized の SKU が加わった",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ディスクレス v5 ファミリ（Dsv5 / Dasv5 / Esv5 / Easv5）にはローカル一時ストレージがない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "コンピューティング レベル、仮想コア、サーバーの種類", "retrievedAt": "2026-11-23T00:25:00Z" }] },
+            { "text": "Intel / AMD の General Purpose・Memory Optimized の両方に用意", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "選び方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "サーバー作成時、または [コンピューティングとストレージ] で階層と SKU を選択する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "料金", "retrievedAt": "2026-11-23T00:25:00Z" }] },
+            { "text": "ローカル一時ストレージが不要な場合に、ディスクレス構成を選ぶ", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "SKU の例・仕様", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "General Purpose の例: D2s_v5（2 vCore / 8 GiB）〜 D96s_v5（96 vCore / 384 GiB）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "汎用 - ディスクレス V5 (Dsv5)", "retrievedAt": "2026-11-23T00:25:00Z" }] },
+            { "text": "Memory Optimized の例: E2s_v5（2 vCore / 16 GiB）〜 E96s_v5（96 vCore / 672 GiB）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "メモリ最適化 - ディスクレス V5 (Esv5)", "retrievedAt": "2026-11-23T00:25:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "他の階層との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "General Purpose: CPU とメモリのバランス型で、ほとんどの運用ワークロード向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "価格階層", "retrievedAt": "2026-11-23T00:25:00Z" }] },
+            { "text": "Memory Optimized: メモリ内パフォーマンスが必要な高性能ワークロード向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "価格階層", "retrievedAt": "2026-11-23T00:25:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ローカル一時ストレージを使わない運用なら、ディスクレス SKU を候補にする", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "postgresql-flexible", "term": "Azure Database for PostgreSQL", "type": "product", "oneLine": { "text": "コンピューティングやストレージを選んで PostgreSQL サーバーを作成できるマネージド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "冒頭", "retrievedAt": "2026-11-23T00:25:00Z" }] } },
+        { "termKey": "diskless", "term": "ディスクレス", "type": "feature", "oneLine": { "text": "ローカルの一時ストレージを含まないコンピューティング ファミリ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "コンピューティング レベル、仮想コア、サーバーの種類", "retrievedAt": "2026-11-23T00:25:00Z" }] } },
+        { "termKey": "vcore", "term": "仮想コア（vCore）", "type": "term", "oneLine": { "text": "基になるハードウェアの論理 CPU を表す単位。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "コンピューティング レベル、仮想コア、サーバーの種類", "retrievedAt": "2026-11-23T00:25:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-23T00:25:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579595",
+        "learn": [{ "title": "Azure Database for PostgreSQL フレキシブル サーバーのコンピューティング オプション", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "ディスクレス SKU の具体例は？",
+            "a": "General Purpose は Dsv5 / Dasv5、Memory Optimized は Esv5 / Easv5 ファミリで、2〜96 vCore の SKU が一覧されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute" }]
+          },
+          {
+            "q": "費用はどこで確認できますか？",
+            "a": "最新価格は Azure Database for PostgreSQL フレキシブル サーバーの価格ページで確認でき、ポータルにも月額見積もりが表示されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
