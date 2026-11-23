@@ -1,0 +1,159 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579943"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T00:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "579943",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Modernize CLI でアプリとデータベースを一体でモダナイズ",
+        "subtitleJa": "評価から計画・修正・Azure 上の検証までをエージェントで実施（パブリック プレビュー）",
+        "en": "Public Preview: AI-powered application and database modernization with Modernize CLI"
+      },
+      "meta": {
+        "publishedJst": "2026-11-19",
+        "modifiedJst": "2026-11-19",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure SQL Database"],
+        "categories": ["databases", "ai", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": {
+          "text": "アプリとデータベースを**まとめてクラウドへモダナイズしたい開発者・アーキテクト**",
+          "origin": "mrc", "assertion": "inference", "verification": "source-only"
+        },
+        "change": {
+          "text": "アプリとデータ層を一つの計画で進められる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "プレビューは本番ワークロード向けではないため、まず評価目的で試す",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-23T00:10:00Z" }]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "アプリの評価とデータベースの互換性・移行準備確認を統合した、一つのモダナイズ計画を作成できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "アプリのコード・構成・依存関係を評価し、クラウド準備スコアを生成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/overview", "locator": "アプリケーション評価", "retrievedAt": "2026-11-23T00:10:00Z" }]
+            },
+            {
+              "text": "DB ワークフローは 2 つ: SQL Server の移行準備評価、Oracle から PostgreSQL へのアプリ移行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/overview", "locator": "データベースのモダン化 (プレビュー)", "retrievedAt": "2026-11-23T00:10:00Z" }]
+            },
+            {
+              "text": "計画は実行前に確認・編集でき、実行後はビルドと検証チェックを実施",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/overview", "locator": "インテリジェントな計画 / 自律実行", "retrievedAt": "2026-11-23T00:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "SQL Server 評価は Windows でのローカル実行のみ。Linux / macOS は非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/assess-sql-server", "locator": "Prerequisites", "retrievedAt": "2026-11-23T00:10:00Z" }]
+            },
+            {
+              "text": "SQL Server 評価は DB を移行せず、Azure リソースも作成しない（準備状況の評価のみ）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/assess-sql-server", "locator": "Important", "retrievedAt": "2026-11-23T00:10:00Z" }]
+            },
+            {
+              "text": "Oracle 変換はローカルの PostgreSQL コンテナーで検証。DB サーバーや顧客データは移行されない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/overview", "locator": "データベースのモダン化 (プレビュー)", "retrievedAt": "2026-11-23T00:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "SQL Server の移行先として Hyperscale が評価対象。Managed Instance や SQL Server on VM も代替パスとして残る",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/assess-sql-server", "locator": "冒頭", "retrievedAt": "2026-11-23T00:10:00Z" }]
+            },
+            {
+              "text": "対象アプリが DB 依存を持つか確認し、検証用リポジトリで対話型（TUI）から試す",
+              "origin": "editorial", "assertion": "recommendation", "verification": "unverified"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "modernize-cli", "term": "Modernize CLI", "type": "product",
+          "oneLine": { "text": "GitHub Copilot モダン化内のコマンドライン エクスペリエンス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/overview", "locator": "Modernize CLI とは", "retrievedAt": "2026-11-23T00:10:00Z" }] }
+        },
+        {
+          "termKey": "azure-sql-database", "term": "Azure SQL Database", "type": "product",
+          "oneLine": { "text": "SQL Server 互換のデータベースを Azure 上で提供するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/assess-sql-server", "locator": "冒頭", "retrievedAt": "2026-11-23T00:10:00Z" }] }
+        },
+        {
+          "termKey": "tui", "term": "TUI", "type": "term",
+          "oneLine": { "text": "ターミナル上で操作する対話型の画面で、人の判断が必要な作業に向く。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/overview", "locator": "柔軟な実行モード", "retrievedAt": "2026-11-23T00:10:00Z" }] }
+        },
+        {
+          "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label",
+          "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-23T00:10:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579943",
+        "learn": [
+          { "title": "GitHub Copilot モダン化エージェントの概要", "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/overview", "locale": "ja-jp" },
+          { "title": "Modernize CLI を使用した SQL Server の移行準備状況の評価 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/assess-sql-server", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "本番ワークロードで使えますか？",
+            "a": "パブリック プレビューは、明示がない限り本番ワークロード向けではありません。まず評価目的での利用が前提です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview" }]
+          },
+          {
+            "q": "SQL Server の評価に必要な環境は？",
+            "a": "Windows マシン、PowerShell 7、Azure CLI 2.75.0 以降（datamigration 拡張機能入り）が必要で、ローカル実行です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/assess-sql-server", "locator": "Prerequisites" }]
+          },
+          {
+            "q": "Oracle から PostgreSQL ではデータも移行されますか？",
+            "a": "いいえ。アプリ コードの評価と変換を行い、ローカルの PostgreSQL コンテナーで検証します。DB サーバーや顧客データは移行されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/developer/github-copilot-app-modernization/modernization-agent/overview", "locator": "データベースのモダン化 (プレビュー)" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
