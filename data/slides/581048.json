@@ -1,0 +1,115 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581048"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T00:15:00Z"
+  },
+  "slides": [
+    {
+      "key": "581048",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure VM のクロスサブスクリプション バックアップ",
+        "subtitleJa": "別サブスクリプションの Recovery Services vault で VM を保護（Azure Backup）",
+        "en": "Generally Available: Cross-subscription backup for Azure Virtual Machines in Azure Backup"
+      },
+      "meta": {
+        "publishedJst": "2026-11-19",
+        "availability": [
+          { "rawRing": "Preview", "year": 2026, "month": "April" },
+          { "rawRing": "General Availability", "year": 2026, "month": "November" }
+        ],
+        "status": "Launched",
+        "products": ["Azure Backup"],
+        "categories": ["compute", "storage", "ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "複数サブスクリプションの **Azure VM を Azure Backup で保護している管理者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "バックアップ用 vault を専用サブスクリプションに集約できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "バックアップ管理を集約したい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "VM と同じテナント・リージョンであれば、別サブスクリプションの Recovery Services vault に VM をバックアップできる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-support-matrix-iaas", "locator": "VM を別のサブスクリプションにバックアップする", "retrievedAt": "2026-11-23T00:15:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "できること", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "別サブスクリプションの vault で Azure VM を保護できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "複数サブスクリプションのバックアップ管理を一元化できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/whats-new", "locator": "Azure VM向けのクロスサブスクリプションバックアップが一般提供されました", "retrievedAt": "2026-11-23T00:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "VM と vault は同じテナント・同じリージョンにある必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-support-matrix-iaas", "locator": "VM を別のサブスクリプションにバックアップする", "retrievedAt": "2026-11-23T00:15:00Z" }] },
+            { "text": "機密 VM（ADE 暗号化の CVM 含む）は対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-support-matrix-iaas", "locator": "VM を別のサブスクリプションにバックアップする", "retrievedAt": "2026-11-23T00:15:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象 VM の種類（機密 VM でないか）と、vault と同一リージョンかを確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "vault 間でのバックアップ データの移動は未対応。vault 配置を先に設計する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-support-matrix-iaas", "locator": "VM を別のサブスクリプションにバックアップする", "retrievedAt": "2026-11-23T00:15:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-backup", "term": "Azure Backup", "type": "product", "oneLine": { "text": "Azure 内のデータや VM などのワークロードを保護するバックアップ サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-arm-vms-prepare", "locator": "冒頭", "retrievedAt": "2026-11-23T00:15:00Z" }] } },
+        { "termKey": "recovery-services-vault", "term": "Recovery Services vault", "type": "feature", "oneLine": { "text": "VM などのバックアップ データを保管するコンテナー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-arm-vms-prepare", "locator": "コンテナーの作成", "retrievedAt": "2026-11-23T00:15:00Z" }] } },
+        { "termKey": "tenant", "term": "テナント", "type": "term", "oneLine": { "text": "Microsoft Entra ID の組織単位。複数のサブスクリプションを含められる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-arm-vms-prepare", "locator": "開始する前に", "retrievedAt": "2026-11-23T00:15:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-23T00:15:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "サポート マトリックスに「すべての Azure リージョンで使用できます」と記載",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-support-matrix-iaas", "locator": "VM を別のサブスクリプションにバックアップする", "retrievedAt": "2026-11-23T00:15:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581048",
+        "learn": [
+          { "title": "Azure VM を Recovery Services ボルトにバックアップする", "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-azure-arm-vms-prepare", "locale": "ja-jp" },
+          { "title": "Azure VM バックアップのサポート マトリックス", "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-support-matrix-iaas", "locale": "ja-jp" },
+          { "title": "Azure Backupの新機能", "url": "https://learn.microsoft.com/ja-jp/azure/backup/whats-new", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どんな条件で使えますか？",
+            "a": "VM と Recovery Services vault が同じテナント・同じリージョンにある場合に使えます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-support-matrix-iaas" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "サポート マトリックスでは、すべての Azure リージョンで使用できるとされています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-support-matrix-iaas" }]
+          },
+          {
+            "q": "対象外の VM はありますか？",
+            "a": "ADE で暗号化された CVM を含む機密 VM は対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/backup/backup-support-matrix-iaas" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
