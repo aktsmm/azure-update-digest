@@ -1,0 +1,170 @@
+{
+  "$schema": "../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577579"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T01:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "577579",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Cache for Redis → Managed Redis の移行ツールが GA",
+        "subtitleJa": "既存ホスト名を Managed Redis に向け直し、同じホスト名とアクセス キーで再接続できます",
+        "en": "Generally Available: Azure Cache for Redis to Azure Managed Redis migration tooling"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Managed Redis"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Cache for Redis（Basic / Standard / Premium）**から Azure Managed Redis へ移行する方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "アプリの接続設定変更を抑えつつ、エンドポイントを切り替えられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "移行を計画している場合に、制限事項を確認のうえ検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "既存のキャッシュ ホスト名を作成済みの Azure Managed Redis に向け直し、同じホスト名とアクセス キーで再接続できる。移行中のデータ保持にも対応",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "移行を開始すると、Azure Cache for Redis のホスト名が Azure Managed Redis を指すよう更新される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-with-tooling", "locator": "冒頭", "retrievedAt": "2026-11-23T01:30:00Z" }]
+            },
+            {
+              "text": "クライアントは同じホスト名とアクセス キーで自動的に再接続する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-with-tooling", "locator": "冒頭", "retrievedAt": "2026-11-23T01:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "移行の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "移行先の Azure Managed Redis を事前に作成する（既存と同じかそれ以上のサイズ）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-with-tooling", "locator": "手順 1", "retrievedAt": "2026-11-23T01:30:00Z" }]
+            },
+            {
+              "text": "[概要] の [移行] → [Azure Managed Redis に移行] → 移行先を選び [Validate]、[移行を開始]",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-with-tooling", "locator": "手順 4", "retrievedAt": "2026-11-23T01:30:00Z" }]
+            },
+            {
+              "text": "完了後に動作を検証し、アプリを新ホスト名とポート 10000 に更新して旧キャッシュを削除",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-with-tooling", "locator": "手順 6・7", "retrievedAt": "2026-11-23T01:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "VNet 挿入型・geo レプリケート済みのキャッシュは非対応。マネージド ID、ファイアウォール規則、永続化設定などはコピーされない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-options", "locator": "Limitations", "retrievedAt": "2026-11-23T01:30:00Z" }]
+            },
+            {
+              "text": "組み込みのデータ コピーは論理 DB 0 のみ。クラスター／プライベート エンドポイントのソースは対象外",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-with-tooling", "locator": "手順 3", "retrievedAt": "2026-11-23T01:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た方法との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "セルフサービス移行（推奨）: 切替時期をアプリ単位で制御可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-options", "locator": "オプション 1", "retrievedAt": "2026-11-23T01:30:00Z" }]
+            },
+            {
+              "text": "移行ツール: 切替時期を制御できず、接続する全アプリが同時に移行される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-options", "locator": "Limitations", "retrievedAt": "2026-11-23T01:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "移行中は状態が [移行中] となり他の管理操作は不可。接続の瞬断が発生する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-with-tooling", "locator": "手順 5", "retrievedAt": "2026-11-23T01:30:00Z" }]
+            },
+            {
+              "text": "旧ホスト名は将来自動削除されるため、新ホスト名への更新が推奨されている",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-options", "locator": "Limitations", "retrievedAt": "2026-11-23T01:30:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "amr", "term": "Azure Managed Redis", "type": "product", "oneLine": { "text": "Redis Enterprise ソフトウェアに基づく、Microsoft が運用するインメモリ データ ストア。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/redis/overview", "locator": "冒頭", "retrievedAt": "2026-11-23T01:30:00Z" }] } },
+        { "termKey": "acr", "term": "Azure Cache for Redis", "type": "product", "oneLine": { "text": "Basic / Standard / Premium レベルを持つ、移行元となる従来の Redis キャッシュ サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-options", "locator": "冒頭", "retrievedAt": "2026-11-23T01:30:00Z" }] } },
+        { "termKey": "endpoint-migration", "term": "エンドポイント移行", "type": "term", "oneLine": { "text": "旧キャッシュのホスト名を新しい Azure Managed Redis に向け直す移行方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-with-tooling", "locator": "冒頭", "retrievedAt": "2026-11-23T01:30:00Z" }] } },
+        { "termKey": "migrate-data", "term": "データの移行", "type": "feature", "oneLine": { "text": "移行時に選べる、論理データベース 0 のデータを移行先へコピーするオプション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-with-tooling", "locator": "手順 3", "retrievedAt": "2026-11-23T01:30:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-23T01:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Managed Redis の提供リージョン表に Japan East / Japan West が記載（機能個別のリージョン制限の記載はなし）",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/redis/reserved-pricing", "locator": "Plan reservations", "retrievedAt": "2026-11-23T01:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577579",
+        "learn": [
+          { "title": "ツールを使用した移行 - Azure Managed Redis への移行", "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-with-tooling", "locale": "ja-jp" },
+          { "title": "移行オプション - Basic / Standard / Premium から Azure Managed Redis へ", "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-options", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "移行ツールで制御できないことは？",
+            "a": "切り替わるタイミングは制御できず、接続する全クライアントが同時に移行されます。アプリ単位で進めたい場合はセルフサービス移行が推奨されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-options" }]
+          },
+          {
+            "q": "データも一緒に移行できますか？",
+            "a": "[データの移行] で論理 DB 0 をコピーできますが、移行先の既存データは消去されます。クラスター／プライベート エンドポイントのソースは対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-with-tooling" }]
+          },
+          {
+            "q": "移行後に必要な作業は？",
+            "a": "動作を検証し、新ホスト名とポート 10000 にアプリを更新して旧キャッシュを削除します。旧ホスト名は将来自動削除されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-with-tooling" }, { "url": "https://learn.microsoft.com/ja-jp/azure/redis/migrate/migrate-basic-standard-premium-options" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
