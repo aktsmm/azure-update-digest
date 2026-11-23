@@ -1,0 +1,162 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["575069"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T00:55:00Z"
+  },
+  "slides": [
+    {
+      "key": "575069",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure HorizonDB でユーザー割り当てマネージド ID が GA に",
+        "subtitleJa": "クラスターに Azure の ID を割り当てて一元管理し、認証情報の管理負担を減らせます",
+        "en": "Generally Available: User-assigned managed identity for Azure HorizonDB"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure HorizonDB"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure HorizonDB** で CMK や Microsoft Entra 認証を使う方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "認証情報を管理する負担を減らし、より安全に連携できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "CMK や Entra 認証を使う場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "HorizonDB クラスターに Azure の ID（UMI）を割り当てて一元管理でき、CMK や Microsoft Entra 認証など対応機能で利用できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "クラスターに割り当てた UMI で、CMK を Azure Key Vault から安全に取得",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-user-assigned-managed-identities", "locator": "HorizonDB クラスターに割り当てられた ID", "retrievedAt": "2026-11-23T00:55:00Z" }]
+            },
+            {
+              "text": "アプリは自身の UMI で、パスワードを保存せず HorizonDB に認証できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-overview", "locator": "アイデンティティとアクセス管理", "retrievedAt": "2026-11-23T00:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "クラスターの作成時または既存クラスターの更新時に UMI を割り当てる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-user-assigned-managed-identities", "locator": "ユーザー割り当てマネージド ID を既存のクラスターに割り当てる", "retrievedAt": "2026-11-23T00:55:00Z" }]
+            },
+            {
+              "text": "既存クラスターは Portal の [データ暗号化] や CLI の cluster update で ID を変更可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-configure-data-encryption", "locator": "カスタマー マネージド キーの設定を更新する", "retrievedAt": "2026-11-23T00:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ID の割り当てだけでは Key Vault のキー アクセス権は付与されない。必要な権限を別途付与する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-user-assigned-managed-identities", "locator": "Prerequisites", "retrievedAt": "2026-11-23T00:55:00Z" }]
+            },
+            {
+              "text": "CMK に使用中の ID を削除するとクラスターにアクセスできなくなる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-user-assigned-managed-identities", "locator": "既存のクラスターからユーザー割り当てマネージド ID を削除する", "retrievedAt": "2026-11-23T00:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "クラスターへ割り当てる ID は他の Azure リソースへのアクセス用、アプリ側の ID は HorizonDB への認証用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-user-assigned-managed-identities", "locator": "冒頭", "retrievedAt": "2026-11-23T00:55:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "パスワードを持たない接続や、CMK 運用の ID 管理を一元化したい場面で検討する",
+              "origin": "editorial", "assertion": "recommendation", "verification": "unverified"
+            },
+            {
+              "text": "CMK でキー アクセスに使う ID は、削除前に別の ID を構成する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-user-assigned-managed-identities", "locator": "既存のクラスターからユーザー割り当てマネージド ID を削除する", "retrievedAt": "2026-11-23T00:55:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-horizondb", "term": "Azure HorizonDB", "type": "product", "oneLine": { "text": "PostgreSQL 上に構築された、クラウドネイティブのフル マネージドなデータベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "冒頭", "retrievedAt": "2026-11-23T00:55:00Z" }] } },
+        { "termKey": "umi", "term": "ユーザー割り当てマネージド ID（UMI）", "type": "feature", "oneLine": { "text": "ユーザーが作成し、複数のリソースに割り当てて使える Azure の ID。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-user-assigned-managed-identities", "locator": "冒頭", "retrievedAt": "2026-11-23T00:55:00Z" }] } },
+        { "termKey": "cmk", "term": "カスタマー マネージド キー（CMK）", "type": "term", "oneLine": { "text": "利用者が Azure Key Vault で管理する、保存データ暗号化用のキー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-overview", "locator": "保存時のデータ暗号化", "retrievedAt": "2026-11-23T00:55:00Z" }] } },
+        { "termKey": "entra-auth", "term": "Microsoft Entra 認証", "type": "feature", "oneLine": { "text": "Microsoft Entra ID でユーザーやアプリをデータベースに認証する方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-overview", "locator": "アイデンティティとアクセス管理", "retrievedAt": "2026-11-23T00:55:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-23T00:55:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure HorizonDB の提供リージョンに日本東部が含まれる（日本西部は含まれない）",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview", "locator": "Azure リージョン", "retrievedAt": "2026-11-23T00:55:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=575069",
+        "learn": [
+          { "title": "Azure HorizonDB のユーザー割り当てマネージド ID", "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-user-assigned-managed-identities", "locale": "ja-jp" },
+          { "title": "Azure HorizonDB で保存データ暗号化を設定する", "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-configure-data-encryption", "locale": "ja-jp" },
+          { "title": "Azure HorizonDB をセキュリティで保護する", "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "UMI を割り当てればすぐ CMK を使えますか？",
+            "a": "いいえ。ID の割り当てだけではキーへのアクセス権は付与されないため、Key Vault で必要な権限を付与する必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-user-assigned-managed-identities" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Azure HorizonDB の提供リージョンには日本東部が含まれます。日本西部は一覧に含まれていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/overview" }]
+          },
+          {
+            "q": "アプリの認証にもクラスターへの ID 割り当てが必要ですか？",
+            "a": "不要です。アプリは自身の UMI で認証でき、データベース ログインのためにクラスターへ割り当てる必要はありません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-user-assigned-managed-identities" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
