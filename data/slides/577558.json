@@ -1,0 +1,168 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577558"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T01:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "577558",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Managed Redis のキースペース通知が一般提供（GA）に",
+        "subtitleJa": "キャッシュ内のデータ変更を Pub/Sub のイベントとして受け取れます",
+        "en": "Generally Available: Azure Managed Redis keyspace notifications "
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Managed Redis"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**Azure Managed Redis** で、キーの変更や有効期限切れに応じた処理を作りたい開発者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "キャッシュを常時ポーリングせず、変更や期限切れを通知で受け取れる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "イベント駆動の処理が必要な場合に設定を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "キー変更・期限切れなどを Pub/Sub 経由のイベントで受け取れる。通知設定は要件の変化に合わせて更新できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "クライアントが Pub/Sub チャネルを購読し、Redis データ セットに影響するイベントを受信する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "冒頭", "retrievedAt": "2026-11-23T01:20:00Z" }]
+            },
+            {
+              "text": "notifyKeyspaceEvents の値でイベント種別を指定。K または E が通知の受信に必須（KEA でほとんどのイベント）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "キースペース通知を有効にしてキャッシュをデプロイする", "retrievedAt": "2026-11-23T01:20:00Z" }]
+            },
+            {
+              "text": "購読は全イベント・特定イベント種別・特定キーから選べる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "イベントを確認して購読する", "retrievedAt": "2026-11-23T01:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Azure portal: キャッシュ → [詳細設定] → キースペース通知を有効化 → イベント種別の文字列を入力 → [保存]",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "Azure ポータルでキースペース通知を有効にする", "retrievedAt": "2026-11-23T01:20:00Z" }]
+            },
+            {
+              "text": "ARM テンプレート: databases の notifyKeyspaceEvents を設定して az deployment group create でデプロイ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "キースペース通知を有効にしてキャッシュをデプロイする", "retrievedAt": "2026-11-23T01:20:00Z" }]
+            },
+            {
+              "text": "redis-cli などで 2 つのセッションを開き、購読側と操作側でイベントを確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "Redis クライアントの接続", "retrievedAt": "2026-11-23T01:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Redis Insight または redis-cli が必要。ARM テンプレートの理解も前提",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "Prerequisites", "retrievedAt": "2026-11-23T01:20:00Z" }]
+            },
+            {
+              "text": "テンプレートで更新する際は、既存のキャッシュ設定を含めて他のプロパティの上書きを防ぐ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "通知設定を更新する", "retrievedAt": "2026-11-23T01:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "更新と変更", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "設定はキャッシュを再作成せず変更でき、データ損失なしで有効・無効・変更が可能（例: KEA から Ex）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "通知設定を更新する", "retrievedAt": "2026-11-23T01:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "キー変更の監視、期限切れへの対応、後続処理の起動をポーリングなしで行う",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "azure-managed-redis", "term": "Azure Managed Redis", "type": "product",
+          "oneLine": { "text": "Redis Enterprise に基づくメモリ内データ ストアを提供する、Microsoft 運用のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/overview", "locator": "冒頭", "retrievedAt": "2026-11-23T01:20:00Z" }] }
+        },
+        {
+          "termKey": "keyspace-notifications", "term": "キースペース通知", "type": "feature",
+          "oneLine": { "text": "Redis データ セットに影響するイベントを、Pub/Sub チャネルの購読で受け取れる機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "冒頭", "retrievedAt": "2026-11-23T01:20:00Z" }] }
+        },
+        {
+          "termKey": "pubsub", "term": "Pub/Sub", "type": "term",
+          "oneLine": { "text": "クライアントがチャネルを購読し、発行されたイベントを受け取る仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "冒頭", "retrievedAt": "2026-11-23T01:20:00Z" }] }
+        },
+        {
+          "termKey": "label-ga", "term": "GA（一般提供）", "type": "label",
+          "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-23T01:20:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577558",
+        "learn": [
+          { "title": "Redis キースペース通知を有効にする", "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locale": "ja-jp" },
+          { "title": "Azure Managed Redis とは", "url": "https://learn.microsoft.com/ja-jp/azure/redis/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どのイベントを通知対象にできますか？",
+            "a": "notifyKeyspaceEvents の文字列で指定します。KEA でほとんどのイベントが対象で、K または E が受信に必須です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "キースペース通知を有効にしてキャッシュをデプロイする", "retrievedAt": "2026-11-23T01:20:00Z" }]
+          },
+          {
+            "q": "既存のキャッシュでも有効にできますか？",
+            "a": "はい。Azure portal の [詳細設定] で有効化できます。設定変更にキャッシュの再作成は不要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "Azure ポータルでキースペース通知を有効にする", "retrievedAt": "2026-11-23T01:20:00Z" }]
+          },
+          {
+            "q": "設定を変更するとデータは失われますか？",
+            "a": "テンプレートを再デプロイして通知設定を更新しても、データ損失はありません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/enable-redis-keyspace-notifications", "locator": "通知設定を更新する", "retrievedAt": "2026-11-23T01:20:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
