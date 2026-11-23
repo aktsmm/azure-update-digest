@@ -1,0 +1,104 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577568"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T01:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "577568",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Managed Redis の「エージェント キット」がパブリック プレビュー",
+        "subtitleJa": "AI コーディング アシスタントが Redis の設計・実装・運用の指針を参照できます",
+        "en": "Public Preview: Azure Managed Redis agent kit"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Managed Redis"],
+        "categories": ["databases", "ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Azure Managed Redis** を使う（または移行を検討する）アプリ開発者・運用担当者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "AI 支援の開発フロー内で、本番向け Redis の推奨事項を参照できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。生成結果は確認とテストのうえ本番で使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "制限事項と安全な使用", "retrievedAt": "2026-11-23T01:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "キャッシュ・検索・AI パターンや、プロビジョニング・ネットワーク・セキュリティ・可用性などの指針を、AI 支援の開発ワークフローから直接利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "2 つのスキル: redis-code（アプリ コード）/ azure-redis-infra（構築・運用）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "キットでできること", "retrievedAt": "2026-11-23T01:30:00Z" }] },
+            { "text": "コードの確認、インフラの計画、ワークロードに合わせた推奨事項の取得に使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "冒頭", "retrievedAt": "2026-11-23T01:30:00Z" }] },
+            { "text": "Azure Cache for Redis / Enterprise から Azure Managed Redis への移行ワークフローにも接続", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "指針の提供であり、正確性や性能は保証されない。生成物は確認・テストが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "制限事項と安全な使用", "retrievedAt": "2026-11-23T01:30:00Z" }] },
+            { "text": "導入だけでは Azure への認証やリソース操作の権限は付与されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "制限事項と安全な使用", "retrievedAt": "2026-11-23T01:30:00Z" }] },
+            { "text": "Agent Skills 対応の AI コーディング アシスタントが前提", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "Prerequisites", "retrievedAt": "2026-11-23T01:30:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "setup", "heading": "導入方法", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "npx skills add AzureManagedRedis/amr-agent-kit（Node.js 22.20.0 以降）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "npx を使用してインストールする", "retrievedAt": "2026-11-23T01:30:00Z" }] },
+            { "text": "Copilot CLI では /plugin install amr@amr-agent-kit でも導入可。方法は 1 つに統一", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "GitHub Copilot CLI プラグインとしてインストールする", "retrievedAt": "2026-11-23T01:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "coverage", "heading": "カバー範囲", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "クライアント設定、データ パターン、性能、ベクター検索・RAG などの AI 用途", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "キットでできること", "retrievedAt": "2026-11-23T01:30:00Z" }] },
+            { "text": "ARM / Bicep / Terraform、プライベート接続、高可用性、geo レプリケーション、監視", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "キットでできること", "retrievedAt": "2026-11-23T01:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "既存の Redis コードやインフラ定義の監査で、指摘の妥当性を検証環境で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "機密情報や顧客データはプロンプトに含めない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "制限事項と安全な使用", "retrievedAt": "2026-11-23T01:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "amr", "term": "Azure Managed Redis", "type": "product", "oneLine": { "text": "Redis Enterprise をベースに、Microsoft が運用するインメモリ データ ストア。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/redis/overview", "locator": "冒頭", "retrievedAt": "2026-11-23T01:30:00Z" }] } },
+        { "termKey": "agent-kit", "term": "エージェント キット", "type": "feature", "oneLine": { "text": "AI コーディング アシスタントに Redis 構築のガイダンスを提供するスキルの集合。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "冒頭", "retrievedAt": "2026-11-23T01:30:00Z" }] } },
+        { "termKey": "agent-skills", "term": "エージェント スキル", "type": "term", "oneLine": { "text": "アシスタントがタスクに関連するときに読み込める、指示と参照資料。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "冒頭", "retrievedAt": "2026-11-23T01:30:00Z" }] } },
+        { "termKey": "rag", "term": "RAG", "type": "term", "oneLine": { "text": "取得拡張生成。キットの AI アプリ向け指針に含まれる設計テーマ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locator": "キットでできること", "retrievedAt": "2026-11-23T01:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-23T01:30:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577568",
+        "learn": [{ "title": "Azure Managed Redis エージェント キット (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "利用に Azure サブスクリプションは必要ですか？", "a": "スキルのインストールやサンプル コードの確認に Azure サブスクリプションは不要です。Azure リソースの作成・変更には必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit" }] },
+          { "q": "どのアシスタントで使えますか？", "a": "Agent Skills 対応のアシスタントが対象です。例: VS Code の GitHub Copilot、Copilot CLI、Claude Code、Codex。機能はホストごとに異なります。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit" }] },
+          { "q": "導入の前提条件や方法は？", "a": "npx 方式は Node.js 22.20.0 以降が必要です。Copilot CLI ではプラグインとしても導入できます。重複を避けるため方法は 1 つにします。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/agent-kit" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
