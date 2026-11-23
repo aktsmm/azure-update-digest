@@ -1,0 +1,171 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577531"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T01:07:00Z"
+  },
+  "slides": [
+    {
+      "key": "577531",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Cosmos DB のフルテキスト検索で BM25 スコアを取得可能に（GA）",
+        "subtitleJa": "検索結果ごとの関連性スコアをアプリから直接参照でき、並び順の理由が分かります",
+        "en": "Generally Available: Azure Cosmos DB full-text search BM25 score projection"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Cosmos DB"],
+        "categories": ["databases", "iot"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Cosmos DB for NoSQL のフルテキスト検索で**検索アプリを作っている方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "並び順の理由が見え、表示や調整に活用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "検索の関連性を可視化したい場合に利用を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "各結果の BM25 関連性スコアをアプリから直接参照でき、並び順の理由を把握しやすくなる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "FullTextScore が BM25 スコアを返し、WHERE・ORDER BY RANK・SELECT で使える",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/cosmos-db/query/fulltextscore", "locator": "戻り値の型", "retrievedAt": "2026-11-23T01:10:00Z" }]
+            },
+            {
+              "text": "BM25 は用語の頻度・逆ドキュメント頻度・文書長を考慮して順位付け",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search", "locator": "フルテキスト検索とは", "retrievedAt": "2026-11-23T01:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "フルテキスト ポリシーとインデックスを設定し、データを挿入してクエリ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search", "locator": "フルテキスト検索の使用方法", "retrievedAt": "2026-11-23T01:10:00Z" }]
+            },
+            {
+              "text": "SELECT に FullTextScore(...) AS score を書き、同じ式を ORDER BY RANK にも指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search", "locator": "FullTextScore プロジェクションとフィルター処理", "retrievedAt": "2026-11-23T01:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "SELECT への射影は、同じ式が ORDER BY RANK にある場合のみ可能",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search-faq", "locator": "FullTextscore によって返されたスコアを確認できますか?", "retrievedAt": "2026-11-23T01:10:00Z" }]
+            },
+            {
+              "text": "フルテキスト インデックスが必要。JOIN 内の FullTextScore は未サポート",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [
+                { "url": "https://learn.microsoft.com/ja-jp/cosmos-db/query/fulltextscore", "locator": "注釈", "retrievedAt": "2026-11-23T01:10:00Z" },
+                { "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search-faq", "locator": "既知の制限事項", "retrievedAt": "2026-11-23T01:10:00Z" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "関連機能", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "FullTextContains 系は条件に一致するかを判定、FullTextScore は関連性を数値化",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search", "locator": "フルテキスト検索クエリ", "retrievedAt": "2026-11-23T01:10:00Z" }]
+            },
+            {
+              "text": "RRF システム関数の引数としても使える",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/cosmos-db/query/fulltextscore", "locator": "注釈", "retrievedAt": "2026-11-23T01:10:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "想定外の並び順の調査や、関連性の画面表示に使う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            {
+              "text": "長い語句より、個々のキーワードに分けた方が高速な場合がある",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search-faq", "locator": "ORDER BY RANK の待機時間", "retrievedAt": "2026-11-23T01:10:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "full-text-search", "term": "フルテキスト検索", "type": "feature", "oneLine": { "text": "ステミングやトークン化を用い、外部検索サービスなしでテキストを検索する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search", "locator": "冒頭", "retrievedAt": "2026-11-23T01:10:00Z" }] } },
+        { "termKey": "bm25", "term": "BM25", "type": "term", "oneLine": { "text": "文書の関連性を評価して順位付けするスコアリング方式（Best Matching 25）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search", "locator": "フルテキスト検索とは", "retrievedAt": "2026-11-23T01:10:00Z" }] } },
+        { "termKey": "fulltextscore", "term": "FullTextScore", "type": "feature", "oneLine": { "text": "フルテキスト検索の関連性を示す BM25 スコアを返すシステム関数。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/cosmos-db/query/fulltextscore", "locator": "冒頭", "retrievedAt": "2026-11-23T01:10:00Z" }] } },
+        { "termKey": "order-by-rank", "term": "ORDER BY RANK", "type": "term", "oneLine": { "text": "スコアの高い（関連性の高い）ドキュメントを上位に並べるクエリ句。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search", "locator": "FullTextScore", "retrievedAt": "2026-11-23T01:10:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-23T01:10:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Cosmos DB は全リージョンで提供される基盤サービス",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/en-us/azure/reliability/availability-service-by-category", "locator": "Foundational services", "retrievedAt": "2026-11-23T01:10:00Z" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "スコアを検索結果に含めるにはどう書きますか？",
+            "a": "SELECT に FullTextScore(...) AS score を書き、同じ式を ORDER BY RANK にも指定します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search-faq" }]
+          },
+          {
+            "q": "利用の前提条件や制限は？",
+            "a": "フルテキスト インデックスが必要です。JOIN 内での FullTextScore は未サポートです。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/cosmos-db/query/fulltextscore" },
+              { "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search-faq" }
+            ]
+          },
+          {
+            "q": "クエリが遅い・RU が高い場合の対処は？",
+            "a": "フルテキスト ポリシーとインデックスを定義し、長い語句は個別キーワードに分けると改善する場合があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search-faq" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577531",
+        "learn": [
+          { "title": "Azure Cosmos DB for NoSQL でのフルテキスト検索", "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search", "locale": "ja-jp" },
+          { "title": "FULLTEXTSCORE - Cosmos DB のクエリ言語", "url": "https://learn.microsoft.com/ja-jp/cosmos-db/query/fulltextscore", "locale": "ja-jp" },
+          { "title": "Azure Cosmos DB のフルテキスト検索に関してよく寄せられる質問", "url": "https://learn.microsoft.com/ja-jp/azure/cosmos-db/gen-ai/full-text-search-faq", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
