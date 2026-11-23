@@ -1,0 +1,98 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581645"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T00:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "581645",
+      "kind": "announcement",
+      "kindSource": "tags",
+      "label": "アナウンス",
+      "title": {
+        "ja": "Azure Government 向けの新しい Azure Databricks がベータ版で利用可能に",
+        "subtitleJa": "非運用ワークロード専用。Private Link 必須、アクセスはサブスクリプション単位",
+        "en": "Announcing: The new Azure Databricks on Azure Government is now in Beta"
+      },
+      "meta": {
+        "publishedJst": "2026-11-19",
+        "modifiedJst": "2026-11-19",
+        "availability": [{ "rawRing": "Effective", "year": 2026, "month": "November" }],
+        "status": null,
+        "products": ["Azure Databricks"],
+        "categories": ["databases", "ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**米国の公共部門機関とそのパートナー**で、Azure Government 上で Azure Databricks を検証したい人", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Unity Catalog、サーバーレスの Databricks SQL、システム テーブルを Azure Government で試せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "参加するには、Databricks ワークスペースを一度も含まない新しい Azure Government サブスクリプションで、プレビュー機能を登録する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "Requirements", "retrievedAt": "2026-11-23T00:10:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "新しい Azure Databricks 環境がベータ版として Azure Government で利用可能。既存のワークスペースは移行されない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "適用範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Unity Catalog、サーバーレス コンピューティングの Databricks SQL、システム テーブルを含む", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既定で、コンプライアンス セキュリティ プロファイルが有効で、Azure Private Link が必須", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "Azure Government 概要", "retrievedAt": "2026-11-23T00:10:00Z" }] },
+            { "text": "顧客データは米国政府クラウドの usgovva・usgovaz リージョンに保存・処理", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "データの保存場所", "retrievedAt": "2026-11-23T00:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "permissions", "heading": "前提条件・制限", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "アクセスはサブスクリプション単位。ワークスペース未使用の新規サブスクリプションが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "ベータ版の制限事項", "retrievedAt": "2026-11-23T00:10:00Z" }] },
+            { "text": "機能「Azure Databricks New GovCloud 環境」の登録には、プレビュー機能の登録権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "Requirements", "retrievedAt": "2026-11-23T00:10:00Z" }] },
+            { "text": "ワークスペースの作成前に登録が必要。作成済みのものは新環境にならない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "プレビュー機能を登録する", "retrievedAt": "2026-11-23T00:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "impact-check", "heading": "影響・アクション", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "非運用ワークロード専用。CUI など規制対象データの処理は不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "Compliance", "retrievedAt": "2026-11-23T00:10:00Z" }] },
+            { "text": "既存環境のサブスクリプションに登録すると、ワークスペース操作がブロックされる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "プレビュー機能を登録する", "retrievedAt": "2026-11-23T00:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-databricks", "term": "Azure Databricks", "type": "product", "oneLine": { "text": "Databricks のデータ + AI プラットフォームを Azure 上で提供するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "Azure Government 概要", "retrievedAt": "2026-11-23T00:10:00Z" }] } },
+        { "termKey": "azure-government", "term": "Azure Government", "type": "product", "oneLine": { "text": "米国政府機関とそのパートナー向けの、グローバル Azure から物理的に隔離された専用クラウド。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "Azure Government 概要", "retrievedAt": "2026-11-23T00:10:00Z" }] } },
+        { "termKey": "compliance-security-profile", "term": "コンプライアンス セキュリティ プロファイル", "type": "feature", "oneLine": { "text": "追加の監視やノード間暗号化の強制など、コンプライアンス要件を満たす機能群。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "コンプライアンス セキュリティ プロファイル", "retrievedAt": "2026-11-23T00:10:00Z" }] } },
+        { "termKey": "private-link", "term": "Azure Private Link", "type": "feature", "oneLine": { "text": "この環境で、フロントエンドとバックエンドの接続に必要となる接続機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "Azure Government 概要", "retrievedAt": "2026-11-23T00:10:00Z" }] } },
+        { "termKey": "cui", "term": "CUI", "type": "term", "oneLine": { "text": "管理された非機密情報。ベータ版ワークスペースでの処理は許可されていない。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "Azure Government 概要", "retrievedAt": "2026-11-23T00:10:00Z" }] } },
+        { "termKey": "beta", "term": "ベータ", "type": "label", "oneLine": { "text": "この環境の提供段階。ベータ期間中は本番ワークロードがサポートされない。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "ベータ版の制限事項", "retrievedAt": "2026-11-23T00:10:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "米国政府向けの usgovva・usgovaz リージョンでの提供",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locator": "リージョンと URL", "retrievedAt": "2026-11-23T00:10:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581645",
+        "learn": [{ "title": "Azure Databricks on Microsoft Azure Government", "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか", "a": "使えません。Azure Government の usgovva・usgovaz リージョンで提供されます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud" }] },
+          { "q": "本番や機密データに使えますか", "a": "使えません。本番ワークロードと CUI など規制対象データの処理は、ベータ期間中はサポートされません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud" }] },
+          { "q": "既存のワークスペースは移行されますか", "a": "移行されません。ベータ登録は、既存のワークスペースやデータを移行する方法ではありません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud" }] },
+          { "q": "参加条件は何ですか", "a": "ワークスペースを一度も含まない新規の Azure Government サブスクリプションと、プレビュー機能の登録権限が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/databricks/security/privacy/gov-cloud" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
