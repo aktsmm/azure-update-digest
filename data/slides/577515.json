@@ -1,0 +1,122 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577515"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T01:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "577515",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Database for MySQL が Premium SSD v2 に対応",
+        "subtitleJa": "容量・IOPS・スループットを個別に調整（パブリック プレビュー）",
+        "en": "Public Preview: Azure Database for MySQL on Premium SSD v2"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Database for MySQL"],
+        "categories": ["storage", "databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Azure Database for MySQL フレキシブル サーバー**で性能とコストの最適化を検討する利用者", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ワークロードに合わせて IOPS とスループットだけを増減でき、コストを最適化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビュー期間中の評価向け。新規サーバー作成時にのみ選択できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "Premium SSD v2 のサーバーを作成する (プレビュー)", "retrievedAt": "2026-11-23T01:00:00Z" }] }
+      },
+      "pricing": {
+        "kind": "paid",
+        "text": "3,000 IOPS・125 MB/秒までは追加料金なし。それを超えるプロビジョニングは追加料金",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "Premium ファイル共有と Premium SSD v2 の違い", "retrievedAt": "2026-11-23T01:00:00Z" }]
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "Premium ファイル共有では、サーバーが到達できる最大 IOPS は選択したコンピューティング サイズで決まっていた",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "Premium ファイル共有と Premium SSD v2 の違い", "retrievedAt": "2026-11-23T01:00:00Z" }]
+        },
+        "after": {
+          "text": "Premium SSD v2 では容量・IOPS・スループットをいつでも個別に調整でき、Premium ファイル共有より高い性能と価格性能比を得られる",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "Premium SSD v2 (プレビュー)", "retrievedAt": "2026-11-23T01:00:00Z" }]
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "容量 1 GiB～64 TiB、IOPS 3,000～80,000、スループット 125～2,000 MB/秒", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "Premium ファイル共有と Premium SSD v2 の違い", "retrievedAt": "2026-11-23T01:00:00Z" }] },
+            { "text": "高可用性あり／なし、Private Link、Entra ID 認証、PITR などに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "サポートされる機能", "retrievedAt": "2026-11-23T01:00:00Z" }] },
+            { "text": "最新の General Purpose / Memory-Optimized v6 コンピューティング SKU に対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "Premium SSD v2 (プレビュー)", "retrievedAt": "2026-11-23T01:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "v6 コンピューティング SKU のみ。バースト可能レベルでの作成は不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "制限事項と考慮事項", "retrievedAt": "2026-11-23T01:00:00Z" }] },
+            { "text": "作成時にストレージの種類を選択。既存サーバーの変更や Premium ファイル共有からの移行は不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "制限事項と考慮事項", "retrievedAt": "2026-11-23T01:00:00Z" }] },
+            { "text": "geo 冗長バックアップ、自動拡張、読み取りレプリカ、CMK は未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "制限事項と考慮事項", "retrievedAt": "2026-11-23T01:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ピーク時だけ IOPS やスループットが必要なワークロードで、検証環境にて性能とコストを比較する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "必要な機能（読み取りレプリカ・CMK など）が未対応でないかを事前に確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "premium-ssd-v2", "term": "Premium SSD v2", "type": "feature", "oneLine": { "text": "MySQL フレキシブル サーバー向けの高パフォーマンス ストレージ オプション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "冒頭", "retrievedAt": "2026-11-23T01:00:00Z" }] } },
+        { "termKey": "iops", "term": "IOPS", "type": "term", "oneLine": { "text": "1 秒あたりの入出力操作の回数。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "Premium SSD v2 (プレビュー)", "retrievedAt": "2026-11-23T01:00:00Z" }] } },
+        { "termKey": "baseline", "term": "ベースライン", "type": "term", "oneLine": { "text": "追加料金なしで含まれる最小の IOPS（3,000）とスループット（125 MB/秒）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "Premium ファイル共有と Premium SSD v2 の違い", "retrievedAt": "2026-11-23T01:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-23T01:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "サポート リージョン一覧に東日本・西日本が含まれる（プレビューは一部リージョンのみ）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-23T01:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577515",
+        "learn": [{ "title": "Azure Database for MySQL フレキシブル サーバーの Premium SSD v2 ストレージ オプション", "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "サポート リージョンに東日本と西日本が含まれます。ただしプレビューのため、対応は MySQL フレキシブル サーバーの対応リージョンの一部です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "サポートされているリージョン" }]
+          },
+          {
+            "q": "既存サーバーを Premium SSD v2 に移行できますか？",
+            "a": "できません。ストレージの種類は作成時に選択し、既存サーバーの変更や Premium ファイル共有からの移行はサポートされていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "制限事項と考慮事項" }]
+          },
+          {
+            "q": "追加費用はかかりますか？",
+            "a": "3,000 IOPS と 125 MB/秒のベースラインは追加料金なしです。それを超える IOPS やスループットをプロビジョニングすると追加料金が発生します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/mysql/flexible-server/concepts-storage-premium-ssd-v2", "locator": "Premium ファイル共有と Premium SSD v2 の違い" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
