@@ -1,0 +1,179 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["575111"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T01:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "575111",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure HorizonDB の Microsoft Entra 認証が GA に",
+        "subtitleJa": "パスワードに頼らず、ID ベースでデータベースへ接続・アクセス管理できます",
+        "en": "Generally Available: Microsoft Entra authentication for Azure HorizonDB"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure HorizonDB"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Azure HorizonDB のクラスターを使う**データベース管理者・アプリ開発者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "ID とアクセスを一元管理でき、認証情報の管理負担を減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "パスワード管理を減らしたい場合に導入を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "ローカルで管理するデータベース パスワードに頼る認証が中心",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        },
+        "after": {
+          "text": "Microsoft Entra 認証で ID を一元管理。HorizonDB で推奨される認証方式で、Entra 専用にもパスワード認証との併用にもできる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Entra ID が ID を検証し、OAuth 2.0 アクセス トークン（JWT）を発行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-authentication", "locator": "Azure HorizonDB での Microsoft Entra ID のしくみ", "retrievedAt": "2026-11-23T01:00:00Z" }]
+            },
+            {
+              "text": "クライアントはトークンで接続し、クラスターが Entra ID で検証",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-authentication", "locator": "Azure HorizonDB での Microsoft Entra ID のしくみ", "retrievedAt": "2026-11-23T01:00:00Z" }]
+            },
+            {
+              "text": "クラスター レベルで構成し、配下のすべてのプールに適用",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-authentication", "locator": "Azure HorizonDB での Microsoft Entra ID のしくみ", "retrievedAt": "2026-11-23T01:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "作成時: [認証] で Entra 認証モードを選び、Entra 管理者を指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-how-to-configure", "locator": "クラスターの作成時", "retrievedAt": "2026-11-23T01:00:00Z" }]
+            },
+            {
+              "text": "既存: Security > Authentication で認証モードを選び保存",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-how-to-configure", "locator": "既存のクラスターの場合", "retrievedAt": "2026-11-23T01:00:00Z" }]
+            },
+            {
+              "text": "モード: Entra のみ / PostgreSQL + Entra / PostgreSQL のみ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-how-to-configure", "locator": "既存のクラスターの場合", "retrievedAt": "2026-11-23T01:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "管理者に割り当てる Entra ユーザー / グループ / サービス プリンシパルが必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-how-to-configure", "locator": "Prerequisites", "retrievedAt": "2026-11-23T01:00:00Z" }]
+            },
+            {
+              "text": "単一テナントのみ。グループ メンバーシップは自動同期されない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-authentication", "locator": "制限事項と考慮事項", "retrievedAt": "2026-11-23T01:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ローカル管理者はパスワード認証、Entra 管理者は Entra ID で認証",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-authentication", "locator": "管理者ロール", "retrievedAt": "2026-11-23T01:00:00Z" }]
+            },
+            {
+              "text": "Entra 管理者は Entra ベースのロールを作成・管理できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-authentication", "locator": "管理者ロール", "retrievedAt": "2026-11-23T01:00:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Entra 専用に切り替える前に、アプリがトークンで接続できるか確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-how-to-configure", "locator": "既存のクラスターの場合（Warning）", "retrievedAt": "2026-11-23T01:00:00Z" }]
+            },
+            {
+              "text": "マネージド ID やサービス プリンシパルでもアプリから接続できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-authentication", "locator": "Microsoft Entra ID 経由の接続", "retrievedAt": "2026-11-23T01:00:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-horizondb", "term": "Azure HorizonDB", "type": "product", "oneLine": { "text": "PostgreSQL をベースにした、フル マネージドのクラウド ネイティブ データベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/horizondb/overview", "locator": "冒頭", "retrievedAt": "2026-11-23T01:00:00Z" }] } },
+        { "termKey": "entra-auth", "term": "Microsoft Entra 認証", "type": "feature", "oneLine": { "text": "Entra ID の ID を使って HorizonDB に接続するための仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-authentication", "locator": "冒頭", "retrievedAt": "2026-11-23T01:00:00Z" }] } },
+        { "termKey": "access-token", "term": "アクセス トークン", "type": "term", "oneLine": { "text": "Entra ID が ID 検証後に発行する OAuth 2.0 のトークンで、接続の認証に使う。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-authentication", "locator": "しくみ", "retrievedAt": "2026-11-23T01:00:00Z" }] } },
+        { "termKey": "cluster", "term": "クラスター", "type": "term", "oneLine": { "text": "接続・保護・バックアップ・復元の単位となる HorizonDB のリソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/horizondb/overview", "locator": "Azure HorizonDB cluster", "retrievedAt": "2026-11-23T01:00:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-23T01:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "HorizonDB は Japan East で提供（Japan West は一覧になし）。Entra 認証に個別のリージョン制限は記載されていない",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/horizondb/overview", "locator": "Azure regions", "retrievedAt": "2026-11-23T01:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=575111",
+        "learn": [
+          { "title": "Azure HorizonDB での Microsoft Entra 認証", "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-authentication", "locale": "ja-jp" },
+          { "title": "Azure HorizonDB でMicrosoft Entra ID認証を構成する", "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-how-to-configure", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "パスワード認証は使えなくなりますか？",
+            "a": "いいえ。Entra 専用にも、PostgreSQL 認証との併用にもできます。Entra 専用では、パスワード依存のクライアントは新規接続できません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-how-to-configure", "locator": "既存のクラスターの場合", "retrievedAt": "2026-11-23T01:00:00Z" }]
+          },
+          {
+            "q": "既存クラスターでも設定できますか？",
+            "a": "はい。作成時でもプロビジョニング後でも構成できます。管理者の変更にはコンピューティング プールが使用可能である必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-how-to-configure", "locator": "Prerequisites", "retrievedAt": "2026-11-23T01:00:00Z" }]
+          },
+          {
+            "q": "複数テナントのユーザーを使えますか？",
+            "a": "使えません。マルチテナントの Entra 認証は未サポートで、クラスターと同じテナントの ID が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/horizondb/security/security-microsoft-entra-authentication", "locator": "制限事項と考慮事項", "retrievedAt": "2026-11-23T01:00:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
