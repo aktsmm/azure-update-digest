@@ -1,0 +1,86 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["572591"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-23T00:48:58Z"
+  },
+  "slides": [
+    {
+      "key": "572591",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "AKS の Windows ノードで Trusted Launch がプレビュー",
+        "subtitleJa": "Windows Server 2025 ノードに Secure Boot と vTPM の測定済みブートを適用（パブリック プレビュー）",
+        "en": "Public Preview: Windows Trusted Launch"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Kubernetes Service (AKS)"],
+        "categories": ["compute", "containers"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "規制・セキュリティ要件の高い環境で **AKS の Windows ノード プールを運用するプラットフォーム チーム**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "Windows Server 2025 ノードのブート チェーン保護を、AKS のノード プール モデルのまま使える（評価向け）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。利用には機能フラグの登録が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-trusted-launch", "locator": "制限事項", "retrievedAt": "2026-11-23T00:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": { "text": "Trusted Launch のサポートは Windows ノード プールには及んでいなかった", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "after": { "text": "Windows Server 2025 の AKS ノードで、Secure Boot と vTPM による測定済みブートを有効にできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Windows Server 2025 のノード プールが対象（osType: Windows、osSKU: Windows2025）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-trusted-launch", "locator": "制限事項", "retrievedAt": "2026-11-23T00:50:00Z" }] },
+            { "text": "署名済みブート コンポーネントを検証し、ブート チェーン全体の整合性を確認できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-trusted-launch", "locator": "冒頭", "retrievedAt": "2026-11-23T00:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "WindowsTrustedLaunchPreview 機能フラグの登録と Kubernetes 1.32 以降が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-trusted-launch", "locator": "制限事項", "retrievedAt": "2026-11-23T00:50:00Z" }] },
+            { "text": "第 2 世代 VM と Virtual Machine Scale Sets が必須。可用性セットは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-trusted-launch", "locator": "制限事項", "retrievedAt": "2026-11-23T00:50:00Z" }] },
+            { "text": "ノード プール作成時の FIPS 有効化が必要（Windows Server 2025 は既定で有効）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-trusted-launch", "locator": "制限事項", "retrievedAt": "2026-11-23T00:50:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "検証用の Windows ノード プールで機能フラグを登録し、ブート整合性の確認と既存ワークロードの動作を試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "aks", "term": "AKS", "type": "product", "oneLine": { "text": "Azure でマネージド Kubernetes クラスターをデプロイ・運用できるサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/what-is-aks", "locator": "冒頭", "retrievedAt": "2026-11-23T00:50:00Z" }] } },
+        { "termKey": "trusted-launch", "term": "Trusted Launch", "type": "feature", "oneLine": { "text": "ブートキットやルートキットなどの高度な攻撃から第 2 世代 VM を保護する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-trusted-launch", "locator": "冒頭", "retrievedAt": "2026-11-23T00:50:00Z" }] } },
+        { "termKey": "secure-boot", "term": "セキュア ブート", "type": "term", "oneLine": { "text": "信頼された発行元が署名した OS ブート コンポーネントだけを起動させる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-trusted-launch", "locator": "セキュア ブート", "retrievedAt": "2026-11-23T00:50:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-23T00:50:00Z" }] } }
+      ],
+      "speakerNotes": {
+        "qa": [
+          { "q": "どの条件で使えますか。", "a": "Windows Server 2025、Kubernetes 1.32 以降、第 2 世代 VM、WindowsTrustedLaunchPreview フラグの登録が必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-trusted-launch" }] },
+          { "q": "FIPS との関係は。", "a": "ノード プール作成時の FIPS 有効化が必要で、Windows Server 2025 では FIPS が既定で有効です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-trusted-launch" }] }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=572591",
+        "learn": [{ "title": "Azure Kubernetes Service (AKS) の信頼された起動", "url": "https://learn.microsoft.com/ja-jp/azure/aks/use-trusted-launch", "locale": "ja-jp" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
