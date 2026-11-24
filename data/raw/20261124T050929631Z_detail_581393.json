@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "581393"
+  },
+  "fetchedAt": "2026-11-24T05:09:29.631Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "581393",
+    "created": "2026-11-23T20:28:24.2431546Z",
+    "description": "Model router in Microsoft Foundry now supports the Responses API protocol in general availability on both resource and project endpoints. Set model to your model router deployment name to add automatic model selection to Responses-based applications and agents without switching to Chat Completions.Responses API support includes streaming, function tools, structured outputs, image input, multi-turn conversations with previous_response_id or conversation, stored responses, background mode, and built-in tools such as web search, file search, code interpreter, and MCP. Each response identifies the model that answered.To use model router without a deployment, set model to auto. Auto is in public preview.Learn more: From model choice to your durable\nadvantage: Build AI that keeps improving Call\nmodel router with Responses, Chat Completions, or Messages ",
+    "generalAvailabilityDate": "2026-11",
+    "id": "581393",
+    "modified": "2026-11-23T20:28:24.2431546Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Model router now supports the Responses API protocol in Microsoft Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

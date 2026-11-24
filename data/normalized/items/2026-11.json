@@ -585,6 +585,77 @@
       "availabilities": [
         {
           "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "574535",
+      "categories": [
+        "databases",
+        "ops-governance"
+      ],
+      "created": "2026-11-23T18:09:39.1428004Z",
+      "createdJst": "2026-11-24",
+      "description": "Enhanced Burstable tier (Basv2) builds on the existing burstable model with improved performance predictability and more efficient burst utilization, delivering a better cost-performance balance. Now you can run steady workloads more economically while automatically scaling to handle demand spikes. Learn more.  ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "becf3f01fcafc4fc34d8f42aa955378e067f22f1f81e12c0f6c9a3d9bc0490b9",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "0820359e82f3a53bf4f5a863ab09b2b88b405987766f39f73812240db173c0f9",
+          "modifiedAfter": "2026-11-23T18:09:39.1428004Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#574535"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:09:48.050Z",
+          "fingerprint": "becf3f01fcafc4fc34d8f42aa955378e067f22f1f81e12c0f6c9a3d9bc0490b9",
+          "modifiedAfter": "2026-11-23T18:09:39.1428004Z",
+          "modifiedBefore": "2026-11-23T18:09:39.1428004Z",
+          "rawRef": "20261124T050948050Z_detail_574535.json#574535"
+        }
+      ],
+      "ids": [
+        "574535"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "574535",
+      "modified": "2026-11-23T18:09:39.1428004Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "Databases",
+        "Hybrid + multicloud"
+      ],
+      "products": [
+        "Azure Database for PostgreSQL"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=574535",
+      "status": "In preview",
+      "tags": [
+        "Feature",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Azure Database for PostgreSQL enhanced Burstable tier (Basv2) "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
           "ring": "General Availability",
           "year": 2026
         }
@@ -1232,6 +1303,80 @@
         "Features"
       ],
       "title": "Public Preview: Private ingress for Application Gateway for Containers"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "April",
+          "ring": "Retirement",
+          "year": 2027
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "577474",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T18:11:31.4368259Z",
+      "createdJst": "2026-11-24",
+      "description": "The following Azure AI Content Safety preview capabilities will retire on April 30, 2027:Analyze MultimodalCustom categories (rapid), including text and imageConnected containers for Text, Image, and Prompt ShieldsDisconnected containers for Text, ImageEmbedded Content Safety SDKGroundedness detection in Azure AI Content Safety and Azure OpenAIIf you use these capabilities, review the recommended alternatives and plan your migration before the retirement date.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "56fb175016f76ed8b2d628edb4ee103b6b084d49b282850e524abcc7392176d9",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "9ac4341a78526b6025850f13bef57bd444eb8e710f42040a8a72858458266aa4",
+          "modifiedAfter": "2026-11-23T18:11:31.4368259Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#577474"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:09:44.664Z",
+          "fingerprint": "56fb175016f76ed8b2d628edb4ee103b6b084d49b282850e524abcc7392176d9",
+          "modifiedAfter": "2026-11-23T18:11:31.4368259Z",
+          "modifiedBefore": "2026-11-23T18:11:31.4368259Z",
+          "rawRef": "20261124T050944664Z_detail_577474.json#577474"
+        }
+      ],
+      "ids": [
+        "577474"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "retire-tag",
+          "retire-ring",
+          "retire-title"
+        ],
+        "score": 10,
+        "topics": [
+          "retirement"
+        ]
+      },
+      "latestId": "577474",
+      "modified": "2026-11-23T18:11:31.4368259Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Azure AI Content Safety"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=577474",
+      "status": null,
+      "tags": [
+        "Retirements"
+      ],
+      "title": "Retirement: Azure AI Content Safety selected features will be retired on April 30, 2027"
     },
     {
       "availabilities": [
@@ -6985,12 +7130,12 @@
         "networking",
         "security"
       ],
-      "created": "2026-11-05T17:11:31.2371706Z",
-      "createdJst": "2026-11-06",
+      "created": "2026-11-23T18:02:38.6524367Z",
+      "createdJst": "2026-11-24",
       "description": "WAF Insights for Azure Application Gateway Web Application Firewall (WAF) is now generally available. WAF Insights is a built-in experience in the WAF policy that brings WAF logs and metrics together in interactive dashboards, so you can investigate blocked requests, analyze attack patterns, and identify false positives without writing queries.With general availability, WAF Insights supports both Azure Diagnostics and resource-specific logs, renames the Triage tab to Investigate, and counts each request once by its final WAF outcome. Use the Monitor tab to track WAF activity and the most active rules, and the Investigate tab to drill down from a rule or a URL to the exact request and every rule it matched.Learn\nmore. ",
       "descriptionSource": "detail",
       "detailState": "ok",
-      "fingerprint": "8b60e8b56544d20507b62c9534ef3561afc623bad84223705b38eeb0157cd6c9",
+      "fingerprint": "2913fe452ae8c72249cd773f78b1e6aeafe6f3463b8c0c084de34e3c90b844fe",
       "history": [
         {
           "changedFields": [
@@ -7009,6 +7154,17 @@
           "modifiedAfter": "2026-11-05T17:11:31.2371706Z",
           "modifiedBefore": "2026-11-05T17:11:31.2371706Z",
           "rawRef": "20261106T012320002Z_detail_579280.json#579280"
+        },
+        {
+          "changedFields": [
+            "created",
+            "modified"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "99901d121b362d16b297766ec5d4e01b9d7e60f19fb7df4248377cf7b2990064",
+          "modifiedAfter": "2026-11-23T18:02:38.6524367Z",
+          "modifiedBefore": "2026-11-05T17:11:31.2371706Z",
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#579280"
         }
       ],
       "ids": [
@@ -7028,8 +7184,8 @@
         ]
       },
       "latestId": "579280",
-      "modified": "2026-11-05T17:11:31.2371706Z",
-      "modifiedJst": "2026-11-06",
+      "modified": "2026-11-23T18:02:38.6524367Z",
+      "modifiedJst": "2026-11-24",
       "productCategories": [
         "Networking",
         "Security"
@@ -7045,6 +7201,85 @@
         "Security"
       ],
       "title": "Generally Available: WAF Insights for Azure Application Gateway"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "579285",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-11-23T18:01:19.242036Z",
+      "createdJst": "2026-11-24",
+      "description": "WAF Insights is now generally available for Azure Front Door Web Application Firewall (WAF). WAF Insights is a built-in experience in the WAF policy that brings WAF logs and metrics together in interactive dashboards, so you can investigate blocked requests, analyze attack patterns, and identify false positives without writing queries.Use the Monitor tab to track WAF activity, outcomes, and the most active rules, and the Investigate tab to drill down from a rule or a URL to the exact request and every rule it matched, correlated with the Front Door access log by tracking reference. Azure Front Door now gets the same experience already available for Azure Application Gateway.To get started, open your Azure Front Door WAF policy in the Azure portal and select Insights. Learn\nmore.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "597d832724bc83705139f7cdb7eb46d9814c495abb73a184618a26fa907d5d88",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "c15d3bfe8cdf94d2ad083ca4a266d2cadbbc22f1d3d31dc17fbc842985ec668b",
+          "modifiedAfter": "2026-11-23T18:01:19.242036Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#579285"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:09:59.784Z",
+          "fingerprint": "597d832724bc83705139f7cdb7eb46d9814c495abb73a184618a26fa907d5d88",
+          "modifiedAfter": "2026-11-23T18:01:19.242036Z",
+          "modifiedBefore": "2026-11-23T18:01:19.242036Z",
+          "rawRef": "20261124T050959784Z_detail_579285.json#579285"
+        }
+      ],
+      "ids": [
+        "579285"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "security"
+        ]
+      },
+      "latestId": "579285",
+      "modified": "2026-11-23T18:01:19.242036Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Front Door",
+        "Web Application Firewall"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=579285",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Security"
+      ],
+      "title": "Generally Available: WAF Insights for Azure Front Door"
     },
     {
       "availabilities": [
@@ -14491,6 +14726,853 @@
       "availabilities": [
         {
           "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581333",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T21:16:32.4936935Z",
+      "createdJst": "2026-11-24",
+      "description": "Foundry IQ adds Enterprise Knowledge Graph as a knowledge source for questions that depend on relationships across your content.During indexing, it extracts entities and relationships from unstructured content, guided by an ontology you provide. Agents can use those relationships to answer multi-step questions and resolve ambiguous references.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "2cf41076ca9406532f3fc5d1e478129cf92143f59f345922763c98f4c49e172b",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "1fadaf5483dde7a0496c70aa7f6cb46c72976c263e46e26ce2d4a58d94bb4215",
+          "modifiedAfter": "2026-11-23T21:16:32.4936935Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#581333"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:08:43.455Z",
+          "fingerprint": "2cf41076ca9406532f3fc5d1e478129cf92143f59f345922763c98f4c49e172b",
+          "modifiedAfter": "2026-11-23T21:16:32.4936935Z",
+          "modifiedBefore": "2026-11-23T21:16:32.4936935Z",
+          "rawRef": "20261124T050843455Z_detail_581333.json#581333"
+        }
+      ],
+      "ids": [
+        "581333"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581333",
+      "modified": "2026-11-23T21:16:32.4936935Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581333",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Enterprise Knowledge Graph in Foundry IQ"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581338",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T21:15:04.103545Z",
+      "createdJst": "2026-11-24",
+      "description": "In Microsoft Foundry, Guardrails helps developers configure runtime safety controls for agents, including classifiers, deterministic rules, and LLM-based judges.When an administrator policy requires controls for a project, Guardrails surfaces those requirements and prevents developers from changing policy-managed settings. Developers can still add permitted agent-specific controls.Policies can be reused across agents and models in a project, and existing guardrails remain backward compatible.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "551e17d52787d3e653f255112680c8cfb032223644caad2053e67810af5790b9",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "ddf95c72f22e9155b6c27d6705f7b69829247494f1e96206c33da53f8a794479",
+          "modifiedAfter": "2026-11-23T21:15:04.103545Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#581338"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:08:47.804Z",
+          "fingerprint": "551e17d52787d3e653f255112680c8cfb032223644caad2053e67810af5790b9",
+          "modifiedAfter": "2026-11-23T21:15:04.103545Z",
+          "modifiedBefore": "2026-11-23T21:15:04.103545Z",
+          "rawRef": "20261124T050847804Z_detail_581338.json#581338"
+        }
+      ],
+      "ids": [
+        "581338"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581338",
+      "modified": "2026-11-23T21:15:04.103545Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581338",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Updated Guardrails experience in Microsoft Foundry"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581343",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T21:13:44.6107014Z",
+      "createdJst": "2026-11-24",
+      "description": "Foundry IQ can use an iterative retrieval model to break complex questions into focused searches. The model reviews search results and searches again when needed, within a configured budget, then passes the retrieved evidence to the model that answers the question.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "23b0a0e59aaf373d9c091110ad0a4b6ba058e98714d1ac8d86b9295896415eee",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "8e53a129e5408cc2cfe76627fe37717e59f7b2be36f8a9dc5d338e0b4d23389a",
+          "modifiedAfter": "2026-11-23T21:13:44.6107014Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#581343"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:08:49.996Z",
+          "fingerprint": "23b0a0e59aaf373d9c091110ad0a4b6ba058e98714d1ac8d86b9295896415eee",
+          "modifiedAfter": "2026-11-23T21:13:44.6107014Z",
+          "modifiedBefore": "2026-11-23T21:13:44.6107014Z",
+          "rawRef": "20261124T050849996Z_detail_581343.json#581343"
+        }
+      ],
+      "ids": [
+        "581343"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581343",
+      "modified": "2026-11-23T21:13:44.6107014Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581343",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: IQ Retriever Zero in Foundry IQ"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "581353",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T21:12:25.8036277Z",
+      "createdJst": "2026-11-24",
+      "description": "Azure Speech in Foundry Tools provides HD V3 voices with style and instruction control in public preview.Use supported controls to shape voice delivery for voice agents, narration, and other speech experiences.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "78def832720fc0e6c34c3eef608ef75dfd6d4afc0bddb83513297720ee464703",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "6f24f79ec268302f59a03795a76bbe13acec199d0e91cc9c28fe1b23da048d5c",
+          "modifiedAfter": "2026-11-23T21:12:25.8036277Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#581353"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:08:55.401Z",
+          "fingerprint": "78def832720fc0e6c34c3eef608ef75dfd6d4afc0bddb83513297720ee464703",
+          "modifiedAfter": "2026-11-23T21:12:25.8036277Z",
+          "modifiedBefore": "2026-11-23T21:12:25.8036277Z",
+          "rawRef": "20261124T050855401Z_detail_581353.json#581353"
+        }
+      ],
+      "ids": [
+        "581353"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [
+          "ga-ring"
+        ],
+        "score": 3,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "581353",
+      "modified": "2026-11-23T21:12:25.8036277Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581353",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Style and instruction control for HD V3 voices in Azure Speech in Foundry Tools"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581358",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T21:11:23.4493251Z",
+      "createdJst": "2026-11-24",
+      "description": "Human annotation for agent evaluations is in public preview in Microsoft Foundry, as announced in the Microsoft IQ launch blog.Reviewers can add ratings, tags, comments, and expected outputs to agent traces. Use annotated conversation traces to build evaluation datasets and curate golden datasets. Foundry can generate a task-specific rubric for each test case.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "b4b2bc326f02f08629233ec717e60ddb30c2c062d852c36ad751ca48526cdf0a",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "7b48266a3b1a0f2b6939f5d7d3ab899ae525b7bcda08a11d4769bd49a32d1abe",
+          "modifiedAfter": "2026-11-23T21:11:23.4493251Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#581358"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:08:57.719Z",
+          "fingerprint": "b4b2bc326f02f08629233ec717e60ddb30c2c062d852c36ad751ca48526cdf0a",
+          "modifiedAfter": "2026-11-23T21:11:23.4493251Z",
+          "modifiedBefore": "2026-11-23T21:11:23.4493251Z",
+          "rawRef": "20261124T050857719Z_detail_581358.json#581358"
+        }
+      ],
+      "ids": [
+        "581358"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581358",
+      "modified": "2026-11-23T21:11:23.4493251Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581358",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Human annotation for agent evaluations in Microsoft Foundry"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "581363",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T21:10:07.590009Z",
+      "createdJst": "2026-11-24",
+      "description": "In Microsoft Foundry, insights analyze agent traces to surface recurring patterns and group related issues.Review an insight and its supporting traces to investigate common failures and decide what to improve first.Use agent optimizer to test potential fixes for selected insights before you promote an updated agent.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "b967b106fc74cc014a96a597176fae0994602fb5291c553f55e9e4958ad63921",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "f579d984cc58d34a3aa805caf063e4f64581ec899591fd0fb0893c72f95986d0",
+          "modifiedAfter": "2026-11-23T21:10:07.590009Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#581363"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:09:02.983Z",
+          "fingerprint": "b967b106fc74cc014a96a597176fae0994602fb5291c553f55e9e4958ad63921",
+          "modifiedAfter": "2026-11-23T21:10:07.590009Z",
+          "modifiedBefore": "2026-11-23T21:10:07.590009Z",
+          "rawRef": "20261124T050902983Z_detail_581363.json#581363"
+        }
+      ],
+      "ids": [
+        "581363"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "581363",
+      "modified": "2026-11-23T21:10:07.590009Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581363",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Generally Available: Agent insights in Microsoft Foundry"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "581368",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T21:08:46.8893953Z",
+      "createdJst": "2026-11-24",
+      "description": "Upload files directly to a managed knowledge source in Foundry IQ. Foundry IQ processes and indexes the files for retrieval through a knowledge base, so you don't need to provision a storage account or scheduled indexer.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "ffe43bad56f3dabe1d9f0d87db71bc26f5028d82cc71d9f7f4dc7d54cf971588",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "2fed62ef88285bb6e6f5f6996654d95fff85705eb116d6e5aac054aeeecb7dc5",
+          "modifiedAfter": "2026-11-23T21:08:46.8893953Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#581368"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:09:06.178Z",
+          "fingerprint": "ffe43bad56f3dabe1d9f0d87db71bc26f5028d82cc71d9f7f4dc7d54cf971588",
+          "modifiedAfter": "2026-11-23T21:08:46.8893953Z",
+          "modifiedBefore": "2026-11-23T21:08:46.8893953Z",
+          "rawRef": "20261124T050906178Z_detail_581368.json#581368"
+        }
+      ],
+      "ids": [
+        "581368"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "581368",
+      "modified": "2026-11-23T21:08:46.8893953Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581368",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Generally Available: Files knowledge source for Foundry IQ"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581378",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T20:32:57.6289146Z",
+      "createdJst": "2026-11-24",
+      "description": "Microsoft Foundry now lets you use model router without deploying it first. In a region that supports model router, set model to auto in a Responses or Chat Completions request to your Foundry resource.By default, Auto uses the Balanced routing mode across the pool models available in your region, and each response names the model that answered. Admins can set Auto's routing mode, models, and content filter for each Foundry resource, or turn Auto off.Auto has lower rate limits than a model router deployment and processes data as Global Standard. For production traffic, deploy model router, and then change model to your deployment name.Learn more: From model choice to your durable\nadvantage: Build AI that keeps improving Quickstart:\nGet started with model router ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "9946f028eae27d3cc1fdc4e4b14679f81a0cdf5c683d0a65b4bc77e135a99d18",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "a046bfcf78ac00dc16b54d711ecdac6c52846c8f7dec2dce75b08dbc81f5ec55",
+          "modifiedAfter": "2026-11-23T20:32:57.6289146Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#581378"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:09:12.607Z",
+          "fingerprint": "9946f028eae27d3cc1fdc4e4b14679f81a0cdf5c683d0a65b4bc77e135a99d18",
+          "modifiedAfter": "2026-11-23T20:32:57.6289146Z",
+          "modifiedBefore": "2026-11-23T20:32:57.6289146Z",
+          "rawRef": "20261124T050912607Z_detail_581378.json#581378"
+        }
+      ],
+      "ids": [
+        "581378"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581378",
+      "modified": "2026-11-23T20:32:57.6289146Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581378",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Call model router without a deployment in Microsoft Foundry"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581383",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T20:31:40.6255243Z",
+      "createdJst": "2026-11-24",
+      "description": "Model router in Microsoft Foundry supports the Messages API in public preview. Messages-based applications and coding tools can use automatic model selection while keeping the Anthropic request and response format.Messages requests route only to supported Claude models, not the full model router pool. Deploy each Claude model you want to use as a Global Standard deployment in the same Foundry resource.Send requests to your resource's /anthropic/v1/messages endpoint with model set to your model router deployment name or auto. The Anthropic SDK, Claude Code, and Claude Agent SDK can use this API. Each response identifies the Claude model that answered.Learn more: From model choice to your durable\nadvantage: Build AI that keeps improving Call\nmodel router with Responses, Chat Completions, or Messages ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "925c7a1af017af53be0da7896a11f29b106034b4202a990e07a7da81c7a9174c",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "8a23d190f2a08a3ac67be91c5f17e644977e1c29cdc2d1d322d7e224b5de4fb6",
+          "modifiedAfter": "2026-11-23T20:31:40.6255243Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#581383"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:09:17.978Z",
+          "fingerprint": "925c7a1af017af53be0da7896a11f29b106034b4202a990e07a7da81c7a9174c",
+          "modifiedAfter": "2026-11-23T20:31:40.6255243Z",
+          "modifiedBefore": "2026-11-23T20:31:40.6255243Z",
+          "rawRef": "20261124T050917978Z_detail_581383.json#581383"
+        }
+      ],
+      "ids": [
+        "581383"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581383",
+      "modified": "2026-11-23T20:31:40.6255243Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581383",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Use the Messages API with model router in Microsoft Foundry"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581388",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T20:29:36.598698Z",
+      "createdJst": "2026-11-24",
+      "description": "Model router in Microsoft Foundry can use your existing model deployments to serve routed requests, in public preview. This helps you use capacity you already have while model router selects a model for each request.After selecting a model, model router first tries your eligible provisioned throughput (PTU) deployment for an OpenAI model, then your eligible pay-as-you-go deployment, and then router-managed capacity. It moves to the next option when no eligible deployment is available at that step or a deployment returns a retryable error.To use your deployment, deploy the exact model name and version from the supported model pool in the same Foundry resource. PTU support applies to OpenAI models; pay-as-you-go support applies to models across the pool. For Data Zone Standard model router deployments, only Data Zone deployments are eligible.When your PTU deployment serves a request, the model router routing fee applies in addition to your existing PTU charges. When your pay-as-you-go deployment serves it, its usage charges and the routing fee apply.Learn more: From model choice to your durable\nadvantage: Build AI that keeps improving How\nmodel router works ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "09df290aa088a6bc16fe7025342433e7476810b5f9fbb0e57e2fcb965e2ab4b5",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "92fc1f2d019fbcc9da90ce4b9dbac3fa7fad66a18daef47f964308fffc1a0053",
+          "modifiedAfter": "2026-11-23T20:29:36.598698Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#581388"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:09:23.306Z",
+          "fingerprint": "09df290aa088a6bc16fe7025342433e7476810b5f9fbb0e57e2fcb965e2ab4b5",
+          "modifiedAfter": "2026-11-23T20:29:36.598698Z",
+          "modifiedBefore": "2026-11-23T20:29:36.598698Z",
+          "rawRef": "20261124T050923306Z_detail_581388.json#581388"
+        }
+      ],
+      "ids": [
+        "581388"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581388",
+      "modified": "2026-11-23T20:29:36.598698Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581388",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Use your model deployments with model router in Microsoft Foundry"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "581393",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T20:28:24.2431546Z",
+      "createdJst": "2026-11-24",
+      "description": "Model router in Microsoft Foundry now supports the Responses API protocol in general availability on both resource and project endpoints. Set model to your model router deployment name to add automatic model selection to Responses-based applications and agents without switching to Chat Completions.Responses API support includes streaming, function tools, structured outputs, image input, multi-turn conversations with previous_response_id or conversation, stored responses, background mode, and built-in tools such as web search, file search, code interpreter, and MCP. Each response identifies the model that answered.To use model router without a deployment, set model to auto. Auto is in public preview.Learn more: From model choice to your durable\nadvantage: Build AI that keeps improving Call\nmodel router with Responses, Chat Completions, or Messages ",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "8a277634e08add916734e1456863bc623fbfc6cc599f2271565cadd36db43259",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "a3bb590f7dc510e17d575096598dfd9b0db368b5181fb2c4abc83c136c196906",
+          "modifiedAfter": "2026-11-23T20:28:24.2431546Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#581393"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:09:29.631Z",
+          "fingerprint": "8a277634e08add916734e1456863bc623fbfc6cc599f2271565cadd36db43259",
+          "modifiedAfter": "2026-11-23T20:28:24.2431546Z",
+          "modifiedBefore": "2026-11-23T20:28:24.2431546Z",
+          "rawRef": "20261124T050929631Z_detail_581393.json#581393"
+        }
+      ],
+      "ids": [
+        "581393"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "581393",
+      "modified": "2026-11-23T20:28:24.2431546Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581393",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Generally Available: Model router now supports the Responses API protocol in Microsoft Foundry"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581398",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T20:15:53.5839928Z",
+      "createdJst": "2026-11-24",
+      "description": "Automatic model selection in AI Gateway uses model router from Microsoft Foundry to rank the models behind a model alias for each request. The gateway combines that ranking with the alias's priorities and weights to select a backend, while its access controls, policies, and telemetry continue to apply.\n\nChoose Balanced, Quality, or Cost as the selection mode. With Model first, the gateway selects the best-fit model across priority groups. With Priorities first, it selects only from the highest-priority group. Weights split traffic among backends for the selected model.\n\nBackends can be Foundry or Azure OpenAI deployments, provider-hosted models, models on other clouds, or your own OpenAI-compatible endpoints. Each backend must run a model supported by model router.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "bcdb873e41f7965d3639e9e37d7f8fbde83ac95327f8ea7bbfd4bd06120792bd",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "ad51cc85a01352c65af737771d76a8976686ccf2abcb0aa11d09e103d91907ec",
+          "modifiedAfter": "2026-11-23T20:15:53.5839928Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#581398"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:09:32.878Z",
+          "fingerprint": "bcdb873e41f7965d3639e9e37d7f8fbde83ac95327f8ea7bbfd4bd06120792bd",
+          "modifiedAfter": "2026-11-23T20:15:53.5839928Z",
+          "modifiedBefore": "2026-11-23T20:15:53.5839928Z",
+          "rawRef": "20261124T050932878Z_detail_581398.json#581398"
+        }
+      ],
+      "ids": [
+        "581398"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581398",
+      "modified": "2026-11-23T20:15:53.5839928Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581398",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Use model router with AI Gateway"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
           "ring": "General Availability",
           "year": 2026
         }
@@ -14629,6 +15711,80 @@
         "Microsoft Ignite"
       ],
       "title": "Public Preview: Microsoft Copilot harness support in Foundry Toolkit for VS Code"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "581478",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-23T20:13:42.909374Z",
+      "createdJst": "2026-11-24",
+      "description": "Foundry Toolkit for Visual Studio Code now deploys hosted agents from prebuilt images in customer-managed container registries, including registries other than Azure Container Registry. Choose the matching registry connection in your Foundry project; the Toolkit retains that configuration for redeployment. This lets you reuse approved registries and existing image-build pipelines without copying images into a new Azure Container Registry or rebuilding locally. Registry authentication stays in the configured service connection. Existing Azure Container Registry, source-build, and ZIP deployment paths remain available.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "790f8271b5c101a99cf73d638bef4f0202d807f2f6ea13eb1a8a294100438afb",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "2bdbb2c3621f7fd3eeae6f0a3a3899ef6ed072eb1cfcb531cae543ccd214a4eb",
+          "modifiedAfter": "2026-11-23T20:13:42.909374Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#581478"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:09:38.810Z",
+          "fingerprint": "790f8271b5c101a99cf73d638bef4f0202d807f2f6ea13eb1a8a294100438afb",
+          "modifiedAfter": "2026-11-23T20:13:42.909374Z",
+          "modifiedBefore": "2026-11-23T20:13:42.909374Z",
+          "rawRef": "20261124T050938810Z_detail_581478.json#581478"
+        }
+      ],
+      "ids": [
+        "581478"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "581478",
+      "modified": "2026-11-23T20:13:42.909374Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581478",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Generally Available: Deploy hosted agents from your own container registry in Foundry Toolkit for VS Code"
     },
     {
       "availabilities": [
@@ -15213,6 +16369,84 @@
         "Security"
       ],
       "title": "Public Preview: Azure Firewall for Containers"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "582030",
+      "categories": [
+        "networking",
+        "security"
+      ],
+      "created": "2026-11-23T18:51:31.3106233Z",
+      "createdJst": "2026-11-24",
+      "description": "Wildcard domain support in Azure Firewall network rules is now\ngenerally available. This capability enables customers to use wildcard\npatterns, such as *.contoso.com, when\ndefining FQDN-based network rules. Wildcard support makes it easier to secure destinations that use\nmultiple or frequently changing subdomains. Customers can simplify policy\nconfiguration, reduce the number of individual FQDN entries they need to\nmaintain, and manage access to related domains more efficiently. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "3b1b8fb17ea19a5add4e44a83aa2bd8b48ce2a09b240c1e90ffc05a53da61928",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-24T05:08:36.792Z",
+          "fingerprint": "63433ed489c70486ab120309cacb1c7373a7e02bd856c1dbc3d51a98d88fa810",
+          "modifiedAfter": "2026-11-23T18:51:31.3106233Z",
+          "modifiedBefore": null,
+          "rawRef": "20261124T050836792Z_list_sweep_o0.json#582030"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-24T05:09:41.113Z",
+          "fingerprint": "3b1b8fb17ea19a5add4e44a83aa2bd8b48ce2a09b240c1e90ffc05a53da61928",
+          "modifiedAfter": "2026-11-23T18:51:31.3106233Z",
+          "modifiedBefore": "2026-11-23T18:51:31.3106233Z",
+          "rawRef": "20261124T050941113Z_detail_582030.json#582030"
+        }
+      ],
+      "ids": [
+        "582030"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "security-tag",
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 10,
+        "topics": [
+          "ga",
+          "security"
+        ]
+      },
+      "latestId": "582030",
+      "modified": "2026-11-23T18:51:31.3106233Z",
+      "modifiedJst": "2026-11-24",
+      "productCategories": [
+        "Networking",
+        "Security"
+      ],
+      "products": [
+        "Azure Firewall"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=582030",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Security"
+      ],
+      "title": "Generally Available: Wildcard domain support in Azure Firewall network rules "
     }
   ],
   "month": "2026-11",

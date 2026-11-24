@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "581378"
+  },
+  "fetchedAt": "2026-11-24T05:09:12.607Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581378",
+    "created": "2026-11-23T20:32:57.6289146Z",
+    "description": "Microsoft Foundry now lets you use model router without deploying it first. In a region that supports model router, set model to auto in a Responses or Chat Completions request to your Foundry resource.By default, Auto uses the Balanced routing mode across the pool models available in your region, and each response names the model that answered. Admins can set Auto's routing mode, models, and content filter for each Foundry resource, or turn Auto off.Auto has lower rate limits than a model router deployment and processes data as Global Standard. For production traffic, deploy model router, and then change model to your deployment name.Learn more: From model choice to your durable\nadvantage: Build AI that keeps improving Quickstart:\nGet started with model router ",
+    "id": "581378",
+    "modified": "2026-11-23T20:32:57.6289146Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Call model router without a deployment in Microsoft Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
