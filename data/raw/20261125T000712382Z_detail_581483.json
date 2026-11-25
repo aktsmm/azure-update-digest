@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "581483"
+  },
+  "fetchedAt": "2026-11-25T00:07:12.382Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581483",
+    "created": "2026-11-24T16:52:07.9692246Z",
+    "description": "Optimization from insights is in public preview in Foundry Agent Service. In the Foundry portal, start from an eligible insight in a prompt-agent trace to generate and evaluate candidate changes to the agent's instructions and function-calling tool descriptions. This portal workflow supports only prompt agents that do not use the Microsoft Copilot harness; hosted agents use a separate optimization workflow.For hosted-agent optimization, use the Microsoft Foundry Toolkit extension for Visual Studio Code or the Azure Developer CLI with the microsoft.foundry extension. Review candidate changes and evaluation results before promoting a new agent version. If an agent's tools can change production systems, use read-only access or isolated test resources during optimization. Learn more:Hosted-agent optimization quickstartFix insights with agent optimizer (preview)",
+    "id": "581483",
+    "modified": "2026-11-24T16:52:07.9692246Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Optimize agents from insights in Foundry Agent Service"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "581313"
+  },
+  "fetchedAt": "2026-11-25T00:07:24.058Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581313",
+    "created": "2026-11-24T16:48:25.5455634Z",
+    "description": "Bring your existing Agent2Agent (A2A) agents to Agent Service without a protocol conversion layer.Previously, Agent Service converted incoming A2A requests to the Responses protocol. With A2A passthrough, Agent Service forwards native A2A requests directly to your hosted agent container. Your code handles A2A messages and tasks. Agent Service manages the endpoint, authentication, and hosted compute.The preview supports incoming A2A v1.0 requests over JSON-RPC. Streaming, push notifications, and authenticated extended agent cards are not available. A2A passthrough handles incoming requests. It does not configure outbound calls to other agents.Learn more.",
+    "id": "581313",
+    "modified": "2026-11-24T16:48:25.5455634Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Native A2A passthrough for hosted agents in Foundry Agent Service"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

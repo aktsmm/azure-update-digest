@@ -14658,6 +14658,80 @@
       "availabilities": [
         {
           "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "581303",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-24T16:49:39.5528973Z",
+      "createdJst": "2026-11-25",
+      "description": "Azure AI Search and Foundry IQ in Microsoft Foundry can use supported Azure Storage permissions to control access to search results.Once configured, search applications and AI agents return content based on each user's access. This reduces the need to create and maintain separate security filters.For Azure Data Lake Storage (ADLS) Gen2, you can use supported access control lists (ACLs), container-level role-based access control (RBAC), or both. For standard Azure Blob Storage, document-level access control supports container-level RBAC, not individual blob ACLs. Set up document-level access control for your indexer or knowledge source.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "c8a0ce9449b7e3e5116c2b0c94781fcbeca22515934477e9ea6ba9390c25551e",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-25T00:07:01.353Z",
+          "fingerprint": "d2c3b0deaefc6bc08141ae9a6c8d403c81170d27c60f669898dc0fe7c15a1841",
+          "modifiedAfter": "2026-11-24T16:49:39.5528973Z",
+          "modifiedBefore": null,
+          "rawRef": "20261125T000701353Z_list_sweep_o0.json#581303"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-25T00:07:18.796Z",
+          "fingerprint": "c8a0ce9449b7e3e5116c2b0c94781fcbeca22515934477e9ea6ba9390c25551e",
+          "modifiedAfter": "2026-11-24T16:49:39.5528973Z",
+          "modifiedBefore": "2026-11-24T16:49:39.5528973Z",
+          "rawRef": "20261125T000718796Z_detail_581303.json#581303"
+        }
+      ],
+      "ids": [
+        "581303"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "581303",
+      "modified": "2026-11-24T16:49:39.5528973Z",
+      "modifiedJst": "2026-11-25",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581303",
+      "status": "Launched",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Generally Available: Use Azure Storage permissions in Azure AI Search and Foundry IQ"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
           "ring": "Private Preview",
           "year": 2026
         }
@@ -14721,6 +14795,282 @@
         "Microsoft Ignite"
       ],
       "title": "Private Preview: Azure DH/EHasv8 VMs based on 6th Gen AMD EPYC™ (“Venice”) processors "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581313",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-24T16:48:25.5455634Z",
+      "createdJst": "2026-11-25",
+      "description": "Bring your existing Agent2Agent (A2A) agents to Agent Service without a protocol conversion layer.Previously, Agent Service converted incoming A2A requests to the Responses protocol. With A2A passthrough, Agent Service forwards native A2A requests directly to your hosted agent container. Your code handles A2A messages and tasks. Agent Service manages the endpoint, authentication, and hosted compute.The preview supports incoming A2A v1.0 requests over JSON-RPC. Streaming, push notifications, and authenticated extended agent cards are not available. A2A passthrough handles incoming requests. It does not configure outbound calls to other agents.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "da975ff57152d6915128deb0a0ec43cd2e0850b2fa065d399696842dc8593f8c",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-25T00:07:01.353Z",
+          "fingerprint": "f14440b0f39b3d3f6e4475c60e991b555ed5d8a744f57034e854c62eeb74e9b3",
+          "modifiedAfter": "2026-11-24T16:48:25.5455634Z",
+          "modifiedBefore": null,
+          "rawRef": "20261125T000701353Z_list_sweep_o0.json#581313"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-25T00:07:24.058Z",
+          "fingerprint": "da975ff57152d6915128deb0a0ec43cd2e0850b2fa065d399696842dc8593f8c",
+          "modifiedAfter": "2026-11-24T16:48:25.5455634Z",
+          "modifiedBefore": "2026-11-24T16:48:25.5455634Z",
+          "rawRef": "20261125T000724058Z_detail_581313.json#581313"
+        }
+      ],
+      "ids": [
+        "581313"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581313",
+      "modified": "2026-11-24T16:48:25.5455634Z",
+      "modifiedJst": "2026-11-25",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581313",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Native A2A passthrough for hosted agents in Foundry Agent Service"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581318",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-24T16:45:59.0207335Z",
+      "createdJst": "2026-11-25",
+      "description": "Within Microsoft Foundry, use azd ai cu commands to analyze documents with Azure Document Intelligence and Content Understanding in Foundry Tools. The extension for Azure Developer CLI (azd) can save analysis results as Markdown or JSON.You can start without Python, a language SDK, or an initialized azd project. The prebuilt-layout analyzer extracts text and layout without language or embedding model deployments.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "6de19a9a14f1f1d904cd40d6419a32877b5db416b9dde82d9182e9c3ea090526",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-25T00:07:01.353Z",
+          "fingerprint": "7f2ef4a6b9aebe5f69acaf4ef827eff5d063395251a684a66ca2c86a9f20a85f",
+          "modifiedAfter": "2026-11-24T16:45:59.0207335Z",
+          "modifiedBefore": null,
+          "rawRef": "20261125T000701353Z_list_sweep_o0.json#581318"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-25T00:07:28.753Z",
+          "fingerprint": "6de19a9a14f1f1d904cd40d6419a32877b5db416b9dde82d9182e9c3ea090526",
+          "modifiedAfter": "2026-11-24T16:45:59.0207335Z",
+          "modifiedBefore": "2026-11-24T16:45:59.0207335Z",
+          "rawRef": "20261125T000728753Z_detail_581318.json#581318"
+        }
+      ],
+      "ids": [
+        "581318"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581318",
+      "modified": "2026-11-24T16:45:59.0207335Z",
+      "modifiedJst": "2026-11-25",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581318",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Azure Developer CLI extension for Azure Document Intelligence and Content Understanding in Foundry Tools"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581323",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-24T16:43:40.4936477Z",
+      "createdJst": "2026-11-25",
+      "description": "Within Microsoft Foundry, cost controls set a spending or token budget for a Foundry resource or project. When usage reaches a threshold that you set, a cost control sends an alert through Azure Event Grid or blocks new requests.You can apply a budget to all usage, or filter it by project, model deployment, agent, or hosted agent session. Budgets reset daily, weekly, or monthly. Cost controls count usage as requests run, so they can act before costs appear in Azure Cost Management.During the preview, cost controls support Azure OpenAI model deployments. Spending totals are estimates and aren't reconciled with your Azure bill.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "8da57df9d8da19ce07b1fee6c182bf42d2a7de1cadb8854cc674a7e78bf3deba",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-25T00:07:01.353Z",
+          "fingerprint": "3a5a2dabb9710f158a3f06a83ea730fc34950dc92757123788a21e367264b9b0",
+          "modifiedAfter": "2026-11-24T16:43:40.4936477Z",
+          "modifiedBefore": null,
+          "rawRef": "20261125T000701353Z_list_sweep_o0.json#581323"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-25T00:07:34.741Z",
+          "fingerprint": "8da57df9d8da19ce07b1fee6c182bf42d2a7de1cadb8854cc674a7e78bf3deba",
+          "modifiedAfter": "2026-11-24T16:43:40.4936477Z",
+          "modifiedBefore": "2026-11-24T16:43:40.4936477Z",
+          "rawRef": "20261125T000734741Z_detail_581323.json#581323"
+        }
+      ],
+      "ids": [
+        "581323"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581323",
+      "modified": "2026-11-24T16:43:40.4936477Z",
+      "modifiedJst": "2026-11-25",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581323",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Cost controls for model and agent spending in Microsoft Foundry"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581328",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-24T16:42:20.1070924Z",
+      "createdJst": "2026-11-25",
+      "description": "Administrators can use Azure Policy to govern outbound destinations for hosted agents in Foundry Agent Service. Agent authors configure and attach a compliant egress policy before creating an agent version. The egress policy then controls outbound requests at runtime.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "22377d74acaa87bbab8f1dc145c74188aa7a6e2f6392a83015e7f0b85cbc1f6a",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-25T00:07:01.353Z",
+          "fingerprint": "faead8fb3da21f61a838839231c6d5dbf26c65cd794311ba7a665fa331a1f3cb",
+          "modifiedAfter": "2026-11-24T16:42:20.1070924Z",
+          "modifiedBefore": null,
+          "rawRef": "20261125T000701353Z_list_sweep_o0.json#581328"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-25T00:07:37.201Z",
+          "fingerprint": "22377d74acaa87bbab8f1dc145c74188aa7a6e2f6392a83015e7f0b85cbc1f6a",
+          "modifiedAfter": "2026-11-24T16:42:20.1070924Z",
+          "modifiedBefore": "2026-11-24T16:42:20.1070924Z",
+          "rawRef": "20261125T000737201Z_detail_581328.json#581328"
+        }
+      ],
+      "ids": [
+        "581328"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581328",
+      "modified": "2026-11-24T16:42:20.1070924Z",
+      "modifiedJst": "2026-11-25",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581328",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Central governance of hosted-agent outbound domains in Foundry Agent Service"
     },
     {
       "availabilities": [
@@ -15799,6 +16149,144 @@
         "preview": "2026-11",
         "privatePreview": null
       },
+      "canonicalKey": "581483",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-24T16:52:07.9692246Z",
+      "createdJst": "2026-11-25",
+      "description": "Optimization from insights is in public preview in Foundry Agent Service. In the Foundry portal, start from an eligible insight in a prompt-agent trace to generate and evaluate candidate changes to the agent's instructions and function-calling tool descriptions. This portal workflow supports only prompt agents that do not use the Microsoft Copilot harness; hosted agents use a separate optimization workflow.For hosted-agent optimization, use the Microsoft Foundry Toolkit extension for Visual Studio Code or the Azure Developer CLI with the microsoft.foundry extension. Review candidate changes and evaluation results before promoting a new agent version. If an agent's tools can change production systems, use read-only access or isolated test resources during optimization. Learn more:Hosted-agent optimization quickstartFix insights with agent optimizer (preview)",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "89a643a0121905ef8a0079b0a38d3c5492c1502f3d085acf4e6f7b29405b1509",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-25T00:07:01.353Z",
+          "fingerprint": "131014d39c2a36c8b2af4e6bc66599f35ac4aa2fc160b2ccdf8bdfa351fe3741",
+          "modifiedAfter": "2026-11-24T16:52:07.9692246Z",
+          "modifiedBefore": null,
+          "rawRef": "20261125T000701353Z_list_sweep_o0.json#581483"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-25T00:07:12.382Z",
+          "fingerprint": "89a643a0121905ef8a0079b0a38d3c5492c1502f3d085acf4e6f7b29405b1509",
+          "modifiedAfter": "2026-11-24T16:52:07.9692246Z",
+          "modifiedBefore": "2026-11-24T16:52:07.9692246Z",
+          "rawRef": "20261125T000712382Z_detail_581483.json#581483"
+        }
+      ],
+      "ids": [
+        "581483"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581483",
+      "modified": "2026-11-24T16:52:07.9692246Z",
+      "modifiedJst": "2026-11-25",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581483",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Optimize agents from insights in Foundry Agent Service"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "581498",
+      "categories": [
+        "ai"
+      ],
+      "created": "2026-11-24T16:50:47.2399577Z",
+      "createdJst": "2026-11-25",
+      "description": "In public preview, Microsoft Foundry Agent Service lets you route MCP tool traffic through existing AI Gateway or Azure API Management endpoints that your organization manages. Configure the MCP route in the gateway first, then enter the gateway-routed endpoint in Foundry. Foundry does not automatically register the MCP server or replace direct endpoints.The gateway can apply access controls and policies, publish approved tools behind one endpoint, and expose logs and traces for MCP tool calls, policy decisions and backend routing. This gives platform teams centralized control while developers continue to build agents in Foundry.The preview is intended for evaluation and is not covered by a production SLA.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "33c32c8dceacf1074eb8179add4f9e467967554aa7f8c81c2637051ab94e602a",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-25T00:07:01.353Z",
+          "fingerprint": "3ceb2f2a8092774495d682f47dfbc75327e323ef25e1532b7d3cc437202d5c6e",
+          "modifiedAfter": "2026-11-24T16:50:47.2399577Z",
+          "modifiedBefore": null,
+          "rawRef": "20261125T000701353Z_list_sweep_o0.json#581498"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-25T00:07:15.594Z",
+          "fingerprint": "33c32c8dceacf1074eb8179add4f9e467967554aa7f8c81c2637051ab94e602a",
+          "modifiedAfter": "2026-11-24T16:50:47.2399577Z",
+          "modifiedBefore": "2026-11-24T16:50:47.2399577Z",
+          "rawRef": "20261125T000715594Z_detail_581498.json#581498"
+        }
+      ],
+      "ids": [
+        "581498"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "581498",
+      "modified": "2026-11-24T16:50:47.2399577Z",
+      "modifiedJst": "2026-11-25",
+      "productCategories": [
+        "AI + machine learning"
+      ],
+      "products": [
+        "Microsoft Foundry"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=581498",
+      "status": "In preview",
+      "tags": [
+        "Features",
+        "Microsoft Ignite"
+      ],
+      "title": "Public Preview: Govern MCP tools with your own gateway in Microsoft Foundry Agent Service"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
       "canonicalKey": "581503",
       "categories": [
         "storage",
@@ -16447,6 +16935,81 @@
         "Security"
       ],
       "title": "Generally Available: Wildcard domain support in Azure Firewall network rules "
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "General Availability",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": "2026-11",
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "582171",
+      "categories": [
+        "ops-governance"
+      ],
+      "created": "2026-11-24T17:48:22.7623841Z",
+      "createdJst": "2026-11-25",
+      "description": "Azure Site Recovery now supports Zone-to-Zone Disaster\nRecovery (Zonal DR) for Azure Ultra disks. Customers can protect\nperformance-intensive virtual machines across Availability Zones against zonal\ndisruptions by replication and recovering them to another zone within the same\nAzure region. This capability improves resiliency for mission critical\nworkloads and demanding applications requiring ultra disks. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "f891471b64072f15b058e88dc45d8f8eeaf35d83dd961ebbca457e7428dada6a",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-25T00:07:01.353Z",
+          "fingerprint": "fc1e3d41d7e28c4e8411519ad5968c7c891e26f8854fc9143b9ebebefd9e9d26",
+          "modifiedAfter": "2026-11-24T17:48:22.7623841Z",
+          "modifiedBefore": null,
+          "rawRef": "20261125T000701353Z_list_sweep_o0.json#582171"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-25T00:07:06.097Z",
+          "fingerprint": "f891471b64072f15b058e88dc45d8f8eeaf35d83dd961ebbca457e7428dada6a",
+          "modifiedAfter": "2026-11-24T17:48:22.7623841Z",
+          "modifiedBefore": "2026-11-24T17:48:22.7623841Z",
+          "rawRef": "20261125T000706097Z_detail_582171.json#582171"
+        }
+      ],
+      "ids": [
+        "582171"
+      ],
+      "importance": {
+        "level": "notable",
+        "reasons": [
+          "ga-ring",
+          "ga-title"
+        ],
+        "score": 5,
+        "topics": [
+          "ga"
+        ]
+      },
+      "latestId": "582171",
+      "modified": "2026-11-24T17:48:22.7623841Z",
+      "modifiedJst": "2026-11-25",
+      "productCategories": [
+        "Management and governance",
+        "Migration"
+      ],
+      "products": [
+        "Azure Site Recovery"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=582171",
+      "status": "Launched",
+      "tags": [
+        "Feature",
+        "Management"
+      ],
+      "title": "Generally Available: Azure Site Recovery support for zonal disaster recovery for Ultra disks"
     }
   ],
   "month": "2026-11",

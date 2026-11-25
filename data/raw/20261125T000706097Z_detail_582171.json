@@ -1,0 +1,37 @@
+{
+  "args": {
+    "id": "582171"
+  },
+  "fetchedAt": "2026-11-25T00:07:06.097Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "582171",
+    "created": "2026-11-24T17:48:22.7623841Z",
+    "description": "Azure Site Recovery now supports Zone-to-Zone Disaster\nRecovery (Zonal DR) for Azure Ultra disks. Customers can protect\nperformance-intensive virtual machines across Availability Zones against zonal\ndisruptions by replication and recovering them to another zone within the same\nAzure region. This capability improves resiliency for mission critical\nworkloads and demanding applications requiring ultra disks. Learn more.",
+    "generalAvailabilityDate": "2026-11",
+    "id": "582171",
+    "modified": "2026-11-24T17:48:22.7623841Z",
+    "productCategories": [
+      "Management and governance",
+      "Migration"
+    ],
+    "products": [
+      "Azure Site Recovery"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Management",
+      "Feature"
+    ],
+    "title": "Generally Available: Azure Site Recovery support for zonal disaster recovery for Ultra disks"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

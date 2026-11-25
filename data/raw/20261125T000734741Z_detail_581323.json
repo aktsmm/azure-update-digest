@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "581323"
+  },
+  "fetchedAt": "2026-11-25T00:07:34.741Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581323",
+    "created": "2026-11-24T16:43:40.4936477Z",
+    "description": "Within Microsoft Foundry, cost controls set a spending or token budget for a Foundry resource or project. When usage reaches a threshold that you set, a cost control sends an alert through Azure Event Grid or blocks new requests.You can apply a budget to all usage, or filter it by project, model deployment, agent, or hosted agent session. Budgets reset daily, weekly, or monthly. Cost controls count usage as requests run, so they can act before costs appear in Azure Cost Management.During the preview, cost controls support Azure OpenAI model deployments. Spending totals are estimates and aren't reconciled with your Azure bill.Learn more.",
+    "id": "581323",
+    "modified": "2026-11-24T16:43:40.4936477Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Cost controls for model and agent spending in Microsoft Foundry"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

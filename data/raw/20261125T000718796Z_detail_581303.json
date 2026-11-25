@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "581303"
+  },
+  "fetchedAt": "2026-11-25T00:07:18.796Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "General Availability",
+        "year": 2026
+      }
+    ],
+    "baseId": "581303",
+    "created": "2026-11-24T16:49:39.5528973Z",
+    "description": "Azure AI Search and Foundry IQ in Microsoft Foundry can use supported Azure Storage permissions to control access to search results.Once configured, search applications and AI agents return content based on each user's access. This reduces the need to create and maintain separate security filters.For Azure Data Lake Storage (ADLS) Gen2, you can use supported access control lists (ACLs), container-level role-based access control (RBAC), or both. For standard Azure Blob Storage, document-level access control supports container-level RBAC, not individual blob ACLs. Set up document-level access control for your indexer or knowledge source.Learn more.",
+    "generalAvailabilityDate": "2026-11",
+    "id": "581303",
+    "modified": "2026-11-24T16:49:39.5528973Z",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "Launched",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Generally Available: Use Azure Storage permissions in Azure AI Search and Foundry IQ"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}

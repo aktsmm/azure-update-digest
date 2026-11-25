@@ -1,0 +1,36 @@
+{
+  "args": {
+    "id": "581328"
+  },
+  "fetchedAt": "2026-11-25T00:07:37.201Z",
+  "ok": true,
+  "response": {
+    "availabilities": [
+      {
+        "month": "November",
+        "ring": "Preview",
+        "year": 2026
+      }
+    ],
+    "baseId": "581328",
+    "created": "2026-11-24T16:42:20.1070924Z",
+    "description": "Administrators can use Azure Policy to govern outbound destinations for hosted agents in Foundry Agent Service. Agent authors configure and attach a compliant egress policy before creating an agent version. The egress policy then controls outbound requests at runtime.Learn more.",
+    "id": "581328",
+    "modified": "2026-11-24T16:42:20.1070924Z",
+    "previewAvailabilityDate": "2026-11",
+    "productCategories": [
+      "AI + machine learning"
+    ],
+    "products": [
+      "Microsoft Foundry"
+    ],
+    "status": "In preview",
+    "tags": [
+      "Features",
+      "Microsoft Ignite"
+    ],
+    "title": "Public Preview: Central governance of hosted-agent outbound domains in Foundry Agent Service"
+  },
+  "schema": 1,
+  "tool": "get_azure_update_by_id"
+}
