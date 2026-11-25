@@ -1,0 +1,122 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579579"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-25T00:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "579579",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Database for PostgreSQL に Database Agent",
+        "subtitleJa": "問題の検出から原因の根拠、対処ガイダンスまで提示（パブリック プレビュー）",
+        "en": "Public Preview: Database Agent for Azure Database for PostgreSQL"
+      },
+      "meta": {
+        "publishedJst": "2026-11-20",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases", "ai", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "PostgreSQL フレキシブル サーバーの**運用担当者・データベース管理者**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents", "locator": "冒頭", "retrievedAt": "2026-11-25T00:10:00Z" }] },
+        "change": { "text": "テレメトリを手作業で突き合わせず、原因の根拠と対処ガイダンスを確認できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "利用には承認が必要。まずは限定プレビューへの参加申請から", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-known-limitations", "locator": "サポートされているデータベーススコープ", "retrievedAt": "2026-11-25T00:10:00Z" }] }
+      },
+      "pricing": {
+        "kind": "change",
+        "text": "限定プレビュー期間中は調査に料金なし。請求は GA 前に開始され、登録済みの顧客へ事前通知される",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-known-limitations", "locator": "サポートされているデータベーススコープ", "retrievedAt": "2026-11-25T00:10:00Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "メトリック・構成・クエリ プラン・ログから推定原因と根拠を平易に説明し、対処ガイダンスも提示する",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "データベースの正常性を監視して問題を検出し、調査状況や再発も追跡", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents", "locator": "冒頭", "retrievedAt": "2026-11-25T00:10:00Z" }] },
+            { "text": "PostgreSQL 16 以降のフレキシブル サーバーが対象（全コンピューティング レベル）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-known-limitations", "locator": "サポートされているデータベーススコープ", "retrievedAt": "2026-11-25T00:10:00Z" }] },
+            { "text": "現在は Visual Studio Code の限定プレビューで提供（承認制）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents", "locator": "Note", "retrievedAt": "2026-11-25T00:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "データベース変更は適用されない。対応は承認済みのワークフローで手動実施", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents", "locator": "Important", "retrievedAt": "2026-11-25T00:10:00Z" }] },
+            { "text": "調査は AI 支援。結果は不完全な場合があり、実サーバーでの検証が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-known-limitations", "locator": "サポートされているデータベーススコープ", "retrievedAt": "2026-11-25T00:10:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象リージョンと PostgreSQL 16 以降の条件を満たすか確認し、検証用サーバーで試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "database-agent", "term": "Database Agent", "type": "feature", "oneLine": { "text": "データベースの性能問題を検出・調査し、対応の指針を示す機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents", "locator": "冒頭", "retrievedAt": "2026-11-25T00:10:00Z" }] } },
+        { "termKey": "postgresql-flexible-server", "term": "フレキシブル サーバー", "type": "product", "oneLine": { "text": "Azure Database for PostgreSQL のデプロイ オプション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-known-limitations", "locator": "サポートされているデータベーススコープ", "retrievedAt": "2026-11-25T00:10:00Z" }] } },
+        { "termKey": "llm", "term": "LLM", "type": "term", "oneLine": { "text": "大規模言語モデル。PostgreSQL の調査では状態の診断と対応の推奨に使われる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents", "locator": "Database AgentsがAIを活用する方法", "retrievedAt": "2026-11-25T00:10:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-25T00:10:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "限定プレビューの対象は米国南中部・米国西部 3・スウェーデン中部",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-known-limitations", "locator": "サポートされているデータベーススコープ", "retrievedAt": "2026-11-25T00:10:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "誰でもすぐに使えますか？",
+            "a": "いいえ。限定プレビューで承認が必要です。参加申請後、Visual Studio Code の PostgreSQL 拡張機能 1.32.0 以降で利用します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-known-limitations" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "限定プレビューの対象リージョンは米国南中部、米国西部 3、スウェーデン中部です。日本リージョンは含まれていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-known-limitations" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "限定プレビュー期間中は調査に料金はかかりません。請求は GA 前に開始され、登録済みの顧客には事前に通知されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-known-limitations" }]
+          },
+          {
+            "q": "エージェントがデータベースを自動修復しますか？",
+            "a": "いいえ。調査とガイダンスのみで、変更の適用は行いません。対応は承認済みのワークフローで手動実施します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579579",
+        "learn": [
+          { "title": "データベースエージェントとは何ですか?", "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents", "locale": "ja-jp" },
+          { "title": "データベースエージェントの制限事項とトラブルシューティング", "url": "https://learn.microsoft.com/ja-jp/fabric/database/hub/database-agents-known-limitations", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
