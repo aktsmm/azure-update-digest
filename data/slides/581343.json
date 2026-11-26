@@ -1,0 +1,223 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581343"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T02:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "581343",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Foundry IQ に反復型の検索モデル IQ Retriever Zero",
+        "subtitleJa": "複雑な質問を複数の検索に分解して再検索（パブリック プレビュー）",
+        "en": "Public Preview: IQ Retriever Zero in Foundry IQ"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": {
+          "text": "Foundry IQ で**エージェント検索**を構築している開発者",
+          "origin": "mrc",
+          "assertion": "inference",
+          "verification": "source-only"
+        },
+        "change": {
+          "text": "複雑な質問でも、検索結果を見ながら再検索する取得を試せる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": {
+          "text": "評価向け。プレビュー機能は追加使用条件の対象",
+          "origin": "learn",
+          "assertion": "fact",
+          "verification": "verified",
+          "evidence": [
+            {
+              "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-retrieval-how-to-set-retrieval-reasoning-effort",
+              "locator": "Important",
+              "retrievedAt": "2026-11-26T02:20:00Z"
+            }
+          ]
+        }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "複雑な質問を複数の検索に分解し、結果を見て予算内で再検索し、根拠を回答用モデルに渡せる",
+          "origin": "mrc",
+          "assertion": "fact",
+          "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope",
+          "heading": "プレビューの範囲",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            { "text": "複雑な質問を、焦点を絞った複数の検索に分解する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "検索結果を確認し、必要に応じて予算の範囲内で再検索する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "取得した根拠を、質問に答えるモデルへ渡す", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints",
+          "heading": "制約・注意",
+          "availability": "present",
+          "priority": "core",
+          "items": [
+            {
+              "text": "プレビュー機能は Azure プレビューの追加使用条件に従う",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-retrieval-how-to-set-retrieval-reasoning-effort",
+                  "locator": "Important",
+                  "retrievedAt": "2026-11-26T02:20:00Z"
+                }
+              ]
+            },
+            {
+              "text": "利用には、ナレッジ ソースを 1 つ以上持つナレッジ ベースが必要",
+              "origin": "learn",
+              "assertion": "fact",
+              "verification": "verified",
+              "evidence": [
+                {
+                  "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-retrieval-how-to-set-retrieval-reasoning-effort",
+                  "locator": "前提条件",
+                  "retrievedAt": "2026-11-26T02:20:00Z"
+                }
+              ]
+            }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate",
+          "heading": "評価ポイント",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "複数の観点にまたがる質問で、回答の根拠が十分に取得できるかを検証環境で確認する",
+              "origin": "editorial",
+              "assertion": "recommendation",
+              "verification": "unverified"
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "foundry-iq",
+          "term": "Foundry IQ",
+          "type": "product",
+          "oneLine": {
+            "text": "ナレッジ ソースとナレッジ ベースの API で、マネージドな取得を提供する機能。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-retrieval-how-to-set-retrieval-reasoning-effort",
+                "locator": "メモ",
+                "retrievedAt": "2026-11-26T02:20:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "knowledge-base",
+          "term": "ナレッジ ベース",
+          "type": "term",
+          "oneLine": {
+            "text": "1 つ以上のナレッジ ソースを持ち、取得要求を受け付ける Foundry IQ の構成要素。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-retrieval-how-to-set-retrieval-reasoning-effort",
+                "locator": "前提条件",
+                "retrievedAt": "2026-11-26T02:20:00Z"
+              }
+            ]
+          }
+        },
+        {
+          "termKey": "label-preview",
+          "term": "Preview（プレビュー）",
+          "type": "label",
+          "oneLine": {
+            "text": "GA の前に、評価とフィードバックのために提供される段階。",
+            "origin": "learn",
+            "assertion": "fact",
+            "verification": "verified",
+            "evidence": [
+              {
+                "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure",
+                "locator": "Public preview",
+                "retrievedAt": "2026-11-26T02:20:00Z"
+              }
+            ]
+          }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581343",
+        "learn": [
+          {
+            "title": "Foundry IQ でのエージェント検索 (Azure AI 検索)",
+            "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-retrieval-overview",
+            "locale": "ja-jp"
+          },
+          {
+            "title": "取得の理由付け作業を設定する",
+            "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-retrieval-how-to-set-retrieval-reasoning-effort",
+            "locale": "ja-jp"
+          }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "プレビュー機能を本番で使えますか？",
+            "a": "プレビュー機能は Azure プレビューの追加使用条件に従います。まず検証環境での評価をお勧めします。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-retrieval-how-to-set-retrieval-reasoning-effort" }
+            ]
+          },
+          {
+            "q": "利用の前提は何ですか？",
+            "a": "ナレッジ ソースを 1 つ以上持つナレッジ ベースと、それを更新・クエリするためのアクセス許可が必要です。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-retrieval-how-to-set-retrieval-reasoning-effort" }
+            ]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
