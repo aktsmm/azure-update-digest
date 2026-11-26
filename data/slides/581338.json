@@ -1,0 +1,104 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581338"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T02:14:03Z"
+  },
+  "slides": [
+    {
+      "key": "581338",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Microsoft Foundry の Guardrails 体験が更新",
+        "subtitleJa": "管理者ポリシーの要件を表示し、ポリシー管理下の設定は変更不可（パブリック プレビュー）",
+        "en": "Public Preview: Updated Guardrails experience in Microsoft Foundry"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Foundry で**エージェントやモデルの安全制御を構成する開発者・管理者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "管理者ポリシーを守りつつ、ポリシーを複数のエージェント／モデルで再利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "既存のガードレールは後方互換。新しい体験は評価向け", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "管理者ポリシーが必須とする制御がプロジェクトに表示され、ポリシー管理下の設定は開発者が変更できない。許可された範囲でエージェント固有の制御を追加できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "分類器・決定論的ルール・LLM ベースのジャッジで、エージェントのランタイム安全制御を構成", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ポリシーはプロジェクト内のエージェントやモデルで再利用でき、既存のガードレールとも後方互換", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "前提: Azure サブスクリプション、Foundry プロジェクト、モデル デプロイ、Foundry Account Owner ロール", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/guardrails/guardrails-overview", "locator": "前提条件", "retrievedAt": "2026-11-26T02:20:00Z" }] },
+            { "text": "エージェントのガードレールはモデルのガードレールを完全にオーバーライドする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/guardrails/guardrails-overview", "locator": "ガードレールの継承とオーバーライド", "retrievedAt": "2026-11-26T02:20:00Z" }] },
+            { "text": "ツール呼び出し／応答の介入ポイントはエージェント専用でプレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/guardrails/guardrails-overview", "locator": "介入ポイントの適用可能性", "retrievedAt": "2026-11-26T02:20:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "管理者ポリシーを使う場合は、開発側で変更できない設定の範囲を検証環境で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-foundry", "term": "Microsoft Foundry", "type": "product", "oneLine": { "text": "安全ガードレールやセキュリティ ガードレールをモデルとエージェントに適用できる AI 開発基盤。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/guardrails/guardrails-overview", "locator": "冒頭", "retrievedAt": "2026-11-26T02:20:00Z" }] } },
+        { "termKey": "guardrail", "term": "ガードレール", "type": "feature", "oneLine": { "text": "コントロールの名前付きコレクション。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/guardrails/guardrails-overview", "locator": "冒頭", "retrievedAt": "2026-11-26T02:20:00Z" }] } },
+        { "termKey": "control", "term": "コントロール", "type": "term", "oneLine": { "text": "検出するリスク、介入ポイント、検出時のアクションを定義する設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/guardrails/guardrails-overview", "locator": "冒頭", "retrievedAt": "2026-11-26T02:20:00Z" }] } },
+        { "termKey": "intervention-point", "term": "介入ポイント", "type": "term", "oneLine": { "text": "リスクをスキャンする箇所。ユーザー入力、ツール呼び出し、ツール応答、出力の 4 つ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/guardrails/guardrails-overview", "locator": "冒頭", "retrievedAt": "2026-11-26T02:20:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-26T02:20:00Z" }] } }
+      ],
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "利用するための前提条件は何ですか？",
+            "a": "Azure サブスクリプション、Foundry プロジェクト、プロジェクト内のモデル デプロイ、Foundry Account Owner などのロールが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/guardrails/guardrails-overview" }]
+          },
+          {
+            "q": "モデルとエージェントのガードレールが異なる場合はどうなりますか？",
+            "a": "リスクはエージェントに割り当てたガードレールに基づいて検出され、モデル側のガードレールは完全にオーバーライドされます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/guardrails/guardrails-overview" }]
+          },
+          {
+            "q": "既存のガードレールは影響を受けますか？",
+            "a": "既存のガードレールは後方互換性が維持されると案内されています。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=581338" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581338",
+        "learn": [
+          { "title": "Microsoft Foundry のガードレールとコントロールの概要", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/guardrails/guardrails-overview", "locale": "ja-jp" },
+          { "title": "Microsoft Foundry でガードレールとコントロールを構成する方法", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/guardrails/how-to-create-guardrails", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
