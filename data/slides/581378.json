@@ -1,0 +1,124 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581378"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T02:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "581378",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Foundry の model router をデプロイなしで呼び出し可能に",
+        "subtitleJa": "model に auto を指定するだけで利用開始（パブリック プレビュー）",
+        "en": "Public Preview: Call model router without a deployment in Microsoft Foundry"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Microsoft Foundry で model router を試す／導入を検討している開発者・管理者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "デプロイ作業なしで、エンドポイントと API キーだけで model router を試せる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router", "locator": "自動 (プレビュー) で数分で開始します", "retrievedAt": "2026-11-26T02:50:00Z" }] },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "試用・プロトタイプ向け。本番トラフィックはデプロイを使用", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "pricing": {
+        "kind": "paid",
+        "text": "Auto も、ルーティング料金に加えて選択されたモデルの料金体系に基づく使用料が発生する",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router", "locator": "価格", "retrievedAt": "2026-11-26T02:50:00Z" }]
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "model router を呼び出すには、先にデプロイする必要があった",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        },
+        "after": {
+          "text": "model router 対応リージョンで、リクエストの model に auto を指定すれば、デプロイなしで呼び出せる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Responses / Chat Completions の model に auto を指定。各応答の model に回答したモデル名が入る", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-apis", "locator": "冒頭", "retrievedAt": "2026-11-26T02:50:00Z" }] },
+            { "text": "既定は Balanced モードで、リージョンで使えるプール内のモデルから選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router", "locator": "ルーティング モード", "retrievedAt": "2026-11-26T02:50:00Z" }] },
+            { "text": "管理者はリソースごとにルーティング モード・モデル・コンテンツ フィルターを設定、または Auto を無効化可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "デプロイより低いレート制限。データは常に Global Standard として処理される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router", "locator": "データが処理される場所", "retrievedAt": "2026-11-26T02:50:00Z" }] },
+            { "text": "本番トラフィックでは model router をデプロイし、model をデプロイ名に変更する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Claude モデルへのルーティングには、同じリソースへの Claude のデプロイが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router-models", "locator": "クロード モデル", "retrievedAt": "2026-11-26T02:50:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "まず auto で品質・コスト・遅延を確認し、専用レート制限などが必要ならデプロイへ移行する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-foundry", "term": "Microsoft Foundry", "type": "product", "oneLine": { "text": "AI アプリやエージェントを構築・運用するための Microsoft のプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router", "locator": "冒頭", "retrievedAt": "2026-11-26T02:50:00Z" }] } },
+        { "termKey": "model-router", "term": "model router", "type": "feature", "oneLine": { "text": "各リクエストの複雑さを判断し、最適なモデルへ振り分けるルーティング モデル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router", "locator": "冒頭", "retrievedAt": "2026-11-26T02:50:00Z" }] } },
+        { "termKey": "auto", "term": "Auto", "type": "feature", "oneLine": { "text": "model に auto を指定して使う、デプロイ不要の model router。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-apis", "locator": "冒頭", "retrievedAt": "2026-11-26T02:50:00Z" }] } },
+        { "termKey": "global-standard", "term": "Global Standard", "type": "term", "oneLine": { "text": "選択したモデルがデプロイされている任意の地域でプロンプトと応答を処理できる形態。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router-models", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-26T02:50:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-26T02:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Auto は東日本・西日本を含む 32 リージョンで利用可能",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router-models", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-26T02:50:00Z" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Auto は東日本・西日本を含む 32 リージョンで利用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router-models", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-26T02:50:00Z" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "Auto もルーティング料金に加え、選択されたモデルの料金体系に基づく使用料が発生します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router", "locator": "価格", "retrievedAt": "2026-11-26T02:50:00Z" }]
+          },
+          {
+            "q": "データはどこで処理されますか？",
+            "a": "Auto は常に Global Standard としてデータを処理します。データ ゾーン内に限定したい場合は独自のデプロイが選択肢です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router", "locator": "データが処理される場所", "retrievedAt": "2026-11-26T02:50:00Z" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581378",
+        "learn": [
+          { "title": "モデル ルーターとは何ですか。", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router", "locale": "ja-jp" },
+          { "title": "Responses、Chat Completions、または Messages を使用してモデルルーターを呼び出す", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-apis", "locale": "ja-jp" },
+          { "title": "モデル ルーターでサポートされているモデル、リージョン、バージョン", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router-models", "locale": "ja-jp" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
