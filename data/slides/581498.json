@@ -1,0 +1,167 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581498"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T01:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "581498",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Foundry Agent Service の MCP ツールを自社ゲートウェイで統制",
+        "subtitleJa": "AI Gateway / API Management 経由でルーティング（パブリック プレビュー）",
+        "en": "Public Preview: Govern MCP tools with your own gateway in Microsoft Foundry Agent Service"
+      },
+      "meta": {
+        "publishedJst": "2026-11-25",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Foundry Agent Service で MCP ツールを使う**プラットフォーム管理者・開発者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ゲートウェイでアクセス制御・ポリシー・ログを一元管理できる（評価向け）", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "MCP ツールを統制したい場合に評価。本番 SLA の対象外", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "Foundry ポータルでゲートウェイ配下のプロジェクトに MCP ツールを追加すると、Foundry が MCP サーバーをゲートウェイへ自動登録してルーティングできた",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance", "locator": "重要", "retrievedAt": "2026-11-26T01:40:00Z" }]
+        },
+        "after": {
+          "text": "先にゲートウェイで MCP ルートを構成し、そのエンドポイントを Foundry に入力する。Foundry は自動登録も直接エンドポイントの置き換えも行わない",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "AI Gateway または Azure API Management 経由で MCP ツールの通信をルーティング",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance", "locator": "冒頭", "retrievedAt": "2026-11-26T01:40:00Z" }]
+            },
+            {
+              "text": "ゲートウェイでアクセス制御・ポリシー適用、承認済みツールの単一エンドポイント公開が可能",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            },
+            {
+              "text": "MCP ツール呼び出し・ポリシー判定・バックエンド ルーティングのログとトレースを取得",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Foundry はルート作成や MCP サーバー登録を行わない。先にゲートウェイ側で構成する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance", "locator": "冒頭", "retrievedAt": "2026-11-26T01:40:00Z" }]
+            },
+            {
+              "text": "既存ツールは自動で切り替わらない。統制したいツールごとにエンドポイントを手動更新",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance", "locator": "制限", "retrievedAt": "2026-11-26T01:40:00Z" }]
+            },
+            {
+              "text": "評価用のプレビューで、本番向けの SLA は適用されない",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "prerequisites",
+          "heading": "前提条件",
+          "availability": "present",
+          "priority": "detail",
+          "items": [
+            {
+              "text": "ゲートウェイで構成済みの MCP ルートと、直接 URL ではない完全なゲートウェイ経由エンドポイント",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance", "locator": "前提条件", "retrievedAt": "2026-11-26T01:40:00Z" }]
+            },
+            {
+              "text": "API Management はポリシー管理権限が必要（Service Contributor または所有者ロール）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance", "locator": "ゲートウェイ固有の要件", "retrievedAt": "2026-11-26T01:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "setup", "heading": "設定の流れ", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ゲートウェイで MCP ルート構成 → Foundry のカタログ／カスタム ツールにそのエンドポイントを入力",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance", "locator": "ツールを追加する", "retrievedAt": "2026-11-26T01:40:00Z" }]
+            },
+            {
+              "text": "ポリシーはゲートウェイ側で編集（Foundry では編集できない）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance", "locator": "制限", "retrievedAt": "2026-11-26T01:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "検証環境で、ツール要求がゲートウェイのログに記録されポリシーが効くか確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        {
+          "termKey": "microsoft-foundry", "term": "Microsoft Foundry", "type": "product",
+          "oneLine": { "text": "AI エージェントの構築・運用に使う Azure のプラットフォーム。", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+        },
+        {
+          "termKey": "mcp", "term": "MCP", "type": "term",
+          "oneLine": { "text": "Model Context Protocol。エージェントが外部ツールへアクセスするための共通プロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance", "locator": "冒頭", "retrievedAt": "2026-11-26T01:40:00Z" }] }
+        },
+        {
+          "termKey": "ai-gateway", "term": "AI Gateway", "type": "product",
+          "oneLine": { "text": "MCP ルートやポリシーを構成してエージェントの外部ツール アクセスを管理するゲートウェイ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance", "locator": "前提条件", "retrievedAt": "2026-11-26T01:40:00Z" }] }
+        },
+        {
+          "termKey": "apim", "term": "Azure API Management", "type": "product",
+          "oneLine": { "text": "MCP ルートをサポートし、ポリシーで API 通信を制御できるサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance", "locator": "冒頭", "retrievedAt": "2026-11-26T01:40:00Z" }] }
+        },
+        {
+          "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label",
+          "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-26T01:40:00Z" }] }
+        }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581498",
+        "learn": [
+          { "title": "ゲートウェイを使用して MCP ツールのガバナンスを行う", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "既存の MCP ツールも自動でゲートウェイ経由になりますか？", "a": "なりません。統制したい既存ツールごとに、ゲートウェイ経由のエンドポイントへ手動で更新します。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance" }] },
+          { "q": "ポリシーはどこで設定しますか？", "a": "ゲートウェイ側です。AI Gateway はポータル、API Management は Azure portal やコードで管理し、Foundry では編集できません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance" }] },
+          { "q": "ゲートウェイ経由になっているか確認する方法は？", "a": "Foundry でツールのエンドポイントがゲートウェイを指すことを確認し、ゲートウェイのログやテレメトリでツール要求を確認します。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/tools/governance" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
