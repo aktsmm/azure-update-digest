@@ -1,0 +1,110 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581398"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T03:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "581398",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "AI Gateway で model router による自動モデル選択（プレビュー）",
+        "subtitleJa": "エイリアス配下のモデルをリクエストごとにランク付けし、優先順位・重みと組み合わせて選択",
+        "en": "Public Preview: Use model router with AI Gateway"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "modifiedJst": "2026-11-24",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "AI Gateway の**モデル エイリアス**で複数モデルを束ねているプラットフォーム チーム", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "プロンプトに応じたモデル選択を、ゲートウェイの制御を保ったまま使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。プレビューは運用環境のワークロードには推奨されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "Important", "retrievedAt": "2026-11-26T03:10:00Z" }] }
+      },
+      "pricing": {
+        "kind": "paid",
+        "text": "AI Gateway は独自の料金。プレビュー中は model router のルーティング料金なし、バックエンドの利用料金は発生",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "Pricing", "retrievedAt": "2026-11-26T03:10:00Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "model router がエイリアス配下のモデルをランク付けし、優先順位・重みと組み合わせてバックエンドを選択する。アクセス制御・ポリシー・テレメトリは引き続き適用される",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "選択のしくみ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "選択モードは バランス / 品質 / コスト（Balanced / Quality / Cost）から選ぶ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "自動モデル選択のしくみ", "retrievedAt": "2026-11-26T03:10:00Z" }] },
+            { "text": "モデル優先: 全グループから最適モデル。優先順位優先: 最上位グループのみ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "自動モデル選択のしくみ", "retrievedAt": "2026-11-26T03:10:00Z" }] },
+            { "text": "重みで、選択したモデルのバックエンド間のトラフィックを分割", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "自動モデル選択のしくみ", "retrievedAt": "2026-11-26T03:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・制約", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "各バックエンドは model router がサポートするモデルを実行する必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "冒頭の要点", "retrievedAt": "2026-11-26T03:10:00Z" }] },
+            { "text": "バックエンドは Foundry / Azure OpenAI、他クラウド、独自の OpenAI 互換エンドポイントなど", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "冒頭の要点", "retrievedAt": "2026-11-26T03:10:00Z" }] },
+            { "text": "API バージョンは 2026-11-01。Claude モデルは OpenAI モデルとエイリアスを共有できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "Limitations", "retrievedAt": "2026-11-26T03:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "未対応パラメーターはエラーになり、previous_response_id の続きは前回のバックエンドへ送られる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "Limitations", "retrievedAt": "2026-11-26T03:10:00Z" }] },
+            { "text": "既存エイリアスで選択モードを切り替え、品質とコストの差を検証する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "ai-gateway", "term": "AI Gateway", "type": "product", "oneLine": { "text": "AI モデルや MCP サーバーへのリクエストを扱う、AI トラフィック用のマネージド ゲートウェイ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-gateway/overview", "locator": "冒頭", "retrievedAt": "2026-11-26T03:10:00Z" }] } },
+        { "termKey": "model-router", "term": "model router", "type": "feature", "oneLine": { "text": "プロンプトごとに、エイリアス背後のモデルをランク付けする Microsoft Foundry の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "冒頭", "retrievedAt": "2026-11-26T03:10:00Z" }] } },
+        { "termKey": "model-alias", "term": "モデル エイリアス", "type": "term", "oneLine": { "text": "アプリが呼び出す安定した名前で、背後に複数のバックエンド モデルを登録できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "自動モデル選択のしくみ", "retrievedAt": "2026-11-26T03:10:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-26T03:10:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "自動モデル選択は AI Gateway が使える全リージョンで利用可能。日本のリージョンは Japan East",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "Regions", "retrievedAt": "2026-11-26T03:10:00Z" },
+          { "url": "https://learn.microsoft.com/azure/ai-gateway/region-availability", "locator": "Regional availability", "retrievedAt": "2026-11-26T03:10:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581398",
+        "learn": [
+          { "title": "AI ゲートウェイでモデル ルーターを使用する", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locale": "ja-jp" },
+          { "title": "AI ゲートウェイとは", "url": "https://learn.microsoft.com/ja-jp/azure/ai-gateway/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "自動モデル選択は AI Gateway が使える全リージョンで利用でき、Japan East が含まれます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "Regions", "retrievedAt": "2026-11-26T03:10:00Z" }, { "url": "https://learn.microsoft.com/azure/ai-gateway/region-availability", "locator": "Regional availability", "retrievedAt": "2026-11-26T03:10:00Z" }] },
+          { "q": "追加の費用はかかりますか？", "a": "AI Gateway 自体とバックエンドの利用料金は発生します。プレビュー中は model router のルーティング料金はかかりません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "Pricing", "retrievedAt": "2026-11-26T03:10:00Z" }] },
+          { "q": "本番環境で使えますか？", "a": "プレビューは SLA なしで提供され、運用環境のワークロードには推奨されていません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-ai-gateway", "locator": "Important", "retrievedAt": "2026-11-26T03:10:00Z" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
