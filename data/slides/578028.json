@@ -1,0 +1,170 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["578028"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T04:05:00Z"
+  },
+  "slides": [
+    {
+      "key": "578028",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "SQL Managed Instance リンクが複数データベースの可用性グループに対応（GA）",
+        "subtitleJa": "1 つのリンクで、可用性グループ内の全データベースを Azure SQL Managed Instance に複製できます",
+        "en": "Generally Available: Azure SQL Managed Instance link support for availability groups with multiple databases"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure SQL Managed Instance"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "**SQL Server の Always On 可用性グループ**で複数データベースを運用し、Azure への移行や DR を検討している方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "データベースごとにリンクを作らず、1 つのリンクで移行・DR を構成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "複数データベースの移行・DR を予定していれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "シングルデータベースモードでは、リンクごとに 1 つのデータベースを複製。複数なら DB ごとにリンクを作成する必要があった",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql", "locator": "リンクモード", "retrievedAt": "2026-11-26T04:05:00Z" }]
+        },
+        "after": {
+          "text": "1 つのリンクで、既存または新規の可用性グループ内の複数データベースを Azure SQL Managed Instance に拡張できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "分散型可用性グループで、変更をほぼリアルタイムに読み取り専用コピーへ複製",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locator": "概要", "retrievedAt": "2026-11-26T04:05:00Z" }]
+            },
+            {
+              "text": "SQL Server とのロール反転で、双方向フェールオーバー（戻し移行含む）が可能",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "各 SQL Server レプリカで複数データベース リンク モードを有効化し、リスナーと証明書を構成",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locator": "マルチデータベースリンクモードを有効にする", "retrievedAt": "2026-11-26T04:05:00Z" }]
+            },
+            {
+              "text": "SSMS、PowerShell、Azure CLI のいずれかで可用性グループを拡張",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-11-26T04:05:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "SQL Server 2022 CU28 以降 / 2025 CU11 以降（Enterprise・Developer）。Standard は非対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locator": "サポータビリティ", "retrievedAt": "2026-11-26T04:05:00Z" }]
+            },
+            {
+              "text": "可用性グループ内の全 DB を複製（一部選択不可）。1 インスタンスの上限は GP/BC が 100、Next-gen GP が 500",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locator": "制限事項", "retrievedAt": "2026-11-26T04:05:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "シングル DB モード: リンクごとに 1 DB、SQL Server 2016 以降。複数 DB モード: 1 リンクで AG 全体、2022 以降",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql", "locator": "リンクモード", "retrievedAt": "2026-11-26T04:05:00Z" }]
+            },
+            {
+              "text": "両モードのリンクは同じ SQL Server インスタンス上で共存できない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql", "locator": "リンクモード", "retrievedAt": "2026-11-26T04:05:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "関連する複数 DB をまとめて、最小ダウンタイムの移行・戻し移行・DR に利用",
+              "origin": "mrc", "assertion": "fact", "verification": "source-only"
+            },
+            {
+              "text": "レプリカ間で CU を混在させない。Managed Instance の更新ポリシーを SQL Server と合わせる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locator": "サポータビリティ", "retrievedAt": "2026-11-26T04:05:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-sql-mi", "term": "Azure SQL Managed Instance", "type": "product", "oneLine": { "text": "SQL Server とほぼ互換性のある、Azure のフルマネージドなデータベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-11-26T04:05:00Z" }] } },
+        { "termKey": "mi-link", "term": "Managed Instance リンク", "type": "feature", "oneLine": { "text": "SQL Server と SQL Managed Instance の間でほぼリアルタイムにデータを複製する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql", "locator": "冒頭", "retrievedAt": "2026-11-26T04:05:00Z" }] } },
+        { "termKey": "always-on-ag", "term": "Always On 可用性グループ", "type": "feature", "oneLine": { "text": "複数のデータベースをまとめて、レプリカ間で複製・フェールオーバーする SQL Server の仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locator": "概要", "retrievedAt": "2026-11-26T04:05:00Z" }] } },
+        { "termKey": "update-policy", "term": "更新ポリシー", "type": "term", "oneLine": { "text": "SQL Managed Instance が採用する SQL Server のバージョン相当の機能セットを決める設定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locator": "サポータビリティ", "retrievedAt": "2026-11-26T04:05:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-26T04:05:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "Managed Instance リンクは、すべてのグローバル Azure リージョンで利用可能",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql", "locator": "リージョンの可用性", "retrievedAt": "2026-11-26T04:05:00Z" }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=578028",
+        "learn": [
+          { "title": "Always On 可用性グループを Azure SQL Managed Instance に拡張する", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql", "locale": "ja-jp" },
+          { "title": "Managed Instance リンクの概要", "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "自分の SQL Server は対象ですか？",
+            "a": "SQL Server 2022 CU28 以降または 2025 CU11 以降の Enterprise / Developer が対象です。Standard と 2019 以前は対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-extend-availability-group?view=azuresql" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Managed Instance リンク機能は、すべてのグローバル Azure リージョンで利用できると記載されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql" }]
+          },
+          {
+            "q": "既存のシングルデータベース リンクはどうなりますか？",
+            "a": "両モードは同一 SQL Server 上で共存できず、切り替えには既存リンクの削除とモード変更、リンクの再作成が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/azure-sql/managed-instance/managed-instance-link-feature-overview?view=azuresql" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
