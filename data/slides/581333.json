@@ -1,0 +1,123 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581333"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T02:10:00Z"
+  },
+  "slides": [
+    {
+      "key": "581333",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Foundry IQ に Enterprise Knowledge Graph が追加（パブリック プレビュー）",
+        "subtitleJa": "コンテンツ間の関係をたどり、複数段階の質問や曖昧な参照に回答できます",
+        "en": "Public Preview: Enterprise Knowledge Graph in Foundry IQ"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Foundry IQ のナレッジ ベースでエージェントを作る**開発者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "関係性に依存する質問に、エンティティの関係をたどって答えられる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビュー用語に従う評価向け。関係性が重要な質問があれば検証", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "Important", "retrievedAt": "2026-11-26T02:10:00Z" }] }
+      },
+      "pricing": {
+        "kind": "free",
+        "text": "プレビュー期間中、エンティティ グラフ機能自体に追加料金なし（使用したモデル トークンの料金は必要）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "ベスト プラクティス", "retrievedAt": "2026-11-26T02:10:00Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "インデックス作成時にオントロジーに基づいて非構造化コンテンツからエンティティと関係を抽出し、エージェントが複数段階の質問や曖昧な参照に回答できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "人・組織・場所などをノード、その関係をエッジとして表すエンティティ グラフ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "冒頭", "retrievedAt": "2026-11-26T02:10:00Z" }] },
+            { "text": "グラフ対応の BLOB ナレッジ ソースを作り、ナレッジ ベースまたは GQL でクエリ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "冒頭", "retrievedAt": "2026-11-26T02:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "新規のナレッジ ベースが必要。既存のナレッジ ベースでは有効化できない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "Limitations", "retrievedAt": "2026-11-26T02:10:00Z" }] },
+            { "text": "このリリースでは API 専用。ADLS Gen2・ACL・秘密度ラベルの取り込みは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "Prerequisites / Limitations", "retrievedAt": "2026-11-26T02:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites", "heading": "前提条件", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "2026-11-01-preview REST API 対応サービス、テキスト入りの Blob コンテナー、取り込み用チャット補完モデル", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "Prerequisites", "retrievedAt": "2026-11-26T02:10:00Z" }] },
+            { "text": "初回のインデックス作成前に Blob の論理的な削除を有効化し、バージョン管理は無効にする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "Prerequisites", "retrievedAt": "2026-11-26T02:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "トピック グラフとの違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "トピック グラフ: テーマ横断の多様なクエリ向け。オントロジー不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/knowledge-graph-features-overview", "locator": "トピック グラフとエンティティ グラフを比較する", "retrievedAt": "2026-11-26T02:10:00Z" }] },
+            { "text": "エンティティ グラフ: エンティティ間の接続をたどる質問向け。オントロジーが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/knowledge-graph-features-overview", "locator": "トピック グラフとエンティティ グラフを比較する", "retrievedAt": "2026-11-26T02:10:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "想定する主要な質問からオントロジーを設計し、少数のエンティティ型から始めて抽出結果を検証する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "ベスト プラクティス", "retrievedAt": "2026-11-26T02:10:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-foundry", "term": "Microsoft Foundry", "type": "product", "oneLine": { "text": "AI エージェントやアプリを構築・運用するための Microsoft のプラットフォーム。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "foundry-iq", "term": "Foundry IQ", "type": "feature", "oneLine": { "text": "ナレッジ ソースとナレッジ ベースによるマネージド取得を提供する、Azure AI 検索ベースの機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "Note", "retrievedAt": "2026-11-26T02:10:00Z" }] } },
+        { "termKey": "entity-graph", "term": "エンティティ グラフ", "type": "feature", "oneLine": { "text": "人・組織・場所などをノード、それらの関係をエッジで表すグラフ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "冒頭", "retrievedAt": "2026-11-26T02:10:00Z" }] } },
+        { "termKey": "ontology", "term": "オントロジー", "type": "term", "oneLine": { "text": "抽出するエンティティの種類とリレーションシップを定義するもの。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "コンテンツとオントロジを準備する", "retrievedAt": "2026-11-26T02:10:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-26T02:10:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581333",
+        "learn": [
+          { "title": "エンティティ グラフを作成してクエリを実行する", "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locale": "ja-jp" },
+          { "title": "ナレッジグラフ機能の概要", "url": "https://learn.microsoft.com/ja-jp/azure/search/knowledge-graph-features-overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存のナレッジ ベースで使えますか？",
+            "a": "使えません。エンティティ グラフの取得には新しいナレッジ ベースが必要で、既存のものでは有効化できません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "Limitations", "retrievedAt": "2026-11-26T02:10:00Z" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "プレビュー期間中、エンティティ グラフ機能自体に追加料金はありませんが、使用したモデル トークンの料金は必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-entity-graph", "locator": "ベスト プラクティス", "retrievedAt": "2026-11-26T02:10:00Z" }]
+          },
+          {
+            "q": "トピック グラフとどう使い分けますか？",
+            "a": "テーマ横断の質問にはトピック グラフ、エンティティ間の関係をたどる質問にはエンティティ グラフを選びます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/knowledge-graph-features-overview", "locator": "冒頭" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
