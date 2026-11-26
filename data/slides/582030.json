@@ -1,0 +1,162 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["582030"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T03:20:00Z"
+  },
+  "slides": [
+    {
+      "key": "582030",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Firewall のネットワーク ルールでワイルドカード ドメインが GA に",
+        "subtitleJa": "*.contoso.com のような指定で、サブドメインが多い宛先もまとめて制御できます",
+        "en": "Generally Available: Wildcard domain support in Azure Firewall network rules"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "Azure Firewall のネットワーク ルールで **FQDN を管理している方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "FQDN エントリ数を減らし、ポリシー構成を簡素化できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "サブドメインが多い宛先があれば検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "ネットワーク ルールの FQDN に *.contoso.com のようなワイルドカード パターンを使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "ネットワーク ルールの FQDN に *.contoso.com 形式を指定して許可・拒否できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locator": "ネットワーク ルールでワイルドカード FQDN を使用する", "retrievedAt": "2026-11-26T03:20:00Z" }]
+            },
+            {
+              "text": "観測した DNS 応答から、一致するサブドメインの IP アドレスを学習する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locator": "DNS プロキシが必要です", "retrievedAt": "2026-11-26T03:20:00Z" }]
+            },
+            {
+              "text": "TCP / UDP の NTP・SSH・RDP など HTTP/S 以外の通信を FQDN で制御できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locator": "冒頭", "retrievedAt": "2026-11-26T03:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "DNS プロキシを有効にし、クライアント VM の DNS サーバーを Azure Firewall に設定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/dns-settings", "locator": "DNS プロキシの構成", "retrievedAt": "2026-11-26T03:20:00Z" }]
+            },
+            {
+              "text": "ネットワーク ルールの FQDN に *.contoso.com のようなワイルドカードを指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locator": "ネットワーク ルールでワイルドカード FQDN を使用する", "retrievedAt": "2026-11-26T03:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "DNS プロキシが必須。連続したワイルドカードは不可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locator": "ネットワーク ルールでワイルドカード FQDN を使用する", "retrievedAt": "2026-11-26T03:20:00Z" }]
+            },
+            {
+              "text": "新しいサブドメインへの初回接続は、一時的に遅れることがある",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locator": "学習済みアドレス", "retrievedAt": "2026-11-26T03:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "HTTP/S・MSSQL は SNI を使えるアプリケーション ルール、他のプロトコルはネットワーク ルール",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locator": "アプリケーション ルールとネットワーク ルールの違い", "retrievedAt": "2026-11-26T03:20:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "サービスがドメイン内のエンドポイントを頻繁に追加・削除する場合に便利",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locator": "ネットワーク ルールでワイルドカード FQDN を使用する", "retrievedAt": "2026-11-26T03:20:00Z" }]
+            },
+            {
+              "text": "性能のため、複雑なワイルドカードより接頭辞・接尾辞のワイルドカードを推奨",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locator": "パフォーマンス", "retrievedAt": "2026-11-26T03:20:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-firewall", "term": "Azure Firewall", "type": "product", "oneLine": { "text": "ファイアウォール ポリシーでネットワーク トラフィックを制御するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locator": "冒頭", "retrievedAt": "2026-11-26T03:20:00Z" }] } },
+        { "termKey": "fqdn", "term": "FQDN", "type": "term", "oneLine": { "text": "ホストまたは 1 つ以上の IP アドレスの完全なドメイン名のこと。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locator": "冒頭", "retrievedAt": "2026-11-26T03:20:00Z" }] } },
+        { "termKey": "wildcard-fqdn", "term": "ワイルドカード FQDN", "type": "feature", "oneLine": { "text": "*.contoso.com のように、ドメイン内の複数のサブドメインに一致する指定。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locator": "ネットワーク ルールでワイルドカード FQDN を使用する", "retrievedAt": "2026-11-26T03:20:00Z" }] } },
+        { "termKey": "dns-proxy", "term": "DNS プロキシ", "type": "feature", "oneLine": { "text": "クライアント VM と DNS サーバーの間で DNS 要求を仲介する機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/dns-settings", "locator": "DNS プロキシ", "retrievedAt": "2026-11-26T03:20:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-26T03:20:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-none",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "ネットワーク ルールのワイルドカード ドメインは、現在は米国西中部・東アジア・英国南部でサポート",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locator": "ネットワーク ルールでワイルドカード FQDN を使用する（注意）", "retrievedAt": "2026-11-26T03:20:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=582030",
+        "learn": [
+          { "title": "ネットワーク ルールでの FQDN フィルタリング", "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules", "locale": "ja-jp" },
+          { "title": "Azure Firewall の DNS 設定", "url": "https://learn.microsoft.com/ja-jp/azure/firewall/dns-settings", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Learn では、ワイルドカード ドメインは現在、米国西中部・東アジア・英国南部でサポートと記載されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules" }]
+          },
+          {
+            "q": "事前に必要な設定は？",
+            "a": "DNS プロキシの有効化と、クライアント VM の DNS サーバーを Azure Firewall にする構成が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules" }, { "url": "https://learn.microsoft.com/ja-jp/azure/firewall/dns-settings" }]
+          },
+          {
+            "q": "初回接続に影響はありますか？",
+            "a": "DNS 応答から IP を学習するため、新しいサブドメインへの初回接続は一時的に遅れることがあります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/firewall/fqdn-filtering-network-rules" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
