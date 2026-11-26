@@ -1,0 +1,113 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581318"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T01:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "581318",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "azd の拡張機能で Content Understanding によるドキュメント分析",
+        "subtitleJa": "azd ai cu コマンドで Markdown / JSON に保存（パブリック プレビュー）",
+        "en": "Public Preview: Azure Developer CLI extension for Azure Document Intelligence and Content Understanding in Foundry Tools"
+      },
+      "meta": {
+        "publishedJst": "2026-11-25",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "ドキュメントのテキスト／レイアウト抽出を試したい **Microsoft Foundry の開発者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "CLI だけで文書分析を始められ、結果を Markdown や JSON で保存できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。CLI はプレビューで、運用環境のワークロードには推奨されない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "Important", "retrievedAt": "2026-11-26T01:00:00Z" }] }
+      },
+      "pricing": {
+        "kind": "paid",
+        "text": "分析コマンドは構成済みの Azure リソースを使うため、料金が発生する可能性がある",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "ドキュメントを分析する", "retrievedAt": "2026-11-26T01:00:00Z" }]
+      },
+      "beforeAfter": {
+        "after": { "text": "azd ai cu コマンドで Document Intelligence と Content Understanding によるドキュメント分析ができ、結果を Markdown または JSON で保存できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "azd 拡張機能 azure.ai.content-understanding を入れて azd ai cu で分析", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "Content Understanding 拡張機能をインストールする", "retrievedAt": "2026-11-26T01:00:00Z" }] },
+            { "text": "既定は prebuilt-layout でテキストとレイアウトを抽出", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "ドキュメントを分析する", "retrievedAt": "2026-11-26T01:00:00Z" }] },
+            { "text": "結果は Markdown または JSON（--output json）で保存できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "結果を保存する", "retrievedAt": "2026-11-26T01:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "azd 1.37.0 以降と、サポート対象リージョンの Foundry リソースが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "Prerequisites", "retrievedAt": "2026-11-26T01:00:00Z" }] },
+            { "text": "Cognitive Services ユーザー ロール等が必要。共同作成者だけでは不可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "Prerequisites", "retrievedAt": "2026-11-26T01:00:00Z" }] },
+            { "text": "認証は Microsoft Entra ID のみ。API キー認証は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "リソースに接続する", "retrievedAt": "2026-11-26T01:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Python・言語 SDK・azd プロジェクトの初期化は不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "Prerequisites", "retrievedAt": "2026-11-26T01:00:00Z" }] },
+            { "text": "prebuilt-layout は言語・埋め込みモデルのデプロイが不要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "Prerequisites", "retrievedAt": "2026-11-26T01:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azd", "term": "Azure Developer CLI（azd）", "type": "product", "oneLine": { "text": "Azure 開発者向けのコマンド ライン ツールで、拡張機能で機能を追加できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "Content Understanding 拡張機能をインストールする", "retrievedAt": "2026-11-26T01:00:00Z" }] } },
+        { "termKey": "content-understanding", "term": "Content Understanding", "type": "product", "oneLine": { "text": "Foundry Tools の Azure サービスで、ドキュメントなどからコンテンツを抽出・分析する。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "冒頭", "retrievedAt": "2026-11-26T01:00:00Z" }] } },
+        { "termKey": "prebuilt-layout", "term": "prebuilt-layout", "type": "term", "oneLine": { "text": "ドキュメントのテキストとレイアウトを抽出する、既定のアナライザー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "ドキュメントを分析する", "retrievedAt": "2026-11-26T01:00:00Z" }] } },
+        { "termKey": "entra-id", "term": "Microsoft Entra ID 認証", "type": "term", "oneLine": { "text": "この CLI が azd 経由で使うサインイン方式。API キーは使えない。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "リソースに接続する", "retrievedAt": "2026-11-26T01:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "SLA なしで提供される段階で、運用環境のワークロードには推奨されない。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "Important", "retrievedAt": "2026-11-26T01:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Content Understanding の対応リージョンに Japan East が含まれる（Japan West は含まれない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/language-region-support", "locator": "Region support", "retrievedAt": "2026-11-26T01:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581318",
+        "learn": [{ "title": "クイック スタート: Content Understanding CLI を使用してドキュメントを分析する", "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Content Understanding の対応リージョンに Japan East があります。Foundry リソースを対応リージョンに作成する必要があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/language-region-support", "locator": "Region support", "retrievedAt": "2026-11-26T01:00:00Z" }]
+          },
+          {
+            "q": "事前に必要なものは？",
+            "a": "azd 1.37.0 以降、対応リージョンの Foundry リソース、Cognitive Services ユーザー ロールが必要です。SDK や azd プロジェクトは不要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "Prerequisites", "retrievedAt": "2026-11-26T01:00:00Z" }]
+          },
+          {
+            "q": "本番で使えますか？",
+            "a": "CLI はプレビューで、SLA なしで提供され運用環境のワークロードには推奨されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/content-understanding/quickstart/use-content-understanding-cli", "locator": "Important", "retrievedAt": "2026-11-26T01:00:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
