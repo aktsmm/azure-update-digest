@@ -1,0 +1,99 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["574535"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T03:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "574535",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "PostgreSQL の拡張 Burstable ティア（Basv2）が登場",
+        "subtitleJa": "性能の予測しやすさとバースト効率を改善（パブリック プレビュー）",
+        "en": "Public Preview: Azure Database for PostgreSQL enhanced Burstable tier (Basv2)"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Database for PostgreSQL"],
+        "categories": ["databases", "ops-governance"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "開発・テスト用などで **PostgreSQL の Burstable ティアを使う／検討している利用者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "バースト利用が効率化され、安定した負荷を経済的に動かしつつ急増にも自動で対応できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビューのため、まず検証環境で性能とコストを評価", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "性能の予測しやすさとバースト効率が高まった拡張 Burstable ティア（Basv2）で、コストと性能のバランスを改善できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "既存の Burstable モデルを基にした拡張ティア（Basv2）がパブリック プレビューで提供される", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Burstable の VM シリーズは B シリーズと Basv2 シリーズ。Basv2 は 2〜32 vCore の SKU", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "コンピューティング オプション表", "retrievedAt": "2026-11-26T03:30:00Z" }] },
+            { "text": "Basv2 SKU は最大 25,600 IOPS・600 MiB/秒（B16as_v2 / B32as_v2）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "バースト対応 v2", "retrievedAt": "2026-11-26T03:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Burstable は CPU クレジット モデル。クレジットが尽きるとベースライン CPU に制限される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "バースト可能", "retrievedAt": "2026-11-26T03:30:00Z" }] },
+            { "text": "主に開発・ステージング・テストなど非運用環境向け。業務プロセスには非推奨", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "Important", "retrievedAt": "2026-11-26T03:30:00Z" }] },
+            { "text": "リージョン表では Basv2 は西日本が対象で、東日本の Burstable 欄は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "Azure リージョン", "retrievedAt": "2026-11-26T03:30:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure Monitor の「残りの CPU クレジット」を監視し、枯渇の頻度を検証で確認する", "origin": "learn", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "クレジットが頻繁に枯渇する場合は、より大きなサイズや別ティアを検討する", "origin": "learn", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-database-for-postgresql", "term": "Azure Database for PostgreSQL", "type": "product", "oneLine": { "text": "データベース管理機能と構成設定を細かく制御できる、フル マネージドのデータベース サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "冒頭", "retrievedAt": "2026-11-26T03:30:00Z" }] } },
+        { "termKey": "burstable", "term": "Burstable（バースト可能）", "type": "term", "oneLine": { "text": "完全な CPU 性能を継続的に必要としないワークロード向けの価格レベル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "バースト可能", "retrievedAt": "2026-11-26T03:30:00Z" }] } },
+        { "termKey": "basv2", "term": "Basv2", "type": "term", "oneLine": { "text": "Burstable ティアで使える VM シリーズの 1 つ（B シリーズと並ぶ）。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "コンピューティング オプション表", "retrievedAt": "2026-11-26T03:30:00Z" }] } },
+        { "termKey": "cpu-credit", "term": "CPU クレジット", "type": "term", "oneLine": { "text": "使用量がベースラインを下回ると蓄積され、上回ると消費される仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locator": "バースト可能", "retrievedAt": "2026-11-26T03:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-26T03:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-west",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "概要ページのリージョン表で、Basv2 は西日本のみ（東日本は非対応）",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locator": "Azure リージョン", "retrievedAt": "2026-11-26T03:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=574535",
+        "learn": [
+          { "title": "Azure Database for PostgreSQL フレキシブル サーバーのコンピューティング オプション", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute", "locale": "ja-jp" },
+          { "title": "Azure Database for PostgreSQL フレキシブル サーバーとは", "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "概要ページの表では、Basv2 は西日本が対象です。東日本の Burstable 欄は非対応です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/overview" }] },
+          { "q": "本番で使ってよいですか？", "a": "Burstable ティアは主に開発・ステージング・テストなど非運用環境向けで、業務プロセスのワークロードには推奨されません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute" }] },
+          { "q": "クレジットが尽きるとどうなりますか？", "a": "ベースライン CPU に制限され、性能低下や接続タイムアウトが起こる可能性があります。残りの CPU クレジットを監視してください。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/postgresql/compute-storage/concepts-compute" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
