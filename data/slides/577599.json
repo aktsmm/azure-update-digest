@@ -1,0 +1,95 @@
+{
+  "$schema": "../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577599"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T04:00:00Z"
+  },
+  "slides": [
+    {
+      "key": "577599",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Managed Redis にシャード単位のメトリックが登場",
+        "subtitleJa": "個々のシャードの性能を可視化（パブリック プレビュー）",
+        "en": "Public Preview: Shard-level metrics in Azure Managed Redis "
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Managed Redis"],
+        "categories": ["databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "クラスタリング構成の **Azure Managed Redis の運用担当者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "シャードごとの偏りやホットスポットを特定し、性能問題を調べやすくなる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Azure Monitor で Shard 系メトリックを Slots (Range) で分割して確認する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/monitor-cache-reference", "locator": "Shard-level metrics", "retrievedAt": "2026-11-26T04:00:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "個々のシャードの性能を確認でき、ワークロードの分散状況の把握、ホットスポットの特定、性能問題の調査ができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "シャードごとのメモリ使用量、キー数、レプリケーション リンク状態、大きなキーの分布を取得できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/monitor-cache-reference", "locator": "Shard-level metrics", "retrievedAt": "2026-11-26T04:00:00Z" }] },
+            { "text": "ディメンション: インスタンス ID／スロット範囲／シャード ID／ロール（primary・replica）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/monitor-cache-reference", "locator": "Dimensions", "retrievedAt": "2026-11-26T04:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "分割せずに照会すると全シャードが集計され、意味のある合計にならない。Slots (Range) で分割する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/monitor-cache-reference", "locator": "Important", "retrievedAt": "2026-11-26T04:00:00Z" }] },
+            { "text": "大きなキーのメトリックは、アクティブ geo レプリケーションと Flash Optimized 層では未対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/monitor-cache-reference", "locator": "Big keys metrics", "retrievedAt": "2026-11-26T04:00:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "活用のヒント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "メモリの偏りは、Shard Memory Used を Slots (Range) で分割し最大/最小比 2 倍超で判断する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/monitor-cache-reference", "locator": "Identifying memory imbalance", "retrievedAt": "2026-11-26T04:00:00Z" }] },
+            { "text": "レプリケーション リンク障害は、Shard Replication Link Up の最小値が 0 かで検知できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/monitor-cache-reference", "locator": "Alerting recommendations", "retrievedAt": "2026-11-26T04:00:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-managed-redis", "term": "Azure Managed Redis", "type": "product", "oneLine": { "text": "Redis Enterprise ソフトウェアに基づく、マネージドのメモリ内データ ストア。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/overview", "locator": "冒頭", "retrievedAt": "2026-11-26T04:00:00Z" }] } },
+        { "termKey": "shard", "term": "シャード", "type": "term", "oneLine": { "text": "ハッシュ スロット範囲ごとにデータを分割して保持する単位で、メトリックはシャード別に取得できる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/monitor-cache-reference", "locator": "Dimensions", "retrievedAt": "2026-11-26T04:00:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-26T04:00:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Managed Redis は Japan East / Japan West で利用可能。機能単位のリージョン制限の記載はない",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/redis/reserved-pricing", "locator": "リージョン一覧", "retrievedAt": "2026-11-26T04:00:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577599",
+        "learn": [
+          { "title": "Azure Managed Redis 監視データ リファレンス", "url": "https://learn.microsoft.com/ja-jp/azure/redis/monitor-cache-reference", "locale": "ja-jp" },
+          { "title": "Azure Managed Redis とは", "url": "https://learn.microsoft.com/ja-jp/azure/redis/overview", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "Azure Managed Redis は Japan East / Japan West で提供されています。シャード単位メトリックに個別のリージョン制限の記載はありません。", "evidence": [{ "url": "https://learn.microsoft.com/azure/redis/reserved-pricing", "locator": "リージョン一覧", "retrievedAt": "2026-11-26T04:00:00Z" }] },
+          { "q": "すべてのキャッシュで使えますか？", "a": "大きなキーのメトリックは、アクティブ geo レプリケーションと Flash Optimized 層のキャッシュでは未対応です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/monitor-cache-reference", "locator": "Big keys metrics", "retrievedAt": "2026-11-26T04:00:00Z" }] },
+          { "q": "どう見ればシャードの偏りが分かりますか？", "a": "Shard Memory Used を Slots (Range) で分割します。最大/最小比が 2 倍を超えると偏りの目安です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/monitor-cache-reference", "locator": "Identifying memory imbalance", "retrievedAt": "2026-11-26T04:00:00Z" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
