@@ -1,0 +1,150 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581478"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T03:15:00Z"
+  },
+  "slides": [
+    {
+      "key": "581478",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Foundry Toolkit for VS Code が独自のコンテナー レジストリからのデプロイに対応（GA）",
+        "subtitleJa": "ACR 以外を含む自社管理レジストリのビルド済みイメージから、ホステッド エージェントをデプロイできます",
+        "en": "Generally Available: Deploy hosted agents from your own container registry in Foundry Toolkit for VS Code"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "VS Code からホステッド エージェントをデプロイする **Foundry 開発者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "承認済みレジストリや既存のイメージ ビルド パイプラインをそのまま活用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "自社レジストリのイメージを使いたい場合に利用を検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "pricing": {
+        "kind": "paid",
+        "text": "ホステッド エージェントのランタイムは、セッションに割り当てた CPU とメモリに基づいて課金。モデルとツールの使用量は別課金",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/concepts/hosted-agents", "locator": "制限、価格、可用性", "retrievedAt": "2026-11-26T03:15:00Z" }]
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "Azure Container Registry 以外も含む自社管理レジストリのビルド済みイメージから、Toolkit でホステッド エージェントをデプロイできる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Foundry プロジェクトで対応するレジストリ接続を選択してデプロイ", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "設定は再デプロイ用に Toolkit が保持。認証は接続側で管理", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既存の ACR・ソースビルド・ZIP のデプロイ方法も引き続き利用可能", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "VS Code の Foundry Toolkit からデプロイを開始し、コンテナー イメージ方式を選んで、既存エージェントの更新または新規作成を行う",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/vs-code-agents-workflow-pro-code", "locator": "ホストされるエージェントをデプロイする", "retrievedAt": "2026-11-26T03:15:00Z" }]
+            },
+            {
+              "text": "カスタム レジストリの使用前にコンテナーの要件とプライベート ネットワークのガイダンスを確認",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/vs-code-agents-workflow-pro-code", "locator": "コンテナー イメージをデプロイする", "retrievedAt": "2026-11-26T03:15:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "サポート対象リージョンの Foundry プロジェクトと、モデルのデプロイ、デプロイ権限が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/vs-code-agents-workflow-pro-code", "locator": "前提条件", "retrievedAt": "2026-11-26T03:15:00Z" }]
+            },
+            {
+              "text": "イメージのサイズ上限は、サービスが変換後のサイズで確認する",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/deploy-hosted-agent", "locator": "イメージのサイズ", "retrievedAt": "2026-11-26T03:15:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "他のデプロイ方法との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "ソース コード（ZIP）: ソースをアップロードし Foundry が依存関係を復元 / コンテナー: ビルド済みイメージをレジストリから取得",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/vs-code-agents-workflow-pro-code", "locator": "ホストされるエージェントをデプロイする", "retrievedAt": "2026-11-26T03:15:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "承認済みレジストリのイメージを、新たな ACR へコピーせず使いたい場合", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "既存のイメージ ビルド パイプラインを使い続けたい場合", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "microsoft-foundry", "term": "Microsoft Foundry", "type": "product", "oneLine": { "text": "AI アプリケーションとエージェントを構築・運用するための Azure のプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/concepts/hosted-agents", "locator": "冒頭", "retrievedAt": "2026-11-26T03:15:00Z" }] } },
+        { "termKey": "hosted-agent", "term": "ホステッド エージェント", "type": "feature", "oneLine": { "text": "独自コードで動き、Foundry Agent Service がホスティングとスケーリングを管理するエージェント。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/concepts/hosted-agents", "locator": "冒頭", "retrievedAt": "2026-11-26T03:15:00Z" }] } },
+        { "termKey": "foundry-toolkit", "term": "Foundry Toolkit for VS Code", "type": "product", "oneLine": { "text": "VS Code からエージェントを作成・ローカル実行・Foundry へデプロイするための拡張機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/vs-code-agents-workflow-pro-code", "locator": "冒頭", "retrievedAt": "2026-11-26T03:15:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-26T03:15:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "ホステッド エージェントの提供リージョンに東日本・西日本が含まれる",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/concepts/hosted-agents", "locator": "リージョンの可用性", "retrievedAt": "2026-11-26T03:15:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581478",
+        "learn": [
+          { "title": "Microsoft Foundry Toolkit for Visual Studio Code を使用してホストされるエージェントを作成する", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/develop/vs-code-agents-workflow-pro-code", "locale": "ja-jp" },
+          { "title": "ホストされるエージェントをデプロイする", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/deploy-hosted-agent", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "ホステッド エージェントの提供リージョンに東日本・西日本が含まれています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/concepts/hosted-agents" }]
+          },
+          {
+            "q": "費用はどうなりますか？",
+            "a": "ホステッド エージェントのランタイムは、セッションに割り当てた CPU とメモリで課金され、モデルとツールの使用量は別課金です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/concepts/hosted-agents" }]
+          },
+          {
+            "q": "従来の ACR や ZIP のデプロイは使えなくなりますか？",
+            "a": "既存の Azure Container Registry、ソースビルド、ZIP によるデプロイは引き続き利用できます。",
+            "evidence": [{ "url": "https://azure.microsoft.com/updates?id=581478" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
