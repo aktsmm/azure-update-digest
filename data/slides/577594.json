@@ -1,0 +1,114 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577594"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T03:52:00Z"
+  },
+  "slides": [
+    {
+      "key": "577594",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Managed Redis で Redis 8 がパブリック プレビューに",
+        "subtitleJa": "JSON のアトミック更新やベクター機能など、最新の Redis 機能を新規インスタンスで評価できます",
+        "en": "Public Preview: Redis 8 in Azure Managed Redis"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Managed Redis"],
+        "categories": ["databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "**Azure Managed Redis** で AI アプリやキャッシュを構築・検討している方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "Redis 8 の新機能（ベクター、JSON 更新など）を新規インスタンスで試せる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。試すには Redis 8 プレビューへのサインアップと新規作成が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/how-to-upgrade", "locator": "現在のバージョン", "retrievedAt": "2026-11-26T03:55:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "利用できる Redis バージョンは Redis 7.4（既定）",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/how-to-upgrade", "locator": "現在のバージョン", "retrievedAt": "2026-11-26T03:55:00Z" }]
+        },
+        "after": {
+          "text": "Redis 8 を選択でき、豊富なクエリ、アトミックな JSON 更新、フィールド単位の有効期限、ベクター機能が使える",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Redis 8.2（プレビュー）は、メモリ最適化・バランス・コンピューティング最適化の新規インスタンスで利用可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/overview", "locator": "Redis のバージョン", "retrievedAt": "2026-11-26T03:55:00Z" }] },
+            { "text": "すべての Redis モジュールが含まれる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/overview", "locator": "Redis のバージョン", "retrievedAt": "2026-11-26T03:55:00Z" }] },
+            { "text": "ベクター機能で RAG・セマンティック検索・レコメンド・エージェント メモリ向けアプリを構築", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Flash 最適化 SKU、geo レプリケーション、カスタム データ アクセス ポリシーは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/overview", "locator": "Redis のバージョン", "retrievedAt": "2026-11-26T03:55:00Z" }] },
+            { "text": "既存インスタンスの Redis 8.2 へのアップグレードは非対応（新規作成のみ）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/how-to-upgrade", "locator": "現在のバージョン", "retrievedAt": "2026-11-26T03:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "対象 SKU・非対応機能を確認し、検証用の新規インスタンスで挙動を評価する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-managed-redis", "term": "Azure Managed Redis", "type": "product", "oneLine": { "text": "Redis Enterprise に基づくメモリ内データ ストアを提供する、Azure のマネージド サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/overview", "locator": "冒頭", "retrievedAt": "2026-11-26T03:55:00Z" }] } },
+        { "termKey": "rag", "term": "RAG（検索拡張生成）", "type": "term", "oneLine": { "text": "外部データを検索して生成 AI の回答に組み込む手法。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-26T03:55:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Managed Redis サービス自体は Japan East / Japan West で提供（メモリ最適化・バランス・コンピューティング最適化）",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/redis/reserved-pricing", "locator": "Region name 表（Japan East / Japan West）", "retrievedAt": "2026-11-26T03:55:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577594",
+        "learn": [
+          { "title": "Azure Managed Redis とは", "url": "https://learn.microsoft.com/ja-jp/azure/redis/overview", "locale": "ja-jp" },
+          { "title": "Azure Managed Redis インスタンスの Redis バージョンをアップグレードする", "url": "https://learn.microsoft.com/ja-jp/azure/redis/how-to-upgrade", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "既存のインスタンスを Redis 8 にアップグレードできますか？",
+            "a": "できません。Redis 8.2（プレビュー）は新規インスタンスのみ対応で、既存インスタンスのアップグレードは非対応です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/how-to-upgrade" }]
+          },
+          {
+            "q": "どの SKU・機能で使えますか？",
+            "a": "メモリ最適化・バランス・コンピューティング最適化で利用可能です。Flash 最適化、geo レプリケーション、カスタム データ アクセス ポリシーは非対応です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/overview" }]
+          },
+          {
+            "q": "どうやって試せますか？",
+            "a": "Redis 8 プレビューにサインアップし、作成時の [Advanced] タブで Redis バージョンに 8.2 (preview) を選択します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/how-to-upgrade" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
