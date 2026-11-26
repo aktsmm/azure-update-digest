@@ -1,0 +1,144 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581353"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T02:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "581353",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Speech の HD V3 音声でスタイル・指示による制御",
+        "subtitleJa": "音声エージェントやナレーションの話し方を調整できます（パブリック プレビュー）",
+        "en": "Public Preview: Style and instruction control for HD V3 voices in Azure Speech in Foundry Tools"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Azure Speech のテキスト読み上げで **HD 音声** を使う開発者", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "音声エージェントやナレーションで、話し方を調整できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "表現力を高めたい場合に評価", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "HD V3 音声で、スタイルと指示による制御をパブリック プレビューとして利用できる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "SSML の mstts:express-as タグか、角かっこタグで話し方（スタイル）を指定",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/high-definition-voices", "locator": "表現豊かなスタイルタグ", "retrievedAt": "2026-11-26T02:30:00Z" }]
+            },
+            {
+              "text": "怒り・興奮・ささやきなどのスタイルと、笑い声・息づかいなどのパラ言語タグに対応",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/high-definition-voices", "locator": "表現豊かなスタイルタグ", "retrievedAt": "2026-11-26T02:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "使い始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "音声名を en-US-Ava:DragonHDV3Neural のように指定して V3 モデルを使う",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/high-definition-voices", "locator": "Dragon HD ボイス", "retrievedAt": "2026-11-26T02:30:00Z" }]
+            },
+            {
+              "text": "テキストを express-as 要素で囲み style に例: excited を指定、または [excited] を前置",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/high-definition-voices", "locator": "表現豊かなスタイルタグ", "retrievedAt": "2026-11-26T02:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Learn ではスタイルとパラ言語は英語コンテンツで利用可能と記載。結果は入力テキストの内容に左右される",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/high-definition-voices", "locator": "メモ", "retrievedAt": "2026-11-26T02:30:00Z" }]
+            },
+            {
+              "text": "HD 音声はクラウドのみ・リアルタイム合成のみ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/high-definition-voices", "locator": "比較表", "retrievedAt": "2026-11-26T02:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "Dragon HD Omni は自然言語の説明による自動スタイル予測に対応（当初は Ava と Andrew）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/high-definition-voices", "locator": "ドラゴンHDオムニの主な機能", "retrievedAt": "2026-11-26T02:30:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "音声エージェントの応答やナレーションの抑揚づけに使う", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "パブリック プレビューのため、本番利用前に品質を確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-speech", "term": "Azure Speech", "type": "product", "oneLine": { "text": "音声をテキストに、テキストを音声に変換する Azure のサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/regions", "locator": "冒頭", "retrievedAt": "2026-11-26T02:30:00Z" }] } },
+        { "termKey": "hd-voice", "term": "HD 音声", "type": "feature", "oneLine": { "text": "入力テキストの感情を検出し、話すトーンを調整する高品位音声。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/high-definition-voices", "locator": "冒頭", "retrievedAt": "2026-11-26T02:30:00Z" }] } },
+        { "termKey": "ssml", "term": "SSML", "type": "term", "oneLine": { "text": "音声合成の話し方を指定するための XML ベースのマークアップ言語。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/speech-synthesis-markup-voice", "locator": "冒頭", "retrievedAt": "2026-11-26T02:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "パブリック プレビュー", "type": "label", "oneLine": { "text": "一般提供前に、顧客が評価目的で試せる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-26T02:30:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581353",
+        "learn": [
+          { "title": "Azure Speech の高品位音声", "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/high-definition-voices", "locale": "ja-jp" },
+          { "title": "SSML を使用して音声とサウンドをカスタマイズする", "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/speech-synthesis-markup-voice", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どの言語で使えますか？",
+            "a": "Learn では、スタイルとパラ言語機能はすべての音声の英語コンテンツで利用可能と記載されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/high-definition-voices" }]
+          },
+          {
+            "q": "V3 モデルはどう指定しますか？",
+            "a": "音声名を en-US-Ava:DragonHDV3Neural の形式で指定すると、V3 モデルの機能を利用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/high-definition-voices" }]
+          },
+          {
+            "q": "スタイルはどのように指定しますか？",
+            "a": "SSML の mstts:express-as 要素の style 属性、またはテキストに直接角かっこタグを埋め込んで指定します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/ai-services/speech-service/high-definition-voices" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
