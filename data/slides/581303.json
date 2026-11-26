@@ -1,0 +1,130 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581303"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T01:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "581303",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure AI Search / Foundry IQ で Azure Storage の権限を利用可能に（GA）",
+        "subtitleJa": "ユーザーごとのアクセス権に応じた検索結果を返し、別途セキュリティ フィルターを作る手間を減らせます",
+        "en": "Generally Available: Use Azure Storage permissions in Azure AI Search and Foundry IQ"
+      },
+      "meta": {
+        "publishedJst": "2026-11-25",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "ADLS Gen2 / Blob Storage のデータを **Azure AI Search / Foundry IQ で検索・RAG に使う方**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ユーザーの権限に応じた結果を返せ、セキュリティ フィルターの作成・保守を減らせる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "権限制御つきの検索が必要なら検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "対応する Azure Storage の権限で検索結果へのアクセスを制御でき、検索アプリや AI エージェントはユーザーごとの権限に応じた内容を返す", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ADLS Gen2 の ACL とコンテナー RBAC を、文書の内容とともにインデックスへ取り込む", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locator": "冒頭", "retrievedAt": "2026-11-26T01:50:00Z" }] },
+            { "text": "クエリ時はコンテナー RBAC を先に評価し、次に ACL を確認。いずれかが許可すればアクセス可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locator": "Support for the permission model", "retrievedAt": "2026-11-26T01:50:00Z" }] },
+            { "text": "標準 Blob Storage はコンテナー レベルの RBAC が対象（個別 Blob の ACL は非対象）", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Search サービスでロールベース アクセスとマネージド ID を有効にし、Storage Blob Data Reader を付与する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locator": "Prerequisites / Authorization", "retrievedAt": "2026-11-26T01:50:00Z" }] },
+            { "text": "ルート コンテナーで対象ユーザー・グループに読み取りと実行を付与し、既存ファイルへは ACL を再帰的に適用する", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locator": "Configure ADLS Gen2", "retrievedAt": "2026-11-26T01:50:00Z" }] },
+            { "text": "インデクサーまたはナレッジ ソースにドキュメント レベルのアクセス制御を設定する", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Basic 以上の課金対象レベルと REST API 2026-10-01 が必要。Azure portal は非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locator": "Prerequisites / Limitations", "retrievedAt": "2026-11-26T01:50:00Z" }] },
+            { "text": "ABAC は非対応。ACL の owning users / owning groups / Other も非対応で、名前付きユーザー・グループを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locator": "Limitations", "retrievedAt": "2026-11-26T01:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "セキュリティ フィルターはアプリが ID 文字列を渡す方式。今回は Storage の権限メタデータでクエリ時にフィルターする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/search-document-level-access-overview", "locator": "セキュリティ フィルター / POSIX に似た ACL/RBAC スコープ", "retrievedAt": "2026-11-26T01:50:00Z" }] },
+            { "text": "SharePoint の ACL 取り込みも REST API 2026-10-01 で GA。Purview 秘密度ラベルはプレビュー", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/search-document-level-access-overview", "locator": "冒頭", "retrievedAt": "2026-11-26T01:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "社内文書の RAG で、部署やグループごとに閲覧範囲が異なる場合に有効", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "取り込める権限は一部で、Storage の全承認ポリシーとは完全に一致しない点に注意", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locator": "冒頭", "retrievedAt": "2026-11-26T01:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "foundry-iq", "term": "Foundry IQ", "type": "product", "oneLine": { "text": "Azure AI Search の機能を提供し、エージェントがナレッジ ベースから情報を取得できる仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/search-document-level-access-overview", "locator": "Note", "retrievedAt": "2026-11-26T01:50:00Z" }] } },
+        { "termKey": "adls-gen2", "term": "ADLS Gen2", "type": "product", "oneLine": { "text": "ディレクトリやファイル単位で ACL と Azure RBAC によるアクセス制御ができるストレージ。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locator": "冒頭", "retrievedAt": "2026-11-26T01:50:00Z" }] } },
+        { "termKey": "acl", "term": "ACL", "type": "term", "oneLine": { "text": "ディレクトリやファイル単位で、ユーザーごとのアクセス許可を定めるアクセス制御リスト。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locator": "Support for the permission model", "retrievedAt": "2026-11-26T01:50:00Z" }] } },
+        { "termKey": "rbac", "term": "RBAC", "type": "term", "oneLine": { "text": "ロールの割り当てでアクセスを制御する方式。ここではコンテナー単位の粗い制御。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locator": "Support for the permission model", "retrievedAt": "2026-11-26T01:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-26T01:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Foundry IQ (Azure AI Search) は Japan East / Japan West で提供。ADLS Gen2 の取り込みは任意のリージョンの課金対象レベルで利用可",
+        "evidence": [
+          { "url": "https://learn.microsoft.com/azure/search/search-region-support", "locator": "Asia Pacific", "retrievedAt": "2026-11-26T01:50:00Z" },
+          { "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locator": "Prerequisites", "retrievedAt": "2026-11-26T01:50:00Z" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Foundry IQ (Azure AI Search) は Japan East / Japan West で提供されています。ADLS Gen2 の権限取り込みは、課金対象レベルであれば任意のリージョンで利用できます。",
+            "evidence": [
+              { "url": "https://learn.microsoft.com/azure/search/search-region-support", "locator": "Asia Pacific", "retrievedAt": "2026-11-26T01:50:00Z" },
+              { "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locator": "Prerequisites", "retrievedAt": "2026-11-26T01:50:00Z" }
+            ]
+          },
+          {
+            "q": "前提条件は？",
+            "a": "Basic 以上の Search サービス、ロールベース アクセスとマネージド ID の有効化、REST API 2026-10-01 が必要です。Azure portal は非対応です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locator": "Prerequisites / Limitations", "retrievedAt": "2026-11-26T01:50:00Z" }]
+          },
+          {
+            "q": "標準の Blob Storage でも使えますか？",
+            "a": "標準 Blob Storage ではコンテナー レベルの RBAC が対象で、個別 Blob の ACL は対象外です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/search-document-level-access-overview", "locator": "ADLS Gen2 と標準 BLOB", "retrievedAt": "2026-11-26T01:50:00Z" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581303",
+        "learn": [
+          { "title": "Foundry IQ でのドキュメント レベルのアクセス制御 (Azure AI 検索)", "url": "https://learn.microsoft.com/ja-jp/azure/search/search-document-level-access-overview", "locale": "ja-jp" },
+          { "title": "Use an ADLS Gen2 indexer to ingest permission metadata", "url": "https://learn.microsoft.com/en-us/azure/search/search-indexer-access-control-lists-and-role-based-access", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
