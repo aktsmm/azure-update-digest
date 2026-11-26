@@ -1,0 +1,90 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": { "mode": "ids", "basis": "created", "ids": ["577589"], "coverage": "complete", "snapshotAt": "2026-11-26T03:50:00Z" },
+  "slides": [
+    {
+      "key": "577589",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Azure Managed Redis で IP フィルタリング（ファイアウォール規則）",
+        "subtitleJa": "許可する送信元 IP / サービス タグでパブリック接続を制限（パブリック プレビュー）",
+        "en": "Public Preview: IP filtering in Azure Managed Redis"
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "modifiedJst": "2026-11-18",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Azure Managed Redis"],
+        "categories": ["databases"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "パブリック エンドポイントで公開している **Azure Managed Redis の利用者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "許可した送信元だけに接続を絞り、公開エンドポイントを保護できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビュー機能。必要な場合に規則を構成する（REST API で設定）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules", "locator": "Prerequisites", "retrievedAt": "2026-11-26T03:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "承認した送信元 IP アドレスや Azure サービス タグだけに接続を制限できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "IPv4 アドレス、IPv4 CIDR 範囲、Azure サービス タグを送信元として許可", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules", "locator": "Limitations", "retrievedAt": "2026-11-26T03:50:00Z" }] },
+            { "text": "クラスター リソース単位で規則を構成（最大 250 個）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules", "locator": "Limitations", "retrievedAt": "2026-11-26T03:50:00Z" }] },
+            { "text": "適用対象はパブリック エンドポイントのみ。Private Link は制限しない", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules", "locator": "冒頭", "retrievedAt": "2026-11-26T03:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "空の規則セットは全パブリック通信を許可。遮断は公開アクセスの無効化で行う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules", "locator": "Important", "retrievedAt": "2026-11-26T03:50:00Z" }] },
+            { "text": "規則は配列で一括置換され、省略した規則は削除される", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules", "locator": "既存のルールを更新する", "retrievedAt": "2026-11-26T03:50:00Z" }] },
+            { "text": "更新は非同期。スケーリングや暗号化の変更とは別の要求で送信", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules", "locator": "Limitations", "retrievedAt": "2026-11-26T03:50:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "クライアントの送信元 IP を洗い出し、検証環境で接続性を確認してから適用する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "設定後は GET で構成を確認し、許可ソースから接続テストする", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules", "locator": "構成を確認する", "retrievedAt": "2026-11-26T03:50:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "amr", "term": "Azure Managed Redis", "type": "product", "oneLine": { "text": "Azure が管理する Redis サービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules", "locator": "冒頭", "retrievedAt": "2026-11-26T03:50:00Z" }] } },
+        { "termKey": "firewall-rules", "term": "ファイアウォール規則", "type": "feature", "oneLine": { "text": "パブリック エンドポイントに接続できる送信元を制限する規則。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules", "locator": "冒頭", "retrievedAt": "2026-11-26T03:50:00Z" }] } },
+        { "termKey": "service-tag", "term": "Azure サービス タグ", "type": "term", "oneLine": { "text": "個別のアドレス プレフィックスの代わりに指定できる Azure の送信元グループ名。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules", "locator": "冒頭", "retrievedAt": "2026-11-26T03:50:00Z" }] } },
+        { "termKey": "private-link", "term": "Private Link", "type": "term", "oneLine": { "text": "プライベート エンドポイント経由で接続する仕組み。この規則の対象外。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules", "locator": "冒頭", "retrievedAt": "2026-11-26T03:50:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-26T03:50:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Azure Managed Redis 自体が Japan East / Japan West で提供されている",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/redis/reserved-pricing", "locator": "Region table", "retrievedAt": "2026-11-26T03:50:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577589",
+        "learn": [{ "title": "Azure Managed Redis のファイアウォール規則 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules", "locale": "ja-jp" }]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "Private Link 経由の接続にも適用されますか？", "a": "いいえ。規則はパブリック エンドポイントのトラフィックのみが対象で、Private Link 経由の接続は制限しません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules" }] },
+          { "q": "規則を全部消すとどうなりますか？", "a": "パブリック アクセスが有効なままだと全パブリック通信が許可されます。遮断するにはパブリック ネットワーク アクセスを無効にします。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules" }] },
+          { "q": "設定できる規則数と送信元の種類は？", "a": "1 クラスターあたり最大 250 個で、IPv4 アドレス、IPv4 CIDR、Azure サービス タグを指定できます。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/redis/firewall-rules" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
