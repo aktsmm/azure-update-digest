@@ -1,0 +1,123 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["579285"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T03:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "579285",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Front Door WAF の「WAF Insights」が一般提供（GA）に",
+        "subtitleJa": "ブロック要求や攻撃傾向を、クエリなしのダッシュボードで調査できます",
+        "en": "Generally Available: WAF Insights for Azure Front Door"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Front Door", "Web Application Firewall"],
+        "categories": ["networking", "security"],
+        "importance": "high"
+      },
+      "audience": {
+        "who": { "text": "**Azure Front Door の WAF ポリシー**を運用するセキュリティ・運用担当の方", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "クエリを書かずに、ブロック要求の調査や誤検知の特定ができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "WAF ログを調査している場合は試す価値あり", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "WAF ログとメトリックを対話型ダッシュボードに集約。Application Gateway で提供済みの体験を Front Door でも利用できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Monitor タブ: 要求数・ルール一致・WAF アクション・チャレンジ状況を継続的に把握", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locator": "冒頭", "retrievedAt": "2026-11-26T03:40:00Z" }] },
+            { "text": "Investigate タブ: ルールまたは URL から、ホスト・URL・個別要求・一致ルールまで掘り下げ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locator": "Investigate tab", "retrievedAt": "2026-11-26T03:40:00Z" }] },
+            { "text": "Azure Monitor ブックで構築され、Workbooks からカスタマイズも可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locator": "Azure workbooks", "retrievedAt": "2026-11-26T03:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Azure portal で Front Door の WAF ポリシーを開き、[Insights] を選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locator": "冒頭", "retrievedAt": "2026-11-26T03:40:00Z" }] },
+            { "text": "事前に診断設定で WAF ログとアクセス ログを Log Analytics ワークスペースへ送信", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locator": "Prerequisites", "retrievedAt": "2026-11-26T03:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Front Door Standard / Premium が対象。マネージド ルールセットは Premium のみで、Standard はカスタム ルールのみ表示", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locator": "Prerequisites", "retrievedAt": "2026-11-26T03:40:00Z" }] },
+            { "text": "WAF ログには規則に一致した要求のみ記録。一致値が平文で記録され得るためアクセスを制限", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locator": "Limitations and considerations", "retrievedAt": "2026-11-26T03:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ログ ビューは要求の詳細調査向け、メトリック ビューは異常の素早い検知向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locator": "Data sources and architecture", "retrievedAt": "2026-11-26T03:40:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ルール起点で、誤検知や多くをブロックしているルールを特定してチューニングに活用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locator": "Investigate by Rule", "retrievedAt": "2026-11-26T03:40:00Z" }] },
+            { "text": "除外の作成前に正当な要求を再現し、一致した属性を特定して範囲を狭く設定", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locator": "Investigate by URL", "retrievedAt": "2026-11-26T03:40:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-front-door", "term": "Azure Front Door", "type": "product", "oneLine": { "text": "Web アプリの入口となる、グローバルでスケーラブルなサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/security/fundamentals/network-overview#azure-front-door", "locator": "Azure Front Door", "retrievedAt": "2026-11-26T03:40:00Z" }] } },
+        { "termKey": "waf", "term": "WAF", "type": "feature", "oneLine": { "text": "Web アプリを一般的な脅威や攻撃から保護する仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/ag/application-gateway-exceptions", "locator": "冒頭", "retrievedAt": "2026-11-26T03:40:00Z" }] } },
+        { "termKey": "waf-insights", "term": "WAF Insights", "type": "feature", "oneLine": { "text": "WAF 活動の監視・調査・レポートを 1 か所で行える機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locator": "冒頭", "retrievedAt": "2026-11-26T03:40:00Z" }] } },
+        { "termKey": "tracking-reference", "term": "追跡参照", "type": "term", "oneLine": { "text": "WAF ログとアクセス ログの関連付けに使う、Front Door の要求識別子。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locator": "Glossary", "retrievedAt": "2026-11-26T03:40:00Z" }] } },
+        { "termKey": "law", "term": "Log Analytics ワークスペース", "type": "term", "oneLine": { "text": "ログを保存し、クエリを実行する場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locator": "Glossary", "retrievedAt": "2026-11-26T03:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-26T03:40:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "global",
+        "scope": "policy",
+        "basis": "policy",
+        "note": "Azure Front Door はグローバルなサービス（非リージョン サービス）",
+        "evidence": [{ "url": "https://learn.microsoft.com/azure/reliability/regions-nonregional-services", "locator": "Azure Front Door", "retrievedAt": "2026-11-26T03:40:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=579285",
+        "learn": [
+          { "title": "Azure Front Door Web Application Firewall (WAF) Insights", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights", "locale": "ja-jp" },
+          { "title": "Azure Web アプリケーション ファイアウォールの監視とログ記録", "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/waf-front-door-monitor", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "利用の前提条件は何ですか？",
+            "a": "Front Door Standard / Premium の WAF ポリシーと、Log Analytics へのログ送信（診断設定）が必要です。ログがないとデータは表示されません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights" }]
+          },
+          {
+            "q": "Standard 階層でも使えますか？",
+            "a": "使えますが、マネージド ルールセットは Premium のみのため、Standard ではカスタム ルールの動きのみ表示されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights" }]
+          },
+          {
+            "q": "問題の個別要求はどう特定しますか？",
+            "a": "追跡参照で WAF ログとアクセス ログを関連付けます。この値は X-Azure-Ref 応答ヘッダーでクライアントにも返されます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/web-application-firewall/afds/insights" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
