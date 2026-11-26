@@ -1,0 +1,116 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581383"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T02:55:00Z"
+  },
+  "slides": [
+    {
+      "key": "581383",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Foundry の model router が Messages API に対応",
+        "subtitleJa": "Anthropic 形式のまま自動モデル選択を利用（パブリック プレビュー）",
+        "en": "Public Preview: Use the Messages API with model router in Microsoft Foundry"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Anthropic SDK や Claude Code を使う **Foundry の開発者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "Anthropic の要求・応答形式のまま、model router の自動モデル選択を使える", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Messages API を使いたい場合に、Claude モデルをデプロイして試す", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "pricing": {
+        "kind": "paid",
+        "text": "model router のルーティング料金に加え、選択したモデルの料金体系に基づく使用料が発生する",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router", "locator": "価格", "retrievedAt": "2026-11-26T02:55:00Z" }]
+      },
+      "beforeAfter": {
+        "after": { "text": "Anthropic 形式の Messages API で model router を呼び出し、Claude モデルへ自動ルーティングできる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Anthropic SDK・Claude Code・Claude Agent SDK から利用できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-apis", "locator": "Messages API を使用する", "retrievedAt": "2026-11-26T02:55:00Z" }] },
+            { "text": "ストリーミング・ツール・画像入力・システム プロンプトに対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-apis", "locator": "Messages API を使用する", "retrievedAt": "2026-11-26T02:55:00Z" }] },
+            { "text": "各応答の model フィールドで、応答した Claude モデルがわかる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-apis", "locator": "Messages API を使用する", "retrievedAt": "2026-11-26T02:55:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ルーティング先は Claude モデルのみ。事前に同じリソースへデプロイ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router-models", "locator": "クロード モデル", "retrievedAt": "2026-11-26T02:55:00Z" }] },
+            { "text": "Claude は Global Standard でデプロイ。Data Zone Standard は対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router-models", "locator": "クロード モデル", "retrievedAt": "2026-11-26T02:55:00Z" }] },
+            { "text": "リソース エンドポイントの /anthropic/v1/messages のみ。model は名前か auto", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-apis", "locator": "Messages API を使用する", "retrievedAt": "2026-11-26T02:55:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "利用できる Claude デプロイが無いと、要求は HTTP 400 を返す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-apis", "locator": "Messages API を使用する", "retrievedAt": "2026-11-26T02:55:00Z" }] },
+            { "text": "API キー認証は x-api-key ではなく api-key ヘッダーを使う", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-apis", "locator": "認証", "retrievedAt": "2026-11-26T02:55:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "model-router", "term": "model router", "type": "product", "oneLine": { "text": "要求ごとに最適なモデルへ自動でルーティングする Foundry の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router", "locator": "冒頭", "retrievedAt": "2026-11-26T02:55:00Z" }] } },
+        { "termKey": "messages-api", "term": "Messages API", "type": "term", "oneLine": { "text": "Anthropic 形式のリクエスト・レスポンスを受け付ける API。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-apis", "locator": "Messages API を使用する", "retrievedAt": "2026-11-26T02:55:00Z" }] } },
+        { "termKey": "global-standard", "term": "Global Standard", "type": "term", "oneLine": { "text": "選択したモデルがデプロイされている任意の地域でデータを処理できるデプロイの種類。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router-models", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-26T02:55:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-26T02:55:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "model router は東日本・西日本でグローバル標準を提供",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router-models", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-26T02:55:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581383",
+        "learn": [
+          { "title": "Responses、Chat Completions、または Messages を使用してモデルルーターを呼び出す", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/how-to/model-router-apis", "locale": "ja-jp" },
+          { "title": "モデル ルーターでサポートされているモデル、リージョン、バージョン", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router-models", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "どのモデルにルーティングされますか？",
+            "a": "Messages API の要求は Claude モデルのみにルーティングされます。事前に同じ Foundry リソースへ Global Standard でデプロイします。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router-models", "locator": "クロード モデル", "retrievedAt": "2026-11-26T02:55:00Z" }]
+          },
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "model router は東日本・西日本でグローバル標準を利用できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router-models", "locator": "サポートされているリージョン", "retrievedAt": "2026-11-26T02:55:00Z" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "ルーティング料金に加え、選択したモデルの料金体系に基づく使用料を支払います。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/openai/concepts/model-router", "locator": "価格", "retrievedAt": "2026-11-26T02:55:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
