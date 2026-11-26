@@ -1,0 +1,168 @@
+{
+  "$schema": "../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581363"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T02:40:00Z"
+  },
+  "slides": [
+    {
+      "key": "581363",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Foundry の「エージェント分析情報（insights）」が一般提供（GA）に",
+        "subtitleJa": "エージェントのトレースから繰り返す問題を見つけ、優先して直す点を判断できます",
+        "en": "Generally Available: Agent insights in Microsoft Foundry"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "modifiedJst": "2026-11-24",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Foundry で**エージェントを運用している開発者・運用担当者**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "トレースから繰り返す失敗パターンを把握し、改善の優先順位を決められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "運用中のエージェントがあれば、トレースを確認して試す", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": { "text": "分析情報がトレースの繰り返しパターンを抽出し、関連する問題をまとめる。agent optimizer で修正案を昇格前に検証できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Application Insights のトレースから、繰り返す失敗・幻覚・トークンのスパイクなどを分析情報として表示",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/agent-insights", "locator": "Foundry が分析情報を生成する方法", "retrievedAt": "2026-11-26T02:40:00Z" }]
+            },
+            {
+              "text": "各分析情報に代表的なトレース、影響を受けるバージョン、考えられる原因、推奨アクションを含められる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/agent-insights", "locator": "冒頭", "retrievedAt": "2026-11-26T02:40:00Z" }]
+            },
+            {
+              "text": "agent optimizer で選んだ分析情報の修正候補を作成・評価し、昇格前に確認できる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/optimize-agents-from-insights", "locator": "最適化の実行を作成する", "retrievedAt": "2026-11-26T02:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方（Foundry ポータル）", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "エージェントの [トレース] で最近のトレースを確認し、ポータルでインサイト スキャンを実行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/agent-insights", "locator": "トレースの準備状態を確認する", "retrievedAt": "2026-11-26T02:40:00Z" }]
+            },
+            {
+              "text": "[分析情報] タブで内容とトレースを確認し、修正する分析情報を選んで [分析情報の修正] を実行",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/optimize-agents-from-insights", "locator": "最適化の実行を作成する", "retrievedAt": "2026-11-26T02:40:00Z" }]
+            },
+            {
+              "text": "「Insights improved」を主指標にし、全体品質も確認してから候補を昇格",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/optimize-agents-from-insights", "locator": "結果を理解する", "retrievedAt": "2026-11-26T02:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "GPT-5 以降の GPT モデルのデプロイと、接続された Application Insights が必要",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/agent-insights", "locator": "前提条件", "retrievedAt": "2026-11-26T02:40:00Z" }]
+            },
+            {
+              "text": "初回は 7 日間のルックバックで既存トレースを分析。トレースの欠落は品質低下の要因",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/agent-insights", "locator": "Foundry が分析情報を生成する方法", "retrievedAt": "2026-11-26T02:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "agent optimizer との関係", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "分析情報の修正はプレビュー。ポータルの対象は Copilot ハーネスを使わないプロンプト エージェント",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/optimize-agents-from-insights", "locator": "冒頭", "retrievedAt": "2026-11-26T02:40:00Z" }]
+            },
+            {
+              "text": "候補が変更できるのはエージェント命令とツールの説明で、モデルやスキルは変更不可",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/optimize-agents-from-insights", "locator": "候補をレビューして昇格させる", "retrievedAt": "2026-11-26T02:40:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "本番トラフィックの失敗パターンから、先に直す点を決める", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            {
+              "text": "ツールが本番システムを変更できる場合、最適化の実行で意図しない変更が起こり得る。読み取り専用か分離環境を使う",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/optimize-agents-from-insights", "locator": "最適化の実行を作成する", "retrievedAt": "2026-11-26T02:40:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "insights", "term": "分析情報（insights）", "type": "feature", "oneLine": { "text": "運用トレースから、繰り返し発生する障害や幻覚、トークンのスパイクなどを示す情報。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/agent-insights", "locator": "冒頭", "retrievedAt": "2026-11-26T02:40:00Z" }] } },
+        { "termKey": "agent-optimizer", "term": "agent optimizer", "type": "feature", "oneLine": { "text": "分析情報で見つかった問題への修正候補を作成・評価し、昇格前に確認できる Foundry の機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/optimize-agents-from-insights", "locator": "冒頭", "retrievedAt": "2026-11-26T02:40:00Z" }] } },
+        { "termKey": "judge-model", "term": "ジャッジ モデル", "type": "term", "oneLine": { "text": "トレースを分析するモデル。Foundry では GPT モデルのみがサポートされる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/agent-insights", "locator": "サポートされているジャッジ モデルを選択する", "retrievedAt": "2026-11-26T02:40:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-26T02:40:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "分析情報のサポート リージョンに japaneast / japanwest が含まれる",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/agent-insights", "locator": "サポートされているリージョンを選択する", "retrievedAt": "2026-11-26T02:40:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581363",
+        "learn": [
+          { "title": "分析情報で繰り返し発生する問題を見つける", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/agent-insights", "locale": "ja-jp" },
+          { "title": "agent optimizer を使用して分析情報を修正する (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/optimize-agents-from-insights", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "分析情報のサポート リージョンに japaneast と japanwest が含まれています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/agent-insights", "locator": "サポートされているリージョンを選択する", "retrievedAt": "2026-11-26T02:40:00Z" }]
+          },
+          {
+            "q": "利用の前提条件は？",
+            "a": "GPT-5 以降の GPT モデルのデプロイと、接続された Application Insights を持つ Foundry プロジェクトが必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/agent-insights", "locator": "前提条件", "retrievedAt": "2026-11-26T02:40:00Z" }]
+          },
+          {
+            "q": "agent optimizer も GA ですか？",
+            "a": "分析情報を修正する agent optimizer の手順は、プレビューとして記載されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/how-to/optimize-agents-from-insights", "locator": "冒頭", "retrievedAt": "2026-11-26T02:40:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
