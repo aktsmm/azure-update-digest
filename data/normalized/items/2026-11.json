@@ -73,6 +73,84 @@
     {
       "availabilities": [
         {
+          "month": "September",
+          "ring": "Retirement",
+          "year": 2027
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": null,
+        "privatePreview": null
+      },
+      "canonicalKey": "568586",
+      "categories": [
+        "compute",
+        "containers",
+        "iot"
+      ],
+      "created": "2026-11-25T21:53:30.4642216Z",
+      "createdJst": "2026-11-26",
+      "description": "Support for Java 8, 11 and 17 on Azure Functions is ending on September\n1, 2027. Your apps that are hosted on Azure Functions will continue to run, but\nsecurity updates will no longer be available, and we’ll no longer provide\ncustomer service for Java 8, 11 and 17. Required actionTo avoid potential security vulnerabilities, minimize risk\nfor your Azure Functions apps, and take advantage of latest features, follow\nthe steps to upgrade your Function app to Java 25 before September 1, 2027.Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "8f43122ac482f930de56e4b82c8b3fcf4ccf9026bb396d3cfaf80613504dcb24",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-26T03:23:01.628Z",
+          "fingerprint": "1b8f611a3fe62d30a8cff230aee76829a96f07f827c8acdd7f2dcedd3197309a",
+          "modifiedAfter": "2026-11-25T21:53:30.4642216Z",
+          "modifiedBefore": null,
+          "rawRef": "20261126T032301628Z_list_sweep_o0.json#568586"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-26T03:23:12.067Z",
+          "fingerprint": "8f43122ac482f930de56e4b82c8b3fcf4ccf9026bb396d3cfaf80613504dcb24",
+          "modifiedAfter": "2026-11-25T21:53:30.4642216Z",
+          "modifiedBefore": "2026-11-25T21:53:30.4642216Z",
+          "rawRef": "20261126T032312067Z_detail_568586.json#568586"
+        }
+      ],
+      "ids": [
+        "568586"
+      ],
+      "importance": {
+        "level": "high",
+        "reasons": [
+          "retire-tag",
+          "retire-ring",
+          "retire-title"
+        ],
+        "score": 10,
+        "topics": [
+          "retirement"
+        ]
+      },
+      "latestId": "568586",
+      "modified": "2026-11-25T21:53:30.4642216Z",
+      "modifiedJst": "2026-11-26",
+      "productCategories": [
+        "Compute",
+        "Containers",
+        "Internet of Things"
+      ],
+      "products": [
+        "Azure Functions"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=568586",
+      "status": null,
+      "tags": [
+        "Retirements"
+      ],
+      "title": "Retirement: Support for Java 8, 11 and 17 in Azure Functions ends on September 1, 2027"
+    },
+    {
+      "availabilities": [
+        {
           "month": "February",
           "ring": "Retirement",
           "year": 2027
@@ -17010,6 +17088,77 @@
         "Management"
       ],
       "title": "Generally Available: Azure Site Recovery support for zonal disaster recovery for Ultra disks"
+    },
+    {
+      "availabilities": [
+        {
+          "month": "November",
+          "ring": "Preview",
+          "year": 2026
+        }
+      ],
+      "availabilityDates": {
+        "general": null,
+        "preview": "2026-11",
+        "privatePreview": null
+      },
+      "canonicalKey": "582326",
+      "categories": [
+        "networking",
+        "ops-governance"
+      ],
+      "created": "2026-11-25T23:14:20.6450026Z",
+      "createdJst": "2026-11-26",
+      "description": "Equal-Cost Multi-Path (ECMP)\nrouting for Azure Virtual Network is now available in public preview, enabling\ncustomers to distribute traffic across multiple network appliances using a\nsingle user-defined route (UDR). \nCustomers can configure 2 to 16 next-hop IP addresses per route, scaling\naggregate network throughput beyond individual appliance limits without\nincreasing routing complexity. This capability supports bandwidth-intensive AI\nworkloads, large-scale data platforms, and enterprise hub-and-spoke\narchitectures. Learn more.",
+      "descriptionSource": "detail",
+      "detailState": "ok",
+      "fingerprint": "c152e620455284148a38ca6dda7ba8b28d170ff5f58d30ae93b4743bf6d31ca6",
+      "history": [
+        {
+          "changedFields": [
+            "initial"
+          ],
+          "fetchedAt": "2026-11-26T03:23:01.628Z",
+          "fingerprint": "4d3e5bbda6d17cbed6984c15f0c3c643765547b9e68ef3de18db2da1b0c53697",
+          "modifiedAfter": "2026-11-25T23:14:20.6450026Z",
+          "modifiedBefore": null,
+          "rawRef": "20261126T032301628Z_list_sweep_o0.json#582326"
+        },
+        {
+          "changedFields": [],
+          "fetchedAt": "2026-11-26T03:23:05.167Z",
+          "fingerprint": "c152e620455284148a38ca6dda7ba8b28d170ff5f58d30ae93b4743bf6d31ca6",
+          "modifiedAfter": "2026-11-25T23:14:20.6450026Z",
+          "modifiedBefore": "2026-11-25T23:14:20.6450026Z",
+          "rawRef": "20261126T032305167Z_detail_582326.json#582326"
+        }
+      ],
+      "ids": [
+        "582326"
+      ],
+      "importance": {
+        "level": "normal",
+        "reasons": [],
+        "score": 0,
+        "topics": []
+      },
+      "latestId": "582326",
+      "modified": "2026-11-25T23:14:20.6450026Z",
+      "modifiedJst": "2026-11-26",
+      "productCategories": [
+        "Networking"
+      ],
+      "products": [
+        "Virtual Network"
+      ],
+      "sourceUrl": "https://azure.microsoft.com/updates?id=582326",
+      "status": "In preview",
+      "tags": [
+        "Feature",
+        "Management",
+        "Services"
+      ],
+      "title": "Public Preview: ECMP Nexthop "
     }
   ],
   "month": "2026-11",
