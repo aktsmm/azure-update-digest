@@ -1,0 +1,138 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581368"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T02:45:00Z"
+  },
+  "slides": [
+    {
+      "key": "581368",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Foundry IQ の「Files ナレッジ ソース」が一般提供（GA）に",
+        "subtitleJa": "ファイルを直接アップロードするだけで、ストレージやインデクサーなしに検索できます",
+        "en": "Generally Available: Files knowledge source for Foundry IQ"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Foundry IQ でエージェント向けナレッジ ベースを作る**開発者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "ストレージ アカウントやスケジュール実行のインデクサーを用意せず、ファイルを直接取り込める", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "小規模～中規模のファイルを手早く検索対象にしたい場合に検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "pricing": {
+        "kind": "paid",
+        "text": "サーバーレスではファイル インジェストの成功時に課金対象のコンピューティングを消費（失敗したアップロードは対象外）",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "Prerequisites", "retrievedAt": "2026-11-26T02:45:00Z" }]
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "Azure Storage のプロビジョニングやアクセス構成、外部コンテナー経由のインデクサー パイプライン作成が必要だった",
+          "origin": "learn", "assertion": "fact", "verification": "verified",
+          "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "冒頭", "retrievedAt": "2026-11-26T02:45:00Z" }]
+        },
+        "after": {
+          "text": "ファイルをマネージド ナレッジ ソースに直接アップロードでき、Foundry IQ が処理・インデックス化する",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "Foundry IQ がアップロードされたファイルを処理してインデックス化する", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "ナレッジ ベースから抽出コンテンツを取得でき、エージェント的な取得の根拠データになる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "冒頭", "retrievedAt": "2026-11-26T02:45:00Z" }] },
+            { "text": "抽出モードは minimal（既定）と standard（Content Understanding 経由）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "サポートされている抽出モード", "retrievedAt": "2026-11-26T02:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "REST API / SDK でファイル ナレッジ ソースを作成し、ファイルをアップロード", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "ファイルをアップロードする", "retrievedAt": "2026-11-26T02:45:00Z" }] },
+            { "text": "作成したナレッジ ソースをナレッジ ベースから参照して取得に利用", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "冒頭", "retrievedAt": "2026-11-26T02:45:00Z" }] },
+            { "text": "Foundry ポータルで利用可能。Azure ポータルは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "使用サポート", "retrievedAt": "2026-11-26T02:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "2026-10-01 API（同期）: 最大 200 ファイル、1 件 50～100 MiB、180 秒", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "制限とファイル操作", "retrievedAt": "2026-11-26T02:45:00Z" }] },
+            { "text": "権限は Search Service 共同作成者ロール（推奨）か管理者 API キーが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "Prerequisites", "retrievedAt": "2026-11-26T02:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "既存の Blob / ADLS Gen2、大規模、定期取り込みは BLOB ナレッジ ソース", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "冒頭", "retrievedAt": "2026-11-26T02:45:00Z" }] },
+            { "text": "Azure Storage 権限ベースのドキュメント レベル権限も BLOB 側", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "冒頭", "retrievedAt": "2026-11-26T02:45:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "まず手元のファイルでナレッジ ベースを試作し、規模が増えたら BLOB へ", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "モデル呼び出しやベクター化など AI 処理は別料金になる場合がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "Prerequisites", "retrievedAt": "2026-11-26T02:45:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "foundry-iq", "term": "Foundry IQ", "type": "product", "oneLine": { "text": "エージェントに組織データに基づく根拠を与える、ナレッジ ベースとエージェント検索の仕組み。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/concepts/what-is-foundry-iq", "locator": "冒頭", "retrievedAt": "2026-11-26T02:45:00Z" }] } },
+        { "termKey": "knowledge-source", "term": "ナレッジ ソース", "type": "feature", "oneLine": { "text": "インデックス付きまたはリモートのコンテンツへの接続で、ナレッジ ベースから参照される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/concepts/what-is-foundry-iq", "locator": "コンポーネント", "retrievedAt": "2026-11-26T02:45:00Z" }] } },
+        { "termKey": "knowledge-base", "term": "ナレッジ ベース", "type": "feature", "oneLine": { "text": "複数のナレッジ ソースを束ね、エージェント型取得を調整する最上位のリソース。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/concepts/what-is-foundry-iq", "locator": "コンポーネント", "retrievedAt": "2026-11-26T02:45:00Z" }] } },
+        { "termKey": "agentic-retrieval", "term": "エージェント検索", "type": "term", "oneLine": { "text": "複雑な質問をサブクエリに分解して並列実行し、結果を統合して返すパイプライン。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/concepts/what-is-foundry-iq", "locator": "コンポーネント", "retrievedAt": "2026-11-26T02:45:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-26T02:45:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "service",
+        "basis": "service-level",
+        "note": "Foundry IQ（Azure AI 検索）は東日本・西日本でエージェント検索を提供",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/search-region-support", "locator": "アジア太平洋", "retrievedAt": "2026-11-26T02:45:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581368",
+        "learn": [
+          { "title": "ファイル ナレッジ ソースを作成する", "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locale": "ja-jp" },
+          { "title": "Foundry IQ とは", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/agents/concepts/what-is-foundry-iq", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "日本リージョンで使えますか？",
+            "a": "Foundry IQ のエージェント検索は東日本・西日本のどちらでも提供されています。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/search-region-support", "locator": "アジア太平洋", "retrievedAt": "2026-11-26T02:45:00Z" }]
+          },
+          {
+            "q": "どんなときに BLOB ナレッジ ソースを選びますか？",
+            "a": "ファイルが既に Blob / ADLS Gen2 にある場合、制限を超える場合、スケジュール取り込みが必要な場合です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "冒頭", "retrievedAt": "2026-11-26T02:45:00Z" }]
+          },
+          {
+            "q": "費用はかかりますか？",
+            "a": "サーバーレスではインジェスト成功時にコンピューティングが課金対象です。モデル呼び出しなどは別料金の場合があります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/search/agentic-knowledge-source-how-to-file", "locator": "Prerequisites", "retrievedAt": "2026-11-26T02:45:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
