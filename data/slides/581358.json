@@ -1,0 +1,104 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581358"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T02:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "581358",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Foundry のエージェント評価に人による注釈（Human annotation）",
+        "subtitleJa": "トレースへの評価・タグ・コメントから評価データセットを作成（パブリック プレビュー）",
+        "en": "Public Preview: Human annotation for agent evaluations in Microsoft Foundry"
+      },
+      "meta": {
+        "publishedJst": "2026-11-24",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Microsoft Foundry で**エージェントを開発・評価している開発者やレビュー担当者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "人の判断をトレースに記録し、評価データセットに反映できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "評価向け。プレビューは SLA なしで、運用ワークロードには非推奨", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/human-in-the-loop-annotate", "locator": "Important", "retrievedAt": "2026-11-26T02:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "レビュー担当者がトレースに評価・タグ・コメント・期待される出力を追加し、注釈付きトレースから評価データセットを作成できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "注釈でできること", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "評価（高評価／低評価）・タグ・コメント・想定される出力をトレースに追加", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/human-in-the-loop-annotate", "locator": "注釈を追加する", "retrievedAt": "2026-11-26T02:30:00Z" }] },
+            { "text": "会話ビューでは、複数ターンの会話全体を 1 つのテスト ケースとして注釈", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/human-in-the-loop-annotate", "locator": "確認するトレースを検索する", "retrievedAt": "2026-11-26T02:30:00Z" }] },
+            { "text": "想定される出力は参照回答に。コメントは Foundry の基準生成に役立つ", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/human-in-the-loop-annotate", "locator": "役に立つフィードバックを書く", "retrievedAt": "2026-11-26T02:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "前提・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "トレースを出力するエージェントと、接続された Application Insights が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/human-in-the-loop-annotate", "locator": "Prerequisites", "retrievedAt": "2026-11-26T02:30:00Z" }] },
+            { "text": "トレースの表示と注釈の保存は別の認可操作。書き込み権限が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/trace-annotations", "locator": "Note", "retrievedAt": "2026-11-26T02:30:00Z" }] },
+            { "text": "トレースと注釈には機密情報が含まれる場合があり、保持期間やアクセス要件の確認が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/human-in-the-loop-annotate", "locator": "Prerequisites", "retrievedAt": "2026-11-26T02:30:00Z" }] }
+          ]
+        },
+        { "id": "ga-timing", "heading": "GA の時期", "availability": "not-stated", "priority": "core" },
+        {
+          "id": "evaluate", "heading": "活用のポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "成功例と失敗例の両方に注釈すると、期待動作と改善点がデータセットに残る", "origin": "learn", "assertion": "recommendation", "verification": "unverified" },
+            { "text": "注釈にはソース属性があり、builder と end_user を区別して絞り込める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/trace-annotations", "locator": "注釈でトレースを絞り込む", "retrievedAt": "2026-11-26T02:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "foundry", "term": "Microsoft Foundry", "type": "product", "oneLine": { "text": "エージェントのトレースや評価を扱えるプロジェクト単位の Microsoft のプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/human-in-the-loop-annotate", "locator": "Prerequisites", "retrievedAt": "2026-11-26T02:30:00Z" }] } },
+        { "termKey": "trace", "term": "トレース", "type": "term", "oneLine": { "text": "エージェントの実行を記録したもので、Application Insights に出力される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/human-in-the-loop-annotate", "locator": "Prerequisites", "retrievedAt": "2026-11-26T02:30:00Z" }] } },
+        { "termKey": "annotation", "term": "注釈", "type": "term", "oneLine": { "text": "トレースに付ける評価・タグ・コメント・想定される出力の記録。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/human-in-the-loop-annotate", "locator": "注釈を追加する", "retrievedAt": "2026-11-26T02:30:00Z" }] } },
+        { "termKey": "app-insights", "term": "Application Insights", "type": "product", "oneLine": { "text": "トレースと注釈が出力・保存される、Azure Monitor のアプリケーション監視機能。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/trace-annotations", "locator": "Application Insights で注釈を照会する", "retrievedAt": "2026-11-26T02:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、評価とフィードバックのために提供される段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-26T02:30:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581358",
+        "learn": [
+          { "title": "評価のためにトレースに注釈を付ける (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/human-in-the-loop-annotate", "locale": "ja-jp" },
+          { "title": "人間のフィードバックを使用してトレースに注釈を付ける (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/trace-annotations", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "利用するための前提条件は？",
+            "a": "トレースを出力するエージェントを含む Foundry プロジェクトと、接続された Application Insights が必要です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/human-in-the-loop-annotate", "locator": "Prerequisites", "retrievedAt": "2026-11-26T02:30:00Z" }]
+          },
+          {
+            "q": "本番ワークロードで使えますか？",
+            "a": "プレビューは SLA なしで提供されており、運用ワークロードでの使用は推奨されていません。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/human-in-the-loop-annotate", "locator": "Important", "retrievedAt": "2026-11-26T02:30:00Z" }]
+          },
+          {
+            "q": "注釈では何を追加できますか？",
+            "a": "評価、タグ、コメント、想定される出力を追加できます。想定される出力はテスト ケースの参照回答になります。",
+            "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/observability/how-to/human-in-the-loop-annotate", "locator": "注釈を追加する", "retrievedAt": "2026-11-26T02:30:00Z" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
