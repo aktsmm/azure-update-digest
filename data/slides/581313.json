@@ -1,0 +1,99 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581313"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T01:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "581313",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Foundry Agent Service のホステッド エージェントが A2A をネイティブ受信",
+        "subtitleJa": "プロトコル変換なしで A2A リクエストをコンテナーへ転送（パブリック プレビュー）",
+        "en": "Public Preview: Native A2A passthrough for hosted agents in Foundry Agent Service"
+      },
+      "meta": {
+        "publishedJst": "2026-11-25",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "既存の A2A エージェントを Foundry Agent Service で動かしたい**エージェント開発者**", "origin": "mrc", "assertion": "inference", "verification": "source-only" },
+        "change": { "text": "変換レイヤーなしで、A2A メッセージとタスクを自前のコードで処理できる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "プレビュー提供のため、まず検証環境での評価向け", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/enable-agent-to-agent-endpoint", "locator": "プレビューの注記", "retrievedAt": "2026-11-26T01:50:00Z" }] }
+      },
+      "beforeAfter": {
+        "before": {
+          "text": "Agent Service が受信した A2A リクエストを Responses プロトコルに変換していた",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        },
+        "after": {
+          "text": "ネイティブな A2A リクエストをホステッド エージェントのコンテナーへ直接転送。エンドポイント・認証・ホステッド コンピューティングは Agent Service が管理する",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "A2A パススルー: ネイティブ A2A リクエストをコンテナーへ直接転送", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "対応: JSON-RPC 経由で受信する A2A v1.0 のリクエスト", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "Agent Service はエンドポイント・認証・ホステッド コンピューティングを管理", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ストリーミング、プッシュ通知、認証付き拡張エージェント カードは利用不可", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "受信リクエストのみ対象。他のエージェントへの送信呼び出しは構成しない", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "既存の A2A エージェントが v1.0・JSON-RPC・非ストリーミングで動くか、検証環境で確認する", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "a2a", "term": "A2A（Agent2Agent）", "type": "term", "oneLine": { "text": "エージェント同士が呼び出し合うための通信プロトコル。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/enable-agent-to-agent-endpoint", "locator": "冒頭", "retrievedAt": "2026-11-26T01:50:00Z" }] } },
+        { "termKey": "foundry-agent-service", "term": "Foundry Agent Service", "type": "product", "oneLine": { "text": "Foundry でエージェントを構築・実行するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/enable-agent-to-agent-endpoint", "locator": "冒頭", "retrievedAt": "2026-11-26T01:50:00Z" }] } },
+        { "termKey": "hosted-agent", "term": "ホステッド エージェント", "type": "term", "oneLine": { "text": "自分のコードをコンテナーで動かし、Agent Service が実行基盤を管理するエージェント。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-preview", "term": "Preview（プレビュー）", "type": "label", "oneLine": { "text": "SLA なしで提供される段階で、本番ワークロードには推奨されない。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/enable-agent-to-agent-endpoint", "locator": "プレビューの注記", "retrievedAt": "2026-11-26T01:50:00Z" }] } }
+      ],
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "ストリーミング応答は使えますか。",
+            "a": "MRC では、このプレビューでストリーミングは利用できないとされています。Learn の受信 A2A でもストリーミング応答は非対応です。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/enable-agent-to-agent-endpoint" }]
+          },
+          {
+            "q": "本番環境で使ってよいですか。",
+            "a": "プレビューは SLA なしで提供され、本番ワークロードには推奨されません。まず検証環境での評価をお勧めします。",
+            "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/enable-agent-to-agent-endpoint" }]
+          }
+        ]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581313",
+        "learn": [{ "title": "Enable incoming A2A on a Foundry agent", "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/enable-agent-to-agent-endpoint", "locale": "en-us" }]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
