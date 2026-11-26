@@ -1,0 +1,110 @@
+{
+  "$schema": "../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": { "mode": "ids", "basis": "created", "ids": ["582171"], "coverage": "complete", "snapshotAt": "2026-11-26T01:35:00Z" },
+  "slides": [
+    {
+      "key": "582171",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Site Recovery が Ultra disk のゾーン間 DR に対応（GA）",
+        "subtitleJa": "Ultra disk を使う VM を、同一リージョン内の別の可用性ゾーンへレプリケートして復旧できます",
+        "en": "Generally Available: Azure Site Recovery support for zonal disaster recovery for Ultra disks"
+      },
+      "meta": {
+        "publishedJst": "2026-11-25",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Site Recovery"],
+        "categories": ["ops-governance"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "Ultra disk を使う VM に **Azure Site Recovery でゾーン間 DR** を構成したい方", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "高性能 VM でもゾーン障害に備えた復旧が可能になる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "Ultra disk の VM でゾーン障害対策が必要なら検討", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "pricing": {
+        "kind": "paid",
+        "text": "ゾーン間 DR の料金は Azure 間 DR と同一。ゾーン間のデータ転送は別途課金",
+        "origin": "learn", "assertion": "fact", "verification": "verified",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery", "locator": "FAQs", "retrievedAt": "2026-11-26T01:35:00Z" }]
+      },
+      "beforeAfter": {
+        "after": { "text": "Ultra disk を使う VM を、別の可用性ゾーンへレプリケートして復旧でき、ゾーン障害への耐障害性を高められる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "同一 Azure リージョン内の別ゾーンへ VM をレプリケートし、ゾーン障害時に復旧", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+            { "text": "データはリージョン外へ移動・保存されない（コンテナーにはメタデータのみ）", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery", "locator": "Supported regions", "retrievedAt": "2026-11-26T01:35:00Z" }] }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "設定の流れ（Azure portal）", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "ゾーン内の VM → [ディザスター リカバリー] →「可用性ゾーン間」で [はい] を選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery", "locator": "Enable replication for the zonal Azure virtual machine", "retrievedAt": "2026-11-26T01:35:00Z" }] },
+            { "text": "既定のまま、または詳細設定を調整し、[Start replication] を選択", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery", "locator": "Enable replication for the zonal Azure virtual machine", "retrievedAt": "2026-11-26T01:35:00Z" }] }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Ultra disk は高チャーン（High Churn）が必要。ホスト キャッシュは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-support-matrix", "locator": "Replicated machines - storage", "retrievedAt": "2026-11-26T01:35:00Z" }] },
+            { "text": "保護の有効化・再同期の際はパブリック ネットワーク アクセスが必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-support-matrix", "locator": "Replicated machines - storage", "retrievedAt": "2026-11-26T01:35:00Z" }] }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た機能との違い", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "ゾーン間 DR は同一リージョン内。リージョン全体の災害には不足する可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery", "locator": "Use availability zones for disaster recovery", "retrievedAt": "2026-11-26T01:35:00Z" }] },
+            { "text": "ZRS のマネージド ディスクを持つ VM はゾーン間 DR 非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery", "locator": "Supported regions", "retrievedAt": "2026-11-26T01:35:00Z" }] }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "同一法域にペア リージョンがない場合や、ネットワークを再構築したくない場合に有効", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery", "locator": "Use availability zones for disaster recovery", "retrievedAt": "2026-11-26T01:35:00Z" }] },
+            { "text": "フェールオーバー先のリソース グループは、ソースと別にする必要がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery", "locator": "FAQs", "retrievedAt": "2026-11-26T01:35:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "asr", "term": "Azure Site Recovery", "type": "product", "oneLine": { "text": "計画・予期しない障害時にアプリを稼働させ続ける、災害復旧を支援するサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery", "locator": "冒頭", "retrievedAt": "2026-11-26T01:35:00Z" }] } },
+        { "termKey": "zonal-dr", "term": "ゾーン間 DR", "type": "feature", "oneLine": { "text": "VM を同一リージョン内の別の可用性ゾーンへレプリケート・フェールオーバーする方法。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery", "locator": "冒頭", "retrievedAt": "2026-11-26T01:35:00Z" }] } },
+        { "termKey": "az", "term": "可用性ゾーン", "type": "term", "oneLine": { "text": "Azure リージョン内にある、1 つ以上のデータセンターを持つ物理的に独立した場所。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery", "locator": "冒頭", "retrievedAt": "2026-11-26T01:35:00Z" }] } },
+        { "termKey": "ultra-disk", "term": "Ultra disk", "type": "product", "oneLine": { "text": "高 IOPS を求める、パフォーマンス重視の VM 向けのディスク。", "origin": "mrc", "assertion": "fact", "verification": "source-only" } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-26T01:35:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-east",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "ゾーン間 DR の対応リージョン一覧に Japan East が含まれる（Japan West は含まれない）",
+        "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery", "locator": "Supported regions for zone-to-zone disaster recovery", "retrievedAt": "2026-11-26T01:35:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=582171",
+        "learn": [
+          { "title": "Enable Azure VM disaster recovery between availability zones", "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery", "locale": "en-us" },
+          { "title": "Support matrix for Azure VM disaster recovery between Azure regions", "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-support-matrix", "locale": "en-us" }
+        ]
+      },
+      "render": { "continuationRequired": false },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンで使えますか？", "a": "ゾーン間 DR の対応リージョンに Japan East が含まれます。Japan West は一覧にありません。", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery" }] },
+          { "q": "費用はどうなりますか？", "a": "ゾーン間 DR の料金は Azure 間 DR と同一です。ゾーン間のデータ転送料金は別途かかります。", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-how-to-enable-zone-to-zone-disaster-recovery" }] },
+          { "q": "Ultra disk 利用時の前提条件は？", "a": "高チャーンが必要で、ホスト キャッシュは非対応です。有効化・再同期時はパブリック ネットワーク アクセスが必要です。", "evidence": [{ "url": "https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-support-matrix" }] }
+        ]
+      }
+    }
+  ]
+}
