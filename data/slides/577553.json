@@ -1,0 +1,169 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["577553"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-26T03:50:00Z"
+  },
+  "slides": [
+    {
+      "key": "577553",
+      "kind": "ga",
+      "kindSource": "ring",
+      "label": "GA",
+      "title": {
+        "ja": "Azure Managed Redis のデータベース統合ガイダンスが一般提供（GA）に",
+        "subtitleJa": "PostgreSQL・Cosmos DB・Azure SQL にキャッシュを追加する実践ガイドとアーキテクチャを提供",
+        "en": "Generally Available: Azure Managed Redis database integration guidance "
+      },
+      "meta": {
+        "publishedJst": "2026-11-18",
+        "availability": [{ "rawRing": "General Availability", "year": 2026, "month": "November" }],
+        "status": "Launched",
+        "products": ["Azure Managed Redis"],
+        "categories": ["databases"],
+        "importance": "notable"
+      },
+      "audience": {
+        "who": { "text": "PostgreSQL flexible server / Cosmos DB / Azure SQL のアプリに**キャッシュを追加したい方**", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "change": { "text": "キャッシュの定石・参照アーキテクチャ・手順付きチュートリアルが揃い、導入を進めやすい", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "no",
+        "summary": { "text": "対応は不要。キャッシュ導入を検討する際にガイドを参照", "origin": "editorial", "assertion": "recommendation", "verification": "unverified" }
+      },
+      "beforeAfter": {
+        "after": {
+          "text": "データベース負荷の軽減や応答性の向上に向け、実践ガイド・参照アーキテクチャ・チュートリアルでキャッシュ手法を選べる",
+          "origin": "mrc", "assertion": "fact", "verification": "source-only"
+        }
+      },
+      "panels": [
+        {
+          "id": "how-it-works", "heading": "仕組み", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Redis が頻繁に使うデータをメモリに保持し、データベースへの読み取りを減らす",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/redis/overview", "locator": "What is Azure Managed Redis?", "retrievedAt": "2026-11-26T03:50:00Z" }]
+            },
+            {
+              "text": "キャッシュ アサイド: Redis を先に確認し、無ければ DB から読んで TTL 付きで保存",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/architecture/databases/architecture/cache-aside-azure-managed-redis-postgresql", "locator": "冒頭", "retrievedAt": "2026-11-26T03:50:00Z" }]
+            },
+            {
+              "text": "ライトスルー: SQL のコミット後に Redis を更新してから書き込み完了を返す",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/architecture/databases/architecture/write-through-caching-azure-sql-managed-redis", "locator": "冒頭", "retrievedAt": "2026-11-26T03:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "how-to-start", "heading": "始め方", "availability": "present", "priority": "core",
+          "items": [
+            {
+              "text": "Azure SQL: App Service・Functions・SQL Database・Redis によるライトスルー構成の参照アーキテクチャ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/architecture/databases/architecture/write-through-caching-azure-sql-managed-redis", "locator": "Architecture", "retrievedAt": "2026-11-26T03:50:00Z" }]
+            },
+            {
+              "text": "PostgreSQL: App Service と Redis によるキャッシュ アサイドの参照アーキテクチャ",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/architecture/databases/architecture/cache-aside-azure-managed-redis-postgresql", "locator": "冒頭", "retrievedAt": "2026-11-26T03:50:00Z" }]
+            },
+            {
+              "text": "Cosmos DB: 統合キャッシュと外部キャッシュ（Redis）の選び方を解説",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/cosmos-db/how-to-cache", "locator": "Choose between the integrated cache and an external cache", "retrievedAt": "2026-11-26T03:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "prerequisites-limits", "heading": "前提・制限", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "DB が正本。Redis の値をコミット済みの業務データとして扱わない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/architecture/databases/architecture/cache-aside-azure-managed-redis-postgresql", "locator": "Considerations", "retrievedAt": "2026-11-26T03:50:00Z" }]
+            },
+            {
+              "text": "SQL と Redis にまたがるアトミックな分散トランザクションは提供されない（ライトスルー）",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/architecture/databases/architecture/write-through-caching-azure-sql-managed-redis", "locator": "シナリオの詳細", "retrievedAt": "2026-11-26T03:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "related-features", "heading": "似た手法との違い", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "キャッシュ アサイドは一時的な古いデータを許容。書き込み直後に最新値が必要ならライトスルー",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/architecture/databases/architecture/cache-aside-azure-managed-redis-postgresql", "locator": "Important", "retrievedAt": "2026-11-26T03:50:00Z" }]
+            },
+            {
+              "text": "Cosmos DB は統合キャッシュ（専用ゲートウェイ）か外部キャッシュの Redis を選べる",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/cosmos-db/how-to-cache", "locator": "Choose between the integrated cache and an external cache", "retrievedAt": "2026-11-26T03:50:00Z" }]
+            }
+          ]
+        },
+        {
+          "id": "use-case", "heading": "使いどころ・注意", "availability": "present", "priority": "detail",
+          "items": [
+            {
+              "text": "同じデータの読み取りが繰り返され、読み取りが多い API やアカウント プロファイルに向く",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/architecture/databases/architecture/write-through-caching-azure-sql-managed-redis", "locator": "考えられるユース ケース", "retrievedAt": "2026-11-26T03:50:00Z" }]
+            },
+            {
+              "text": "読み取りがほぼ繰り返されない、または書き込みが多いワークロードではキャッシュを追加しない",
+              "origin": "learn", "assertion": "fact", "verification": "verified",
+              "evidence": [{ "url": "https://learn.microsoft.com/azure/cosmos-db/how-to-cache", "locator": "When to add a cache", "retrievedAt": "2026-11-26T03:50:00Z" }]
+            }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "azure-managed-redis", "term": "Azure Managed Redis", "type": "product", "oneLine": { "text": "Redis Enterprise に基づく、Microsoft が運用するメモリ内データ ストア。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/redis/overview", "locator": "冒頭", "retrievedAt": "2026-11-26T03:50:00Z" }] } },
+        { "termKey": "cache-aside", "term": "キャッシュ アサイド", "type": "term", "oneLine": { "text": "キャッシュに無いデータだけを DB から読み込んでキャッシュに載せる方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/redis/overview", "locator": "Key scenarios", "retrievedAt": "2026-11-26T03:50:00Z" }] } },
+        { "termKey": "write-through", "term": "ライトスルー", "type": "term", "oneLine": { "text": "データベースの更新とキャッシュの更新を書き込み処理の一部として行う方式。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/architecture/databases/architecture/cache-aside-azure-managed-redis-postgresql", "locator": "Alternatives", "retrievedAt": "2026-11-26T03:50:00Z" }] } },
+        { "termKey": "ttl", "term": "TTL", "type": "term", "oneLine": { "text": "キャッシュした値の有効期限。切れると DB から再取得される。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/azure/architecture/databases/architecture/cache-aside-azure-managed-redis-postgresql", "locator": "冒頭", "retrievedAt": "2026-11-26T03:50:00Z" }] } },
+        { "termKey": "label-ga", "term": "GA（一般提供）", "type": "label", "oneLine": { "text": "機能が完全にリリースされ、本番利用でサポートされる段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "General availability (GA)", "retrievedAt": "2026-11-26T03:50:00Z" }] } }
+      ],
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=577553",
+        "learn": [
+          { "title": "Azure Managed Redis と Azure SQL Database を使用したライトスルー キャッシュ", "url": "https://learn.microsoft.com/ja-jp/azure/architecture/databases/architecture/write-through-caching-azure-sql-managed-redis", "locale": "ja-jp" },
+          { "title": "Cache-aside caching using Azure Managed Redis and Azure Database for PostgreSQL", "url": "https://learn.microsoft.com/en-us/azure/architecture/databases/architecture/cache-aside-azure-managed-redis-postgresql", "locale": "en-us" },
+          { "title": "Improve efficiency of reads by using a cache with Azure Cosmos DB", "url": "https://learn.microsoft.com/en-us/azure/cosmos-db/how-to-cache", "locale": "en-us" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          {
+            "q": "キャッシュ アサイドとライトスルーはどう使い分ける？",
+            "a": "短時間の古いデータを許容できるならキャッシュ アサイド。書き込み直後に最新値が必要ならライトスルーを検討します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/architecture/databases/architecture/cache-aside-azure-managed-redis-postgresql" }]
+          },
+          {
+            "q": "どんなワークロードでキャッシュは不要？",
+            "a": "読み取りがほとんど繰り返されない場合や、書き込みが多い場合は、キャッシュを足さず DB から直接読む方が適します。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/cosmos-db/how-to-cache" }]
+          },
+          {
+            "q": "Azure Managed Redis の費用はどこで確認できる？",
+            "a": "階層（SKU）ごとに価格水準が異なります。料金は Azure Managed Redis の価格ページで確認できます。",
+            "evidence": [{ "url": "https://learn.microsoft.com/azure/redis/overview" }]
+          }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
