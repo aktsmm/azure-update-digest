@@ -1,0 +1,74 @@
+{
+  "args": {
+    "filter": "modified ge 2026-11-25T03:23:01Z and modified lt 2026-11-27T03:29:51Z",
+    "skip": 0
+  },
+  "fetchedAt": "2026-11-27T03:29:51.617Z",
+  "ok": true,
+  "response": {
+    "hasMore": false,
+    "items": [
+      {
+        "availabilities": [
+          {
+            "month": "September",
+            "ring": "Retirement",
+            "year": 2027
+          }
+        ],
+        "baseId": "568586",
+        "created": "2026-11-25T21:53:30.4642216Z",
+        "description": "Support for Java 8, 11 and 17 on Azure Functions is ending on September\n1, 2027. Your apps that are hosted on Azure Functions will continue to run, but\nsecurity updates will no longer be available, an...",
+        "id": "568586",
+        "modified": "2026-11-25T21:53:30.4642216Z",
+        "productCategories": [
+          "Compute",
+          "Containers",
+          "Internet of Things"
+        ],
+        "products": [
+          "Azure Functions"
+        ],
+        "tags": [
+          "Retirements"
+        ],
+        "title": "Retirement: Support for Java 8, 11 and 17 in Azure Functions ends on September 1, 2027"
+      },
+      {
+        "availabilities": [
+          {
+            "month": "November",
+            "ring": "Preview",
+            "year": 2026
+          }
+        ],
+        "baseId": "582326",
+        "created": "2026-11-25T23:14:20.6450026Z",
+        "description": "Equal-Cost Multi-Path (ECMP)\nrouting for Azure Virtual Network is now available in public preview, enabling\ncustomers to distribute traffic across multiple network appliances using a\nsingle user-defin...",
+        "id": "582326",
+        "modified": "2026-11-25T23:14:20.6450026Z",
+        "previewAvailabilityDate": "2026-11",
+        "productCategories": [
+          "Networking"
+        ],
+        "products": [
+          "Virtual Network"
+        ],
+        "status": "In preview",
+        "tags": [
+          "Management",
+          "Services",
+          "Feature"
+        ],
+        "title": "Public Preview: ECMP Nexthop "
+      }
+    ],
+    "limit": 50,
+    "offset": 0,
+    "returnedCount": 2,
+    "totalCount": 2
+  },
+  "scan": "sweep",
+  "schema": 1,
+  "tool": "get_recent_azure_updates"
+}
