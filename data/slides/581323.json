@@ -1,0 +1,114 @@
+{
+  "$schema": "../../schema/slide-deck.schema.json",
+  "schemaVersion": 1,
+  "selection": {
+    "mode": "ids",
+    "basis": "created",
+    "ids": ["581323"],
+    "coverage": "complete",
+    "snapshotAt": "2026-11-28T08:30:00Z"
+  },
+  "slides": [
+    {
+      "key": "581323",
+      "kind": "preview",
+      "kindSource": "ring",
+      "label": "Preview",
+      "title": {
+        "ja": "Microsoft Foundry にコスト制御がパブリック プレビューで登場",
+        "subtitleJa": "モデル・エージェントの支出やトークンに予算を設定し、アラートまたはブロックが可能に",
+        "en": "Public Preview: Cost controls for model and agent spending in Microsoft Foundry"
+      },
+      "meta": {
+        "publishedJst": "2026-11-25",
+        "modifiedJst": "2026-11-25",
+        "availability": [{ "rawRing": "Preview", "year": 2026, "month": "November" }],
+        "status": "In preview",
+        "products": ["Microsoft Foundry"],
+        "categories": ["ai"],
+        "importance": "normal"
+      },
+      "audience": {
+        "who": { "text": "Foundry で **モデルやエージェントの利用コストを管理する管理者・FinOps 担当・開発者**", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "冒頭", "retrievedAt": "2026-11-28T08:30:00Z" }] },
+        "change": { "text": "コストが請求に現れる前に、使用量に応じてアラートやブロックができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" },
+        "changeNature": "benefit"
+      },
+      "action": {
+        "required": "optional",
+        "summary": { "text": "本番利用は非推奨のため、まず評価目的で試す", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "Important", "retrievedAt": "2026-11-28T08:30:00Z" }] }
+      },
+      "beforeAfter": {
+        "after": { "text": "リソースやプロジェクトに支出・トークンの予算を設定し、しきい値でアラート送信または新規リクエストのブロックができる", "origin": "mrc", "assertion": "fact", "verification": "source-only" }
+      },
+      "panels": [
+        {
+          "id": "scope", "heading": "プレビューの範囲", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "予算はすべての使用量、またはプロジェクト・デプロイ・エージェント・セッションで絞り込める", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "コスト制御が適用できるもの", "retrievedAt": "2026-11-28T08:30:00Z" }] },
+            { "text": "予算は日次・週次・月次でリセット。種類は支出（USD）かトークン", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "予算の種類", "retrievedAt": "2026-11-28T08:30:00Z" }] },
+            { "text": "しきい値の動作は Azure Event Grid へのアラート送信、または新規リクエストのブロック", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "しきい値アクション", "retrievedAt": "2026-11-28T08:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "constraints", "heading": "制約・注意", "availability": "present", "priority": "core",
+          "items": [
+            { "text": "プレビューでは GPT と OpenAI o シリーズのモデルが対象。他社モデルは非対応", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "このプレビューでサポートされるもの", "retrievedAt": "2026-11-28T08:30:00Z" }] },
+            { "text": "支出額は推定値で請求とは照合されず、実際より早く上限に達しうる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "コスト制御による使用量の価格設定", "retrievedAt": "2026-11-28T08:30:00Z" }] },
+            { "text": "PTU デプロイ、エージェントのツール料金、ホスト型エージェントのコンピューティングは集計対象外", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "このプレビューでサポートされるもの", "retrievedAt": "2026-11-28T08:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "evaluate", "heading": "評価ポイント", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "アラートには Event Grid トピック（CloudEvents v1.0・キー認証）、使用量表示には Application Insights が必要", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/create-cost-controls", "locator": "前提条件", "retrievedAt": "2026-11-28T08:30:00Z" }] },
+            { "text": "変更の反映に最大 15 分かかり、その間は上限を超える可能性がある", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "制限事項", "retrievedAt": "2026-11-28T08:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "compare", "heading": "他の支出管理との比較", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "Azure Cost Management の予算はアラートのみ。コスト制御はリクエストのブロックも可能", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "他の支出管理方法との比較", "retrievedAt": "2026-11-28T08:30:00Z" }] },
+            { "text": "クォータはスループットの保護、コスト制御は支出やトークンの上限と役割が異なる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "他の支出管理方法との比較", "retrievedAt": "2026-11-28T08:30:00Z" }] }
+          ]
+        },
+        {
+          "id": "usage", "heading": "使い方の目安", "availability": "present", "priority": "detail",
+          "items": [
+            { "text": "80% でアラート、100% でブロックのように、ブロックの前にアラートを組み合わせる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "コスト制御による使用量の価格設定", "retrievedAt": "2026-11-28T08:30:00Z" }] },
+            { "text": "しきい値アクションなしなら、リクエストに影響せず使用量だけを追跡できる", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "コスト制御のしくみ", "retrievedAt": "2026-11-28T08:30:00Z" }] }
+          ]
+        }
+      ],
+      "glossary": [
+        { "termKey": "foundry", "term": "Microsoft Foundry", "type": "product", "oneLine": { "text": "コスト制御の対象となる、モデルやエージェントを扱う Microsoft のプラットフォーム。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "冒頭", "retrievedAt": "2026-11-28T08:30:00Z" }] } },
+        { "termKey": "cost-control", "term": "コスト制御", "type": "feature", "oneLine": { "text": "支出やトークンの使用量を追跡し、しきい値でアラートやブロックを行うポリシー。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "冒頭", "retrievedAt": "2026-11-28T08:30:00Z" }] } },
+        { "termKey": "event-grid", "term": "Azure Event Grid", "type": "product", "oneLine": { "text": "コスト制御のアラートを、選択したトピックを通じて通知するために使うサービス。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "しきい値アクション", "retrievedAt": "2026-11-28T08:30:00Z" }] } },
+        { "termKey": "token", "term": "トークン", "type": "term", "oneLine": { "text": "トークン予算では、対象リクエストが消費するトークンの数がカウントされる。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "予算の種類", "retrievedAt": "2026-11-28T08:30:00Z" }] } },
+        { "termKey": "label-preview", "term": "Preview（パブリック プレビュー）", "type": "label", "oneLine": { "text": "GA の前に、すべての Azure 顧客が評価とフィードバックのために使える段階。", "origin": "learn", "assertion": "fact", "verification": "verified", "evidence": [{ "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure", "locator": "Public preview", "retrievedAt": "2026-11-28T08:30:00Z" }] } }
+      ],
+      "region": {
+        "stamp": "japan-both",
+        "scope": "feature",
+        "basis": "confirmed",
+        "note": "リージョンは「すべてのリージョン（Foundry がそのリージョンで課金するモデル）」",
+        "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locator": "このプレビューでサポートされるもの（リージョン）", "retrievedAt": "2026-11-28T08:30:00Z" }]
+      },
+      "references": {
+        "announcement": "https://azure.microsoft.com/updates?id=581323",
+        "learn": [
+          { "title": "コスト制御の概要 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls", "locale": "ja-jp" },
+          { "title": "コスト制御の作成と管理 (プレビュー)", "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/create-cost-controls", "locale": "ja-jp" }
+        ]
+      },
+      "speakerNotes": {
+        "qa": [
+          { "q": "日本リージョンでも使えますか？", "a": "対応リージョンは「すべてのリージョン」で、Foundry がそのリージョンで課金するモデルが対象です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls" }] },
+          { "q": "請求額と一致しますか？", "a": "プレビュー中の支出額は推定値で、請求とは照合されません。しきい値に早めに達する傾向があります。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls" }] },
+          { "q": "事前に必要なものは？", "a": "Foundry リソースとプロジェクト、適切なロール、アラート用の Event Grid トピックが必要です。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/how-to/create-cost-controls" }] },
+          { "q": "本番で使えますか？", "a": "プレビューは SLA なしで提供され、本番ワークロードには推奨されていません。", "evidence": [{ "url": "https://learn.microsoft.com/ja-jp/azure/foundry/concepts/cost-controls" }, { "url": "https://learn.microsoft.com/lifecycle/faq/azure-infrastructure" }] }
+        ]
+      },
+      "render": { "continuationRequired": false }
+    }
+  ]
+}
